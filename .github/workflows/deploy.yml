@@ -6,9 +6,19 @@ on:
   pull_request:
     branches: [main]
 
+# Set permissions for the job
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
 
     steps:
       - name: Checkout repository
@@ -24,19 +34,8 @@ jobs:
       - name: Verify mdBook installation
         run: mdbook --version
 
-      - name: Build the book
+      - name: Build book
         run: mdbook build
-
-      - name: Add custom domain
-        run: echo "yourusername.github.io" > book/CNAME
-
-      - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./book
-          force_orphan: true
 
       - name: Setup Node.js for additional tools
         uses: actions/setup-node@v4
@@ -61,3 +60,18 @@ jobs:
         run: |
           npm install -g markdown-link-check
           find src -name "*.md" -exec markdown-link-check {} \; || true
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+        if: github.ref == 'refs/heads/main'
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          path: ./book
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        if: github.ref == 'refs/heads/main'
+        uses: actions/deploy-pages@v4
