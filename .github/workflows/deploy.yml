@@ -75,4 +75,3 @@ jobs:
         id: deployment
         if: github.ref == 'refs/heads/main'
         uses: actions/deploy-pages@v4
-        if: github.ref == 'refs/heads/main'
