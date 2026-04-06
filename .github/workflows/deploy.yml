@@ -26,6 +26,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
       - name: Install mdBook
         run: |
           curl -L https://github.com/rust-lang/mdBook/releases/download/v0.4.37/mdbook-v0.4.37-x86_64-unknown-linux-gnu.tar.gz | tar xz
@@ -36,11 +41,6 @@ jobs:
 
       - name: Build book
         run: mdbook build
-
-      - name: Setup Node.js for additional tools
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
 
       - name: Install additional tools
         run: |
@@ -62,7 +62,7 @@ jobs:
           find src -name "*.md" -exec markdown-link-check {} \; || true
 
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4
         if: github.ref == 'refs/heads/main'
 
       - name: Upload artifact
