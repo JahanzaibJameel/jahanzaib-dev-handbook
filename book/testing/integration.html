@@ -35,7 +35,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "coal";
-            window.path_to_searchindex_js = "../searchindex-0452ccd7.js";
+            window.path_to_searchindex_js = "../searchindex-7e82225d.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-fa16be00.js"></script>
@@ -181,6 +181,191 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="integration-testing"><a class="header" href="#integration-testing">Integration Testing</a></h1>
+<p>Integration testing verifies that different parts of your application work together correctly. It tests the interaction between components, services, databases, and external APIs.</p>
+<h2 id="-what-is-integration-testing"><a class="header" href="#-what-is-integration-testing">🎯 What is Integration Testing?</a></h2>
+<p>Integration testing sits between unit testing and end-to-end testing. It combines multiple units to test their interactions and ensure they work together as expected.</p>
+<h3 id="why-integration-testing-matters"><a class="header" href="#why-integration-testing-matters">Why Integration Testing Matters</a></h3>
+<ul>
+<li><strong>Catch Integration Issues</strong>: Find problems when components interact</li>
+<li><strong>Database Integration</strong>: Verify data flow between app and database</li>
+<li><strong>API Integration</strong>: Test communication with external services</li>
+<li><strong>Component Integration</strong>: Ensure UI components work together</li>
+<li><strong>Real Environment</strong>: Test with actual dependencies</li>
+</ul>
+<h2 id="-integration-testing-tools"><a class="header" href="#-integration-testing-tools">🛠️ Integration Testing Tools</a></h2>
+<h3 id="react-native-testing"><a class="header" href="#react-native-testing">React Native Testing</a></h3>
+<pre><code class="language-bash">npm install --save-dev @testing-library/react-native jest
+</code></pre>
+<h3 id="reactnextjs-testing"><a class="header" href="#reactnextjs-testing">React/Next.js Testing</a></h3>
+<pre><code class="language-bash">npm install --save-dev @testing-library/react @testing-library/jest-dom
+</code></pre>
+<h3 id="nodejs-api-testing"><a class="header" href="#nodejs-api-testing">Node.js API Testing</a></h3>
+<pre><code class="language-bash">npm install --save-dev supertest mongodb-memory-server
+</code></pre>
+<h2 id="-react-native-integration-testing"><a class="header" href="#-react-native-integration-testing">🧪 React Native Integration Testing</a></h2>
+<h3 id="testing-component-integration"><a class="header" href="#testing-component-integration">Testing Component Integration</a></h3>
+<pre><code class="language-javascript">// __tests__/integration/LoginFlow.test.js
+import React from 'react';
+import { render, fireEvent, waitFor } from '@testing-library/react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { Provider } from 'react-redux';
+import LoginScreen from '../../src/screens/LoginScreen';
+import store from '../../src/store';
+
+// Mock navigation
+const mockNavigation = {
+  navigate: jest.fn(),
+  replace: jest.fn(),
+};
+
+// Mock AsyncStorage
+jest.mock('@react-native-async-storage/async-storage', () =&gt; ({
+  setItem: jest.fn(),
+  getItem: jest.fn(() =&gt; Promise.resolve(null)),
+  removeItem: jest.fn(),
+}));
+
+describe('Login Flow Integration', () =&gt; {
+  const renderWithProviders = (component) =&gt; {
+    return render(
+      &lt;Provider store={store}&gt;
+        &lt;NavigationContainer&gt;
+          {component}
+        &lt;/NavigationContainer&gt;
+      &lt;/Provider&gt;
+    );
+  };
+
+  it('completes login flow successfully', async () =&gt; {
+    const mockResponse = {
+      user: { id: 1, name: 'John', email: 'john@example.com' },
+      token: 'mock-jwt-token'
+    };
+
+    // Mock API call
+    global.fetch = jest.fn().mockResolvedValueOnce({
+      ok: true,
+      json: async () =&gt; mockResponse
+    });
+
+    const { getByPlaceholderText, getByText } = renderWithProviders(
+      &lt;LoginScreen navigation={mockNavigation} /&gt;
+    );
+
+    // Enter credentials
+    fireEvent.changeText(getByPlaceholderText('Email'), 'john@example.com');
+    fireEvent.changeText(getByPlaceholderText('Password'), 'password123');
+
+    // Submit form
+    fireEvent.press(getByText('Login'));
+
+    // Wait for navigation
+    await waitFor(() =&gt; {
+      expect(mockNavigation.replace).toHaveBeenCalledWith('Home');
+    });
+
+    // Verify token storage
+    const AsyncStorage = require('@react-native-async-storage/async-storage');
+    expect(AsyncStorage.setItem).toHaveBeenCalledWith(
+      'auth_token',
+      mockResponse.token
+    );
+  });
+});
+</code></pre>
+<h2 id="-nodejs-api-integration-testing"><a class="header" href="#-nodejs-api-integration-testing">🧪 Node.js API Integration Testing</a></h2>
+<h3 id="testing-database-integration"><a class="header" href="#testing-database-integration">Testing Database Integration</a></h3>
+<pre><code class="language-javascript">// __tests__/integration/userController.test.js
+const request = require('supertest');
+const mongoose = require('mongoose');
+const { MongoMemoryServer } = require('mongodb-memory-server');
+const app = require('../../src/app');
+const User = require('../../src/models/User');
+
+describe('User Controller Integration', () =&gt; {
+  let mongoServer;
+
+  beforeAll(async () =&gt; {
+    mongoServer = await MongoMemoryServer.create();
+    const mongoUri = mongoServer.getUri();
+    await mongoose.connect(mongoUri);
+  });
+
+  beforeEach(async () =&gt; {
+    await User.deleteMany({});
+  });
+
+  afterAll(async () =&gt; {
+    await mongoose.disconnect();
+    await mongoServer.stop();
+  });
+
+  describe('POST /api/users', () =&gt; {
+    it('creates user and saves to database', async () =&gt; {
+      const userData = {
+        name: 'John Doe',
+        email: 'john@example.com',
+        password: 'password123'
+      };
+
+      const response = await request(app)
+        .post('/api/users')
+        .send(userData)
+        .expect(201);
+
+      // Verify response
+      expect(response.body.name).toBe(userData.name);
+      expect(response.body.email).toBe(userData.email);
+
+      // Verify database
+      const userInDb = await User.findOne({ email: userData.email });
+      expect(userInDb).toBeTruthy();
+      expect(userInDb.name).toBe(userData.name);
+    });
+  });
+});
+</code></pre>
+<h2 id="-integration-testing-best-practices"><a class="header" href="#-integration-testing-best-practices">🔧 Integration Testing Best Practices</a></h2>
+<h3 id="test-organization"><a class="header" href="#test-organization">Test Organization</a></h3>
+<pre><code>__tests__/
+├── integration/
+│   ├── auth/
+│   │   ├── loginFlow.test.js
+│   │   └── protectedRoutes.test.js
+│   ├── api/
+│   │   ├── userController.test.js
+│   │   └── fileUpload.test.js
+│   └── components/
+│       ├── shoppingCart.test.js
+│       └── userProfile.test.js
+</code></pre>
+<h3 id="test-data-management"><a class="header" href="#test-data-management">Test Data Management</a></h3>
+<pre><code class="language-javascript">// __tests__/utils/testData.js
+import { MongoMemoryServer } from 'mongodb-memory-server';
+import mongoose from 'mongoose';
+
+export class TestDatabase {
+  async connect() {
+    this.server = await MongoMemoryServer.create();
+    const uri = this.server.getUri();
+    this.connection = await mongoose.connect(uri);
+  }
+
+  async disconnect() {
+    await mongoose.disconnect();
+    await this.server.stop();
+  }
+
+  async clear() {
+    const collections = mongoose.connection.collections;
+    for (const key in collections) {
+      await collections[key].deleteMany({});
+    }
+  }
+}
+</code></pre>
+<hr>
+<p><strong>Next Up</strong>: Learn about End-to-End Testing! 🎭</p>
 
                     </main>
 

@@ -1,1 +1,633 @@
 # End-to-End Testing
+
+End-to-end (E2E) testing simulates real user interactions with your application from start to finish. It tests the complete user journey across multiple pages and components.
+
+## 🎯 What is E2E Testing?
+
+E2E testing automates browser interactions to test your application exactly as a user would experience it. It verifies that all parts of your system work together correctly in a real browser environment.
+
+### Why E2E Testing Matters
+
+- **User Experience Validation**: Test actual user workflows
+- **Cross-Browser Testing**: Ensure compatibility across browsers
+- **Regression Prevention**: Catch breaking changes before users do
+- **Confidence in Deployments**: Verify critical paths work
+- **Business Logic Verification**: Test complete user stories
+
+## 🛠️ E2E Testing Tools
+
+### Playwright - Modern E2E Testing
+
+```bash
+# Install Playwright
+npm install --save-dev @playwright/test
+npx playwright install
+
+# Install browsers
+npx playwright install chromium firefox webkit
+```
+
+### Cypress - Popular Alternative
+
+```bash
+# Install Cypress
+npm install --save-dev cypress
+
+# Open Cypress
+npx cypress open
+```
+
+## 🧪 Playwright E2E Testing
+
+### Basic Configuration
+
+```javascript
+// playwright.config.js
+const { defineConfig, devices } = require('@playwright/test');
+
+module.exports = defineConfig({
+  testDir: './tests/e2e',
+  
+  // Run tests on multiple browsers
+  projects: [
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
+    },
+  ],
+
+  // Test configuration
+  use: {
+    // Base URL for tests
+    baseURL: 'http://localhost:3000',
+    
+    // Screenshot on failure
+    screenshot: 'only-on-failure',
+    
+    // Video on failure
+    video: 'retain-on-failure',
+    
+    // Trace on failure
+    trace: 'on-first-retry',
+  },
+
+  // Global setup
+  webServer: {
+    command: 'npm run dev',
+    port: 3000,
+  },
+});
+```
+
+### Testing User Authentication Flow
+
+```javascript
+// tests/e2e/auth.spec.js
+const { test, expect } = require('@playwright/test');
+
+test.describe('Authentication Flow', () => {
+  test.beforeEach(async ({ page }) => {
+    // Clear storage before each test
+    await page.context().clearCookies();
+    await page.evaluate(() => localStorage.clear());
+  });
+
+  test('user can register and login', async ({ page }) => {
+    // Navigate to registration
+    await page.goto('/register');
+    
+    // Fill registration form
+    await page.fill('[data-testid="name-input"]', 'John Doe');
+    await page.fill('[data-testid="email-input"]', 'john@example.com');
+    await page.fill('[data-testid="password-input"]', 'password123');
+    await page.fill('[data-testid="confirm-password-input"]', 'password123');
+    
+    // Submit registration
+    await page.click('[data-testid="register-button"]');
+    
+    // Should redirect to login
+    await expect(page).toHaveURL('/login');
+    
+    // Show success message
+    await expect(page.locator('[data-testid="success-message"]')).toBeVisible();
+    
+    // Now login
+    await page.fill('[data-testid="email-input"]', 'john@example.com');
+    await page.fill('[data-testid="password-input"]', 'password123');
+    await page.click('[data-testid="login-button"]');
+    
+    // Should redirect to dashboard
+    await expect(page).toHaveURL('/dashboard');
+    
+    // Verify user is logged in
+    await expect(page.locator('[data-testid="user-name"]')).toContainText('John Doe');
+  });
+
+  test('shows validation errors for invalid data', async ({ page }) => {
+    await page.goto('/register');
+    
+    // Submit empty form
+    await page.click('[data-testid="register-button"]');
+    
+    // Should show validation errors
+    await expect(page.locator('[data-testid="name-error"]')).toBeVisible();
+    await expect(page.locator('[data-testid="email-error"]')).toBeVisible();
+    await expect(page.locator('[data-testid="password-error"]')).toBeVisible();
+    
+    // Fill with invalid email
+    await page.fill('[data-testid="email-input"]', 'invalid-email');
+    await page.click('[data-testid="register-button"]');
+    
+    // Should show email error
+    await expect(page.locator('[data-testid="email-error"]')).toContainText('Invalid email format');
+  });
+
+  test('handles login with wrong credentials', async ({ page }) => {
+    await page.goto('/login');
+    
+    // Fill with wrong credentials
+    await page.fill('[data-testid="email-input"]', 'john@example.com');
+    await page.fill('[data-testid="password-input"]', 'wrongpassword');
+    await page.click('[data-testid="login-button"]');
+    
+    // Should show error message
+    await expect(page.locator('[data-testid="error-message"]')).toBeVisible();
+    await expect(page.locator('[data-testid="error-message"]')).toContainText('Invalid credentials');
+    
+    // Should not redirect
+    await expect(page).toHaveURL('/login');
+  });
+});
+```
+
+### Testing E-Commerce Flow
+
+```javascript
+// tests/e2e/ecommerce.spec.js
+const { test, expect } = require('@playwright/test');
+
+test.describe('E-Commerce Flow', () => {
+  test('complete purchase journey', async ({ page }) => {
+    // Navigate to products
+    await page.goto('/products');
+    
+    // Search for product
+    await page.fill('[data-testid="search-input"]', 'laptop');
+    await page.press('[data-testid="search-input"]', 'Enter');
+    
+    // Click on first product
+    await page.click('[data-testid="product-card"]:first-child');
+    
+    // Verify product page
+    await expect(page.locator('h1')).toContainText('Laptop');
+    await expect(page.locator('[data-testid="product-price"]')).toBeVisible();
+    
+    // Add to cart
+    await page.click('[data-testid="add-to-cart-button"]');
+    
+    // Verify cart notification
+    await expect(page.locator('[data-testid="cart-count"]')).toContainText('1');
+    
+    // Go to cart
+    await page.click('[data-testid="cart-icon"]');
+    
+    // Verify cart contents
+    await expect(page).toHaveURL('/cart');
+    await expect(page.locator('[data-testid="cart-item"]')).toHaveCount(1);
+    
+    // Proceed to checkout
+    await page.click('[data-testid="checkout-button"]');
+    
+    // Fill shipping information
+    await page.fill('[data-testid="shipping-name"]', 'John Doe');
+    await page.fill('[data-testid="shipping-address"]', '123 Main St');
+    await page.fill('[data-testid="shipping-city"]', 'New York');
+    await page.fill('[data-testid="shipping-zip"]', '10001');
+    
+    // Continue to payment
+    await page.click('[data-testid="continue-to-payment"]');
+    
+    // Fill payment information
+    await page.fill('[data-testid="card-number"]', '4242424242424242');
+    await page.fill('[data-testid="card-expiry"]', '12/25');
+    await page.fill('[data-testid="card-cvc"]', '123');
+    
+    // Submit order
+    await page.click('[data-testid="place-order"]');
+    
+    // Verify order confirmation
+    await expect(page).toHaveURL('/order-confirmation');
+    await expect(page.locator('[data-testid="success-message"]')).toContainText('Order placed successfully');
+    await expect(page.locator('[data-testid="order-number"]')).toBeVisible();
+  });
+
+  test('handles out of stock products', async ({ page }) => {
+    await page.goto('/products/out-of-stock-laptop');
+    
+    // Product should show out of stock
+    await expect(page.locator('[data-testid="out-of-stock-badge"]')).toBeVisible();
+    
+    // Add to cart should be disabled
+    const addToCartButton = page.locator('[data-testid="add-to-cart-button"]');
+    await expect(addToCartButton).toBeDisabled();
+    
+    // Should show notification option
+    await expect(page.locator('[data-testid="notify-when-available"]')).toBeVisible();
+  });
+});
+```
+
+### Testing Responsive Design
+
+```javascript
+// tests/e2e/responsive.spec.js
+const { test, expect, devices } = require('@playwright/test');
+
+test.describe('Responsive Design', () => {
+  const viewports = [
+    { name: 'Mobile', viewport: { width: 375, height: 667 } },
+    { name: 'Tablet', viewport: { width: 768, height: 1024 } },
+    { name: 'Desktop', viewport: { width: 1280, height: 720 } },
+  ];
+
+  viewports.forEach(({ name, viewport }) => {
+    test(`${name}: navigation works correctly`, async ({ page }) => {
+      await page.setViewportSize(viewport);
+      await page.goto('/');
+      
+      // Test navigation menu
+      if (name === 'Mobile') {
+        // Mobile should have hamburger menu
+        await expect(page.locator('[data-testid="mobile-menu-button"]')).toBeVisible();
+        await expect(page.locator('[data-testid="desktop-nav"]')).toBeHidden();
+        
+        // Open mobile menu
+        await page.click('[data-testid="mobile-menu-button"]');
+        await expect(page.locator('[data-testid="mobile-menu"]')).toBeVisible();
+      } else {
+        // Desktop should show full navigation
+        await expect(page.locator('[data-testid="desktop-nav"]')).toBeVisible();
+        await expect(page.locator('[data-testid="mobile-menu-button"]')).toBeHidden();
+      }
+    });
+
+    test(`${name}: product grid layout`, async ({ page }) => {
+      await page.setViewportSize(viewport);
+      await page.goto('/products');
+      
+      const productGrid = page.locator('[data-testid="product-grid"]');
+      await expect(productGrid).toBeVisible();
+      
+      if (name === 'Mobile') {
+        // Mobile should show single column
+        await expect(productGrid.locator('[data-testid="product-card"]')).toHaveCount(1, { visible: true });
+      } else if (name === 'Tablet') {
+        // Tablet should show 2 columns
+        await expect(productGrid.locator('[data-testid="product-card"]')).toHaveCount(2, { visible: true });
+      } else {
+        // Desktop should show 3+ columns
+        await expect(productGrid.locator('[data-testid="product-card"]')).toHaveCount(3, { visible: true });
+      }
+    });
+  });
+});
+```
+
+## 🧪 React Native E2E Testing
+
+### Detox for React Native
+
+```bash
+# Install Detox
+npm install --save-dev detox
+npx detox init
+
+# Configure for iOS/Android
+npx detox build --configuration ios.sim.debug
+npx detox test --configuration ios.sim.debug
+```
+
+### E2E Test for Mobile App
+
+```javascript
+// e2e/LoginFlow.e2e.js
+const { device, element, by, expect } = require('detox');
+
+describe('Login Flow', () => {
+  beforeAll(async () => {
+    await device.launchApp();
+  });
+
+  beforeEach(async () => {
+    await device.reloadReactNative();
+  });
+
+  it('should login successfully', async () => {
+    // Enter email
+    await element(by.id('email-input')).typeText('john@example.com');
+    
+    // Enter password
+    await element(by.id('password-input')).typeText('password123');
+    
+    // Tap login button
+    await element(by.id('login-button')).tap();
+    
+    // Should navigate to home screen
+    await expect(element(by.id('home-screen'))).toBeVisible();
+    
+    // Should show user name
+    await expect(element(by.text('Welcome, John'))).toBeVisible();
+  });
+
+  it('should show error for invalid credentials', async () => {
+    await element(by.id('email-input')).typeText('john@example.com');
+    await element(by.id('password-input')).typeText('wrongpassword');
+    await element(by.id('login-button')).tap();
+    
+    // Should show error message
+    await expect(element(by.id('error-message'))).toBeVisible();
+    await expect(element(by.text('Invalid credentials'))).toBeVisible();
+    
+    // Should stay on login screen
+    await expect(element(by.id('login-screen'))).toBeVisible();
+  });
+});
+```
+
+## 🔧 Advanced E2E Testing
+
+### Testing File Upload
+
+```javascript
+// tests/e2e/fileUpload.spec.js
+const { test, expect } = require('@playwright/test');
+
+test.describe('File Upload', () => {
+  test('uploads profile picture', async ({ page }) => {
+    await page.goto('/profile');
+    
+    // Click upload button
+    const fileInput = page.locator('[data-testid="file-input"]');
+    
+    // Upload file
+    await fileInput.setInputFiles('tests/fixtures/profile-picture.jpg');
+    
+    // Should show preview
+    await expect(page.locator('[data-testid="image-preview"]')).toBeVisible();
+    
+    // Click upload
+    await page.click('[data-testid="upload-button"]');
+    
+    // Should show success message
+    await expect(page.locator('[data-testid="success-message"]')).toContainText('Profile picture updated');
+    
+    // Should update profile picture
+    await page.reload();
+    await expect(page.locator('[data-testid="profile-image"]')).toHaveAttribute('src', /profile-picture/);
+  });
+
+  test('validates file types and sizes', async ({ page }) => {
+    await page.goto('/profile');
+    
+    // Try to upload invalid file
+    const fileInput = page.locator('[data-testid="file-input"]');
+    await fileInput.setInputFiles('tests/fixtures/invalid-file.txt');
+    
+    // Should show error
+    await expect(page.locator('[data-testid="file-error"]')).toContainText('Invalid file type');
+    
+    // Try to upload large file
+    await fileInput.setInputFiles('tests/fixtures/large-image.jpg');
+    await page.click('[data-testid="upload-button"]');
+    
+    await expect(page.locator('[data-testid="file-error"]')).toContainText('File too large');
+  });
+});
+```
+
+### Testing Performance
+
+```javascript
+// tests/e2e/performance.spec.js
+const { test, expect } = require('@playwright/test');
+
+test.describe('Performance Tests', () => {
+  test('page load performance', async ({ page }) => {
+    // Start performance monitoring
+    await page.goto('/');
+    
+    // Check load time
+    const performanceTiming = JSON.parse(
+      await page.evaluate(() => JSON.stringify(window.performance.timing))
+    );
+    
+    const loadTime = performanceTiming.loadEventEnd - performanceTiming.navigationStart;
+    
+    // Should load within 3 seconds
+    expect(loadTime).toBeLessThan(3000);
+    
+    // Check Core Web Vitals
+    const webVitals = await page.evaluate(() => {
+      return new Promise((resolve) => {
+        new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const vitals = {};
+          
+          entries.forEach((entry) => {
+            if (entry.entryType === 'largest-contentful-paint') {
+              vitals.LCP = entry.startTime;
+            }
+            if (entry.entryType === 'first-input') {
+              vitals.FID = entry.processingStart - entry.startTime;
+            }
+          });
+          
+          resolve(vitals);
+        }).observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+      });
+    });
+    
+    // LCP should be under 2.5 seconds
+    expect(webVitals.LCP).toBeLessThan(2500);
+    
+    // FID should be under 100ms
+    expect(webVitals.FID).toBeLessThan(100);
+  });
+
+  test('memory usage', async ({ page }) => {
+    await page.goto('/heavy-page');
+    
+    // Get memory usage
+    const memoryUsage = await page.evaluate(() => {
+      if (performance.memory) {
+        return {
+          used: performance.memory.usedJSHeapSize,
+          total: performance.memory.totalJSHeapSize,
+          limit: performance.memory.jsHeapSizeLimit
+        };
+      }
+      return null;
+    });
+    
+    if (memoryUsage) {
+      // Memory usage should be reasonable
+      const memoryRatio = memoryUsage.used / memoryUsage.limit;
+      expect(memoryRatio).toBeLessThan(0.7); // Less than 70% of limit
+    }
+  });
+});
+```
+
+## 📊 E2E Testing Best Practices
+
+### Test Organization
+
+```
+tests/
+├── e2e/
+│   ├── auth/
+│   │   ├── login.spec.js
+│   │   └── registration.spec.js
+│   ├── ecommerce/
+│   │   ├── product-browsing.spec.js
+│   │   ├── cart.spec.js
+│   │   └── checkout.spec.js
+│   ├── responsive/
+│   │   ├── mobile.spec.js
+│   │   ├── tablet.spec.js
+│   │   └── desktop.spec.js
+│   ├── performance/
+│   │   ├── load-time.spec.js
+│   │   └── memory.spec.js
+│   └── fixtures/
+│       ├── users.json
+│       └── products.json
+```
+
+### Page Object Model
+
+```javascript
+// tests/e2e/page-objects/LoginPage.js
+class LoginPage {
+  constructor(page) {
+    this.page = page;
+    this.emailInput = page.locator('[data-testid="email-input"]');
+    this.passwordInput = page.locator('[data-testid="password-input"]');
+    this.loginButton = page.locator('[data-testid="login-button"]');
+    this.errorMessage = page.locator('[data-testid="error-message"]');
+  }
+
+  async goto() {
+    await this.page.goto('/login');
+  }
+
+  async login(email, password) {
+    await this.emailInput.fill(email);
+    await this.passwordInput.fill(password);
+    await this.loginButton.click();
+  }
+
+  async getErrorMessage() {
+    return await this.errorMessage.textContent();
+  }
+
+  async isLoggedIn() {
+    return await this.page.locator('[data-testid="user-profile"]').isVisible();
+  }
+}
+
+module.exports = LoginPage;
+```
+
+### Test Data Management
+
+```javascript
+// tests/e2e/fixtures/testData.js
+export const users = {
+  valid: {
+    email: 'john@example.com',
+    password: 'password123',
+    name: 'John Doe'
+  },
+  invalid: {
+    email: 'invalid-email',
+    password: 'wrongpassword'
+  }
+};
+
+export const products = {
+  laptop: {
+    name: 'Test Laptop',
+    price: 999.99,
+    category: 'Electronics'
+  }
+};
+
+// Test utilities
+export const generateRandomEmail = () => {
+  return `test${Date.now()}@example.com`;
+};
+
+export const generateRandomString = (length = 10) => {
+  return Math.random().toString(36).substring(2, length + 2);
+};
+```
+
+### CI/CD Integration
+
+```javascript
+// .github/workflows/e2e.yml
+name: E2E Tests
+
+on: [push, pull_request]
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+        
+      - name: Build application
+        run: npm run build
+        
+      - name: Run E2E tests
+        run: npx playwright test
+        
+      - name: Upload test results
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: playwright-report
+          path: playwright-report/
+```
+
+---
+
+**Testing Section Complete!** 🎉
+
+You now have a comprehensive understanding of:
+- **Unit Testing**: Testing individual components and functions
+- **Integration Testing**: Testing component interactions
+- **End-to-End Testing**: Testing complete user workflows
+
+**Next Up**: Learn about DevOps & Deployment! ⚙️

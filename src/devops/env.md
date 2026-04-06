@@ -1,1 +1,794 @@
 # Environment Management
+
+Environment management is crucial for maintaining consistency across development, staging, and production environments while keeping sensitive data secure.
+
+## 🎯 What is Environment Management?
+
+Environment management involves configuring different settings for various deployment environments (development, staging, production) while ensuring security and consistency.
+
+### Why Environment Management Matters
+
+- **Security**: Keep sensitive data out of version control
+- **Consistency**: Ensure consistent behavior across environments
+- **Flexibility**: Easy switching between environments
+- **Debugging**: Environment-specific logging and features
+- **Deployment**: Smooth transitions between environments
+
+## 🔧 Environment Variables
+
+### Environment Variable Types
+
+```bash
+# Development Environment
+NODE_ENV=development
+API_URL=http://localhost:3001
+DATABASE_URL=postgresql://localhost:5432/myapp_dev
+REDIS_URL=redis://localhost:6379
+JWT_SECRET=dev-secret-key
+ENABLE_MOCK_DATA=true
+LOG_LEVEL=debug
+
+# Staging Environment
+NODE_ENV=staging
+API_URL=https://staging-api.myapp.com
+DATABASE_URL=${STAGING_DATABASE_URL}
+REDIS_URL=${STAGING_REDIS_URL}
+JWT_SECRET=${STAGING_JWT_SECRET}
+ENABLE_MOCK_DATA=false
+LOG_LEVEL=info
+
+# Production Environment
+NODE_ENV=production
+API_URL=https://api.myapp.com
+DATABASE_URL=${PRODUCTION_DATABASE_URL}
+REDIS_URL=${PRODUCTION_REDIS_URL}
+JWT_SECRET=${PRODUCTION_JWT_SECRET}
+ENABLE_MOCK_DATA=false
+LOG_LEVEL=error
+```
+
+### Environment Configuration Files
+
+```javascript
+// config/environments.js
+const environments = {
+  development: {
+    nodeEnv: 'development',
+    port: 3000,
+    database: {
+      host: 'localhost',
+      port: 5432,
+      name: 'myapp_dev',
+      ssl: false,
+      logging: true
+    },
+    redis: {
+      host: 'localhost',
+      port: 6379,
+      db: 0
+    },
+    api: {
+      timeout: 30000,
+      retries: 3,
+      enableMockData: true
+    },
+    features: {
+      enableDebugMode: true,
+      enableHotReload: true,
+      enableDetailedLogs: true
+    },
+    logging: {
+      level: 'debug',
+      console: true,
+      file: true,
+      maxFileSize: '10MB'
+    }
+  },
+  
+  staging: {
+    nodeEnv: 'staging',
+    port: 3001,
+    database: {
+      host: process.env.STAGING_DB_HOST,
+      port: process.env.STAGING_DB_PORT,
+      name: process.env.STAGING_DB_NAME,
+      ssl: true,
+      logging: false
+    },
+    redis: {
+      host: process.env.STAGING_REDIS_HOST,
+      port: process.env.STAGING_REDIS_PORT,
+      password: process.env.STAGING_REDIS_PASSWORD
+    },
+    api: {
+      timeout: 10000,
+      retries: 2,
+      enableMockData: false
+    },
+    features: {
+      enableDebugMode: false,
+      enableHotReload: false,
+      enableDetailedLogs: true
+    },
+    logging: {
+      level: 'info',
+      console: true,
+      file: true,
+      maxFileSize: '5MB'
+    }
+  },
+  
+  production: {
+    nodeEnv: 'production',
+    port: 80,
+    database: {
+      host: process.env.PROD_DB_HOST,
+      port: process.env.PROD_DB_PORT,
+      name: process.env.PROD_DB_NAME,
+      ssl: true,
+      logging: false
+    },
+    redis: {
+      host: process.env.PROD_REDIS_HOST,
+      port: process.env.PROD_REDIS_PORT,
+      password: process.env.PROD_REDIS_PASSWORD,
+      tls: true
+    },
+    api: {
+      timeout: 5000,
+      retries: 1,
+      enableMockData: false
+    },
+    features: {
+      enableDebugMode: false,
+      enableHotReload: false,
+      enableDetailedLogs: false
+    },
+    logging: {
+      level: 'error',
+      console: false,
+      file: true,
+      maxFileSize: '1MB'
+    }
+  }
+};
+
+// Get current environment configuration
+const getEnvironmentConfig = () => {
+  const env = process.env.NODE_ENV || 'development';
+  return environments[env];
+};
+
+module.exports = { getEnvironmentConfig };
+```
+
+## 🔐 Security Best Practices
+
+### Secret Management
+
+```javascript
+// config/secrets.js
+const dotenv = require('dotenv');
+
+// Load environment-specific secrets
+const envFile = `.env.${process.env.NODE_ENV || 'development'}`;
+dotenv.config({ path: envFile });
+
+const secrets = {
+  // Database credentials
+  database: {
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    name: process.env.DB_NAME,
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    ssl: process.env.DB_SSL === 'true'
+  },
+  
+  // External API keys
+  apis: {
+    openai: process.env.OPENAI_API_KEY,
+    stripe: process.env.STRIPE_SECRET_KEY,
+    aws: {
+      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+      region: process.env.AWS_REGION
+    }
+  },
+  
+  // JWT secrets
+  jwt: {
+    secret: process.env.JWT_SECRET,
+    expiresIn: process.env.JWT_EXPIRES_IN || '7d',
+    refreshSecret: process.env.JWT_REFRESH_SECRET
+  },
+  
+  // Email configuration
+  email: {
+    smtp: {
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT,
+      user: process.env.SMTP_USER,
+      password: process.env.SMTP_PASSWORD
+    },
+    from: process.env.EMAIL_FROM,
+    replyTo: process.env.EMAIL_REPLY_TO
+  }
+};
+
+// Validate required secrets
+const validateSecrets = () => {
+  const requiredSecrets = [
+    'DB_HOST',
+    'DB_NAME',
+    'DB_USERNAME',
+    'DB_PASSWORD',
+    'JWT_SECRET'
+  ];
+  
+  const missingSecrets = requiredSecrets.filter(secret => !process.env[secret]);
+  
+  if (missingSecrets.length > 0) {
+    console.error('Missing required secrets:', missingSecrets);
+    process.exit(1);
+  }
+};
+
+module.exports = { secrets, validateSecrets };
+```
+
+### Environment Validation
+
+```javascript
+// config/validation.js
+const Joi = require('joi');
+const config = require('./environments');
+
+const environmentSchema = Joi.object({
+  NODE_ENV: Joi.string()
+    .valid('development', 'staging', 'production')
+    .default('development'),
+  PORT: Joi.number()
+    .port()
+    .default(3000),
+  API_URL: Joi.string().uri(),
+  DATABASE_URL: Joi.string().uri(),
+  REDIS_URL: Joi.string().uri(),
+  JWT_SECRET: Joi.string().min(32),
+  LOG_LEVEL: Joi.string()
+    .valid('error', 'warn', 'info', 'debug')
+    .default('info')
+});
+
+const validateEnvironment = () => {
+  const envConfig = config.getEnvironmentConfig();
+  
+  const { error, value } = environmentSchema.validate(process.env, {
+    allowUnknown: true,
+    stripUnknown: true
+  });
+  
+  if (error) {
+    console.error('Environment validation failed:', error.details);
+    process.exit(1);
+  }
+  
+  return { ...envConfig, ...value };
+};
+
+module.exports = { validateEnvironment };
+```
+
+## 🛠️ Development Environment Setup
+
+### Docker Compose for Development
+
+```yaml
+# docker-compose.dev.yml
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - API_URL=http://localhost:3001
+      - DATABASE_URL=postgresql://postgres:password@postgres:5432/myapp_dev
+      - REDIS_URL=redis://redis:6379
+      - JWT_SECRET=dev-secret-key-change-in-production
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      - postgres
+      - redis
+      - mailhog
+      
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=myapp_dev
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+      
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_dev_data:/data
+      
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "1025:1025"
+      
+  adminer:
+    image: adminer
+    ports:
+      - "8080:8080"
+    environment:
+      - ADMINER_DEFAULT_SERVER=postgres
+      - ADMINER_SERVER_PORT=5432
+      - ADMINER_SERVER_NAME=postgres
+      - ADMINER_SERVER_USERNAME=postgres
+      - ADMINER_SERVER_PASSWORD=password
+    depends_on:
+      - postgres
+```
+
+### Development Scripts
+
+```json
+// package.json
+{
+  "scripts": {
+    "dev": "NODE_ENV=development npm run start",
+    "dev:debug": "NODE_ENV=development DEBUG=* npm run start",
+    "dev:docker": "docker-compose -f docker-compose.dev.yml up",
+    "dev:docker:build": "docker-compose -f docker-compose.dev.yml up --build",
+    "dev:docker:down": "docker-compose -f docker-compose.dev.yml down",
+    "dev:migrate": "NODE_ENV=development npm run migrate",
+    "dev:seed": "NODE_ENV=development npm run seed",
+    "dev:logs": "docker-compose -f docker-compose.dev.yml logs -f app",
+    "dev:db": "docker-compose -f docker-compose.dev.yml exec postgres psql -U postgres -d myapp_dev",
+    "dev:redis": "docker-compose -f docker-compose.dev.yml exec redis redis-cli",
+    "env:dev": "cp .env.example .env.development",
+    "env:staging": "cp .env.example .env.staging",
+    "env:prod": "cp .env.example .env.production"
+  }
+}
+```
+
+## 🚀 Production Environment Setup
+
+### Production Configuration
+
+```yaml
+# docker-compose.prod.yml
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - API_URL=${API_URL}
+      - DATABASE_URL=${DATABASE_URL}
+      - REDIS_URL=${REDIS_URL}
+      - JWT_SECRET=${JWT_SECRET}
+      - STRIPE_SECRET=${STRIPE_SECRET}
+    volumes:
+      - ./logs:/app/logs
+    depends_on:
+      - postgres
+      - redis
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+      
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER}"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      
+  redis:
+    image: redis:7-alpine
+    command: redis-server --requirepass ${REDIS_PASSWORD}
+    environment:
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./ssl:/etc/nginx/ssl
+    depends_on:
+      - app
+    restart: unless-stopped
+```
+
+### Production Scripts
+
+```json
+{
+  "scripts": {
+    "start": "NODE_ENV=production npm run start",
+    "build": "NODE_ENV=production npm run build",
+    "migrate": "NODE_ENV=production npm run migrate",
+    "seed": "NODE_ENV=production npm run seed",
+    "backup": "NODE_ENV=production npm run backup",
+    "deploy": "npm run build && npm run deploy:prod",
+    "deploy:docker": "docker-compose -f docker-compose.prod.yml up -d",
+    "deploy:docker:update": "docker-compose -f docker-compose.prod.yml pull && docker-compose -f docker-compose.prod.yml up -d",
+    "logs": "docker-compose -f docker-compose.prod.yml logs -f app",
+    "health": "curl -f http://localhost:3000/health",
+    "env:validate": "node scripts/validate-environment.js"
+  }
+}
+```
+
+## 🔧 Environment-Specific Features
+
+### Feature Flags
+
+```javascript
+// config/featureFlags.js
+const getFeatureFlags = () => {
+  const env = process.env.NODE_ENV || 'development';
+  
+  return {
+    enableDebugMode: env === 'development',
+    enableHotReload: env === 'development',
+    enableMockData: env === 'development',
+    enableDetailedLogging: env === 'development' || env === 'staging',
+    enablePerformanceMonitoring: env === 'staging' || env === 'production',
+    enableErrorReporting: env === 'production',
+    enableAnalytics: env === 'production',
+    enableNewUI: env === 'staging' || env === 'production',
+    enableBetaFeatures: env === 'staging'
+  };
+};
+
+module.exports = { getFeatureFlags };
+```
+
+### API Configuration
+
+```javascript
+// config/api.js
+const getApiConfig = () => {
+  const env = process.env.NODE_ENV || 'development';
+  
+  const baseConfig = {
+    timeout: 30000,
+    retries: 3,
+    retryDelay: 1000
+  };
+  
+  const envConfigs = {
+    development: {
+      ...baseConfig,
+      timeout: 60000,
+      enableMockData: true,
+      mockDelay: 500,
+      enableDetailedLogging: true
+    },
+    
+    staging: {
+      ...baseConfig,
+      timeout: 15000,
+      enableMockData: false,
+      enableDetailedLogging: true,
+      enableRequestLogging: true
+    },
+    
+    production: {
+      ...baseConfig,
+      timeout: 5000,
+      enableMockData: false,
+      enableDetailedLogging: false,
+      enableRequestLogging: false,
+      enableCaching: true
+    }
+  };
+  
+  return envConfigs[env];
+};
+
+module.exports = { getApiConfig };
+```
+
+## 📊 Environment Monitoring
+
+### Environment Detection
+
+```javascript
+// utils/environment.js
+const detectEnvironment = () => {
+  // Check NODE_ENV
+  const nodeEnv = process.env.NODE_ENV;
+  
+  // Check for development indicators
+  const isDevelopment = !nodeEnv || 
+    nodeEnv === 'development' || 
+    process.env.DEV_MODE || 
+    process.env.IS_DEVELOPMENT;
+  
+  // Check for production indicators
+  const isProduction = nodeEnv === 'production' || 
+    process.env.NODE_ENV === 'production' || 
+    process.env.IS_PRODUCTION;
+  
+  // Check for staging
+  const isStaging = nodeEnv === 'staging' || 
+    process.env.IS_STAGING;
+  
+  return {
+    nodeEnv: nodeEnv || 'development',
+    isDevelopment,
+    isStaging,
+    isProduction,
+    isTest: process.env.NODE_ENV === 'test'
+  };
+};
+
+const getEnvironmentInfo = () => {
+  const env = detectEnvironment();
+  
+  return {
+    ...env,
+    platform: process.platform,
+    nodeVersion: process.version,
+    arch: process.arch,
+    pid: process.pid,
+    memory: process.memoryUsage(),
+    uptime: process.uptime()
+  };
+};
+
+module.exports = { detectEnvironment, getEnvironmentInfo };
+```
+
+### Environment Health Checks
+
+```javascript
+// scripts/health-check.js
+const { getEnvironmentInfo } = require('../utils/environment');
+const { validateSecrets } = require('../config/secrets');
+
+const performHealthCheck = async () => {
+  console.log('🔍 Environment Health Check');
+  
+  // Validate environment variables
+  try {
+    validateSecrets();
+    console.log('✅ Environment variables validated');
+  } catch (error) {
+    console.error('❌ Environment variables validation failed:', error.message);
+    return false;
+  }
+  
+  // Check environment info
+  const envInfo = getEnvironmentInfo();
+  console.log('📊 Environment Info:', {
+    environment: envInfo.nodeEnv,
+    platform: envInfo.platform,
+    nodeVersion: envInfo.nodeVersion,
+    memory: `${Math.round(envInfo.memory.heapUsed / 1024 / 1024)}MB`,
+    uptime: `${Math.round(envInfo.uptime / 60)} minutes`
+  });
+  
+  // Check critical services
+  const services = [
+    { name: 'Database', check: checkDatabase },
+    { name: 'Redis', check: checkRedis },
+    { name: 'External API', check: checkExternalAPI }
+  ];
+  
+  let allHealthy = true;
+  
+  for (const service of services) {
+    try {
+      const isHealthy = await service.check();
+      if (isHealthy) {
+        console.log(`✅ ${service.name}: Healthy`);
+      } else {
+        console.log(`❌ ${service.name}: Unhealthy`);
+        allHealthy = false;
+      }
+    } catch (error) {
+      console.log(`❌ ${service.name}: Error - ${error.message}`);
+      allHealthy = false;
+    }
+  }
+  
+  console.log(`🏥 Overall Health: ${allHealthy ? 'HEALTHY' : 'UNHEALTHY'}`);
+  return allHealthy;
+};
+
+async function checkDatabase() {
+  // Database health check implementation
+  return true; // Simplified for example
+}
+
+async function checkRedis() {
+  // Redis health check implementation
+  return true; // Simplified for example
+}
+
+async function checkExternalAPI() {
+  // External API health check implementation
+  return true; // Simplified for example
+}
+
+// Run health check if called directly
+if (require.main === module) {
+  performHealthCheck().then(healthy => {
+    process.exit(healthy ? 0 : 1);
+  });
+}
+
+module.exports = { performHealthCheck };
+```
+
+## 🔧 Best Practices
+
+### Environment File Management
+
+```bash
+# .env.example (template file)
+# Environment Configuration
+NODE_ENV=development
+PORT=3000
+
+# Database Configuration
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=myapp_dev
+DB_USERNAME=postgres
+DB_PASSWORD=password
+DB_SSL=false
+
+# Redis Configuration
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_PASSWORD=
+
+# API Configuration
+API_URL=http://localhost:3001
+API_TIMEOUT=30000
+
+# JWT Configuration
+JWT_SECRET=your-super-secret-jwt-key-here
+JWT_EXPIRES_IN=7d
+
+# External Services
+OPENAI_API_KEY=your-openai-api-key
+STRIPE_SECRET_KEY=your-stripe-secret-key
+
+# Feature Flags
+ENABLE_DEBUG_MODE=true
+ENABLE_MOCK_DATA=true
+ENABLE_DETAILED_LOGGING=true
+
+# Logging
+LOG_LEVEL=debug
+LOG_FILE_PATH=./logs/app.log
+```
+
+### Git Ignore for Environment Files
+
+```gitignore
+# Environment files
+.env
+.env.local
+.env.development
+.env.staging
+.env.production
+.env.test
+
+# Log files
+logs/
+*.log
+
+# Database
+*.sqlite
+*.db
+
+# OS generated files
+.DS_Store
+Thumbs.db
+```
+
+### CI/CD Environment Variables
+
+```yaml
+# .github/workflows/deploy.yml
+name: Deploy Application
+
+on:
+  push:
+    branches: [main, develop]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    environment:
+      # Production environment variables
+      NODE_ENV: production
+      API_URL: ${{ secrets.PROD_API_URL }}
+      DATABASE_URL: ${{ secrets.PROD_DATABASE_URL }}
+      REDIS_URL: ${{ secrets.PROD_REDIS_URL }}
+      JWT_SECRET: ${{ secrets.PROD_JWT_SECRET }}
+      STRIPE_SECRET: ${{ secrets.STRIPE_SECRET }}
+      
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build application
+        run: npm run build
+        env:
+          NODE_ENV: production
+          
+      - name: Deploy to production
+        run: npm run deploy:prod
+```
+
+---
+
+**DevOps Section Complete!** 🎉
+
+You now have a comprehensive understanding of:
+- **CI/CD Pipelines**: Automated build, test, and deployment
+- **Deployment Strategies**: Blue-Green, Canary, Rolling, A/B testing
+- **Environment Management**: Secure configuration across environments
+
+**Next Up**: Learn about Career Development! 💼

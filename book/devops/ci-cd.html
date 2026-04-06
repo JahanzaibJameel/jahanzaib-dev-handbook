@@ -35,7 +35,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "coal";
-            window.path_to_searchindex_js = "../searchindex-0452ccd7.js";
+            window.path_to_searchindex_js = "../searchindex-7e82225d.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-fa16be00.js"></script>
@@ -181,6 +181,715 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="cicd-pipeline"><a class="header" href="#cicd-pipeline">CI/CD Pipeline</a></h1>
+<p>Continuous Integration and Continuous Deployment (CI/CD) automates the process of building, testing, and deploying your applications. This ensures consistent, reliable deployments and faster development cycles.</p>
+<h2 id="-what-is-cicd"><a class="header" href="#-what-is-cicd">🎯 What is CI/CD?</a></h2>
+<p>CI/CD is a practice where developers integrate code into a shared repository multiple times per day, and each integration is automatically built and tested.</p>
+<h3 id="cicd-pipeline-benefits"><a class="header" href="#cicd-pipeline-benefits">CI/CD Pipeline Benefits</a></h3>
+<ul>
+<li><strong>Automated Testing</strong>: Catch bugs early in development</li>
+<li><strong>Consistent Deployments</strong>: Reduce human error</li>
+<li><strong>Faster Delivery</strong>: Ship features to production quickly</li>
+<li><strong>Quality Assurance</strong>: Automated quality checks</li>
+<li><strong>Rollback Capability</strong>: Easy rollback if issues occur</li>
+</ul>
+<h2 id="-cicd-tools--platforms"><a class="header" href="#-cicd-tools--platforms">🛠️ CI/CD Tools &amp; Platforms</a></h2>
+<h3 id="github-actions---most-popular"><a class="header" href="#github-actions---most-popular">GitHub Actions - Most Popular</a></h3>
+<pre><code class="language-yaml"># .github/workflows/ci-cd.yml
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+env:
+  NODE_VERSION: '18'
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  # Code Quality &amp; Testing
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run linting
+        run: npm run lint
+        
+      - name: Run type checking
+        run: npm run type-check
+        
+      - name: Run unit tests
+        run: npm run test:unit
+        
+      - name: Run integration tests
+        run: npm run test:integration
+        
+      - name: Upload coverage reports
+        uses: codecov/codecov-action@v3
+        with:
+          file: ./coverage/lcov.info
+          flags: unittests
+          name: codecov-umbrella
+
+  # Security Scanning
+  security:
+    runs-on: ubuntu-latest
+    needs: test
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Run security audit
+        run: npm audit --audit-level moderate
+        
+      - name: Run Snyk security scan
+        uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+  # Build &amp; Deploy Frontend
+  deploy-frontend:
+    runs-on: ubuntu-latest
+    needs: [test, security]
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build application
+        run: npm run build
+        env:
+          VITE_API_URL: ${{ secrets.API_URL }}
+          VITE_APP_ENV: production
+          
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          
+      - name: Run E2E tests
+        run: npm run test:e2e:production
+
+  # Build &amp; Deploy Backend
+  deploy-backend:
+    runs-on: ubuntu-latest
+    needs: [test, security]
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        
+      - name: Login to Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=sha,prefix={{branch}}-
+            type=raw,value=latest,enable={{is_default_branch}}
+            
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./backend/Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          
+      - name: Deploy to Railway
+        run: |
+          curl -X POST https://backboard.railway.app/v2/deployments \
+            -H "Authorization: Bearer ${{ secrets.RAILWAY_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "serviceId": "${{ secrets.RAILWAY_SERVICE_ID }}",
+              "image": "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}"
+            }'
+
+  # Deploy Documentation
+  deploy-docs:
+    runs-on: ubuntu-latest
+    needs: [test, security]
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup mdBook
+        run: |
+          curl -L https://github.com/rust-lang/mdBook/releases/download/v0.4.37/mdbook-v0.4.37-x86_64-unknown-linux-gnu.tar.gz | tar xz
+          sudo mv mdbook /usr/local/bin/
+          
+      - name: Build documentation
+        run: mdbook build
+        
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./book
+          cname: docs.yourapp.com
+</code></pre>
+<h3 id="advanced-multi-environment-pipeline"><a class="header" href="#advanced-multi-environment-pipeline">Advanced Multi-Environment Pipeline</a></h3>
+<pre><code class="language-yaml"># .github/workflows/advanced-ci-cd.yml
+name: Advanced CI/CD
+
+on:
+  push:
+    branches: [main, develop, staging]
+  pull_request:
+    branches: [main]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  # Matrix Testing
+  test-matrix:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [16, 18, 20]
+        
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run tests
+        run: npm test
+        
+      - name: Upload coverage
+        uses: codecov/codecov-action@v3
+
+  # Performance Testing
+  performance:
+    runs-on: ubuntu-latest
+    needs: test-matrix
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build application
+        run: npm run build
+        
+      - name: Run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.12.x
+          lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+          
+      - name: Upload Lighthouse results
+        uses: actions/upload-artifact@v3
+        with:
+          name: lighthouse-results
+          path: .lighthouseci
+
+  # Canary Deployment
+  deploy-canary:
+    runs-on: ubuntu-latest
+    needs: [test-matrix, performance]
+    if: github.ref == 'refs/heads/develop'
+    
+    steps:
+      - name: Deploy to Canary
+        run: |
+          # Deploy 10% of traffic to canary version
+          curl -X POST "https://api.vercel.com/v13/deployments" \
+            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            -d '{
+              "name": "canary-${{ github.sha }}",
+              "project": "${{ secrets.VERCEL_PROJECT_ID }}",
+              "target": "production",
+              "alias": "canary"
+            }'
+
+  # Production Deployment
+  deploy-production:
+    runs-on: ubuntu-latest
+    needs: [test-matrix, performance]
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Deploy to Production
+        run: |
+          # Full production deployment
+          curl -X POST "https://api.vercel.com/v13/deployments" \
+            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            -d '{
+              "name": "production-${{ github.sha }}",
+              "project": "${{ secrets.VERCEL_PROJECT_ID }}",
+              "target": "production"
+            }'
+            
+      - name: Update deployment status
+        uses: chrnorm/deployment-status@v2
+        with:
+          token: '${{ secrets.GITHUB_TOKEN }}'
+          environment-url: https://yourapp.com
+          environment: production
+</code></pre>
+<h2 id="-docker-integration"><a class="header" href="#-docker-integration">🐳 Docker Integration</a></h2>
+<h3 id="multi-stage-dockerfile"><a class="header" href="#multi-stage-dockerfile">Multi-Stage Dockerfile</a></h3>
+<pre><code class="language-dockerfile"># backend/Dockerfile
+FROM node:18-alpine AS base
+
+# Install dependencies
+FROM base AS deps
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production &amp;&amp; npm cache clean
+
+# Build application
+FROM base AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
+
+# Production image
+FROM base AS production
+WORKDIR /app
+
+# Create non-root user
+RUN addgroup -g 1001 -S nodejs
+RUN adduser -S nextjs -u 1001
+
+# Copy built application
+COPY --from=builder --chown=nextjs:nodejs /app/dist ./dist
+COPY --from=deps --chown=nextjs:nodejs /app/node_modules ./node_modules
+COPY --from=builder --chown=nextjs:nodejs /app/package.json ./package.json
+
+USER nextjs
+
+EXPOSE 3000
+
+ENV NODE_ENV=production
+ENV PORT=3000
+
+CMD ["npm", "start"]
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+  CMD curl -f http://localhost:3000/health || exit 1
+</code></pre>
+<h3 id="docker-compose-for-development"><a class="header" href="#docker-compose-for-development">Docker Compose for Development</a></h3>
+<pre><code class="language-yaml"># docker-compose.dev.yml
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://postgres:password@postgres:5432/myapp
+      - REDIS_URL=redis://redis:6379
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      - postgres
+      - redis
+      
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=myapp
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+      
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+      
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - app
+
+volumes:
+  postgres_data:
+  redis_data:
+</code></pre>
+<h2 id="-monitoring--observability"><a class="header" href="#-monitoring--observability">🔧 Monitoring &amp; Observability</a></h2>
+<h3 id="application-performance-monitoring"><a class="header" href="#application-performance-monitoring">Application Performance Monitoring</a></h3>
+<pre><code class="language-yaml"># .github/workflows/monitoring.yml
+name: Performance Monitoring
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:
+
+jobs:
+  performance-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Run performance tests
+        run: |
+          # Synthetic monitoring
+          npm run test:performance
+          
+      - name: Check application health
+        run: |
+          response=$(curl -s -o /dev/null -w "%{http_code}" https://yourapp.com/health)
+          if [ $response -ne 200 ]; then
+            echo "Health check failed"
+            exit 1
+          fi
+          
+      - name: Run uptime tests
+        uses: lencx/uptime-check@v1
+        with:
+          url: https://yourapp.com
+          expected-statuses: '200,301'
+          max-attempts: 3
+          
+      - name: Notify on failure
+        if: failure()
+        uses: 8398a7/action-slack@v3
+        with:
+          status: failure
+          channel: '#alerts'
+          text: 'Performance monitoring detected issues!'
+</code></pre>
+<h3 id="error-tracking-integration"><a class="header" href="#error-tracking-integration">Error Tracking Integration</a></h3>
+<pre><code class="language-javascript">// monitoring/errorTracking.js
+const Sentry = require('@sentry/node');
+
+Sentry.init({
+  dsn: process.env.SENTRY_DSN,
+  environment: process.env.NODE_ENV,
+  tracesSampleRate: 1.0,
+});
+
+// Error handling middleware
+const errorHandler = (err, req, res, next) =&gt; {
+  // Send to Sentry
+  Sentry.captureException(err);
+  
+  // Log error details
+  console.error('Error:', {
+    message: err.message,
+    stack: err.stack,
+    url: req.url,
+    method: req.method,
+    userAgent: req.get('User-Agent'),
+    timestamp: new Date().toISOString()
+  });
+  
+  // Respond with error
+  res.status(500).json({
+    error: 'Internal server error',
+    requestId: req.id
+  });
+};
+
+module.exports = errorHandler;
+</code></pre>
+<h2 id="-quality-gates--policies"><a class="header" href="#-quality-gates--policies">📊 Quality Gates &amp; Policies</a></h2>
+<h3 id="branch-protection-rules"><a class="header" href="#branch-protection-rules">Branch Protection Rules</a></h3>
+<pre><code class="language-yaml"># .github/branch-protection.yml
+protection_rules:
+  main:
+    required_status_checks:
+      strict: true
+      contexts:
+        - "CI/CD Pipeline (test)"
+        - "CI/CD Pipeline (security)"
+        - "CodeQL Analysis"
+        - "Dependency Review"
+    required_pull_request_reviews:
+      required_approving_review_count: 2
+      dismiss_stale_reviews: true
+      require_code_owner_reviews: true
+    enforce_admins: true
+    restrictions:
+      users: []
+      teams: ["core-developers"]
+</code></pre>
+<h3 id="automated-quality-checks"><a class="header" href="#automated-quality-checks">Automated Quality Checks</a></h3>
+<pre><code class="language-yaml"># .github/workflows/quality-gates.yml
+name: Quality Gates
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  quality-checks:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Code Quality Analysis
+        uses: github/super-linter@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Security Vulnerability Scan
+        uses: securecodewarrior/github-action-add-sarif@v1
+        with:
+          sarif-file: 'security-scan-results.sarif'
+          
+      - name: Dependency Review
+        uses: actions/dependency-review-action@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Check test coverage
+        run: |
+          coverage=$(npm run test:coverage:extract)
+          if (( $(echo "$coverage" | bc -l) &lt; 80 )); then
+            echo "Coverage below threshold"
+            exit 1
+          fi
+          
+      - name: Bundle size analysis
+        uses: preactjs/compressed-size-action@v2
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          exclude: "{**/node_modules/**}"
+</code></pre>
+<h2 id="-deployment-strategies"><a class="header" href="#-deployment-strategies">🚀 Deployment Strategies</a></h2>
+<h3 id="blue-green-deployment"><a class="header" href="#blue-green-deployment">Blue-Green Deployment</a></h3>
+<pre><code class="language-yaml"># .github/workflows/blue-green.yml
+name: Blue-Green Deployment
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Target environment'
+        required: true
+        default: 'staging'
+
+jobs:
+  deploy-blue-green:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Deploy Blue Version
+        run: |
+          # Deploy new version to blue environment
+          docker-compose -f docker-compose.blue.yml up -d
+          
+      - name: Health Check Blue
+        run: |
+          # Wait for blue to be healthy
+          timeout 300s bash -c 'until curl -f http://blue.yourapp.com/health; do sleep 5; done'
+          
+      - name: Switch Traffic
+        run: |
+          # Update load balancer to route to blue
+          aws elbv2 set-weights \
+            --load-balancer-app-name your-app-lb \
+            --target-group-arn arn:aws:elasticloadbalancing:...:targetgroup/blue/... \
+            --targets TargetGroup=arn:aws:elasticloadbalancing:...:targetgroup/blue/...,Weight=100 \
+            --targets TargetGroup=arn:aws:elasticloadbalancing:...:targetgroup/green/...,Weight=0
+            
+      - name: Final Health Check
+        run: |
+          sleep 30
+          curl -f http://yourapp.com/health
+          
+      - name: Cleanup Green
+        run: |
+          # Keep green for rollback
+          echo "Green environment kept for rollback"
+</code></pre>
+<h3 id="canary-deployments"><a class="header" href="#canary-deployments">Canary Deployments</a></h3>
+<pre><code class="language-yaml"># .github/workflows/canary.yml
+name: Canary Deployment
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  canary-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Deploy Canary
+        run: |
+          # Deploy to canary environment
+          helm upgrade --install canary ./helm-chart \
+            --set image.tag=${{ github.sha }} \
+            --set trafficWeight=10 \
+            --set environment=canary
+            
+      - name: Monitor Canary
+        run: |
+          # Monitor for 15 minutes
+          timeout 900s bash -c '
+            while true; do
+              error_rate=$(curl -s http://canary.yourapp.com/metrics | jq ".errorRate")
+              if (( $(echo "$error_rate" | bc -l) &gt; 5 )); then
+                echo "Canary error rate too high: $error_rate%"
+                exit 1
+              fi
+              sleep 30
+            done
+          '
+          
+      - name: Promote Canary
+        if: success()
+        run: |
+          # Promote canary to production
+          helm upgrade --install production ./helm-chart \
+            --set image.tag=${{ github.sha }} \
+            --set trafficWeight=100
+</code></pre>
+<h2 id="-best-practices"><a class="header" href="#-best-practices">🔧 Best Practices</a></h2>
+<h3 id="pipeline-optimization"><a class="header" href="#pipeline-optimization">Pipeline Optimization</a></h3>
+<pre><code class="language-yaml"># Use caching for faster builds
+- name: Cache node modules
+  uses: actions/cache@v3
+  with:
+    path: ~/.npm
+    key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+    restore-keys: |
+      ${{ runner.os }}-node-
+
+# Parallel execution for faster feedback
+jobs:
+  test-frontend:
+    runs-on: ubuntu-latest
+  test-backend:
+    runs-on: ubuntu-latest
+  test-e2e:
+    runs-on: ubuntu-latest
+    needs: [test-frontend, test-backend]
+
+# Artifact management
+- name: Upload build artifacts
+  uses: actions/upload-artifact@v3
+  with:
+    name: build-files
+    path: |
+      dist/
+      coverage/
+    retention-days: 30
+</code></pre>
+<h3 id="security-best-practices"><a class="header" href="#security-best-practices">Security Best Practices</a></h3>
+<pre><code class="language-yaml"># Use secrets properly
+env:
+  API_KEY: ${{ secrets.API_KEY }}
+  DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+# Secure Docker builds
+- name: Build Docker image
+  run: |
+    docker build \
+      --build-arg API_KEY=${{ secrets.API_KEY }} \
+      --build-arg DATABASE_URL=${{ secrets.DATABASE_URL }} \
+      -t myapp:${{ github.sha }} .
+      
+# Security scanning
+- name: Run security scan
+  uses: aquasecurity/trivy-action@master
+  with:
+    image-ref: 'docker.io/myapp:${{ github.sha }}'
+    format: 'sarif'
+    output: 'trivy-results.sarif'
+</code></pre>
+<hr>
+<p><strong>Next Up</strong>: Learn about Deployment Strategies! 🚀</p>
 
                     </main>
 

@@ -36,7 +36,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "coal";
-            window.path_to_searchindex_js = "searchindex-0452ccd7.js";
+            window.path_to_searchindex_js = "searchindex-7e82225d.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-fa16be00.js"></script>
@@ -2342,16 +2342,3063 @@ module.exports = errorHandler;
 <h1 id="seo-optimization"><a class="header" href="#seo-optimization">SEO Optimization</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="unit-testing"><a class="header" href="#unit-testing">Unit Testing</a></h1>
+<p>Unit testing is the foundation of reliable software development. It involves testing individual components or functions in isolation to ensure they work correctly.</p>
+<h2 id="-what-is-unit-testing"><a class="header" href="#-what-is-unit-testing">🎯 What is Unit Testing?</a></h2>
+<p>Unit testing focuses on the smallest testable parts of an application, called “units.” A unit can be a function, method, module, or component that can be tested independently.</p>
+<h3 id="why-unit-testing-matters"><a class="header" href="#why-unit-testing-matters">Why Unit Testing Matters</a></h3>
+<ul>
+<li><strong>Early Bug Detection</strong>: Catch issues before they reach production</li>
+<li><strong>Documentation</strong>: Tests serve as living documentation</li>
+<li><strong>Refactoring Safety</strong>: Confidently modify code without breaking functionality</li>
+<li><strong>Design Improvement</strong>: Writing tests forces better code structure</li>
+<li><strong>Development Speed</strong>: Faster feedback loop than manual testing</li>
+</ul>
+<h2 id="-testing-tools--setup"><a class="header" href="#-testing-tools--setup">🛠️ Testing Tools &amp; Setup</a></h2>
+<h3 id="jest---the-industry-standard"><a class="header" href="#jest---the-industry-standard">Jest - The Industry Standard</a></h3>
+<pre><code class="language-bash"># Install Jest for different environments
+# React Native
+npm install --save-dev jest @testing-library/react-native react-test-renderer
+
+# React/Next.js
+npm install --save-dev jest @testing-library/react @testing-library/jest-dom
+
+# Node.js
+npm install --save-dev jest supertest
+</code></pre>
+<h3 id="jest-configuration"><a class="header" href="#jest-configuration">Jest Configuration</a></h3>
+<pre><code class="language-javascript">// jest.config.js
+module.exports = {
+  // Test environment
+  testEnvironment: 'jsdom', // for React apps
+  // testEnvironment: 'node', // for Node.js apps
+  
+  // Test file patterns
+  testMatch: [
+    '**/__tests__/**/*.js',
+    '**/?(*.)+(spec|test).js'
+  ],
+  
+  // Setup files
+  setupFilesAfterEnv: ['&lt;rootDir&gt;/jest.setup.js'],
+  
+  // Coverage
+  collectCoverage: true,
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text', 'lcov', 'html'],
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx}',
+    '!src/**/*.test.{js,jsx}',
+    '!src/index.js'
+  ],
+  
+  // Mocks
+  moduleNameMapping: {
+    '^@/(.*)$': '&lt;rootDir&gt;/src/$1'
+  }
+};
+</code></pre>
+<h2 id="-react-native-unit-testing"><a class="header" href="#-react-native-unit-testing">🧪 React Native Unit Testing</a></h2>
+<h3 id="testing-components"><a class="header" href="#testing-components">Testing Components</a></h3>
+<pre><code class="language-javascript">// __tests__/components/Button.test.js
+import React from 'react';
+import { render, fireEvent } from '@testing-library/react-native';
+import Button from '../../src/components/Button';
+
+describe('Button Component', () =&gt; {
+  // Test basic rendering
+  it('renders correctly with title', () =&gt; {
+    const { getByText } = render(&lt;Button title="Click Me" /&gt;);
+    
+    expect(getByText('Click Me')).toBeTruthy();
+  });
+
+  // Test interaction
+  it('calls onPress when pressed', () =&gt; {
+    const mockOnPress = jest.fn();
+    const { getByText } = render(
+      &lt;Button title="Click Me" onPress={mockOnPress} /&gt;
+    );
+    
+    fireEvent.press(getByText('Click Me'));
+    expect(mockOnPress).toHaveBeenCalledTimes(1);
+  });
+
+  // Test different states
+  it('shows loading state correctly', () =&gt; {
+    const { getByTestId } = render(
+      &lt;Button title="Loading" loading={true} /&gt;
+    );
+    
+    expect(getByTestId('loading-indicator')).toBeTruthy();
+  });
+});
+</code></pre>
+<h3 id="testing-custom-hooks"><a class="header" href="#testing-custom-hooks">Testing Custom Hooks</a></h3>
+<pre><code class="language-javascript">// __tests__/hooks/useCounter.test.js
+import { renderHook, act } from '@testing-library/react-hooks';
+import useCounter from '../../src/hooks/useCounter';
+
+describe('useCounter Hook', () =&gt; {
+  it('returns initial count', () =&gt; {
+    const { result } = renderHook(() =&gt; useCounter());
+    
+    expect(result.current.count).toBe(0);
+  });
+
+  it('increments count', () =&gt; {
+    const { result } = renderHook(() =&gt; useCounter());
+    
+    act(() =&gt; {
+      result.current.increment();
+    });
+    
+    expect(result.current.count).toBe(1);
+  });
+});
+</code></pre>
+<h2 id="-nodejs-unit-testing"><a class="header" href="#-nodejs-unit-testing">🧪 Node.js Unit Testing</a></h2>
+<h3 id="testing-controllers"><a class="header" href="#testing-controllers">Testing Controllers</a></h3>
+<pre><code class="language-javascript">// __tests__/controllers/userController.test.js
+const request = require('supertest');
+const app = require('../../src/app');
+const User = require('../../src/models/User');
+
+// Mock User model
+jest.mock('../../src/models/User');
+
+describe('User Controller', () =&gt; {
+  beforeEach(() =&gt; {
+    jest.clearAllMocks();
+  });
+
+  describe('GET /api/users', () =&gt; {
+    it('returns all users', async () =&gt; {
+      const mockUsers = [
+        { id: 1, name: 'John', email: 'john@example.com' }
+      ];
+      
+      User.find.mockResolvedValue(mockUsers);
+
+      const response = await request(app)
+        .get('/api/users')
+        .expect(200);
+
+      expect(response.body).toEqual(mockUsers);
+    });
+  });
+});
+</code></pre>
+<h2 id="-coverage--quality"><a class="header" href="#-coverage--quality">📊 Coverage &amp; Quality</a></h2>
+<h3 id="coverage-configuration"><a class="header" href="#coverage-configuration">Coverage Configuration</a></h3>
+<pre><code class="language-javascript">// package.json
+{
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  }
+}
+</code></pre>
+<h2 id="-best-practices-4"><a class="header" href="#-best-practices-4">🔧 Best Practices</a></h2>
+<h3 id="test-structure-aaa-pattern"><a class="header" href="#test-structure-aaa-pattern">Test Structure (AAA Pattern)</a></h3>
+<pre><code class="language-javascript">// Arrange, Act, Assert
+it('increments counter when button is clicked', () =&gt; {
+  // Arrange
+  const mockOnPress = jest.fn();
+  const { getByText } = render(&lt;Button onPress={mockOnPress} /&gt;);
+  
+  // Act
+  fireEvent.press(getByText('Increment'));
+  
+  // Assert
+  expect(mockOnPress).toHaveBeenCalledTimes(1);
+});
+</code></pre>
+<hr>
+<p><strong>Next Up</strong>: Learn about Integration Testing! 🔄</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="integration-testing"><a class="header" href="#integration-testing">Integration Testing</a></h1>
+<p>Integration testing verifies that different parts of your application work together correctly. It tests the interaction between components, services, databases, and external APIs.</p>
+<h2 id="-what-is-integration-testing"><a class="header" href="#-what-is-integration-testing">🎯 What is Integration Testing?</a></h2>
+<p>Integration testing sits between unit testing and end-to-end testing. It combines multiple units to test their interactions and ensure they work together as expected.</p>
+<h3 id="why-integration-testing-matters"><a class="header" href="#why-integration-testing-matters">Why Integration Testing Matters</a></h3>
+<ul>
+<li><strong>Catch Integration Issues</strong>: Find problems when components interact</li>
+<li><strong>Database Integration</strong>: Verify data flow between app and database</li>
+<li><strong>API Integration</strong>: Test communication with external services</li>
+<li><strong>Component Integration</strong>: Ensure UI components work together</li>
+<li><strong>Real Environment</strong>: Test with actual dependencies</li>
+</ul>
+<h2 id="-integration-testing-tools"><a class="header" href="#-integration-testing-tools">🛠️ Integration Testing Tools</a></h2>
+<h3 id="react-native-testing"><a class="header" href="#react-native-testing">React Native Testing</a></h3>
+<pre><code class="language-bash">npm install --save-dev @testing-library/react-native jest
+</code></pre>
+<h3 id="reactnextjs-testing"><a class="header" href="#reactnextjs-testing">React/Next.js Testing</a></h3>
+<pre><code class="language-bash">npm install --save-dev @testing-library/react @testing-library/jest-dom
+</code></pre>
+<h3 id="nodejs-api-testing"><a class="header" href="#nodejs-api-testing">Node.js API Testing</a></h3>
+<pre><code class="language-bash">npm install --save-dev supertest mongodb-memory-server
+</code></pre>
+<h2 id="-react-native-integration-testing"><a class="header" href="#-react-native-integration-testing">🧪 React Native Integration Testing</a></h2>
+<h3 id="testing-component-integration"><a class="header" href="#testing-component-integration">Testing Component Integration</a></h3>
+<pre><code class="language-javascript">// __tests__/integration/LoginFlow.test.js
+import React from 'react';
+import { render, fireEvent, waitFor } from '@testing-library/react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { Provider } from 'react-redux';
+import LoginScreen from '../../src/screens/LoginScreen';
+import store from '../../src/store';
+
+// Mock navigation
+const mockNavigation = {
+  navigate: jest.fn(),
+  replace: jest.fn(),
+};
+
+// Mock AsyncStorage
+jest.mock('@react-native-async-storage/async-storage', () =&gt; ({
+  setItem: jest.fn(),
+  getItem: jest.fn(() =&gt; Promise.resolve(null)),
+  removeItem: jest.fn(),
+}));
+
+describe('Login Flow Integration', () =&gt; {
+  const renderWithProviders = (component) =&gt; {
+    return render(
+      &lt;Provider store={store}&gt;
+        &lt;NavigationContainer&gt;
+          {component}
+        &lt;/NavigationContainer&gt;
+      &lt;/Provider&gt;
+    );
+  };
+
+  it('completes login flow successfully', async () =&gt; {
+    const mockResponse = {
+      user: { id: 1, name: 'John', email: 'john@example.com' },
+      token: 'mock-jwt-token'
+    };
+
+    // Mock API call
+    global.fetch = jest.fn().mockResolvedValueOnce({
+      ok: true,
+      json: async () =&gt; mockResponse
+    });
+
+    const { getByPlaceholderText, getByText } = renderWithProviders(
+      &lt;LoginScreen navigation={mockNavigation} /&gt;
+    );
+
+    // Enter credentials
+    fireEvent.changeText(getByPlaceholderText('Email'), 'john@example.com');
+    fireEvent.changeText(getByPlaceholderText('Password'), 'password123');
+
+    // Submit form
+    fireEvent.press(getByText('Login'));
+
+    // Wait for navigation
+    await waitFor(() =&gt; {
+      expect(mockNavigation.replace).toHaveBeenCalledWith('Home');
+    });
+
+    // Verify token storage
+    const AsyncStorage = require('@react-native-async-storage/async-storage');
+    expect(AsyncStorage.setItem).toHaveBeenCalledWith(
+      'auth_token',
+      mockResponse.token
+    );
+  });
+});
+</code></pre>
+<h2 id="-nodejs-api-integration-testing"><a class="header" href="#-nodejs-api-integration-testing">🧪 Node.js API Integration Testing</a></h2>
+<h3 id="testing-database-integration"><a class="header" href="#testing-database-integration">Testing Database Integration</a></h3>
+<pre><code class="language-javascript">// __tests__/integration/userController.test.js
+const request = require('supertest');
+const mongoose = require('mongoose');
+const { MongoMemoryServer } = require('mongodb-memory-server');
+const app = require('../../src/app');
+const User = require('../../src/models/User');
+
+describe('User Controller Integration', () =&gt; {
+  let mongoServer;
+
+  beforeAll(async () =&gt; {
+    mongoServer = await MongoMemoryServer.create();
+    const mongoUri = mongoServer.getUri();
+    await mongoose.connect(mongoUri);
+  });
+
+  beforeEach(async () =&gt; {
+    await User.deleteMany({});
+  });
+
+  afterAll(async () =&gt; {
+    await mongoose.disconnect();
+    await mongoServer.stop();
+  });
+
+  describe('POST /api/users', () =&gt; {
+    it('creates user and saves to database', async () =&gt; {
+      const userData = {
+        name: 'John Doe',
+        email: 'john@example.com',
+        password: 'password123'
+      };
+
+      const response = await request(app)
+        .post('/api/users')
+        .send(userData)
+        .expect(201);
+
+      // Verify response
+      expect(response.body.name).toBe(userData.name);
+      expect(response.body.email).toBe(userData.email);
+
+      // Verify database
+      const userInDb = await User.findOne({ email: userData.email });
+      expect(userInDb).toBeTruthy();
+      expect(userInDb.name).toBe(userData.name);
+    });
+  });
+});
+</code></pre>
+<h2 id="-integration-testing-best-practices"><a class="header" href="#-integration-testing-best-practices">🔧 Integration Testing Best Practices</a></h2>
+<h3 id="test-organization"><a class="header" href="#test-organization">Test Organization</a></h3>
+<pre><code>__tests__/
+├── integration/
+│   ├── auth/
+│   │   ├── loginFlow.test.js
+│   │   └── protectedRoutes.test.js
+│   ├── api/
+│   │   ├── userController.test.js
+│   │   └── fileUpload.test.js
+│   └── components/
+│       ├── shoppingCart.test.js
+│       └── userProfile.test.js
+</code></pre>
+<h3 id="test-data-management"><a class="header" href="#test-data-management">Test Data Management</a></h3>
+<pre><code class="language-javascript">// __tests__/utils/testData.js
+import { MongoMemoryServer } from 'mongodb-memory-server';
+import mongoose from 'mongoose';
+
+export class TestDatabase {
+  async connect() {
+    this.server = await MongoMemoryServer.create();
+    const uri = this.server.getUri();
+    this.connection = await mongoose.connect(uri);
+  }
+
+  async disconnect() {
+    await mongoose.disconnect();
+    await this.server.stop();
+  }
+
+  async clear() {
+    const collections = mongoose.connection.collections;
+    for (const key in collections) {
+      await collections[key].deleteMany({});
+    }
+  }
+}
+</code></pre>
+<hr>
+<p><strong>Next Up</strong>: Learn about End-to-End Testing! 🎭</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="end-to-end-testing"><a class="header" href="#end-to-end-testing">End-to-End Testing</a></h1>
+<p>End-to-end (E2E) testing simulates real user interactions with your application from start to finish. It tests the complete user journey across multiple pages and components.</p>
+<h2 id="-what-is-e2e-testing"><a class="header" href="#-what-is-e2e-testing">🎯 What is E2E Testing?</a></h2>
+<p>E2E testing automates browser interactions to test your application exactly as a user would experience it. It verifies that all parts of your system work together correctly in a real browser environment.</p>
+<h3 id="why-e2e-testing-matters"><a class="header" href="#why-e2e-testing-matters">Why E2E Testing Matters</a></h3>
+<ul>
+<li><strong>User Experience Validation</strong>: Test actual user workflows</li>
+<li><strong>Cross-Browser Testing</strong>: Ensure compatibility across browsers</li>
+<li><strong>Regression Prevention</strong>: Catch breaking changes before users do</li>
+<li><strong>Confidence in Deployments</strong>: Verify critical paths work</li>
+<li><strong>Business Logic Verification</strong>: Test complete user stories</li>
+</ul>
+<h2 id="-e2e-testing-tools"><a class="header" href="#-e2e-testing-tools">🛠️ E2E Testing Tools</a></h2>
+<h3 id="playwright---modern-e2e-testing"><a class="header" href="#playwright---modern-e2e-testing">Playwright - Modern E2E Testing</a></h3>
+<pre><code class="language-bash"># Install Playwright
+npm install --save-dev @playwright/test
+npx playwright install
+
+# Install browsers
+npx playwright install chromium firefox webkit
+</code></pre>
+<h3 id="cypress---popular-alternative"><a class="header" href="#cypress---popular-alternative">Cypress - Popular Alternative</a></h3>
+<pre><code class="language-bash"># Install Cypress
+npm install --save-dev cypress
+
+# Open Cypress
+npx cypress open
+</code></pre>
+<h2 id="-playwright-e2e-testing"><a class="header" href="#-playwright-e2e-testing">🧪 Playwright E2E Testing</a></h2>
+<h3 id="basic-configuration"><a class="header" href="#basic-configuration">Basic Configuration</a></h3>
+<pre><code class="language-javascript">// playwright.config.js
+const { defineConfig, devices } = require('@playwright/test');
+
+module.exports = defineConfig({
+  testDir: './tests/e2e',
+  
+  // Run tests on multiple browsers
+  projects: [
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
+    },
+  ],
+
+  // Test configuration
+  use: {
+    // Base URL for tests
+    baseURL: 'http://localhost:3000',
+    
+    // Screenshot on failure
+    screenshot: 'only-on-failure',
+    
+    // Video on failure
+    video: 'retain-on-failure',
+    
+    // Trace on failure
+    trace: 'on-first-retry',
+  },
+
+  // Global setup
+  webServer: {
+    command: 'npm run dev',
+    port: 3000,
+  },
+});
+</code></pre>
+<h3 id="testing-user-authentication-flow"><a class="header" href="#testing-user-authentication-flow">Testing User Authentication Flow</a></h3>
+<pre><code class="language-javascript">// tests/e2e/auth.spec.js
+const { test, expect } = require('@playwright/test');
+
+test.describe('Authentication Flow', () =&gt; {
+  test.beforeEach(async ({ page }) =&gt; {
+    // Clear storage before each test
+    await page.context().clearCookies();
+    await page.evaluate(() =&gt; localStorage.clear());
+  });
+
+  test('user can register and login', async ({ page }) =&gt; {
+    // Navigate to registration
+    await page.goto('/register');
+    
+    // Fill registration form
+    await page.fill('[data-testid="name-input"]', 'John Doe');
+    await page.fill('[data-testid="email-input"]', 'john@example.com');
+    await page.fill('[data-testid="password-input"]', 'password123');
+    await page.fill('[data-testid="confirm-password-input"]', 'password123');
+    
+    // Submit registration
+    await page.click('[data-testid="register-button"]');
+    
+    // Should redirect to login
+    await expect(page).toHaveURL('/login');
+    
+    // Show success message
+    await expect(page.locator('[data-testid="success-message"]')).toBeVisible();
+    
+    // Now login
+    await page.fill('[data-testid="email-input"]', 'john@example.com');
+    await page.fill('[data-testid="password-input"]', 'password123');
+    await page.click('[data-testid="login-button"]');
+    
+    // Should redirect to dashboard
+    await expect(page).toHaveURL('/dashboard');
+    
+    // Verify user is logged in
+    await expect(page.locator('[data-testid="user-name"]')).toContainText('John Doe');
+  });
+
+  test('shows validation errors for invalid data', async ({ page }) =&gt; {
+    await page.goto('/register');
+    
+    // Submit empty form
+    await page.click('[data-testid="register-button"]');
+    
+    // Should show validation errors
+    await expect(page.locator('[data-testid="name-error"]')).toBeVisible();
+    await expect(page.locator('[data-testid="email-error"]')).toBeVisible();
+    await expect(page.locator('[data-testid="password-error"]')).toBeVisible();
+    
+    // Fill with invalid email
+    await page.fill('[data-testid="email-input"]', 'invalid-email');
+    await page.click('[data-testid="register-button"]');
+    
+    // Should show email error
+    await expect(page.locator('[data-testid="email-error"]')).toContainText('Invalid email format');
+  });
+
+  test('handles login with wrong credentials', async ({ page }) =&gt; {
+    await page.goto('/login');
+    
+    // Fill with wrong credentials
+    await page.fill('[data-testid="email-input"]', 'john@example.com');
+    await page.fill('[data-testid="password-input"]', 'wrongpassword');
+    await page.click('[data-testid="login-button"]');
+    
+    // Should show error message
+    await expect(page.locator('[data-testid="error-message"]')).toBeVisible();
+    await expect(page.locator('[data-testid="error-message"]')).toContainText('Invalid credentials');
+    
+    // Should not redirect
+    await expect(page).toHaveURL('/login');
+  });
+});
+</code></pre>
+<h3 id="testing-e-commerce-flow"><a class="header" href="#testing-e-commerce-flow">Testing E-Commerce Flow</a></h3>
+<pre><code class="language-javascript">// tests/e2e/ecommerce.spec.js
+const { test, expect } = require('@playwright/test');
+
+test.describe('E-Commerce Flow', () =&gt; {
+  test('complete purchase journey', async ({ page }) =&gt; {
+    // Navigate to products
+    await page.goto('/products');
+    
+    // Search for product
+    await page.fill('[data-testid="search-input"]', 'laptop');
+    await page.press('[data-testid="search-input"]', 'Enter');
+    
+    // Click on first product
+    await page.click('[data-testid="product-card"]:first-child');
+    
+    // Verify product page
+    await expect(page.locator('h1')).toContainText('Laptop');
+    await expect(page.locator('[data-testid="product-price"]')).toBeVisible();
+    
+    // Add to cart
+    await page.click('[data-testid="add-to-cart-button"]');
+    
+    // Verify cart notification
+    await expect(page.locator('[data-testid="cart-count"]')).toContainText('1');
+    
+    // Go to cart
+    await page.click('[data-testid="cart-icon"]');
+    
+    // Verify cart contents
+    await expect(page).toHaveURL('/cart');
+    await expect(page.locator('[data-testid="cart-item"]')).toHaveCount(1);
+    
+    // Proceed to checkout
+    await page.click('[data-testid="checkout-button"]');
+    
+    // Fill shipping information
+    await page.fill('[data-testid="shipping-name"]', 'John Doe');
+    await page.fill('[data-testid="shipping-address"]', '123 Main St');
+    await page.fill('[data-testid="shipping-city"]', 'New York');
+    await page.fill('[data-testid="shipping-zip"]', '10001');
+    
+    // Continue to payment
+    await page.click('[data-testid="continue-to-payment"]');
+    
+    // Fill payment information
+    await page.fill('[data-testid="card-number"]', '4242424242424242');
+    await page.fill('[data-testid="card-expiry"]', '12/25');
+    await page.fill('[data-testid="card-cvc"]', '123');
+    
+    // Submit order
+    await page.click('[data-testid="place-order"]');
+    
+    // Verify order confirmation
+    await expect(page).toHaveURL('/order-confirmation');
+    await expect(page.locator('[data-testid="success-message"]')).toContainText('Order placed successfully');
+    await expect(page.locator('[data-testid="order-number"]')).toBeVisible();
+  });
+
+  test('handles out of stock products', async ({ page }) =&gt; {
+    await page.goto('/products/out-of-stock-laptop');
+    
+    // Product should show out of stock
+    await expect(page.locator('[data-testid="out-of-stock-badge"]')).toBeVisible();
+    
+    // Add to cart should be disabled
+    const addToCartButton = page.locator('[data-testid="add-to-cart-button"]');
+    await expect(addToCartButton).toBeDisabled();
+    
+    // Should show notification option
+    await expect(page.locator('[data-testid="notify-when-available"]')).toBeVisible();
+  });
+});
+</code></pre>
+<h3 id="testing-responsive-design"><a class="header" href="#testing-responsive-design">Testing Responsive Design</a></h3>
+<pre><code class="language-javascript">// tests/e2e/responsive.spec.js
+const { test, expect, devices } = require('@playwright/test');
+
+test.describe('Responsive Design', () =&gt; {
+  const viewports = [
+    { name: 'Mobile', viewport: { width: 375, height: 667 } },
+    { name: 'Tablet', viewport: { width: 768, height: 1024 } },
+    { name: 'Desktop', viewport: { width: 1280, height: 720 } },
+  ];
+
+  viewports.forEach(({ name, viewport }) =&gt; {
+    test(`${name}: navigation works correctly`, async ({ page }) =&gt; {
+      await page.setViewportSize(viewport);
+      await page.goto('/');
+      
+      // Test navigation menu
+      if (name === 'Mobile') {
+        // Mobile should have hamburger menu
+        await expect(page.locator('[data-testid="mobile-menu-button"]')).toBeVisible();
+        await expect(page.locator('[data-testid="desktop-nav"]')).toBeHidden();
+        
+        // Open mobile menu
+        await page.click('[data-testid="mobile-menu-button"]');
+        await expect(page.locator('[data-testid="mobile-menu"]')).toBeVisible();
+      } else {
+        // Desktop should show full navigation
+        await expect(page.locator('[data-testid="desktop-nav"]')).toBeVisible();
+        await expect(page.locator('[data-testid="mobile-menu-button"]')).toBeHidden();
+      }
+    });
+
+    test(`${name}: product grid layout`, async ({ page }) =&gt; {
+      await page.setViewportSize(viewport);
+      await page.goto('/products');
+      
+      const productGrid = page.locator('[data-testid="product-grid"]');
+      await expect(productGrid).toBeVisible();
+      
+      if (name === 'Mobile') {
+        // Mobile should show single column
+        await expect(productGrid.locator('[data-testid="product-card"]')).toHaveCount(1, { visible: true });
+      } else if (name === 'Tablet') {
+        // Tablet should show 2 columns
+        await expect(productGrid.locator('[data-testid="product-card"]')).toHaveCount(2, { visible: true });
+      } else {
+        // Desktop should show 3+ columns
+        await expect(productGrid.locator('[data-testid="product-card"]')).toHaveCount(3, { visible: true });
+      }
+    });
+  });
+});
+</code></pre>
+<h2 id="-react-native-e2e-testing"><a class="header" href="#-react-native-e2e-testing">🧪 React Native E2E Testing</a></h2>
+<h3 id="detox-for-react-native"><a class="header" href="#detox-for-react-native">Detox for React Native</a></h3>
+<pre><code class="language-bash"># Install Detox
+npm install --save-dev detox
+npx detox init
+
+# Configure for iOS/Android
+npx detox build --configuration ios.sim.debug
+npx detox test --configuration ios.sim.debug
+</code></pre>
+<h3 id="e2e-test-for-mobile-app"><a class="header" href="#e2e-test-for-mobile-app">E2E Test for Mobile App</a></h3>
+<pre><code class="language-javascript">// e2e/LoginFlow.e2e.js
+const { device, element, by, expect } = require('detox');
+
+describe('Login Flow', () =&gt; {
+  beforeAll(async () =&gt; {
+    await device.launchApp();
+  });
+
+  beforeEach(async () =&gt; {
+    await device.reloadReactNative();
+  });
+
+  it('should login successfully', async () =&gt; {
+    // Enter email
+    await element(by.id('email-input')).typeText('john@example.com');
+    
+    // Enter password
+    await element(by.id('password-input')).typeText('password123');
+    
+    // Tap login button
+    await element(by.id('login-button')).tap();
+    
+    // Should navigate to home screen
+    await expect(element(by.id('home-screen'))).toBeVisible();
+    
+    // Should show user name
+    await expect(element(by.text('Welcome, John'))).toBeVisible();
+  });
+
+  it('should show error for invalid credentials', async () =&gt; {
+    await element(by.id('email-input')).typeText('john@example.com');
+    await element(by.id('password-input')).typeText('wrongpassword');
+    await element(by.id('login-button')).tap();
+    
+    // Should show error message
+    await expect(element(by.id('error-message'))).toBeVisible();
+    await expect(element(by.text('Invalid credentials'))).toBeVisible();
+    
+    // Should stay on login screen
+    await expect(element(by.id('login-screen'))).toBeVisible();
+  });
+});
+</code></pre>
+<h2 id="-advanced-e2e-testing"><a class="header" href="#-advanced-e2e-testing">🔧 Advanced E2E Testing</a></h2>
+<h3 id="testing-file-upload"><a class="header" href="#testing-file-upload">Testing File Upload</a></h3>
+<pre><code class="language-javascript">// tests/e2e/fileUpload.spec.js
+const { test, expect } = require('@playwright/test');
+
+test.describe('File Upload', () =&gt; {
+  test('uploads profile picture', async ({ page }) =&gt; {
+    await page.goto('/profile');
+    
+    // Click upload button
+    const fileInput = page.locator('[data-testid="file-input"]');
+    
+    // Upload file
+    await fileInput.setInputFiles('tests/fixtures/profile-picture.jpg');
+    
+    // Should show preview
+    await expect(page.locator('[data-testid="image-preview"]')).toBeVisible();
+    
+    // Click upload
+    await page.click('[data-testid="upload-button"]');
+    
+    // Should show success message
+    await expect(page.locator('[data-testid="success-message"]')).toContainText('Profile picture updated');
+    
+    // Should update profile picture
+    await page.reload();
+    await expect(page.locator('[data-testid="profile-image"]')).toHaveAttribute('src', /profile-picture/);
+  });
+
+  test('validates file types and sizes', async ({ page }) =&gt; {
+    await page.goto('/profile');
+    
+    // Try to upload invalid file
+    const fileInput = page.locator('[data-testid="file-input"]');
+    await fileInput.setInputFiles('tests/fixtures/invalid-file.txt');
+    
+    // Should show error
+    await expect(page.locator('[data-testid="file-error"]')).toContainText('Invalid file type');
+    
+    // Try to upload large file
+    await fileInput.setInputFiles('tests/fixtures/large-image.jpg');
+    await page.click('[data-testid="upload-button"]');
+    
+    await expect(page.locator('[data-testid="file-error"]')).toContainText('File too large');
+  });
+});
+</code></pre>
+<h3 id="testing-performance"><a class="header" href="#testing-performance">Testing Performance</a></h3>
+<pre><code class="language-javascript">// tests/e2e/performance.spec.js
+const { test, expect } = require('@playwright/test');
+
+test.describe('Performance Tests', () =&gt; {
+  test('page load performance', async ({ page }) =&gt; {
+    // Start performance monitoring
+    await page.goto('/');
+    
+    // Check load time
+    const performanceTiming = JSON.parse(
+      await page.evaluate(() =&gt; JSON.stringify(window.performance.timing))
+    );
+    
+    const loadTime = performanceTiming.loadEventEnd - performanceTiming.navigationStart;
+    
+    // Should load within 3 seconds
+    expect(loadTime).toBeLessThan(3000);
+    
+    // Check Core Web Vitals
+    const webVitals = await page.evaluate(() =&gt; {
+      return new Promise((resolve) =&gt; {
+        new PerformanceObserver((list) =&gt; {
+          const entries = list.getEntries();
+          const vitals = {};
+          
+          entries.forEach((entry) =&gt; {
+            if (entry.entryType === 'largest-contentful-paint') {
+              vitals.LCP = entry.startTime;
+            }
+            if (entry.entryType === 'first-input') {
+              vitals.FID = entry.processingStart - entry.startTime;
+            }
+          });
+          
+          resolve(vitals);
+        }).observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+      });
+    });
+    
+    // LCP should be under 2.5 seconds
+    expect(webVitals.LCP).toBeLessThan(2500);
+    
+    // FID should be under 100ms
+    expect(webVitals.FID).toBeLessThan(100);
+  });
+
+  test('memory usage', async ({ page }) =&gt; {
+    await page.goto('/heavy-page');
+    
+    // Get memory usage
+    const memoryUsage = await page.evaluate(() =&gt; {
+      if (performance.memory) {
+        return {
+          used: performance.memory.usedJSHeapSize,
+          total: performance.memory.totalJSHeapSize,
+          limit: performance.memory.jsHeapSizeLimit
+        };
+      }
+      return null;
+    });
+    
+    if (memoryUsage) {
+      // Memory usage should be reasonable
+      const memoryRatio = memoryUsage.used / memoryUsage.limit;
+      expect(memoryRatio).toBeLessThan(0.7); // Less than 70% of limit
+    }
+  });
+});
+</code></pre>
+<h2 id="-e2e-testing-best-practices"><a class="header" href="#-e2e-testing-best-practices">📊 E2E Testing Best Practices</a></h2>
+<h3 id="test-organization-1"><a class="header" href="#test-organization-1">Test Organization</a></h3>
+<pre><code>tests/
+├── e2e/
+│   ├── auth/
+│   │   ├── login.spec.js
+│   │   └── registration.spec.js
+│   ├── ecommerce/
+│   │   ├── product-browsing.spec.js
+│   │   ├── cart.spec.js
+│   │   └── checkout.spec.js
+│   ├── responsive/
+│   │   ├── mobile.spec.js
+│   │   ├── tablet.spec.js
+│   │   └── desktop.spec.js
+│   ├── performance/
+│   │   ├── load-time.spec.js
+│   │   └── memory.spec.js
+│   └── fixtures/
+│       ├── users.json
+│       └── products.json
+</code></pre>
+<h3 id="page-object-model"><a class="header" href="#page-object-model">Page Object Model</a></h3>
+<pre><code class="language-javascript">// tests/e2e/page-objects/LoginPage.js
+class LoginPage {
+  constructor(page) {
+    this.page = page;
+    this.emailInput = page.locator('[data-testid="email-input"]');
+    this.passwordInput = page.locator('[data-testid="password-input"]');
+    this.loginButton = page.locator('[data-testid="login-button"]');
+    this.errorMessage = page.locator('[data-testid="error-message"]');
+  }
+
+  async goto() {
+    await this.page.goto('/login');
+  }
+
+  async login(email, password) {
+    await this.emailInput.fill(email);
+    await this.passwordInput.fill(password);
+    await this.loginButton.click();
+  }
+
+  async getErrorMessage() {
+    return await this.errorMessage.textContent();
+  }
+
+  async isLoggedIn() {
+    return await this.page.locator('[data-testid="user-profile"]').isVisible();
+  }
+}
+
+module.exports = LoginPage;
+</code></pre>
+<h3 id="test-data-management-1"><a class="header" href="#test-data-management-1">Test Data Management</a></h3>
+<pre><code class="language-javascript">// tests/e2e/fixtures/testData.js
+export const users = {
+  valid: {
+    email: 'john@example.com',
+    password: 'password123',
+    name: 'John Doe'
+  },
+  invalid: {
+    email: 'invalid-email',
+    password: 'wrongpassword'
+  }
+};
+
+export const products = {
+  laptop: {
+    name: 'Test Laptop',
+    price: 999.99,
+    category: 'Electronics'
+  }
+};
+
+// Test utilities
+export const generateRandomEmail = () =&gt; {
+  return `test${Date.now()}@example.com`;
+};
+
+export const generateRandomString = (length = 10) =&gt; {
+  return Math.random().toString(36).substring(2, length + 2);
+};
+</code></pre>
+<h3 id="cicd-integration"><a class="header" href="#cicd-integration">CI/CD Integration</a></h3>
+<pre><code class="language-javascript">// .github/workflows/e2e.yml
+name: E2E Tests
+
+on: [push, pull_request]
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+        
+      - name: Build application
+        run: npm run build
+        
+      - name: Run E2E tests
+        run: npx playwright test
+        
+      - name: Upload test results
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: playwright-report
+          path: playwright-report/
+</code></pre>
+<hr>
+<p><strong>Testing Section Complete!</strong> 🎉</p>
+<p>You now have a comprehensive understanding of:</p>
+<ul>
+<li><strong>Unit Testing</strong>: Testing individual components and functions</li>
+<li><strong>Integration Testing</strong>: Testing component interactions</li>
+<li><strong>End-to-End Testing</strong>: Testing complete user workflows</li>
+</ul>
+<p><strong>Next Up</strong>: Learn about DevOps &amp; Deployment! ⚙️</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="cicd-pipeline"><a class="header" href="#cicd-pipeline">CI/CD Pipeline</a></h1>
+<p>Continuous Integration and Continuous Deployment (CI/CD) automates the process of building, testing, and deploying your applications. This ensures consistent, reliable deployments and faster development cycles.</p>
+<h2 id="-what-is-cicd"><a class="header" href="#-what-is-cicd">🎯 What is CI/CD?</a></h2>
+<p>CI/CD is a practice where developers integrate code into a shared repository multiple times per day, and each integration is automatically built and tested.</p>
+<h3 id="cicd-pipeline-benefits"><a class="header" href="#cicd-pipeline-benefits">CI/CD Pipeline Benefits</a></h3>
+<ul>
+<li><strong>Automated Testing</strong>: Catch bugs early in development</li>
+<li><strong>Consistent Deployments</strong>: Reduce human error</li>
+<li><strong>Faster Delivery</strong>: Ship features to production quickly</li>
+<li><strong>Quality Assurance</strong>: Automated quality checks</li>
+<li><strong>Rollback Capability</strong>: Easy rollback if issues occur</li>
+</ul>
+<h2 id="-cicd-tools--platforms"><a class="header" href="#-cicd-tools--platforms">🛠️ CI/CD Tools &amp; Platforms</a></h2>
+<h3 id="github-actions---most-popular"><a class="header" href="#github-actions---most-popular">GitHub Actions - Most Popular</a></h3>
+<pre><code class="language-yaml"># .github/workflows/ci-cd.yml
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+env:
+  NODE_VERSION: '18'
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  # Code Quality &amp; Testing
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run linting
+        run: npm run lint
+        
+      - name: Run type checking
+        run: npm run type-check
+        
+      - name: Run unit tests
+        run: npm run test:unit
+        
+      - name: Run integration tests
+        run: npm run test:integration
+        
+      - name: Upload coverage reports
+        uses: codecov/codecov-action@v3
+        with:
+          file: ./coverage/lcov.info
+          flags: unittests
+          name: codecov-umbrella
+
+  # Security Scanning
+  security:
+    runs-on: ubuntu-latest
+    needs: test
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Run security audit
+        run: npm audit --audit-level moderate
+        
+      - name: Run Snyk security scan
+        uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+  # Build &amp; Deploy Frontend
+  deploy-frontend:
+    runs-on: ubuntu-latest
+    needs: [test, security]
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build application
+        run: npm run build
+        env:
+          VITE_API_URL: ${{ secrets.API_URL }}
+          VITE_APP_ENV: production
+          
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          
+      - name: Run E2E tests
+        run: npm run test:e2e:production
+
+  # Build &amp; Deploy Backend
+  deploy-backend:
+    runs-on: ubuntu-latest
+    needs: [test, security]
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        
+      - name: Login to Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=sha,prefix={{branch}}-
+            type=raw,value=latest,enable={{is_default_branch}}
+            
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./backend/Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          
+      - name: Deploy to Railway
+        run: |
+          curl -X POST https://backboard.railway.app/v2/deployments \
+            -H "Authorization: Bearer ${{ secrets.RAILWAY_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "serviceId": "${{ secrets.RAILWAY_SERVICE_ID }}",
+              "image": "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}"
+            }'
+
+  # Deploy Documentation
+  deploy-docs:
+    runs-on: ubuntu-latest
+    needs: [test, security]
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup mdBook
+        run: |
+          curl -L https://github.com/rust-lang/mdBook/releases/download/v0.4.37/mdbook-v0.4.37-x86_64-unknown-linux-gnu.tar.gz | tar xz
+          sudo mv mdbook /usr/local/bin/
+          
+      - name: Build documentation
+        run: mdbook build
+        
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./book
+          cname: docs.yourapp.com
+</code></pre>
+<h3 id="advanced-multi-environment-pipeline"><a class="header" href="#advanced-multi-environment-pipeline">Advanced Multi-Environment Pipeline</a></h3>
+<pre><code class="language-yaml"># .github/workflows/advanced-ci-cd.yml
+name: Advanced CI/CD
+
+on:
+  push:
+    branches: [main, develop, staging]
+  pull_request:
+    branches: [main]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  # Matrix Testing
+  test-matrix:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [16, 18, 20]
+        
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run tests
+        run: npm test
+        
+      - name: Upload coverage
+        uses: codecov/codecov-action@v3
+
+  # Performance Testing
+  performance:
+    runs-on: ubuntu-latest
+    needs: test-matrix
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build application
+        run: npm run build
+        
+      - name: Run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.12.x
+          lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+          
+      - name: Upload Lighthouse results
+        uses: actions/upload-artifact@v3
+        with:
+          name: lighthouse-results
+          path: .lighthouseci
+
+  # Canary Deployment
+  deploy-canary:
+    runs-on: ubuntu-latest
+    needs: [test-matrix, performance]
+    if: github.ref == 'refs/heads/develop'
+    
+    steps:
+      - name: Deploy to Canary
+        run: |
+          # Deploy 10% of traffic to canary version
+          curl -X POST "https://api.vercel.com/v13/deployments" \
+            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            -d '{
+              "name": "canary-${{ github.sha }}",
+              "project": "${{ secrets.VERCEL_PROJECT_ID }}",
+              "target": "production",
+              "alias": "canary"
+            }'
+
+  # Production Deployment
+  deploy-production:
+    runs-on: ubuntu-latest
+    needs: [test-matrix, performance]
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Deploy to Production
+        run: |
+          # Full production deployment
+          curl -X POST "https://api.vercel.com/v13/deployments" \
+            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            -d '{
+              "name": "production-${{ github.sha }}",
+              "project": "${{ secrets.VERCEL_PROJECT_ID }}",
+              "target": "production"
+            }'
+            
+      - name: Update deployment status
+        uses: chrnorm/deployment-status@v2
+        with:
+          token: '${{ secrets.GITHUB_TOKEN }}'
+          environment-url: https://yourapp.com
+          environment: production
+</code></pre>
+<h2 id="-docker-integration"><a class="header" href="#-docker-integration">🐳 Docker Integration</a></h2>
+<h3 id="multi-stage-dockerfile"><a class="header" href="#multi-stage-dockerfile">Multi-Stage Dockerfile</a></h3>
+<pre><code class="language-dockerfile"># backend/Dockerfile
+FROM node:18-alpine AS base
+
+# Install dependencies
+FROM base AS deps
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production &amp;&amp; npm cache clean
+
+# Build application
+FROM base AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
+
+# Production image
+FROM base AS production
+WORKDIR /app
+
+# Create non-root user
+RUN addgroup -g 1001 -S nodejs
+RUN adduser -S nextjs -u 1001
+
+# Copy built application
+COPY --from=builder --chown=nextjs:nodejs /app/dist ./dist
+COPY --from=deps --chown=nextjs:nodejs /app/node_modules ./node_modules
+COPY --from=builder --chown=nextjs:nodejs /app/package.json ./package.json
+
+USER nextjs
+
+EXPOSE 3000
+
+ENV NODE_ENV=production
+ENV PORT=3000
+
+CMD ["npm", "start"]
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+  CMD curl -f http://localhost:3000/health || exit 1
+</code></pre>
+<h3 id="docker-compose-for-development"><a class="header" href="#docker-compose-for-development">Docker Compose for Development</a></h3>
+<pre><code class="language-yaml"># docker-compose.dev.yml
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://postgres:password@postgres:5432/myapp
+      - REDIS_URL=redis://redis:6379
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      - postgres
+      - redis
+      
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=myapp
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+      
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+      
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - app
+
+volumes:
+  postgres_data:
+  redis_data:
+</code></pre>
+<h2 id="-monitoring--observability"><a class="header" href="#-monitoring--observability">🔧 Monitoring &amp; Observability</a></h2>
+<h3 id="application-performance-monitoring"><a class="header" href="#application-performance-monitoring">Application Performance Monitoring</a></h3>
+<pre><code class="language-yaml"># .github/workflows/monitoring.yml
+name: Performance Monitoring
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:
+
+jobs:
+  performance-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Run performance tests
+        run: |
+          # Synthetic monitoring
+          npm run test:performance
+          
+      - name: Check application health
+        run: |
+          response=$(curl -s -o /dev/null -w "%{http_code}" https://yourapp.com/health)
+          if [ $response -ne 200 ]; then
+            echo "Health check failed"
+            exit 1
+          fi
+          
+      - name: Run uptime tests
+        uses: lencx/uptime-check@v1
+        with:
+          url: https://yourapp.com
+          expected-statuses: '200,301'
+          max-attempts: 3
+          
+      - name: Notify on failure
+        if: failure()
+        uses: 8398a7/action-slack@v3
+        with:
+          status: failure
+          channel: '#alerts'
+          text: 'Performance monitoring detected issues!'
+</code></pre>
+<h3 id="error-tracking-integration"><a class="header" href="#error-tracking-integration">Error Tracking Integration</a></h3>
+<pre><code class="language-javascript">// monitoring/errorTracking.js
+const Sentry = require('@sentry/node');
+
+Sentry.init({
+  dsn: process.env.SENTRY_DSN,
+  environment: process.env.NODE_ENV,
+  tracesSampleRate: 1.0,
+});
+
+// Error handling middleware
+const errorHandler = (err, req, res, next) =&gt; {
+  // Send to Sentry
+  Sentry.captureException(err);
+  
+  // Log error details
+  console.error('Error:', {
+    message: err.message,
+    stack: err.stack,
+    url: req.url,
+    method: req.method,
+    userAgent: req.get('User-Agent'),
+    timestamp: new Date().toISOString()
+  });
+  
+  // Respond with error
+  res.status(500).json({
+    error: 'Internal server error',
+    requestId: req.id
+  });
+};
+
+module.exports = errorHandler;
+</code></pre>
+<h2 id="-quality-gates--policies"><a class="header" href="#-quality-gates--policies">📊 Quality Gates &amp; Policies</a></h2>
+<h3 id="branch-protection-rules"><a class="header" href="#branch-protection-rules">Branch Protection Rules</a></h3>
+<pre><code class="language-yaml"># .github/branch-protection.yml
+protection_rules:
+  main:
+    required_status_checks:
+      strict: true
+      contexts:
+        - "CI/CD Pipeline (test)"
+        - "CI/CD Pipeline (security)"
+        - "CodeQL Analysis"
+        - "Dependency Review"
+    required_pull_request_reviews:
+      required_approving_review_count: 2
+      dismiss_stale_reviews: true
+      require_code_owner_reviews: true
+    enforce_admins: true
+    restrictions:
+      users: []
+      teams: ["core-developers"]
+</code></pre>
+<h3 id="automated-quality-checks"><a class="header" href="#automated-quality-checks">Automated Quality Checks</a></h3>
+<pre><code class="language-yaml"># .github/workflows/quality-gates.yml
+name: Quality Gates
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  quality-checks:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Code Quality Analysis
+        uses: github/super-linter@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Security Vulnerability Scan
+        uses: securecodewarrior/github-action-add-sarif@v1
+        with:
+          sarif-file: 'security-scan-results.sarif'
+          
+      - name: Dependency Review
+        uses: actions/dependency-review-action@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Check test coverage
+        run: |
+          coverage=$(npm run test:coverage:extract)
+          if (( $(echo "$coverage" | bc -l) &lt; 80 )); then
+            echo "Coverage below threshold"
+            exit 1
+          fi
+          
+      - name: Bundle size analysis
+        uses: preactjs/compressed-size-action@v2
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          exclude: "{**/node_modules/**}"
+</code></pre>
+<h2 id="-deployment-strategies"><a class="header" href="#-deployment-strategies">🚀 Deployment Strategies</a></h2>
+<h3 id="blue-green-deployment"><a class="header" href="#blue-green-deployment">Blue-Green Deployment</a></h3>
+<pre><code class="language-yaml"># .github/workflows/blue-green.yml
+name: Blue-Green Deployment
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Target environment'
+        required: true
+        default: 'staging'
+
+jobs:
+  deploy-blue-green:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Deploy Blue Version
+        run: |
+          # Deploy new version to blue environment
+          docker-compose -f docker-compose.blue.yml up -d
+          
+      - name: Health Check Blue
+        run: |
+          # Wait for blue to be healthy
+          timeout 300s bash -c 'until curl -f http://blue.yourapp.com/health; do sleep 5; done'
+          
+      - name: Switch Traffic
+        run: |
+          # Update load balancer to route to blue
+          aws elbv2 set-weights \
+            --load-balancer-app-name your-app-lb \
+            --target-group-arn arn:aws:elasticloadbalancing:...:targetgroup/blue/... \
+            --targets TargetGroup=arn:aws:elasticloadbalancing:...:targetgroup/blue/...,Weight=100 \
+            --targets TargetGroup=arn:aws:elasticloadbalancing:...:targetgroup/green/...,Weight=0
+            
+      - name: Final Health Check
+        run: |
+          sleep 30
+          curl -f http://yourapp.com/health
+          
+      - name: Cleanup Green
+        run: |
+          # Keep green for rollback
+          echo "Green environment kept for rollback"
+</code></pre>
+<h3 id="canary-deployments"><a class="header" href="#canary-deployments">Canary Deployments</a></h3>
+<pre><code class="language-yaml"># .github/workflows/canary.yml
+name: Canary Deployment
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  canary-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Deploy Canary
+        run: |
+          # Deploy to canary environment
+          helm upgrade --install canary ./helm-chart \
+            --set image.tag=${{ github.sha }} \
+            --set trafficWeight=10 \
+            --set environment=canary
+            
+      - name: Monitor Canary
+        run: |
+          # Monitor for 15 minutes
+          timeout 900s bash -c '
+            while true; do
+              error_rate=$(curl -s http://canary.yourapp.com/metrics | jq ".errorRate")
+              if (( $(echo "$error_rate" | bc -l) &gt; 5 )); then
+                echo "Canary error rate too high: $error_rate%"
+                exit 1
+              fi
+              sleep 30
+            done
+          '
+          
+      - name: Promote Canary
+        if: success()
+        run: |
+          # Promote canary to production
+          helm upgrade --install production ./helm-chart \
+            --set image.tag=${{ github.sha }} \
+            --set trafficWeight=100
+</code></pre>
+<h2 id="-best-practices-5"><a class="header" href="#-best-practices-5">🔧 Best Practices</a></h2>
+<h3 id="pipeline-optimization"><a class="header" href="#pipeline-optimization">Pipeline Optimization</a></h3>
+<pre><code class="language-yaml"># Use caching for faster builds
+- name: Cache node modules
+  uses: actions/cache@v3
+  with:
+    path: ~/.npm
+    key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+    restore-keys: |
+      ${{ runner.os }}-node-
+
+# Parallel execution for faster feedback
+jobs:
+  test-frontend:
+    runs-on: ubuntu-latest
+  test-backend:
+    runs-on: ubuntu-latest
+  test-e2e:
+    runs-on: ubuntu-latest
+    needs: [test-frontend, test-backend]
+
+# Artifact management
+- name: Upload build artifacts
+  uses: actions/upload-artifact@v3
+  with:
+    name: build-files
+    path: |
+      dist/
+      coverage/
+    retention-days: 30
+</code></pre>
+<h3 id="security-best-practices-2"><a class="header" href="#security-best-practices-2">Security Best Practices</a></h3>
+<pre><code class="language-yaml"># Use secrets properly
+env:
+  API_KEY: ${{ secrets.API_KEY }}
+  DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+# Secure Docker builds
+- name: Build Docker image
+  run: |
+    docker build \
+      --build-arg API_KEY=${{ secrets.API_KEY }} \
+      --build-arg DATABASE_URL=${{ secrets.DATABASE_URL }} \
+      -t myapp:${{ github.sha }} .
+      
+# Security scanning
+- name: Run security scan
+  uses: aquasecurity/trivy-action@master
+  with:
+    image-ref: 'docker.io/myapp:${{ github.sha }}'
+    format: 'sarif'
+    output: 'trivy-results.sarif'
+</code></pre>
+<hr>
+<p><strong>Next Up</strong>: Learn about Deployment Strategies! 🚀</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="deployment-strategies"><a class="header" href="#deployment-strategies">Deployment Strategies</a></h1>
+<p>Deployment strategies define how you release your applications to production. Choosing the right strategy ensures reliable releases, minimal downtime, and quick rollback capabilities.</p>
+<h2 id="-what-are-deployment-strategies"><a class="header" href="#-what-are-deployment-strategies">🎯 What are Deployment Strategies?</a></h2>
+<p>Deployment strategies are approaches to release new versions of your application while maintaining service availability and minimizing risk.</p>
+<h3 id="why-deployment-strategies-matter"><a class="header" href="#why-deployment-strategies-matter">Why Deployment Strategies Matter</a></h3>
+<ul>
+<li><strong>Zero Downtime</strong>: Keep your application available during updates</li>
+<li><strong>Risk Mitigation</strong>: Reduce impact of failed deployments</li>
+<li><strong>User Experience</strong>: Seamless transitions for users</li>
+<li><strong>Rollback Capability</strong>: Quick recovery from issues</li>
+<li><strong>Progressive Delivery</strong>: Gradual feature rollout</li>
+</ul>
+<h2 id="-modern-deployment-platforms"><a class="header" href="#-modern-deployment-platforms">🚀 Modern Deployment Platforms</a></h2>
+<h3 id="vercel---frontend-deployment"><a class="header" href="#vercel---frontend-deployment">Vercel - Frontend Deployment</a></h3>
+<pre><code class="language-bash"># Install Vercel CLI
+npm i -g vercel
+
+# Deploy to Vercel
+vercel --prod
+
+# Link to existing project
+vercel link
+
+# Deploy specific directory
+vercel --prod dist/
+</code></pre>
+<h3 id="railway---backend-deployment"><a class="header" href="#railway---backend-deployment">Railway - Backend Deployment</a></h3>
+<pre><code class="language-bash"># Install Railway CLI
+npm install -g @railway/cli
+
+# Login to Railway
+railway login
+
+# Deploy backend
+railway up
+
+# Deploy with Dockerfile
+railway up --dockerfile
+</code></pre>
+<h3 id="render---full-stack-deployment"><a class="header" href="#render---full-stack-deployment">Render - Full-Stack Deployment</a></h3>
+<pre><code class="language-yaml"># render.yaml
+services:
+  # Web service
+  - type: web
+    name: my-app-frontend
+    env: node
+    rootDir: frontend
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: API_URL
+        value: https://my-app-backend.onrender.com
+        sync: false
+        
+  # API service
+  - type: web
+    name: my-app-backend
+    env: node
+    rootDir: backend
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://user:pass@my-db:5432/myapp
+        sync: false
+      - key: REDIS_URL
+        value: redis://my-redis:6379
+        sync: false
+</code></pre>
+<h3 id="aws-amplify---react-native--web"><a class="header" href="#aws-amplify---react-native--web">AWS Amplify - React Native &amp; Web</a></h3>
+<pre><code class="language-yaml"># amplify.yml
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: build
+    files:
+      - '**/*'
+    discard:
+      - '**/*.map'
+</code></pre>
+<h2 id="-deployment-strategies-1"><a class="header" href="#-deployment-strategies-1">🔄 Deployment Strategies</a></h2>
+<h3 id="blue-green-deployment-1"><a class="header" href="#blue-green-deployment-1">Blue-Green Deployment</a></h3>
+<p>Blue-Green deployment maintains two identical production environments. Only one serves live traffic at any time.</p>
+<pre><code class="language-mermaid">graph TD
+    A[Developer Push] --&gt; B[Build New Version]
+    B --&gt; C[Deploy to Blue Environment]
+    C --&gt; D[Health Check Blue]
+    D --&gt; E[Switch Traffic to Blue]
+    E --&gt; F[Monitor Blue Performance]
+    F --&gt; G{Performance OK?}
+    G --&gt;|Yes|H[Keep Green for Rollback]
+    G --&gt;|No|I[Switch Back to Green]
+    I --&gt; J[Blue becomes Production]
+    H --&gt; K[Green becomes Staging]
+</code></pre>
+<h4 id="implementation"><a class="header" href="#implementation">Implementation</a></h4>
+<pre><code class="language-yaml"># .github/workflows/blue-green.yml
+name: Blue-Green Deployment
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy-blue-green:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Configure AWS CLI
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+          
+      - name: Deploy to Blue
+        run: |
+          # Deploy new version to blue environment
+          aws s3 sync ./build/ s3://blue-bucket --delete
+          aws cloudfront create-invalidation --distribution-id BLUE_DISTRIBUTION_ID --paths "/*"
+          
+      - name: Health Check Blue
+        run: |
+          # Wait for blue to be healthy
+          timeout 300s bash -c '
+            until curl -f https://blue.yourapp.com/health; do
+              sleep 5
+            done
+          '
+          
+      - name: Switch Traffic
+        run: |
+          # Update Route53 to point to blue
+          aws route53 change-resource-record-sets \
+            --hosted-zone-id YOUR_ZONE_ID \
+            --change-batch '{
+              "Comment": "Switch to blue deployment",
+              "Changes": [{
+                "Action": "UPSERT",
+                "ResourceRecordSet": {
+                  "Name": "yourapp.com",
+                  "Type": "A",
+                  "AliasTarget": {
+                    "DNSName": "blue-bucket.s3.amazonaws.com",
+                    "EvaluateTargetHealth": true
+                  }
+                }
+              }]
+            }'
+</code></pre>
+<h3 id="canary-deployment"><a class="header" href="#canary-deployment">Canary Deployment</a></h3>
+<p>Canary deployment releases new versions to a small subset of users before full rollout.</p>
+<pre><code class="language-mermaid">graph TD
+    A[New Version Ready] --&gt; B[Deploy to Canary]
+    B --&gt; C[Route 5% Traffic to Canary]
+    C --&gt; D[Monitor Canary Metrics]
+    D --&gt; E{Canary Healthy?}
+    E --&gt;|Yes|F[Gradually Increase Traffic]
+    E --&gt;|No|G[Rollback to Stable]
+    F --&gt; H[100% Traffic to New Version]
+    H --&gt; I[Canary becomes Production]
+</code></pre>
+<h4 id="implementation-1"><a class="header" href="#implementation-1">Implementation</a></h4>
+<pre><code class="language-yaml"># .github/workflows/canary.yml
+name: Canary Deployment
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  canary-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Deploy Canary
+        run: |
+          # Deploy canary version
+          kubectl apply -f canary-deployment.yaml
+          
+      - name: Monitor Canary
+        run: |
+          # Monitor canary performance
+          timeout 900s bash -c '
+            for i in {1..10}; do
+              error_rate=$(kubectl get canary-metrics | jq ".errorRate")
+              latency=$(kubectl get canary-metrics | jq ".p95Latency")
+              
+              if (( $(echo "$error_rate" | bc -l) &gt; 1 )); then
+                echo "Canary error rate too high: $error_rate%"
+                exit 1
+              fi
+              
+              if (( $(echo "$latency" | bc -l) &gt; 500 )); then
+                echo "Canary latency too high: ${latency}ms"
+                exit 1
+              fi
+              
+              sleep 60
+            done
+          '
+          
+      - name: Promote Canary
+        if: success()
+        run: |
+          # Promote canary to production
+          kubectl patch service production-service -p '{"spec":{"selector":{"version":"canary"}}}'
+          
+      - name: Rollback if Failed
+        if: failure()
+        run: |
+          # Rollback to stable version
+          kubectl rollout undo deployment/production
+</code></pre>
+<h3 id="rolling-deployment"><a class="header" href="#rolling-deployment">Rolling Deployment</a></h3>
+<p>Rolling deployment updates instances gradually without downtime.</p>
+<pre><code class="language-mermaid">graph TD
+    A[Start Rolling Update] --&gt; B[Update 25% of Instances]
+    B --&gt; C[Health Check Updated]
+    C --&gt; D[Update Next 25%]
+    D --&gt; E[Continue Until 100%]
+    E --&gt; F[All Instances Updated]
+</code></pre>
+<h4 id="implementation-2"><a class="header" href="#implementation-2">Implementation</a></h4>
+<pre><code class="language-yaml"># kubernetes/rolling-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 4
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-app
+        image: myapp:latest
+        ports:
+        - containerPort: 3000
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 15
+          periodSeconds: 20
+</code></pre>
+<h3 id="ab-testing-deployment"><a class="header" href="#ab-testing-deployment">A/B Testing Deployment</a></h3>
+<p>A/B testing deploys different versions to different user segments for comparison.</p>
+<pre><code class="language-yaml"># .github/workflows/ab-testing.yml
+name: A/B Testing Deployment
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  ab-test-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Deploy Version A
+        run: |
+          # Deploy version A to 50% of users
+          vercel --prod --name version-a
+          
+      - name: Deploy Version B
+        run: |
+          # Deploy version B to 50% of users
+          vercel --prod --name version-b
+          
+      - name: Configure Traffic Split
+        run: |
+          # Use feature flags or load balancer
+          curl -X POST "https://api.vercel.com/v1/traffic" \
+            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            -d '{
+              "projectId": "${{ secrets.VERCEL_PROJECT_ID }}",
+              "rules": [
+                {
+                  "source": {
+                    "type": "header",
+                    "value": "version-a"
+                  },
+                  "destination": {
+                    "type": "url",
+                    "value": "https://version-a.vercel.app"
+                  },
+                  "weight": 50
+                },
+                {
+                  "source": {
+                    "type": "header",
+                    "value": "version-b"
+                  },
+                  "destination": {
+                    "type": "url",
+                    "value": "https://version-b.vercel.app"
+                  },
+                  "weight": 50
+                }
+              ]
+            }'
+</code></pre>
+<h2 id="-multi-environment-deployment"><a class="header" href="#-multi-environment-deployment">🌍 Multi-Environment Deployment</a></h2>
+<h3 id="environment-configuration"><a class="header" href="#environment-configuration">Environment Configuration</a></h3>
+<pre><code class="language-javascript">// config/environments.js
+const environments = {
+  development: {
+    apiUrl: 'http://localhost:3001',
+    databaseUrl: 'postgresql://localhost:5432/myapp_dev',
+    redisUrl: 'redis://localhost:6379',
+    logLevel: 'debug',
+    enableMockData: true
+  },
+  
+  staging: {
+    apiUrl: 'https://staging-api.myapp.com',
+    databaseUrl: process.env.STAGING_DATABASE_URL,
+    redisUrl: process.env.STAGING_REDIS_URL,
+    logLevel: 'info',
+    enableMockData: false
+  },
+  
+  production: {
+    apiUrl: 'https://api.myapp.com',
+    databaseUrl: process.env.PRODUCTION_DATABASE_URL,
+    redisUrl: process.env.PRODUCTION_REDIS_URL,
+    logLevel: 'error',
+    enableMockData: false
+  }
+};
+
+const currentEnv = environments[process.env.NODE_ENV] || environments.development;
+module.exports = currentEnv;
+</code></pre>
+<h3 id="environment-specific-builds"><a class="header" href="#environment-specific-builds">Environment-Specific Builds</a></h3>
+<pre><code class="language-json">// package.json
+{
+  "scripts": {
+    "build:dev": "NODE_ENV=development npm run build",
+    "build:staging": "NODE_ENV=staging npm run build",
+    "build:prod": "NODE_ENV=production npm run build",
+    "deploy:dev": "npm run build:dev &amp;&amp; npm run deploy:dev-env",
+    "deploy:staging": "npm run build:staging &amp;&amp; npm run deploy:staging-env",
+    "deploy:prod": "npm run build:prod &amp;&amp; npm run deploy:prod-env"
+  }
+}
+</code></pre>
+<h2 id="-infrastructure-as-code-iac"><a class="header" href="#-infrastructure-as-code-iac">🔧 Infrastructure as Code (IaC)</a></h2>
+<h3 id="terraform-deployment"><a class="header" href="#terraform-deployment">Terraform Deployment</a></h3>
+<pre><code class="language-hcl"># terraform/main.tf
+provider "aws" {
+  region = var.aws_region
+}
+
+# S3 bucket for static assets
+resource "aws_s3_bucket" "static_assets" {
+  bucket = "my-app-static-${var.environment}"
+  acl    = "private"
+  
+  versioning {
+    enabled = true
+  }
+}
+
+# CloudFront distribution
+resource "aws_cloudfront_distribution" "cdn" {
+  origin {
+    domain_name = aws_s3_bucket.static_assets.bucket_domain_name
+    origin_id   = aws_s3_bucket.static_assets.id
+  }
+  
+  enabled             = true
+  is_ipv6_enabled     = true
+  default_root_object = "index.html"
+  
+  default_cache_behavior {
+    allowed_methods        = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
+    cached_methods         = ["GET", "HEAD"]
+    target_origin_id       = aws_s3_bucket.static_assets.id
+    compress              = true
+    viewer_protocol_policy = "redirect-to-https"
+  }
+  
+  restrictions {
+    geo_restriction {
+      restriction_type = "none"
+    }
+  }
+  
+  viewer_certificate {
+    acm_certificate_arn = var.ssl_certificate_arn
+    ssl_support_method       = "sni-only"
+  }
+  
+  aliases = var.domain_names
+}
+
+# ECS service for backend
+resource "aws_ecs_service" "backend" {
+  name            = "my-app-backend-${var.environment}"
+  cluster         = aws_ecs_cluster.main.id
+  task_definition = aws_ecs_task_definition.backend.arn
+  desired_count   = 2
+  
+  load_balancer {
+    target_group_arn = aws_lb_target_group.backend.arn
+    container_name    = "backend"
+    container_port   = 3000
+  }
+}
+</code></pre>
+<h3 id="kubernetes-deployment"><a class="header" href="#kubernetes-deployment">Kubernetes Deployment</a></h3>
+<pre><code class="language-yaml"># k8s/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+  labels:
+    app: my-app
+    version: v1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+        version: v1
+    spec:
+      containers:
+      - name: my-app
+        image: myapp:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: NODE_ENV
+          value: "production"
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: database-url
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-app-service
+spec:
+  selector:
+    app: my-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: LoadBalancer
+</code></pre>
+<h2 id="-monitoring--observability-1"><a class="header" href="#-monitoring--observability-1">📊 Monitoring &amp; Observability</a></h2>
+<h3 id="health-checks"><a class="header" href="#health-checks">Health Checks</a></h3>
+<pre><code class="language-javascript">// health/healthCheck.js
+const express = require('express');
+const app = express();
+
+app.get('/health', (req, res) =&gt; {
+  const health = {
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+    environment: process.env.NODE_ENV,
+    version: process.env.APP_VERSION,
+    checks: {
+      database: checkDatabase(),
+      redis: checkRedis(),
+      external_apis: checkExternalAPIs()
+    }
+  };
+  
+  const isHealthy = Object.values(health.checks).every(check =&gt; check.status === 'ok');
+  
+  res.status(isHealthy ? 200 : 503).json(health);
+});
+
+function checkDatabase() {
+  try {
+    // Check database connection
+    return { status: 'ok', responseTime: '15ms' };
+  } catch (error) {
+    return { status: 'error', message: error.message };
+  }
+}
+
+function checkRedis() {
+  try {
+    // Check Redis connection
+    return { status: 'ok', responseTime: '5ms' };
+  } catch (error) {
+    return { status: 'error', message: error.message };
+  }
+}
+
+function checkExternalAPIs() {
+  try {
+    // Check external API connectivity
+    return { status: 'ok', responseTime: '100ms' };
+  } catch (error) {
+    return { status: 'error', message: error.message };
+  }
+}
+</code></pre>
+<h3 id="performance-monitoring"><a class="header" href="#performance-monitoring">Performance Monitoring</a></h3>
+<pre><code class="language-javascript">// monitoring/performance.js
+const prometheus = require('prom-client');
+
+// Custom metrics
+const httpRequestDuration = new prometheus.Histogram({
+  name: 'http_request_duration_seconds',
+  help: 'Duration of HTTP requests in seconds',
+  labelNames: ['method', 'route', 'status_code']
+});
+
+const httpRequestTotal = new prometheus.Counter({
+  name: 'http_requests_total',
+  help: 'Total number of HTTP requests',
+  labelNames: ['method', 'route', 'status_code']
+});
+
+// Middleware to track metrics
+const metricsMiddleware = (req, res, next) =&gt; {
+  const start = Date.now();
+  
+  res.on('finish', () =&gt; {
+    const duration = (Date.now() - start) / 1000;
+    const labels = {
+      method: req.method,
+      route: req.route || req.path,
+      status_code: res.statusCode.toString()
+    };
+    
+    httpRequestDuration.observe(labels, duration);
+    httpRequestTotal.inc(labels);
+  });
+  
+  next();
+};
+
+module.exports = { metricsMiddleware, httpRequestDuration, httpRequestTotal };
+</code></pre>
+<h2 id="-best-practices-6"><a class="header" href="#-best-practices-6">🔧 Best Practices</a></h2>
+<h3 id="deployment-checklist"><a class="header" href="#deployment-checklist">Deployment Checklist</a></h3>
+<pre><code class="language-markdown">## Pre-Deployment Checklist
+- [ ] All tests passing
+- [ ] Code coverage &gt; 80%
+- [ ] Security scan passed
+- [ ] Performance benchmarks met
+- [ ] Documentation updated
+- [ ] Environment variables configured
+- [ ] Database migrations prepared
+- [ ] Backup strategy in place
+- [ ] Rollback plan documented
+
+## Post-Deployment Checklist
+- [ ] Health checks passing
+- [ ] Monitoring alerts configured
+- [ ] Load balancer updated
+- [ ] DNS propagated
+- [ ] SSL certificates valid
+- [ ] Error rates within threshold
+- [ ] Response times acceptable
+- [ ] User analytics tracking
+</code></pre>
+<h3 id="security-considerations"><a class="header" href="#security-considerations">Security Considerations</a></h3>
+<pre><code class="language-yaml"># Security headers in deployment
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-app-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  tls:
+    - hosts:
+        - yourapp.com
+      secretName: yourapp-tls
+  rules:
+    - host: yourapp.com
+      http:
+        paths:
+          - path: /api
+            backend:
+              serviceName: my-app-backend
+              servicePort: 3000
+</code></pre>
+<hr>
+<p><strong>Next Up</strong>: Learn about Environment Management! 🌍</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="environment-management"><a class="header" href="#environment-management">Environment Management</a></h1>
+<p>Environment management is crucial for maintaining consistency across development, staging, and production environments while keeping sensitive data secure.</p>
+<h2 id="-what-is-environment-management"><a class="header" href="#-what-is-environment-management">🎯 What is Environment Management?</a></h2>
+<p>Environment management involves configuring different settings for various deployment environments (development, staging, production) while ensuring security and consistency.</p>
+<h3 id="why-environment-management-matters"><a class="header" href="#why-environment-management-matters">Why Environment Management Matters</a></h3>
+<ul>
+<li><strong>Security</strong>: Keep sensitive data out of version control</li>
+<li><strong>Consistency</strong>: Ensure consistent behavior across environments</li>
+<li><strong>Flexibility</strong>: Easy switching between environments</li>
+<li><strong>Debugging</strong>: Environment-specific logging and features</li>
+<li><strong>Deployment</strong>: Smooth transitions between environments</li>
+</ul>
+<h2 id="-environment-variables"><a class="header" href="#-environment-variables">🔧 Environment Variables</a></h2>
+<h3 id="environment-variable-types"><a class="header" href="#environment-variable-types">Environment Variable Types</a></h3>
+<pre><code class="language-bash"># Development Environment
+NODE_ENV=development
+API_URL=http://localhost:3001
+DATABASE_URL=postgresql://localhost:5432/myapp_dev
+REDIS_URL=redis://localhost:6379
+JWT_SECRET=dev-secret-key
+ENABLE_MOCK_DATA=true
+LOG_LEVEL=debug
+
+# Staging Environment
+NODE_ENV=staging
+API_URL=https://staging-api.myapp.com
+DATABASE_URL=${STAGING_DATABASE_URL}
+REDIS_URL=${STAGING_REDIS_URL}
+JWT_SECRET=${STAGING_JWT_SECRET}
+ENABLE_MOCK_DATA=false
+LOG_LEVEL=info
+
+# Production Environment
+NODE_ENV=production
+API_URL=https://api.myapp.com
+DATABASE_URL=${PRODUCTION_DATABASE_URL}
+REDIS_URL=${PRODUCTION_REDIS_URL}
+JWT_SECRET=${PRODUCTION_JWT_SECRET}
+ENABLE_MOCK_DATA=false
+LOG_LEVEL=error
+</code></pre>
+<h3 id="environment-configuration-files"><a class="header" href="#environment-configuration-files">Environment Configuration Files</a></h3>
+<pre><code class="language-javascript">// config/environments.js
+const environments = {
+  development: {
+    nodeEnv: 'development',
+    port: 3000,
+    database: {
+      host: 'localhost',
+      port: 5432,
+      name: 'myapp_dev',
+      ssl: false,
+      logging: true
+    },
+    redis: {
+      host: 'localhost',
+      port: 6379,
+      db: 0
+    },
+    api: {
+      timeout: 30000,
+      retries: 3,
+      enableMockData: true
+    },
+    features: {
+      enableDebugMode: true,
+      enableHotReload: true,
+      enableDetailedLogs: true
+    },
+    logging: {
+      level: 'debug',
+      console: true,
+      file: true,
+      maxFileSize: '10MB'
+    }
+  },
+  
+  staging: {
+    nodeEnv: 'staging',
+    port: 3001,
+    database: {
+      host: process.env.STAGING_DB_HOST,
+      port: process.env.STAGING_DB_PORT,
+      name: process.env.STAGING_DB_NAME,
+      ssl: true,
+      logging: false
+    },
+    redis: {
+      host: process.env.STAGING_REDIS_HOST,
+      port: process.env.STAGING_REDIS_PORT,
+      password: process.env.STAGING_REDIS_PASSWORD
+    },
+    api: {
+      timeout: 10000,
+      retries: 2,
+      enableMockData: false
+    },
+    features: {
+      enableDebugMode: false,
+      enableHotReload: false,
+      enableDetailedLogs: true
+    },
+    logging: {
+      level: 'info',
+      console: true,
+      file: true,
+      maxFileSize: '5MB'
+    }
+  },
+  
+  production: {
+    nodeEnv: 'production',
+    port: 80,
+    database: {
+      host: process.env.PROD_DB_HOST,
+      port: process.env.PROD_DB_PORT,
+      name: process.env.PROD_DB_NAME,
+      ssl: true,
+      logging: false
+    },
+    redis: {
+      host: process.env.PROD_REDIS_HOST,
+      port: process.env.PROD_REDIS_PORT,
+      password: process.env.PROD_REDIS_PASSWORD,
+      tls: true
+    },
+    api: {
+      timeout: 5000,
+      retries: 1,
+      enableMockData: false
+    },
+    features: {
+      enableDebugMode: false,
+      enableHotReload: false,
+      enableDetailedLogs: false
+    },
+    logging: {
+      level: 'error',
+      console: false,
+      file: true,
+      maxFileSize: '1MB'
+    }
+  }
+};
+
+// Get current environment configuration
+const getEnvironmentConfig = () =&gt; {
+  const env = process.env.NODE_ENV || 'development';
+  return environments[env];
+};
+
+module.exports = { getEnvironmentConfig };
+</code></pre>
+<h2 id="-security-best-practices"><a class="header" href="#-security-best-practices">🔐 Security Best Practices</a></h2>
+<h3 id="secret-management"><a class="header" href="#secret-management">Secret Management</a></h3>
+<pre><code class="language-javascript">// config/secrets.js
+const dotenv = require('dotenv');
+
+// Load environment-specific secrets
+const envFile = `.env.${process.env.NODE_ENV || 'development'}`;
+dotenv.config({ path: envFile });
+
+const secrets = {
+  // Database credentials
+  database: {
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    name: process.env.DB_NAME,
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    ssl: process.env.DB_SSL === 'true'
+  },
+  
+  // External API keys
+  apis: {
+    openai: process.env.OPENAI_API_KEY,
+    stripe: process.env.STRIPE_SECRET_KEY,
+    aws: {
+      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+      region: process.env.AWS_REGION
+    }
+  },
+  
+  // JWT secrets
+  jwt: {
+    secret: process.env.JWT_SECRET,
+    expiresIn: process.env.JWT_EXPIRES_IN || '7d',
+    refreshSecret: process.env.JWT_REFRESH_SECRET
+  },
+  
+  // Email configuration
+  email: {
+    smtp: {
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT,
+      user: process.env.SMTP_USER,
+      password: process.env.SMTP_PASSWORD
+    },
+    from: process.env.EMAIL_FROM,
+    replyTo: process.env.EMAIL_REPLY_TO
+  }
+};
+
+// Validate required secrets
+const validateSecrets = () =&gt; {
+  const requiredSecrets = [
+    'DB_HOST',
+    'DB_NAME',
+    'DB_USERNAME',
+    'DB_PASSWORD',
+    'JWT_SECRET'
+  ];
+  
+  const missingSecrets = requiredSecrets.filter(secret =&gt; !process.env[secret]);
+  
+  if (missingSecrets.length &gt; 0) {
+    console.error('Missing required secrets:', missingSecrets);
+    process.exit(1);
+  }
+};
+
+module.exports = { secrets, validateSecrets };
+</code></pre>
+<h3 id="environment-validation"><a class="header" href="#environment-validation">Environment Validation</a></h3>
+<pre><code class="language-javascript">// config/validation.js
+const Joi = require('joi');
+const config = require('./environments');
+
+const environmentSchema = Joi.object({
+  NODE_ENV: Joi.string()
+    .valid('development', 'staging', 'production')
+    .default('development'),
+  PORT: Joi.number()
+    .port()
+    .default(3000),
+  API_URL: Joi.string().uri(),
+  DATABASE_URL: Joi.string().uri(),
+  REDIS_URL: Joi.string().uri(),
+  JWT_SECRET: Joi.string().min(32),
+  LOG_LEVEL: Joi.string()
+    .valid('error', 'warn', 'info', 'debug')
+    .default('info')
+});
+
+const validateEnvironment = () =&gt; {
+  const envConfig = config.getEnvironmentConfig();
+  
+  const { error, value } = environmentSchema.validate(process.env, {
+    allowUnknown: true,
+    stripUnknown: true
+  });
+  
+  if (error) {
+    console.error('Environment validation failed:', error.details);
+    process.exit(1);
+  }
+  
+  return { ...envConfig, ...value };
+};
+
+module.exports = { validateEnvironment };
+</code></pre>
+<h2 id="-development-environment-setup"><a class="header" href="#-development-environment-setup">🛠️ Development Environment Setup</a></h2>
+<h3 id="docker-compose-for-development-1"><a class="header" href="#docker-compose-for-development-1">Docker Compose for Development</a></h3>
+<pre><code class="language-yaml"># docker-compose.dev.yml
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - API_URL=http://localhost:3001
+      - DATABASE_URL=postgresql://postgres:password@postgres:5432/myapp_dev
+      - REDIS_URL=redis://redis:6379
+      - JWT_SECRET=dev-secret-key-change-in-production
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      - postgres
+      - redis
+      - mailhog
+      
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=myapp_dev
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+      
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_dev_data:/data
+      
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "1025:1025"
+      
+  adminer:
+    image: adminer
+    ports:
+      - "8080:8080"
+    environment:
+      - ADMINER_DEFAULT_SERVER=postgres
+      - ADMINER_SERVER_PORT=5432
+      - ADMINER_SERVER_NAME=postgres
+      - ADMINER_SERVER_USERNAME=postgres
+      - ADMINER_SERVER_PASSWORD=password
+    depends_on:
+      - postgres
+</code></pre>
+<h3 id="development-scripts"><a class="header" href="#development-scripts">Development Scripts</a></h3>
+<pre><code class="language-json">// package.json
+{
+  "scripts": {
+    "dev": "NODE_ENV=development npm run start",
+    "dev:debug": "NODE_ENV=development DEBUG=* npm run start",
+    "dev:docker": "docker-compose -f docker-compose.dev.yml up",
+    "dev:docker:build": "docker-compose -f docker-compose.dev.yml up --build",
+    "dev:docker:down": "docker-compose -f docker-compose.dev.yml down",
+    "dev:migrate": "NODE_ENV=development npm run migrate",
+    "dev:seed": "NODE_ENV=development npm run seed",
+    "dev:logs": "docker-compose -f docker-compose.dev.yml logs -f app",
+    "dev:db": "docker-compose -f docker-compose.dev.yml exec postgres psql -U postgres -d myapp_dev",
+    "dev:redis": "docker-compose -f docker-compose.dev.yml exec redis redis-cli",
+    "env:dev": "cp .env.example .env.development",
+    "env:staging": "cp .env.example .env.staging",
+    "env:prod": "cp .env.example .env.production"
+  }
+}
+</code></pre>
+<h2 id="-production-environment-setup"><a class="header" href="#-production-environment-setup">🚀 Production Environment Setup</a></h2>
+<h3 id="production-configuration"><a class="header" href="#production-configuration">Production Configuration</a></h3>
+<pre><code class="language-yaml"># docker-compose.prod.yml
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - API_URL=${API_URL}
+      - DATABASE_URL=${DATABASE_URL}
+      - REDIS_URL=${REDIS_URL}
+      - JWT_SECRET=${JWT_SECRET}
+      - STRIPE_SECRET=${STRIPE_SECRET}
+    volumes:
+      - ./logs:/app/logs
+    depends_on:
+      - postgres
+      - redis
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+      
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER}"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      
+  redis:
+    image: redis:7-alpine
+    command: redis-server --requirepass ${REDIS_PASSWORD}
+    environment:
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./ssl:/etc/nginx/ssl
+    depends_on:
+      - app
+    restart: unless-stopped
+</code></pre>
+<h3 id="production-scripts"><a class="header" href="#production-scripts">Production Scripts</a></h3>
+<pre><code class="language-json">{
+  "scripts": {
+    "start": "NODE_ENV=production npm run start",
+    "build": "NODE_ENV=production npm run build",
+    "migrate": "NODE_ENV=production npm run migrate",
+    "seed": "NODE_ENV=production npm run seed",
+    "backup": "NODE_ENV=production npm run backup",
+    "deploy": "npm run build &amp;&amp; npm run deploy:prod",
+    "deploy:docker": "docker-compose -f docker-compose.prod.yml up -d",
+    "deploy:docker:update": "docker-compose -f docker-compose.prod.yml pull &amp;&amp; docker-compose -f docker-compose.prod.yml up -d",
+    "logs": "docker-compose -f docker-compose.prod.yml logs -f app",
+    "health": "curl -f http://localhost:3000/health",
+    "env:validate": "node scripts/validate-environment.js"
+  }
+}
+</code></pre>
+<h2 id="-environment-specific-features"><a class="header" href="#-environment-specific-features">🔧 Environment-Specific Features</a></h2>
+<h3 id="feature-flags"><a class="header" href="#feature-flags">Feature Flags</a></h3>
+<pre><code class="language-javascript">// config/featureFlags.js
+const getFeatureFlags = () =&gt; {
+  const env = process.env.NODE_ENV || 'development';
+  
+  return {
+    enableDebugMode: env === 'development',
+    enableHotReload: env === 'development',
+    enableMockData: env === 'development',
+    enableDetailedLogging: env === 'development' || env === 'staging',
+    enablePerformanceMonitoring: env === 'staging' || env === 'production',
+    enableErrorReporting: env === 'production',
+    enableAnalytics: env === 'production',
+    enableNewUI: env === 'staging' || env === 'production',
+    enableBetaFeatures: env === 'staging'
+  };
+};
+
+module.exports = { getFeatureFlags };
+</code></pre>
+<h3 id="api-configuration"><a class="header" href="#api-configuration">API Configuration</a></h3>
+<pre><code class="language-javascript">// config/api.js
+const getApiConfig = () =&gt; {
+  const env = process.env.NODE_ENV || 'development';
+  
+  const baseConfig = {
+    timeout: 30000,
+    retries: 3,
+    retryDelay: 1000
+  };
+  
+  const envConfigs = {
+    development: {
+      ...baseConfig,
+      timeout: 60000,
+      enableMockData: true,
+      mockDelay: 500,
+      enableDetailedLogging: true
+    },
+    
+    staging: {
+      ...baseConfig,
+      timeout: 15000,
+      enableMockData: false,
+      enableDetailedLogging: true,
+      enableRequestLogging: true
+    },
+    
+    production: {
+      ...baseConfig,
+      timeout: 5000,
+      enableMockData: false,
+      enableDetailedLogging: false,
+      enableRequestLogging: false,
+      enableCaching: true
+    }
+  };
+  
+  return envConfigs[env];
+};
+
+module.exports = { getApiConfig };
+</code></pre>
+<h2 id="-environment-monitoring"><a class="header" href="#-environment-monitoring">📊 Environment Monitoring</a></h2>
+<h3 id="environment-detection"><a class="header" href="#environment-detection">Environment Detection</a></h3>
+<pre><code class="language-javascript">// utils/environment.js
+const detectEnvironment = () =&gt; {
+  // Check NODE_ENV
+  const nodeEnv = process.env.NODE_ENV;
+  
+  // Check for development indicators
+  const isDevelopment = !nodeEnv || 
+    nodeEnv === 'development' || 
+    process.env.DEV_MODE || 
+    process.env.IS_DEVELOPMENT;
+  
+  // Check for production indicators
+  const isProduction = nodeEnv === 'production' || 
+    process.env.NODE_ENV === 'production' || 
+    process.env.IS_PRODUCTION;
+  
+  // Check for staging
+  const isStaging = nodeEnv === 'staging' || 
+    process.env.IS_STAGING;
+  
+  return {
+    nodeEnv: nodeEnv || 'development',
+    isDevelopment,
+    isStaging,
+    isProduction,
+    isTest: process.env.NODE_ENV === 'test'
+  };
+};
+
+const getEnvironmentInfo = () =&gt; {
+  const env = detectEnvironment();
+  
+  return {
+    ...env,
+    platform: process.platform,
+    nodeVersion: process.version,
+    arch: process.arch,
+    pid: process.pid,
+    memory: process.memoryUsage(),
+    uptime: process.uptime()
+  };
+};
+
+module.exports = { detectEnvironment, getEnvironmentInfo };
+</code></pre>
+<h3 id="environment-health-checks"><a class="header" href="#environment-health-checks">Environment Health Checks</a></h3>
+<pre><code class="language-javascript">// scripts/health-check.js
+const { getEnvironmentInfo } = require('../utils/environment');
+const { validateSecrets } = require('../config/secrets');
+
+const performHealthCheck = async () =&gt; {
+  console.log('🔍 Environment Health Check');
+  
+  // Validate environment variables
+  try {
+    validateSecrets();
+    console.log('✅ Environment variables validated');
+  } catch (error) {
+    console.error('❌ Environment variables validation failed:', error.message);
+    return false;
+  }
+  
+  // Check environment info
+  const envInfo = getEnvironmentInfo();
+  console.log('📊 Environment Info:', {
+    environment: envInfo.nodeEnv,
+    platform: envInfo.platform,
+    nodeVersion: envInfo.nodeVersion,
+    memory: `${Math.round(envInfo.memory.heapUsed / 1024 / 1024)}MB`,
+    uptime: `${Math.round(envInfo.uptime / 60)} minutes`
+  });
+  
+  // Check critical services
+  const services = [
+    { name: 'Database', check: checkDatabase },
+    { name: 'Redis', check: checkRedis },
+    { name: 'External API', check: checkExternalAPI }
+  ];
+  
+  let allHealthy = true;
+  
+  for (const service of services) {
+    try {
+      const isHealthy = await service.check();
+      if (isHealthy) {
+        console.log(`✅ ${service.name}: Healthy`);
+      } else {
+        console.log(`❌ ${service.name}: Unhealthy`);
+        allHealthy = false;
+      }
+    } catch (error) {
+      console.log(`❌ ${service.name}: Error - ${error.message}`);
+      allHealthy = false;
+    }
+  }
+  
+  console.log(`🏥 Overall Health: ${allHealthy ? 'HEALTHY' : 'UNHEALTHY'}`);
+  return allHealthy;
+};
+
+async function checkDatabase() {
+  // Database health check implementation
+  return true; // Simplified for example
+}
+
+async function checkRedis() {
+  // Redis health check implementation
+  return true; // Simplified for example
+}
+
+async function checkExternalAPI() {
+  // External API health check implementation
+  return true; // Simplified for example
+}
+
+// Run health check if called directly
+if (require.main === module) {
+  performHealthCheck().then(healthy =&gt; {
+    process.exit(healthy ? 0 : 1);
+  });
+}
+
+module.exports = { performHealthCheck };
+</code></pre>
+<h2 id="-best-practices-7"><a class="header" href="#-best-practices-7">🔧 Best Practices</a></h2>
+<h3 id="environment-file-management"><a class="header" href="#environment-file-management">Environment File Management</a></h3>
+<pre><code class="language-bash"># .env.example (template file)
+# Environment Configuration
+NODE_ENV=development
+PORT=3000
+
+# Database Configuration
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=myapp_dev
+DB_USERNAME=postgres
+DB_PASSWORD=password
+DB_SSL=false
+
+# Redis Configuration
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_PASSWORD=
+
+# API Configuration
+API_URL=http://localhost:3001
+API_TIMEOUT=30000
+
+# JWT Configuration
+JWT_SECRET=your-super-secret-jwt-key-here
+JWT_EXPIRES_IN=7d
+
+# External Services
+OPENAI_API_KEY=your-openai-api-key
+STRIPE_SECRET_KEY=your-stripe-secret-key
+
+# Feature Flags
+ENABLE_DEBUG_MODE=true
+ENABLE_MOCK_DATA=true
+ENABLE_DETAILED_LOGGING=true
+
+# Logging
+LOG_LEVEL=debug
+LOG_FILE_PATH=./logs/app.log
+</code></pre>
+<h3 id="git-ignore-for-environment-files"><a class="header" href="#git-ignore-for-environment-files">Git Ignore for Environment Files</a></h3>
+<pre><code class="language-gitignore"># Environment files
+.env
+.env.local
+.env.development
+.env.staging
+.env.production
+.env.test
+
+# Log files
+logs/
+*.log
+
+# Database
+*.sqlite
+*.db
+
+# OS generated files
+.DS_Store
+Thumbs.db
+</code></pre>
+<h3 id="cicd-environment-variables"><a class="header" href="#cicd-environment-variables">CI/CD Environment Variables</a></h3>
+<pre><code class="language-yaml"># .github/workflows/deploy.yml
+name: Deploy Application
+
+on:
+  push:
+    branches: [main, develop]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    environment:
+      # Production environment variables
+      NODE_ENV: production
+      API_URL: ${{ secrets.PROD_API_URL }}
+      DATABASE_URL: ${{ secrets.PROD_DATABASE_URL }}
+      REDIS_URL: ${{ secrets.PROD_REDIS_URL }}
+      JWT_SECRET: ${{ secrets.PROD_JWT_SECRET }}
+      STRIPE_SECRET: ${{ secrets.STRIPE_SECRET }}
+      
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build application
+        run: npm run build
+        env:
+          NODE_ENV: production
+          
+      - name: Deploy to production
+        run: npm run deploy:prod
+</code></pre>
+<hr>
+<p><strong>DevOps Section Complete!</strong> 🎉</p>
+<p>You now have a comprehensive understanding of:</p>
+<ul>
+<li><strong>CI/CD Pipelines</strong>: Automated build, test, and deployment</li>
+<li><strong>Deployment Strategies</strong>: Blue-Green, Canary, Rolling, A/B testing</li>
+<li><strong>Environment Management</strong>: Secure configuration across environments</li>
+</ul>
+<p><strong>Next Up</strong>: Learn about Career Development! 💼</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="e-commerce-mobile-app"><a class="header" href="#e-commerce-mobile-app">E-Commerce Mobile App</a></h1>
 <p>A complete e-commerce mobile application built with React Native, featuring product catalog, shopping cart, user authentication, and payment integration.</p>
@@ -3535,12 +6582,2763 @@ module.exports = cache;
 <h1 id="portfolio-website"><a class="header" href="#portfolio-website">Portfolio Website</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="freelancing-guide"><a class="header" href="#freelancing-guide">Freelancing Guide</a></h1>
+<p>Freelancing offers freedom, flexibility, and unlimited earning potential. This comprehensive guide will help you build a successful freelance career from scratch.</p>
+<h2 id="-why-freelancing"><a class="header" href="#-why-freelancing">🎯 Why Freelancing?</a></h2>
+<p>Freelancing gives you control over your work, income, and lifestyle. It’s the ultimate form of career independence.</p>
+<h3 id="benefits-of-freelancing"><a class="header" href="#benefits-of-freelancing">Benefits of Freelancing</a></h3>
+<ul>
+<li><strong>Location Independence</strong>: Work from anywhere in the world</li>
+<li><strong>Flexible Schedule</strong>: Choose your own working hours</li>
+<li><strong>Unlimited Earning</strong>: No salary caps</li>
+<li><strong>Project Variety</strong>: Work on diverse, interesting projects</li>
+<li><strong>Skill Growth</strong>: Learn new technologies constantly</li>
+<li><strong>Direct Client Relationships</strong>: Build long-term partnerships</li>
+</ul>
+<h2 id="-getting-started-2"><a class="header" href="#-getting-started-2">🚀 Getting Started</a></h2>
+<h3 id="essential-preparation"><a class="header" href="#essential-preparation">Essential Preparation</a></h3>
+<pre><code class="language-markdown">## Pre-Launch Checklist
+- [ ] Build a strong portfolio website
+- [ ] Create professional GitHub profile
+- [ ] Set up business bank account
+- [ ] Register as self-employed/freelancer
+- [ ] Create professional email address
+- [ ] Set up accounting software
+- [ ] Prepare contract templates
+- [ ] Build emergency fund (3-6 months)
+- [ ] Define service offerings
+- [ ] Research market rates
+</code></pre>
+<h3 id="platform-selection"><a class="header" href="#platform-selection">Platform Selection</a></h3>
+<h4 id="top-freelancing-platforms"><a class="header" href="#top-freelancing-platforms">Top Freelancing Platforms</a></h4>
+<p><strong>Upwork</strong></p>
+<ul>
+<li>Best for: Long-term projects, enterprise clients</li>
+<li>Fees: 20% (first $500), 10% ($500.01-$10,000), 5% ($10,000+)</li>
+<li>Pros: Large client base, escrow protection</li>
+<li>Cons: High competition, complex proposals</li>
+</ul>
+<p><strong>Fiverr</strong></p>
+<ul>
+<li>Best for: Quick gigs, creative services</li>
+<li>Fees: 20% (up to $16), 5% ($16.01-$400), 5% ($400.01+)</li>
+<li>Pros: High volume, easy to start</li>
+<li>Cons: Price pressure, lower rates</li>
+</ul>
+<p><strong>Toptal</strong></p>
+<ul>
+<li>Best for: Elite developers, Fortune 500 clients</li>
+<li>Fees: None (they take client-side)</li>
+<li>Pros: High rates, quality clients</li>
+<li>Cons: Strict screening process</li>
+</ul>
+<p><strong>Freelancer.com</strong></p>
+<ul>
+<li>Best for: International clients, diverse projects</li>
+<li>Fees: 10% for fixed-price, 20% for hourly</li>
+<li>Pros: Global reach, project variety</li>
+<li>Cons: Payment delays, lower rates</li>
+</ul>
+<p><strong>PeoplePerHour</strong></p>
+<ul>
+<li>Best for: UK/European clients, hourly work</li>
+<li>Fees: 20% (service fee)</li>
+<li>Pros: Hourly guarantees, milestone payments</li>
+<li>Cons: Limited to certain regions</li>
+</ul>
+<h3 id="profile-optimization"><a class="header" href="#profile-optimization">Profile Optimization</a></h3>
+<h4 id="creating-a-winning-profile"><a class="header" href="#creating-a-winning-profile">Creating a Winning Profile</a></h4>
+<pre><code class="language-javascript">// Profile optimization checklist
+const profileOptimization = {
+  // Professional Photo
+  photo: {
+    requirements: [
+      "Professional headshot (not selfie)",
+      "Plain background",
+      "Business casual attire",
+      "Good lighting",
+      "Recent photo (within 1 year)",
+      "Direct eye contact",
+      "High resolution"
+    ]
+  },
+  
+  // Compelling Title
+  title: {
+    examples: [
+      "Full-Stack React Native Developer",
+      "Node.js API Specialist",
+      "E-commerce Web Developer",
+      "Mobile App Developer",
+      "JavaScript/TypeScript Expert"
+    ],
+    avoid: [
+      "Web Developer",
+      "Programmer",
+      "Coder",
+      "Software Engineer"
+    ]
+  },
+  
+  // Professional Summary
+  summary: {
+    structure: [
+      "Hook with your value proposition",
+      "Mention years of experience",
+      "Highlight key technologies",
+      "Include notable achievements",
+      "End with call to action"
+    ],
+    example: `Experienced Full-Stack Developer with 5+ years building scalable React Native and Node.js applications. Specialized in e-commerce platforms and real-time systems. Delivered 50+ projects with 99% client satisfaction rate. Ready to help you build your next great product.`
+  },
+  
+  // Skills Section
+  skills: {
+    technical: [
+      "React Native",
+      "Node.js",
+      "TypeScript",
+      "MongoDB",
+      "PostgreSQL",
+      "AWS",
+      "Docker",
+      "Git"
+    ],
+    soft: [
+      "Communication",
+      "Problem-solving",
+      "Time management",
+      "Team collaboration",
+      "Project management"
+    ]
+  },
+  
+  // Portfolio Projects
+  portfolio: {
+    requirements: [
+      "Live demo links",
+      "GitHub repositories",
+      "Detailed descriptions",
+      "Technologies used",
+      "Business impact",
+      "Client testimonials"
+    ],
+    showcase: [
+      "E-commerce mobile app",
+      "Real-time chat application",
+      "API integration project",
+      "Performance optimization",
+      "UI/UX redesign"
+    ]
+  }
+};
+</code></pre>
+<h2 id="-pricing-strategy"><a class="header" href="#-pricing-strategy">💰 Pricing Strategy</a></h2>
+<h3 id="market-rate-research"><a class="header" href="#market-rate-research">Market Rate Research</a></h3>
+<pre><code class="language-javascript">// Rate calculator by experience and technology
+const calculateRate = (experience, technology, projectType) =&gt; {
+  const baseRates = {
+    junior: {      // 0-2 years
+      reactNative: 35,
+      nodejs: 30,
+      fullstack: 40,
+      mobile: 35
+    },
+    mid: {         // 2-5 years
+      reactNative: 60,
+      nodejs: 55,
+      fullstack: 70,
+      mobile: 65
+    },
+    senior: {       // 5-8 years
+      reactNative: 90,
+      nodejs: 85,
+      fullstack: 100,
+      mobile: 95
+    },
+    expert: {       // 8+ years
+      reactNative: 120,
+      nodejs: 110,
+      fullstack: 130,
+      mobile: 125
+    }
+  };
+  
+  const projectMultipliers = {
+    'fixed-price': 1.2,  // 20% premium for risk
+    'hourly': 1.0,
+    'retainer': 0.9,    // 10% discount for stability
+    'urgent': 1.5      // 50% premium for rush jobs
+  };
+  
+  const baseRate = baseRates[experience][technology];
+  const multiplier = projectMultipliers[projectType];
+  
+  return {
+    hourly: Math.round(baseRate * multiplier),
+    monthly: Math.round(baseRate * 160 * multiplier), // 40 hours/week * 4 weeks
+    annual: Math.round(baseRate * 2000 * multiplier) // 50 weeks/year
+  };
+};
+
+// Example usage
+const rates = calculateRate('senior', 'reactNative', 'fixed-price');
+console.log(`Hourly: $${rates.hourly}, Monthly: $${rates.monthly}`);
+</code></pre>
+<h3 id="pricing-models"><a class="header" href="#pricing-models">Pricing Models</a></h3>
+<h4 id="hourly-rate"><a class="header" href="#hourly-rate">Hourly Rate</a></h4>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Flexible scope changes</li>
+<li>Paid for all time worked</li>
+<li>Good for ongoing projects</li>
+<li>Easy to calculate</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Clients worry about overages</li>
+<li>Requires time tracking</li>
+<li>May limit earning potential</li>
+</ul>
+<p><strong>Best for:</strong></p>
+<ul>
+<li>Ongoing maintenance</li>
+<li>Consulting work</li>
+<li>Projects with unclear scope</li>
+<li>Training and mentoring</li>
+</ul>
+<h4 id="fixed-price"><a class="header" href="#fixed-price">Fixed Price</a></h4>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Clear budget for clients</li>
+<li>Higher earning potential</li>
+<li>Rewards efficiency</li>
+<li>Predictable income</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Risk of underestimation</li>
+<li>Scope creep issues</li>
+<li>Pressure to work faster</li>
+</ul>
+<p><strong>Best for:</strong></p>
+<ul>
+<li>Well-defined projects</li>
+<li>MVP development</li>
+<li>Website builds</li>
+<li>Mobile apps</li>
+</ul>
+<h4 id="retainer-model"><a class="header" href="#retainer-model">Retainer Model</a></h4>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Stable monthly income</li>
+<li>Long-term relationships</li>
+<li>Reduced admin work</li>
+<li>Focus on value, not hours</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>May earn less per hour</li>
+<li>Commitment required</li>
+<li>Harder to scale</li>
+</ul>
+<p><strong>Best for:</strong></p>
+<ul>
+<li>Ongoing support</li>
+<li>Regular updates</li>
+<li>Consulting relationships</li>
+<li>Team augmentation</li>
+</ul>
+<h2 id="-winning-proposals"><a class="header" href="#-winning-proposals">📝 Winning Proposals</a></h2>
+<h3 id="proposal-structure"><a class="header" href="#proposal-structure">Proposal Structure</a></h3>
+<pre><code class="language-markdown">## Proposal Template
+
+### 1. Executive Summary
+- Brief project understanding
+- Your value proposition
+- Key differentiators
+
+### 2. Project Understanding
+- Restate requirements
+- Identify key challenges
+- Show you understand goals
+
+### 3. Proposed Solution
+- Technical approach
+- Project phases
+- Deliverables timeline
+- Risk mitigation
+
+### 4. Why Choose Me
+- Relevant experience
+- Similar projects completed
+- Technical expertise
+- Client testimonials
+
+### 5. Investment
+- Detailed breakdown
+- Payment milestones
+- Terms and conditions
+- Next steps
+</code></pre>
+<h3 id="sample-proposal"><a class="header" href="#sample-proposal">Sample Proposal</a></h3>
+<pre><code class="language-javascript">// Proposal generator
+const generateProposal = (projectDetails) =&gt; {
+  return {
+    subject: `Proposal for ${projectDetails.projectType} Development`,
+    
+    executiveSummary: `
+Thank you for the opportunity to work on your ${projectDetails.projectType} project. 
+With 5+ years of experience in ${projectDetails.technologies.join(', ')}, 
+I'm confident in delivering a high-quality solution that meets your business objectives.
+    `,
+    
+    understanding: `
+I understand you need:
+${projectDetails.requirements.map(req =&gt; `• ${req}`).join('\n')}
+
+Key challenges I've identified:
+${projectDetails.challenges.map(challenge =&gt; `• ${challenge}`).join('\n')}
+    `,
+    
+    solution: `
+My approach will be:
+${projectDetails.phases.map((phase, index) =&gt; `
+Phase ${index + 1}: ${phase.name}
+${phase.tasks.map(task =&gt; `  - ${task}`).join('\n')}
+Timeline: ${phase.duration}
+Deliverables: ${phase.deliverables.join(', ')}
+    `).join('\n')}
+    `,
+    
+    whyMe: `
+• ${projectDetails.experience} years of ${projectDetails.technologies[0]} experience
+• Successfully delivered ${projectDetails.similarProjects} similar projects
+• Expertise in ${projectDetails.technologies.join(', ')}
+• Available ${projectDetails.availability} hours per week
+• ${projectDetails.testimonials} client testimonials
+    `,
+    
+    investment: {
+      total: projectDetails.budget,
+      phases: projectDetails.phases.map(phase =&gt; ({
+        name: phase.name,
+        amount: phase.cost,
+        deliverables: phase.deliverables
+      })),
+      payment: "50% upfront, 50% on completion",
+      timeline: projectDetails.totalDuration
+    }
+  };
+};
+</code></pre>
+<h2 id="-client-acquisition"><a class="header" href="#-client-acquisition">🌟 Client Acquisition</a></h2>
+<h3 id="active-strategies"><a class="header" href="#active-strategies">Active Strategies</a></h3>
+<h4 id="cold-outreach"><a class="header" href="#cold-outreach">Cold Outreach</a></h4>
+<pre><code class="language-javascript">// Cold email template
+const coldEmailTemplate = {
+  subject: "Experienced ${technology} Developer for ${companyType}",
+  
+  body: `Hi ${clientName},
+
+I noticed ${specificObservation} and thought my expertise in ${technology} could help.
+
+I'm a ${experienceLevel} developer who specializes in:
+${skills.map(skill =&gt; `• ${skill}`).join('\n')}
+
+Recent work includes:
+${recentProjects.map(project =&gt; `• ${project}`).join('\n')}
+
+Would you be open to a 15-minute call to discuss how I can help with ${specificProblem}?
+
+Best regards,
+${yourName}
+${yourWebsite}
+${yourPortfolio}
+  `,
+  
+  followUp: `Hi ${clientName},
+
+Just following up on my email about ${technology} development. 
+I'm confident I can help with ${specificProblem}.
+
+Are you available for a quick call this week?
+
+Best,
+${yourName}`
+};
+</code></pre>
+<h4 id="content-marketing"><a class="header" href="#content-marketing">Content Marketing</a></h4>
+<pre><code class="language-javascript">// Content strategy for freelancers
+const contentStrategy = {
+  platforms: [
+    {
+      name: "LinkedIn",
+      frequency: "3 posts per week",
+      content: [
+        "Technical tutorials",
+        "Project case studies",
+        "Industry insights",
+        "Tool recommendations"
+      ],
+      engagement: "Comment on 10 posts daily"
+    },
+    {
+      name: "Twitter/X",
+      frequency: "5 tweets per day",
+      content: [
+        "Quick tips",
+        "Code snippets",
+        "Industry news",
+        "Personal insights"
+      ],
+      engagement: "Reply to 20 tweets daily"
+    },
+    {
+      name: "Blog",
+      frequency: "2 posts per month",
+      content: [
+        "In-depth tutorials",
+        "Project breakdowns",
+        "Career advice",
+        "Technical deep-dives"
+      ],
+      promotion: "Share across all platforms"
+    }
+  ],
+  
+  contentCalendar: {
+    monday: "Technical tutorial",
+    tuesday: "Project showcase",
+    wednesday: "Industry insight",
+    thursday: "Quick tip",
+    friday: "Career advice",
+    saturday: "Personal story",
+    sunday: "Industry news roundup"
+  }
+};
+</code></pre>
+<h3 id="passive-strategies"><a class="header" href="#passive-strategies">Passive Strategies</a></h3>
+<h4 id="portfolio-optimization"><a class="header" href="#portfolio-optimization">Portfolio Optimization</a></h4>
+<pre><code class="language-javascript">// SEO for freelancers
+const seoOptimization = {
+  keywords: [
+    "React Native developer for hire",
+    "Node.js freelancer",
+    "Mobile app development",
+    "E-commerce specialist",
+    "JavaScript expert"
+  ],
+  
+  metaTags: {
+    title: "John Doe - React Native &amp; Node.js Developer",
+    description: "Experienced full-stack developer specializing in React Native, Node.js, and e-commerce solutions. Available for freelance projects.",
+    keywords: "React Native, Node.js, JavaScript, TypeScript, MongoDB, PostgreSQL, AWS, freelancer, developer"
+  },
+  
+  content: [
+    "Project case studies",
+    "Technical tutorials",
+    "Client testimonials",
+    "Service descriptions",
+    "Pricing information"
+  ],
+  
+  localSEO: {
+    googleMyBusiness: true,
+    localDirectories: true,
+    locationKeywords: ["React Native developer [City]", "Web developer [City]"]
+  }
+};
+</code></pre>
+<h2 id="-legal--financial"><a class="header" href="#-legal--financial">🛡️ Legal &amp; Financial</a></h2>
+<h3 id="essential-documents"><a class="header" href="#essential-documents">Essential Documents</a></h3>
+<h4 id="freelance-contract-template"><a class="header" href="#freelance-contract-template">Freelance Contract Template</a></h4>
+<pre><code class="language-markdown"># Freelance Services Agreement
+
+## Parties
+**Client:** [Client Name]
+**Developer:** [Your Name]
+**Date:** [Agreement Date]
+
+## Services
+Developer agrees to provide:
+[Detailed description of services]
+[Specific deliverables]
+[Timeline and milestones]
+
+## Compensation
+- Total Payment: $[Amount]
+- Payment Schedule: [Payment terms]
+- Late Payment: [Late fee terms]
+- Additional Work: [Rate for extra work]
+
+## Intellectual Property
+All work product becomes client property upon full payment.
+Developer retains rights to reusable components and tools.
+
+## Confidentiality
+Both parties agree to keep project details confidential.
+
+## Termination
+Either party may terminate with [notice period] days notice.
+Payment for work completed is due upon termination.
+
+## Dispute Resolution
+Disputes will be resolved through [mediation/arbitration] in [jurisdiction].
+
+## Signatures
+Client: _________________________ Date: _______
+Developer: _________________________ Date: _______
+</code></pre>
+<h3 id="financial-management"><a class="header" href="#financial-management">Financial Management</a></h3>
+<pre><code class="language-javascript">// Freelance finance calculator
+const freelanceFinance = {
+  calculateNetIncome: (grossIncome, country, businessExpenses) =&gt; {
+    const taxRates = {
+      US: {
+        selfEmployment: 15.3, // Social Security + Medicare
+        federal: (income) =&gt; {
+          // Simplified US tax brackets
+          if (income &lt;= 11000) return income * 0.10;
+          if (income &lt;= 44725) return 1100 + (income - 11000) * 0.12;
+          if (income &lt;= 95375) return 5147 + (income - 44725) * 0.22;
+          return 16290 + (income - 95375) * 0.24;
+        },
+        state: 0.05 // Varies by state
+      },
+      UK: {
+        nationalInsurance: 0.09,
+        incomeTax: (income) =&gt; {
+          if (income &lt;= 12570) return 0;
+          if (income &lt;= 50270) return (income - 12570) * 0.20;
+          if (income &lt;= 125140) return 7540 + (income - 50270) * 0.40;
+          return 43230 + (income - 125140) * 0.45;
+        }
+      }
+    };
+    
+    const taxes = taxRates[country];
+    const federalTax = taxes.federal(grossIncome);
+    const selfEmploymentTax = grossIncome * taxes.selfEmployment;
+    const stateTax = grossIncome * taxes.state;
+    const totalTax = federalTax + selfEmploymentTax + stateTax;
+    
+    return {
+      gross: grossIncome,
+      taxes: {
+        federal: federalTax,
+        selfEmployment: selfEmploymentTax,
+        state: stateTax,
+        total: totalTax
+      },
+      expenses: businessExpenses,
+      net: grossIncome - totalTax - businessExpenses,
+      effectiveRate: (grossIncome - totalTax - businessExpenses) / grossIncome
+    };
+  },
+  
+  businessExpenses: [
+    "Platform fees (Upwork/Fiverr)",
+    "Software licenses",
+    "Hardware depreciation",
+    "Internet/phone",
+    "Home office deduction",
+    "Health insurance",
+    "Retirement contributions",
+    "Professional development",
+    "Accounting software",
+    "Bank fees"
+  ]
+};
+</code></pre>
+<h2 id="-scaling-your-freelance-business"><a class="header" href="#-scaling-your-freelance-business">📈 Scaling Your Freelance Business</a></h2>
+<h3 id="from-solo-to-agency"><a class="header" href="#from-solo-to-agency">From Solo to Agency</a></h3>
+<pre><code class="language-javascript">// Growth roadmap
+const growthRoadmap = {
+  phase1: {
+    name: "Established Solo Freelancer",
+    timeline: "6-12 months",
+    goals: [
+      "Consistent $5,000+ monthly income",
+      "10+ completed projects",
+      "5+ repeat clients",
+      "Specialized niche"
+    ],
+    kpis: {
+      monthlyRevenue: 5000,
+      clientSatisfaction: 4.5,
+      repeatClientRate: 0.3
+    }
+  },
+  
+  phase2: {
+    name: "Premium Freelancer",
+    timeline: "1-2 years",
+    goals: [
+      "$10,000+ monthly income",
+      "Premium client portfolio",
+      "Thought leadership content",
+      "Speaking engagements"
+    ],
+    kpis: {
+      monthlyRevenue: 10000,
+      averageProjectValue: 5000,
+      clientRetention: 0.8
+    }
+  },
+  
+  phase3: {
+    name: "Micro-Agency",
+    timeline: "2-3 years",
+    goals: [
+      "Hire 2-3 developers",
+      "$25,000+ monthly revenue",
+      "Standardized processes",
+      "Multiple service offerings"
+    ],
+    kpis: {
+      monthlyRevenue: 25000,
+      teamSize: 3,
+      profitMargin: 0.4
+    }
+  },
+  
+  phase4: {
+    name: "Digital Agency",
+    timeline: "3-5 years",
+    goals: [
+      "10+ team members",
+      "$100,000+ monthly revenue",
+      "Productized services",
+      "Multiple revenue streams"
+    ],
+    kpis: {
+      monthlyRevenue: 100000,
+      teamSize: 10,
+      profitMargin: 0.5
+    }
+  }
+};
+</code></pre>
+<h3 id="automation-systems"><a class="header" href="#automation-systems">Automation Systems</a></h3>
+<pre><code class="language-javascript">// Business automation for freelancers
+const automationSystems = {
+  clientManagement: {
+    crm: "HubSpot CRM (free tier)",
+    pipeline: "Lead → Qualified → Proposal → Negotiation → Client",
+    automation: [
+      "Auto-respond to new leads",
+      "Follow-up sequences",
+      "Proposal templates",
+      "Client onboarding"
+    ]
+  },
+  
+  projectManagement: {
+    tools: ["Notion", "Trello", "Asana"],
+    workflows: [
+      "Project templates",
+      "Task automation",
+      "Time tracking",
+      "Progress reporting"
+    ]
+  },
+  
+  financialManagement: {
+    accounting: "QuickBooks Self-Employed",
+    invoicing: "Wave Accounting (free)",
+    expense: "Expensify",
+    automation: [
+      "Recurring invoices",
+      "Expense categorization",
+      "Tax preparation",
+      "Financial reporting"
+    ]
+  },
+  
+  marketing: {
+    content: "Buffer for social media scheduling",
+    email: "Mailchimp for newsletters",
+    analytics: "Google Analytics",
+    automation: [
+      "Blog post scheduling",
+      "Social media automation",
+      "Email newsletter",
+      "Performance tracking"
+    ]
+  }
+};
+</code></pre>
+<h2 id="-success-metrics-1"><a class="header" href="#-success-metrics-1">🎯 Success Metrics</a></h2>
+<h3 id="key-performance-indicators"><a class="header" href="#key-performance-indicators">Key Performance Indicators</a></h3>
+<pre><code class="language-javascript">// Freelance KPIs
+const freelanceKPIs = {
+  financial: {
+    monthlyRevenue: "Total income per month",
+    averageProjectValue: "Average project size",
+    hourlyRate: "Effective hourly rate",
+    profitMargin: "Net income / gross income",
+    revenueGrowth: "Month-over-month growth"
+  },
+  
+  client: {
+    clientSatisfaction: "Average client rating",
+    repeatClientRate: "Percentage of repeat clients",
+    clientAcquisitionCost: "Marketing cost per client",
+    clientLifetimeValue: "Total revenue per client",
+    referralRate: "Percentage of referred clients"
+  },
+  
+  operational: {
+    projectCompletionRate: "On-time delivery percentage",
+    proposalWinRate: "Proposals accepted / sent",
+    utilizationRate: "Billable hours / available hours",
+    qualityMetrics: "Bug rates, revision requests",
+    efficiency: "Revenue per hour worked"
+  },
+  
+  growth: {
+    skillDevelopment: "New technologies learned",
+    marketExpansion: "New service areas",
+    networkGrowth: "Professional connections added",
+    brandRecognition: "Social media engagement",
+    thoughtLeadership: "Speaking/writing opportunities"
+  }
+};
+</code></pre>
+<hr>
+<p><strong>Next Up</strong>: Learn about Personal Branding! 🎨</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="personal-branding"><a class="header" href="#personal-branding">Personal Branding</a></h1>
+<p>Personal branding is how you market yourself as a professional. It’s your unique combination of skills, experience, and personality that sets you apart from other developers.</p>
+<h2 id="-what-is-personal-branding"><a class="header" href="#-what-is-personal-branding">🎯 What is Personal Branding?</a></h2>
+<p>Personal branding is the intentional effort to create and influence public perception of yourself as a professional. It’s about being known for something specific.</p>
+<h3 id="why-personal-branding-matters"><a class="header" href="#why-personal-branding-matters">Why Personal Branding Matters</a></h3>
+<ul>
+<li><strong>Differentiation</strong>: Stand out in a crowded market</li>
+<li><strong>Opportunity Magnet</strong>: Attract better clients and job offers</li>
+<li><strong>Credibility</strong>: Establish authority in your niche</li>
+<li><strong>Career Control</strong>: Direct your professional narrative</li>
+<li><strong>Higher Rates</strong>: Command premium pricing for specialized expertise</li>
+</ul>
+<h2 id="-building-your-brand-foundation"><a class="header" href="#-building-your-brand-foundation">🏗️ Building Your Brand Foundation</a></h2>
+<h3 id="define-your-brand-identity"><a class="header" href="#define-your-brand-identity">Define Your Brand Identity</a></h3>
+<pre><code class="language-javascript">// Personal brand framework
+const personalBrand = {
+  // Core Identity
+  identity: {
+    name: "Your Professional Name",
+    tagline: "Brief, memorable description of what you do",
+    mission: "Why you do what you do",
+    values: ["Core", "values", "that", "guide", "your", "work"],
+    personality: ["Adjectives", "describing", "your", "professional", "style"]
+  },
+  
+  // Expertise Areas
+  expertise: {
+    primary: "Main specialty (React Native, Node.js, etc.)",
+    secondary: "Supporting skills (TypeScript, AWS, etc.)",
+    industries: ["E-commerce", "FinTech", "Healthcare"],
+    technologies: ["React Native", "Node.js", "MongoDB", "TypeScript"],
+    methodologies: ["Agile", "TDD", "CI/CD"]
+  },
+  
+  // Target Audience
+  audience: {
+    primary: "Startups needing mobile apps",
+    secondary: "Enterprises requiring API development",
+    ideal: "Companies valuing quality and scalability"
+  },
+  
+  // Unique Value Proposition
+  uvp: "What makes you different from others",
+    differentiators: [
+      "Specialized in React Native performance optimization",
+      "Full-stack capabilities with mobile focus",
+      "Experience with enterprise-scale applications"
+    ]
+  }
+};
+</code></pre>
+<h3 id="brand-positioning-strategy"><a class="header" href="#brand-positioning-strategy">Brand Positioning Strategy</a></h3>
+<pre><code class="language-javascript">// Brand positioning matrix
+const brandPositioning = {
+  // Market Position
+  positioning: {
+    quality: "Premium/High-end",
+    price: "Above market rates",
+    service: "White-glove, comprehensive",
+    speed: "Efficient without sacrificing quality"
+  },
+  
+  // Competitive Advantages
+  advantages: {
+    technical: ["Deep React Native expertise", "Performance optimization"],
+    business: ["Understanding business objectives", "ROI focus"],
+    soft: ["Excellent communication", "Problem-solving mindset"]
+  },
+  
+  // Brand Voice
+  voice: {
+    tone: "Professional yet approachable",
+    style: "Clear, concise, technically accurate",
+    language: "Industry terminology explained simply",
+    examples: {
+      projectUpdate: "Implemented state management solution reducing app crashes by 40%",
+      problemSolving: "Identified memory leak causing performance issues"
+    }
+  }
+};
+</code></pre>
+<h2 id="-digital-presence-strategy"><a class="header" href="#-digital-presence-strategy">🌐 Digital Presence Strategy</a></h2>
+<h3 id="professional-website"><a class="header" href="#professional-website">Professional Website</a></h3>
+<pre><code class="language-javascript">// Website structure and content
+const professionalWebsite = {
+  // Essential Pages
+  pages: {
+    home: {
+      hero: "Compelling headline and value proposition",
+      about: "Brief professional story and expertise",
+      services: "Clear service offerings and pricing",
+      portfolio: "Showcase of best work",
+      blog: "Thought leadership content",
+      contact: "Multiple contact methods and CTA"
+    },
+    
+    // SEO Optimization
+    seo: {
+      title: "Your Name - React Native Developer | Your Specialty",
+      description: "Expert React Native developer specializing in [niche]. Helping companies build scalable mobile applications.",
+      keywords: ["React Native developer", "mobile app development", "your specialty"],
+      schema: "Person, WebSite, Article structured data"
+    }
+  },
+  
+  // Design Elements
+  design: {
+    colorScheme: "Professional color palette",
+    typography: "Clean, readable fonts",
+    layout: "Mobile-first responsive design",
+    imagery: "Professional headshot and project screenshots",
+    branding: "Consistent visual identity throughout"
+  },
+  
+  // Performance
+    performance: {
+      loadTime: "&lt; 2 seconds",
+      mobileScore: "&gt; 90",
+      seoScore: "&gt; 85",
+      accessibility: "WCAG 2.1 AA compliant"
+    }
+};
+</code></pre>
+<h3 id="linkedin-optimization"><a class="header" href="#linkedin-optimization">LinkedIn Optimization</a></h3>
+<pre><code class="language-javascript">// LinkedIn strategy for developers
+const linkedinStrategy = {
+  // Profile Optimization
+  profile: {
+    headline: "React Native Developer | Mobile App Specialist | Performance Expert",
+    summary: `
+Experienced React Native developer with 5+ years building scalable mobile applications. 
+Specialized in performance optimization and enterprise-level solutions. 
+Helped 20+ companies launch successful mobile apps with 4.8+ average ratings.
+Available for consulting and full-time opportunities.
+    `,
+    experience: [
+      {
+        company: "Company Name",
+        role: "Senior React Native Developer",
+        duration: "Jan 2020 - Present",
+        achievements: [
+          "Led development of app with 1M+ downloads",
+          "Reduced crash rate by 60% through code optimization",
+          "Mentored 5 junior developers"
+        ]
+      }
+    ],
+    skills: [
+      "React Native", "JavaScript", "TypeScript", "Node.js",
+      "Mobile App Development", "Performance Optimization",
+      "API Development", "Agile Methodologies"
+    ]
+  },
+  
+  // Content Strategy
+  content: {
+    frequency: "3 posts per week",
+    types: [
+      "Technical tutorials (40%)",
+      "Project case studies (30%)",
+      "Industry insights (20%)",
+      "Career advice (10%)"
+    ],
+    engagement: [
+      "Comment on 10 posts daily",
+      "Share valuable content",
+      "Participate in relevant groups",
+      "Connect with 5 new people weekly"
+    ]
+  },
+  
+  // Networking
+  networking: {
+    connectionRequests: "Personalized messages mentioning common interests",
+    followUp: "Regular check-ins with valuable contacts",
+    recommendations: "Request recommendations from happy clients",
+    groups: "Active participation in React Native and mobile dev groups"
+  }
+};
+</code></pre>
+<h2 id="-content-creation-strategy"><a class="header" href="#-content-creation-strategy">📝 Content Creation Strategy</a></h2>
+<h3 id="thought-leadership-content"><a class="header" href="#thought-leadership-content">Thought Leadership Content</a></h3>
+<pre><code class="language-javascript">// Content marketing framework
+const contentStrategy = {
+  // Content Pillars
+  pillars: {
+    technical: "Deep technical tutorials and best practices",
+    business: "How technology solves business problems",
+    career: "Developer career growth and insights",
+    industry: "Mobile app industry trends and analysis"
+  },
+  
+  // Content Formats
+  formats: {
+    blogPosts: {
+      frequency: "2 per month",
+      length: "1500-2000 words",
+      topics: ["React Native optimization", "Mobile performance", "Code architecture"],
+      seo: "Target long-tail keywords with 500+ monthly searches"
+    },
+    tutorials: {
+      frequency: "1 per month",
+      type: "Step-by-step guides with code examples",
+      platforms: ["Blog", "YouTube", "Medium"],
+      complexity: "Beginner to advanced levels"
+    },
+    caseStudies: {
+      frequency: "1 per quarter",
+      structure: ["Problem", "Solution", "Results", "Lessons learned"],
+      focus: "Business impact and ROI"
+    },
+    newsletters: {
+      frequency: "Bi-weekly",
+      content: ["Tech news", "Personal insights", "Exclusive content"],
+      value: "Actionable tips and industry analysis"
+    }
+  },
+  
+  // Distribution Strategy
+  distribution: {
+    primary: ["Personal blog", "LinkedIn", "Twitter"],
+    secondary: ["Medium", "Dev.to", "Reddit"],
+    repurposing: "Transform long-form content into multiple formats",
+    scheduling: "Use Buffer for consistent posting"
+  }
+};
+</code></pre>
+<h3 id="content-calendar-template"><a class="header" href="#content-calendar-template">Content Calendar Template</a></h3>
+<pre><code class="language-javascript">// Monthly content calendar
+const contentCalendar = {
+  week1: {
+    monday: "Technical tutorial - React Native performance",
+    tuesday: "Share tutorial on Twitter/LinkedIn",
+    wednesday: "Industry insight post on LinkedIn",
+    thursday: "Code snippet on Twitter",
+    friday: "Weekly roundup newsletter",
+    saturday: "Personal project update",
+    sunday: "Content planning and writing"
+  },
+  
+  week2: {
+    monday: "Case study - Recent project success",
+    tuesday: "Share case study with visuals",
+    wednesday: "Career advice - Interview tips",
+    thursday: "Quick tip thread on Twitter",
+    friday: "Newsletter with industry news",
+    saturday: "Engage with community",
+    sunday: "Write next week's content"
+  },
+  
+  // Content themes by month
+  monthlyThemes: {
+    january: "New year tech predictions and goals",
+    february: "Mobile app security best practices",
+    march: "React Native optimization techniques",
+    april: "App store optimization and ASO",
+    may: "Cross-platform development comparison",
+    june: "Summer project ideas and tutorials",
+    july: "Performance monitoring and analytics",
+    august: "Backend API design for mobile",
+    september: "UI/UX trends in mobile development",
+    october: "Halloween-themed creative coding projects",
+    november: "Holiday app development strategies",
+    december: "Year in review and tech trends"
+  }
+};
+</code></pre>
+<h2 id="-visual-brand-identity"><a class="header" href="#-visual-brand-identity">🎨 Visual Brand Identity</a></h2>
+<h3 id="professional-photography"><a class="header" href="#professional-photography">Professional Photography</a></h3>
+<pre><code class="language-javascript">// Photography guidelines for developers
+const photographyGuide = {
+  // Professional Headshot Requirements
+  headshot: {
+    technical: {
+      resolution: "Minimum 1080x1080 pixels",
+      format: "High-quality JPEG or PNG",
+      background: "Plain, neutral color (gray, white, or blurred)",
+      lighting: "Soft, even lighting, no harsh shadows"
+    },
+    
+    composition: {
+      framing: "Chest up, shoulders visible",
+      pose: "Professional, confident, approachable",
+      expression: "Natural smile, direct eye contact",
+      clothing: "Business casual or professional attire"
+    },
+    
+    styling: {
+      grooming: "Well-groomed, professional appearance",
+      colors: "Clothing that complements skin tone",
+      accessories: "Minimal, professional accessories only"
+    }
+  },
+  
+  // Project Screenshots
+  screenshots: {
+    quality: "High-resolution, no pixelation",
+    presentation: {
+      deviceFrames: "Show on actual devices when possible",
+      cleanUI: "No notifications or personal data visible",
+      multiple: "Show different screens and features"
+    },
+    annotations: "Call out key features and improvements"
+  }
+};
+</code></pre>
+<h3 id="brand-visual-elements"><a class="header" href="#brand-visual-elements">Brand Visual Elements</a></h3>
+<pre><code class="language-javascript">// Visual brand identity
+const visualBrand = {
+  // Color Palette
+  colors: {
+    primary: "#2563EB", // Professional blue
+    secondary: "#10B981", // Success green
+    accent: "#F59E0B", // Attention orange
+    neutral: {
+      light: "#F8FAFC",
+      medium: "#64748B",
+      dark: "#1E293B"
+    }
+  },
+  
+  // Typography
+  typography: {
+    heading: "Modern, clean sans-serif (Inter, Poppins)",
+    body: "Highly readable sans-serif (Open Sans, Lato)",
+    code: "Developer-friendly monospace (JetBrains Mono, Fira Code)"
+  },
+  
+  // Design Elements
+  elements: {
+    logo: "Clean, professional logo design",
+    icons: "Consistent icon style throughout",
+    patterns: "Subtle patterns for visual interest",
+    imagery: "Professional, high-quality photos"
+  },
+  
+  // Brand Guidelines
+  guidelines: {
+    logoUsage: "Minimum size, clear space rules",
+    colorUsage: "Primary/secondary color ratios",
+    typography: "Hierarchy and spacing rules",
+    imagery: "Photo style and treatment guidelines"
+  }
+};
+</code></pre>
+<h2 id="-social-media-strategy"><a class="header" href="#-social-media-strategy">📱 Social Media Strategy</a></h2>
+<h3 id="platform-specific-strategies"><a class="header" href="#platform-specific-strategies">Platform-Specific Strategies</a></h3>
+<pre><code class="language-javascript">// Social media strategy by platform
+const socialMediaStrategy = {
+  // LinkedIn - Professional Network
+  linkedin: {
+    purpose: "Professional networking and B2B leads",
+    content: [
+      "Technical articles (2x/week)",
+      "Project announcements (1x/week)",
+      "Industry insights (1x/week)",
+      "Career advice (1x/month)"
+    ],
+    engagement: [
+      "Comment on 10 posts daily",
+      "Share valuable content",
+      "Participate in relevant groups",
+      "Send personalized connection requests"
+    ],
+    timing: "Post during business hours (9 AM - 5 PM EST)"
+  },
+  
+  // Twitter/X - Quick Updates
+  twitter: {
+    purpose: "Quick tips and community engagement",
+    content: [
+      "Code snippets (3x/week)",
+      "Quick tips (5x/week)",
+      "Industry news (2x/week)",
+      "Personal insights (2x/week)"
+    ],
+    engagement: [
+      "Reply to 20 tweets daily",
+      "Participate in relevant hashtags",
+      "Share others' valuable content",
+      "Engage with followers"
+    ],
+    timing: "Multiple times throughout the day"
+  },
+  
+  // GitHub - Technical Portfolio
+  github: {
+    purpose: "Showcase technical expertise",
+    activities: [
+      "Contribute to open source (2x/month)",
+      "Maintain personal projects",
+      "Create useful tools and libraries",
+      "Write comprehensive documentation"
+    ],
+    profile: {
+      pinned: "Best 6 repositories",
+      readme: "Detailed project descriptions",
+      contributions: "Consistent activity graph",
+      organizations: "Join relevant tech organizations"
+    }
+  },
+  
+  // YouTube - Video Content
+  youtube: {
+    purpose: "Video tutorials and project demos",
+    content: [
+      "Coding tutorials (1x/month)",
+      "Project walkthroughs (1x/month)",
+      "Tool reviews (1x/quarter)",
+      "Career advice (1x/quarter)"
+    ],
+    optimization: {
+      titles: "SEO-optimized with keywords",
+      descriptions: "Detailed with timestamps",
+      tags: "Relevant technical tags",
+      thumbnails: "Professional, eye-catching"
+    }
+  }
+};
+</code></pre>
+<h2 id="-networking-strategy"><a class="header" href="#-networking-strategy">🤝 Networking Strategy</a></h2>
+<h3 id="building-professional-relationships"><a class="header" href="#building-professional-relationships">Building Professional Relationships</a></h3>
+<pre><code class="language-javascript">// Networking framework
+const networkingStrategy = {
+  // Online Networking
+  online: {
+    communities: {
+      reddit: ["r/reactnative", "r/webdev", "r/javascript"],
+      discord: ["React Native Discord", "Developer communities"],
+      slack: ["Professional developer groups"],
+      forums: ["Stack Overflow", "Dev.to"]
+    },
+    
+    engagement: {
+      valueFirst: "Provide help before asking for anything",
+      consistency: "Regular, helpful participation",
+      expertise: "Focus on areas of genuine knowledge",
+      followUp: "Maintain relationships over time"
+    }
+  },
+  
+  // Offline Networking
+  offline: {
+    events: {
+      conferences: ["React Conf", "Mobile Dev conferences"],
+      meetups: ["Local React Native meetups"],
+      workshops: ["Technical workshops and hackathons"],
+      networking: ["Industry networking events"]
+    },
+    
+    preparation: {
+      research: "Research attendees and speakers",
+      materials: "Prepare business cards and elevator pitch",
+      goals: "Set specific networking goals",
+      followUp: "Plan post-event follow-up strategy"
+    }
+  },
+  
+  // Relationship Building
+  relationships: {
+    mentors: "Find experienced developers for guidance",
+    peers: "Build network of equal-level developers",
+    juniors: "Mentor junior developers to give back",
+    clients: "Maintain long-term client relationships",
+    partners: "Collaborate with complementary professionals"
+  }
+};
+</code></pre>
+<h2 id="-brand-monitoring--analytics"><a class="header" href="#-brand-monitoring--analytics">📊 Brand Monitoring &amp; Analytics</a></h2>
+<h3 id="tracking-your-brand-performance"><a class="header" href="#tracking-your-brand-performance">Tracking Your Brand Performance</a></h3>
+<pre><code class="language-javascript">// Brand metrics and monitoring
+const brandAnalytics = {
+  // Website Analytics
+  website: {
+    traffic: {
+      visitors: "Unique monthly visitors",
+      pageViews: "Total page views",
+      bounceRate: "Percentage of single-page visits",
+      sessionDuration: "Average time on site"
+    },
+    engagement: {
+      contactForm: "Contact form submissions",
+      newsletterSignup: "Newsletter subscription rate",
+      portfolioViews: "Portfolio project views",
+      socialShares: "Content sharing metrics"
+    },
+    conversion: {
+      inquiryRate: "Contact form / visitor ratio",
+      leadQuality: "Quality of incoming inquiries",
+      clientAcquisition: "New clients from website"
+    }
+  },
+  
+  // Social Media Analytics
+  social: {
+    linkedin: {
+      connections: "Total network size",
+      engagement: "Post likes, comments, shares",
+      profileViews: "Weekly profile views",
+      searchAppearances: "Search appearance frequency"
+    },
+    twitter: {
+      followers: "Follower growth rate",
+      engagement: "Tweet interactions",
+      reach: "Impression and reach metrics",
+      mentions: "Brand mentions and tags"
+    },
+    github: {
+      stars: "Repository star count",
+      forks: "Project fork count",
+      followers: "GitHub followers",
+      contributions: "Public contribution activity"
+    }
+  },
+  
+  // Brand Sentiment
+  sentiment: {
+    monitoring: "Google Alerts for brand mentions",
+    reviews: "Client testimonials and reviews",
+    feedback: "Qualitative feedback collection",
+    reputation: "Online reputation management"
+  }
+};
+</code></pre>
+<h3 id="brand-health-score"><a class="header" href="#brand-health-score">Brand Health Score</a></h3>
+<pre><code class="language-javascript">// Brand health calculation
+const calculateBrandHealth = (metrics) =&gt; {
+  const weights = {
+    websiteTraffic: 0.2,
+    socialEngagement: 0.2,
+    contentQuality: 0.2,
+    networkGrowth: 0.2,
+    clientAcquisition: 0.2
+  };
+  
+  const scores = {
+    websiteTraffic: Math.min(metrics.website.visitors / 1000, 1) * 100,
+    socialEngagement: (metrics.social.engagementRate / 5) * 100,
+    contentQuality: metrics.content.averageQuality * 100,
+    networkGrowth: (metrics.network.growthRate / 10) * 100,
+    clientAcquisition: (metrics.clients.monthlyAcquisition / 5) * 100
+  };
+  
+  const weightedScore = Object.keys(weights).reduce((total, key) =&gt; {
+    return total + (scores[key] * weights[key]);
+  }, 0);
+  
+  return {
+    overall: Math.round(weightedScore),
+    breakdown: scores,
+    recommendations: generateRecommendations(weightedScore, scores)
+  };
+};
+
+function generateRecommendations(score, breakdown) {
+  const recommendations = [];
+  
+  if (breakdown.websiteTraffic &lt; 70) {
+    recommendations.push("Improve SEO and content marketing");
+  }
+  
+  if (breakdown.socialEngagement &lt; 70) {
+    recommendations.push("Increase social media posting frequency");
+  }
+  
+  if (breakdown.contentQuality &lt; 80) {
+    recommendations.push("Focus on higher-value, in-depth content");
+  }
+  
+  if (breakdown.networkGrowth &lt; 60) {
+    recommendations.push("Increase networking and community engagement");
+  }
+  
+  if (breakdown.clientAcquisition &lt; 50) {
+    recommendations.push("Optimize call-to-action and lead generation");
+  }
+  
+  return recommendations;
+}
+</code></pre>
+<h2 id="-brand-evolution-strategy"><a class="header" href="#-brand-evolution-strategy">🚀 Brand Evolution Strategy</a></h2>
+<h3 id="scaling-your-personal-brand"><a class="header" href="#scaling-your-personal-brand">Scaling Your Personal Brand</a></h3>
+<pre><code class="language-javascript">// Brand evolution roadmap
+const brandEvolution = {
+  // Phase 1: Foundation (0-6 months)
+  foundation: {
+    goals: [
+      "Establish core brand identity",
+      "Build professional website",
+      "Create initial portfolio",
+      "Start content creation"
+    ],
+    kpis: {
+      websiteLaunch: "Live professional website",
+      portfolioSize: "3+ quality projects",
+      contentFrequency: "2 posts per week",
+      networkSize: "500+ LinkedIn connections"
+    }
+  },
+  
+  // Phase 2: Growth (6-18 months)
+  growth: {
+    goals: [
+      "Increase content output",
+      "Expand social media presence",
+      "Build email list",
+      "Establish thought leadership"
+    ],
+    kpis: {
+      monthlyVisitors: "1000+ website visitors",
+      emailSubscribers: "500+ newsletter subscribers",
+      socialFollowers: "2000+ combined followers",
+      speakingGigs: "2+ speaking engagements"
+    }
+  },
+  
+  // Phase 3: Authority (18-36 months)
+  authority: {
+    goals: [
+      "Become recognized expert",
+      "Create digital products",
+      "Build community",
+      "Scale client acquisition"
+    ],
+    kpis: {
+      monthlyRevenue: "Consistent freelance income",
+      productSales: "Digital product revenue",
+      communitySize: "Active community members",
+      mediaMentions: "Industry media mentions"
+    }
+  },
+  
+  // Phase 4: Influence (36+ months)
+  influence: {
+    goals: [
+      "Industry influence",
+      "Multiple revenue streams",
+      "Brand partnerships",
+      "Thought leadership platform"
+    ],
+    kpis: {
+      brandSearches: "Branded search volume",
+      partnershipDeals: "Brand partnership revenue",
+      bookDeal: "Book publishing deal",
+      conferenceKeynote: "Keynote speaking opportunities"
+    }
+  }
+};
+</code></pre>
+<hr>
+<p><strong>Next Up</strong>: Learn about Interview Preparation! 🎤</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="interview-preparation"><a class="header" href="#interview-preparation">Interview Preparation</a></h1>
+<p>Interview preparation is the key to landing your dream job. This comprehensive guide covers everything from technical skills to behavioral questions, helping you ace any developer interview.</p>
+<h2 id="-interview-success-framework"><a class="header" href="#-interview-success-framework">🎯 Interview Success Framework</a></h2>
+<h3 id="the-three-pillars-of-interview-success"><a class="header" href="#the-three-pillars-of-interview-success">The Three Pillars of Interview Success</a></h3>
+<ol>
+<li><strong>Technical Excellence</strong>: Strong coding skills and system design knowledge</li>
+<li><strong>Communication</strong>: Clear articulation of technical concepts</li>
+<li><strong>Problem-Solving</strong>: Structured approach to complex challenges</li>
+</ol>
+<h3 id="interview-types--preparation"><a class="header" href="#interview-types--preparation">Interview Types &amp; Preparation</a></h3>
+<pre><code class="language-javascript">// Interview preparation matrix
+const interviewTypes = {
+  technical: {
+    types: ["Coding challenge", "System design", "Code review", "Debugging"],
+    preparation: "LeetCode practice, system design study, code reviews",
+    duration: "45-90 minutes",
+    focus: "Problem-solving speed and accuracy"
+  },
+  
+  behavioral: {
+    types: ["STAR questions", "Situational judgment", "Cultural fit", "Conflict resolution"],
+    preparation: "Story bank, company research, self-reflection",
+    duration: "30-60 minutes",
+    focus: "Communication and soft skills"
+  },
+  
+  systemDesign: {
+    types: ["Architecture design", "Scalability", "Database design", "API design"],
+    preparation: "System design patterns, scalability principles, case studies",
+    duration: "60-90 minutes",
+    focus: "Trade-offs and design decisions"
+  },
+  
+  pairProgramming: {
+    types: ["Live coding", "Collaborative problem-solving", "Code review"],
+    preparation: "Pair programming practice, communication skills",
+    duration: "45-75 minutes",
+    focus: "Collaboration and communication"
+  }
+};
+</code></pre>
+<h2 id="-technical-interview-preparation"><a class="header" href="#-technical-interview-preparation">💻 Technical Interview Preparation</a></h2>
+<h3 id="coding-challenge-mastery"><a class="header" href="#coding-challenge-mastery">Coding Challenge Mastery</a></h3>
+<h4 id="essential-data-structures"><a class="header" href="#essential-data-structures">Essential Data Structures</a></h4>
+<pre><code class="language-javascript">// Data structures with time/space complexity
+const dataStructures = {
+  arrays: {
+    operations: ["access", "search", "insertion", "deletion"],
+    timeComplexity: {
+      access: "O(1)",
+      search: "O(n)",
+      insertion: "O(n)",
+      deletion: "O(n)"
+    },
+    spaceComplexity: "O(n)",
+    commonProblems: ["Two pointers", "Sliding window", "Sorting", "Searching"]
+  },
+  
+  strings: {
+    operations: ["access", "search", "concatenation", "substring"],
+    timeComplexity: {
+      access: "O(1)",
+      search: "O(n*m)", // n = string length, m = pattern length
+      concatenation: "O(n+m)",
+      substring: "O(m)"
+    },
+    spaceComplexity: "O(n)",
+    commonProblems: ["Pattern matching", "String manipulation", "Palindrome"]
+  },
+  
+  linkedLists: {
+    operations: ["access", "search", "insertion", "deletion"],
+    timeComplexity: {
+      access: "O(n)",
+      search: "O(n)",
+      insertion: "O(1)",
+      deletion: "O(1)"
+    },
+    spaceComplexity: "O(n)",
+    commonProblems: ["Reversal", "Cycle detection", "Merge two lists"]
+  },
+  
+  stacks: {
+    operations: ["push", "pop", "peek", "isEmpty"],
+    timeComplexity: {
+      push: "O(1)",
+      pop: "O(1)",
+      peek: "O(1)",
+      isEmpty: "O(1)"
+    },
+    spaceComplexity: "O(n)",
+    commonProblems: ["Valid parentheses", "Min stack", "Evaluate expressions"]
+  },
+  
+  queues: {
+    operations: ["enqueue", "dequeue", "front", "isEmpty"],
+    timeComplexity: {
+      enqueue: "O(1)",
+      dequeue: "O(1)",
+      front: "O(1)",
+      isEmpty: "O(1)"
+    },
+    spaceComplexity: "O(n)",
+    commonProblems: ["Level order traversal", "BFS", "Task scheduling"]
+  },
+  
+  trees: {
+    operations: ["search", "insertion", "deletion", "traversal"],
+    timeComplexity: {
+      search: "O(log n)",
+      insertion: "O(log n)",
+      deletion: "O(log n)",
+      traversal: "O(n)"
+    },
+    spaceComplexity: "O(n)",
+    commonProblems: ["BST operations", "Tree traversal", "LCA"]
+  },
+  
+  graphs: {
+    operations: ["DFS", "BFS", "Dijkstra", "Topological sort"],
+    timeComplexity: {
+      dfs: "O(V+E)",
+      bfs: "O(V+E)",
+      dijkstra: "O((V+E) log V)",
+      topological: "O(V+E)"
+    },
+    spaceComplexity: "O(V+E)",
+    commonProblems: ["Shortest path", "Cycle detection", "Connected components"]
+  }
+};
+</code></pre>
+<h4 id="algorithm-patterns"><a class="header" href="#algorithm-patterns">Algorithm Patterns</a></h4>
+<pre><code class="language-javascript">// Common algorithm patterns with examples
+const algorithmPatterns = {
+  twoPointers: {
+    description: "Use two pointers to solve array/string problems",
+    template: `
+let left = 0, right = arr.length - 1;
+while (left &lt; right) {
+  // Process based on condition
+  left++;
+  right--;
+}
+    `,
+    problems: ["Two sum", "Container with most water", "Remove duplicates"]
+  },
+  
+  slidingWindow: {
+    description: "Maintain a window of elements for optimization",
+    template: `
+let left = 0, sum = 0, maxSum = 0;
+for (let right = 0; right &lt; arr.length; right++) {
+  sum += arr[right];
+  while (windowSize &gt; right - left + 1) {
+    sum -= arr[left];
+    left++;
+  }
+  maxSum = Math.max(maxSum, sum);
+}
+    `,
+    problems: ["Maximum sum subarray", "Longest substring without repeats"]
+  },
+  
+  binarySearch: {
+    description: "Search in sorted array using divide and conquer",
+    template: `
+let left = 0, right = arr.length - 1;
+while (left &lt;= right) {
+  const mid = Math.floor((left + right) / 2);
+  if (arr[mid] === target) return mid;
+  if (arr[mid] &lt; target) left = mid + 1;
+  else right = mid - 1;
+}
+return -1;
+    `,
+    problems: ["Search in sorted array", "Find first bad version", "Minimum capacity"]
+  },
+  
+  dynamicProgramming: {
+    description: "Break problems into overlapping subproblems",
+    template: `
+const dp = new Array(n + 1).fill(0);
+dp[0] = 1; // Base case
+for (let i = 1; i &lt;= n; i++) {
+  for (let j = 1; j &lt;= i; j++) {
+    dp[i] += dp[i - j];
+  }
+}
+    `,
+    problems: ["Fibonacci", "Coin change", "Longest increasing subsequence"]
+  },
+  
+  backtracking: {
+    description: "Explore all possibilities by making choices",
+    template: `
+function backtrack(current, remaining) {
+  if (remaining.length === 0) {
+    result.push([...current]);
+    return;
+  }
+  
+  for (let i = 0; i &lt; remaining.length; i++) {
+    current.push(remaining[i]);
+    backtrack(current, remaining.slice(0, i) + remaining.slice(i + 1));
+    current.pop();
+  }
+}
+    `,
+    problems: ["Permutations", "Combinations", "Sudoku solver"]
+  }
+};
+</code></pre>
+<h3 id="react-native-specific-questions"><a class="header" href="#react-native-specific-questions">React Native Specific Questions</a></h3>
+<h4 id="core-react-native-concepts"><a class="header" href="#core-react-native-concepts">Core React Native Concepts</a></h4>
+<pre><code class="language-javascript">// React Native interview questions and answers
+const reactNativeQuestions = {
+  fundamentals: {
+    question: "How does React Native differ from React?",
+    answer: `
+React Native uses native components instead of web DOM:
+1. React Native renders to native UI components (UIView, android.view.View)
+2. React uses Virtual DOM and renders to web elements
+3. React Native has a bridge for native module communication
+4. Performance is better in React Native for mobile apps
+5. Access to native device APIs is direct in React Native
+    `
+  },
+  
+  bridge: {
+    question: "Explain the React Native Bridge",
+    answer: `
+The Bridge enables communication between JavaScript and native code:
+
+1. Asynchronous communication: JSON messages over the bridge
+2. Batched messages for performance
+3. Native modules expose native functionality to JS
+4. JS modules expose JavaScript functionality to native
+5. Three threads: JS thread, native UI thread, shadow queue
+6. Message serialization/deserialization overhead
+    `
+  },
+  
+  performance: {
+    question: "How do you optimize React Native app performance?",
+    answer: `
+Performance optimization strategies:
+
+1. Use React.memo for component memoization
+2. Implement shouldComponentUpdate or React.PureComponent
+3. Optimize lists with FlatList instead of ScrollView
+4. Use Hermes JavaScript engine for better performance
+5. Implement code splitting and lazy loading
+6. Optimize images and use WebP format
+7. Use native drivers for complex animations
+8. Profile with Flipper and React DevTools
+9. Minimize bridge calls and batch operations
+10. Use useCallback and useMemo hooks appropriately
+    `
+  },
+  
+  navigation: {
+    question: "Compare React Navigation libraries",
+    answer: `
+Navigation libraries comparison:
+
+React Navigation:
+- Most popular and feature-rich
+- Stack, Tab, Drawer navigators
+- Deep linking support
+- Custom transitions
+- Larger bundle size
+
+React Native Navigation:
+- Native navigation components
+- Better performance for complex apps
+- Native gestures and animations
+- Steeper learning curve
+- Smaller bundle size
+
+Wix Navigation:
+- Most performant
+- Predictable navigation state
+- Advanced features like deep linking
+- Complex API
+- Requires Wix ecosystem
+    `
+  }
+};
+</code></pre>
+<h2 id="-system-design-interview"><a class="header" href="#-system-design-interview">🏗️ System Design Interview</a></h2>
+<h3 id="system-design-framework"><a class="header" href="#system-design-framework">System Design Framework</a></h3>
+<pre><code class="language-javascript">// System design interview approach
+const systemDesignFramework = {
+  // Step 1: Requirements Clarification
+  requirements: {
+    questions: [
+      "What are the functional requirements?",
+      "What are the non-functional requirements?",
+      "What is the expected scale?",
+      "What are the constraints and assumptions?"
+    ],
+    scale: {
+      users: "Daily active users (DAU)",
+      requests: "Requests per second (RPS)",
+      storage: "Data storage requirements",
+      growth: "Expected growth rate"
+    }
+  },
+  
+  // Step 2: High-Level Design
+  highLevel: {
+    components: [
+      "Load balancer",
+      "Web servers",
+      "Database",
+      "Cache",
+      "CDN"
+    ],
+    apis: [
+      "RESTful APIs",
+      "GraphQL",
+      "WebSocket for real-time"
+    ]
+  },
+  
+  // Step 3: Component Deep Dive
+  components: {
+    loadBalancer: {
+      types: ["L4 (TCP)", "L7 (HTTP)"],
+      algorithms: ["Round robin", "Least connections", "IP hash"],
+      considerations: ["Health checks", "Failover", "Session persistence"]
+    },
+    
+    database: {
+      types: ["SQL", "NoSQL"],
+      selection: "Based on consistency, scale, query patterns",
+      scaling: ["Read replicas", "Sharding", "Partitioning"]
+    },
+    
+    cache: {
+      strategies: ["Cache-aside", "Read-through", "Write-through"],
+      eviction: ["LRU", "LFU", "TTL"],
+      distribution: ["Client-side", "Server-side", "CDN"]
+    }
+  },
+  
+  // Step 4: Scalability &amp; Trade-offs
+  scalability: {
+    vertical: "Scale up individual servers",
+    horizontal: "Scale out across multiple servers",
+    considerations: ["Cost", "Complexity", "Reliability"]
+  },
+  
+  tradeoffs: {
+    consistency: "Strong vs eventual consistency",
+    availability: "High availability vs consistency",
+    performance: "Latency vs throughput",
+    cost: "Performance vs infrastructure cost"
+  }
+};
+</code></pre>
+<h3 id="common-system-design-problems"><a class="header" href="#common-system-design-problems">Common System Design Problems</a></h3>
+<pre><code class="language-javascript">// System design patterns for common problems
+const systemDesignPatterns = {
+  urlShortener: {
+    requirements: {
+      functional: ["Generate short URL", "Redirect to long URL", "Custom aliases"],
+      nonFunctional: ["Low latency redirection", "High availability", "Analytics"]
+    },
+    design: {
+      encoding: "Base62 encoding for shorter URLs",
+      database: "Distributed database for scalability",
+      cache: "Redis for hot URLs",
+      analytics: "Event tracking for click analytics"
+    }
+  },
+  
+  chatApplication: {
+    requirements: {
+      functional: ["Real-time messaging", "User presence", "Message history"],
+      nonFunctional: ["Low latency", "Message ordering", "Offline support"]
+    },
+    design: {
+      architecture: "Microservices with WebSocket",
+      database: "Document database for messages",
+      scaling: "Horizontal scaling with load balancing",
+      features: ["Read receipts", "Typing indicators", "Push notifications"]
+    }
+  },
+  
+  videoStreaming: {
+    requirements: {
+      functional: ["Video upload", "Processing", "Streaming", "Comments"],
+      nonFunctional: ["Fast upload", "Adaptive streaming", "CDN delivery"]
+    },
+    design: {
+      upload: "Direct upload to cloud storage",
+      processing: "Message queue for async processing",
+      streaming: "Adaptive bitrate streaming",
+      cdn: "Geographically distributed CDN"
+    }
+  }
+};
+</code></pre>
+<h2 id="-behavioral-interview-preparation"><a class="header" href="#-behavioral-interview-preparation">🗣️ Behavioral Interview Preparation</a></h2>
+<h3 id="star-method-framework"><a class="header" href="#star-method-framework">STAR Method Framework</a></h3>
+<pre><code class="language-javascript">// STAR method for behavioral questions
+const starMethod = {
+  structure: {
+    situation: "Describe the context and background",
+    task: "Explain your specific responsibility",
+    action: "Detail the steps you took",
+    result: "Share the outcome and what you learned"
+  },
+  
+  examples: {
+    conflict: {
+      situation: "Team member disagreed with my technical approach",
+      task: "Resolve conflict and maintain team cohesion",
+      action: "Listened to concerns, explained my reasoning, found compromise",
+      result: "We combined approaches and delivered successful solution"
+    },
+    
+    failure: {
+      situation: "Project deadline was missed due to unexpected issues",
+      task: "Address the delay and prevent future occurrences",
+      action: "Communicated with stakeholders, implemented fixes, improved planning",
+      result: "Delivered project with minimal delay, improved team processes"
+    },
+    
+    leadership: {
+      situation: "Junior team member struggling with complex feature",
+      task: "Mentor and help them succeed",
+      action: "Provided guidance, pair programming, code reviews",
+      result: "Team member gained confidence and delivered quality work"
+    }
+  }
+};
+</code></pre>
+<h3 id="common-behavioral-questions"><a class="header" href="#common-behavioral-questions">Common Behavioral Questions</a></h3>
+<pre><code class="language-javascript">// Behavioral questions and preparation
+const behavioralQuestions = {
+  teamwork: [
+    "Tell me about a time you worked with a difficult team member",
+    "Describe a situation where you had to convince your team",
+    "How do you handle disagreements with technical decisions?"
+  ],
+  
+  problemSolving: [
+    "Describe a complex problem you solved",
+    "Tell me about a time you had to learn something quickly",
+    "How do you approach debugging complex issues?"
+  ],
+  
+  leadership: [
+    "Tell me about a time you led a project",
+    "How do you mentor junior developers?",
+    "Describe a situation where you took initiative"
+  ],
+  
+  learning: [
+    "How do you stay updated with technology?",
+    "Tell me about a time you had to learn a new technology",
+    "What's the most challenging technical concept you learned?"
+  ],
+  
+  failure: [
+    "Tell me about a time you failed",
+    "Describe a project that didn't go as planned",
+    "How do you handle constructive criticism?"
+  ]
+};
+</code></pre>
+<h2 id="-interview-day-preparation"><a class="header" href="#-interview-day-preparation">🎯 Interview Day Preparation</a></h2>
+<h3 id="pre-interview-checklist"><a class="header" href="#pre-interview-checklist">Pre-Interview Checklist</a></h3>
+<pre><code class="language-markdown">## Interview Day Preparation
+
+### Technical Setup
+- [ ] Test internet connection
+- [ ] Prepare development environment
+- [ ] Have backup device ready
+- [ ] Test microphone and camera
+- [ ] Close unnecessary applications
+
+### Research
+- [ ] Research company and role
+- [ ] Review job description
+- [ ] Prepare questions for interviewer
+- [ ] Understand company tech stack
+- [ ] Know recent company news
+
+### Materials Ready
+- [ ] Resume/CV printed and digital
+- [ ] Portfolio projects ready
+- [ ] Notepad and pen
+- [ ] Glass of water
+- [ ] Backup power source
+
+### Mental Preparation
+- [ ] Good night's sleep
+- [ ] Practice positive visualization
+- [ ] Review key concepts
+- [ ] Prepare talking points
+- [ ] Plan outfit and appearance
+</code></pre>
+<h3 id="virtual-interview-setup"><a class="header" href="#virtual-interview-setup">Virtual Interview Setup</a></h3>
+<pre><code class="language-javascript">// Virtual interview preparation
+const virtualInterviewSetup = {
+  environment: {
+    lighting: "Ensure good front lighting",
+    background: "Clean, professional background",
+    camera: "Eye-level camera, good angle",
+    audio: "Test microphone quality, use headset if needed"
+  },
+  
+  technical: {
+    internet: "Stable connection, backup hotspot",
+    platform: "Test Zoom/Teams/Meet beforehand",
+    screenSharing: "Prepare code editor for sharing",
+    backup: "Phone ready for connection issues"
+  },
+  
+  professional: {
+    attire: "Business casual, professional top",
+    space: "Quiet, distraction-free environment",
+    timing: "Log in 10 minutes early",
+    materials: "Have resume and notes ready"
+  }
+};
+</code></pre>
+<h2 id="-post-interview-follow-up"><a class="header" href="#-post-interview-follow-up">📝 Post-Interview Follow-up</a></h2>
+<h3 id="thank-you-email-template"><a class="header" href="#thank-you-email-template">Thank You Email Template</a></h3>
+<pre><code class="language-javascript">// Post-interview thank you template
+const thankYouTemplate = {
+  immediate: {
+    subject: "Thank you for the [Position] interview",
+    body: `
+Dear [Interviewer Name],
+
+Thank you for taking the time to speak with me today about the [Position] role at [Company].
+
+I really enjoyed our discussion about [specific topic discussed] and learning more about [company initiative or project]. I was particularly interested in [specific aspect of role/company].
+
+Based on our conversation, I'm even more excited about this opportunity and believe my experience in [relevant skill/experience] would be valuable for [specific team or project].
+
+Please let me know if you need any additional information from my end. I look forward to hearing about the next steps.
+
+Best regards,
+[Your Name]
+[Your Phone]
+[Your Email]
+[LinkedIn Profile]
+[Portfolio Website]
+    `
+  },
+  
+  followUp: {
+    timing: "1 week after interview if no response",
+    subject: "Following up on [Position] interview",
+    body: `
+Dear [Interviewer Name],
+
+I hope you're having a great week. I'm following up on our conversation last [Day] about the [Position] role.
+
+I remain very interested in this opportunity and am excited about the possibility of joining your team. My experience in [relevant skill] aligns well with what you're looking for, and I'm confident I can contribute to [specific goal or project].
+
+Is there any additional information I can provide to help with the decision process?
+
+Thank you for your time and consideration.
+
+Best regards,
+[Your Name]
+    `
+  }
+};
+</code></pre>
+<h2 id="-interview-performance-tracking"><a class="header" href="#-interview-performance-tracking">📊 Interview Performance Tracking</a></h2>
+<h3 id="self-assessment-framework"><a class="header" href="#self-assessment-framework">Self-Assessment Framework</a></h3>
+<pre><code class="language-javascript">// Interview performance evaluation
+const interviewPerformance = {
+  technical: {
+    problemSolving: {
+      understanding: "Did I understand the problem correctly?",
+      approach: "Was my approach logical and efficient?",
+      code: "Was my code clean and bug-free?",
+      optimization: "Did I consider edge cases and optimizations?"
+    },
+    communication: {
+      explanation: "Did I explain my thought process clearly?",
+      questions: "Did I ask clarifying questions?",
+      collaboration: "Did I engage in productive discussion?",
+      technical: "Did I communicate technical concepts accurately?"
+    }
+  },
+  
+  behavioral: {
+    structure: "Did I use STAR method effectively?",
+    relevance: "Were my examples relevant and impactful?",
+    authenticity: "Did I sound genuine and honest?",
+    learning: "Did I demonstrate growth and learning mindset?"
+  },
+  
+  overall: {
+    preparation: "How well was I prepared?",
+    confidence: "Did I project appropriate confidence?",
+    engagement: "Was I engaged and enthusiastic?",
+    fit: "Did I demonstrate cultural fit?"
+  }
+};
+</code></pre>
+<h3 id="continuous-improvement"><a class="header" href="#continuous-improvement">Continuous Improvement</a></h3>
+<pre><code class="language-javascript">// Interview improvement plan
+const improvementPlan = {
+  analyze: {
+    identify: "Identify areas of weakness",
+    patterns: "Recognize recurring issues",
+    feedback: "Collect feedback from interviewers",
+    metrics: "Track performance over time"
+  },
+  
+  practice: {
+    technical: "Daily coding practice, weekly mock interviews",
+    behavioral: "Practice STAR responses, record and review",
+    systemDesign: "Weekly system design practice with peers",
+    communication: "Practice explaining concepts out loud"
+  },
+  
+  resources: {
+    books: ["Cracking the Coding Interview", "System Design Interview"],
+    platforms: ["LeetCode", "HackerRank", "Pramp"],
+    mock: "Mock interviews with peers or services",
+    community: "Join interview preparation communities"
+  }
+};
+</code></pre>
+<hr>
+<p><strong>Next Up</strong>: Learn about System Design! 🏗️</p>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="system-design"><a class="header" href="#system-design">System Design</a></h1>
+<h1 id="system-design-fundamentals"><a class="header" href="#system-design-fundamentals">System Design Fundamentals</a></h1>
+<p>System design is the process of defining the architecture, components, modules, interfaces, and data for a system to satisfy specified requirements. It’s crucial for building scalable, maintainable, and robust applications.</p>
+<h2 id="-what-is-system-design"><a class="header" href="#-what-is-system-design">🎯 What is System Design?</a></h2>
+<p>System design involves making high-level decisions about the organization and structure of software systems. It bridges the gap between requirements and implementation.</p>
+<h3 id="why-system-design-matters"><a class="header" href="#why-system-design-matters">Why System Design Matters</a></h3>
+<ul>
+<li><strong>Scalability</strong>: Handle growing user base and data</li>
+<li><strong>Reliability</strong>: Ensure system availability and fault tolerance</li>
+<li><strong>Performance</strong>: Meet response time and throughput requirements</li>
+<li><strong>Maintainability</strong>: Easy to modify and extend</li>
+<li><strong>Cost Efficiency</strong>: Optimize resource utilization</li>
+</ul>
+<h2 id="-system-design-fundamentals"><a class="header" href="#-system-design-fundamentals">🏗️ System Design Fundamentals</a></h2>
+<h3 id="key-design-principles"><a class="header" href="#key-design-principles">Key Design Principles</a></h3>
+<pre><code class="language-javascript">// System design principles with examples
+const designPrinciples = {
+  // Single Responsibility Principle
+  singleResponsibility: {
+    description: "Each component should have one reason to change",
+    example: `
+// Bad: User service handles authentication, profile, and notifications
+class UserService {
+  authenticate() { /* ... */ }
+  updateProfile() { /* ... */ }
+  sendNotification() { /* ... */ }
+}
+
+// Good: Separate services for each responsibility
+class AuthService { authenticate() { /* ... */ } }
+class ProfileService { updateProfile() { /* ... */ } }
+class NotificationService { sendNotification() { /* ... */ }
+    `
+  },
+  
+  // Separation of Concerns
+  separationOfConcerns: {
+    description: "Separate business logic from infrastructure concerns",
+    example: `
+// Separate layers for different concerns
+class UserController {
+  constructor(userService, emailService) {
+    this.userService = userService;
+    this.emailService = emailService;
+  }
+  
+  async createUser(userData) {
+    // Business logic
+    const user = await this.userService.create(userData);
+    
+    // Infrastructure concern (notification)
+    await this.emailService.sendWelcomeEmail(user.email);
+    
+    return user;
+  }
+}
+    `
+  },
+  
+  // Don't Repeat Yourself (DRY)
+  dry: {
+    description: "Avoid code duplication through abstraction",
+    example: `
+// Bad: Duplicate validation logic
+function createUser(userData) {
+  if (!userData.email || !userData.email.includes('@')) {
+    throw new Error('Invalid email');
+  }
+  // ... create user
+}
+
+function updateUser(userId, userData) {
+  if (!userData.email || !userData.email.includes('@')) {
+    throw new Error('Invalid email');
+  }
+  // ... update user
+}
+
+// Good: Extract validation to reusable function
+function validateEmail(email) {
+  return email &amp;&amp; email.includes('@');
+}
+
+function createUser(userData) {
+  if (!validateEmail(userData.email)) {
+    throw new Error('Invalid email');
+  }
+  // ... create user
+}
+    `
+  }
+};
+</code></pre>
+<h3 id="system-components-architecture"><a class="header" href="#system-components-architecture">System Components Architecture</a></h3>
+<pre><code class="language-mermaid">graph TD
+    A[Client Applications] --&gt; B[Load Balancer]
+    B --&gt; C[API Gateway]
+    C --&gt; D[Microservices]
+    D --&gt; E[Database Layer]
+    D --&gt; F[Cache Layer]
+    D --&gt; G[Message Queue]
+    E --&gt; H[Primary Database]
+    E --&gt; I[Read Replicas]
+    F --&gt; J[Redis Cache]
+    G --&gt; K[Event Bus]
+    K --&gt; L[Background Workers]
+</code></pre>
+<h2 id="-scalability-patterns"><a class="header" href="#-scalability-patterns">📊 Scalability Patterns</a></h2>
+<h3 id="horizontal-vs-vertical-scaling"><a class="header" href="#horizontal-vs-vertical-scaling">Horizontal vs Vertical Scaling</a></h3>
+<pre><code class="language-javascript">// Scaling strategies comparison
+const scalingStrategies = {
+  vertical: {
+    description: "Scale up by adding more resources to existing server",
+    pros: [
+      "Simple to implement",
+      "No architectural changes needed",
+      "Lower complexity"
+    ],
+    cons: [
+      "Limited by hardware constraints",
+      "Single point of failure",
+      "Higher cost per resource"
+    ],
+    useCase: "Small applications with predictable growth"
+  },
+  
+  horizontal: {
+    description: "Scale out by adding more servers to distribute load",
+    pros: [
+      "Unlimited scaling potential",
+      "Better fault tolerance",
+      "Cost-effective at scale"
+    ],
+    cons: [
+      "Increased complexity",
+      "Requires load balancing",
+      "Data consistency challenges"
+    ],
+    useCase: "Large applications with variable load"
+  }
+};
+</code></pre>
+<h3 id="load-balancing-strategies"><a class="header" href="#load-balancing-strategies">Load Balancing Strategies</a></h3>
+<pre><code class="language-javascript">// Load balancing algorithms
+const loadBalancingAlgorithms = {
+  roundRobin: {
+    description: "Distribute requests sequentially across servers",
+    implementation: `
+class RoundRobinLoadBalancer {
+  constructor(servers) {
+    this.servers = servers;
+    this.currentIndex = 0;
+  }
+  
+  getNextServer() {
+    const server = this.servers[this.currentIndex];
+    this.currentIndex = (this.currentIndex + 1) % this.servers.length;
+    return server;
+  }
+}
+    `,
+    pros: ["Simple", "Even distribution"],
+    cons: ["Ignores server capacity", "No health checks"]
+  },
+  
+  leastConnections: {
+    description: "Route to server with fewest active connections",
+    implementation: `
+class LeastConnectionsLoadBalancer {
+  constructor(servers) {
+    this.servers = servers.map(server =&gt; ({
+      ...server,
+      connections: 0
+    }));
+  }
+  
+  getNextServer() {
+    return this.servers.reduce((min, current) =&gt; 
+      current.connections &lt; min.connections ? current : min
+    );
+  }
+  
+  incrementConnections(server) {
+    server.connections++;
+  }
+  
+  decrementConnections(server) {
+    server.connections--;
+  }
+}
+    `,
+    pros: ["Considers server load", "Better for long connections"],
+    cons: ["More complex", "Requires connection tracking"]
+  }
+};
+</code></pre>
+<h2 id="-database-design-patterns"><a class="header" href="#-database-design-patterns">🗄️ Database Design Patterns</a></h2>
+<h3 id="database-selection-criteria"><a class="header" href="#database-selection-criteria">Database Selection Criteria</a></h3>
+<pre><code class="language-javascript">// Database selection framework
+const databaseSelection = {
+  criteria: {
+    consistency: {
+      strong: "ACID compliance needed (financial, inventory)",
+      eventual: "Can tolerate temporary inconsistency (social feeds, analytics)"
+    },
+    structure: {
+      structured: "Well-defined schema (user profiles, orders)",
+      unstructured: "Flexible schema (logs, content, user-generated data)"
+    },
+    scale: {
+      readHeavy: "More reads than writes (product catalogs, news)",
+      writeHeavy: "More writes than reads (analytics, logging)"
+    },
+    query: {
+      complex: "Complex joins and aggregations (reporting)",
+      simple: "Simple key-value lookups (caching, sessions)"
+    }
+  },
+  
+  recommendations: {
+    relational: {
+      databases: ["PostgreSQL", "MySQL", "SQL Server"],
+      useCases: ["Financial systems", "E-commerce", "User management"],
+      strengths: ["ACID compliance", "Complex queries", "Data integrity"]
+    },
+    document: {
+      databases: ["MongoDB", "CouchDB", "DynamoDB"],
+      useCases: ["Content management", "User profiles", "Catalogs"],
+      strengths: ["Flexible schema", "Horizontal scaling", "Fast writes"]
+    },
+    keyvalue: {
+      databases: ["Redis", "DynamoDB", "Cassandra"],
+      useCases: ["Caching", "Sessions", "Real-time analytics"],
+      strengths: ["High performance", "Simple API", "Low latency"]
+    },
+    graph: {
+      databases: ["Neo4j", "Amazon Neptune", "ArangoDB"],
+      useCases: ["Social networks", "Recommendation engines", "Fraud detection"],
+      strengths: ["Relationship queries", "Graph algorithms", "Connected data"]
+    }
+  }
+};
+</code></pre>
+<h3 id="database-scaling-patterns"><a class="header" href="#database-scaling-patterns">Database Scaling Patterns</a></h3>
+<pre><code class="language-mermaid">graph TD
+    A[Application] --&gt; B[Database Router]
+    B --&gt; C[Primary DB - Write]
+    B --&gt; D[Read Replica 1]
+    B --&gt; E[Read Replica 2]
+    B --&gt; F[Read Replica N]
+    
+    G[Sharding Layer] --&gt; H[Shard 1 - DB1]
+    G --&gt; I[Shard 2 - DB2]
+    G --&gt; J[Shard 3 - DB3]
+    
+    K[Caching Layer] --&gt; L[Redis Cluster]
+    K --&gt; M[CDN]
+</code></pre>
+<h2 id="-caching-strategies"><a class="header" href="#-caching-strategies">🚀 Caching Strategies</a></h2>
+<h3 id="cache-patterns"><a class="header" href="#cache-patterns">Cache Patterns</a></h3>
+<pre><code class="language-javascript">// Caching patterns with implementations
+const cachingPatterns = {
+  cacheAside: {
+    description: "Application manages cache explicitly",
+    implementation: `
+class CacheAsideService {
+  constructor(database, cache) {
+    this.db = database;
+    this.cache = cache;
+  }
+  
+  async get(key) {
+    // Try cache first
+    let data = await this.cache.get(key);
+    
+    if (!data) {
+      // Cache miss - get from database
+      data = await this.db.get(key);
+      
+      if (data) {
+        // Populate cache
+        await this.cache.set(key, data, { ttl: 3600 });
+      }
+    }
+    
+    return data;
+  }
+  
+  async set(key, data) {
+    // Update both cache and database
+    await Promise.all([
+      this.db.set(key, data),
+      this.cache.set(key, data, { ttl: 3600 })
+    ]);
+  }
+}
+    `,
+    pros: ["Flexible", "Cache failures don't break app"],
+    cons: ["Stale data possible", "More complex code"]
+  },
+  
+  readThrough: {
+    description: "Cache manages database reads",
+    implementation: `
+class ReadThroughCache {
+  constructor(database, cache) {
+    this.db = database;
+    this.cache = cache;
+  }
+  
+  async get(key) {
+    // Cache handles database lookup
+    return await this.cache.getOrLoad(key, async () =&gt; {
+      return await this.db.get(key);
+    });
+  }
+}
+    `,
+    pros: ["Simpler application code", "Always consistent"],
+    cons: ["Cache becomes bottleneck", "Less flexible"]
+  },
+  
+  writeThrough: {
+    description: "Write to both cache and database synchronously",
+    implementation: `
+class WriteThroughCache {
+  constructor(database, cache) {
+    this.db = database;
+    this.cache = cache;
+  }
+  
+  async set(key, data) {
+    // Write to both synchronously
+    await Promise.all([
+      this.db.set(key, data),
+      this.cache.set(key, data, { ttl: 3600 })
+    ]);
+  }
+}
+    `,
+    pros: ["Data consistency", "Read performance"],
+    cons: ["Write latency", "Cache size management"]
+  }
+};
+</code></pre>
+<h3 id="cache-invalidation-strategies"><a class="header" href="#cache-invalidation-strategies">Cache Invalidation Strategies</a></h3>
+<pre><code class="language-javascript">// Cache invalidation patterns
+const cacheInvalidation = {
+  ttl: {
+    description: "Time-based expiration",
+    implementation: `
+// Set TTL when writing to cache
+await cache.set(key, data, { ttl: 3600 }); // 1 hour
+    `,
+    pros: ["Simple", "No invalidation logic needed"],
+    cons: ["May serve stale data", "Fixed expiration regardless of updates"]
+  },
+  
+  writeInvalidate: {
+    description: "Invalidate cache on data changes",
+    implementation: `
+class WriteInvalidateCache {
+  async updateUser(userId, userData) {
+    // Update database
+    await this.db.update(userId, userData);
+    
+    // Invalidate cache
+    await this.cache.delete(\`user:\${userId}\`);
+  }
+}
+    `,
+    pros: ["Always fresh data", "Immediate consistency"],
+    cons: ["More complex", "Cache stampede possible"]
+  },
+  
+  lazyLoading: {
+    description: "Invalidate on next access",
+    implementation: `
+class LazyLoadingCache {
+  async get(key) {
+    let data = await this.cache.get(key);
+    
+    if (data &amp;&amp; data.isStale()) {
+      // Remove stale data
+      await this.cache.delete(key);
+      data = null;
+    }
+    
+    if (!data) {
+      // Load fresh data
+      data = await this.db.get(key);
+      await this.cache.set(key, data);
+    }
+    
+    return data;
+  }
+}
+    `,
+    pros: ["No wasted cache updates", "Simple"],
+    cons: ["First request after update is slow", "Stale data possible"]
+  }
+};
+</code></pre>
+<h2 id="-message-queues--event-systems"><a class="header" href="#-message-queues--event-systems">🔄 Message Queues &amp; Event Systems</a></h2>
+<h3 id="message-queue-patterns"><a class="header" href="#message-queue-patterns">Message Queue Patterns</a></h3>
+<pre><code class="language-javascript">// Message queue patterns for system design
+const messageQueuePatterns = {
+  pointToPoint: {
+    description: "One producer sends to one consumer",
+    useCase: "Task processing, command handling",
+    implementation: `
+class PointToPointQueue {
+  constructor() {
+    this.queue = [];
+    this.processing = false;
+  }
+  
+  async send(message) {
+    this.queue.push(message);
+    this.process();
+  }
+  
+  async process() {
+    if (this.processing || this.queue.length === 0) return;
+    
+    this.processing = true;
+    
+    while (this.queue.length &gt; 0) {
+      const message = this.queue.shift();
+      await this.handleMessage(message);
+    }
+    
+    this.processing = false;
+  }
+}
+    `
+  },
+  
+  publishSubscribe: {
+    description: "One publisher sends to multiple subscribers",
+    useCase: "Event notifications, data distribution",
+    implementation: `
+class PubSubSystem {
+  constructor() {
+    this.subscribers = new Map();
+  }
+  
+  subscribe(topic, callback) {
+    if (!this.subscribers.has(topic)) {
+      this.subscribers.set(topic, []);
+    }
+    this.subscribers.get(topic).push(callback);
+  }
+  
+  publish(topic, message) {
+    const callbacks = this.subscribers.get(topic) || [];
+    callbacks.forEach(callback =&gt; callback(message));
+  }
+}
+    `
+  }
+};
+</code></pre>
+<h3 id="event-driven-architecture"><a class="header" href="#event-driven-architecture">Event-Driven Architecture</a></h3>
+<pre><code class="language-mermaid">graph TD
+    A[User Service] --&gt; B[Event Bus]
+    C[Order Service] --&gt; B
+    D[Payment Service] --&gt; B
+    D --&gt; E[Payment Events]
+    E --&gt; B
+    B --&gt; F[Notification Service]
+    B --&gt; G[Analytics Service]
+    B --&gt; H[Inventory Service]
+    
+    I[Event Store] --&gt; B
+    B --&gt; I
+</code></pre>
+<h2 id="-api-design-patterns"><a class="header" href="#-api-design-patterns">🌐 API Design Patterns</a></h2>
+<h3 id="restful-api-design"><a class="header" href="#restful-api-design">RESTful API Design</a></h3>
+<pre><code class="language-javascript">// RESTful API design principles
+const restfulDesign = {
+  principles: {
+    resources: {
+      description: "Everything is a resource with unique identifier",
+      examples: {
+        users: "/api/users",
+        user: "/api/users/{id}",
+        userOrders: "/api/users/{id}/orders"
+      }
+    },
+    
+    methods: {
+      GET: "Retrieve resource representation",
+      POST: "Create new resource",
+      PUT: "Update entire resource",
+      PATCH: "Partial resource update",
+      DELETE: "Remove resource"
+    },
+    
+    statusCodes: {
+      200: "OK - Request successful",
+      201: "Created - Resource created",
+      204: "No Content - Resource deleted",
+      400: "Bad Request - Invalid input",
+      401: "Unauthorized - Authentication required",
+      403: "Forbidden - Insufficient permissions",
+      404: "Not Found - Resource doesn't exist",
+      500: "Internal Server Error - Server error"
+    }
+  },
+  
+  bestPractices: {
+    versioning: "Use version in URL (/api/v1/users) or headers",
+    pagination: "Include pagination metadata in responses",
+    filtering: "Support query parameters for filtering",
+    sorting: "Support sort parameters",
+    errorHandling: "Consistent error response format",
+    documentation: "Comprehensive API documentation"
+  }
+};
+</code></pre>
+<h3 id="graphql-vs-rest"><a class="header" href="#graphql-vs-rest">GraphQL vs REST</a></h3>
+<pre><code class="language-javascript">// GraphQL vs REST comparison
+const apiComparison = {
+  rest: {
+    requestType: "Multiple endpoints for different resources",
+    dataFetching: "Multiple HTTP requests for related data",
+    overfetching: "Common - receive more data than needed",
+    underfetching: "Common - need additional requests",
+    versioning: "URL versioning required",
+    caching: "HTTP caching built-in",
+    learningCurve: "Lower"
+  },
+  
+  graphql: {
+    requestType: "Single endpoint with flexible queries",
+    dataFetching: "Single request for related data",
+    overfetching: "Eliminated - request exactly what's needed",
+    underfetching: "Eliminated - get all data in one request",
+    versioning: "Schema evolution without versioning",
+    caching: "Requires custom implementation",
+    learningCurve: "Higher"
+  }
+};
+</code></pre>
+<h2 id="-security-design-patterns"><a class="header" href="#-security-design-patterns">🔒 Security Design Patterns</a></h2>
+<h3 id="authentication--authorization"><a class="header" href="#authentication--authorization">Authentication &amp; Authorization</a></h3>
+<pre><code class="language-javascript">// Security patterns for system design
+const securityPatterns = {
+  authentication: {
+    jwt: {
+      description: "Stateless authentication with JSON Web Tokens",
+      implementation: `
+class JWTAuthService {
+  generateToken(user) {
+    return jwt.sign(
+      { userId: user.id, role: user.role },
+      process.env.JWT_SECRET,
+      { expiresIn: '24h' }
+    );
+  }
+  
+  verifyToken(token) {
+    return jwt.verify(token, process.env.JWT_SECRET);
+  }
+}
+      `,
+      pros: ["Stateless", "Scalable", "Cross-domain"],
+      cons: ["Token revocation difficult", "Size limitations"]
+    },
+    
+    oauth2: {
+      description: "Delegated authorization for third-party access",
+      flow: "Authorization code flow for web applications",
+      pros: ["Standardized", "Secure", "User control"],
+      cons: ["Complex implementation", "Multiple round trips"]
+    }
+  },
+  
+  authorization: {
+    rbac: {
+      description: "Role-Based Access Control",
+      implementation: `
+class RBACService {
+  constructor() {
+    this.permissions = new Map();
+    this.setupPermissions();
+  }
+  
+  hasPermission(user, resource, action) {
+    const userRoles = user.roles;
+    
+    return userRoles.some(role =&gt; 
+      this.permissions.get(role)?.has(\`\${resource}:\${action}\`)
+    );
+  }
+}
+      `
+    },
+    
+    abac: {
+      description: "Attribute-Based Access Control",
+      factors: ["User attributes", "Resource attributes", "Environmental factors"],
+      pros: ["Fine-grained control", "Dynamic permissions"],
+      cons: ["Complexity", "Performance overhead"]
+    }
+  }
+};
+</code></pre>
+<h3 id="security-best-practices-3"><a class="header" href="#security-best-practices-3">Security Best Practices</a></h3>
+<pre><code class="language-javascript">// Security best practices checklist
+const securityChecklist = {
+  inputValidation: {
+    description: "Validate all user inputs",
+    practices: [
+      "Use parameterized queries for database access",
+      "Validate input format and length",
+      "Sanitize HTML output",
+      "Use allow-lists for file uploads"
+    ]
+  },
+  
+  encryption: {
+    description: "Encrypt sensitive data",
+    practices: [
+      "Use TLS for all communications",
+      "Encrypt data at rest",
+      "Use strong encryption algorithms",
+      "Proper key management"
+    ]
+  },
+  
+  rateLimiting: {
+    description: "Prevent abuse and attacks",
+    implementation: `
+class RateLimiter {
+  constructor(maxRequests, windowMs) {
+    this.maxRequests = maxRequests;
+    this.windowMs = windowMs;
+    this.requests = new Map();
+  }
+  
+  isAllowed(clientId) {
+    const now = Date.now();
+    const windowStart = now - this.windowMs;
+    
+    if (!this.requests.has(clientId)) {
+      this.requests.set(clientId, []);
+    }
+    
+    const clientRequests = this.requests.get(clientId);
+    
+    // Remove old requests
+    const validRequests = clientRequests.filter(time =&gt; time &gt; windowStart);
+    this.requests.set(clientId, validRequests);
+    
+    if (validRequests.length &gt;= this.maxRequests) {
+      return false;
+    }
+    
+    validRequests.push(now);
+    return true;
+  }
+}
+    `
+  }
+};
+</code></pre>
+<h2 id="-performance-optimization-4"><a class="header" href="#-performance-optimization-4">📈 Performance Optimization</a></h2>
+<h3 id="performance-metrics"><a class="header" href="#performance-metrics">Performance Metrics</a></h3>
+<pre><code class="language-javascript">// Key performance indicators
+const performanceMetrics = {
+  latency: {
+    description: "Time to respond to a single request",
+    targets: {
+      excellent: "&lt; 100ms",
+      good: "100-300ms",
+      acceptable: "300-1000ms",
+      poor: "&gt; 1000ms"
+    }
+  },
+  
+  throughput: {
+    description: "Requests processed per second",
+    calculation: "Total requests / Total time",
+    optimization: "Horizontal scaling, caching, database optimization"
+  },
+  
+  availability: {
+    description: "Percentage of time system is operational",
+    targets: {
+      highAvailability: "99.9% (8.76 hours downtime/year)",
+      critical: "99.99% (52.56 minutes downtime/year)",
+      fiveNines: "99.999% (5.26 minutes downtime/year)"
+    }
+  },
+  
+  scalability: {
+    description: "Ability to handle increased load",
+    measurement: "Performance under different load levels",
+    strategies: ["Horizontal scaling", "Caching", "Database optimization"]
+  }
+};
+</code></pre>
+<h3 id="optimization-techniques"><a class="header" href="#optimization-techniques">Optimization Techniques</a></h3>
+<pre><code class="language-javascript">// Performance optimization strategies
+const optimizationTechniques = {
+  database: {
+    indexing: "Create appropriate indexes for query patterns",
+    queryOptimization: "Use EXPLAIN to analyze and optimize queries",
+    connectionPooling: "Reuse database connections to reduce overhead",
+    readReplicas: "Distribute read queries across replicas"
+  },
+  
+  application: {
+    caching: "Implement multi-level caching strategy",
+    asyncProcessing: "Use message queues for long-running tasks",
+    codeOptimization: "Profile and optimize bottlenecks",
+    resourcePooling: "Pool expensive resources like database connections"
+  },
+  
+  infrastructure: {
+    cdn: "Use CDN for static content delivery",
+    loadBalancing: "Distribute traffic across multiple servers",
+    compression: "Compress responses to reduce bandwidth",
+    monitoring: "Implement comprehensive monitoring and alerting"
+  }
+};
+</code></pre>
+<hr>
+<p><strong>System Design Section Complete!</strong> 🎉</p>
+<p>You now have a comprehensive understanding of:</p>
+<ul>
+<li><strong>Design Principles</strong>: SOLID, separation of concerns, DRY</li>
+<li><strong>Scalability Patterns</strong>: Horizontal/vertical scaling, load balancing</li>
+<li><strong>Database Design</strong>: Selection criteria, scaling patterns</li>
+<li><strong>Caching Strategies</strong>: Multiple patterns and invalidation</li>
+<li><strong>API Design</strong>: RESTful principles and GraphQL</li>
+<li><strong>Security Patterns</strong>: Authentication, authorization, best practices</li>
+</ul>
+<p><strong>Next Up</strong>: Learn about Advanced Topics! 🚀</p>
 
                     </main>
 
