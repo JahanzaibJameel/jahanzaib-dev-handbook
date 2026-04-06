@@ -1,0 +1,23 @@
+[book]
+title = "Jahanzaib Dev Handbook"
+authors = ["Muhammad Jahanzaib"]
+language = "en"
+src = "src"
+
+[build]
+build-dir = "book"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "coal"
+git-repository-url = "https://github.com/yourusername/jahanzaib-dev-handbook"
+edit-url-template = "https://github.com/yourusername/jahanzaib-dev-handbook/edit/main/{path}"
+site-url = "https://yourusername.github.io/jahanzaib-dev-handbook"
+
+[output.html.search]
+enable = true
+limit-results = 30
+
+[output.html.fold]
+enable = true
+level = 2

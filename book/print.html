@@ -1,0 +1,3610 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Jahanzaib Dev Handbook</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-2459343d.css">
+        <link rel="stylesheet" href="css/chrome-ae938929.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "coal";
+            window.path_to_searchindex_js = "searchindex-0452ccd7.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-fa16be00.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Jahanzaib Dev Handbook</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+                        <a href="https://github.com/yourusername/jahanzaib-dev-handbook" title="Git repository" aria-label="Git repository">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>Welcome to the <strong>Jahanzaib Dev Handbook</strong> - your comprehensive guide from beginner to senior developer.</p>
+<h2 id="-what-this-handbook-covers"><a class="header" href="#-what-this-handbook-covers">🎯 What This Handbook Covers</a></h2>
+<p>This handbook is designed to take you on a complete journey from web development fundamentals to advanced full-stack applications, mobile development, and AI integration.</p>
+<h3 id="core-technologies-youll-master"><a class="header" href="#core-technologies-youll-master">Core Technologies You’ll Master</a></h3>
+<ul>
+<li><strong>React Native</strong> - Build mobile apps for iOS and Android</li>
+<li><strong>Next.js</strong> - Modern React framework for production-grade web apps</li>
+<li><strong>Node.js</strong> - Server-side JavaScript runtime</li>
+<li><strong>ChatGPT/AI Integration</strong> - Build intelligent applications</li>
+<li><strong>MongoDB</strong> - NoSQL database for modern applications</li>
+<li><strong>Testing &amp; DevOps</strong> - Professional development practices</li>
+</ul>
+<h2 id="-what-makes-this-different"><a class="header" href="#-what-makes-this-different">🚀 What Makes This Different</a></h2>
+<h3 id="real-world-projects"><a class="header" href="#real-world-projects">Real-World Projects</a></h3>
+<p>Every concept is backed by practical, production-ready projects that you can build and deploy.</p>
+<h3 id="progressive-learning-path"><a class="header" href="#progressive-learning-path">Progressive Learning Path</a></h3>
+<p>Start with basics and gradually advance to complex topics - no overwhelming jumps.</p>
+<h3 id="industry-best-practices"><a class="header" href="#industry-best-practices">Industry Best Practices</a></h3>
+<p>Learn not just the “how” but the “why” behind architectural decisions and patterns.</p>
+<h3 id="career-focused-content"><a class="header" href="#career-focused-content">Career-Focused Content</a></h3>
+<p>Beyond code - learn freelancing, personal branding, and interview preparation.</p>
+<h2 id="-handbook-structure"><a class="header" href="#-handbook-structure">📚 Handbook Structure</a></h2>
+<p>This handbook is organized into logical sections:</p>
+<ol>
+<li><strong>React Native</strong> - Mobile app development</li>
+<li><strong>AI Development</strong> - Modern AI integration and ChatGPT applications</li>
+<li><strong>Full-Stack Development</strong> - Complete web applications</li>
+<li><strong>Testing</strong> - Quality assurance practices</li>
+<li><strong>DevOps</strong> - Deployment and CI/CD</li>
+<li><strong>Projects</strong> - Portfolio-worthy applications</li>
+<li><strong>Career Development</strong> - Professional growth strategies</li>
+</ol>
+<h2 id="-who-this-is-for"><a class="header" href="#-who-this-is-for">🎓 Who This Is For</a></h2>
+<h3 id="beginners"><a class="header" href="#beginners">Beginners</a></h3>
+<p>If you’re new to development, start with the roadmap and follow the structured learning path.</p>
+<h3 id="intermediate-developers"><a class="header" href="#intermediate-developers">Intermediate Developers</a></h3>
+<p>Jump to specific sections to fill knowledge gaps or learn new technologies.</p>
+<h3 id="advanced-developers"><a class="header" href="#advanced-developers">Advanced Developers</a></h3>
+<p>Use the projects and system design sections to enhance your portfolio and skills.</p>
+<h2 id="-how-to-get-started"><a class="header" href="#-how-to-get-started">💡 How to Get Started</a></h2>
+<ol>
+<li>Read the <a href="#12-month-developer-roadmap">Roadmap</a> to understand the learning path</li>
+<li>Check <a href="#how-to-use-this-handbook">How to Use</a> for best practices</li>
+<li>Start with your first technology section</li>
+<li>Build projects as you learn</li>
+<li>Apply career strategies to grow professionally</li>
+</ol>
+<h2 id="-prerequisites"><a class="header" href="#-prerequisites">🔧 Prerequisites</a></h2>
+<ul>
+<li>Basic computer literacy</li>
+<li>Problem-solving mindset</li>
+<li>Willingness to learn and experiment</li>
+<li>Computer with internet access</li>
+</ul>
+<p>No prior programming experience required - we’ll guide you from zero to hero!</p>
+<hr>
+<p><strong>Ready to start your journey?</strong> Let’s build something amazing together! 🚀</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="how-to-use-this-handbook"><a class="header" href="#how-to-use-this-handbook">How to Use This Handbook</a></h1>
+<p>This handbook is designed to be your complete learning companion. Here’s how to make the most of it.</p>
+<h2 id="-learning-strategies"><a class="header" href="#-learning-strategies">🎯 Learning Strategies</a></h2>
+<h3 id="for-beginners"><a class="header" href="#for-beginners">For Beginners</a></h3>
+<ol>
+<li><strong>Follow the Roadmap</strong>: Start with the <a href="#12-month-developer-roadmap">Roadmap</a> and follow the 12-month plan</li>
+<li><strong>Sequential Learning</strong>: Complete sections in order - each builds on previous knowledge</li>
+<li><strong>Hands-On Practice</strong>: Code along with every example</li>
+<li><strong>Project-Based Learning</strong>: Build the suggested projects after each section</li>
+</ol>
+<h3 id="for-intermediate-developers"><a class="header" href="#for-intermediate-developers">For Intermediate Developers</a></h3>
+<ol>
+<li><strong>Modular Learning</strong>: Jump to sections that fill your knowledge gaps</li>
+<li><strong>Cross-Reference</strong>: Connect concepts across different technologies</li>
+<li><strong>Advanced Projects</strong>: Focus on the complex project implementations</li>
+<li><strong>Best Practices</strong>: Pay attention to architectural patterns and design decisions</li>
+</ol>
+<h3 id="for-advanced-developers"><a class="header" href="#for-advanced-developers">For Advanced Developers</a></h3>
+<ol>
+<li><strong>Reference Guide</strong>: Use as a quick reference for implementations</li>
+<li><strong>System Design</strong>: Study the architecture decisions in project sections</li>
+<li><strong>Career Strategies</strong>: Implement the freelancing and branding techniques</li>
+<li><strong>Teaching</strong>: Use concepts to mentor junior developers</li>
+</ol>
+<h2 id="-reading-guidelines"><a class="header" href="#-reading-guidelines">📖 Reading Guidelines</a></h2>
+<h3 id="code-examples"><a class="header" href="#code-examples">Code Examples</a></h3>
+<ul>
+<li><strong>Read First</strong>: Understand the concept before coding</li>
+<li><strong>Type It Out</strong>: Don’t copy-paste - type every line</li>
+<li><strong>Experiment</strong>: Modify examples to see what happens</li>
+<li><strong>Break It</strong>: Try to break the code and fix it</li>
+</ul>
+<h3 id="project-sections"><a class="header" href="#project-sections">Project Sections</a></h3>
+<p>Each project includes:</p>
+<ul>
+<li><strong>Overview</strong>: What we’re building and why</li>
+<li><strong>Features</strong>: Complete feature list</li>
+<li><strong>Tech Stack</strong>: Technologies used</li>
+<li><strong>Folder Structure</strong>: Project organization</li>
+<li><strong>Implementation</strong>: Step-by-step guide</li>
+<li><strong>Deployment</strong>: How to go live</li>
+</ul>
+<h3 id="diagrams-and-visuals"><a class="header" href="#diagrams-and-visuals">Diagrams and Visuals</a></h3>
+<ul>
+<li><strong>Study Carefully</strong>: Visual aids show complex concepts</li>
+<li><strong>Recreate</strong>: Draw your own versions to reinforce learning</li>
+<li><strong>Reference</strong>: Come back when implementing similar patterns</li>
+</ul>
+<h2 id="-practical-tips"><a class="header" href="#-practical-tips">🛠️ Practical Tips</a></h2>
+<h3 id="environment-setup"><a class="header" href="#environment-setup">Environment Setup</a></h3>
+<ol>
+<li><strong>Consistent Setup</strong>: Use the same tools and versions as shown</li>
+<li><strong>Version Control</strong>: Git every project from day one</li>
+<li><strong>Documentation</strong>: Keep your own notes and code comments</li>
+<li><strong>Backup</strong>: Use GitHub or similar for all projects</li>
+</ol>
+<h3 id="learning-schedule"><a class="header" href="#learning-schedule">Learning Schedule</a></h3>
+<h4 id="daily-routine-1-2-hours"><a class="header" href="#daily-routine-1-2-hours">Daily Routine (1-2 hours)</a></h4>
+<ul>
+<li>30 min: New concepts</li>
+<li>45 min: Hands-on coding</li>
+<li>15 min: Review and documentation</li>
+</ul>
+<h4 id="weekly-schedule"><a class="header" href="#weekly-schedule">Weekly Schedule</a></h4>
+<ul>
+<li>Monday-Wednesday: New content</li>
+<li>Thursday: Project work</li>
+<li>Friday: Review and debugging</li>
+<li>Weekend: Personal projects and exploration</li>
+</ul>
+<h3 id="common-pitfalls-to-avoid"><a class="header" href="#common-pitfalls-to-avoid">Common Pitfalls to Avoid</a></h3>
+<p>❌ <strong>Don’t</strong>:</p>
+<ul>
+<li>Skip fundamentals</li>
+<li>Copy-paste without understanding</li>
+<li>Jump between topics randomly</li>
+<li>Ignore error messages</li>
+<li>Skip testing</li>
+</ul>
+<p>✅ <strong>Do</strong>:</p>
+<ul>
+<li>Master basics first</li>
+<li>Type every line of code</li>
+<li>Follow the learning path</li>
+<li>Debug thoroughly</li>
+<li>Test everything</li>
+</ul>
+<h2 id="-community-and-support"><a class="header" href="#-community-and-support">🤝 Community and Support</a></h2>
+<h3 id="getting-help"><a class="header" href="#getting-help">Getting Help</a></h3>
+<ol>
+<li><strong>Documentation First</strong>: Check official docs</li>
+<li><strong>Search</strong>: Google errors and concepts</li>
+<li><strong>Community</strong>: Join relevant forums and groups</li>
+<li><strong>Mentorship</strong>: Find experienced developers</li>
+</ol>
+<h3 id="contributing"><a class="header" href="#contributing">Contributing</a></h3>
+<p>This is a living handbook. You can:</p>
+<ul>
+<li>Report errors or typos</li>
+<li>Suggest improvements</li>
+<li>Share your project implementations</li>
+<li>Help other learners</li>
+</ul>
+<h2 id="-tracking-progress"><a class="header" href="#-tracking-progress">📈 Tracking Progress</a></h2>
+<h3 id="skill-checklist"><a class="header" href="#skill-checklist">Skill Checklist</a></h3>
+<p>For each section, track your mastery:</p>
+<ul>
+<li><input disabled="" type="checkbox"> Can explain the concept</li>
+<li><input disabled="" type="checkbox"> Can implement from scratch</li>
+<li><input disabled="" type="checkbox"> Can debug common issues</li>
+<li><input disabled="" type="checkbox"> Can teach others</li>
+<li><input disabled="" type="checkbox"> Can apply in real projects</li>
+</ul>
+<h3 id="portfolio-building"><a class="header" href="#portfolio-building">Portfolio Building</a></h3>
+<p>Every completed project should:</p>
+<ul>
+<li>Be deployed live</li>
+<li>Have clean, documented code</li>
+<li>Include a README</li>
+<li>Be on GitHub</li>
+<li>Be listed on your resume</li>
+</ul>
+<h2 id="-success-metrics"><a class="header" href="#-success-metrics">🎯 Success Metrics</a></h2>
+<h3 id="technical-skills"><a class="header" href="#technical-skills">Technical Skills</a></h3>
+<ul>
+<li>✅ Can build full applications</li>
+<li>✅ Understand architecture patterns</li>
+<li>✅ Can debug complex issues</li>
+<li>✅ Write clean, maintainable code</li>
+</ul>
+<h3 id="professional-skills"><a class="header" href="#professional-skills">Professional Skills</a></h3>
+<ul>
+<li>✅ Can communicate technical concepts</li>
+<li>✅ Can estimate project timelines</li>
+<li>✅ Can work with clients/team</li>
+<li>✅ Can market your skills</li>
+</ul>
+<h2 id="-continuous-learning"><a class="header" href="#-continuous-learning">🔄 Continuous Learning</a></h2>
+<p>Technology changes constantly. This handbook teaches you:</p>
+<ul>
+<li><strong>How to Learn</strong>: Methods for picking up new technologies</li>
+<li><strong>Problem Solving</strong>: Approaches to unknown challenges</li>
+<li><strong>Adaptability</strong>: Skills that work across technologies</li>
+<li><strong>Growth Mindset</strong>: Embracing continuous improvement</li>
+</ul>
+<hr>
+<p><strong>Remember</strong>: Learning to code is a marathon, not a sprint. Stay consistent, stay curious, and keep building! 🚀</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="12-month-developer-roadmap"><a class="header" href="#12-month-developer-roadmap">12-Month Developer Roadmap</a></h1>
+<p>This roadmap takes you from complete beginner to job-ready full-stack developer with AI integration skills.</p>
+<h2 id="-month-by-month-breakdown"><a class="header" href="#-month-by-month-breakdown">📅 Month-by-Month Breakdown</a></h2>
+<h3 id="months-1-3-foundation-fundamentals"><a class="header" href="#months-1-3-foundation-fundamentals">Months 1-3: Foundation Fundamentals</a></h3>
+<p><strong>Goal</strong>: Build strong programming fundamentals</p>
+<h4 id="month-1-web-basics"><a class="header" href="#month-1-web-basics">Month 1: Web Basics</a></h4>
+<ul>
+<li><strong>HTML5</strong>: Semantic markup, forms, accessibility</li>
+<li><strong>CSS3</strong>: Layouts, Flexbox, Grid, responsive design</li>
+<li><strong>JavaScript Basics</strong>: Variables, functions, DOM manipulation</li>
+<li><strong>Project</strong>: Personal portfolio website</li>
+<li><strong>Skills</strong>: Structure web pages, style professionally, add interactivity</li>
+</ul>
+<h4 id="month-2-javascript-mastery"><a class="header" href="#month-2-javascript-mastery">Month 2: JavaScript Mastery</a></h4>
+<ul>
+<li><strong>Advanced JS</strong>: Arrays, objects, async/await, promises</li>
+<li><strong>ES6+ Features</strong>: Destructuring, spread, modules</li>
+<li><strong>DOM &amp; Events</strong>: Event handling, form validation</li>
+<li><strong>Project</strong>: Interactive web application</li>
+<li><strong>Skills</strong>: Write clean JavaScript, handle async operations</li>
+</ul>
+<h4 id="month-3-version-control--tools"><a class="header" href="#month-3-version-control--tools">Month 3: Version Control &amp; Tools</a></h4>
+<ul>
+<li><strong>Git &amp; GitHub</strong>: Branching, merging, pull requests</li>
+<li><strong>Terminal Basics</strong>: Command line operations</li>
+<li><strong>Code Quality</strong>: Linting, formatting, debugging</li>
+<li><strong>Project</strong>: Open source contribution</li>
+<li><strong>Skills</strong>: Professional development workflow</li>
+</ul>
+<h3 id="months-4-6-mobile-development-with-react-native"><a class="header" href="#months-4-6-mobile-development-with-react-native">Months 4-6: Mobile Development with React Native</a></h3>
+<p><strong>Goal</strong>: Build cross-platform mobile applications</p>
+<h4 id="month-4-react-native-fundamentals"><a class="header" href="#month-4-react-native-fundamentals">Month 4: React Native Fundamentals</a></h4>
+<ul>
+<li><strong>Setup</strong>: Environment, Expo vs CLI</li>
+<li><strong>Components</strong>: Core components, custom components</li>
+<li><strong>Styling</strong>: StyleSheet, responsive design</li>
+<li><strong>Project</strong>: Simple calculator app</li>
+<li><strong>Skills</strong>: Build basic mobile interfaces</li>
+</ul>
+<h4 id="month-5-advanced-react-native"><a class="header" href="#month-5-advanced-react-native">Month 5: Advanced React Native</a></h4>
+<ul>
+<li><strong>Navigation</strong>: React Navigation setup</li>
+<li><strong>State Management</strong>: Context API, Redux basics</li>
+<li><strong>API Integration</strong>: Fetch, Axios, async operations</li>
+<li><strong>Project</strong>: Weather app with API integration</li>
+<li><strong>Skills</strong>: Complex app architecture, data flow</li>
+</ul>
+<h4 id="month-6-production-react-native"><a class="header" href="#month-6-production-react-native">Month 6: Production React Native</a></h4>
+<ul>
+<li><strong>Storage</strong>: AsyncStorage, secure storage</li>
+<li><strong>Performance</strong>: Optimization techniques</li>
+<li><strong>Testing</strong>: Jest, React Native Testing Library</li>
+<li><strong>Project</strong>: Full-featured mobile app</li>
+<li><strong>Skills</strong>: Production-ready mobile development</li>
+</ul>
+<h3 id="months-7-9-full-stack-web-development"><a class="header" href="#months-7-9-full-stack-web-development">Months 7-9: Full-Stack Web Development</a></h3>
+<p><strong>Goal</strong>: Build complete web applications</p>
+<h4 id="month-7-modern-frontend"><a class="header" href="#month-7-modern-frontend">Month 7: Modern Frontend</a></h4>
+<ul>
+<li><strong>React Fundamentals</strong>: Components, hooks, state</li>
+<li><strong>Next.js</strong>: Routing, SSR, API routes</li>
+<li><strong>UI/UX</strong>: Design systems, accessibility</li>
+<li><strong>Project</strong>: Modern web application</li>
+<li><strong>Skills</strong>: Professional frontend development</li>
+</ul>
+<h4 id="month-8-backend-development"><a class="header" href="#month-8-backend-development">Month 8: Backend Development</a></h4>
+<ul>
+<li><strong>Node.js</strong>: Express, middleware, routing</li>
+<li><strong>APIs</strong>: REST, GraphQL basics</li>
+<li><strong>Authentication</strong>: JWT, OAuth, sessions</li>
+<li><strong>Project</strong>: Complete API backend</li>
+<li><strong>Skills</strong>: Server-side development, security</li>
+</ul>
+<h4 id="month-9-database--deployment"><a class="header" href="#month-9-database--deployment">Month 9: Database &amp; Deployment</a></h4>
+<ul>
+<li><strong>MongoDB</strong>: Schema design, CRUD operations</li>
+<li><strong>Full Integration</strong>: Connect frontend to backend</li>
+<li><strong>Deployment</strong>: Vercel, Render, environment management</li>
+<li><strong>Project</strong>: Deployed full-stack application</li>
+<li><strong>Skills</strong>: End-to-end development</li>
+</ul>
+<h3 id="months-10-12-ai-integration--career"><a class="header" href="#months-10-12-ai-integration--career">Months 10-12: AI Integration &amp; Career</a></h3>
+<p><strong>Goal</strong>: Build AI-powered applications and launch career</p>
+<h4 id="month-10-ai-development"><a class="header" href="#month-10-ai-development">Month 10: AI Development</a></h4>
+<ul>
+<li><strong>Prompt Engineering</strong>: Effective AI prompting</li>
+<li><strong>ChatGPT API</strong>: Integration, best practices</li>
+<li><strong>AI Safety</strong>: Ethics, limitations, security</li>
+<li><strong>Project</strong>: AI-powered application</li>
+<li><strong>Skills</strong>: Modern AI integration</li>
+</ul>
+<h4 id="month-11-advanced-projects"><a class="header" href="#month-11-advanced-projects">Month 11: Advanced Projects</a></h4>
+<ul>
+<li><strong>System Design</strong>: Architecture patterns</li>
+<li><strong>Testing</strong>: Unit, integration, E2E testing</li>
+<li><strong>Performance</strong>: Optimization, monitoring</li>
+<li><strong>Project</strong>: Portfolio-worthy application</li>
+<li><strong>Skills</strong>: Production-grade development</li>
+</ul>
+<h4 id="month-12-career-launch"><a class="header" href="#month-12-career-launch">Month 12: Career Launch</a></h4>
+<ul>
+<li><strong>Portfolio</strong>: Curate and showcase projects</li>
+<li><strong>Freelancing</strong>: Client acquisition, pricing</li>
+<li><strong>Interview Prep</strong>: Technical and behavioral</li>
+<li><strong>Personal Branding</strong>: Online presence</li>
+<li><strong>Skills</strong>: Professional career development</li>
+</ul>
+<h2 id="-key-milestones"><a class="header" href="#-key-milestones">🎯 Key Milestones</a></h2>
+<h3 id="milestone-1-foundation-complete-month-3"><a class="header" href="#milestone-1-foundation-complete-month-3">Milestone 1: Foundation Complete (Month 3)</a></h3>
+<p>✅ Can build static websites<br>✅ Understand JavaScript fundamentals<br>✅ Use Git professionally</p>
+<h3 id="milestone-2-mobile-developer-month-6"><a class="header" href="#milestone-2-mobile-developer-month-6">Milestone 2: Mobile Developer (Month 6)</a></h3>
+<p>✅ Can build cross-platform mobile apps<br>✅ Understand mobile app architecture<br>✅ Can deploy to app stores</p>
+<h3 id="milestone-3-full-stack-developer-month-9"><a class="header" href="#milestone-3-full-stack-developer-month-9">Milestone 3: Full-Stack Developer (Month 9)</a></h3>
+<p>✅ Can build complete web applications<br>✅ Understand database design<br>✅ Can deploy production applications</p>
+<h3 id="milestone-4-ai-enhanced-developer-month-12"><a class="header" href="#milestone-4-ai-enhanced-developer-month-12">Milestone 4: AI-Enhanced Developer (Month 12)</a></h3>
+<p>✅ Can integrate AI into applications<br>✅ Have professional portfolio<br>✅ Ready for career opportunities</p>
+<h2 id="-weekly-time-commitment"><a class="header" href="#-weekly-time-commitment">📊 Weekly Time Commitment</a></h2>
+<h3 id="recommended-schedule"><a class="header" href="#recommended-schedule">Recommended Schedule</a></h3>
+<ul>
+<li><strong>Weekdays</strong>: 1-2 hours daily</li>
+<li><strong>Weekends</strong>: 3-4 hours total</li>
+<li><strong>Total</strong>: 8-12 hours per week</li>
+</ul>
+<h3 id="daily-breakdown"><a class="header" href="#daily-breakdown">Daily Breakdown</a></h3>
+<ul>
+<li><strong>30 min</strong>: Learning new concepts</li>
+<li><strong>45 min</strong>: Hands-on coding</li>
+<li><strong>15 min</strong>: Review and documentation</li>
+</ul>
+<h2 id="-technology-stack-timeline"><a class="header" href="#-technology-stack-timeline">🛠️ Technology Stack Timeline</a></h2>
+<pre><code class="language-mermaid">graph TD
+    A[HTML/CSS/JS] --&gt; B[Git/GitHub]
+    B --&gt; C[React Native]
+    C --&gt; D[React/Next.js]
+    D --&gt; E[Node.js/Express]
+    E --&gt; F[MongoDB]
+    F --&gt; G[AI Integration]
+    G --&gt; H[Production Deployment]
+</code></pre>
+<h2 id="-skill-progression"><a class="header" href="#-skill-progression">📈 Skill Progression</a></h2>
+<h3 id="technical-skills-1"><a class="header" href="#technical-skills-1">Technical Skills</a></h3>
+<ol>
+<li><strong>Frontend</strong>: HTML → CSS → JavaScript → React → Next.js</li>
+<li><strong>Mobile</strong>: React Native → Navigation → State → Testing</li>
+<li><strong>Backend</strong>: Node.js → Express → APIs → Database</li>
+<li><strong>AI</strong>: Prompting → Integration → Applications → Ethics</li>
+</ol>
+<h3 id="professional-skills-1"><a class="header" href="#professional-skills-1">Professional Skills</a></h3>
+<ol>
+<li><strong>Development</strong>: Git → Testing → Debugging → Documentation</li>
+<li><strong>Architecture</strong>: Components → State → Performance → Security</li>
+<li><strong>Career</strong>: Portfolio → Networking → Freelancing → Branding</li>
+</ol>
+<h2 id="-success-indicators"><a class="header" href="#-success-indicators">🎯 Success Indicators</a></h2>
+<h3 id="monthly-checkpoints"><a class="header" href="#monthly-checkpoints">Monthly Checkpoints</a></h3>
+<ul>
+<li><input disabled="" type="checkbox"> Can explain concepts clearly</li>
+<li><input disabled="" type="checkbox"> Built the monthly project</li>
+<li><input disabled="" type="checkbox"> Code is on GitHub</li>
+<li><input disabled="" type="checkbox"> Ready for next month’s topics</li>
+</ul>
+<h3 id="final-success-metrics"><a class="header" href="#final-success-metrics">Final Success Metrics</a></h3>
+<ul>
+<li><input disabled="" type="checkbox"> 4+ portfolio projects deployed</li>
+<li><input disabled="" type="checkbox"> Can build full applications independently</li>
+<li><input disabled="" type="checkbox"> Understand system design principles</li>
+<li><input disabled="" type="checkbox"> Ready for freelance/employment opportunities</li>
+</ul>
+<h2 id="-adaptation-guidelines"><a class="header" href="#-adaptation-guidelines">🔄 Adaptation Guidelines</a></h2>
+<h3 id="if-youre-behind"><a class="header" href="#if-youre-behind">If You’re Behind</a></h3>
+<ul>
+<li>Focus on core concepts, not every detail</li>
+<li>Skip optional projects if needed</li>
+<li>Extend timeline, don’t rush fundamentals</li>
+</ul>
+<h3 id="if-youre-ahead"><a class="header" href="#if-youre-ahead">If You’re Ahead</a></h3>
+<ul>
+<li>Explore advanced topics</li>
+<li>Build additional projects</li>
+<li>Start freelancing with basic skills</li>
+<li>Contribute to open source</li>
+</ul>
+<h3 id="if-youre-stuck"><a class="header" href="#if-youre-stuck">If You’re Stuck</a></h3>
+<ul>
+<li>Review previous months’ content</li>
+<li>Join developer communities</li>
+<li>Find a mentor or study partner</li>
+<li>Take breaks, avoid burnout</li>
+</ul>
+<hr>
+<p><strong>Remember</strong>: This is a guide, not a rigid rulebook. Adjust based on your learning style, goals, and available time. The key is consistency and practical application! 🚀</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="introduction-to-react-native"><a class="header" href="#introduction-to-react-native">Introduction to React Native</a></h1>
+<p>React Native is a framework for building native mobile apps using JavaScript and React. It lets you write real, natively rendered mobile applications for iOS and Android - all from a single codebase.</p>
+<h2 id="-what-is-react-native"><a class="header" href="#-what-is-react-native">🎯 What is React Native?</a></h2>
+<p>React Native is:</p>
+<ul>
+<li><strong>Cross-platform</strong>: One codebase for iOS and Android</li>
+<li><strong>Native Performance</strong>: Uses actual native UI components</li>
+<li><strong>JavaScript-based</strong>: Use your web development skills</li>
+<li><strong>React-powered</strong>: Component-based architecture</li>
+<li><strong>Facebook-backed</strong>: Strong community and support</li>
+</ul>
+<h2 id="-why-react-native"><a class="header" href="#-why-react-native">🚀 Why React Native?</a></h2>
+<h3 id="advantages"><a class="header" href="#advantages">Advantages</a></h3>
+<ul>
+<li><strong>Single Codebase</strong>: Write once, deploy everywhere</li>
+<li><strong>Fast Development</strong>: Hot reloading, instant feedback</li>
+<li><strong>Native Feel</strong>: Real native UI components</li>
+<li><strong>Large Community</strong>: Extensive libraries and support</li>
+<li><strong>Cost Effective</strong>: Half the development cost of native apps</li>
+</ul>
+<h3 id="use-cases"><a class="header" href="#use-cases">Use Cases</a></h3>
+<ul>
+<li>Startups and MVPs</li>
+<li>Content-driven apps</li>
+<li>Social applications</li>
+<li>E-commerce mobile apps</li>
+<li>Business productivity apps</li>
+</ul>
+<h2 id="-core-concepts"><a class="header" href="#-core-concepts">🛠️ Core Concepts</a></h2>
+<h3 id="components"><a class="header" href="#components">Components</a></h3>
+<p>React Native uses the same component concepts as React:</p>
+<pre><code class="language-javascript">import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+
+const WelcomeScreen = () =&gt; {
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Text style={styles.title}&gt;Welcome to React Native!&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+});
+
+export default WelcomeScreen;
+</code></pre>
+<h3 id="core-components"><a class="header" href="#core-components">Core Components</a></h3>
+<ul>
+<li><strong>View</strong>: Container component (like div in web)</li>
+<li><strong>Text</strong>: Text display component</li>
+<li><strong>Image</strong>: Image display component</li>
+<li><strong>ScrollView</strong>: Scrollable container</li>
+<li><strong>TextInput</strong>: User input field</li>
+<li><strong>TouchableOpacity</strong>: Pressable button</li>
+<li><strong>FlatList</strong>: Efficient list rendering</li>
+</ul>
+<h2 id="-architecture"><a class="header" href="#-architecture">🏗️ Architecture</a></h2>
+<h3 id="react-native-bridge"><a class="header" href="#react-native-bridge">React Native Bridge</a></h3>
+<p>React Native uses a bridge to communicate between JavaScript and native code:</p>
+<pre><code>JavaScript Code → React Native Bridge → Native Modules → Native UI
+</code></pre>
+<h3 id="thread-model"><a class="header" href="#thread-model">Thread Model</a></h3>
+<ul>
+<li><strong>UI Thread</strong>: Renders native UI components</li>
+<li><strong>JavaScript Thread</strong>: Runs your JavaScript code</li>
+<li><strong>Shadow Thread</strong>: Calculates layouts</li>
+</ul>
+<h2 id="-setup-options"><a class="header" href="#-setup-options">📱 Setup Options</a></h2>
+<h3 id="1-expo-recommended-for-beginners"><a class="header" href="#1-expo-recommended-for-beginners">1. Expo (Recommended for Beginners)</a></h3>
+<p>Expo is a framework and platform for universal React applications.</p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>No native code required</li>
+<li>Easy setup and deployment</li>
+<li>Built-in services (push notifications, OTA updates)</li>
+<li>Great for beginners</li>
+</ul>
+<p><strong>Installation:</strong></p>
+<pre><code class="language-bash">npm install -g expo-cli
+expo init my-app
+cd my-app
+npm start
+</code></pre>
+<h3 id="2-react-native-cli"><a class="header" href="#2-react-native-cli">2. React Native CLI</a></h3>
+<p>For more control and native module access.</p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Full control over native code</li>
+<li>Access to any native module</li>
+<li>Better for complex apps</li>
+</ul>
+<p><strong>Installation:</strong></p>
+<pre><code class="language-bash">npx react-native init MyApp
+cd MyApp
+npx react-native run-android  # or run-ios
+</code></pre>
+<h2 id="-styling-in-react-native"><a class="header" href="#-styling-in-react-native">🎨 Styling in React Native</a></h2>
+<h3 id="stylesheet-api"><a class="header" href="#stylesheet-api">StyleSheet API</a></h3>
+<p>React Native uses JavaScript-based styling:</p>
+<pre><code class="language-javascript">import { StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    padding: 20,
+  },
+  button: {
+    backgroundColor: '#007AFF',
+    padding: 15,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+});
+</code></pre>
+<h3 id="flexbox-layout"><a class="header" href="#flexbox-layout">Flexbox Layout</a></h3>
+<p>React Native uses Flexbox for layout (default direction is column):</p>
+<pre><code class="language-javascript">const styles = StyleSheet.create({
+  row: {
+    flexDirection: 'row',    // Horizontal layout
+    justifyContent: 'center', // Horizontal alignment
+    alignItems: 'center',     // Vertical alignment
+  },
+  column: {
+    flexDirection: 'column',  // Vertical layout (default)
+    justifyContent: 'space-between',
+    alignItems: 'stretch',
+  },
+});
+</code></pre>
+<h2 id="-development-workflow"><a class="header" href="#-development-workflow">🔄 Development Workflow</a></h2>
+<h3 id="hot-reloading"><a class="header" href="#hot-reloading">Hot Reloading</a></h3>
+<ul>
+<li><strong>Fast Refresh</strong>: Instantly see changes</li>
+<li><strong>State Preservation</strong>: Component state maintained during reload</li>
+<li><strong>Error Recovery</strong>: Automatic recovery from errors</li>
+</ul>
+<h3 id="debugging-tools"><a class="header" href="#debugging-tools">Debugging Tools</a></h3>
+<ul>
+<li><strong>React Native Debugger</strong>: Comprehensive debugging</li>
+<li><strong>Flipper</strong>: Extensible mobile app debugger</li>
+<li><strong>Console Logs</strong>: Built-in logging</li>
+<li><strong>Remote Debugging</strong>: Chrome DevTools integration</li>
+</ul>
+<h2 id="-essential-libraries"><a class="header" href="#-essential-libraries">📦 Essential Libraries</a></h2>
+<h3 id="navigation"><a class="header" href="#navigation">Navigation</a></h3>
+<pre><code class="language-bash">npm install @react-navigation/native @react-navigation/stack
+npm install react-native-screens react-native-safe-area-context
+</code></pre>
+<h3 id="state-management"><a class="header" href="#state-management">State Management</a></h3>
+<pre><code class="language-bash">npm install @reduxjs/toolkit react-redux
+# or
+npm install @apollo/client graphql  # for GraphQL
+</code></pre>
+<h3 id="ui-components"><a class="header" href="#ui-components">UI Components</a></h3>
+<pre><code class="language-bash">npm install react-native-elements
+npm install react-native-vector-icons
+</code></pre>
+<h3 id="utilities"><a class="header" href="#utilities">Utilities</a></h3>
+<pre><code class="language-bash">npm install react-native-async-storage
+npm install react-native-device-info
+npm install react-native-permissions
+</code></pre>
+<h2 id="-first-project-ideas"><a class="header" href="#-first-project-ideas">🎯 First Project Ideas</a></h2>
+<h3 id="beginner-projects"><a class="header" href="#beginner-projects">Beginner Projects</a></h3>
+<ol>
+<li><strong>Calculator App</strong>: Basic arithmetic operations</li>
+<li><strong>Todo List</strong>: CRUD operations with local storage</li>
+<li><strong>Weather App</strong>: API integration and data display</li>
+<li><strong>Recipe App</strong>: Search and display recipes</li>
+</ol>
+<h3 id="intermediate-projects"><a class="header" href="#intermediate-projects">Intermediate Projects</a></h3>
+<ol>
+<li><strong>Chat App</strong>: Real-time messaging with Firebase</li>
+<li><strong>E-commerce App</strong>: Product catalog and cart</li>
+<li><strong>Fitness Tracker</strong>: Workout logging and statistics</li>
+<li><strong>Social Media App</strong>: Posts, likes, and comments</li>
+</ol>
+<h2 id="-best-practices"><a class="header" href="#-best-practices">🚀 Best Practices</a></h2>
+<h3 id="component-structure"><a class="header" href="#component-structure">Component Structure</a></h3>
+<pre><code class="language-javascript">// Good component structure
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+
+const MyComponent = ({ prop1, prop2 }) =&gt; {
+  const [state, setState] = useState(null);
+  
+  useEffect(() =&gt; {
+    // Side effects here
+  }, []);
+
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Text&gt;{prop1}&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    // Styles here
+  },
+});
+
+export default MyComponent;
+</code></pre>
+<h3 id="performance-tips"><a class="header" href="#performance-tips">Performance Tips</a></h3>
+<ul>
+<li>Use <code>FlatList</code> for long lists instead of <code>ScrollView</code> with <code>map</code></li>
+<li>Avoid unnecessary re-renders with <code>React.memo</code></li>
+<li>Use <code>useCallback</code> and <code>useMemo</code> for expensive operations</li>
+<li>Optimize images and use appropriate formats</li>
+<li>Test on real devices, not just simulators</li>
+</ul>
+<h2 id="-learning-path"><a class="header" href="#-learning-path">🎓 Learning Path</a></h2>
+<ol>
+<li><strong>Week 1</strong>: Setup and basic components</li>
+<li><strong>Week 2</strong>: Styling and layout</li>
+<li><strong>Week 3</strong>: Navigation and state management</li>
+<li><strong>Week 4</strong>: API integration and data handling</li>
+<li><strong>Week 5</strong>: Testing and debugging</li>
+<li><strong>Week 6</strong>: Performance optimization</li>
+<li><strong>Week 7</strong>: Advanced patterns and architecture</li>
+<li><strong>Week 8</strong>: Deployment and publishing</li>
+</ol>
+<h2 id="-resources"><a class="header" href="#-resources">🔗 Resources</a></h2>
+<h3 id="official-documentation"><a class="header" href="#official-documentation">Official Documentation</a></h3>
+<ul>
+<li><a href="https://reactnative.dev/">React Native Docs</a></li>
+<li><a href="https://docs.expo.dev/">Expo Documentation</a></li>
+<li><a href="https://github.com/react-native-community/">React Native Community</a></li>
+</ul>
+<h3 id="learning-resources"><a class="header" href="#learning-resources">Learning Resources</a></h3>
+<ul>
+<li><a href="https://reactnativeschool.com/">React Native School</a></li>
+<li><a href="https://reactnative.training/">React Native Training</a></li>
+<li><a href="https://www.youtube.com/results?search_query=react+native+tutorial">YouTube: React Native</a></li>
+</ul>
+<h3 id="community"><a class="header" href="#community">Community</a></h3>
+<ul>
+<li><a href="https://www.reddit.com/r/reactnative/">React Native Reddit</a></li>
+<li><a href="https://discord.gg/react-native">Discord: React Native</a></li>
+<li><a href="https://stackoverflow.com/questions/tagged/react-native">Stack Overflow</a></li>
+</ul>
+<hr>
+<p><strong>Ready to start building?</strong> Let’s dive into components and props in the next section! 🚀</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="components--props-in-react-native"><a class="header" href="#components--props-in-react-native">Components &amp; Props in React Native</a></h1>
+<p>Components are the building blocks of React Native applications. They encapsulate reusable pieces of UI and logic.</p>
+<h2 id="-understanding-components"><a class="header" href="#-understanding-components">🧩 Understanding Components</a></h2>
+<h3 id="what-is-a-component"><a class="header" href="#what-is-a-component">What is a Component?</a></h3>
+<p>A component is a self-contained, reusable piece of UI that can accept input (props) and manage its own state.</p>
+<pre><code class="language-javascript">import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+
+// Functional Component
+const WelcomeCard = () =&gt; {
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Text style={styles.title}&gt;Welcome!&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 20,
+    backgroundColor: '#f0f0f0',
+    borderRadius: 8,
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+});
+
+export default WelcomeCard;
+</code></pre>
+<h2 id="-props-properties"><a class="header" href="#-props-properties">📦 Props (Properties)</a></h2>
+<p>Props are read-only attributes that pass data from parent to child components.</p>
+<h3 id="basic-props-usage"><a class="header" href="#basic-props-usage">Basic Props Usage</a></h3>
+<pre><code class="language-javascript">import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+
+const UserCard = ({ name, email, avatar }) =&gt; {
+  return (
+    &lt;View style={styles.card}&gt;
+      &lt;Text style={styles.name}&gt;{name}&lt;/Text&gt;
+      &lt;Text style={styles.email}&gt;{email}&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+};
+
+// Parent Component
+const UserList = () =&gt; {
+  const users = [
+    { name: 'John Doe', email: 'john@example.com' },
+    { name: 'Jane Smith', email: 'jane@example.com' },
+  ];
+
+  return (
+    &lt;View&gt;
+      {users.map((user, index) =&gt; (
+        &lt;UserCard 
+          key={index}
+          name={user.name}
+          email={user.email}
+        /&gt;
+      ))}
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<h3 id="prop-types-and-validation"><a class="header" href="#prop-types-and-validation">Prop Types and Validation</a></h3>
+<pre><code class="language-javascript">import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import PropTypes from 'prop-types';
+
+const Button = ({ title, onPress, disabled, color }) =&gt; {
+  return (
+    &lt;TouchableOpacity 
+      style={[styles.button, { backgroundColor: color }]}
+      onPress={onPress}
+      disabled={disabled}
+    &gt;
+      &lt;Text style={styles.buttonText}&gt;{title}&lt;/Text&gt;
+    &lt;/TouchableOpacity&gt;
+  );
+};
+
+Button.propTypes = {
+  title: PropTypes.string.isRequired,
+  onPress: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
+  color: PropTypes.string,
+};
+
+Button.defaultProps = {
+  disabled: false,
+  color: '#007AFF',
+};
+</code></pre>
+<h2 id="-core-components"><a class="header" href="#-core-components">🎨 Core Components</a></h2>
+<h3 id="view"><a class="header" href="#view">View</a></h3>
+<p>The most fundamental component for building UI:</p>
+<pre><code class="language-javascript">import { View, StyleSheet } from 'react-native';
+
+const Container = () =&gt; {
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;View style={styles.header} /&gt;
+      &lt;View style={styles.content} /&gt;
+      &lt;View style={styles.footer} /&gt;
+    &lt;/View&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  header: {
+    height: 60,
+    backgroundColor: '#fff',
+  },
+  content: {
+    flex: 1,
+    backgroundColor: '#f5f5f5',
+  },
+  footer: {
+    height: 50,
+    backgroundColor: '#fff',
+  },
+});
+</code></pre>
+<h3 id="text"><a class="header" href="#text">Text</a></h3>
+<p>For displaying text content:</p>
+<pre><code class="language-javascript">import { Text, StyleSheet } from 'react-native';
+
+const TextExamples = () =&gt; {
+  return (
+    &lt;View&gt;
+      &lt;Text style={styles.title}&gt;Main Title&lt;/Text&gt;
+      &lt;Text style={styles.subtitle}&gt;Subtitle Text&lt;/Text&gt;
+      &lt;Text style={styles.body}&gt;Regular body text content&lt;/Text&gt;
+      &lt;Text style={styles.caption}&gt;Small caption text&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#000',
+  },
+  subtitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#333',
+  },
+  body: {
+    fontSize: 16,
+    color: '#666',
+    lineHeight: 24,
+  },
+  caption: {
+    fontSize: 12,
+    color: '#999',
+  },
+});
+</code></pre>
+<h3 id="image"><a class="header" href="#image">Image</a></h3>
+<p>For displaying images:</p>
+<pre><code class="language-javascript">import { Image, StyleSheet, View } from 'react-native';
+
+const ImageExamples = () =&gt; {
+  return (
+    &lt;View&gt;
+      {/* Local Image */}
+      &lt;Image 
+        source={require('./assets/logo.png')}
+        style={styles.localImage}
+      /&gt;
+      
+      {/* Network Image */}
+      &lt;Image 
+        source={{ uri: 'https://example.com/image.jpg' }}
+        style={styles.networkImage}
+      /&gt;
+      
+      {/* Image with Placeholder */}
+      &lt;Image
+        source={require('./assets/profile.jpg')}
+        style={styles.avatar}
+        defaultSource={require('./assets/placeholder.png')}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<h3 id="touchableopacity"><a class="header" href="#touchableopacity">TouchableOpacity</a></h3>
+<p>For creating pressable elements:</p>
+<pre><code class="language-javascript">import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+
+const CustomButton = ({ title, onPress, variant }) =&gt; {
+  const buttonStyle = variant === 'primary' 
+    ? styles.primaryButton 
+    : styles.secondaryButton;
+
+  return (
+    &lt;TouchableOpacity style={buttonStyle} onPress={onPress}&gt;
+      &lt;Text style={styles.buttonText}&gt;{title}&lt;/Text&gt;
+    &lt;/TouchableOpacity&gt;
+  );
+};
+</code></pre>
+<h2 id="-custom-components"><a class="header" href="#-custom-components">🏗️ Custom Components</a></h2>
+<h3 id="creating-reusable-components"><a class="header" href="#creating-reusable-components">Creating Reusable Components</a></h3>
+<pre><code class="language-javascript">import React from 'react';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+
+const Card = ({ children, title, onPress }) =&gt; {
+  return (
+    &lt;TouchableOpacity style={styles.card} onPress={onPress}&gt;
+      {title &amp;&amp; &lt;Text style={styles.title}&gt;{title}&lt;/Text&gt;}
+      &lt;View style={styles.content}&gt;
+        {children}
+      &lt;/View&gt;
+    &lt;/TouchableOpacity&gt;
+  );
+};
+
+const InputField = ({ label, value, onChangeText, placeholder, secure }) =&gt; {
+  return (
+    &lt;View style={styles.inputContainer}&gt;
+      &lt;Text style={styles.label}&gt;{label}&lt;/Text&gt;
+      &lt;TextInput
+        style={styles.input}
+        value={value}
+        onChangeText={onChangeText}
+        placeholder={placeholder}
+        secureTextEntry={secure}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+
+const LoadingSpinner = ({ size, color }) =&gt; {
+  return (
+    &lt;ActivityIndicator 
+      size={size || 'large'} 
+      color={color || '#007AFF'} 
+    /&gt;
+  );
+};
+</code></pre>
+<h2 id="-component-composition"><a class="header" href="#-component-composition">🔄 Component Composition</a></h2>
+<h3 id="building-complex-uis"><a class="header" href="#building-complex-uis">Building Complex UIs</a></h3>
+<pre><code class="language-javascript">import React from 'react';
+import { View, ScrollView, StyleSheet } from 'react-native';
+import Card from './Card';
+import UserCard from './UserCard';
+import LoadingSpinner from './LoadingSpinner';
+
+const UserFeed = ({ users, loading, onUserPress }) =&gt; {
+  if (loading) {
+    return &lt;LoadingSpinner /&gt;;
+  }
+
+  return (
+    &lt;ScrollView style={styles.container}&gt;
+      {users.map(user =&gt; (
+        &lt;Card key={user.id} onPress={() =&gt; onUserPress(user)}&gt;
+          &lt;UserCard 
+            name={user.name}
+            email={user.email}
+            avatar={user.avatar}
+          /&gt;
+        &lt;/Card&gt;
+      ))}
+    &lt;/ScrollView&gt;
+  );
+};
+</code></pre>
+<h2 id="-best-practices-1"><a class="header" href="#-best-practices-1">🎯 Best Practices</a></h2>
+<h3 id="1-single-responsibility"><a class="header" href="#1-single-responsibility">1. Single Responsibility</a></h3>
+<p>Each component should have one clear purpose:</p>
+<pre><code class="language-javascript">// Good: Single responsibility
+const Avatar = ({ source, size }) =&gt; (
+  &lt;Image source={source} style={[styles.avatar, { width: size, height: size }]} /&gt;
+);
+
+// Bad: Multiple responsibilities
+const UserSection = ({ user, onEdit, onDelete, onMessage }) =&gt; {
+  // Too many responsibilities in one component
+};
+</code></pre>
+<h3 id="2-props-destructuring"><a class="header" href="#2-props-destructuring">2. Props Destructuring</a></h3>
+<p>Always destructure props for cleaner code:</p>
+<pre><code class="language-javascript">// Good
+const UserCard = ({ name, email, avatar }) =&gt; {
+  return (
+    &lt;View&gt;
+      &lt;Text&gt;{name}&lt;/Text&gt;
+      &lt;Text&gt;{email}&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+};
+
+// Avoid
+const UserCard = (props) =&gt; {
+  return (
+    &lt;View&gt;
+      &lt;Text&gt;{props.name}&lt;/Text&gt;
+      &lt;Text&gt;{props.email}&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<h3 id="3-default-props"><a class="header" href="#3-default-props">3. Default Props</a></h3>
+<p>Always provide sensible defaults:</p>
+<pre><code class="language-javascript">const Button = ({ 
+  title, 
+  onPress, 
+  disabled = false, 
+  variant = 'primary',
+  size = 'medium'
+}) =&gt; {
+  // Component implementation
+};
+</code></pre>
+<h3 id="4-component-naming"><a class="header" href="#4-component-naming">4. Component Naming</a></h3>
+<p>Use descriptive, PascalCase names:</p>
+<pre><code class="language-javascript">// Good
+const UserProfileCard = () =&gt; {};
+const NavigationHeader = () =&gt; {};
+const SearchInputField = () =&gt; {};
+
+// Avoid
+const Card = () =&gt; {}; // Too generic
+const Header = () =&gt; {}; // Too generic
+const Input = () =&gt; {}; // Too generic
+</code></pre>
+<h2 id="-testing-components"><a class="header" href="#-testing-components">🧪 Testing Components</a></h2>
+<h3 id="basic-component-testing"><a class="header" href="#basic-component-testing">Basic Component Testing</a></h3>
+<pre><code class="language-javascript">import React from 'react';
+import { render, fireEvent } from '@testing-library/react-native';
+import Button from '../Button';
+
+describe('Button Component', () =&gt; {
+  it('renders correctly with title', () =&gt; {
+    const { getByText } = render(
+      &lt;Button title="Press me" onPress={() =&gt; {}} /&gt;
+    );
+    
+    expect(getByText('Press me')).toBeTruthy();
+  });
+
+  it('calls onPress when pressed', () =&gt; {
+    const mockOnPress = jest.fn();
+    const { getByText } = render(
+      &lt;Button title="Press me" onPress={mockOnPress} /&gt;
+    );
+    
+    fireEvent.press(getByText('Press me'));
+    expect(mockOnPress).toHaveBeenCalled();
+  });
+});
+</code></pre>
+<h2 id="-component-library"><a class="header" href="#-component-library">📚 Component Library</a></h2>
+<h3 id="building-a-component-library"><a class="header" href="#building-a-component-library">Building a Component Library</a></h3>
+<pre><code class="language-javascript">// components/index.js
+export { default as Button } from './Button';
+export { default as Card } from './Card';
+export { default as Input } from './Input';
+export { default as Avatar } from './Avatar';
+
+// Usage in other files
+import { Button, Card, Input } from '../components';
+</code></pre>
+<h3 id="theme-integration"><a class="header" href="#theme-integration">Theme Integration</a></h3>
+<pre><code class="language-javascript">// theme.js
+export const colors = {
+  primary: '#007AFF',
+  secondary: '#5856D6',
+  success: '#34C759',
+  warning: '#FF9500',
+  error: '#FF3B30',
+  background: '#F2F2F7',
+  surface: '#FFFFFF',
+  text: '#000000',
+  textSecondary: '#8E8E93',
+};
+
+export const spacing = {
+  xs: 4,
+  sm: 8,
+  md: 16,
+  lg: 24,
+  xl: 32,
+};
+
+export const typography = {
+  h1: {
+    fontSize: 32,
+    fontWeight: 'bold',
+  },
+  h2: {
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  body: {
+    fontSize: 16,
+    fontWeight: 'normal',
+  },
+  caption: {
+    fontSize: 12,
+    fontWeight: 'normal',
+  },
+};
+
+// Themed Component
+const ThemedButton = ({ title, onPress }) =&gt; {
+  return (
+    &lt;TouchableOpacity 
+      style={[styles.button, { backgroundColor: colors.primary }]}
+      onPress={onPress}
+    &gt;
+      &lt;Text style={[styles.text, { color: colors.surface }]}&gt;
+        {title}
+      &lt;/Text&gt;
+    &lt;/TouchableOpacity&gt;
+  );
+};
+</code></pre>
+<hr>
+<p><strong>Next Up</strong>: Learn about navigation to connect your components into a complete app! 🚀</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="navigation-1"><a class="header" href="#navigation-1">Navigation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="api-integration"><a class="header" href="#api-integration">API Integration</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="state-management-1"><a class="header" href="#state-management-1">State Management</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="storage--persistence"><a class="header" href="#storage--persistence">Storage &amp; Persistence</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="performance-optimization"><a class="header" href="#performance-optimization">Performance Optimization</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="testing"><a class="header" href="#testing">Testing</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="deployment"><a class="header" href="#deployment">Deployment</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="introduction-to-ai-development"><a class="header" href="#introduction-to-ai-development">Introduction to AI Development</a></h1>
+<p>Artificial Intelligence is no longer a futuristic concept - it’s a practical tool that developers can integrate into applications today. This section will teach you how to leverage AI, particularly ChatGPT and similar models, to build intelligent applications.</p>
+<h2 id="-what-is-ai-development"><a class="header" href="#-what-is-ai-development">🤖 What is AI Development?</a></h2>
+<p>AI Development involves:</p>
+<ul>
+<li><strong>Prompt Engineering</strong>: Crafting effective instructions for AI models</li>
+<li><strong>API Integration</strong>: Connecting your apps to AI services</li>
+<li><strong>AI-Powered Features</strong>: Building smart, responsive applications</li>
+<li><strong>Ethical AI</strong>: Understanding limitations and responsible usage</li>
+</ul>
+<h2 id="-why-learn-ai-development"><a class="header" href="#-why-learn-ai-development">🎯 Why Learn AI Development?</a></h2>
+<h3 id="market-demand"><a class="header" href="#market-demand">Market Demand</a></h3>
+<ul>
+<li>AI skills are among the highest-paid in tech</li>
+<li>Companies are actively seeking AI integration expertise</li>
+<li>Growing demand for AI-powered applications</li>
+</ul>
+<h3 id="career-benefits"><a class="header" href="#career-benefits">Career Benefits</a></h3>
+<ul>
+<li>Future-proof your development skills</li>
+<li>Command higher rates for AI projects</li>
+<li>Position yourself as a modern developer</li>
+</ul>
+<h3 id="innovation-opportunities"><a class="header" href="#innovation-opportunities">Innovation Opportunities</a></h3>
+<ul>
+<li>Build applications that were impossible before</li>
+<li>Create personalized user experiences</li>
+<li>Automate complex decision-making processes</li>
+</ul>
+<h2 id="-types-of-ai-well-cover"><a class="header" href="#-types-of-ai-well-cover">🧠 Types of AI We’ll Cover</a></h2>
+<h3 id="1-large-language-models-llms"><a class="header" href="#1-large-language-models-llms">1. Large Language Models (LLMs)</a></h3>
+<ul>
+<li><strong>ChatGPT/GPT-4</strong>: Text generation and understanding</li>
+<li><strong>Claude</strong>: Advanced reasoning and analysis</li>
+<li><strong>LLaMA</strong>: Open-source alternatives</li>
+</ul>
+<h3 id="2-ai-apis"><a class="header" href="#2-ai-apis">2. AI APIs</a></h3>
+<ul>
+<li><strong>OpenAI API</strong>: Access to GPT models</li>
+<li><strong>Google AI</strong>: Various AI services</li>
+<li><strong>Hugging Face</strong>: Open-source models</li>
+</ul>
+<h3 id="3-ai-integration-patterns"><a class="header" href="#3-ai-integration-patterns">3. AI Integration Patterns</a></h3>
+<ul>
+<li><strong>Chat Interfaces</strong>: Conversational applications</li>
+<li><strong>Content Generation</strong>: Automated writing and creation</li>
+<li><strong>Data Analysis</strong>: AI-powered insights</li>
+<li><strong>Image Generation</strong>: Visual AI applications</li>
+</ul>
+<h2 id="-core-concepts-1"><a class="header" href="#-core-concepts-1">🛠️ Core Concepts</a></h2>
+<h3 id="prompt-engineering"><a class="header" href="#prompt-engineering">Prompt Engineering</a></h3>
+<p>The art of writing effective instructions for AI models:</p>
+<pre><code class="language-javascript">// Basic prompt
+const basicPrompt = "Write a blog post about React Native";
+
+// Advanced prompt with structure
+const advancedPrompt = `
+Write a blog post about React Native with the following requirements:
+- Target audience: beginner developers
+- Length: 800-1000 words
+- Include code examples
+- Cover setup, basic components, and deployment
+- Use a friendly, encouraging tone
+`;
+
+// Prompt with examples (few-shot learning)
+const fewShotPrompt = `
+Convert the following user requests into API calls:
+
+User: "Show me all users"
+API: GET /api/users
+
+User: "Create a new user named John"
+API: POST /api/users {"name": "John"}
+
+User: "Delete user with ID 123"
+API: DELETE /api/users/123
+
+User: "${userRequest}"
+API: `;
+</code></pre>
+<h3 id="api-integration-1"><a class="header" href="#api-integration-1">API Integration</a></h3>
+<p>Connecting your applications to AI services:</p>
+<pre><code class="language-javascript">// OpenAI API integration
+import OpenAI from 'openai';
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+
+const generateResponse = async (prompt) =&gt; {
+  try {
+    const response = await openai.chat.completions.create({
+      model: "gpt-4",
+      messages: [{ role: "user", content: prompt }],
+      max_tokens: 1000,
+      temperature: 0.7,
+    });
+    
+    return response.choices[0].message.content;
+  } catch (error) {
+    console.error('AI API Error:', error);
+    throw error;
+  }
+};
+</code></pre>
+<h3 id="error-handling"><a class="header" href="#error-handling">Error Handling</a></h3>
+<p>Robust error handling for AI services:</p>
+<pre><code class="language-javascript">const safeAICall = async (prompt, retries = 3) =&gt; {
+  for (let i = 0; i &lt; retries; i++) {
+    try {
+      return await generateResponse(prompt);
+    } catch (error) {
+      if (i === retries - 1) {
+        // Final attempt failed
+        return "I'm having trouble connecting to my AI services. Please try again later.";
+      }
+      
+      // Wait before retrying
+      await new Promise(resolve =&gt; setTimeout(resolve, 1000 * (i + 1)));
+    }
+  }
+};
+</code></pre>
+<h2 id="-ai-applications-youll-build"><a class="header" href="#-ai-applications-youll-build">🚀 AI Applications You’ll Build</a></h2>
+<h3 id="1-chatgpt-clone"><a class="header" href="#1-chatgpt-clone">1. ChatGPT Clone</a></h3>
+<ul>
+<li>Real-time chat interface</li>
+<li>Conversation history</li>
+<li>Multiple AI models</li>
+<li>Custom system prompts</li>
+</ul>
+<h3 id="2-content-generator"><a class="header" href="#2-content-generator">2. Content Generator</a></h3>
+<ul>
+<li>Blog post generator</li>
+<li>Social media content</li>
+<li>Email templates</li>
+<li>Code documentation</li>
+</ul>
+<h3 id="3-ai-assistant"><a class="header" href="#3-ai-assistant">3. AI Assistant</a></h3>
+<ul>
+<li>Task automation</li>
+<li>Data analysis</li>
+<li>Decision support</li>
+<li>Personalized recommendations</li>
+</ul>
+<h3 id="4-smart-forms"><a class="header" href="#4-smart-forms">4. Smart Forms</a></h3>
+<ul>
+<li>Intelligent form filling</li>
+<li>Data validation</li>
+<li>Auto-completion</li>
+<li>Natural language input</li>
+</ul>
+<h2 id="-ai-development-workflow"><a class="header" href="#-ai-development-workflow">📊 AI Development Workflow</a></h2>
+<h3 id="1-planning-phase"><a class="header" href="#1-planning-phase">1. Planning Phase</a></h3>
+<pre><code class="language-mermaid">graph TD
+    A[Identify Use Case] --&gt; B[Define AI Requirements]
+    B --&gt; C[Choose AI Model]
+    C --&gt; D[Design Integration]
+    D --&gt; E[Plan Error Handling]
+</code></pre>
+<h3 id="2-development-phase"><a class="header" href="#2-development-phase">2. Development Phase</a></h3>
+<ol>
+<li><strong>Setup</strong>: Configure API keys and services</li>
+<li><strong>Integration</strong>: Connect AI to your application</li>
+<li><strong>Testing</strong>: Verify responses and edge cases</li>
+<li><strong>Optimization</strong>: Improve performance and cost</li>
+</ol>
+<h3 id="3-deployment-phase"><a class="header" href="#3-deployment-phase">3. Deployment Phase</a></h3>
+<ol>
+<li><strong>Security</strong>: Protect API keys and data</li>
+<li><strong>Monitoring</strong>: Track usage and costs</li>
+<li><strong>Scaling</strong>: Handle increased demand</li>
+<li><strong>Maintenance</strong>: Update models and prompts</li>
+</ol>
+<h2 id="-essential-tools"><a class="header" href="#-essential-tools">🔧 Essential Tools</a></h2>
+<h3 id="development-tools"><a class="header" href="#development-tools">Development Tools</a></h3>
+<ul>
+<li><strong>Postman</strong>: API testing</li>
+<li><strong>VS Code Extensions</strong>: AI development helpers</li>
+<li><strong>Git</strong>: Version control for prompts</li>
+<li><strong>Environment Variables</strong>: Secure API key storage</li>
+</ul>
+<h3 id="monitoring-tools"><a class="header" href="#monitoring-tools">Monitoring Tools</a></h3>
+<ul>
+<li><strong>OpenAI Dashboard</strong>: Usage tracking</li>
+<li><strong>Custom Analytics</strong>: Response quality monitoring</li>
+<li><strong>Error Tracking</strong>: Issue identification</li>
+<li><strong>Cost Management</strong>: Budget control</li>
+</ul>
+<h3 id="testing-tools"><a class="header" href="#testing-tools">Testing Tools</a></h3>
+<ul>
+<li><strong>Jest</strong>: Unit testing for AI functions</li>
+<li><strong>Mock Services</strong>: Simulate AI responses</li>
+<li><strong>A/B Testing</strong>: Compare prompt variations</li>
+<li><strong>User Testing</strong>: Real-world feedback</li>
+</ul>
+<h2 id="-cost-management"><a class="header" href="#-cost-management">💰 Cost Management</a></h2>
+<h3 id="understanding-ai-api-costs"><a class="header" href="#understanding-ai-api-costs">Understanding AI API Costs</a></h3>
+<ul>
+<li><strong>Tokens</strong>: Basic unit of text processing</li>
+<li><strong>Models</strong>: Different pricing tiers</li>
+<li><strong>Usage</strong>: Pay-per-request vs. subscriptions</li>
+<li><strong>Optimization</strong>: Reducing unnecessary calls</li>
+</ul>
+<h3 id="cost-optimization-strategies"><a class="header" href="#cost-optimization-strategies">Cost Optimization Strategies</a></h3>
+<pre><code class="language-javascript">// Caching AI responses
+const cache = new Map();
+
+const getCachedResponse = async (prompt) =&gt; {
+  const cacheKey = prompt.trim().toLowerCase();
+  
+  if (cache.has(cacheKey)) {
+    return cache.get(cacheKey);
+  }
+  
+  const response = await generateResponse(prompt);
+  cache.set(cacheKey, response);
+  return response;
+};
+
+// Batch processing
+const batchProcess = async (prompts) =&gt; {
+  const responses = await Promise.all(
+    prompts.map(prompt =&gt; generateResponse(prompt))
+  );
+  return responses;
+};
+</code></pre>
+<h2 id="-security-considerations"><a class="header" href="#-security-considerations">🛡️ Security Considerations</a></h2>
+<h3 id="api-key-protection"><a class="header" href="#api-key-protection">API Key Protection</a></h3>
+<pre><code class="language-javascript">// Never hardcode API keys
+// ❌ BAD
+const openai = new OpenAI({ apiKey: "sk-..." });
+
+// ✅ GOOD
+const openai = new OpenAI({ 
+  apiKey: process.env.OPENAI_API_KEY 
+});
+
+// ✅ EVEN BETTER (with validation)
+const apiKey = process.env.OPENAI_API_KEY;
+if (!apiKey) {
+  throw new Error('OpenAI API key not configured');
+}
+const openai = new OpenAI({ apiKey });
+</code></pre>
+<h3 id="data-privacy"><a class="header" href="#data-privacy">Data Privacy</a></h3>
+<ul>
+<li><strong>PII Detection</strong>: Identify and protect personal information</li>
+<li><strong>Data Sanitization</strong>: Clean inputs before sending to AI</li>
+<li><strong>User Consent</strong>: Inform users about AI usage</li>
+<li><strong>Compliance</strong>: Follow GDPR and other regulations</li>
+</ul>
+<h2 id="-learning-path-1"><a class="header" href="#-learning-path-1">🎓 Learning Path</a></h2>
+<h3 id="week-1-ai-fundamentals"><a class="header" href="#week-1-ai-fundamentals">Week 1: AI Fundamentals</a></h3>
+<ul>
+<li>Understanding AI models and capabilities</li>
+<li>Setting up development environment</li>
+<li>Basic API integration</li>
+<li>Error handling patterns</li>
+</ul>
+<h3 id="week-2-prompt-engineering"><a class="header" href="#week-2-prompt-engineering">Week 2: Prompt Engineering</a></h3>
+<ul>
+<li>Writing effective prompts</li>
+<li>Few-shot learning techniques</li>
+<li>Prompt templates and patterns</li>
+<li>Testing and optimization</li>
+</ul>
+<h3 id="week-3-application-development"><a class="header" href="#week-3-application-development">Week 3: Application Development</a></h3>
+<ul>
+<li>Building chat interfaces</li>
+<li>Content generation features</li>
+<li>User experience design</li>
+<li>Performance optimization</li>
+</ul>
+<h3 id="week-4-advanced-topics"><a class="header" href="#week-4-advanced-topics">Week 4: Advanced Topics</a></h3>
+<ul>
+<li>Multi-model integration</li>
+<li>Custom AI workflows</li>
+<li>Security and compliance</li>
+<li>Production deployment</li>
+</ul>
+<h2 id="-resources-1"><a class="header" href="#-resources-1">🔗 Resources</a></h2>
+<h3 id="official-documentation-1"><a class="header" href="#official-documentation-1">Official Documentation</a></h3>
+<ul>
+<li><a href="https://platform.openai.com/docs">OpenAI API Documentation</a></li>
+<li><a href="https://cloud.google.com/ai">Google AI Platform</a></li>
+<li><a href="https://huggingface.co/docs">Hugging Face</a></li>
+</ul>
+<h3 id="learning-resources-1"><a class="header" href="#learning-resources-1">Learning Resources</a></h3>
+<ul>
+<li><a href="https://www.promptingguide.ai/">Prompt Engineering Guide</a></li>
+<li><a href="https://www.deeplearning.ai/ai-for-developers/">AI for Developers</a></li>
+<li><a href="https://ml-for-developers.com/">Machine Learning for Developers</a></li>
+</ul>
+<h3 id="community-1"><a class="header" href="#community-1">Community</a></h3>
+<ul>
+<li><a href="https://community.openai.com/">OpenAI Community Forum</a></li>
+<li><a href="https://www.reddit.com/r/MachineLearning/">Reddit: r/MachineLearning</a></li>
+<li><a href="https://discord.gg/ai-development">Discord: AI Development</a></li>
+</ul>
+<hr>
+<p><strong>Ready to build intelligent applications?</strong> Let’s dive into prompt engineering in the next section! 🚀</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="prompt-engineering-1"><a class="header" href="#prompt-engineering-1">Prompt Engineering</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ai-integration"><a class="header" href="#ai-integration">AI Integration</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="build-chatgpt-clone"><a class="header" href="#build-chatgpt-clone">Build: ChatGPT Clone</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ai-safety--ethics"><a class="header" href="#ai-safety--ethics">AI Safety &amp; Ethics</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="frontend-development-with-nextjs"><a class="header" href="#frontend-development-with-nextjs">Frontend Development with Next.js</a></h1>
+<p>Next.js is a React framework that enables production-ready web applications with server-side rendering, static site generation, and optimized performance.</p>
+<h2 id="-what-is-nextjs"><a class="header" href="#-what-is-nextjs">🎯 What is Next.js?</a></h2>
+<p>Next.js is a React framework that provides:</p>
+<ul>
+<li><strong>Server-Side Rendering (SSR)</strong>: Improved SEO and performance</li>
+<li><strong>Static Site Generation (SSG)</strong>: Blazing-fast static sites</li>
+<li><strong>API Routes</strong>: Backend functionality in your frontend app</li>
+<li><strong>File-based Routing</strong>: Simple and intuitive routing</li>
+<li><strong>Automatic Code Splitting</strong>: Optimized bundle sizes</li>
+<li><strong>Built-in CSS Support</strong>: Styled-jsx, CSS Modules, and more</li>
+</ul>
+<h2 id="-why-nextjs"><a class="header" href="#-why-nextjs">🚀 Why Next.js?</a></h2>
+<h3 id="performance-benefits"><a class="header" href="#performance-benefits">Performance Benefits</a></h3>
+<ul>
+<li><strong>Faster Initial Load</strong>: Server-rendered HTML</li>
+<li><strong>Better SEO</strong>: Search engines can crawl content easily</li>
+<li><strong>Automatic Optimization</strong>: Image optimization, code splitting</li>
+<li><strong>Incremental Static Regeneration</strong>: Update static content without rebuild</li>
+</ul>
+<h3 id="developer-experience"><a class="header" href="#developer-experience">Developer Experience</a></h3>
+<ul>
+<li><strong>Zero Configuration</strong>: Start coding immediately</li>
+<li><strong>Hot Reloading</strong>: Instant feedback during development</li>
+<li><strong>TypeScript Support</strong>: Built-in TypeScript integration</li>
+<li><strong>Fast Refresh</strong>: Component state preserved during reloads</li>
+</ul>
+<h2 id="-getting-started"><a class="header" href="#-getting-started">🛠️ Getting Started</a></h2>
+<h3 id="installation"><a class="header" href="#installation">Installation</a></h3>
+<pre><code class="language-bash"># Create new Next.js app
+npx create-next-app@latest my-app
+cd my-app
+
+# Start development server
+npm run dev
+</code></pre>
+<h3 id="project-structure"><a class="header" href="#project-structure">Project Structure</a></h3>
+<pre><code>my-app/
+├── pages/              # Page components
+│   ├── _app.js         # App component (global styles, layout)
+│   ├── _document.js    # Document HTML structure
+│   ├── index.js        # Home page
+│   └── api/            # API routes
+├── components/         # Reusable components
+├── styles/            # CSS files
+├── public/            # Static assets
+├── utils/             # Utility functions
+└── lib/               # Library configurations
+</code></pre>
+<h2 id="-core-concepts-2"><a class="header" href="#-core-concepts-2">📁 Core Concepts</a></h2>
+<h3 id="file-based-routing"><a class="header" href="#file-based-routing">File-based Routing</a></h3>
+<p>Every file in the <code>pages/</code> directory becomes a route:</p>
+<pre><code class="language-javascript">// pages/index.js -&gt; /
+// pages/about.js -&gt; /about
+// pages/blog/[slug].js -&gt; /blog/:slug
+// pages/posts/[id]/edit.js -&gt; /posts/:id/edit
+</code></pre>
+<h3 id="dynamic-routes"><a class="header" href="#dynamic-routes">Dynamic Routes</a></h3>
+<pre><code class="language-javascript">// pages/posts/[id].js
+import { useRouter } from 'next/router';
+
+function Post({ post }) {
+  const router = useRouter();
+  const { id } = router.query;
+
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;{post.title}&lt;/h1&gt;
+      &lt;p&gt;{post.content}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+
+export async function getStaticPaths() {
+  // Return all possible post IDs
+  const posts = await getPosts();
+  const paths = posts.map(post =&gt; ({
+    params: { id: post.id.toString() }
+  }));
+
+  return {
+    paths,
+    fallback: false
+  };
+}
+
+export async function getStaticProps({ params }) {
+  // Fetch data for specific post
+  const post = await getPost(params.id);
+  
+  return {
+    props: { post }
+  };
+}
+
+export default Post;
+</code></pre>
+<h3 id="api-routes"><a class="header" href="#api-routes">API Routes</a></h3>
+<p>Create backend endpoints in your frontend app:</p>
+<pre><code class="language-javascript">// pages/api/users.js
+export default async function handler(req, res) {
+  if (req.method === 'GET') {
+    // Handle GET request
+    const users = await getUsers();
+    res.status(200).json(users);
+  } else if (req.method === 'POST') {
+    // Handle POST request
+    const user = await createUser(req.body);
+    res.status(201).json(user);
+  } else {
+    // Handle other methods
+    res.setHeader('Allow', ['GET', 'POST']);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
+  }
+}
+</code></pre>
+<h2 id="-styling-in-nextjs"><a class="header" href="#-styling-in-nextjs">🎨 Styling in Next.js</a></h2>
+<h3 id="css-modules"><a class="header" href="#css-modules">CSS Modules</a></h3>
+<pre><code class="language-css">/* styles/Button.module.css */
+.button {
+  background: #0070f3;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #0051cc;
+}
+</code></pre>
+<pre><code class="language-javascript">// components/Button.js
+import styles from '../styles/Button.module.css';
+
+function Button({ children, onClick }) {
+  return (
+    &lt;button className={styles.button} onClick={onClick}&gt;
+      {children}
+    &lt;/button&gt;
+  );
+}
+
+export default Button;
+</code></pre>
+<h3 id="styled-jsx"><a class="header" href="#styled-jsx">Styled-jsx</a></h3>
+<pre><code class="language-javascript">// components/Card.js
+function Card({ title, content }) {
+  return (
+    &lt;div className="card"&gt;
+      &lt;h2&gt;{title}&lt;/h2&gt;
+      &lt;p&gt;{content}&lt;/p&gt;
+      
+      &lt;style jsx&gt;{`
+        .card {
+          background: white;
+          border-radius: 8px;
+          padding: 20px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+          color: #333;
+          margin-bottom: 12px;
+        }
+      `}&lt;/style&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default Card;
+</code></pre>
+<h2 id="-data-fetching"><a class="header" href="#-data-fetching">🔄 Data Fetching</a></h2>
+<h3 id="getstaticprops-ssg"><a class="header" href="#getstaticprops-ssg">getStaticProps (SSG)</a></h3>
+<pre><code class="language-javascript">// pages/blog.js
+export async function getStaticProps() {
+  // Fetch data at build time
+  const posts = await getBlogPosts();
+  
+  return {
+    props: {
+      posts
+    },
+    revalidate: 60 // Re-generate every 60 seconds
+  };
+}
+
+function Blog({ posts }) {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Blog Posts&lt;/h1&gt;
+      {posts.map(post =&gt; (
+        &lt;article key={post.id}&gt;
+          &lt;h2&gt;{post.title}&lt;/h2&gt;
+          &lt;p&gt;{post.excerpt}&lt;/p&gt;
+        &lt;/article&gt;
+      ))}
+    &lt;/div&gt;
+  );
+}
+
+export default Blog;
+</code></pre>
+<h3 id="getserversideprops-ssr"><a class="header" href="#getserversideprops-ssr">getServerSideProps (SSR)</a></h3>
+<pre><code class="language-javascript">// pages/dashboard.js
+export async function getServerSideProps(context) {
+  // Fetch data on each request
+  const session = await getSession(context);
+  
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/login',
+        permanent: false
+      }
+    };
+  }
+  
+  const userData = await getUserData(session.user.id);
+  
+  return {
+    props: {
+      user: userData
+    }
+  };
+}
+</code></pre>
+<h2 id="-advanced-features"><a class="header" href="#-advanced-features">🎯 Advanced Features</a></h2>
+<h3 id="image-optimization"><a class="header" href="#image-optimization">Image Optimization</a></h3>
+<pre><code class="language-javascript">import Image from 'next/image';
+
+function ProductCard({ product }) {
+  return (
+    &lt;div&gt;
+      &lt;Image
+        src={product.image}
+        alt={product.name}
+        width={300}
+        height={200}
+        priority={product.featured}
+        placeholder="blur"
+        blurDataURL="data:image/jpeg;base64,..."
+      /&gt;
+      &lt;h3&gt;{product.name}&lt;/h3&gt;
+      &lt;p&gt;${product.price}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<h3 id="authentication-with-nextauth"><a class="header" href="#authentication-with-nextauth">Authentication with NextAuth</a></h3>
+<pre><code class="language-bash">npm install next-auth
+</code></pre>
+<pre><code class="language-javascript">// pages/api/auth/[...nextauth].js
+import NextAuth from 'next-auth';
+import GoogleProvider from 'next-auth/providers/google';
+
+export default NextAuth({
+  providers: [
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    }),
+  ],
+});
+</code></pre>
+<h2 id="-testing-nextjs-applications"><a class="header" href="#-testing-nextjs-applications">🧪 Testing Next.js Applications</a></h2>
+<h3 id="unit-testing-with-jest"><a class="header" href="#unit-testing-with-jest">Unit Testing with Jest</a></h3>
+<pre><code class="language-javascript">// __tests__/components/Button.test.js
+import { render, screen, fireEvent } from '@testing-library/react';
+import Button from '../components/Button';
+
+describe('Button Component', () =&gt; {
+  it('renders button with text', () =&gt; {
+    render(&lt;Button&gt;Click me&lt;/Button&gt;);
+    expect(screen.getByText('Click me')).toBeInTheDocument();
+  });
+
+  it('calls onClick when clicked', () =&gt; {
+    const handleClick = jest.fn();
+    render(&lt;Button onClick={handleClick}&gt;Click me&lt;/Button&gt;);
+    
+    fireEvent.click(screen.getByText('Click me'));
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
+});
+</code></pre>
+<h2 id="-performance-optimization"><a class="header" href="#-performance-optimization">🚀 Performance Optimization</a></h2>
+<h3 id="code-splitting"><a class="header" href="#code-splitting">Code Splitting</a></h3>
+<pre><code class="language-javascript">import dynamic from 'next/dynamic';
+
+// Dynamically import heavy components
+const HeavyComponent = dynamic(() =&gt; import('../components/HeavyComponent'), {
+  loading: () =&gt; &lt;p&gt;Loading...&lt;/p&gt;,
+  ssr: false // Disable server-side rendering if needed
+});
+
+function HomePage() {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Welcome&lt;/h1&gt;
+      &lt;HeavyComponent /&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<h2 id="-best-practices-2"><a class="header" href="#-best-practices-2">🔧 Best Practices</a></h2>
+<h3 id="component-structure-1"><a class="header" href="#component-structure-1">Component Structure</a></h3>
+<pre><code class="language-javascript">// components/ProductCard.js
+import Image from 'next/image';
+import styles from './ProductCard.module.css';
+
+function ProductCard({ product, onAddToCart }) {
+  return (
+    &lt;article className={styles.card}&gt;
+      &lt;div className={styles.imageContainer}&gt;
+        &lt;Image
+          src={product.image}
+          alt={product.name}
+          width={200}
+          height={150}
+          className={styles.image}
+        /&gt;
+      &lt;/div&gt;
+      
+      &lt;div className={styles.content}&gt;
+        &lt;h3 className={styles.title}&gt;{product.name}&lt;/h3&gt;
+        &lt;p className={styles.description}&gt;{product.description}&lt;/p&gt;
+        &lt;div className={styles.footer}&gt;
+          &lt;span className={styles.price}&gt;${product.price}&lt;/span&gt;
+          &lt;button 
+            className={styles.button}
+            onClick={() =&gt; onAddToCart(product)}
+          &gt;
+            Add to Cart
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+  );
+}
+
+export default ProductCard;
+</code></pre>
+<h3 id="error-handling-1"><a class="header" href="#error-handling-1">Error Handling</a></h3>
+<pre><code class="language-javascript">// pages/_error.js
+function Error({ statusCode }) {
+  return (
+    &lt;div className="min-h-screen flex items-center justify-center"&gt;
+      &lt;div className="text-center"&gt;
+        &lt;h1 className="text-4xl font-bold text-gray-900"&gt;
+          {statusCode
+            ? `An error ${statusCode} occurred on server`
+            : 'An error occurred on client'}
+        &lt;/h1&gt;
+        &lt;p className="mt-4 text-gray-600"&gt;
+          Please try again later or contact support.
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+Error.getInitialProps = ({ res, err }) =&gt; {
+  const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
+  return { statusCode };
+};
+
+export default Error;
+</code></pre>
+<hr>
+<p><strong>Next Up</strong>: Learn about backend development with Node.js! 🚀</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="backend-development-with-nodejs"><a class="header" href="#backend-development-with-nodejs">Backend Development with Node.js</a></h1>
+<p>Node.js enables JavaScript to run on the server-side, allowing you to build scalable, high-performance backend applications using the same language you use for frontend development.</p>
+<h2 id="-what-is-nodejs"><a class="header" href="#-what-is-nodejs">🎯 What is Node.js?</a></h2>
+<p>Node.js is a JavaScript runtime built on Chrome’s V8 JavaScript engine that allows you to:</p>
+<ul>
+<li><strong>Run JavaScript on the server</strong>: Full-stack JavaScript development</li>
+<li><strong>Build scalable applications</strong>: Event-driven, non-blocking I/O</li>
+<li><strong>Create APIs</strong>: RESTful and GraphQL endpoints</li>
+<li><strong>Handle real-time data</strong>: WebSockets, server-sent events</li>
+<li><strong>Integrate with databases</strong>: MongoDB, PostgreSQL, Redis, and more</li>
+</ul>
+<h2 id="-why-nodejs"><a class="header" href="#-why-nodejs">🚀 Why Node.js?</a></h2>
+<h3 id="performance-benefits-1"><a class="header" href="#performance-benefits-1">Performance Benefits</a></h3>
+<ul>
+<li><strong>Non-blocking I/O</strong>: Handle many concurrent connections</li>
+<li><strong>Event-driven architecture</strong>: Efficient resource usage</li>
+<li><strong>Fast execution</strong>: V8 engine optimization</li>
+<li><strong>Lightweight</strong>: Minimal overhead and memory usage</li>
+</ul>
+<h3 id="developer-benefits"><a class="header" href="#developer-benefits">Developer Benefits</a></h3>
+<ul>
+<li><strong>Single language</strong>: JavaScript for frontend and backend</li>
+<li><strong>NPM ecosystem</strong>: Largest package registry</li>
+<li><strong>Full-stack frameworks</strong>: Express, NestJS, Koa</li>
+<li><strong>Real-time capabilities</strong>: Built-in support for WebSockets</li>
+</ul>
+<h2 id="-getting-started-1"><a class="header" href="#-getting-started-1">🛠️ Getting Started</a></h2>
+<h3 id="installation-1"><a class="header" href="#installation-1">Installation</a></h3>
+<pre><code class="language-bash"># Install Node.js (includes npm)
+# Download from https://nodejs.org or use version manager
+
+# Verify installation
+node --version
+npm --version
+
+# Create new project
+mkdir my-backend
+cd my-backend
+npm init -y
+</code></pre>
+<h3 id="basic-server-setup"><a class="header" href="#basic-server-setup">Basic Server Setup</a></h3>
+<pre><code class="language-javascript">// server.js
+const http = require('http');
+
+const server = http.createServer((req, res) =&gt; {
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify({ message: 'Hello, World!' }));
+});
+
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () =&gt; {
+  console.log(`Server running on port ${PORT}`);
+});
+</code></pre>
+<h2 id="-expressjs-framework"><a class="header" href="#-expressjs-framework">📁 Express.js Framework</a></h2>
+<p>Express.js is the most popular Node.js framework for building web applications and APIs.</p>
+<h3 id="installation-and-setup"><a class="header" href="#installation-and-setup">Installation and Setup</a></h3>
+<pre><code class="language-bash">npm install express
+</code></pre>
+<h3 id="basic-express-server"><a class="header" href="#basic-express-server">Basic Express Server</a></h3>
+<pre><code class="language-javascript">// app.js
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Middleware
+app.use(express.json()); // Parse JSON bodies
+app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
+
+// Routes
+app.get('/', (req, res) =&gt; {
+  res.json({ message: 'Welcome to the API' });
+});
+
+app.get('/api/users', (req, res) =&gt; {
+  res.json([
+    { id: 1, name: 'John Doe', email: 'john@example.com' },
+    { id: 2, name: 'Jane Smith', email: 'jane@example.com' }
+  ]);
+});
+
+app.post('/api/users', (req, res) =&gt; {
+  const { name, email } = req.body;
+  const newUser = { id: Date.now(), name, email };
+  res.status(201).json(newUser);
+});
+
+// Error handling middleware
+app.use((err, req, res, next) =&gt; {
+  console.error(err.stack);
+  res.status(500).json({ error: 'Something went wrong!' });
+});
+
+// Start server
+app.listen(PORT, () =&gt; {
+  console.log(`Server running on port ${PORT}`);
+});
+</code></pre>
+<h2 id="-restful-api-design"><a class="header" href="#-restful-api-design">🛣️ RESTful API Design</a></h2>
+<h3 id="rest-principles"><a class="header" href="#rest-principles">REST Principles</a></h3>
+<ul>
+<li><strong>Resources</strong>: Nouns (users, products, orders)</li>
+<li><strong>HTTP Methods</strong>: Verbs (GET, POST, PUT, DELETE)</li>
+<li><strong>Status Codes</strong>: Proper HTTP status codes</li>
+<li><strong>Stateless</strong>: Each request contains all needed information</li>
+</ul>
+<h3 id="complete-crud-api"><a class="header" href="#complete-crud-api">Complete CRUD API</a></h3>
+<pre><code class="language-javascript">// routes/users.js
+const express = require('express');
+const router = express.Router();
+const { getUsers, getUserById, createUser, updateUser, deleteUser } = require('../controllers/userController');
+const { validateUser } = require('../middleware/validation');
+
+// GET /api/users - Get all users
+router.get('/', getUsers);
+
+// GET /api/users/:id - Get user by ID
+router.get('/:id', getUserById);
+
+// POST /api/users - Create new user
+router.post('/', validateUser, createUser);
+
+// PUT /api/users/:id - Update user
+router.put('/:id', validateUser, updateUser);
+
+// DELETE /api/users/:id - Delete user
+router.delete('/:id', deleteUser);
+
+module.exports = router;
+</code></pre>
+<h2 id="-authentication--authorization"><a class="header" href="#-authentication--authorization">🔐 Authentication &amp; Authorization</a></h2>
+<h3 id="jwt-authentication"><a class="header" href="#jwt-authentication">JWT Authentication</a></h3>
+<pre><code class="language-bash">npm install jsonwebtoken bcryptjs
+</code></pre>
+<pre><code class="language-javascript">// controllers/authController.js
+const jwt = require('jsonwebtoken');
+const User = require('../models/User');
+
+// Generate JWT Token
+const generateToken = (id) =&gt; {
+  return jwt.sign({ id }, process.env.JWT_SECRET, {
+    expiresIn: process.env.JWT_EXPIRE || '30d',
+  });
+};
+
+// Register user
+exports.register = async (req, res) =&gt; {
+  try {
+    const { name, email, password } = req.body;
+
+    // Create user
+    const user = await User.create({
+      name,
+      email,
+      password,
+    });
+
+    // Generate token
+    const token = generateToken(user._id);
+
+    res.status(201).json({
+      success: true,
+      token,
+      user: {
+        id: user._id,
+        name: user.name,
+        email: user.email,
+      },
+    });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
+// Login user
+exports.login = async (req, res) =&gt; {
+  try {
+    const { email, password } = req.body;
+
+    // Check for user
+    const user = await User.findOne({ email }).select('+password');
+    if (!user) {
+      return res.status(401).json({ error: 'Invalid credentials' });
+    }
+
+    // Check if password matches
+    const isMatch = await user.matchPassword(password);
+    if (!isMatch) {
+      return res.status(401).json({ error: 'Invalid credentials' });
+    }
+
+    // Generate token
+    const token = generateToken(user._id);
+
+    res.json({
+      success: true,
+      token,
+      user: {
+        id: user._id,
+        name: user.name,
+        email: user.email,
+      },
+    });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+</code></pre>
+<h2 id="-database-integration"><a class="header" href="#-database-integration">🗄️ Database Integration</a></h2>
+<h3 id="mongodb-with-mongoose"><a class="header" href="#mongodb-with-mongoose">MongoDB with Mongoose</a></h3>
+<pre><code class="language-bash">npm install mongoose
+</code></pre>
+<pre><code class="language-javascript">// models/User.js
+const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
+
+const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: [true, 'Please add a name'],
+    trim: true,
+  },
+  email: {
+    type: String,
+    required: [true, 'Please add an email'],
+    unique: true,
+    lowercase: true,
+  },
+  password: {
+    type: String,
+    required: [true, 'Please add a password'],
+    minlength: 6,
+    select: false,
+  },
+  role: {
+    type: String,
+    enum: ['user', 'admin'],
+    default: 'user',
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+});
+
+// Encrypt password using bcrypt
+userSchema.pre('save', async function(next) {
+  if (!this.isModified('password')) {
+    next();
+  }
+  
+  const salt = await bcrypt.genSalt(10);
+  this.password = await bcrypt.hash(this.password, salt);
+});
+
+module.exports = mongoose.model('User', userSchema);
+</code></pre>
+<h2 id="-testing-nodejs-applications"><a class="header" href="#-testing-nodejs-applications">🧪 Testing Node.js Applications</a></h2>
+<h3 id="unit-testing-with-jest-1"><a class="header" href="#unit-testing-with-jest-1">Unit Testing with Jest</a></h3>
+<pre><code class="language-bash">npm install --save-dev jest supertest
+</code></pre>
+<pre><code class="language-javascript">// __tests__/routes/users.test.js
+const request = require('supertest');
+const app = require('../../app');
+
+describe('User Routes', () =&gt; {
+  describe('POST /api/users', () =&gt; {
+    it('should create a new user', async () =&gt; {
+      const userData = {
+        name: 'John Doe',
+        email: 'john@example.com',
+        password: 'password123'
+      };
+
+      const response = await request(app)
+        .post('/api/users')
+        .send(userData)
+        .expect(201);
+
+      expect(response.body).toHaveProperty('user');
+      expect(response.body.user.email).toBe(userData.email);
+    });
+  });
+});
+</code></pre>
+<h2 id="-performance-optimization-1"><a class="header" href="#-performance-optimization-1">🚀 Performance Optimization</a></h2>
+<h3 id="caching-with-redis"><a class="header" href="#caching-with-redis">Caching with Redis</a></h3>
+<pre><code class="language-bash">npm install redis
+</code></pre>
+<pre><code class="language-javascript">// middleware/cache.js
+const redis = require('../config/redis');
+
+const cache = (duration = 300) =&gt; {
+  return async (req, res, next) =&gt; {
+    const key = req.originalUrl;
+    
+    try {
+      const cached = await redis.get(key);
+      if (cached) {
+        return res.json(JSON.parse(cached));
+      }
+      
+      res.sendResponse = res.json;
+      res.json = (body) =&gt; {
+        redis.setex(key, duration, JSON.stringify(body));
+        res.sendResponse(body);
+      };
+      
+      next();
+    } catch (error) {
+      next();
+    }
+  };
+};
+
+module.exports = cache;
+</code></pre>
+<h2 id="-best-practices-3"><a class="header" href="#-best-practices-3">🔧 Best Practices</a></h2>
+<h3 id="security-best-practices"><a class="header" href="#security-best-practices">Security Best Practices</a></h3>
+<pre><code class="language-javascript">// middleware/security.js
+const helmet = require('helmet');
+const cors = require('cors');
+const mongoSanitize = require('express-mongo-sanitize');
+
+const securityMiddleware = [
+  helmet(), // Set security headers
+  cors({
+    origin: process.env.CLIENT_URL || 'http://localhost:3000',
+    credentials: true,
+  }),
+  mongoSanitize(), // Prevent NoSQL injection
+];
+
+module.exports = securityMiddleware;
+</code></pre>
+<h3 id="error-handling-2"><a class="header" href="#error-handling-2">Error Handling</a></h3>
+<pre><code class="language-javascript">// middleware/errorHandler.js
+const errorHandler = (err, req, res, next) =&gt; {
+  let error = { ...err };
+  error.message = err.message;
+
+  // Log error
+  console.error(err);
+
+  // Mongoose bad ObjectId
+  if (err.name === 'CastError') {
+    const message = 'Resource not found';
+    error = { message, statusCode: 404 };
+  }
+
+  res.status(error.statusCode || 500).json({
+    success: false,
+    error: error.message || 'Server Error'
+  });
+};
+
+module.exports = errorHandler;
+</code></pre>
+<hr>
+<p><strong>Next Up</strong>: Learn about database design and management! 🗄️</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="database-design"><a class="header" href="#database-design">Database Design</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="authentication"><a class="header" href="#authentication">Authentication</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="security-best-practices-1"><a class="header" href="#security-best-practices-1">Security Best Practices</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="project-structure-1"><a class="header" href="#project-structure-1">Project Structure</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="seo-optimization"><a class="header" href="#seo-optimization">SEO Optimization</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="unit-testing"><a class="header" href="#unit-testing">Unit Testing</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="integration-testing"><a class="header" href="#integration-testing">Integration Testing</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="end-to-end-testing"><a class="header" href="#end-to-end-testing">End-to-End Testing</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="cicd-pipeline"><a class="header" href="#cicd-pipeline">CI/CD Pipeline</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="deployment-strategies"><a class="header" href="#deployment-strategies">Deployment Strategies</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="environment-management"><a class="header" href="#environment-management">Environment Management</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="e-commerce-mobile-app"><a class="header" href="#e-commerce-mobile-app">E-Commerce Mobile App</a></h1>
+<p>A complete e-commerce mobile application built with React Native, featuring product catalog, shopping cart, user authentication, and payment integration.</p>
+<h2 id="-project-overview"><a class="header" href="#-project-overview">🎯 Project Overview</a></h2>
+<p>This is a production-ready e-commerce mobile application that demonstrates real-world development skills including API integration, state management, authentication, and payment processing.</p>
+<h3 id="key-features"><a class="header" href="#key-features">Key Features</a></h3>
+<ul>
+<li>Product browsing and search</li>
+<li>Shopping cart management</li>
+<li>User authentication and profiles</li>
+<li>Payment integration (Stripe)</li>
+<li>Order tracking</li>
+<li>Push notifications</li>
+<li>Offline mode support</li>
+</ul>
+<h2 id="-tech-stack"><a class="header" href="#-tech-stack">🛠️ Tech Stack</a></h2>
+<h3 id="frontend"><a class="header" href="#frontend">Frontend</a></h3>
+<ul>
+<li><strong>React Native</strong>: Cross-platform mobile development</li>
+<li><strong>React Navigation</strong>: App navigation</li>
+<li><strong>Redux Toolkit</strong>: State management</li>
+<li><strong>React Native Elements</strong>: UI components</li>
+<li><strong>React Native Vector Icons</strong>: Icon library</li>
+</ul>
+<h3 id="backend--services"><a class="header" href="#backend--services">Backend &amp; Services</a></h3>
+<ul>
+<li><strong>Node.js/Express</strong>: Backend API</li>
+<li><strong>MongoDB</strong>: Database</li>
+<li><strong>JWT</strong>: Authentication</li>
+<li><strong>Stripe</strong>: Payment processing</li>
+<li><strong>Firebase</strong>: Push notifications</li>
+<li><strong>Cloudinary</strong>: Image storage</li>
+</ul>
+<h3 id="development-tools-1"><a class="header" href="#development-tools-1">Development Tools</a></h3>
+<ul>
+<li><strong>TypeScript</strong>: Type safety</li>
+<li><strong>ESLint/Prettier</strong>: Code quality</li>
+<li><strong>Jest</strong>: Testing</li>
+<li><strong>Flipper</strong>: Debugging</li>
+</ul>
+<h2 id="-project-structure"><a class="header" href="#-project-structure">📁 Project Structure</a></h2>
+<pre><code>ecommerce-app/
+├── src/
+│   ├── components/          # Reusable UI components
+│   │   ├── ProductCard/
+│   │   ├── CartItem/
+│   │   ├── SearchBar/
+│   │   └── Button/
+│   ├── screens/            # App screens
+│   │   ├── HomeScreen/
+│   │   ├── ProductScreen/
+│   │   ├── CartScreen/
+│   │   ├── ProfileScreen/
+│   │   └── CheckoutScreen/
+│   ├── navigation/         # Navigation setup
+│   ├── store/             # Redux store
+│   │   ├── slices/
+│   │   └── middleware/
+│   ├── services/          # API services
+│   │   ├── api.js
+│   │   ├── auth.js
+│   │   └── payments.js
+│   ├── utils/             # Utility functions
+│   ├── hooks/             # Custom hooks
+│   └── constants/         # App constants
+├── assets/                # Images, fonts
+├── __tests__/             # Test files
+└── docs/                  # Documentation
+</code></pre>
+<h2 id="-core-components-1"><a class="header" href="#-core-components-1">🏗️ Core Components</a></h2>
+<h3 id="productcard-component"><a class="header" href="#productcard-component">ProductCard Component</a></h3>
+<pre><code class="language-javascript">import React from 'react';
+import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { useDispatch } from 'react-redux';
+import { addItemToCart } from '../store/slices/cartSlice';
+
+const ProductCard = ({ product, onPress }) =&gt; {
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () =&gt; {
+    dispatch(addItemToCart(product));
+  };
+
+  return (
+    &lt;TouchableOpacity style={styles.card} onPress={onPress}&gt;
+      &lt;Image source={{ uri: product.image }} style={styles.image} /&gt;
+      &lt;View style={styles.info}&gt;
+        &lt;Text style={styles.name}&gt;{product.name}&lt;/Text&gt;
+        &lt;Text style={styles.price}&gt;${product.price}&lt;/Text&gt;
+        &lt;TouchableOpacity 
+          style={styles.addButton}
+          onPress={handleAddToCart}
+        &gt;
+          &lt;Text style={styles.addButtonText}&gt;Add to Cart&lt;/Text&gt;
+        &lt;/TouchableOpacity&gt;
+      &lt;/View&gt;
+    &lt;/TouchableOpacity&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  card: {
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    margin: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  image: {
+    width: '100%',
+    height: 150,
+    borderTopLeftRadius: 8,
+    borderTopRightRadius: 8,
+  },
+  info: {
+    padding: 12,
+  },
+  name: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: 4,
+  },
+  price: {
+    fontSize: 14,
+    color: '#888',
+    marginBottom: 8,
+  },
+  addButton: {
+    backgroundColor: '#007AFF',
+    padding: 8,
+    borderRadius: 4,
+    alignItems: 'center',
+  },
+  addButtonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+  },
+});
+
+export default ProductCard;
+</code></pre>
+<h3 id="shopping-cart-service"><a class="header" href="#shopping-cart-service">Shopping Cart Service</a></h3>
+<pre><code class="language-javascript">// services/cart.js
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import api from './api';
+
+class CartService {
+  constructor() {
+    this.CART_KEY = '@cart_items';
+  }
+
+  // Get cart from local storage
+  async getCart() {
+    try {
+      const cartData = await AsyncStorage.getItem(this.CART_KEY);
+      return cartData ? JSON.parse(cartData) : [];
+    } catch (error) {
+      console.error('Error getting cart:', error);
+      return [];
+    }
+  }
+
+  // Save cart to local storage
+  async saveCart(cartItems) {
+    try {
+      await AsyncStorage.setItem(this.CART_KEY, JSON.stringify(cartItems));
+    } catch (error) {
+      console.error('Error saving cart:', error);
+    }
+  }
+
+  // Add item to cart
+  async addItem(product, quantity = 1) {
+    const cart = await this.getCart();
+    const existingItem = cart.find(item =&gt; item.id === product.id);
+
+    if (existingItem) {
+      existingItem.quantity += quantity;
+    } else {
+      cart.push({
+        ...product,
+        quantity,
+        addedAt: new Date().toISOString(),
+      });
+    }
+
+    await this.saveCart(cart);
+    return cart;
+  }
+
+  // Remove item from cart
+  async removeItem(productId) {
+    const cart = await this.getCart();
+    const updatedCart = cart.filter(item =&gt; item.id !== productId);
+    await this.saveCart(updatedCart);
+    return updatedCart;
+  }
+
+  // Update item quantity
+  async updateQuantity(productId, quantity) {
+    const cart = await this.getCart();
+    const item = cart.find(item =&gt; item.id === productId);
+
+    if (item) {
+      item.quantity = quantity;
+      if (quantity &lt;= 0) {
+        return this.removeItem(productId);
+      }
+    }
+
+    await this.saveCart(cart);
+    return cart;
+  }
+
+  // Calculate total
+  calculateTotal(cartItems) {
+    return cartItems.reduce((total, item) =&gt; {
+      return total + (item.price * item.quantity);
+    }, 0);
+  }
+
+  // Sync with server
+  async syncWithServer(userId) {
+    try {
+      const localCart = await this.getCart();
+      const response = await api.post('/cart/sync', {
+        userId,
+        items: localCart,
+      });
+      
+      await this.saveCart(response.data.cart);
+      return response.data.cart;
+    } catch (error) {
+      console.error('Error syncing cart:', error);
+      throw error;
+    }
+  }
+}
+
+export default new CartService();
+</code></pre>
+<h2 id="-authentication-system"><a class="header" href="#-authentication-system">🔐 Authentication System</a></h2>
+<h3 id="jwt-authentication-service"><a class="header" href="#jwt-authentication-service">JWT Authentication Service</a></h3>
+<pre><code class="language-javascript">// services/auth.js
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import api from './api';
+
+class AuthService {
+  constructor() {
+    this.TOKEN_KEY = '@auth_token';
+    this.USER_KEY = '@user_data';
+  }
+
+  // Login user
+  async login(email, password) {
+    try {
+      const response = await api.post('/auth/login', {
+        email,
+        password,
+      });
+
+      const { token, user } = response.data;
+      
+      // Save token and user data
+      await AsyncStorage.setItem(this.TOKEN_KEY, token);
+      await AsyncStorage.setItem(this.USER_KEY, JSON.stringify(user));
+      
+      // Set default auth header
+      api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+      
+      return { token, user };
+    } catch (error) {
+      throw error.response?.data?.message || 'Login failed';
+    }
+  }
+
+  // Register user
+  async register(userData) {
+    try {
+      const response = await api.post('/auth/register', userData);
+      return response.data;
+    } catch (error) {
+      throw error.response?.data?.message || 'Registration failed';
+    }
+  }
+
+  // Logout user
+  async logout() {
+    try {
+      // Remove from storage
+      await AsyncStorage.removeItem(this.TOKEN_KEY);
+      await AsyncStorage.removeItem(this.USER_KEY);
+      
+      // Remove auth header
+      delete api.defaults.headers.common['Authorization'];
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
+  }
+
+  // Get current user
+  async getCurrentUser() {
+    try {
+      const userData = await AsyncStorage.getItem(this.USER_KEY);
+      return userData ? JSON.parse(userData) : null;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  // Get auth token
+  async getToken() {
+    try {
+      return await AsyncStorage.getItem(this.TOKEN_KEY);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  // Check if user is authenticated
+  async isAuthenticated() {
+    const token = await this.getToken();
+    return !!token;
+  }
+
+  // Initialize auth state
+  async initializeAuth() {
+    const token = await this.getToken();
+    if (token) {
+      api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    }
+    return token;
+  }
+}
+
+export default new AuthService();
+</code></pre>
+<h2 id="-payment-integration"><a class="header" href="#-payment-integration">💳 Payment Integration</a></h2>
+<h3 id="stripe-payment-service"><a class="header" href="#stripe-payment-service">Stripe Payment Service</a></h3>
+<pre><code class="language-javascript">// services/payments.js
+import { Platform } from 'react-native';
+import api from './api';
+
+class PaymentService {
+  // Create payment intent
+  async createPaymentIntent(amount, currency = 'USD') {
+    try {
+      const response = await api.post('/payments/create-intent', {
+        amount: Math.round(amount * 100), // Convert to cents
+        currency,
+      });
+      
+      return response.data;
+    } catch (error) {
+      throw error.response?.data?.message || 'Payment failed';
+    }
+  }
+
+  // Process payment
+  async processPayment(paymentMethodId, amount) {
+    try {
+      const response = await api.post('/payments/process', {
+        paymentMethodId,
+        amount: Math.round(amount * 100),
+      });
+      
+      return response.data;
+    } catch (error) {
+      throw error.response?.data?.message || 'Payment processing failed';
+    }
+  }
+
+  // Get payment methods
+  async getPaymentMethods() {
+    try {
+      const response = await api.get('/payments/methods');
+      return response.data;
+    } catch (error) {
+      throw error.response?.data?.message || 'Failed to get payment methods';
+    }
+  }
+
+  // Add payment method
+  async addPaymentMethod(cardDetails) {
+    try {
+      const response = await api.post('/payments/methods', cardDetails);
+      return response.data;
+    } catch (error) {
+      throw error.response?.data?.message || 'Failed to add payment method';
+    }
+  }
+
+  // Format price for display
+  formatPrice(amount, currency = 'USD') {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency,
+    }).format(amount);
+  }
+
+  // Validate card number
+  validateCardNumber(cardNumber) {
+    const cleaned = cardNumber.replace(/\s/g, '');
+    const regex = /^[0-9]{13,19}$/;
+    return regex.test(cleaned);
+  }
+
+  // Validate expiry date
+  validateExpiryDate(expiry) {
+    const regex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+    if (!regex.test(expiry)) return false;
+    
+    const [month, year] = expiry.split('/');
+    const currentYear = new Date().getFullYear() % 100;
+    const currentMonth = new Date().getMonth() + 1;
+    
+    const expYear = parseInt(year);
+    const expMonth = parseInt(month);
+    
+    if (expYear &lt; currentYear) return false;
+    if (expYear === currentYear &amp;&amp; expMonth &lt; currentMonth) return false;
+    
+    return true;
+  }
+
+  // Validate CVV
+  validateCVV(cvv) {
+    const regex = /^[0-9]{3,4}$/;
+    return regex.test(cvv);
+  }
+}
+
+export default new PaymentService();
+</code></pre>
+<h2 id="-testing-strategy"><a class="header" href="#-testing-strategy">🧪 Testing Strategy</a></h2>
+<h3 id="component-testing"><a class="header" href="#component-testing">Component Testing</a></h3>
+<pre><code class="language-javascript">// __tests__/components/ProductCard.test.js
+import React from 'react';
+import { render, fireEvent } from '@testing-library/react-native';
+import { Provider } from 'react-redux';
+import { configureStore } from '@reduxjs/toolkit';
+import ProductCard from '../../src/components/ProductCard';
+import cartSlice from '../../src/store/slices/cartSlice';
+
+// Test store setup
+const createTestStore = () =&gt; {
+  return configureStore({
+    reducer: {
+      cart: cartSlice,
+    },
+  });
+};
+
+const mockProduct = {
+  id: '1',
+  name: 'Test Product',
+  price: 29.99,
+  image: 'https://example.com/image.jpg',
+};
+
+describe('ProductCard', () =&gt; {
+  it('renders product information correctly', () =&gt; {
+    const store = createTestStore();
+    
+    const { getByText } = render(
+      &lt;Provider store={store}&gt;
+        &lt;ProductCard product={mockProduct} onPress={() =&gt; {}} /&gt;
+      &lt;/Provider&gt;
+    );
+    
+    expect(getByText('Test Product')).toBeTruthy();
+    expect(getByText('$29.99')).toBeTruthy();
+  });
+
+  it('adds item to cart when button is pressed', () =&gt; {
+    const store = createTestStore();
+    const mockOnPress = jest.fn();
+    
+    const { getByText } = render(
+      &lt;Provider store={store}&gt;
+        &lt;ProductCard product={mockProduct} onPress={mockOnPress} /&gt;
+      &lt;/Provider&gt;
+    );
+    
+    fireEvent.press(getByText('Add to Cart'));
+    
+    const state = store.getState();
+    expect(state.cart.items).toHaveLength(1);
+    expect(state.cart.items[0].id).toBe('1');
+  });
+
+  it('calls onPress when card is pressed', () =&gt; {
+    const store = createTestStore();
+    const mockOnPress = jest.fn();
+    
+    const { getByTestId } = render(
+      &lt;Provider store={store}&gt;
+        &lt;ProductCard 
+          product={mockProduct} 
+          onPress={mockOnPress}
+          testID="product-card"
+        /&gt;
+      &lt;/Provider&gt;
+    );
+    
+    fireEvent.press(getByTestId('product-card'));
+    expect(mockOnPress).toHaveBeenCalledWith(mockProduct);
+  });
+});
+</code></pre>
+<h2 id="-screens-overview"><a class="header" href="#-screens-overview">📱 Screens Overview</a></h2>
+<h3 id="home-screen"><a class="header" href="#home-screen">Home Screen</a></h3>
+<ul>
+<li>Featured products carousel</li>
+<li>Category navigation</li>
+<li>Search functionality</li>
+<li>Recent products</li>
+</ul>
+<h3 id="product-screen"><a class="header" href="#product-screen">Product Screen</a></h3>
+<ul>
+<li>Product details</li>
+<li>Image gallery</li>
+<li>Reviews and ratings</li>
+<li>Related products</li>
+</ul>
+<h3 id="cart-screen"><a class="header" href="#cart-screen">Cart Screen</a></h3>
+<ul>
+<li>Cart items list</li>
+<li>Quantity controls</li>
+<li>Price calculation</li>
+<li>Checkout button</li>
+</ul>
+<h3 id="checkout-screen"><a class="header" href="#checkout-screen">Checkout Screen</a></h3>
+<ul>
+<li>Shipping information</li>
+<li>Payment method selection</li>
+<li>Order summary</li>
+<li>Place order</li>
+</ul>
+<h3 id="profile-screen"><a class="header" href="#profile-screen">Profile Screen</a></h3>
+<ul>
+<li>User information</li>
+<li>Order history</li>
+<li>Settings</li>
+<li>Logout</li>
+</ul>
+<h2 id="-deployment"><a class="header" href="#-deployment">🚀 Deployment</a></h2>
+<h3 id="build-configuration"><a class="header" href="#build-configuration">Build Configuration</a></h3>
+<pre><code class="language-javascript">// metro.config.js
+const { getDefaultConfig } = require('expo/metro-config');
+
+const config = getDefaultConfig(__dirname);
+
+// Add additional configuration
+config.resolver.assetExts.push(...['bin', 'jpg', 'png', 'svg']);
+
+module.exports = config;
+</code></pre>
+<h3 id="environment-setup-1"><a class="header" href="#environment-setup-1">Environment Setup</a></h3>
+<pre><code class="language-javascript">// config/environment.js
+const environments = {
+  development: {
+    apiUrl: 'http://localhost:3000/api',
+    stripeKey: 'pk_test_...',
+    enableLogging: true,
+  },
+  staging: {
+    apiUrl: 'https://staging-api.ecommerce.com/api',
+    stripeKey: 'pk_test_...',
+    enableLogging: true,
+  },
+  production: {
+    apiUrl: 'https://api.ecommerce.com/api',
+    stripeKey: 'pk_live_...',
+    enableLogging: false,
+  },
+};
+
+const currentEnv = environments[process.env.NODE_ENV || 'development'];
+
+export default currentEnv;
+</code></pre>
+<h2 id="-performance-optimization-2"><a class="header" href="#-performance-optimization-2">📊 Performance Optimization</a></h2>
+<h3 id="image-optimization-1"><a class="header" href="#image-optimization-1">Image Optimization</a></h3>
+<ul>
+<li>WebP format for product images</li>
+<li>Lazy loading for product lists</li>
+<li>Image caching strategies</li>
+<li>Progressive loading</li>
+</ul>
+<h3 id="state-management-2"><a class="header" href="#state-management-2">State Management</a></h3>
+<ul>
+<li>Redux Toolkit for efficient updates</li>
+<li>Memoization for expensive calculations</li>
+<li>Selective re-renders with React.memo</li>
+<li>Optimized selectors</li>
+</ul>
+<h3 id="network-optimization"><a class="header" href="#network-optimization">Network Optimization</a></h3>
+<ul>
+<li>API response caching</li>
+<li>Request batching</li>
+<li>Offline support</li>
+<li>Background sync</li>
+</ul>
+<h2 id="-live-demo--repository"><a class="header" href="#-live-demo--repository">🔗 Live Demo &amp; Repository</a></h2>
+<h3 id="github-repository"><a class="header" href="#github-repository">GitHub Repository</a></h3>
+<pre><code>https://github.com/yourusername/ecommerce-mobile-app
+</code></pre>
+<h3 id="live-app-stores"><a class="header" href="#live-app-stores">Live App Stores</a></h3>
+<ul>
+<li><strong>Google Play Store</strong>: [Link to Play Store]</li>
+<li><strong>Apple App Store</strong>: [Link to App Store]</li>
+</ul>
+<h3 id="demo-credentials"><a class="header" href="#demo-credentials">Demo Credentials</a></h3>
+<ul>
+<li><strong>Email</strong>: demo@ecommerce.com</li>
+<li><strong>Password</strong>: demo123</li>
+</ul>
+<h2 id="-key-learning-outcomes"><a class="header" href="#-key-learning-outcomes">🎯 Key Learning Outcomes</a></h2>
+<p>After building this project, you’ll have mastered:</p>
+<ol>
+<li>
+<p><strong>React Native Development</strong></p>
+<ul>
+<li>Component architecture</li>
+<li>Navigation patterns</li>
+<li>State management</li>
+<li>Performance optimization</li>
+</ul>
+</li>
+<li>
+<p><strong>API Integration</strong></p>
+<ul>
+<li>REST API consumption</li>
+<li>Error handling</li>
+<li>Authentication</li>
+<li>Data synchronization</li>
+</ul>
+</li>
+<li>
+<p><strong>E-commerce Features</strong></p>
+<ul>
+<li>Shopping cart logic</li>
+<li>Payment processing</li>
+<li>Order management</li>
+<li>User authentication</li>
+</ul>
+</li>
+<li>
+<p><strong>Production Practices</strong></p>
+<ul>
+<li>Testing strategies</li>
+<li>Code organization</li>
+<li>Error handling</li>
+<li>Performance optimization</li>
+</ul>
+</li>
+<li>
+<p><strong>Mobile UX/UI</strong></p>
+<ul>
+<li>Responsive design</li>
+<li>Touch interactions</li>
+<li>Platform-specific features</li>
+<li>Accessibility</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><strong>Next Project</strong>: AI Chat Application - Learn to integrate AI into mobile apps! 🤖</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ai-chat-application"><a class="header" href="#ai-chat-application">AI Chat Application</a></h1>
+<p>A complete ChatGPT clone built with React Native and Node.js, featuring real-time AI conversations, message history, and advanced AI integration.</p>
+<h2 id="-project-overview-1"><a class="header" href="#-project-overview-1">🎯 Project Overview</a></h2>
+<p>This is a production-ready AI chat application that demonstrates modern AI integration, real-time communication, and mobile app development. It showcases how to build intelligent applications using OpenAI’s API while providing an excellent user experience.</p>
+<h3 id="key-features-1"><a class="header" href="#key-features-1">Key Features</a></h3>
+<ul>
+<li>Real-time AI conversations with ChatGPT</li>
+<li>Message history and conversation management</li>
+<li>Multiple AI models (GPT-3.5, GPT-4)</li>
+<li>Voice input and text-to-speech</li>
+<li>Offline mode support</li>
+<li>User authentication and profiles</li>
+<li>Custom prompts and templates</li>
+<li>Dark/light theme support</li>
+</ul>
+<h2 id="-tech-stack-1"><a class="header" href="#-tech-stack-1">🛠️ Tech Stack</a></h2>
+<h3 id="frontend-react-native"><a class="header" href="#frontend-react-native">Frontend (React Native)</a></h3>
+<ul>
+<li><strong>React Native</strong>: Cross-platform mobile development</li>
+<li><strong>React Navigation</strong>: App navigation</li>
+<li><strong>AsyncStorage</strong>: Local data persistence</li>
+<li><strong>React Native Voice</strong>: Speech-to-text</li>
+<li><strong>React Native TTS</strong>: Text-to-speech</li>
+<li><strong>Gifted Chat</strong>: Chat UI components</li>
+</ul>
+<h3 id="backend-nodejs"><a class="header" href="#backend-nodejs">Backend (Node.js)</a></h3>
+<ul>
+<li><strong>Node.js/Express</strong>: Server and API</li>
+<li><strong>OpenAI API</strong>: AI integration</li>
+<li><strong>Socket.io</strong>: Real-time communication</li>
+<li><strong>MongoDB</strong>: Conversation storage</li>
+<li><strong>JWT</strong>: Authentication</li>
+<li><strong>Redis</strong>: Caching and rate limiting</li>
+</ul>
+<h2 id="-project-structure-1"><a class="header" href="#-project-structure-1">📁 Project Structure</a></h2>
+<pre><code>ai-chat-app/
+├── mobile/                    # React Native app
+│   ├── src/
+│   │   ├── components/        # UI components
+│   │   │   ├── ChatInput/
+│   │   │   ├── MessageBubble/
+│   │   │   └── VoiceButton/
+│   │   ├── screens/           # App screens
+│   │   │   ├── ChatScreen/
+│   │   │   ├── HistoryScreen/
+│   │   │   └── SettingsScreen/
+│   │   └── services/          # API services
+│   │       ├── aiService.js
+│   │       └── authService.js
+├── backend/                   # Node.js server
+│   ├── src/
+│   │   ├── controllers/       # Route controllers
+│   │   │   ├── chatController.js
+│   │   │   └── authController.js
+│   │   ├── services/          # Business logic
+│   │   │   ├── openaiService.js
+│   │   │   └── promptService.js
+│   │   └── models/            # Database models
+│   │       ├── User.js
+│   │       └── Conversation.js
+└── docs/                      # Documentation
+</code></pre>
+<h2 id="-core-components-2"><a class="header" href="#-core-components-2">🏗️ Core Components</a></h2>
+<h3 id="chat-input-component"><a class="header" href="#chat-input-component">Chat Input Component</a></h3>
+<pre><code class="language-javascript">// mobile/src/components/ChatInput/ChatInput.js
+import React, { useState, useRef } from 'react';
+import { View, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import Voice from '@react-native-voice/voice';
+
+const ChatInput = ({ onSend, isLoading }) =&gt; {
+  const [message, setMessage] = useState('');
+  const [isRecording, setIsRecording] = useState(false);
+  const inputRef = useRef(null);
+
+  React.useEffect(() =&gt; {
+    Voice.onSpeechStart = () =&gt; setIsRecording(true);
+    Voice.onSpeechEnd = () =&gt; setIsRecording(false);
+    Voice.onSpeechResults = (e) =&gt; setMessage(e.value[0]);
+
+    return () =&gt; {
+      Voice.destroy().then(Voice.removeAllListeners);
+    };
+  }, []);
+
+  const handleSend = () =&gt; {
+    if (message.trim() &amp;&amp; !isLoading) {
+      onSend(message.trim());
+      setMessage('');
+    }
+  };
+
+  const handleVoiceStart = async () =&gt; {
+    try {
+      await Voice.start('en-US');
+    } catch (error) {
+      console.error('Voice start error:', error);
+    }
+  };
+
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;View style={styles.inputContainer}&gt;
+        &lt;TextInput
+          ref={inputRef}
+          style={styles.input}
+          placeholder="Type a message..."
+          value={message}
+          onChangeText={setMessage}
+          multiline
+          editable={!isLoading}
+        /&gt;
+      &lt;/View&gt;
+
+      &lt;View style={styles.buttonContainer}&gt;
+        {isRecording ? (
+          &lt;TouchableOpacity
+            style={[styles.voiceButton, styles.recording]}
+            onPress={() =&gt; Voice.stop()}
+          &gt;
+            &lt;Ionicons name="stop" size={24} color="#fff" /&gt;
+          &lt;/TouchableOpacity&gt;
+        ) : (
+          &lt;TouchableOpacity
+            style={styles.voiceButton}
+            onPress={handleVoiceStart}
+            disabled={isLoading}
+          &gt;
+            &lt;Ionicons name="mic" size={24} color="#fff" /&gt;
+          &lt;/TouchableOpacity&gt;
+        )}
+
+        &lt;TouchableOpacity
+          style={[styles.sendButton, (!message.trim() || isLoading) &amp;&amp; styles.disabled]}
+          onPress={handleSend}
+          disabled={!message.trim() || isLoading}
+        &gt;
+          &lt;Ionicons name="send" size={20} color="#fff" /&gt;
+        &lt;/TouchableOpacity&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    padding: 16,
+    backgroundColor: '#f8f9fa',
+  },
+  inputContainer: {
+    flex: 1,
+    backgroundColor: '#fff',
+    borderRadius: 20,
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    marginRight: 12,
+  },
+  input: {
+    flex: 1,
+    fontSize: 16,
+    maxHeight: 100,
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+  voiceButton: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: '#28a745',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  recording: {
+    backgroundColor: '#dc3545',
+  },
+  sendButton: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: '#007AFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  disabled: {
+    backgroundColor: '#e9ecef',
+  },
+});
+
+export default ChatInput;
+</code></pre>
+<h3 id="ai-service-integration"><a class="header" href="#ai-service-integration">AI Service Integration</a></h3>
+<pre><code class="language-javascript">// mobile/src/services/aiService.js
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+class AIService {
+  constructor() {
+    this.baseURL = 'https://your-api-domain.com/api';
+  }
+
+  // Send message to AI
+  async sendMessage(message, conversationId = null, model = 'gpt-3.5-turbo') {
+    try {
+      const history = await this.getConversationHistory(conversationId);
+      
+      const messages = [
+        {
+          role: 'system',
+          content: 'You are a helpful AI assistant.'
+        },
+        ...history,
+        { role: 'user', content: message }
+      ];
+
+      const response = await fetch(`${this.baseURL}/chat/completions`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${await this.getAuthToken()}`,
+        },
+        body: JSON.stringify({
+          messages,
+          model,
+          max_tokens: 1000,
+          temperature: 0.7,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      
+      await this.updateConversationHistory(conversationId, message, data.choices[0].message.content);
+      
+      return {
+        id: data.id,
+        message: data.choices[0].message.content,
+        usage: data.usage,
+      };
+    } catch (error) {
+      console.error('AI Service Error:', error);
+      throw this.handleError(error);
+    }
+  }
+
+  // Get conversation history
+  async getConversationHistory(conversationId) {
+    if (!conversationId) return [];
+    
+    try {
+      const key = `conversation_${conversationId}`;
+      const history = await AsyncStorage.getItem(key);
+      return history ? JSON.parse(history) : [];
+    } catch (error) {
+      console.error('Get history error:', error);
+      return [];
+    }
+  }
+
+  // Update conversation history
+  async updateConversationHistory(conversationId, userMessage, aiMessage) {
+    if (!conversationId) return;
+    
+    try {
+      const key = `conversation_${conversationId}`;
+      const history = await this.getConversationHistory(conversationId);
+      
+      const newHistory = [
+        ...history,
+        { role: 'user', content: userMessage },
+        { role: 'assistant', content: aiMessage }
+      ];
+      
+      // Keep only last 20 messages
+      const trimmedHistory = newHistory.slice(-20);
+      
+      await AsyncStorage.setItem(key, JSON.stringify(trimmedHistory));
+    } catch (error) {
+      console.error('Update history error:', error);
+    }
+  }
+
+  // Handle errors
+  handleError(error) {
+    if (error.message.includes('401')) {
+      return new Error('Authentication expired. Please login again.');
+    } else if (error.message.includes('429')) {
+      return new Error('Too many requests. Please try again later.');
+    } else {
+      return new Error('An error occurred. Please try again.');
+    }
+  }
+}
+
+export default new AIService();
+</code></pre>
+<h2 id="-backend-ai-service"><a class="header" href="#-backend-ai-service">🔐 Backend AI Service</a></h2>
+<h3 id="openai-integration"><a class="header" href="#openai-integration">OpenAI Integration</a></h3>
+<pre><code class="language-javascript">// backend/src/services/openaiService.js
+const OpenAI = require('openai');
+const redis = require('../config/redis');
+
+class OpenAIService {
+  constructor() {
+    this.openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
+  }
+
+  // Generate chat completion
+  async generateCompletion(messages, model = 'gpt-3.5-turbo', options = {}) {
+    try {
+      const cacheKey = this.generateCacheKey(messages, model, options);
+      const cached = await redis.get(cacheKey);
+      
+      if (cached) {
+        return JSON.parse(cached);
+      }
+
+      const response = await this.openai.chat.completions.create({
+        model,
+        messages,
+        max_tokens: options.maxTokens || 1000,
+        temperature: options.temperature || 0.7,
+      });
+      
+      // Cache response for 1 hour
+      await redis.setex(cacheKey, 3600, JSON.stringify(response));
+      
+      return response;
+    } catch (error) {
+      console.error('OpenAI API error:', error);
+      
+      if (error.status === 429) {
+        throw new Error('Rate limit exceeded. Please try again later.');
+      } else if (error.status === 401) {
+        throw new Error('Invalid API key.');
+      } else {
+        throw new Error('AI service temporarily unavailable.');
+      }
+    }
+  }
+
+  // Generate cache key
+  generateCacheKey(messages, model, options) {
+    const keyData = {
+      messages: messages.map(m =&gt; ({ role: m.role, content: m.content })),
+      model,
+      options: {
+        maxTokens: options.maxTokens,
+        temperature: options.temperature,
+      },
+    };
+    
+    return `openai:${Buffer.from(JSON.stringify(keyData)).toString('base64')}`;
+  }
+}
+
+module.exports = new OpenAIService();
+</code></pre>
+<h2 id="-testing"><a class="header" href="#-testing">🧪 Testing</a></h2>
+<h3 id="unit-tests"><a class="header" href="#unit-tests">Unit Tests</a></h3>
+<pre><code class="language-javascript">// backend/__tests__/services/openaiService.test.js
+const OpenAIService = require('../../src/services/openaiService');
+
+describe('OpenAI Service', () =&gt; {
+  describe('generateCacheKey', () =&gt; {
+    it('should generate consistent cache key', () =&gt; {
+      const messages = [
+        { role: 'user', content: 'Hello' }
+      ];
+      const model = 'gpt-3.5-turbo';
+      
+      const key1 = OpenAIService.generateCacheKey(messages, model, {});
+      const key2 = OpenAIService.generateCacheKey(messages, model, {});
+      
+      expect(key1).toBe(key2);
+    });
+
+    it('should generate different keys for different inputs', () =&gt; {
+      const messages1 = [{ role: 'user', content: 'Hello' }];
+      const messages2 = [{ role: 'user', content: 'Hi' }];
+      
+      const key1 = OpenAIService.generateCacheKey(messages1, 'gpt-3.5-turbo', {});
+      const key2 = OpenAIService.generateCacheKey(messages2, 'gpt-3.5-turbo', {});
+      
+      expect(key1).not.toBe(key2);
+    });
+  });
+});
+</code></pre>
+<h2 id="-deployment-1"><a class="header" href="#-deployment-1">🚀 Deployment</a></h2>
+<h3 id="environment-setup-2"><a class="header" href="#environment-setup-2">Environment Setup</a></h3>
+<pre><code class="language-bash"># Backend environment variables
+NODE_ENV=production
+PORT=5000
+OPENAI_API_KEY=your_openai_api_key
+MONGODB_URI=mongodb://localhost:27017/aichat
+REDIS_HOST=localhost
+REDIS_PORT=6379
+JWT_SECRET=your_jwt_secret
+</code></pre>
+<h3 id="docker-configuration"><a class="header" href="#docker-configuration">Docker Configuration</a></h3>
+<pre><code class="language-dockerfile"># backend/Dockerfile
+FROM node:18-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm ci --only=production
+
+COPY . .
+
+EXPOSE 5000
+
+CMD ["npm", "start"]
+</code></pre>
+<h2 id="-performance-optimization-3"><a class="header" href="#-performance-optimization-3">📊 Performance Optimization</a></h2>
+<h3 id="caching-strategy"><a class="header" href="#caching-strategy">Caching Strategy</a></h3>
+<pre><code class="language-javascript">// backend/src/middleware/cache.js
+const redis = require('../config/redis');
+
+const cache = (duration = 300) =&gt; {
+  return async (req, res, next) =&gt; {
+    const key = req.originalUrl;
+    
+    try {
+      const cached = await redis.get(key);
+      if (cached) {
+        return res.json(JSON.parse(cached));
+      }
+      
+      res.sendResponse = res.json;
+      res.json = (body) =&gt; {
+        redis.setex(key, duration, JSON.stringify(body));
+        res.sendResponse(body);
+      };
+      
+      next();
+    } catch (error) {
+      next();
+    }
+  };
+};
+
+module.exports = cache;
+</code></pre>
+<h2 id="-live-demo--repository-1"><a class="header" href="#-live-demo--repository-1">🔗 Live Demo &amp; Repository</a></h2>
+<h3 id="github-repository-1"><a class="header" href="#github-repository-1">GitHub Repository</a></h3>
+<pre><code>https://github.com/yourusername/ai-chat-app
+</code></pre>
+<h3 id="live-demo"><a class="header" href="#live-demo">Live Demo</a></h3>
+<ul>
+<li><strong>Mobile App</strong>: [Link to deployed app]</li>
+<li><strong>API Documentation</strong>: [Link to API docs]</li>
+</ul>
+<h3 id="demo-credentials-1"><a class="header" href="#demo-credentials-1">Demo Credentials</a></h3>
+<ul>
+<li><strong>Email</strong>: demo@aichat.com</li>
+<li><strong>Password</strong>: demo123</li>
+</ul>
+<h2 id="-key-learning-outcomes-1"><a class="header" href="#-key-learning-outcomes-1">🎯 Key Learning Outcomes</a></h2>
+<p>After building this project, you’ll have mastered:</p>
+<ol>
+<li>
+<p><strong>AI Integration</strong></p>
+<ul>
+<li>OpenAI API integration</li>
+<li>Prompt engineering techniques</li>
+<li>Token management and cost optimization</li>
+</ul>
+</li>
+<li>
+<p><strong>Real-time Communication</strong></p>
+<ul>
+<li>WebSocket implementation</li>
+<li>Streaming responses</li>
+<li>Voice recognition and synthesis</li>
+</ul>
+</li>
+<li>
+<p><strong>Mobile Development</strong></p>
+<ul>
+<li>React Native advanced patterns</li>
+<li>Voice input integration</li>
+<li>Offline data synchronization</li>
+</ul>
+</li>
+<li>
+<p><strong>Backend Architecture</strong></p>
+<ul>
+<li>Scalable API design</li>
+<li>Caching strategies</li>
+<li>Rate limiting and security</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><strong>Next Project</strong>: SaaS Dashboard - Learn to build analytics dashboards! 📊</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="saas-dashboard"><a class="header" href="#saas-dashboard">SaaS Dashboard</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="portfolio-website"><a class="header" href="#portfolio-website">Portfolio Website</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="freelancing-guide"><a class="header" href="#freelancing-guide">Freelancing Guide</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="personal-branding"><a class="header" href="#personal-branding">Personal Branding</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="interview-preparation"><a class="header" href="#interview-preparation">Interview Preparation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="system-design"><a class="header" href="#system-design">System Design</a></h1>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-c2a407aa.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>
