@@ -1,23 +1,60 @@
 [book]
-title = "Jahanzaib Dev Handbook"
+title = "Jahanzaib Dev Handbook - World-Class Developer Portfolio"
 authors = ["Muhammad Jahanzaib"]
 language = "en"
 src = "src"
+description = "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise"
+multilingual = false
 
 [build]
 build-dir = "book"
 
 [output.html]
-default-theme = "light"
+default-theme = "dark"
 preferred-dark-theme = "coal"
-git-repository-url = "https://github.com/yourusername/jahanzaib-dev-handbook"
-edit-url-template = "https://github.com/yourusername/jahanzaib-dev-handbook/edit/main/{path}"
-site-url = "https://yourusername.github.io/jahanzaib-dev-handbook"
+git-repository-url = "https://github.com/JahanzaibJameel/jahanzaib-dev-handbook"
+edit-url-template = "https://github.com/JahanzaibJameel/jahanzaib-dev-handbook/edit/main/{path}"
+site-url = "https://jahanzaibjameel.github.io/jahanzaib-dev-handbook"
 
+# Ultra-premium theme configuration
+theme = "theme"
+
+# Additional CSS for premium styling
+additional-css = ["theme/css/premium-glassmorphism.css"]
+
+# Additional JavaScript for premium interactions
+additional-js = ["theme/js/premium-interactions.js"]
+
+# Premium navigation
+[output.html.navigation]
+use-menu-headers = true
+
+# Premium search
 [output.html.search]
 enable = true
-limit-results = 30
+limit-results = 50
+copy-js = true
 
+# Premium code highlighting
+[output.html.code]
+copy-js = true
+line-numbers = true
+
+# Premium folding
 [output.html.fold]
 enable = true
-level = 2
+level = 3
+
+# Premium print
+[output.html.print]
+enable = true
+page-break = true
+
+[output.pdf]
+# Premium PDF generation
+enable = true
+
+# Mermaid diagrams for premium visualizations
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+enable = true
