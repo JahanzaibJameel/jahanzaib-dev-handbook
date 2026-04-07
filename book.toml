@@ -4,7 +4,6 @@ authors = ["Muhammad Jahanzaib"]
 language = "en"
 src = "src"
 description = "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise"
-multilingual = false
 
 [build]
 build-dir = "book"
@@ -16,29 +15,17 @@ git-repository-url = "https://github.com/JahanzaibJameel/jahanzaib-dev-handbook"
 edit-url-template = "https://github.com/JahanzaibJameel/jahanzaib-dev-handbook/edit/main/{path}"
 site-url = "https://jahanzaibjameel.github.io/jahanzaib-dev-handbook"
 
-# Ultra-premium theme configuration
-theme = "theme"
+# Advanced animations and interactions
+additional-css = ["advanced-animations.css"]
+additional-js = ["advanced-interactions.js"]
 
-# Additional CSS for premium styling
-additional-css = ["theme/css/premium-glassmorphism.css"]
-
-# Additional JavaScript for premium interactions
-additional-js = ["theme/js/premium-interactions.js"]
-
-# Premium navigation
-[output.html.navigation]
-use-menu-headers = true
+# Premium sidebar navigation
+sidebar-header-nav = true
 
 # Premium search
 [output.html.search]
 enable = true
 limit-results = 50
-copy-js = true
-
-# Premium code highlighting
-[output.html.code]
-copy-js = true
-line-numbers = true
 
 # Premium folding
 [output.html.fold]
@@ -49,12 +36,3 @@ level = 3
 [output.html.print]
 enable = true
 page-break = true
-
-[output.pdf]
-# Premium PDF generation
-enable = true
-
-# Mermaid diagrams for premium visualizations
-[preprocessor.mermaid]
-command = "mdbook-mermaid"
-enable = true
