@@ -41,7 +41,7 @@ npm run dev
 
 ### Project Structure
 
-```
+```text
 my-app/
 ├── pages/              # Page components
 │   ├── _app.js         # App component (global styles, layout)

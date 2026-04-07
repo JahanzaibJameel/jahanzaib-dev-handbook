@@ -36,22 +36,24 @@ This is a production-ready AI chat application that demonstrates modern AI integ
 
 ## 📁 Project Structure
 
-```
+```text
 ai-chat-app/
 ├── mobile/                    # React Native app
 │   ├── src/
 │   │   ├── components/        # UI components
 │   │   │   ├── ChatInput/
-│   │   │   ├── MessageBubble/
-│   │   │   └── VoiceButton/
+│   │   │   ├── MessageList/
+│   │   │   └── MessageBubble/
 │   │   ├── screens/           # App screens
 │   │   │   ├── ChatScreen/
-│   │   │   ├── HistoryScreen/
 │   │   │   └── SettingsScreen/
-│   │   └── services/          # API services
-│   │       ├── aiService.js
-│   │       └── authService.js
-├── backend/                   # Node.js server
+│   │   ├── services/          # API services
+│   │   │   ├── openaiService.js
+│   │   │   └── promptService.js
+│   │   └── models/            # Database models
+│   │       ├── User.js
+│   │       └── Conversation.js
+└── backend/                   # Node.js server
 │   ├── src/
 │   │   ├── controllers/       # Route controllers
 │   │   │   ├── chatController.js
@@ -484,7 +486,7 @@ module.exports = cache;
 ## 🔗 Live Demo & Repository
 
 ### GitHub Repository
-```
+```text
 https://github.com/yourusername/ai-chat-app
 ```
 

@@ -490,7 +490,7 @@ test.describe('Performance Tests', () => {
 
 ### Test Organization
 
-```
+```text
 tests/
 ├── e2e/
 │   ├── auth/

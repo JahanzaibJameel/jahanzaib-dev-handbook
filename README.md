@@ -2,8 +2,8 @@
 
 🚀 **A production-grade developer book + portfolio + system design showcase**
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://yourusername.github.io/jahanzaib-dev-handbook)
-[![GitHub Stars](https://img.shields.io/github/stars/yourusername/jahanzaib-dev-handbook?style=social)](https://github.com/yourusername/jahanzaib-dev-handbook)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://jahanzaibjameel.github.io/jahanzaib-dev-handbook)
+[![GitHub Stars](https://img.shields.io/github/stars/JahanzaibJameel/jahanzaib-dev-handbook?style=social)](https://github.com/JahanzaibJameel/jahanzaib-dev-handbook)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![mdBook](https://img.shields.io/badge/built%20with-mdBook-blue)](https://github.com/rust-lang/mdBook)
 
@@ -23,28 +23,33 @@ The **Jahanzaib Dev Handbook** is a comprehensive, production-ready developer gu
 ## 🚀 Quick Start
 
 ### View the Live Handbook
-👉 **[Live Demo](https://yourusername.github.io/jahanzaib-dev-handbook)**
+
+👉 **[Live Demo](https://jahanzaibjameel.github.io/jahanzaib-dev-handbook)**
 
 ### Local Development
 
 1. **Clone the repository**
+
    ```bash
-   git clone https://github.com/yourusername/jahanzaib-dev-handbook.git
+   git clone https://github.com/JahanzaibJameel/jahanzaib-dev-handbook.git
    cd jahanzaib-dev-handbook
    ```
 
 2. **Install mdBook**
+
    ```bash
    # Install Rust first, then:
    cargo install mdbook
    ```
 
 3. **Run locally**
+
    ```bash
    mdbook serve
    ```
 
 4. **Open in browser**
+
    Navigate to `http://localhost:3000`
 
 ## 📖 Handbook Structure

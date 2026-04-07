@@ -40,7 +40,7 @@ This is a production-ready e-commerce mobile application that demonstrates real-
 
 ## 📁 Project Structure
 
-```
+```text
 ecommerce-app/
 ├── src/
 │   ├── components/          # Reusable UI components
@@ -631,7 +631,7 @@ export default currentEnv;
 ## 🔗 Live Demo & Repository
 
 ### GitHub Repository
-```
+```text
 https://github.com/yourusername/ecommerce-mobile-app
 ```
 

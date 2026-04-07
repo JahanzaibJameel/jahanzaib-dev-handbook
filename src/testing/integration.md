@@ -169,7 +169,7 @@ describe('User Controller Integration', () => {
 
 ### Test Organization
 
-```
+```text
 __tests__/
 ├── integration/
 │   ├── auth/

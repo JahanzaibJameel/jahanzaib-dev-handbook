@@ -73,7 +73,7 @@ export default WelcomeScreen;
 ### React Native Bridge
 React Native uses a bridge to communicate between JavaScript and native code:
 
-```
+```text
 JavaScript Code → React Native Bridge → Native Modules → Native UI
 ```
 
