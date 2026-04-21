@@ -1,0 +1,238 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="mdBook">
+
+<!-- Primary Meta Tags -->
+<title>{{ title }}</title>
+<meta name="title" content="{{ title }}">
+<meta name="description" content="{{ description }}">
+<meta name="author" content="{{ authors }}">
+<meta name="keywords" content="development, programming, software engineering, handbook, portfolio, {{ title }}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site_url }}{{ path }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:image" content="{{ site_url }}/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="{{ title }}">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{ site_url }}{{ path }}">
+<meta property="twitter:title" content="{{ title }}">
+<meta property="twitter:description" content="{{ description }}">
+<meta property="twitter:image" content="{{ site_url }}/og-image.png">
+<meta property="twitter:creator" content="@{{ authors }}">
+
+<!-- Additional Meta Tags -->
+<meta name="theme-color" content="#3b82f6">
+<meta name="msapplication-TileColor" content="#3b82f6">
+<meta name="application-name" content="{{ title }}">
+<meta name="apple-mobile-web-app-title" content="{{ title }}">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- Canonical URL -->
+{{#if path}}
+<link rel="canonical" href="{{ site_url }}{{ path }}">
+{{else}}
+<link rel="canonical" href="{{ site_url }}">
+{{/if}}
+
+<!-- Preconnect to external domains -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+<!-- DNS Prefetch -->
+{{#if git_repository_url}}
+<link rel="dns-prefetch" href="//github.com">
+{{/if}}
+<link rel="dns-prefetch" href="//rust-lang.github.io">
+
+<!-- Font Preloads -->
+<link rel="preload" href="{{ path_to_root }}theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ path_to_root }}theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
+
+<!-- CSS Preloads -->
+<link rel="preload" href="{{ path_to_root }}theme/css/tokens.css" as="style">
+<link rel="preload" href="{{ path_to_root }}theme/css/base.css" as="style">
+<link rel="preload" href="{{ path_to_root }}theme/css/layout.css" as="style">
+<link rel="preload" href="{{ path_to_root }}theme/css/components.css" as="style">
+<link rel="preload" href="{{ path_to_root }}theme/css/animations.css" as="style">
+<link rel="preload" href="{{ path_to_root }}theme/css/syntax.css" as="style">
+<link rel="preload" href="{{ path_to_root }}theme/css/utilities.css" as="style">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="{{ path_to_root }}theme/css/tokens.css">
+<link rel="stylesheet" href="{{ path_to_root }}theme/css/base.css">
+<link rel="stylesheet" href="{{ path_to_root }}theme/css/layout.css">
+<link rel="stylesheet" href="{{ path_to_root }}theme/css/components.css">
+<link rel="stylesheet" href="{{ path_to_root }}theme/css/animations.css">
+<link rel="stylesheet" href="{{ path_to_root }}theme/css/syntax.css">
+<link rel="stylesheet" href="{{ path_to_root }}theme/css/utilities.css">
+
+<!-- Favicon and Icons -->
+<link rel="icon" href="{{ path_to_root }}favicon.ico" sizes="any">
+<link rel="icon" href="{{ path_to_root }}icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{ path_to_root }}apple-touch-icon.png">
+<link rel="manifest" href="{{ path_to_root }}site.webmanifest">
+
+<!-- PWA Icons -->
+<link rel="icon" href="{{ path_to_root }}icon-192.png" sizes="192x192" type="image/png">
+<link rel="icon" href="{{ path_to_root }}icon-512.png" sizes="512x512" type="image/png">
+
+<!-- RSS Feed (if applicable) -->
+{{#if rss_enabled}}
+<link rel="alternate" type="application/rss+xml" title="{{ title }} RSS Feed" href="{{ path_to_root }}rss.xml">
+{{/if}}
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "{{ title }}",
+  "description": "{{ description }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ authors }}"
+  },
+  "url": "{{ site_url }}",
+  "image": "{{ site_url }}/og-image.png",
+  "datePublished": "{{ date }}",
+  "dateModified": "{{ build_date }}",
+  "inLanguage": "{{ language }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ authors }}",
+    "url": "{{ site_url }}"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Software Development"
+  }
+}
+</script>
+
+<!-- Security Headers -->
+<meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self' data: https:;
+    connect-src 'self' https://api.github.com;
+">
+
+<!-- Performance Optimizations -->
+<link rel="modulepreload" href="{{ path_to_root }}theme/js/core.js">
+<link rel="modulepreload" href="{{ path_to_root }}theme/js/animations.js">
+<link rel="modulepreload" href="{{ path_to_root }}theme/js/search.js">
+
+<!-- Critical CSS (inline for performance) -->
+<style>
+    /* Critical above-the-fold styles */
+    body {
+        font-family: system-ui, -apple-system, sans-serif;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+        background-color: oklch(98% 0.005 250);
+        color: oklch(20% 0.02 260);
+    }
+    
+    .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: #3b82f6;
+        color: white;
+        padding: 8px;
+        text-decoration: none;
+        border-radius: 4px;
+        z-index: 10000;
+        font-weight: 500;
+    }
+    
+    .skip-link:focus {
+        top: 6px;
+    }
+    
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 1rem 0;
+    }
+    
+    .loading {
+        opacity: 0;
+        animation: fadeIn 0.3s ease-out forwards;
+    }
+    
+    @keyframes fadeIn {
+        to { opacity: 1; }
+    }
+</style>
+
+<!-- Viewport and Feature Detection -->
+<script>
+    // Feature detection
+    (function() {
+        'use strict';
+        
+        // Detect reduced motion preference
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) {
+            document.documentElement.classList.add('reduced-motion');
+        }
+        
+        // Detect high contrast preference
+        const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+        if (prefersHighContrast) {
+            document.documentElement.classList.add('high-contrast');
+        }
+        
+        // Detect color scheme preference
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('devatelier-theme');
+        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+        
+        // Performance detection
+        const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+        const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
+        const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
+        
+        if (isSlowConnection || isLowMemory) {
+            document.documentElement.classList.add('performance-mode');
+        }
+    })();
+</script>
+
+<!-- Service Worker Registration (if available) -->
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('{{ path_to_root }}sw.js')
+                .then(function(registration) {
+                    console.log('SW registered: ', registration);
+                })
+                .catch(function(registrationError) {
+                    console.log('SW registration failed: ', registrationError);
+                });
+        });
+    }
+</script>

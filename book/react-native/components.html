@@ -1,575 +1,1188 @@
-<!DOCTYPE HTML>
-<html lang="en" class="dark sidebar-visible" dir="ltr">
-    <head>
-        <!-- Book generated using mdBook -->
-        <meta charset="UTF-8">
-        <title>Advanced Components &amp; Props - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="mdBook">
+    
+    <!-- Primary Meta Tags -->
+    <title>Advanced Components &amp; Props - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <meta name="title" content="Advanced Components &amp; Props - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
+    <meta name="author" content="">
+    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Advanced Components &amp; Props - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="react-native/components.md">
+    <meta property="og:title" content="Advanced Components &amp; Props - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
+    <meta property="og:image" content="/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Advanced Components &amp; Props - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="react-native/components.md">
+    <meta property="twitter:title" content="Advanced Components &amp; Props - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
+    <meta property="twitter:image" content="/og-image.png">
+    <meta property="twitter:creator" content="@">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="msapplication-TileColor" content="#3b82f6">
+    <meta name="application-name" content="Advanced Components &amp; Props - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="apple-mobile-web-app-title" content="Advanced Components &amp; Props - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="react-native/components.md">
 
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//github.com">
+    <link rel="dns-prefetch" href="//rust-lang.github.io">
+    
+    <!-- Font Preloads -->
+    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- CSS Preloads -->
+    <link rel="preload" href="../theme/css/tokens.css" as="style">
+    <link rel="preload" href="../theme/css/base.css" as="style">
+    <link rel="preload" href="../theme/css/layout.css" as="style">
+    <link rel="preload" href="../theme/css/components.css" as="style">
+    <link rel="preload" href="../theme/css/animations.css" as="style">
+    <link rel="preload" href="../theme/css/syntax.css" as="style">
+    <link rel="preload" href="../theme/css/utilities.css" as="style">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../theme/css/tokens.css">
+    <link rel="stylesheet" href="../theme/css/base.css">
+    <link rel="stylesheet" href="../theme/css/layout.css">
+    <link rel="stylesheet" href="../theme/css/components.css">
+    <link rel="stylesheet" href="../theme/css/animations.css">
+    <link rel="stylesheet" href="../theme/css/syntax.css">
+    <link rel="stylesheet" href="../theme/css/utilities.css">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="icon" href="../icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    
+    <!-- PWA Icons -->
+    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
+    
+    <!-- RSS Feed (if applicable) -->
 
-        <!-- Custom HTML head -->
-
-        <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff">
-
-        <link rel="icon" href="../favicon-de23e50b.svg">
-        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
-        <link rel="stylesheet" href="../css/variables-8adf115d.css">
-        <link rel="stylesheet" href="../css/general-2459343d.css">
-        <link rel="stylesheet" href="../css/chrome-ae938929.css">
-        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
-
-        <!-- Fonts -->
-        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
-
-        <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
-
-        <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../advanced-animations-fa92d1c9.css">
-
-
-        <!-- Provide site root and default themes to javascript -->
-        <script>
-            const path_to_root = "../";
-            const default_light_theme = "dark";
-            const default_dark_theme = "coal";
-            window.path_to_searchindex_js = "../searchindex-9115e583.js";
-        </script>
-        <!-- Start loading toc.js asap -->
-        <script src="../toc-e26ec519.js"></script>
-    </head>
-    <body>
-    <div id="mdbook-help-container">
-        <div id="mdbook-help-popup">
-            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
-            <div>
-                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
-                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
-                <p>Press <kbd>?</kbd> to show this help</p>
-                <p>Press <kbd>Esc</kbd> to hide this help</p>
-            </div>
-        </div>
-    </div>
-    <div id="mdbook-body-container">
-        <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script>
-            try {
-                let theme = localStorage.getItem('mdbook-theme');
-                let sidebar = localStorage.getItem('mdbook-sidebar');
-
-                if (theme.startsWith('"') && theme.endsWith('"')) {
-                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
-                }
-
-                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
-                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
-                }
-            } catch (e) { }
-        </script>
-
-        <!-- Set the theme before any content is loaded, prevents flash -->
-        <script>
-            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
-            let theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
-            if (theme === null || theme === undefined) { theme = default_theme; }
-            const html = document.documentElement;
-            html.classList.remove('dark')
-            html.classList.add(theme);
-            html.classList.add("js");
-        </script>
-
-        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
-
-        <!-- Hide / unhide sidebar before it is displayed -->
-        <script>
-            let sidebar = null;
-            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
-            if (document.body.clientWidth >= 1080) {
-                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
-                sidebar = sidebar || 'visible';
-            } else {
-                sidebar = 'hidden';
-                sidebar_toggle.checked = false;
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "Advanced Components &amp; Props - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
+      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
+      "author": {
+        "@type": "Person",
+        "name": ""
+      },
+      "url": "",
+      "image": "/og-image.png",
+      "datePublished": "",
+      "dateModified": "",
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "Organization",
+        "name": "",
+        "url": ""
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Software Development"
+      }
+    }
+    </script>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        connect-src 'self' https://api.github.com;
+    ">
+    
+    <!-- Performance Optimizations -->
+    <link rel="modulepreload" href="../theme/js/core.js">
+    <link rel="modulepreload" href="../theme/js/animations.js">
+    <link rel="modulepreload" href="../theme/js/search.js">
+    
+    <!-- Critical CSS (inline for performance) -->
+    <style>
+        /* Critical above-the-fold styles */
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: oklch(98% 0.005 250);
+            color: oklch(20% 0.02 260);
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #3b82f6;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 10000;
+            font-weight: 500;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+        }
+        
+        .loading {
+            opacity: 0;
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+    </style>
+    
+    <!-- Viewport and Feature Detection -->
+    <script>
+        // Feature detection
+        (function() {
+            'use strict';
+            
+            // Detect reduced motion preference
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReducedMotion) {
+                document.documentElement.classList.add('reduced-motion');
             }
-            if (sidebar === 'visible') {
-                sidebar_toggle.checked = true;
-            } else {
-                html.classList.remove('sidebar-visible');
+            
+            // Detect high contrast preference
+            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+            if (prefersHighContrast) {
+                document.documentElement.classList.add('high-contrast');
             }
-        </script>
-
-        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
-            <!-- populated by js -->
-            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
-            <noscript>
-                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
-            </noscript>
-            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
-                <div class="sidebar-resize-indicator"></div>
-            </div>
-        </nav>
-
-        <div id="mdbook-page-wrapper" class="page-wrapper">
-
-            <div class="page">
-                <div id="mdbook-menu-bar-hover-placeholder"></div>
-                <div id="mdbook-menu-bar" class="menu-bar sticky">
-                    <div class="left-buttons">
-                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
-                        </label>
-                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
-                        </button>
-                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
-                        </ul>
-                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
-                        </button>
-                    </div>
-
-                    <h1 class="menu-title">Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-
-                    <div class="right-buttons">
-                        <a href="../print.html" title="Print this book" aria-label="Print this book">
-                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
-                        </a>
-                        <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" title="Git repository" aria-label="Git repository">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
-                        </a>
-                        <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook/edit/main/src/react-native/components.md" title="Suggest an edit" aria-label="Suggest an edit" rel="edit">
-                            <span class=fa-svg id="git-edit-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M421.7 220.3l-11.3 11.3-22.6 22.6-205 205c-6.6 6.6-14.8 11.5-23.8 14.1L30.8 511c-8.4 2.5-17.5 .2-23.7-6.1S-1.5 489.7 1 481.2L38.7 353.1c2.6-9 7.5-17.2 14.1-23.8l205-205 22.6-22.6 11.3-11.3 33.9 33.9 62.1 62.1 33.9 33.9zM96 353.9l-9.3 9.3c-.9 .9-1.6 2.1-2 3.4l-25.3 86 86-25.3c1.3-.4 2.5-1.1 3.4-2l9.3-9.3H112c-8.8 0-16-7.2-16-16V353.9zM453.3 19.3l39.4 39.4c25 25 25 65.5 0 90.5l-14.5 14.5-22.6 22.6-11.3 11.3-33.9-33.9-62.1-62.1L314.3 67.7l11.3-11.3 22.6-22.6 14.5-14.5c25-25 65.5-25 90.5 0z"/></svg></span>
-                        </a>
-
-                    </div>
-                </div>
-
-                <div id="mdbook-search-wrapper" class="hidden">
-                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
-                        <div class="search-wrapper">
-                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
-                            <div class="spinner-wrapper">
-                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
-                            </div>
-                        </div>
-                    </form>
-                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
-                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
-                        <ul id="mdbook-searchresults">
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script>
-                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
-                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+            
+            // Detect color scheme preference
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const savedTheme = localStorage.getItem('devatelier-theme');
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+            
+            // Performance detection
+            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
+            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
+            
+            if (isSlowConnection || isLowMemory) {
+                document.documentElement.classList.add('performance-mode');
+            }
+        })();
+    </script>
+    
+    <!-- Service Worker Registration (if available) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('../sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
                     });
-                </script>
+            });
+        }
+    </script>
+    <style>
+        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
+        :root {
+            --space-0: 0;
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            
+            --radius-sm: 0.25rem;
+            --radius-md: 0.375rem;
+            --radius-lg: 0.5rem;
+            --radius-xl: 0.75rem;
+            
+            --text-xs: 0.75rem;
+            --text-sm: 0.875rem;
+            --text-base: 1rem;
+            --text-lg: 1.125rem;
+            --text-xl: 1.25rem;
+            --text-2xl: 1.5rem;
+            --text-3xl: 1.875rem;
+            --text-4xl: 2.25rem;
+            
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+            
+            --transition-fast: 150ms ease;
+            --transition-normal: 300ms ease;
+            
+            --z-sticky: 1000;
+            --z-modal: 9999;
+            
+            --container-2xl: 1400px;
+            
+            --leading-normal: 1.5;
+            --leading-relaxed: 1.625;
+            --leading-tight: 1.25;
+            
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            
+            --bg-primary: oklch(98% 0.005 250);
+            --bg-secondary: oklch(100% 0 0);
+            --bg-tertiary: oklch(96% 0.01 250);
+            --bg-glass: oklch(100% 0 0 / 0.8);
+            --bg-overlay: oklch(0% 0 0 / 0.5);
+            --bg-code: oklch(94% 0.02 250);
+            
+            --text-primary: oklch(20% 0.02 260);
+            --text-secondary: oklch(40% 0.01 250);
+            --text-code: oklch(25% 0.03 250);
+            
+            --accent-primary: oklch(60% 0.2 250);
+            --accent-primary-hover: oklch(65% 0.22 250);
+            
+            --border-light: oklch(85% 0.01 250);
+            --border-medium: oklch(75% 0.01 250);
+            
+            --shadow-sm: 0 1px 3px 0 oklch(0% 0 0 / 0.1), 0 1px 2px 0 oklch(0% 0 0 / 0.06);
+            --shadow-md: 0 4px 6px -1px oklch(0% 0 0 / 0.1), 0 2px 4px -1px oklch(0% 0 0 / 0.06);
+            --shadow-xl: 0 20px 25px -5px oklch(0% 0 0 / 0.1), 0 10px 10px -5px oklch(0% 0 0 / 0.04);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-sans);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: var(--leading-normal);
+        }
+        
+        .devatelier-theme {
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+        }
+        
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: var(--z-sticky);
+            background-color: var(--bg-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            padding: var(--space-4) 0;
+        }
+        
+        .header-container {
+            max-width: var(--container-2xl);
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-6);
+        }
+        
+        .header-title {
+            font-size: var(--text-xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+        
+        .main-container {
+            max-width: var(--container-2xl);
+            margin: 0 auto;
+            padding: var(--space-8) var(--space-6);
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: var(--space-8);
+        }
+        
+        @media (min-width: 1024px) {
+            .main-container {
+                grid-template-columns: 280px minmax(0, 1fr);
+            }
+        }
+        
+        @media (min-width: 1280px) {
+            .main-container {
+                grid-template-columns: 320px minmax(0, 1fr);
+            }
+        }
+        
+        .sidebar {
+            grid-column: 1;
+            order: 2;
+            height: fit-content;
+            position: sticky;
+            top: calc(var(--space-16) + var(--space-4));
+            overflow-y: auto;
+            max-height: calc(100vh - var(--space-16) - var(--space-8));
+        }
+        
+        @media (min-width: 1024px) {
+            .sidebar {
+                order: 1;
+            }
+        }
+        
+        .sidebar-content {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .sidebar-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sidebar-nav a {
+            display: block;
+            padding: var(--space-2) var(--space-3);
+            border-radius: var(--radius-md);
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+            font-size: var(--text-sm);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sidebar-nav a:hover,
+        .sidebar-nav a.active {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+        
+        .sidebar-nav a.active {
+            background-color: var(--accent-primary / 0.1);
+            color: var(--accent-primary);
+            font-weight: var(--font-weight-medium);
+        }
+        
+        .sidebar-nav a.active::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background-color: var(--accent-primary);
+        }
+        
+        .content {
+            grid-column: 2;
+            order: 1;
+            min-width: 0;
+        }
+        
+        @media (min-width: 1024px) {
+            .content {
+                order: 2;
+            }
+        }
+        
+        .content-inner {
+            max-width: none;
+            margin: 0;
+        }
+        
+        article {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: var(--space-8);
+        }
+        
+        .article-header h1 {
+            font-size: var(--text-4xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+            scroll-margin: calc(var(--space-16) + var(--space-4));
+        }
+        
+        .article-content {
+            color: var(--text-secondary);
+            line-height: var(--leading-relaxed);
+        }
+        
+        .article-content h1,
+        .article-content h2,
+        .article-content h3,
+        .article-content h4,
+        .article-content h5,
+        .article-content h6 {
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+        }
+        
+        .article-content p {
+            margin-bottom: var(--space-4);
+            max-width: 65ch;
+        }
+        
+        .footer {
+            grid-row: 3;
+            background-color: var(--bg-tertiary);
+            border-top: 1px solid var(--border-light);
+            padding: var(--space-8) 0;
+            margin-top: auto;
+        }
+        
+        .footer-container {
+            max-width: var(--container-2xl);
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-8);
+        }
+        
+        .footer-section h3 {
+            font-size: var(--text-base);
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--space-4);
+            color: var(--text-primary);
+        }
+        
+        .footer-section p,
+        .footer-section ul {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        .footer-section a:hover {
+            color: var(--accent-primary);
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--accent-primary);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 10000;
+            font-weight: 500;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        /* Basic element styling */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: var(--font-weight-semibold);
+            line-height: var(--leading-tight);
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+        }
+        
+        p {
+            margin-bottom: var(--space-4);
+            color: var(--text-secondary);
+        }
+        
+        a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        a:hover {
+            color: var(--accent-primary-hover);
+        }
+        
+        /* Code styling */
+        code {
+            font-family: var(--font-mono);
+            font-size: 0.875em;
+            background-color: var(--bg-code);
+            padding: var(--space-1) var(--space-2);
+            border-radius: var(--radius-sm);
+            color: var(--text-code);
+            border: 1px solid var(--border-light);
+        }
+        
+        pre {
+            margin: var(--space-6) 0;
+            padding: var(--space-6);
+            background-color: var(--bg-code);
+            border-radius: var(--radius-lg);
+            overflow-x: auto;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+            border: none;
+            font-size: 0.9375em;
+            line-height: var(--leading-relaxed);
+        }
+        
+        /* Lists */
+        ul, ol {
+            margin-bottom: var(--space-4);
+            padding-left: var(--space-6);
+            color: var(--text-secondary);
+        }
+        
+        li {
+            margin-bottom: var(--space-2);
+        }
+        
+        /* Blockquotes */
+        blockquote {
+            margin: var(--space-6) 0;
+            padding: var(--space-4) var(--space-6);
+            border-left: 4px solid var(--accent-primary);
+            background-color: var(--bg-tertiary);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            font-style: italic;
+            color: var(--text-primary);
+        }
+        
+        blockquote p {
+            margin-bottom: 0;
+            font-size: var(--text-lg);
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--space-6) 0;
+            font-size: var(--text-sm);
+        }
+        
+        th, td {
+            padding: var(--space-3) var(--space-4);
+            text-align: left;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        th {
+            font-weight: var(--font-weight-semibold);
+            color: var(--text-primary);
+            background-color: var(--bg-tertiary);
+        }
+        
+        tbody tr:hover {
+            background-color: var(--bg-tertiary);
+        }
+        
+        /* Horizontal rule */
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border-light), transparent);
+            margin: var(--space-8) 0;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-6);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            font-family: var(--font-sans);
+            font-size: var(--text-sm);
+            font-weight: var(--font-weight-medium);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-ghost {
+            background-color: transparent;
+            color: var(--text-secondary);
+            border-color: transparent;
+        }
+        
+        .btn-ghost:hover {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+            border-color: var(--border-medium);
+        }
+        
+        .btn-sm {
+            padding: var(--space-2) var(--space-4);
+            font-size: var(--text-xs);
+        }
+        
+        /* Responsive fixes */
+        @media (max-width: 768px) {
+            .header-container,
+            .main-container {
+                padding: 0 var(--space-4);
+            }
+            
+            .main-container {
+                gap: var(--space-6);
+            }
+            
+            article {
+                padding: var(--space-6);
+                border-radius: var(--radius-lg);
+            }
+            
+            .sidebar {
+                position: static;
+                max-height: none;
+                margin-bottom: var(--space-6);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-container,
+            .main-container {
+                padding: 0 var(--space-3);
+            }
+            
+            article {
+                padding: var(--space-4);
+                border-radius: var(--radius-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="devatelier-theme">
+        <!-- Skip to main content for accessibility -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="header-container">
+                <a href="../" class="header-title" rel="home">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                    </svg>
+                    Advanced Components &amp; Props - Jahanzaib Dev Handbook - World-Class Developer Portfolio
+                </a>
+                
+                <nav class="header-nav">
+                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        GitHub
+                    </a>
+                </nav>
+            </div>
+        </header>
 
-                <div id="mdbook-content" class="content">
-                    <main>
-                        <h1 id="components--props-in-react-native"><a class="header" href="#components--props-in-react-native">Components &amp; Props in React Native</a></h1>
-<p>Components are the building blocks of React Native applications. They encapsulate reusable pieces of UI and logic.</p>
-<h2 id="-understanding-components"><a class="header" href="#-understanding-components">🧩 Understanding Components</a></h2>
-<h3 id="what-is-a-component"><a class="header" href="#what-is-a-component">What is a Component?</a></h3>
-<p>A component is a self-contained, reusable piece of UI that can accept input (props) and manage its own state.</p>
-<pre><code class="language-javascript">import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+        <!-- Main Content -->
+        <div class="main-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-content">
+                    <div class="sidebar-title">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="4" y1="6" x2="20" y2="6"></line>
+                            <line x1="4" y1="12" x2="20" y2="12"></line>
+                            <line x1="4" y1="18" x2="16" y2="18"></line>
+                        </svg>
+                        Table of Contents
+                    </div>
+                    
+                    <nav class="sidebar-nav">
+<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
+                </div>
+            </aside>
+
+            <!-- Content Area -->
+            <main class="content" id="main-content">
+                <div class="content-inner">
+                    <article>
+                        <header class="article-header">
+                            <h1>Advanced Components &amp; Props - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
+                        </header>
+                        
+                        <div class="article-content">
+                            &lt;h1 id&#x3D;&quot;components--props-in-react-native&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#components--props-in-react-native&quot;&gt;Components &amp;amp; Props in React Native&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Components are the building blocks of React Native applications. They encapsulate reusable pieces of UI and logic.&lt;/p&gt;
+&lt;h2 id&#x3D;&quot;-understanding-components&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-understanding-components&quot;&gt;🧩 Understanding Components&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id&#x3D;&quot;what-is-a-component&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#what-is-a-component&quot;&gt;What is a Component?&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;A component is a self-contained, reusable piece of UI that can accept input (props) and manage its own state.&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;import React from &#x27;react&#x27;;
+import { View, Text, StyleSheet } from &#x27;react-native&#x27;;
 
 // Functional Component
-const WelcomeCard = () =&gt; {
+const WelcomeCard &#x3D; () &#x3D;&amp;gt; {
   return (
-    &lt;View style={styles.container}&gt;
-      &lt;Text style={styles.title}&gt;Welcome!&lt;/Text&gt;
-    &lt;/View&gt;
+    &amp;lt;View style&#x3D;{styles.container}&amp;gt;
+      &amp;lt;Text style&#x3D;{styles.title}&amp;gt;Welcome!&amp;lt;/Text&amp;gt;
+    &amp;lt;/View&amp;gt;
   );
 };
 
-const styles = StyleSheet.create({
+const styles &#x3D; StyleSheet.create({
   container: {
     padding: 20,
-    backgroundColor: '#f0f0f0',
+    backgroundColor: &#x27;#f0f0f0&#x27;,
     borderRadius: 8,
   },
   title: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: &#x27;bold&#x27;,
   },
 });
 
 export default WelcomeCard;
-</code></pre>
-<h2 id="-props-properties"><a class="header" href="#-props-properties">📦 Props (Properties)</a></h2>
-<p>Props are read-only attributes that pass data from parent to child components.</p>
-<h3 id="basic-props-usage"><a class="header" href="#basic-props-usage">Basic Props Usage</a></h3>
-<pre><code class="language-javascript">import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id&#x3D;&quot;-props-properties&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-props-properties&quot;&gt;📦 Props (Properties)&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Props are read-only attributes that pass data from parent to child components.&lt;/p&gt;
+&lt;h3 id&#x3D;&quot;basic-props-usage&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#basic-props-usage&quot;&gt;Basic Props Usage&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;import React from &#x27;react&#x27;;
+import { View, Text, StyleSheet } from &#x27;react-native&#x27;;
 
-const UserCard = ({ name, email, avatar }) =&gt; {
+const UserCard &#x3D; ({ name, email, avatar }) &#x3D;&amp;gt; {
   return (
-    &lt;View style={styles.card}&gt;
-      &lt;Text style={styles.name}&gt;{name}&lt;/Text&gt;
-      &lt;Text style={styles.email}&gt;{email}&lt;/Text&gt;
-    &lt;/View&gt;
+    &amp;lt;View style&#x3D;{styles.card}&amp;gt;
+      &amp;lt;Text style&#x3D;{styles.name}&amp;gt;{name}&amp;lt;/Text&amp;gt;
+      &amp;lt;Text style&#x3D;{styles.email}&amp;gt;{email}&amp;lt;/Text&amp;gt;
+    &amp;lt;/View&amp;gt;
   );
 };
 
 // Parent Component
-const UserList = () =&gt; {
-  const users = [
-    { name: 'John Doe', email: 'john@example.com' },
-    { name: 'Jane Smith', email: 'jane@example.com' },
+const UserList &#x3D; () &#x3D;&amp;gt; {
+  const users &#x3D; [
+    { name: &#x27;John Doe&#x27;, email: &#x27;john@example.com&#x27; },
+    { name: &#x27;Jane Smith&#x27;, email: &#x27;jane@example.com&#x27; },
   ];
 
   return (
-    &lt;View&gt;
-      {users.map((user, index) =&gt; (
-        &lt;UserCard 
-          key={index}
-          name={user.name}
-          email={user.email}
-        /&gt;
+    &amp;lt;View&amp;gt;
+      {users.map((user, index) &#x3D;&amp;gt; (
+        &amp;lt;UserCard 
+          key&#x3D;{index}
+          name&#x3D;{user.name}
+          email&#x3D;{user.email}
+        /&amp;gt;
       ))}
-    &lt;/View&gt;
+    &amp;lt;/View&amp;gt;
   );
 };
-</code></pre>
-<h3 id="prop-types-and-validation"><a class="header" href="#prop-types-and-validation">Prop Types and Validation</a></h3>
-<pre><code class="language-javascript">import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import PropTypes from 'prop-types';
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id&#x3D;&quot;prop-types-and-validation&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#prop-types-and-validation&quot;&gt;Prop Types and Validation&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;import React from &#x27;react&#x27;;
+import { View, Text, StyleSheet } from &#x27;react-native&#x27;;
+import PropTypes from &#x27;prop-types&#x27;;
 
-const Button = ({ title, onPress, disabled, color }) =&gt; {
+const Button &#x3D; ({ title, onPress, disabled, color }) &#x3D;&amp;gt; {
   return (
-    &lt;TouchableOpacity 
-      style={[styles.button, { backgroundColor: color }]}
-      onPress={onPress}
-      disabled={disabled}
-    &gt;
-      &lt;Text style={styles.buttonText}&gt;{title}&lt;/Text&gt;
-    &lt;/TouchableOpacity&gt;
+    &amp;lt;TouchableOpacity 
+      style&#x3D;{[styles.button, { backgroundColor: color }]}
+      onPress&#x3D;{onPress}
+      disabled&#x3D;{disabled}
+    &amp;gt;
+      &amp;lt;Text style&#x3D;{styles.buttonText}&amp;gt;{title}&amp;lt;/Text&amp;gt;
+    &amp;lt;/TouchableOpacity&amp;gt;
   );
 };
 
-Button.propTypes = {
+Button.propTypes &#x3D; {
   title: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
   color: PropTypes.string,
 };
 
-Button.defaultProps = {
+Button.defaultProps &#x3D; {
   disabled: false,
-  color: '#007AFF',
+  color: &#x27;#007AFF&#x27;,
 };
-</code></pre>
-<h2 id="-core-components"><a class="header" href="#-core-components">🎨 Core Components</a></h2>
-<h3 id="view"><a class="header" href="#view">View</a></h3>
-<p>The most fundamental component for building UI:</p>
-<pre><code class="language-javascript">import { View, StyleSheet } from 'react-native';
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id&#x3D;&quot;-core-components&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-core-components&quot;&gt;🎨 Core Components&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id&#x3D;&quot;view&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#view&quot;&gt;View&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The most fundamental component for building UI:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;import { View, StyleSheet } from &#x27;react-native&#x27;;
 
-const Container = () =&gt; {
+const Container &#x3D; () &#x3D;&amp;gt; {
   return (
-    &lt;View style={styles.container}&gt;
-      &lt;View style={styles.header} /&gt;
-      &lt;View style={styles.content} /&gt;
-      &lt;View style={styles.footer} /&gt;
-    &lt;/View&gt;
+    &amp;lt;View style&#x3D;{styles.container}&amp;gt;
+      &amp;lt;View style&#x3D;{styles.header} /&amp;gt;
+      &amp;lt;View style&#x3D;{styles.content} /&amp;gt;
+      &amp;lt;View style&#x3D;{styles.footer} /&amp;gt;
+    &amp;lt;/View&amp;gt;
   );
 };
 
-const styles = StyleSheet.create({
+const styles &#x3D; StyleSheet.create({
   container: {
     flex: 1,
   },
   header: {
     height: 60,
-    backgroundColor: '#fff',
+    backgroundColor: &#x27;#fff&#x27;,
   },
   content: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: &#x27;#f5f5f5&#x27;,
   },
   footer: {
     height: 50,
-    backgroundColor: '#fff',
+    backgroundColor: &#x27;#fff&#x27;,
   },
 });
-</code></pre>
-<h3 id="text"><a class="header" href="#text">Text</a></h3>
-<p>For displaying text content:</p>
-<pre><code class="language-javascript">import { Text, StyleSheet } from 'react-native';
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id&#x3D;&quot;text&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#text&quot;&gt;Text&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;For displaying text content:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;import { Text, StyleSheet } from &#x27;react-native&#x27;;
 
-const TextExamples = () =&gt; {
+const TextExamples &#x3D; () &#x3D;&amp;gt; {
   return (
-    &lt;View&gt;
-      &lt;Text style={styles.title}&gt;Main Title&lt;/Text&gt;
-      &lt;Text style={styles.subtitle}&gt;Subtitle Text&lt;/Text&gt;
-      &lt;Text style={styles.body}&gt;Regular body text content&lt;/Text&gt;
-      &lt;Text style={styles.caption}&gt;Small caption text&lt;/Text&gt;
-    &lt;/View&gt;
+    &amp;lt;View&amp;gt;
+      &amp;lt;Text style&#x3D;{styles.title}&amp;gt;Main Title&amp;lt;/Text&amp;gt;
+      &amp;lt;Text style&#x3D;{styles.subtitle}&amp;gt;Subtitle Text&amp;lt;/Text&amp;gt;
+      &amp;lt;Text style&#x3D;{styles.body}&amp;gt;Regular body text content&amp;lt;/Text&amp;gt;
+      &amp;lt;Text style&#x3D;{styles.caption}&amp;gt;Small caption text&amp;lt;/Text&amp;gt;
+    &amp;lt;/View&amp;gt;
   );
 };
 
-const styles = StyleSheet.create({
+const styles &#x3D; StyleSheet.create({
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
-    color: '#000',
+    fontWeight: &#x27;bold&#x27;,
+    color: &#x27;#000&#x27;,
   },
   subtitle: {
     fontSize: 18,
-    fontWeight: '600',
-    color: '#333',
+    fontWeight: &#x27;600&#x27;,
+    color: &#x27;#333&#x27;,
   },
   body: {
     fontSize: 16,
-    color: '#666',
+    color: &#x27;#666&#x27;,
     lineHeight: 24,
   },
   caption: {
     fontSize: 12,
-    color: '#999',
+    color: &#x27;#999&#x27;,
   },
 });
-</code></pre>
-<h3 id="image"><a class="header" href="#image">Image</a></h3>
-<p>For displaying images:</p>
-<pre><code class="language-javascript">import { Image, StyleSheet, View } from 'react-native';
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id&#x3D;&quot;image&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#image&quot;&gt;Image&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;For displaying images:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;import { Image, StyleSheet, View } from &#x27;react-native&#x27;;
 
-const ImageExamples = () =&gt; {
+const ImageExamples &#x3D; () &#x3D;&amp;gt; {
   return (
-    &lt;View&gt;
+    &amp;lt;View&amp;gt;
       {/* Local Image */}
-      &lt;Image 
-        source={require('./assets/logo.png')}
-        style={styles.localImage}
-      /&gt;
+      &amp;lt;Image 
+        source&#x3D;{require(&#x27;./assets/logo.png&#x27;)}
+        style&#x3D;{styles.localImage}
+      /&amp;gt;
       
       {/* Network Image */}
-      &lt;Image 
-        source={{ uri: 'https://example.com/image.jpg' }}
-        style={styles.networkImage}
-      /&gt;
+      &amp;lt;Image 
+        source&#x3D;{{ uri: &#x27;https://example.com/image.jpg&#x27; }}
+        style&#x3D;{styles.networkImage}
+      /&amp;gt;
       
       {/* Image with Placeholder */}
-      &lt;Image
-        source={require('./assets/profile.jpg')}
-        style={styles.avatar}
-        defaultSource={require('./assets/placeholder.png')}
-      /&gt;
-    &lt;/View&gt;
+      &amp;lt;Image
+        source&#x3D;{require(&#x27;./assets/profile.jpg&#x27;)}
+        style&#x3D;{styles.avatar}
+        defaultSource&#x3D;{require(&#x27;./assets/placeholder.png&#x27;)}
+      /&amp;gt;
+    &amp;lt;/View&amp;gt;
   );
 };
-</code></pre>
-<h3 id="touchableopacity"><a class="header" href="#touchableopacity">TouchableOpacity</a></h3>
-<p>For creating pressable elements:</p>
-<pre><code class="language-javascript">import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id&#x3D;&quot;touchableopacity&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#touchableopacity&quot;&gt;TouchableOpacity&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;For creating pressable elements:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;import { TouchableOpacity, Text, StyleSheet } from &#x27;react-native&#x27;;
 
-const CustomButton = ({ title, onPress, variant }) =&gt; {
-  const buttonStyle = variant === 'primary' 
+const CustomButton &#x3D; ({ title, onPress, variant }) &#x3D;&amp;gt; {
+  const buttonStyle &#x3D; variant &#x3D;&#x3D;&#x3D; &#x27;primary&#x27; 
     ? styles.primaryButton 
     : styles.secondaryButton;
 
   return (
-    &lt;TouchableOpacity style={buttonStyle} onPress={onPress}&gt;
-      &lt;Text style={styles.buttonText}&gt;{title}&lt;/Text&gt;
-    &lt;/TouchableOpacity&gt;
+    &amp;lt;TouchableOpacity style&#x3D;{buttonStyle} onPress&#x3D;{onPress}&amp;gt;
+      &amp;lt;Text style&#x3D;{styles.buttonText}&amp;gt;{title}&amp;lt;/Text&amp;gt;
+    &amp;lt;/TouchableOpacity&amp;gt;
   );
 };
-</code></pre>
-<h2 id="-custom-components"><a class="header" href="#-custom-components">🏗️ Custom Components</a></h2>
-<h3 id="creating-reusable-components"><a class="header" href="#creating-reusable-components">Creating Reusable Components</a></h3>
-<pre><code class="language-javascript">import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id&#x3D;&quot;-custom-components&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-custom-components&quot;&gt;🏗️ Custom Components&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id&#x3D;&quot;creating-reusable-components&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#creating-reusable-components&quot;&gt;Creating Reusable Components&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;import React from &#x27;react&#x27;;
+import { View, Text, TouchableOpacity, StyleSheet } from &#x27;react-native&#x27;;
 
-const Card = ({ children, title, onPress }) =&gt; {
+const Card &#x3D; ({ children, title, onPress }) &#x3D;&amp;gt; {
   return (
-    &lt;TouchableOpacity style={styles.card} onPress={onPress}&gt;
-      {title &amp;&amp; &lt;Text style={styles.title}&gt;{title}&lt;/Text&gt;}
-      &lt;View style={styles.content}&gt;
+    &amp;lt;TouchableOpacity style&#x3D;{styles.card} onPress&#x3D;{onPress}&amp;gt;
+      {title &amp;amp;&amp;amp; &amp;lt;Text style&#x3D;{styles.title}&amp;gt;{title}&amp;lt;/Text&amp;gt;}
+      &amp;lt;View style&#x3D;{styles.content}&amp;gt;
         {children}
-      &lt;/View&gt;
-    &lt;/TouchableOpacity&gt;
+      &amp;lt;/View&amp;gt;
+    &amp;lt;/TouchableOpacity&amp;gt;
   );
 };
 
-const InputField = ({ label, value, onChangeText, placeholder, secure }) =&gt; {
+const InputField &#x3D; ({ label, value, onChangeText, placeholder, secure }) &#x3D;&amp;gt; {
   return (
-    &lt;View style={styles.inputContainer}&gt;
-      &lt;Text style={styles.label}&gt;{label}&lt;/Text&gt;
-      &lt;TextInput
-        style={styles.input}
-        value={value}
-        onChangeText={onChangeText}
-        placeholder={placeholder}
-        secureTextEntry={secure}
-      /&gt;
-    &lt;/View&gt;
+    &amp;lt;View style&#x3D;{styles.inputContainer}&amp;gt;
+      &amp;lt;Text style&#x3D;{styles.label}&amp;gt;{label}&amp;lt;/Text&amp;gt;
+      &amp;lt;TextInput
+        style&#x3D;{styles.input}
+        value&#x3D;{value}
+        onChangeText&#x3D;{onChangeText}
+        placeholder&#x3D;{placeholder}
+        secureTextEntry&#x3D;{secure}
+      /&amp;gt;
+    &amp;lt;/View&amp;gt;
   );
 };
 
-const LoadingSpinner = ({ size, color }) =&gt; {
+const LoadingSpinner &#x3D; ({ size, color }) &#x3D;&amp;gt; {
   return (
-    &lt;ActivityIndicator 
-      size={size || 'large'} 
-      color={color || '#007AFF'} 
-    /&gt;
+    &amp;lt;ActivityIndicator 
+      size&#x3D;{size || &#x27;large&#x27;} 
+      color&#x3D;{color || &#x27;#007AFF&#x27;} 
+    /&amp;gt;
   );
 };
-</code></pre>
-<h2 id="-component-composition"><a class="header" href="#-component-composition">🔄 Component Composition</a></h2>
-<h3 id="building-complex-uis"><a class="header" href="#building-complex-uis">Building Complex UIs</a></h3>
-<pre><code class="language-javascript">import React from 'react';
-import { View, ScrollView, StyleSheet } from 'react-native';
-import Card from './Card';
-import UserCard from './UserCard';
-import LoadingSpinner from './LoadingSpinner';
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id&#x3D;&quot;-component-composition&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-component-composition&quot;&gt;🔄 Component Composition&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id&#x3D;&quot;building-complex-uis&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#building-complex-uis&quot;&gt;Building Complex UIs&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;import React from &#x27;react&#x27;;
+import { View, ScrollView, StyleSheet } from &#x27;react-native&#x27;;
+import Card from &#x27;./Card&#x27;;
+import UserCard from &#x27;./UserCard&#x27;;
+import LoadingSpinner from &#x27;./LoadingSpinner&#x27;;
 
-const UserFeed = ({ users, loading, onUserPress }) =&gt; {
+const UserFeed &#x3D; ({ users, loading, onUserPress }) &#x3D;&amp;gt; {
   if (loading) {
-    return &lt;LoadingSpinner /&gt;;
+    return &amp;lt;LoadingSpinner /&amp;gt;;
   }
 
   return (
-    &lt;ScrollView style={styles.container}&gt;
-      {users.map(user =&gt; (
-        &lt;Card key={user.id} onPress={() =&gt; onUserPress(user)}&gt;
-          &lt;UserCard 
-            name={user.name}
-            email={user.email}
-            avatar={user.avatar}
-          /&gt;
-        &lt;/Card&gt;
+    &amp;lt;ScrollView style&#x3D;{styles.container}&amp;gt;
+      {users.map(user &#x3D;&amp;gt; (
+        &amp;lt;Card key&#x3D;{user.id} onPress&#x3D;{() &#x3D;&amp;gt; onUserPress(user)}&amp;gt;
+          &amp;lt;UserCard 
+            name&#x3D;{user.name}
+            email&#x3D;{user.email}
+            avatar&#x3D;{user.avatar}
+          /&amp;gt;
+        &amp;lt;/Card&amp;gt;
       ))}
-    &lt;/ScrollView&gt;
+    &amp;lt;/ScrollView&amp;gt;
   );
 };
-</code></pre>
-<h2 id="-best-practices"><a class="header" href="#-best-practices">🎯 Best Practices</a></h2>
-<h3 id="1-single-responsibility"><a class="header" href="#1-single-responsibility">1. Single Responsibility</a></h3>
-<p>Each component should have one clear purpose:</p>
-<pre><code class="language-javascript">// Good: Single responsibility
-const Avatar = ({ source, size }) =&gt; (
-  &lt;Image source={source} style={[styles.avatar, { width: size, height: size }]} /&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id&#x3D;&quot;-best-practices&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-best-practices&quot;&gt;🎯 Best Practices&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id&#x3D;&quot;1-single-responsibility&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#1-single-responsibility&quot;&gt;1. Single Responsibility&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Each component should have one clear purpose:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Good: Single responsibility
+const Avatar &#x3D; ({ source, size }) &#x3D;&amp;gt; (
+  &amp;lt;Image source&#x3D;{source} style&#x3D;{[styles.avatar, { width: size, height: size }]} /&amp;gt;
 );
 
 // Bad: Multiple responsibilities
-const UserSection = ({ user, onEdit, onDelete, onMessage }) =&gt; {
+const UserSection &#x3D; ({ user, onEdit, onDelete, onMessage }) &#x3D;&amp;gt; {
   // Too many responsibilities in one component
 };
-</code></pre>
-<h3 id="2-props-destructuring"><a class="header" href="#2-props-destructuring">2. Props Destructuring</a></h3>
-<p>Always destructure props for cleaner code:</p>
-<pre><code class="language-javascript">// Good
-const UserCard = ({ name, email, avatar }) =&gt; {
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id&#x3D;&quot;2-props-destructuring&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#2-props-destructuring&quot;&gt;2. Props Destructuring&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Always destructure props for cleaner code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Good
+const UserCard &#x3D; ({ name, email, avatar }) &#x3D;&amp;gt; {
   return (
-    &lt;View&gt;
-      &lt;Text&gt;{name}&lt;/Text&gt;
-      &lt;Text&gt;{email}&lt;/Text&gt;
-    &lt;/View&gt;
+    &amp;lt;View&amp;gt;
+      &amp;lt;Text&amp;gt;{name}&amp;lt;/Text&amp;gt;
+      &amp;lt;Text&amp;gt;{email}&amp;lt;/Text&amp;gt;
+    &amp;lt;/View&amp;gt;
   );
 };
 
 // Avoid
-const UserCard = (props) =&gt; {
+const UserCard &#x3D; (props) &#x3D;&amp;gt; {
   return (
-    &lt;View&gt;
-      &lt;Text&gt;{props.name}&lt;/Text&gt;
-      &lt;Text&gt;{props.email}&lt;/Text&gt;
-    &lt;/View&gt;
+    &amp;lt;View&amp;gt;
+      &amp;lt;Text&amp;gt;{props.name}&amp;lt;/Text&amp;gt;
+      &amp;lt;Text&amp;gt;{props.email}&amp;lt;/Text&amp;gt;
+    &amp;lt;/View&amp;gt;
   );
 };
-</code></pre>
-<h3 id="3-default-props"><a class="header" href="#3-default-props">3. Default Props</a></h3>
-<p>Always provide sensible defaults:</p>
-<pre><code class="language-javascript">const Button = ({ 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id&#x3D;&quot;3-default-props&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#3-default-props&quot;&gt;3. Default Props&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Always provide sensible defaults:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;const Button &#x3D; ({ 
   title, 
   onPress, 
-  disabled = false, 
-  variant = 'primary',
-  size = 'medium'
-}) =&gt; {
+  disabled &#x3D; false, 
+  variant &#x3D; &#x27;primary&#x27;,
+  size &#x3D; &#x27;medium&#x27;
+}) &#x3D;&amp;gt; {
   // Component implementation
 };
-</code></pre>
-<h3 id="4-component-naming"><a class="header" href="#4-component-naming">4. Component Naming</a></h3>
-<p>Use descriptive, PascalCase names:</p>
-<pre><code class="language-javascript">// Good
-const UserProfileCard = () =&gt; {};
-const NavigationHeader = () =&gt; {};
-const SearchInputField = () =&gt; {};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id&#x3D;&quot;4-component-naming&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#4-component-naming&quot;&gt;4. Component Naming&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Use descriptive, PascalCase names:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Good
+const UserProfileCard &#x3D; () &#x3D;&amp;gt; {};
+const NavigationHeader &#x3D; () &#x3D;&amp;gt; {};
+const SearchInputField &#x3D; () &#x3D;&amp;gt; {};
 
 // Avoid
-const Card = () =&gt; {}; // Too generic
-const Header = () =&gt; {}; // Too generic
-const Input = () =&gt; {}; // Too generic
-</code></pre>
-<h2 id="-testing-components"><a class="header" href="#-testing-components">🧪 Testing Components</a></h2>
-<h3 id="basic-component-testing"><a class="header" href="#basic-component-testing">Basic Component Testing</a></h3>
-<pre><code class="language-javascript">import React from 'react';
-import { render, fireEvent } from '@testing-library/react-native';
-import Button from '../Button';
+const Card &#x3D; () &#x3D;&amp;gt; {}; // Too generic
+const Header &#x3D; () &#x3D;&amp;gt; {}; // Too generic
+const Input &#x3D; () &#x3D;&amp;gt; {}; // Too generic
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id&#x3D;&quot;-testing-components&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-testing-components&quot;&gt;🧪 Testing Components&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id&#x3D;&quot;basic-component-testing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#basic-component-testing&quot;&gt;Basic Component Testing&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;import React from &#x27;react&#x27;;
+import { render, fireEvent } from &#x27;@testing-library/react-native&#x27;;
+import Button from &#x27;../Button&#x27;;
 
-describe('Button Component', () =&gt; {
-  it('renders correctly with title', () =&gt; {
-    const { getByText } = render(
-      &lt;Button title="Press me" onPress={() =&gt; {}} /&gt;
+describe(&#x27;Button Component&#x27;, () &#x3D;&amp;gt; {
+  it(&#x27;renders correctly with title&#x27;, () &#x3D;&amp;gt; {
+    const { getByText } &#x3D; render(
+      &amp;lt;Button title&#x3D;&quot;Press me&quot; onPress&#x3D;{() &#x3D;&amp;gt; {}} /&amp;gt;
     );
     
-    expect(getByText('Press me')).toBeTruthy();
+    expect(getByText(&#x27;Press me&#x27;)).toBeTruthy();
   });
 
-  it('calls onPress when pressed', () =&gt; {
-    const mockOnPress = jest.fn();
-    const { getByText } = render(
-      &lt;Button title="Press me" onPress={mockOnPress} /&gt;
+  it(&#x27;calls onPress when pressed&#x27;, () &#x3D;&amp;gt; {
+    const mockOnPress &#x3D; jest.fn();
+    const { getByText } &#x3D; render(
+      &amp;lt;Button title&#x3D;&quot;Press me&quot; onPress&#x3D;{mockOnPress} /&amp;gt;
     );
     
-    fireEvent.press(getByText('Press me'));
+    fireEvent.press(getByText(&#x27;Press me&#x27;));
     expect(mockOnPress).toHaveBeenCalled();
   });
 });
-</code></pre>
-<h2 id="-component-library"><a class="header" href="#-component-library">📚 Component Library</a></h2>
-<h3 id="building-a-component-library"><a class="header" href="#building-a-component-library">Building a Component Library</a></h3>
-<pre><code class="language-javascript">// components/index.js
-export { default as Button } from './Button';
-export { default as Card } from './Card';
-export { default as Input } from './Input';
-export { default as Avatar } from './Avatar';
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id&#x3D;&quot;-component-library&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-component-library&quot;&gt;📚 Component Library&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id&#x3D;&quot;building-a-component-library&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#building-a-component-library&quot;&gt;Building a Component Library&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// components/index.js
+export { default as Button } from &#x27;./Button&#x27;;
+export { default as Card } from &#x27;./Card&#x27;;
+export { default as Input } from &#x27;./Input&#x27;;
+export { default as Avatar } from &#x27;./Avatar&#x27;;
 
 // Usage in other files
-import { Button, Card, Input } from '../components';
-</code></pre>
-<h3 id="theme-integration"><a class="header" href="#theme-integration">Theme Integration</a></h3>
-<pre><code class="language-javascript">// theme.js
-export const colors = {
-  primary: '#007AFF',
-  secondary: '#5856D6',
-  success: '#34C759',
-  warning: '#FF9500',
-  error: '#FF3B30',
-  background: '#F2F2F7',
-  surface: '#FFFFFF',
-  text: '#000000',
-  textSecondary: '#8E8E93',
+import { Button, Card, Input } from &#x27;../components&#x27;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id&#x3D;&quot;theme-integration&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#theme-integration&quot;&gt;Theme Integration&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// theme.js
+export const colors &#x3D; {
+  primary: &#x27;#007AFF&#x27;,
+  secondary: &#x27;#5856D6&#x27;,
+  success: &#x27;#34C759&#x27;,
+  warning: &#x27;#FF9500&#x27;,
+  error: &#x27;#FF3B30&#x27;,
+  background: &#x27;#F2F2F7&#x27;,
+  surface: &#x27;#FFFFFF&#x27;,
+  text: &#x27;#000000&#x27;,
+  textSecondary: &#x27;#8E8E93&#x27;,
 };
 
-export const spacing = {
+export const spacing &#x3D; {
   xs: 4,
   sm: 8,
   md: 16,
@@ -577,97 +1190,96 @@ export const spacing = {
   xl: 32,
 };
 
-export const typography = {
+export const typography &#x3D; {
   h1: {
     fontSize: 32,
-    fontWeight: 'bold',
+    fontWeight: &#x27;bold&#x27;,
   },
   h2: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: &#x27;bold&#x27;,
   },
   body: {
     fontSize: 16,
-    fontWeight: 'normal',
+    fontWeight: &#x27;normal&#x27;,
   },
   caption: {
     fontSize: 12,
-    fontWeight: 'normal',
+    fontWeight: &#x27;normal&#x27;,
   },
 };
 
 // Themed Component
-const ThemedButton = ({ title, onPress }) =&gt; {
+const ThemedButton &#x3D; ({ title, onPress }) &#x3D;&amp;gt; {
   return (
-    &lt;TouchableOpacity 
-      style={[styles.button, { backgroundColor: colors.primary }]}
-      onPress={onPress}
-    &gt;
-      &lt;Text style={[styles.text, { color: colors.surface }]}&gt;
+    &amp;lt;TouchableOpacity 
+      style&#x3D;{[styles.button, { backgroundColor: colors.primary }]}
+      onPress&#x3D;{onPress}
+    &amp;gt;
+      &amp;lt;Text style&#x3D;{[styles.text, { color: colors.surface }]}&amp;gt;
         {title}
-      &lt;/Text&gt;
-    &lt;/TouchableOpacity&gt;
+      &amp;lt;/Text&amp;gt;
+    &amp;lt;/TouchableOpacity&amp;gt;
   );
 };
-</code></pre>
-<hr>
-<p><strong>Next Up</strong>: Learn about navigation to connect your components into a complete app! 🚀</p>
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Next Up&lt;/strong&gt;: Learn about navigation to connect your components into a complete app! 🚀&lt;/p&gt;
 
-                    </main>
-
-                    <nav class="nav-wrapper" aria-label="Page navigation">
-                        <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../react-native/intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
-                            </a>
-
-                            <a rel="next prefetch" href="../react-native/navigation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                            </a>
-
-                        <div style="clear: both"></div>
-                    </nav>
+                        </div>
+                        
+                    </article>
                 </div>
-            </div>
-
-            <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../react-native/intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
-                    </a>
-
-                    <a rel="next prefetch" href="../react-native/navigation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                    </a>
-            </nav>
-
+            </main>
         </div>
 
-        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
-        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
-        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
-        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
-        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
-
-
-
-        <script>
-            window.playground_copyable = true;
-        </script>
-
-
-        <script src="../elasticlunr-ef4e11c1.min.js"></script>
-        <script src="../mark-09e88c2c.min.js"></script>
-        <script src="../searcher-c2a407aa.js"></script>
-
-        <script src="../clipboard-1626706a.min.js"></script>
-        <script src="../highlight-abc7f01d.js"></script>
-        <script src="../book-a0b12cfe.js"></script>
-
-        <!-- Custom JS scripts -->
-        <script src="../advanced-interactions-dd74314b.js"></script>
-
-
-
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contribute</h3>
+                    <p>Found an issue or want to contribute?</p>
+                    <ul>
+                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="../">Home</a></li>
+                        <li><a href="../print.html" target="_blank">Print Version</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
+                </div>
+            </div>
+        </footer>
     </div>
-    </body>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize theme
+        document.documentElement.setAttribute('data-theme', 'light');
+        
+        // Global variables for mdBook compatibility
+        window.path_to_root = "../";
+        window.current_page = "react-native/components.md";
+        
+        // Search data will be loaded by mdBook
+    </script>
+    
+    <!-- Theme scripts -->
+    <script src="../theme/js/core.js"></script>
+    <script src="../theme/js/animations.js"></script>
+    <script src="../theme/js/search.js"></script>
+    
+</body>
 </html>

@@ -1,0 +1,166 @@
+/* DevAtelier 2026 - Design Tokens */
+/* OKLCH-based color system with WCAG 2.2 AA compliance */
+
+:root {
+  /* ===== SPACING SCALE (8px grid) ===== */
+  --space-0: 0;
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+
+  /* ===== TYPOGRAPHY ===== */
+  --font-sans: 'Inter Variable', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', 'Fira Code', 'Cascadia Code', 'SF Mono', Consolas, monospace;
+  
+  /* Font weights (variable font friendly) */
+  --font-weight-thin: 100;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* Fluid typography scale */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --text-base: clamp(1rem, 0.925rem + 0.375vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --text-3xl: clamp(1.875rem, 1.6rem + 1.375vw, 2.5rem);
+  --text-4xl: clamp(2.25rem, 1.9rem + 1.75vw, 3rem);
+  --text-5xl: clamp(3rem, 2.5rem + 2.5vw, 4rem);
+
+  /* Line heights */
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+
+  /* ===== LIGHT THEME COLORS (OKLCH) ===== */
+  /* Backgrounds */
+  --bg-primary: oklch(98% 0.005 250);
+  --bg-secondary: oklch(100% 0 0);
+  --bg-tertiary: oklch(96% 0.008 250);
+  --bg-code: oklch(95% 0.01 250);
+  --bg-glass: oklch(100% 0 0 / 0.7);
+  --bg-overlay: oklch(0% 0 0 / 0.6);
+
+  /* Text colors */
+  --text-primary: oklch(20% 0.02 260);
+  --text-secondary: oklch(40% 0.01 260);
+  --text-tertiary: oklch(55% 0.008 260);
+  --text-inverse: oklch(100% 0 0);
+  --text-code: oklch(25% 0.015 260);
+
+  /* Accent colors */
+  --accent-primary: oklch(55% 0.28 260);        /* Vivid blue */
+  --accent-primary-hover: oklch(50% 0.32 260);
+  --accent-secondary: oklch(35% 0.18 160);      /* Muted green */
+  --accent-tertiary: oklch(45% 0.22 20);       /* Warm amber */
+  --accent-danger: oklch(50% 0.25 30);          /* Soft red */
+
+  /* Border colors */
+  --border-light: oklch(90% 0.01 260);
+  --border-medium: oklch(80% 0.015 260);
+  --border-strong: oklch(60% 0.02 260);
+  --border-accent: var(--accent-primary);
+
+  /* Shadow system */
+  --shadow-sm: 0 1px 2px 0 oklch(0% 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px oklch(0% 0 0 / 0.1), 0 2px 4px -2px oklch(0% 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px oklch(0% 0 0 / 0.1), 0 4px 6px -4px oklch(0% 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px oklch(0% 0 0 / 0.1), 0 8px 10px -6px oklch(0% 0 0 / 0.1);
+  --shadow-glass: 0 8px 32px oklch(0% 0 0 / 0.12);
+  --shadow-glow: 0 0 20px oklch(55% 0.28 260 / 0.3);
+
+  /* ===== DARK THEME COLORS (OKLCH) ===== */
+  [data-theme="dark"] {
+    /* Backgrounds */
+    --bg-primary: oklch(12% 0.01 240);
+    --bg-secondary: oklch(8% 0.005 240);
+    --bg-tertiary: oklch(16% 0.015 240);
+    --bg-code: oklch(10% 0.008 240);
+    --bg-glass: oklch(8% 0.005 240 / 0.8);
+    --bg-overlay: oklch(0% 0 0 / 0.8);
+
+    /* Text colors */
+    --text-primary: oklch(95% 0.01 240);
+    --text-secondary: oklch(75% 0.008 240);
+    --text-tertiary: oklch(60% 0.006 240);
+    --text-inverse: oklch(5% 0.02 240);
+    --text-code: oklch(90% 0.012 240);
+
+    /* Accent colors (adjusted for dark mode) */
+    --accent-primary: oklch(65% 0.24 260);
+    --accent-primary-hover: oklch(70% 0.28 260);
+    --accent-secondary: oklch(55% 0.16 160);
+    --accent-tertiary: oklch(65% 0.20 20);
+    --accent-danger: oklch(65% 0.22 30);
+
+    /* Border colors */
+    --border-light: oklch(25% 0.01 240);
+    --border-medium: oklch(35% 0.015 240);
+    --border-strong: oklch(45% 0.02 240);
+
+    /* Shadow system (dark mode) */
+    --shadow-sm: 0 1px 2px 0 oklch(0% 0 0 / 0.3);
+    --shadow-md: 0 4px 6px -1px oklch(0% 0 0 / 0.4), 0 2px 4px -2px oklch(0% 0 0 / 0.4);
+    --shadow-lg: 0 10px 15px -3px oklch(0% 0 0 / 0.4), 0 4px 6px -4px oklch(0% 0 0 / 0.4);
+    --shadow-xl: 0 20px 25px -5px oklch(0% 0 0 / 0.4), 0 8px 10px -6px oklch(0% 0 0 / 0.4);
+    --shadow-glass: 0 8px 32px oklch(0% 0 0 / 0.6);
+    --shadow-glow: 0 0 20px oklch(65% 0.24 260 / 0.4);
+  }
+
+  /* ===== MOTION & TIMING ===== */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* ===== BORDER RADIUS ===== */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* ===== Z-INDEX SCALE ===== */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+
+  /* ===== CONTAINER QUERIES ===== */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+}
+
+/* ===== REDUCED MOTION SUPPORT ===== */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+    --transition-normal: 0ms;
+    --transition-slow: 0ms;
+    --transition-bounce: 0ms;
+  }
+}

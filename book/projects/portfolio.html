@@ -1,243 +1,1896 @@
-<!DOCTYPE HTML>
-<html lang="en" class="dark sidebar-visible" dir="ltr">
-    <head>
-        <!-- Book generated using mdBook -->
-        <meta charset="UTF-8">
-        <title>Portfolio Website - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="mdBook">
+    
+    <!-- Primary Meta Tags -->
+    <title>Portfolio Website - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <meta name="title" content="Portfolio Website - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
+    <meta name="author" content="">
+    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Portfolio Website - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="projects/portfolio.md">
+    <meta property="og:title" content="Portfolio Website - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
+    <meta property="og:image" content="/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Portfolio Website - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="projects/portfolio.md">
+    <meta property="twitter:title" content="Portfolio Website - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
+    <meta property="twitter:image" content="/og-image.png">
+    <meta property="twitter:creator" content="@">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="msapplication-TileColor" content="#3b82f6">
+    <meta name="application-name" content="Portfolio Website - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="apple-mobile-web-app-title" content="Portfolio Website - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="projects/portfolio.md">
 
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//github.com">
+    <link rel="dns-prefetch" href="//rust-lang.github.io">
+    
+    <!-- Font Preloads -->
+    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- CSS Preloads -->
+    <link rel="preload" href="../theme/css/tokens.css" as="style">
+    <link rel="preload" href="../theme/css/base.css" as="style">
+    <link rel="preload" href="../theme/css/layout.css" as="style">
+    <link rel="preload" href="../theme/css/components.css" as="style">
+    <link rel="preload" href="../theme/css/animations.css" as="style">
+    <link rel="preload" href="../theme/css/syntax.css" as="style">
+    <link rel="preload" href="../theme/css/utilities.css" as="style">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../theme/css/tokens.css">
+    <link rel="stylesheet" href="../theme/css/base.css">
+    <link rel="stylesheet" href="../theme/css/layout.css">
+    <link rel="stylesheet" href="../theme/css/components.css">
+    <link rel="stylesheet" href="../theme/css/animations.css">
+    <link rel="stylesheet" href="../theme/css/syntax.css">
+    <link rel="stylesheet" href="../theme/css/utilities.css">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="icon" href="../icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    
+    <!-- PWA Icons -->
+    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
+    
+    <!-- RSS Feed (if applicable) -->
 
-        <!-- Custom HTML head -->
-
-        <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff">
-
-        <link rel="icon" href="../favicon-de23e50b.svg">
-        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
-        <link rel="stylesheet" href="../css/variables-8adf115d.css">
-        <link rel="stylesheet" href="../css/general-2459343d.css">
-        <link rel="stylesheet" href="../css/chrome-ae938929.css">
-        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
-
-        <!-- Fonts -->
-        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
-
-        <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
-
-        <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../advanced-animations-fa92d1c9.css">
-
-
-        <!-- Provide site root and default themes to javascript -->
-        <script>
-            const path_to_root = "../";
-            const default_light_theme = "dark";
-            const default_dark_theme = "coal";
-            window.path_to_searchindex_js = "../searchindex-9115e583.js";
-        </script>
-        <!-- Start loading toc.js asap -->
-        <script src="../toc-e26ec519.js"></script>
-    </head>
-    <body>
-    <div id="mdbook-help-container">
-        <div id="mdbook-help-popup">
-            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
-            <div>
-                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
-                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
-                <p>Press <kbd>?</kbd> to show this help</p>
-                <p>Press <kbd>Esc</kbd> to hide this help</p>
-            </div>
-        </div>
-    </div>
-    <div id="mdbook-body-container">
-        <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script>
-            try {
-                let theme = localStorage.getItem('mdbook-theme');
-                let sidebar = localStorage.getItem('mdbook-sidebar');
-
-                if (theme.startsWith('"') && theme.endsWith('"')) {
-                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
-                }
-
-                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
-                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
-                }
-            } catch (e) { }
-        </script>
-
-        <!-- Set the theme before any content is loaded, prevents flash -->
-        <script>
-            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
-            let theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
-            if (theme === null || theme === undefined) { theme = default_theme; }
-            const html = document.documentElement;
-            html.classList.remove('dark')
-            html.classList.add(theme);
-            html.classList.add("js");
-        </script>
-
-        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
-
-        <!-- Hide / unhide sidebar before it is displayed -->
-        <script>
-            let sidebar = null;
-            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
-            if (document.body.clientWidth >= 1080) {
-                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
-                sidebar = sidebar || 'visible';
-            } else {
-                sidebar = 'hidden';
-                sidebar_toggle.checked = false;
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "Portfolio Website - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
+      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
+      "author": {
+        "@type": "Person",
+        "name": ""
+      },
+      "url": "",
+      "image": "/og-image.png",
+      "datePublished": "",
+      "dateModified": "",
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "Organization",
+        "name": "",
+        "url": ""
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Software Development"
+      }
+    }
+    </script>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        connect-src 'self' https://api.github.com;
+    ">
+    
+    <!-- Performance Optimizations -->
+    <link rel="modulepreload" href="../theme/js/core.js">
+    <link rel="modulepreload" href="../theme/js/animations.js">
+    <link rel="modulepreload" href="../theme/js/search.js">
+    
+    <!-- Critical CSS (inline for performance) -->
+    <style>
+        /* Critical above-the-fold styles */
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: oklch(98% 0.005 250);
+            color: oklch(20% 0.02 260);
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #3b82f6;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 10000;
+            font-weight: 500;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+        }
+        
+        .loading {
+            opacity: 0;
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+    </style>
+    
+    <!-- Viewport and Feature Detection -->
+    <script>
+        // Feature detection
+        (function() {
+            'use strict';
+            
+            // Detect reduced motion preference
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReducedMotion) {
+                document.documentElement.classList.add('reduced-motion');
             }
-            if (sidebar === 'visible') {
-                sidebar_toggle.checked = true;
-            } else {
-                html.classList.remove('sidebar-visible');
+            
+            // Detect high contrast preference
+            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+            if (prefersHighContrast) {
+                document.documentElement.classList.add('high-contrast');
             }
-        </script>
-
-        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
-            <!-- populated by js -->
-            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
-            <noscript>
-                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
-            </noscript>
-            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
-                <div class="sidebar-resize-indicator"></div>
-            </div>
-        </nav>
-
-        <div id="mdbook-page-wrapper" class="page-wrapper">
-
-            <div class="page">
-                <div id="mdbook-menu-bar-hover-placeholder"></div>
-                <div id="mdbook-menu-bar" class="menu-bar sticky">
-                    <div class="left-buttons">
-                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
-                        </label>
-                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
-                        </button>
-                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
-                        </ul>
-                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
-                        </button>
-                    </div>
-
-                    <h1 class="menu-title">Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-
-                    <div class="right-buttons">
-                        <a href="../print.html" title="Print this book" aria-label="Print this book">
-                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
-                        </a>
-                        <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" title="Git repository" aria-label="Git repository">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
-                        </a>
-                        <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook/edit/main/src/projects/portfolio.md" title="Suggest an edit" aria-label="Suggest an edit" rel="edit">
-                            <span class=fa-svg id="git-edit-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M421.7 220.3l-11.3 11.3-22.6 22.6-205 205c-6.6 6.6-14.8 11.5-23.8 14.1L30.8 511c-8.4 2.5-17.5 .2-23.7-6.1S-1.5 489.7 1 481.2L38.7 353.1c2.6-9 7.5-17.2 14.1-23.8l205-205 22.6-22.6 11.3-11.3 33.9 33.9 62.1 62.1 33.9 33.9zM96 353.9l-9.3 9.3c-.9 .9-1.6 2.1-2 3.4l-25.3 86 86-25.3c1.3-.4 2.5-1.1 3.4-2l9.3-9.3H112c-8.8 0-16-7.2-16-16V353.9zM453.3 19.3l39.4 39.4c25 25 25 65.5 0 90.5l-14.5 14.5-22.6 22.6-11.3 11.3-33.9-33.9-62.1-62.1L314.3 67.7l11.3-11.3 22.6-22.6 14.5-14.5c25-25 65.5-25 90.5 0z"/></svg></span>
-                        </a>
-
-                    </div>
-                </div>
-
-                <div id="mdbook-search-wrapper" class="hidden">
-                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
-                        <div class="search-wrapper">
-                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
-                            <div class="spinner-wrapper">
-                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
-                            </div>
-                        </div>
-                    </form>
-                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
-                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
-                        <ul id="mdbook-searchresults">
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script>
-                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
-                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+            
+            // Detect color scheme preference
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const savedTheme = localStorage.getItem('devatelier-theme');
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+            
+            // Performance detection
+            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
+            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
+            
+            if (isSlowConnection || isLowMemory) {
+                document.documentElement.classList.add('performance-mode');
+            }
+        })();
+    </script>
+    
+    <!-- Service Worker Registration (if available) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('../sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
                     });
-                </script>
-
-                <div id="mdbook-content" class="content">
-                    <main>
-                        <h1 id="portfolio-website"><a class="header" href="#portfolio-website">Portfolio Website</a></h1>
-
-                    </main>
-
-                    <nav class="nav-wrapper" aria-label="Page navigation">
-                        <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../projects/saas-dashboard.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
-                            </a>
-
-                            <a rel="next prefetch" href="../career/freelancing.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                            </a>
-
-                        <div style="clear: both"></div>
-                    </nav>
-                </div>
+            });
+        }
+    </script>
+    <style>
+        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
+        :root {
+            --space-0: 0;
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            
+            --radius-sm: 0.25rem;
+            --radius-md: 0.375rem;
+            --radius-lg: 0.5rem;
+            --radius-xl: 0.75rem;
+            
+            --text-xs: 0.75rem;
+            --text-sm: 0.875rem;
+            --text-base: 1rem;
+            --text-lg: 1.125rem;
+            --text-xl: 1.25rem;
+            --text-2xl: 1.5rem;
+            --text-3xl: 1.875rem;
+            --text-4xl: 2.25rem;
+            
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+            
+            --transition-fast: 150ms ease;
+            --transition-normal: 300ms ease;
+            
+            --z-sticky: 1000;
+            --z-modal: 9999;
+            
+            --container-2xl: 1400px;
+            
+            --leading-normal: 1.5;
+            --leading-relaxed: 1.625;
+            --leading-tight: 1.25;
+            
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            
+            --bg-primary: oklch(98% 0.005 250);
+            --bg-secondary: oklch(100% 0 0);
+            --bg-tertiary: oklch(96% 0.01 250);
+            --bg-glass: oklch(100% 0 0 / 0.8);
+            --bg-overlay: oklch(0% 0 0 / 0.5);
+            --bg-code: oklch(94% 0.02 250);
+            
+            --text-primary: oklch(20% 0.02 260);
+            --text-secondary: oklch(40% 0.01 250);
+            --text-code: oklch(25% 0.03 250);
+            
+            --accent-primary: oklch(60% 0.2 250);
+            --accent-primary-hover: oklch(65% 0.22 250);
+            
+            --border-light: oklch(85% 0.01 250);
+            --border-medium: oklch(75% 0.01 250);
+            
+            --shadow-sm: 0 1px 3px 0 oklch(0% 0 0 / 0.1), 0 1px 2px 0 oklch(0% 0 0 / 0.06);
+            --shadow-md: 0 4px 6px -1px oklch(0% 0 0 / 0.1), 0 2px 4px -1px oklch(0% 0 0 / 0.06);
+            --shadow-xl: 0 20px 25px -5px oklch(0% 0 0 / 0.1), 0 10px 10px -5px oklch(0% 0 0 / 0.04);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-sans);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: var(--leading-normal);
+        }
+        
+        .devatelier-theme {
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+        }
+        
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: var(--z-sticky);
+            background-color: var(--bg-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            padding: var(--space-4) 0;
+        }
+        
+        .header-container {
+            max-width: var(--container-2xl);
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-6);
+        }
+        
+        .header-title {
+            font-size: var(--text-xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+        
+        .main-container {
+            max-width: var(--container-2xl);
+            margin: 0 auto;
+            padding: var(--space-8) var(--space-6);
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: var(--space-8);
+        }
+        
+        @media (min-width: 1024px) {
+            .main-container {
+                grid-template-columns: 280px minmax(0, 1fr);
+            }
+        }
+        
+        @media (min-width: 1280px) {
+            .main-container {
+                grid-template-columns: 320px minmax(0, 1fr);
+            }
+        }
+        
+        .sidebar {
+            grid-column: 1;
+            order: 2;
+            height: fit-content;
+            position: sticky;
+            top: calc(var(--space-16) + var(--space-4));
+            overflow-y: auto;
+            max-height: calc(100vh - var(--space-16) - var(--space-8));
+        }
+        
+        @media (min-width: 1024px) {
+            .sidebar {
+                order: 1;
+            }
+        }
+        
+        .sidebar-content {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .sidebar-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sidebar-nav a {
+            display: block;
+            padding: var(--space-2) var(--space-3);
+            border-radius: var(--radius-md);
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+            font-size: var(--text-sm);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sidebar-nav a:hover,
+        .sidebar-nav a.active {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+        
+        .sidebar-nav a.active {
+            background-color: var(--accent-primary / 0.1);
+            color: var(--accent-primary);
+            font-weight: var(--font-weight-medium);
+        }
+        
+        .sidebar-nav a.active::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background-color: var(--accent-primary);
+        }
+        
+        .content {
+            grid-column: 2;
+            order: 1;
+            min-width: 0;
+        }
+        
+        @media (min-width: 1024px) {
+            .content {
+                order: 2;
+            }
+        }
+        
+        .content-inner {
+            max-width: none;
+            margin: 0;
+        }
+        
+        article {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: var(--space-8);
+        }
+        
+        .article-header h1 {
+            font-size: var(--text-4xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+            scroll-margin: calc(var(--space-16) + var(--space-4));
+        }
+        
+        .article-content {
+            color: var(--text-secondary);
+            line-height: var(--leading-relaxed);
+        }
+        
+        .article-content h1,
+        .article-content h2,
+        .article-content h3,
+        .article-content h4,
+        .article-content h5,
+        .article-content h6 {
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+        }
+        
+        .article-content p {
+            margin-bottom: var(--space-4);
+            max-width: 65ch;
+        }
+        
+        .footer {
+            grid-row: 3;
+            background-color: var(--bg-tertiary);
+            border-top: 1px solid var(--border-light);
+            padding: var(--space-8) 0;
+            margin-top: auto;
+        }
+        
+        .footer-container {
+            max-width: var(--container-2xl);
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-8);
+        }
+        
+        .footer-section h3 {
+            font-size: var(--text-base);
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--space-4);
+            color: var(--text-primary);
+        }
+        
+        .footer-section p,
+        .footer-section ul {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        .footer-section a:hover {
+            color: var(--accent-primary);
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--accent-primary);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 10000;
+            font-weight: 500;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        /* Basic element styling */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: var(--font-weight-semibold);
+            line-height: var(--leading-tight);
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+        }
+        
+        p {
+            margin-bottom: var(--space-4);
+            color: var(--text-secondary);
+        }
+        
+        a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        a:hover {
+            color: var(--accent-primary-hover);
+        }
+        
+        /* Code styling */
+        code {
+            font-family: var(--font-mono);
+            font-size: 0.875em;
+            background-color: var(--bg-code);
+            padding: var(--space-1) var(--space-2);
+            border-radius: var(--radius-sm);
+            color: var(--text-code);
+            border: 1px solid var(--border-light);
+        }
+        
+        pre {
+            margin: var(--space-6) 0;
+            padding: var(--space-6);
+            background-color: var(--bg-code);
+            border-radius: var(--radius-lg);
+            overflow-x: auto;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+            border: none;
+            font-size: 0.9375em;
+            line-height: var(--leading-relaxed);
+        }
+        
+        /* Lists */
+        ul, ol {
+            margin-bottom: var(--space-4);
+            padding-left: var(--space-6);
+            color: var(--text-secondary);
+        }
+        
+        li {
+            margin-bottom: var(--space-2);
+        }
+        
+        /* Blockquotes */
+        blockquote {
+            margin: var(--space-6) 0;
+            padding: var(--space-4) var(--space-6);
+            border-left: 4px solid var(--accent-primary);
+            background-color: var(--bg-tertiary);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            font-style: italic;
+            color: var(--text-primary);
+        }
+        
+        blockquote p {
+            margin-bottom: 0;
+            font-size: var(--text-lg);
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--space-6) 0;
+            font-size: var(--text-sm);
+        }
+        
+        th, td {
+            padding: var(--space-3) var(--space-4);
+            text-align: left;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        th {
+            font-weight: var(--font-weight-semibold);
+            color: var(--text-primary);
+            background-color: var(--bg-tertiary);
+        }
+        
+        tbody tr:hover {
+            background-color: var(--bg-tertiary);
+        }
+        
+        /* Horizontal rule */
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border-light), transparent);
+            margin: var(--space-8) 0;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-6);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            font-family: var(--font-sans);
+            font-size: var(--text-sm);
+            font-weight: var(--font-weight-medium);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-ghost {
+            background-color: transparent;
+            color: var(--text-secondary);
+            border-color: transparent;
+        }
+        
+        .btn-ghost:hover {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+            border-color: var(--border-medium);
+        }
+        
+        .btn-sm {
+            padding: var(--space-2) var(--space-4);
+            font-size: var(--text-xs);
+        }
+        
+        /* Responsive fixes */
+        @media (max-width: 768px) {
+            .header-container,
+            .main-container {
+                padding: 0 var(--space-4);
+            }
+            
+            .main-container {
+                gap: var(--space-6);
+            }
+            
+            article {
+                padding: var(--space-6);
+                border-radius: var(--radius-lg);
+            }
+            
+            .sidebar {
+                position: static;
+                max-height: none;
+                margin-bottom: var(--space-6);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-container,
+            .main-container {
+                padding: 0 var(--space-3);
+            }
+            
+            article {
+                padding: var(--space-4);
+                border-radius: var(--radius-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="devatelier-theme">
+        <!-- Skip to main content for accessibility -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="header-container">
+                <a href="../" class="header-title" rel="home">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                    </svg>
+                    Portfolio Website - Jahanzaib Dev Handbook - World-Class Developer Portfolio
+                </a>
+                
+                <nav class="header-nav">
+                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        GitHub
+                    </a>
+                </nav>
             </div>
+        </header>
 
-            <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../projects/saas-dashboard.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
-                    </a>
+        <!-- Main Content -->
+        <div class="main-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-content">
+                    <div class="sidebar-title">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="4" y1="6" x2="20" y2="6"></line>
+                            <line x1="4" y1="12" x2="20" y2="12"></line>
+                            <line x1="4" y1="18" x2="16" y2="18"></line>
+                        </svg>
+                        Table of Contents
+                    </div>
+                    
+                    <nav class="sidebar-nav">
+<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
+                </div>
+            </aside>
 
-                    <a rel="next prefetch" href="../career/freelancing.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                    </a>
-            </nav>
+            <!-- Content Area -->
+            <main class="content" id="main-content">
+                <div class="content-inner">
+                    <article>
+                        <header class="article-header">
+                            <h1>Portfolio Website - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
+                        </header>
+                        
+                        <div class="article-content">
+                            &lt;h1 id&#x3D;&quot;portfolio-website&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#portfolio-website&quot;&gt;Portfolio Website&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id&#x3D;&quot;project-overview&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#project-overview&quot;&gt;Project Overview&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;A stunning, professional portfolio website showcasing modern web development skills, featuring a sleek design, smooth animations, and impressive performance metrics. This project demonstrates expertise in Next.js, TypeScript, Tailwind CSS, and modern web technologies.&lt;/p&gt;
+&lt;h2 id&#x3D;&quot;tech-stack--architecture&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#tech-stack--architecture&quot;&gt;Tech Stack &amp;amp; Architecture&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id&#x3D;&quot;frontend-stack&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#frontend-stack&quot;&gt;Frontend Stack&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Next.js 14&lt;/strong&gt; with App Router for optimal performance&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TypeScript&lt;/strong&gt; for type safety and better DX&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tailwind CSS&lt;/strong&gt; for rapid UI development&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Framer Motion&lt;/strong&gt; for smooth animations&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;React Query&lt;/strong&gt; for data fetching and caching&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NextAuth.js&lt;/strong&gt; for authentication&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prisma&lt;/strong&gt; for database management&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id&#x3D;&quot;backend--database&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#backend--database&quot;&gt;Backend &amp;amp; Database&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PostgreSQL&lt;/strong&gt; for relational data&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Redis&lt;/strong&gt; for caching and sessions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Node.js&lt;/strong&gt; API routes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cloudinary&lt;/strong&gt; for image optimization&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vercel&lt;/strong&gt; for deployment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id&#x3D;&quot;development-tools&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#development-tools&quot;&gt;Development Tools&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ESLint&lt;/strong&gt; + &lt;strong&gt;Prettier&lt;/strong&gt; for code quality&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Husky&lt;/strong&gt; for git hooks&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Jest&lt;/strong&gt; for testing&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Storybook&lt;/strong&gt; for component development&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Playwright&lt;/strong&gt; for E2E testing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id&#x3D;&quot;project-structure&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#project-structure&quot;&gt;Project Structure&lt;/a&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;portfolio-website/
+# Configuration
+next.config.js
+package.json
+tsconfig.json
+tailwind.config.js
+prisma.schema
+.env.example
 
+# Source Code
+src/
+  app/
+    (auth)/
+      login/
+      register/
+    api/
+      projects/
+        route.ts
+      contact/
+        route.ts
+      analytics/
+        route.ts
+    globals.css
+    layout.tsx
+    page.tsx
+    
+  components/
+    ui/
+      Button/
+      Input/
+      Modal/
+      Card/
+    layout/
+      Header/
+      Footer/
+      Navigation/
+    sections/
+      Hero/
+      About/
+      Projects/
+      Skills/
+      Experience/
+      Contact/
+      Testimonials/
+      
+  lib/
+    prisma.ts
+    auth.ts
+    utils.ts
+    constants.ts
+    animations.ts
+    
+  hooks/
+    useTheme.ts
+    useAnalytics.ts
+    useScroll.ts
+    
+  types/
+    project.ts
+    experience.ts
+    skill.ts
+    
+  styles/
+    globals.css
+    components.css
+    
+  assets/
+    images/
+    icons/
+    fonts/
+
+# Database
+prisma/
+  schema.prisma
+  migrations/
+  seed.ts
+
+# Tests
+__tests__/
+  components/
+  pages/
+  api/
+
+# Documentation
+docs/
+  SETUP.md
+  DEPLOYMENT.md
+  CONTRIBUTING.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id&#x3D;&quot;key-features--implementation&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#key-features--implementation&quot;&gt;Key Features &amp;amp; Implementation&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id&#x3D;&quot;1-hero-section-with-animations&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#1-hero-section-with-animations&quot;&gt;1. Hero Section with Animations&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-typescript&quot;&gt;// src/components/sections/Hero/HeroSection.tsx
+&#x27;use client&#x27;;
+
+import React, { useEffect, useState } from &#x27;react&#x27;;
+import { motion, useScroll, useSpring, useTransform } from &#x27;framer-motion&#x27;;
+import { ArrowDown, Download, Mail, Github, Linkedin } from &#x27;lucide-react&#x27;;
+import { useTheme } from &#x27;@/hooks/useTheme&#x27;;
+
+const HeroSection: React.FC &#x3D; () &#x3D;&amp;gt; {
+  const { scrollY } &#x3D; useScroll();
+  const { theme } &#x3D; useTheme();
+  
+  const yRange &#x3D; useTransform(scrollY, [0, 300], [0, -100]);
+  const opacity &#x3D; useTransform(scrollY, [0, 300], [1, 0]);
+  const scale &#x3D; useSpring(scrollY, { stiffness: 400, damping: 40 });
+
+  const [text, setText] &#x3D; useState(&#x27;&#x27;);
+  const fullText &#x3D; &quot;Full-Stack Developer &amp;amp; AI Enthusiast&quot;;
+  const [currentIndex, setCurrentIndex] &#x3D; useState(0);
+
+  useEffect(() &#x3D;&amp;gt; {
+    if (currentIndex &amp;lt; fullText.length) {
+      const timeout &#x3D; setTimeout(() &#x3D;&amp;gt; {
+        setText(prev &#x3D;&amp;gt; prev + fullText[currentIndex]);
+        setCurrentIndex(currentIndex + 1);
+      }, 100);
+      return () &#x3D;&amp;gt; clearTimeout(timeout);
+    }
+  }, [currentIndex, fullText]);
+
+  const containerVariants &#x3D; {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants &#x3D; {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: &quot;spring&quot;,
+        stiffness: 100
+      }
+    }
+  };
+
+  return (
+    &amp;lt;motion.section
+      className&#x3D;&quot;min-h-screen flex items-center justify-center relative overflow-hidden&quot;
+      style&#x3D;{{ y: yRange, opacity }}
+    &amp;gt;
+      {/* Background Animation */}
+      &amp;lt;div className&#x3D;&quot;absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800&quot;&amp;gt;
+        &amp;lt;motion.div
+          className&#x3D;&quot;absolute inset-0&quot;
+          animate&#x3D;{{
+            background: [
+              &quot;linear-gradient(45deg, #667eea 0%, #764ba2 100%)&quot;,
+              &quot;linear-gradient(45deg, #f093fb 0%, #f5576c 100%)&quot;,
+              &quot;linear-gradient(45deg, #4facfe 0%, #00f2fe 100%)&quot;,
+              &quot;linear-gradient(45deg, #43e97b 0%, #38f9d7 100%)&quot;,
+              &quot;linear-gradient(45deg, #667eea 0%, #764ba2 100%)&quot;
+            ]
+          }}
+          transition&#x3D;{{
+            duration: 10,
+            repeat: Infinity,
+            ease: &quot;linear&quot;
+          }}
+        /&amp;gt;
+      &amp;lt;/div&amp;gt;
+
+      {/* Content */}
+      &amp;lt;motion.div
+        className&#x3D;&quot;relative z-10 text-center px-4 max-w-4xl mx-auto&quot;
+        variants&#x3D;{containerVariants}
+        initial&#x3D;&quot;hidden&quot;
+        animate&#x3D;&quot;visible&quot;
+      &amp;gt;
+        &amp;lt;motion.h1
+          className&#x3D;&quot;text-5xl md:text-7xl font-bold text-white mb-6&quot;
+          variants&#x3D;{itemVariants}
+        &amp;gt;
+          Hi, I&#x27;m{&quot; &quot;}
+          &amp;lt;span className&#x3D;&quot;text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500&quot;&amp;gt;
+            Jahanzaib
+          &amp;lt;/span&amp;gt;
+        &amp;lt;/motion.h1&amp;gt;
+
+        &amp;lt;motion.div
+          className&#x3D;&quot;text-2xl md:text-3xl text-white mb-8 h-10&quot;
+          variants&#x3D;{itemVariants}
+        &amp;gt;
+          &amp;lt;span&amp;gt;{text}&amp;lt;/span&amp;gt;
+          &amp;lt;motion.span
+            animate&#x3D;{{ opacity: [1, 0] }}
+            transition&#x3D;{{ duration: 0.5, repeat: Infinity }}
+            className&#x3D;&quot;inline-block ml-1&quot;
+          &amp;gt;
+            |
+          &amp;lt;/motion.span&amp;gt;
+        &amp;lt;/motion.div&amp;gt;
+
+        &amp;lt;motion.p
+          className&#x3D;&quot;text-lg md:text-xl text-gray-200 mb-12 max-w-2xl mx-auto&quot;
+          variants&#x3D;{itemVariants}
+        &amp;gt;
+          Building exceptional digital experiences with modern web technologies.
+          Passionate about creating scalable applications and exploring the frontiers of AI.
+        &amp;lt;/motion.p&amp;gt;
+
+        &amp;lt;motion.div
+          className&#x3D;&quot;flex flex-wrap justify-center gap-4 mb-12&quot;
+          variants&#x3D;{itemVariants}
+        &amp;gt;
+          &amp;lt;motion.button
+            whileHover&#x3D;{{ scale: 1.05 }}
+            whileTap&#x3D;{{ scale: 0.95 }}
+            className&#x3D;&quot;px-8 py-3 bg-white text-gray-900 rounded-full font-semibold flex items-center gap-2 hover:bg-gray-100 transition-colors&quot;
+          &amp;gt;
+            &amp;lt;Download className&#x3D;&quot;w-5 h-5&quot; /&amp;gt;
+            Download Resume
+          &amp;lt;/motion.button&amp;gt;
+
+          &amp;lt;motion.button
+            whileHover&#x3D;{{ scale: 1.05 }}
+            whileTap&#x3D;{{ scale: 0.95 }}
+            className&#x3D;&quot;px-8 py-3 bg-transparent border-2 border-white text-white rounded-full font-semibold flex items-center gap-2 hover:bg-white hover:text-gray-900 transition-all&quot;
+          &amp;gt;
+            &amp;lt;Mail className&#x3D;&quot;w-5 h-5&quot; /&amp;gt;
+            Get In Touch
+          &amp;lt;/motion.button&amp;gt;
+        &amp;lt;/motion.div&amp;gt;
+
+        &amp;lt;motion.div
+          className&#x3D;&quot;flex justify-center gap-6&quot;
+          variants&#x3D;{itemVariants}
+        &amp;gt;
+          {[
+            { icon: Github, href: &quot;https://github.com/jahanzaibjameel&quot;, label: &quot;GitHub&quot; },
+            { icon: Linkedin, href: &quot;https://linkedin.com/in/jahanzaibjameel&quot;, label: &quot;LinkedIn&quot; }
+          ].map(({ icon: Icon, href, label }) &#x3D;&amp;gt; (
+            &amp;lt;motion.a
+              key&#x3D;{label}
+              href&#x3D;{href}
+              target&#x3D;&quot;_blank&quot;
+              rel&#x3D;&quot;noopener noreferrer&quot;
+              whileHover&#x3D;{{ scale: 1.2, rotate: 5 }}
+              whileTap&#x3D;{{ scale: 0.9 }}
+              className&#x3D;&quot;w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors&quot;
+              aria-label&#x3D;{label}
+            &amp;gt;
+              &amp;lt;Icon className&#x3D;&quot;w-6 h-6&quot; /&amp;gt;
+            &amp;lt;/motion.a&amp;gt;
+          ))}
+        &amp;lt;/motion.div&amp;gt;
+      &amp;lt;/motion.div&amp;gt;
+
+      {/* Scroll Indicator */}
+      &amp;lt;motion.div
+        className&#x3D;&quot;absolute bottom-8 left-1/2 transform -translate-x-1/2&quot;
+        animate&#x3D;{{ y: [0, 10, 0] }}
+        transition&#x3D;{{ duration: 2, repeat: Infinity }}
+      &amp;gt;
+        &amp;lt;ArrowDown className&#x3D;&quot;w-6 h-6 text-white&quot; /&amp;gt;
+      &amp;lt;/motion.div&amp;gt;
+    &amp;lt;/motion.section&amp;gt;
+  );
+};
+
+export default HeroSection;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id&#x3D;&quot;2-projects-showcase&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#2-projects-showcase&quot;&gt;2. Projects Showcase&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-typescript&quot;&gt;// src/components/sections/Projects/ProjectsSection.tsx
+&#x27;use client&#x27;;
+
+import React, { useState } from &#x27;react&#x27;;
+import { motion, AnimatePresence } from &#x27;framer-motion&#x27;;
+import { ExternalLink, Github, Filter } from &#x27;lucide-react&#x27;;
+import { useQuery } from &#x27;@tanstack/react-query&#x27;;
+import { Project } from &#x27;@/types/project&#x27;;
+
+const ProjectsSection: React.FC &#x3D; () &#x3D;&amp;gt; {
+  const [selectedFilter, setSelectedFilter] &#x3D; useState(&#x27;all&#x27;);
+  const [hoveredProject, setHoveredProject] &#x3D; useState&amp;lt;string | null&amp;gt;(null);
+
+  const { data: projects, isLoading } &#x3D; useQuery&amp;lt;Project[]&amp;gt;({
+    queryKey: [&#x27;projects&#x27;],
+    queryFn: async () &#x3D;&amp;gt; {
+      const response &#x3D; await fetch(&#x27;/api/projects&#x27;);
+      return response.json();
+    },
+  });
+
+  const filters &#x3D; [
+    { id: &#x27;all&#x27;, label: &#x27;All Projects&#x27; },
+    { id: &#x27;web&#x27;, label: &#x27;Web Apps&#x27; },
+    { id: &#x27;mobile&#x27;, label: &#x27;Mobile Apps&#x27; },
+    { id: &#x27;ai&#x27;, label: &#x27;AI Projects&#x27; },
+    { id: &#x27;opensource&#x27;, label: &#x27;Open Source&#x27; },
+  ];
+
+  const filteredProjects &#x3D; projects?.filter(project &#x3D;&amp;gt; 
+    selectedFilter &#x3D;&#x3D;&#x3D; &#x27;all&#x27; || project.category &#x3D;&#x3D;&#x3D; selectedFilter
+  ) || [];
+
+  const containerVariants &#x3D; {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants &#x3D; {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: &quot;spring&quot;,
+        stiffness: 100
+      }
+    }
+  };
+
+  return (
+    &amp;lt;section className&#x3D;&quot;py-20 bg-gray-50 dark:bg-gray-900&quot;&amp;gt;
+      &amp;lt;div className&#x3D;&quot;max-w-6xl mx-auto px-4&quot;&amp;gt;
+        &amp;lt;motion.div
+          className&#x3D;&quot;text-center mb-16&quot;
+          initial&#x3D;{{ opacity: 0, y: 20 }}
+          whileInView&#x3D;{{ opacity: 1, y: 0 }}
+          viewport&#x3D;{{ once: true }}
+        &amp;gt;
+          &amp;lt;h2 className&#x3D;&quot;text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4&quot;&amp;gt;
+            Featured Projects
+          &amp;lt;/h2&amp;gt;
+          &amp;lt;p className&#x3D;&quot;text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto&quot;&amp;gt;
+            A collection of my best work, showcasing expertise in various technologies and domains.
+          &amp;lt;/p&amp;gt;
+        &amp;lt;/motion.div&amp;gt;
+
+        {/* Filter Buttons */}
+        &amp;lt;motion.div
+          className&#x3D;&quot;flex flex-wrap justify-center gap-4 mb-12&quot;
+          initial&#x3D;{{ opacity: 0, y: 20 }}
+          whileInView&#x3D;{{ opacity: 1, y: 0 }}
+          viewport&#x3D;{{ once: true }}
+        &amp;gt;
+          {filters.map((filter) &#x3D;&amp;gt; (
+            &amp;lt;motion.button
+              key&#x3D;{filter.id}
+              onClick&#x3D;{() &#x3D;&amp;gt; setSelectedFilter(filter.id)}
+              className&#x3D;{&#x60;px-6 py-2 rounded-full font-medium transition-all ${
+                selectedFilter &#x3D;&#x3D;&#x3D; filter.id
+                  ? &#x27;bg-blue-600 text-white&#x27;
+                  : &#x27;bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700&#x27;
+              }&#x60;}
+              whileHover&#x3D;{{ scale: 1.05 }}
+              whileTap&#x3D;{{ scale: 0.95 }}
+            &amp;gt;
+              {filter.label}
+            &amp;lt;/motion.button&amp;gt;
+          ))}
+        &amp;lt;/motion.div&amp;gt;
+
+        {/* Projects Grid */}
+        {isLoading ? (
+          &amp;lt;div className&#x3D;&quot;flex justify-center items-center h-64&quot;&amp;gt;
+            &amp;lt;div className&#x3D;&quot;animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600&quot;&amp;gt;&amp;lt;/div&amp;gt;
+          &amp;lt;/div&amp;gt;
+        ) : (
+          &amp;lt;motion.div
+            className&#x3D;&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;
+            variants&#x3D;{containerVariants}
+            initial&#x3D;&quot;hidden&quot;
+            whileInView&#x3D;&quot;visible&quot;
+            viewport&#x3D;{{ once: true }}
+          &amp;gt;
+            &amp;lt;AnimatePresence mode&#x3D;&quot;wait&quot;&amp;gt;
+              {filteredProjects.map((project) &#x3D;&amp;gt; (
+                &amp;lt;motion.div
+                  key&#x3D;{project.id}
+                  variants&#x3D;{itemVariants}
+                  layout
+                  whileHover&#x3D;{{ y: -5 }}
+                  onHoverStart&#x3D;{() &#x3D;&amp;gt; setHoveredProject(project.id)}
+                  onHoverEnd&#x3D;{() &#x3D;&amp;gt; setHoveredProject(null)}
+                  className&#x3D;&quot;bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden cursor-pointer&quot;
+                &amp;gt;
+                  {/* Project Image */}
+                  &amp;lt;div className&#x3D;&quot;relative h-48 overflow-hidden&quot;&amp;gt;
+                    &amp;lt;img
+                      src&#x3D;{project.imageUrl}
+                      alt&#x3D;{project.title}
+                      className&#x3D;&quot;w-full h-full object-cover transition-transform duration-300&quot;
+                      style&#x3D;{{
+                        transform: hoveredProject &#x3D;&#x3D;&#x3D; project.id ? &#x27;scale(1.1)&#x27; : &#x27;scale(1)&#x27;
+                      }}
+                    /&amp;gt;
+                    
+                    {/* Overlay */}
+                    &amp;lt;div className&#x3D;&quot;absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300&quot;&amp;gt;
+                      &amp;lt;div className&#x3D;&quot;absolute bottom-4 left-4 right-4&quot;&amp;gt;
+                        &amp;lt;h3 className&#x3D;&quot;text-white font-bold text-lg&quot;&amp;gt;{project.title}&amp;lt;/h3&amp;gt;
+                      &amp;lt;/div&amp;gt;
+                    &amp;lt;/div&amp;gt;
+                  &amp;lt;/div&amp;gt;
+
+                  {/* Project Content */}
+                  &amp;lt;div className&#x3D;&quot;p-6&quot;&amp;gt;
+                    &amp;lt;h3 className&#x3D;&quot;text-xl font-bold text-gray-900 dark:text-white mb-2&quot;&amp;gt;
+                      {project.title}
+                    &amp;lt;/h3&amp;gt;
+                    &amp;lt;p className&#x3D;&quot;text-gray-600 dark:text-gray-400 mb-4 line-clamp-2&quot;&amp;gt;
+                      {project.description}
+                    &amp;lt;/p&amp;gt;
+
+                    {/* Technologies */}
+                    &amp;lt;div className&#x3D;&quot;flex flex-wrap gap-2 mb-4&quot;&amp;gt;
+                      {project.technologies.slice(0, 3).map((tech) &#x3D;&amp;gt; (
+                        &amp;lt;span
+                          key&#x3D;{tech}
+                          className&#x3D;&quot;px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full&quot;
+                        &amp;gt;
+                          {tech}
+                        &amp;lt;/span&amp;gt;
+                      ))}
+                      {project.technologies.length &amp;gt; 3 &amp;amp;&amp;amp; (
+                        &amp;lt;span className&#x3D;&quot;px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-sm rounded-full&quot;&amp;gt;
+                          +{project.technologies.length - 3}
+                        &amp;lt;/span&amp;gt;
+                      )}
+                    &amp;lt;/div&amp;gt;
+
+                    {/* Action Buttons */}
+                    &amp;lt;div className&#x3D;&quot;flex gap-2&quot;&amp;gt;
+                      {project.liveUrl &amp;amp;&amp;amp; (
+                        &amp;lt;motion.a
+                          href&#x3D;{project.liveUrl}
+                          target&#x3D;&quot;_blank&quot;
+                          rel&#x3D;&quot;noopener noreferrer&quot;
+                          whileHover&#x3D;{{ scale: 1.05 }}
+                          whileTap&#x3D;{{ scale: 0.95 }}
+                          className&#x3D;&quot;flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors&quot;
+                        &amp;gt;
+                          &amp;lt;ExternalLink className&#x3D;&quot;w-4 h-4&quot; /&amp;gt;
+                          Live Demo
+                        &amp;lt;/motion.a&amp;gt;
+                      )}
+                      
+                      {project.githubUrl &amp;amp;&amp;amp; (
+                        &amp;lt;motion.a
+                          href&#x3D;{project.githubUrl}
+                          target&#x3D;&quot;_blank&quot;
+                          rel&#x3D;&quot;noopener noreferrer&quot;
+                          whileHover&#x3D;{{ scale: 1.05 }}
+                          whileTap&#x3D;{{ scale: 0.95 }}
+                          className&#x3D;&quot;flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors&quot;
+                        &amp;gt;
+                          &amp;lt;Github className&#x3D;&quot;w-4 h-4&quot; /&amp;gt;
+                          Code
+                        &amp;lt;/motion.a&amp;gt;
+                      )}
+                    &amp;lt;/div&amp;gt;
+                  &amp;lt;/div&amp;gt;
+                &amp;lt;/motion.div&amp;gt;
+              ))}
+            &amp;lt;/AnimatePresence&amp;gt;
+          &amp;lt;/motion.div&amp;gt;
+        )}
+      &amp;lt;/div&amp;gt;
+    &amp;lt;/section&amp;gt;
+  );
+};
+
+export default ProjectsSection;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id&#x3D;&quot;3-interactive-skills-section&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#3-interactive-skills-section&quot;&gt;3. Interactive Skills Section&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-typescript&quot;&gt;// src/components/sections/Skills/SkillsSection.tsx
+&#x27;use client&#x27;;
+
+import React, { useState, useEffect } from &#x27;react&#x27;;
+import { motion, useInView } from &#x27;framer-motion&#x27;;
+import { Code, Database, Globe, Palette, Cpu, Cloud } from &#x27;lucide-react&#x27;;
+
+interface Skill {
+  name: string;
+  level: number;
+  category: string;
+  icon: React.ReactNode;
+  description: string;
+}
+
+const SkillsSection: React.FC &#x3D; () &#x3D;&amp;gt; {
+  const [hoveredSkill, setHoveredSkill] &#x3D; useState&amp;lt;string | null&amp;gt;(null);
+  const ref &#x3D; React.useRef(null);
+  const isInView &#x3D; useInView(ref, { once: true });
+
+  const skills: Skill[] &#x3D; [
+    {
+      name: &#x27;React/Next.js&#x27;,
+      level: 95,
+      category: &#x27;Frontend&#x27;,
+      icon: &amp;lt;Code className&#x3D;&quot;w-6 h-6&quot; /&amp;gt;,
+      description: &#x27;Expert in modern React development with Next.js&#x27;
+    },
+    {
+      name: &#x27;TypeScript&#x27;,
+      level: 90,
+      category: &#x27;Frontend&#x27;,
+      icon: &amp;lt;Code className&#x3D;&quot;w-6 h-6&quot; /&amp;gt;,
+      description: &#x27;Strong typing skills and advanced TypeScript patterns&#x27;
+    },
+    {
+      name: &#x27;Node.js&#x27;,
+      level: 85,
+      category: &#x27;Backend&#x27;,
+      icon: &amp;lt;Cpu className&#x3D;&quot;w-6 h-6&quot; /&amp;gt;,
+      description: &#x27;Building scalable server-side applications&#x27;
+    },
+    {
+      name: &#x27;PostgreSQL&#x27;,
+      level: 80,
+      category: &#x27;Database&#x27;,
+      icon: &amp;lt;Database className&#x3D;&quot;w-6 h-6&quot; /&amp;gt;,
+      description: &#x27;Database design and optimization&#x27;
+    },
+    {
+      name: &#x27;Tailwind CSS&#x27;,
+      level: 90,
+      category: &#x27;Frontend&#x27;,
+      icon: &amp;lt;Palette className&#x3D;&quot;w-6 h-6&quot; /&amp;gt;,
+      description: &#x27;Modern CSS frameworks and responsive design&#x27;
+    },
+    {
+      name: &#x27;AWS/Cloud&#x27;,
+      level: 75,
+      category: &#x27;DevOps&#x27;,
+      icon: &amp;lt;Cloud className&#x3D;&quot;w-6 h-6&quot; /&amp;gt;,
+      description: &#x27;Cloud deployment and infrastructure management&#x27;
+    },
+  ];
+
+  const categories &#x3D; [&#x27;Frontend&#x27;, &#x27;Backend&#x27;, &#x27;Database&#x27;, &#x27;DevOps&#x27;];
+  const [selectedCategory, setSelectedCategory] &#x3D; useState(&#x27;All&#x27;);
+
+  const filteredSkills &#x3D; selectedCategory &#x3D;&#x3D;&#x3D; &#x27;All&#x27; 
+    ? skills 
+    : skills.filter(skill &#x3D;&amp;gt; skill.category &#x3D;&#x3D;&#x3D; selectedCategory);
+
+  const containerVariants &#x3D; {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants &#x3D; {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: &quot;spring&quot;,
+        stiffness: 100
+      }
+    }
+  };
+
+  return (
+    &amp;lt;section ref&#x3D;{ref} className&#x3D;&quot;py-20 bg-white dark:bg-gray-900&quot;&amp;gt;
+      &amp;lt;div className&#x3D;&quot;max-w-6xl mx-auto px-4&quot;&amp;gt;
+        &amp;lt;motion.div
+          className&#x3D;&quot;text-center mb-16&quot;
+          initial&#x3D;{{ opacity: 0, y: 20 }}
+          whileInView&#x3D;{{ opacity: 1, y: 0 }}
+          viewport&#x3D;{{ once: true }}
+        &amp;gt;
+          &amp;lt;h2 className&#x3D;&quot;text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4&quot;&amp;gt;
+            Technical Skills
+          &amp;lt;/h2&amp;gt;
+          &amp;lt;p className&#x3D;&quot;text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto&quot;&amp;gt;
+            A comprehensive skill set covering modern web development technologies and best practices.
+          &amp;lt;/p&amp;gt;
+        &amp;lt;/motion.div&amp;gt;
+
+        {/* Category Filter */}
+        &amp;lt;motion.div
+          className&#x3D;&quot;flex flex-wrap justify-center gap-4 mb-12&quot;
+          initial&#x3D;{{ opacity: 0, y: 20 }}
+          whileInView&#x3D;{{ opacity: 1, y: 0 }}
+          viewport&#x3D;{{ once: true }}
+        &amp;gt;
+          {[&#x27;All&#x27;, ...categories].map((category) &#x3D;&amp;gt; (
+            &amp;lt;motion.button
+              key&#x3D;{category}
+              onClick&#x3D;{() &#x3D;&amp;gt; setSelectedCategory(category)}
+              className&#x3D;{&#x60;px-6 py-2 rounded-full font-medium transition-all ${
+                selectedCategory &#x3D;&#x3D;&#x3D; category
+                  ? &#x27;bg-blue-600 text-white&#x27;
+                  : &#x27;bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700&#x27;
+              }&#x60;}
+              whileHover&#x3D;{{ scale: 1.05 }}
+              whileTap&#x3D;{{ scale: 0.95 }}
+            &amp;gt;
+              {category}
+            &amp;lt;/motion.button&amp;gt;
+          ))}
+        &amp;lt;/motion.div&amp;gt;
+
+        {/* Skills Grid */}
+        &amp;lt;motion.div
+          className&#x3D;&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;
+          variants&#x3D;{containerVariants}
+          initial&#x3D;&quot;hidden&quot;
+          animate&#x3D;{isInView ? &quot;visible&quot; : &quot;hidden&quot;}
+        &amp;gt;
+          {filteredSkills.map((skill) &#x3D;&amp;gt; (
+            &amp;lt;motion.div
+              key&#x3D;{skill.name}
+              variants&#x3D;{itemVariants}
+              whileHover&#x3D;{{ scale: 1.02 }}
+              onHoverStart&#x3D;{() &#x3D;&amp;gt; setHoveredSkill(skill.name)}
+              onHoverEnd&#x3D;{() &#x3D;&amp;gt; setHoveredSkill(null)}
+              className&#x3D;&quot;bg-gray-50 dark:bg-gray-800 rounded-xl p-6 cursor-pointer&quot;
+            &amp;gt;
+              &amp;lt;div className&#x3D;&quot;flex items-center mb-4&quot;&amp;gt;
+                &amp;lt;div className&#x3D;&quot;p-3 bg-blue-100 dark:bg-blue-900 rounded-lg text-blue-600 dark:text-blue-300 mr-4&quot;&amp;gt;
+                  {skill.icon}
+                &amp;lt;/div&amp;gt;
+                &amp;lt;div&amp;gt;
+                  &amp;lt;h3 className&#x3D;&quot;font-semibold text-gray-900 dark:text-white&quot;&amp;gt;
+                    {skill.name}
+                  &amp;lt;/h3&amp;gt;
+                  &amp;lt;span className&#x3D;&quot;text-sm text-gray-500 dark:text-gray-400&quot;&amp;gt;
+                    {skill.category}
+                  &amp;lt;/span&amp;gt;
+                &amp;lt;/div&amp;gt;
+              &amp;lt;/div&amp;gt;
+
+              {/* Skill Bar */}
+              &amp;lt;div className&#x3D;&quot;mb-4&quot;&amp;gt;
+                &amp;lt;div className&#x3D;&quot;flex justify-between mb-2&quot;&amp;gt;
+                  &amp;lt;span className&#x3D;&quot;text-sm text-gray-600 dark:text-gray-400&quot;&amp;gt;
+                    Proficiency
+                  &amp;lt;/span&amp;gt;
+                  &amp;lt;span className&#x3D;&quot;text-sm font-medium text-gray-900 dark:text-white&quot;&amp;gt;
+                    {skill.level}%
+                  &amp;lt;/span&amp;gt;
+                &amp;lt;/div&amp;gt;
+                &amp;lt;div className&#x3D;&quot;w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2&quot;&amp;gt;
+                  &amp;lt;motion.div
+                    className&#x3D;&quot;bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full&quot;
+                    initial&#x3D;{{ width: 0 }}
+                    animate&#x3D;{isInView ? { width: &#x60;${skill.level}%&#x60; } : { width: 0 }}
+                    transition&#x3D;{{ duration: 1, delay: 0.2 }}
+                  /&amp;gt;
+                &amp;lt;/div&amp;gt;
+              &amp;lt;/div&amp;gt;
+
+              {/* Description */}
+              &amp;lt;motion.p
+                className&#x3D;&quot;text-sm text-gray-600 dark:text-gray-400&quot;
+                initial&#x3D;{{ opacity: 0, height: 0 }}
+                animate&#x3D;{{
+                  opacity: hoveredSkill &#x3D;&#x3D;&#x3D; skill.name ? 1 : 0,
+                  height: hoveredSkill &#x3D;&#x3D;&#x3D; skill.name ? &#x27;auto&#x27; : 0
+                }}
+                transition&#x3D;{{ duration: 0.3 }}
+              &amp;gt;
+                {skill.description}
+              &amp;lt;/motion.p&amp;gt;
+            &amp;lt;/motion.div&amp;gt;
+          ))}
+        &amp;lt;/motion.div&amp;gt;
+      &amp;lt;/div&amp;gt;
+    &amp;lt;/section&amp;gt;
+  );
+};
+
+export default SkillsSection;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id&#x3D;&quot;performance-optimization&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#performance-optimization&quot;&gt;Performance Optimization&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id&#x3D;&quot;image-optimization&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#image-optimization&quot;&gt;Image Optimization&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-typescript&quot;&gt;// src/components/ui/OptimizedImage.tsx
+import Image from &#x27;next/image&#x27;;
+import { useState } from &#x27;react&#x27;;
+import { cn } from &#x27;@/lib/utils&#x27;;
+
+interface OptimizedImageProps {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  placeholder?: &#x27;blur&#x27; | &#x27;empty&#x27;;
+}
+
+const OptimizedImage: React.FC&amp;lt;OptimizedImageProps&amp;gt; &#x3D; ({
+  src,
+  alt,
+  width,
+  height,
+  className,
+  priority &#x3D; false,
+  placeholder &#x3D; &#x27;blur&#x27;
+}) &#x3D;&amp;gt; {
+  const [isLoading, setIsLoading] &#x3D; useState(true);
+  const [error, setError] &#x3D; useState(false);
+
+  return (
+    &amp;lt;div className&#x3D;{cn(&#x27;relative overflow-hidden&#x27;, className)}&amp;gt;
+      &amp;lt;Image
+        src&#x3D;{src}
+        alt&#x3D;{alt}
+        width&#x3D;{width}
+        height&#x3D;{height}
+        priority&#x3D;{priority}
+        placeholder&#x3D;{placeholder}
+        blurDataURL&#x3D;&quot;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwA/8A8A&quot;
+        className&#x3D;{cn(
+          &#x27;transition-opacity duration-300&#x27;,
+          isLoading ? &#x27;opacity-0&#x27; : &#x27;opacity-100&#x27;
+        )}
+        onLoadingComplete&#x3D;{() &#x3D;&amp;gt; setIsLoading(false)}
+        onError&#x3D;{() &#x3D;&amp;gt; setError(true)}
+      /&amp;gt;
+      
+      {isLoading &amp;amp;&amp;amp; (
+        &amp;lt;div className&#x3D;&quot;absolute inset-0 bg-gray-200 dark:bg-gray-700 animate-pulse&quot; /&amp;gt;
+      )}
+      
+      {error &amp;amp;&amp;amp; (
+        &amp;lt;div className&#x3D;&quot;absolute inset-0 bg-gray-200 dark:bg-gray-700 flex items-center justify-center&quot;&amp;gt;
+          &amp;lt;span className&#x3D;&quot;text-gray-500 dark:text-gray-400 text-sm&quot;&amp;gt;
+            Failed to load image
+          &amp;lt;/span&amp;gt;
+        &amp;lt;/div&amp;gt;
+      )}
+    &amp;lt;/div&amp;gt;
+  );
+};
+
+export default OptimizedImage;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id&#x3D;&quot;analytics-integration&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#analytics-integration&quot;&gt;Analytics Integration&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-typescript&quot;&gt;// src/lib/analytics.ts
+import { get } from &#x27;lodash&#x27;;
+
+interface AnalyticsEvent {
+  action: string;
+  category: string;
+  label?: string;
+  value?: number;
+}
+
+class AnalyticsService {
+  private isProduction &#x3D; process.env.NODE_ENV &#x3D;&#x3D;&#x3D; &#x27;production&#x27;;
+
+  trackEvent({ action, category, label, value }: AnalyticsEvent) {
+    if (!this.isProduction) return;
+
+    // Google Analytics 4
+    if (typeof gtag !&#x3D;&#x3D; &#x27;undefined&#x27;) {
+      gtag(&#x27;event&#x27;, action, {
+        event_category: category,
+        event_label: label,
+        value: value,
+      });
+    }
+
+    // Custom analytics
+    this.sendToCustomAnalytics({ action, category, label, value });
+  }
+
+  trackPageView(path: string) {
+    if (!this.isProduction) return;
+
+    if (typeof gtag !&#x3D;&#x3D; &#x27;undefined&#x27;) {
+      gtag(&#x27;config&#x27;, &#x27;GA_MEASUREMENT_ID&#x27;, {
+        page_path: path,
+      });
+    }
+
+    this.sendPageViewToAnalytics(path);
+  }
+
+  private async sendToCustomAnalytics(event: AnalyticsEvent) {
+    try {
+      await fetch(&#x27;/api/analytics&#x27;, {
+        method: &#x27;POST&#x27;,
+        headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },
+        body: JSON.stringify({
+          ...event,
+          timestamp: new Date().toISOString(),
+          userAgent: navigator.userAgent,
+          referrer: document.referrer,
+        }),
+      });
+    } catch (error) {
+      console.error(&#x27;Analytics error:&#x27;, error);
+    }
+  }
+
+  private async sendPageViewToAnalytics(path: string) {
+    try {
+      await fetch(&#x27;/api/analytics/pageview&#x27;, {
+        method: &#x27;POST&#x27;,
+        headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },
+        body: JSON.stringify({
+          path,
+          timestamp: new Date().toISOString(),
+          userAgent: navigator.userAgent,
+          referrer: document.referrer,
+        }),
+      });
+    } catch (error) {
+      console.error(&#x27;Page view analytics error:&#x27;, error);
+    }
+  }
+}
+
+export const analytics &#x3D; new AnalyticsService();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id&#x3D;&quot;deployment--devops&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#deployment--devops&quot;&gt;Deployment &amp;amp; DevOps&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id&#x3D;&quot;nextjs-configuration&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#nextjs-configuration&quot;&gt;Next.js Configuration&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// next.config.js
+/** @type {import(&#x27;next&#x27;).NextConfig} */
+const nextConfig &#x3D; {
+  experimental: {
+    appDir: true,
+  },
+  images: {
+    domains: [&#x27;res.cloudinary.com&#x27;, &#x27;images.unsplash.com&#x27;],
+    formats: [&#x27;image/webp&#x27;, &#x27;image/avif&#x27;],
+  },
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
+  },
+  async rewrites() {
+    return [
+      {
+        source: &#x27;/api/:path*&#x27;,
+        destination: &#x27;https://api.example.com/:path*&#x27;,
+      },
+    ];
+  },
+  async redirects() {
+    return [
+      {
+        source: &#x27;/github&#x27;,
+        destination: &#x27;https://github.com/jahanzaibjameel&#x27;,
+        permanent: true,
+      },
+    ];
+  },
+  webpack: (config, { isServer }) &#x3D;&amp;gt; {
+    if (!isServer) {
+      config.resolve.fallback &#x3D; {
+        ...config.resolve.fallback,
+        fs: false,
+      };
+    }
+    return config;
+  },
+  poweredByHeader: false,
+  compress: true,
+  generateEtags: false,
+  httpAgentOptions: {
+    keepAlive: true,
+  },
+};
+
+module.exports &#x3D; nextConfig;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id&#x3D;&quot;vercel-deployment&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#vercel-deployment&quot;&gt;Vercel Deployment&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-json&quot;&gt;// vercel.json
+{
+  &quot;version&quot;: 2,
+  &quot;builds&quot;: [
+    {
+      &quot;src&quot;: &quot;package.json&quot;,
+      &quot;use&quot;: &quot;@vercel/next&quot;
+    }
+  ],
+  &quot;routes&quot;: [
+    {
+      &quot;src&quot;: &quot;/api/(.*)&quot;,
+      &quot;dest&quot;: &quot;/api/$1&quot;
+    }
+  ],
+  &quot;env&quot;: {
+    &quot;DATABASE_URL&quot;: &quot;@database_url&quot;,
+    &quot;NEXTAUTH_SECRET&quot;: &quot;@nextauth_secret&quot;,
+    &quot;NEXTAUTH_URL&quot;: &quot;@nextauth_url&quot;
+  },
+  &quot;functions&quot;: {
+    &quot;src/api/**/*.ts&quot;: {
+      &quot;maxDuration&quot;: 30
+    }
+  },
+  &quot;headers&quot;: [
+    {
+      &quot;source&quot;: &quot;/(.*)&quot;,
+      &quot;headers&quot;: [
+        {
+          &quot;key&quot;: &quot;X-Frame-Options&quot;,
+          &quot;value&quot;: &quot;DENY&quot;
+        },
+        {
+          &quot;key&quot;: &quot;X-Content-Type-Options&quot;,
+          &quot;value&quot;: &quot;nosniff&quot;
+        },
+        {
+          &quot;key&quot;: &quot;X-XSS-Protection&quot;,
+          &quot;value&quot;: &quot;1; mode&#x3D;block&quot;
+        }
+      ]
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id&#x3D;&quot;exercise&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#exercise&quot;&gt;Exercise&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Build Your Own Portfolio Website&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Create a stunning portfolio website that showcases your skills and projects:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-typescript&quot;&gt;// Exercise Tasks:
+// 1. Set up Next.js 14 project with TypeScript
+// 2. Create impressive hero section with animations
+// 3. Build projects showcase with filtering
+// 4. Implement interactive skills section
+// 5. Add contact form with validation
+// 6. Optimize for performance and SEO
+// 7. Add dark/light theme support
+// 8. Implement analytics and tracking
+// 9. Create blog section (optional)
+// 10. Deploy to production
+
+// Implementation Checklist:
+
+// 1. Project Setup
+// - Initialize Next.js 14 project
+// - Configure TypeScript and ESLint
+// - Set up Tailwind CSS
+// - Configure Prisma and database
+// - Set up authentication
+
+// 2. Core Sections
+// - Hero section with animations
+// - About section
+// - Projects showcase
+// - Skills section
+// - Experience timeline
+// - Contact form
+// - Footer
+
+// 3. Advanced Features
+// - Dark/light theme toggle
+// - Smooth scrolling
+// - Loading states
+// - Error boundaries
+// - Analytics integration
+// - SEO optimization
+
+// 4. Performance
+// - Image optimization
+// - Code splitting
+// - Lazy loading
+// - Caching strategies
+// - Bundle optimization
+
+// 5. Deployment
+// - Environment configuration
+// - CI/CD pipeline
+// - Domain setup
+// - SSL certificates
+// - Monitoring setup
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Your Tasks:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Set up the complete Next.js project structure&lt;/li&gt;
+&lt;li&gt;Create impressive hero section with animations&lt;/li&gt;
+&lt;li&gt;Build projects showcase with filtering and search&lt;/li&gt;
+&lt;li&gt;Implement interactive skills section with progress bars&lt;/li&gt;
+&lt;li&gt;Add contact form with validation and email integration&lt;/li&gt;
+&lt;li&gt;Optimize for performance and SEO&lt;/li&gt;
+&lt;li&gt;Add dark/light theme support&lt;/li&gt;
+&lt;li&gt;Implement analytics and user tracking&lt;/li&gt;
+&lt;li&gt;Create responsive design for all devices&lt;/li&gt;
+&lt;li&gt;Deploy to production with CI/CD&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This exercise teaches you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Next.js 14 App Router and server components&lt;/li&gt;
+&lt;li&gt;Advanced animations with Framer Motion&lt;/li&gt;
+&lt;li&gt;Performance optimization techniques&lt;/li&gt;
+&lt;li&gt;SEO best practices&lt;/li&gt;
+&lt;li&gt;Responsive design principles&lt;/li&gt;
+&lt;li&gt;State management and data fetching&lt;/li&gt;
+&lt;li&gt;Form validation and API integration&lt;/li&gt;
+&lt;li&gt;Analytics and user tracking&lt;/li&gt;
+&lt;li&gt;Deployment and DevOps&lt;/li&gt;
+&lt;li&gt;Modern web development patterns&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Next Up&lt;/strong&gt;: Learn about building the E-Commerce Platform! E-Commerce Development&lt;/p&gt;
+
+                        </div>
+                        
+                    </article>
+                </div>
+            </main>
         </div>
 
-        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
-        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
-        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
-        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
-        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
-
-
-
-        <script>
-            window.playground_copyable = true;
-        </script>
-
-
-        <script src="../elasticlunr-ef4e11c1.min.js"></script>
-        <script src="../mark-09e88c2c.min.js"></script>
-        <script src="../searcher-c2a407aa.js"></script>
-
-        <script src="../clipboard-1626706a.min.js"></script>
-        <script src="../highlight-abc7f01d.js"></script>
-        <script src="../book-a0b12cfe.js"></script>
-
-        <!-- Custom JS scripts -->
-        <script src="../advanced-interactions-dd74314b.js"></script>
-
-
-
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contribute</h3>
+                    <p>Found an issue or want to contribute?</p>
+                    <ul>
+                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="../">Home</a></li>
+                        <li><a href="../print.html" target="_blank">Print Version</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
+                </div>
+            </div>
+        </footer>
     </div>
-    </body>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize theme
+        document.documentElement.setAttribute('data-theme', 'light');
+        
+        // Global variables for mdBook compatibility
+        window.path_to_root = "../";
+        window.current_page = "projects/portfolio.md";
+        
+        // Search data will be loaded by mdBook
+    </script>
+    
+    <!-- Theme scripts -->
+    <script src="../theme/js/core.js"></script>
+    <script src="../theme/js/animations.js"></script>
+    <script src="../theme/js/search.js"></script>
+    
+</body>
 </html>

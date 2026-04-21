@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="{{ language }}" data-theme="light">
+<head>
+    {{> head}}
+    <style>
+        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
+        :root {
+            --space-0: 0;
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            
+            --radius-sm: 0.25rem;
+            --radius-md: 0.375rem;
+            --radius-lg: 0.5rem;
+            --radius-xl: 0.75rem;
+            
+            --text-xs: 0.75rem;
+            --text-sm: 0.875rem;
+            --text-base: 1rem;
+            --text-lg: 1.125rem;
+            --text-xl: 1.25rem;
+            --text-2xl: 1.5rem;
+            --text-3xl: 1.875rem;
+            --text-4xl: 2.25rem;
+            
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+            
+            --transition-fast: 150ms ease;
+            --transition-normal: 300ms ease;
+            
+            --z-sticky: 1000;
+            --z-modal: 9999;
+            
+            --container-2xl: 1400px;
+            
+            --leading-normal: 1.5;
+            --leading-relaxed: 1.625;
+            --leading-tight: 1.25;
+            
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            
+            --bg-primary: oklch(98% 0.005 250);
+            --bg-secondary: oklch(100% 0 0);
+            --bg-tertiary: oklch(96% 0.01 250);
+            --bg-glass: oklch(100% 0 0 / 0.8);
+            --bg-overlay: oklch(0% 0 0 / 0.5);
+            --bg-code: oklch(94% 0.02 250);
+            
+            --text-primary: oklch(20% 0.02 260);
+            --text-secondary: oklch(40% 0.01 250);
+            --text-code: oklch(25% 0.03 250);
+            
+            --accent-primary: oklch(60% 0.2 250);
+            --accent-primary-hover: oklch(65% 0.22 250);
+            
+            --border-light: oklch(85% 0.01 250);
+            --border-medium: oklch(75% 0.01 250);
+            
+            --shadow-sm: 0 1px 3px 0 oklch(0% 0 0 / 0.1), 0 1px 2px 0 oklch(0% 0 0 / 0.06);
+            --shadow-md: 0 4px 6px -1px oklch(0% 0 0 / 0.1), 0 2px 4px -1px oklch(0% 0 0 / 0.06);
+            --shadow-xl: 0 20px 25px -5px oklch(0% 0 0 / 0.1), 0 10px 10px -5px oklch(0% 0 0 / 0.04);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-sans);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: var(--leading-normal);
+        }
+        
+        .devatelier-theme {
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+        }
+        
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: var(--z-sticky);
+            background-color: var(--bg-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            padding: var(--space-4) 0;
+        }
+        
+        .header-container {
+            max-width: var(--container-2xl);
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-6);
+        }
+        
+        .header-title {
+            font-size: var(--text-xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+        
+        .main-container {
+            max-width: var(--container-2xl);
+            margin: 0 auto;
+            padding: var(--space-8) var(--space-6);
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: var(--space-8);
+        }
+        
+        @media (min-width: 1024px) {
+            .main-container {
+                grid-template-columns: 280px minmax(0, 1fr);
+            }
+        }
+        
+        @media (min-width: 1280px) {
+            .main-container {
+                grid-template-columns: 320px minmax(0, 1fr);
+            }
+        }
+        
+        .sidebar {
+            grid-column: 1;
+            order: 2;
+            height: fit-content;
+            position: sticky;
+            top: calc(var(--space-16) + var(--space-4));
+            overflow-y: auto;
+            max-height: calc(100vh - var(--space-16) - var(--space-8));
+        }
+        
+        @media (min-width: 1024px) {
+            .sidebar {
+                order: 1;
+            }
+        }
+        
+        .sidebar-content {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .sidebar-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sidebar-nav a {
+            display: block;
+            padding: var(--space-2) var(--space-3);
+            border-radius: var(--radius-md);
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+            font-size: var(--text-sm);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sidebar-nav a:hover,
+        .sidebar-nav a.active {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+        
+        .sidebar-nav a.active {
+            background-color: var(--accent-primary / 0.1);
+            color: var(--accent-primary);
+            font-weight: var(--font-weight-medium);
+        }
+        
+        .sidebar-nav a.active::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background-color: var(--accent-primary);
+        }
+        
+        .content {
+            grid-column: 2;
+            order: 1;
+            min-width: 0;
+        }
+        
+        @media (min-width: 1024px) {
+            .content {
+                order: 2;
+            }
+        }
+        
+        .content-inner {
+            max-width: none;
+            margin: 0;
+        }
+        
+        article {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: var(--space-8);
+        }
+        
+        .article-header h1 {
+            font-size: var(--text-4xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+            scroll-margin: calc(var(--space-16) + var(--space-4));
+        }
+        
+        .article-content {
+            color: var(--text-secondary);
+            line-height: var(--leading-relaxed);
+        }
+        
+        .article-content h1,
+        .article-content h2,
+        .article-content h3,
+        .article-content h4,
+        .article-content h5,
+        .article-content h6 {
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+        }
+        
+        .article-content p {
+            margin-bottom: var(--space-4);
+            max-width: 65ch;
+        }
+        
+        .footer {
+            grid-row: 3;
+            background-color: var(--bg-tertiary);
+            border-top: 1px solid var(--border-light);
+            padding: var(--space-8) 0;
+            margin-top: auto;
+        }
+        
+        .footer-container {
+            max-width: var(--container-2xl);
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-8);
+        }
+        
+        .footer-section h3 {
+            font-size: var(--text-base);
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--space-4);
+            color: var(--text-primary);
+        }
+        
+        .footer-section p,
+        .footer-section ul {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        .footer-section a:hover {
+            color: var(--accent-primary);
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--accent-primary);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 10000;
+            font-weight: 500;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        /* Basic element styling */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: var(--font-weight-semibold);
+            line-height: var(--leading-tight);
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+        }
+        
+        p {
+            margin-bottom: var(--space-4);
+            color: var(--text-secondary);
+        }
+        
+        a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        a:hover {
+            color: var(--accent-primary-hover);
+        }
+        
+        /* Code styling */
+        code {
+            font-family: var(--font-mono);
+            font-size: 0.875em;
+            background-color: var(--bg-code);
+            padding: var(--space-1) var(--space-2);
+            border-radius: var(--radius-sm);
+            color: var(--text-code);
+            border: 1px solid var(--border-light);
+        }
+        
+        pre {
+            margin: var(--space-6) 0;
+            padding: var(--space-6);
+            background-color: var(--bg-code);
+            border-radius: var(--radius-lg);
+            overflow-x: auto;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+            border: none;
+            font-size: 0.9375em;
+            line-height: var(--leading-relaxed);
+        }
+        
+        /* Lists */
+        ul, ol {
+            margin-bottom: var(--space-4);
+            padding-left: var(--space-6);
+            color: var(--text-secondary);
+        }
+        
+        li {
+            margin-bottom: var(--space-2);
+        }
+        
+        /* Blockquotes */
+        blockquote {
+            margin: var(--space-6) 0;
+            padding: var(--space-4) var(--space-6);
+            border-left: 4px solid var(--accent-primary);
+            background-color: var(--bg-tertiary);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            font-style: italic;
+            color: var(--text-primary);
+        }
+        
+        blockquote p {
+            margin-bottom: 0;
+            font-size: var(--text-lg);
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--space-6) 0;
+            font-size: var(--text-sm);
+        }
+        
+        th, td {
+            padding: var(--space-3) var(--space-4);
+            text-align: left;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        th {
+            font-weight: var(--font-weight-semibold);
+            color: var(--text-primary);
+            background-color: var(--bg-tertiary);
+        }
+        
+        tbody tr:hover {
+            background-color: var(--bg-tertiary);
+        }
+        
+        /* Horizontal rule */
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border-light), transparent);
+            margin: var(--space-8) 0;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-6);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            font-family: var(--font-sans);
+            font-size: var(--text-sm);
+            font-weight: var(--font-weight-medium);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-ghost {
+            background-color: transparent;
+            color: var(--text-secondary);
+            border-color: transparent;
+        }
+        
+        .btn-ghost:hover {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+            border-color: var(--border-medium);
+        }
+        
+        .btn-sm {
+            padding: var(--space-2) var(--space-4);
+            font-size: var(--text-xs);
+        }
+        
+        /* Responsive fixes */
+        @media (max-width: 768px) {
+            .header-container,
+            .main-container {
+                padding: 0 var(--space-4);
+            }
+            
+            .main-container {
+                gap: var(--space-6);
+            }
+            
+            article {
+                padding: var(--space-6);
+                border-radius: var(--radius-lg);
+            }
+            
+            .sidebar {
+                position: static;
+                max-height: none;
+                margin-bottom: var(--space-6);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-container,
+            .main-container {
+                padding: 0 var(--space-3);
+            }
+            
+            article {
+                padding: var(--space-4);
+                border-radius: var(--radius-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="devatelier-theme">
+        <!-- Skip to main content for accessibility -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="header-container">
+                <a href="{{ path_to_root }}" class="header-title" rel="home">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                    </svg>
+                    {{ title }}
+                </a>
+                
+                <nav class="header-nav">
+                    {{#if git_repository_url}}
+                    <a href="{{ git_repository_url }}" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        GitHub
+                    </a>
+                    {{/if}}
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-content">
+                    {{#if path_to_root}}
+                    <div class="sidebar-title">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="4" y1="6" x2="20" y2="6"></line>
+                            <line x1="4" y1="12" x2="20" y2="12"></line>
+                            <line x1="4" y1="18" x2="16" y2="18"></line>
+                        </svg>
+                        Table of Contents
+                    </div>
+                    {{/if}}
+                    
+                    <nav class="sidebar-nav">
+                        {{#toc}}
+                        <ol class="chapter">
+                            {{#each this}}
+                            <li class="chapter-item expanded">
+                                <a href="{{ path_to_root }}{{ this.path }}" class="chapter-link">
+                                    <strong>{{ this.title }}</strong>
+                                </a>
+                                {{#if this.sections.length}}
+                                <ol class="nav-children">
+                                    {{#each this.sections}}
+                                    <li class="chapter-item">
+                                        <a href="{{ ../path_to_root }}{{ this.path }}" class="chapter-link">
+                                            {{ this.title }}
+                                        </a>
+                                    </li>
+                                    {{/each}}
+                                </ol>
+                                {{/if}}
+                            </li>
+                            {{/each}}
+                        </ol>
+                        {{/toc}}
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Content Area -->
+            <main class="content" id="main-content">
+                <div class="content-inner">
+                    {{#if title}}
+                    <article>
+                        <header class="article-header">
+                            <h1>{{ title }}</h1>
+                            {{#if date}}
+                            <div class="article-meta">
+                                <time datetime="{{ date }}">{{ date }}</time>
+                            </div>
+                            {{/if}}
+                        </header>
+                        
+                        <div class="article-content">
+                            {{ content }}
+                        </div>
+                        
+                        {{#if previous_title}}
+                        <nav class="article-navigation">
+                            <a href="{{ previous_href }}" class="article-nav-prev">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                                <div>
+                                    <div class="article-nav-label">Previous</div>
+                                    <div class="article-nav-title">{{ previous_title }}</div>
+                                </div>
+                            </a>
+                            
+                            {{#if next_title}}
+                            <a href="{{ next_href }}" class="article-nav-next">
+                                <div>
+                                    <div class="article-nav-label">Next</div>
+                                    <div class="article-nav-title">{{ next_title }}</div>
+                                </div>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </a>
+                            {{/if}}
+                        </nav>
+                        {{else}}
+                        {{#if next_title}}
+                        <nav class="article-navigation">
+                            <a href="{{ next_href }}" class="article-nav-next">
+                                <div>
+                                    <div class="article-nav-label">Next</div>
+                                    <div class="article-nav-title">{{ next_title }}</div>
+                                </div>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </a>
+                        </nav>
+                        {{/if}}
+                        {{/if}}
+                    </article>
+                    {{else}}
+                    <div class="content-wrapper">
+                        {{ content }}
+                    </div>
+                    {{/if}}
+                </div>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <p>{{ description }}</p>
+                </div>
+                
+                {{#if git_repository_url}}
+                <div class="footer-section">
+                    <h3>Contribute</h3>
+                    <p>Found an issue or want to contribute?</p>
+                    <ul>
+                        <li><a href="{{ git_repository_url }}">View on GitHub</a></li>
+                        {{#if edit_url_template}}
+                        <li><a href="{{ edit_url }}">Edit this page</a></li>
+                        {{/if}}
+                    </ul>
+                </div>
+                {{/if}}
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="{{ path_to_root }}">Home</a></li>
+                        {{#if print_enable}}
+                        <li><a href="{{ path_to_root }}print.html" target="_blank">Print Version</a></li>
+                        {{/if}}
+                    </ul>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; {{ year }} {{ authors }}. Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize theme
+        document.documentElement.setAttribute('data-theme', 'light');
+        
+        // Global variables for mdBook compatibility
+        window.path_to_root = "{{ path_to_root }}";
+        window.current_page = "{{ path }}";
+        
+        {{#if search_enabled}}
+        // Search data will be loaded by mdBook
+        {{/if}}
+    </script>
+    
+    <!-- Theme scripts -->
+    <script src="{{ path_to_root }}theme/js/core.js"></script>
+    <script src="{{ path_to_root }}theme/js/animations.js"></script>
+    {{#if search_enabled}}
+    <script src="{{ path_to_root }}theme/js/search.js"></script>
+    {{/if}}
+    
+    {{#if mathjax_support}}
+    <!-- MathJax support -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    {{/if}}
+</body>
+</html>

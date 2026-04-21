@@ -1,417 +1,1030 @@
-<!DOCTYPE HTML>
-<html lang="en" class="dark sidebar-visible" dir="ltr">
-    <head>
-        <!-- Book generated using mdBook -->
-        <meta charset="UTF-8">
-        <title>Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="mdBook">
+    
+    <!-- Primary Meta Tags -->
+    <title>Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <meta name="title" content="Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
+    <meta name="author" content="">
+    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="career/interviews.md">
+    <meta property="og:title" content="Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
+    <meta property="og:image" content="/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="career/interviews.md">
+    <meta property="twitter:title" content="Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
+    <meta property="twitter:image" content="/og-image.png">
+    <meta property="twitter:creator" content="@">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="msapplication-TileColor" content="#3b82f6">
+    <meta name="application-name" content="Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="apple-mobile-web-app-title" content="Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="career/interviews.md">
 
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//github.com">
+    <link rel="dns-prefetch" href="//rust-lang.github.io">
+    
+    <!-- Font Preloads -->
+    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- CSS Preloads -->
+    <link rel="preload" href="../theme/css/tokens.css" as="style">
+    <link rel="preload" href="../theme/css/base.css" as="style">
+    <link rel="preload" href="../theme/css/layout.css" as="style">
+    <link rel="preload" href="../theme/css/components.css" as="style">
+    <link rel="preload" href="../theme/css/animations.css" as="style">
+    <link rel="preload" href="../theme/css/syntax.css" as="style">
+    <link rel="preload" href="../theme/css/utilities.css" as="style">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../theme/css/tokens.css">
+    <link rel="stylesheet" href="../theme/css/base.css">
+    <link rel="stylesheet" href="../theme/css/layout.css">
+    <link rel="stylesheet" href="../theme/css/components.css">
+    <link rel="stylesheet" href="../theme/css/animations.css">
+    <link rel="stylesheet" href="../theme/css/syntax.css">
+    <link rel="stylesheet" href="../theme/css/utilities.css">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="icon" href="../icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    
+    <!-- PWA Icons -->
+    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
+    
+    <!-- RSS Feed (if applicable) -->
 
-        <!-- Custom HTML head -->
-
-        <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff">
-
-        <link rel="icon" href="../favicon-de23e50b.svg">
-        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
-        <link rel="stylesheet" href="../css/variables-8adf115d.css">
-        <link rel="stylesheet" href="../css/general-2459343d.css">
-        <link rel="stylesheet" href="../css/chrome-ae938929.css">
-        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
-
-        <!-- Fonts -->
-        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
-
-        <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
-
-        <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../advanced-animations-fa92d1c9.css">
-
-
-        <!-- Provide site root and default themes to javascript -->
-        <script>
-            const path_to_root = "../";
-            const default_light_theme = "dark";
-            const default_dark_theme = "coal";
-            window.path_to_searchindex_js = "../searchindex-9115e583.js";
-        </script>
-        <!-- Start loading toc.js asap -->
-        <script src="../toc-e26ec519.js"></script>
-    </head>
-    <body>
-    <div id="mdbook-help-container">
-        <div id="mdbook-help-popup">
-            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
-            <div>
-                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
-                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
-                <p>Press <kbd>?</kbd> to show this help</p>
-                <p>Press <kbd>Esc</kbd> to hide this help</p>
-            </div>
-        </div>
-    </div>
-    <div id="mdbook-body-container">
-        <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script>
-            try {
-                let theme = localStorage.getItem('mdbook-theme');
-                let sidebar = localStorage.getItem('mdbook-sidebar');
-
-                if (theme.startsWith('"') && theme.endsWith('"')) {
-                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
-                }
-
-                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
-                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
-                }
-            } catch (e) { }
-        </script>
-
-        <!-- Set the theme before any content is loaded, prevents flash -->
-        <script>
-            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
-            let theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
-            if (theme === null || theme === undefined) { theme = default_theme; }
-            const html = document.documentElement;
-            html.classList.remove('dark')
-            html.classList.add(theme);
-            html.classList.add("js");
-        </script>
-
-        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
-
-        <!-- Hide / unhide sidebar before it is displayed -->
-        <script>
-            let sidebar = null;
-            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
-            if (document.body.clientWidth >= 1080) {
-                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
-                sidebar = sidebar || 'visible';
-            } else {
-                sidebar = 'hidden';
-                sidebar_toggle.checked = false;
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
+      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
+      "author": {
+        "@type": "Person",
+        "name": ""
+      },
+      "url": "",
+      "image": "/og-image.png",
+      "datePublished": "",
+      "dateModified": "",
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "Organization",
+        "name": "",
+        "url": ""
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Software Development"
+      }
+    }
+    </script>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        connect-src 'self' https://api.github.com;
+    ">
+    
+    <!-- Performance Optimizations -->
+    <link rel="modulepreload" href="../theme/js/core.js">
+    <link rel="modulepreload" href="../theme/js/animations.js">
+    <link rel="modulepreload" href="../theme/js/search.js">
+    
+    <!-- Critical CSS (inline for performance) -->
+    <style>
+        /* Critical above-the-fold styles */
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: oklch(98% 0.005 250);
+            color: oklch(20% 0.02 260);
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #3b82f6;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 10000;
+            font-weight: 500;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+        }
+        
+        .loading {
+            opacity: 0;
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+    </style>
+    
+    <!-- Viewport and Feature Detection -->
+    <script>
+        // Feature detection
+        (function() {
+            'use strict';
+            
+            // Detect reduced motion preference
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReducedMotion) {
+                document.documentElement.classList.add('reduced-motion');
             }
-            if (sidebar === 'visible') {
-                sidebar_toggle.checked = true;
-            } else {
-                html.classList.remove('sidebar-visible');
+            
+            // Detect high contrast preference
+            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+            if (prefersHighContrast) {
+                document.documentElement.classList.add('high-contrast');
             }
-        </script>
-
-        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
-            <!-- populated by js -->
-            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
-            <noscript>
-                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
-            </noscript>
-            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
-                <div class="sidebar-resize-indicator"></div>
-            </div>
-        </nav>
-
-        <div id="mdbook-page-wrapper" class="page-wrapper">
-
-            <div class="page">
-                <div id="mdbook-menu-bar-hover-placeholder"></div>
-                <div id="mdbook-menu-bar" class="menu-bar sticky">
-                    <div class="left-buttons">
-                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
-                        </label>
-                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
-                        </button>
-                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
-                        </ul>
-                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
-                        </button>
-                    </div>
-
-                    <h1 class="menu-title">Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-
-                    <div class="right-buttons">
-                        <a href="../print.html" title="Print this book" aria-label="Print this book">
-                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
-                        </a>
-                        <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" title="Git repository" aria-label="Git repository">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
-                        </a>
-                        <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook/edit/main/src/career/interviews.md" title="Suggest an edit" aria-label="Suggest an edit" rel="edit">
-                            <span class=fa-svg id="git-edit-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M421.7 220.3l-11.3 11.3-22.6 22.6-205 205c-6.6 6.6-14.8 11.5-23.8 14.1L30.8 511c-8.4 2.5-17.5 .2-23.7-6.1S-1.5 489.7 1 481.2L38.7 353.1c2.6-9 7.5-17.2 14.1-23.8l205-205 22.6-22.6 11.3-11.3 33.9 33.9 62.1 62.1 33.9 33.9zM96 353.9l-9.3 9.3c-.9 .9-1.6 2.1-2 3.4l-25.3 86 86-25.3c1.3-.4 2.5-1.1 3.4-2l9.3-9.3H112c-8.8 0-16-7.2-16-16V353.9zM453.3 19.3l39.4 39.4c25 25 25 65.5 0 90.5l-14.5 14.5-22.6 22.6-11.3 11.3-33.9-33.9-62.1-62.1L314.3 67.7l11.3-11.3 22.6-22.6 14.5-14.5c25-25 65.5-25 90.5 0z"/></svg></span>
-                        </a>
-
-                    </div>
-                </div>
-
-                <div id="mdbook-search-wrapper" class="hidden">
-                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
-                        <div class="search-wrapper">
-                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
-                            <div class="spinner-wrapper">
-                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
-                            </div>
-                        </div>
-                    </form>
-                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
-                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
-                        <ul id="mdbook-searchresults">
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script>
-                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
-                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+            
+            // Detect color scheme preference
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const savedTheme = localStorage.getItem('devatelier-theme');
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+            
+            // Performance detection
+            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
+            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
+            
+            if (isSlowConnection || isLowMemory) {
+                document.documentElement.classList.add('performance-mode');
+            }
+        })();
+    </script>
+    
+    <!-- Service Worker Registration (if available) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('../sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
                     });
-                </script>
+            });
+        }
+    </script>
+    <style>
+        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
+        :root {
+            --space-0: 0;
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            
+            --radius-sm: 0.25rem;
+            --radius-md: 0.375rem;
+            --radius-lg: 0.5rem;
+            --radius-xl: 0.75rem;
+            
+            --text-xs: 0.75rem;
+            --text-sm: 0.875rem;
+            --text-base: 1rem;
+            --text-lg: 1.125rem;
+            --text-xl: 1.25rem;
+            --text-2xl: 1.5rem;
+            --text-3xl: 1.875rem;
+            --text-4xl: 2.25rem;
+            
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+            
+            --transition-fast: 150ms ease;
+            --transition-normal: 300ms ease;
+            
+            --z-sticky: 1000;
+            --z-modal: 9999;
+            
+            --container-2xl: 1400px;
+            
+            --leading-normal: 1.5;
+            --leading-relaxed: 1.625;
+            --leading-tight: 1.25;
+            
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            
+            --bg-primary: oklch(98% 0.005 250);
+            --bg-secondary: oklch(100% 0 0);
+            --bg-tertiary: oklch(96% 0.01 250);
+            --bg-glass: oklch(100% 0 0 / 0.8);
+            --bg-overlay: oklch(0% 0 0 / 0.5);
+            --bg-code: oklch(94% 0.02 250);
+            
+            --text-primary: oklch(20% 0.02 260);
+            --text-secondary: oklch(40% 0.01 250);
+            --text-code: oklch(25% 0.03 250);
+            
+            --accent-primary: oklch(60% 0.2 250);
+            --accent-primary-hover: oklch(65% 0.22 250);
+            
+            --border-light: oklch(85% 0.01 250);
+            --border-medium: oklch(75% 0.01 250);
+            
+            --shadow-sm: 0 1px 3px 0 oklch(0% 0 0 / 0.1), 0 1px 2px 0 oklch(0% 0 0 / 0.06);
+            --shadow-md: 0 4px 6px -1px oklch(0% 0 0 / 0.1), 0 2px 4px -1px oklch(0% 0 0 / 0.06);
+            --shadow-xl: 0 20px 25px -5px oklch(0% 0 0 / 0.1), 0 10px 10px -5px oklch(0% 0 0 / 0.04);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-sans);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: var(--leading-normal);
+        }
+        
+        .devatelier-theme {
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+        }
+        
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: var(--z-sticky);
+            background-color: var(--bg-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            padding: var(--space-4) 0;
+        }
+        
+        .header-container {
+            max-width: var(--container-2xl);
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-6);
+        }
+        
+        .header-title {
+            font-size: var(--text-xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+        
+        .main-container {
+            max-width: var(--container-2xl);
+            margin: 0 auto;
+            padding: var(--space-8) var(--space-6);
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: var(--space-8);
+        }
+        
+        @media (min-width: 1024px) {
+            .main-container {
+                grid-template-columns: 280px minmax(0, 1fr);
+            }
+        }
+        
+        @media (min-width: 1280px) {
+            .main-container {
+                grid-template-columns: 320px minmax(0, 1fr);
+            }
+        }
+        
+        .sidebar {
+            grid-column: 1;
+            order: 2;
+            height: fit-content;
+            position: sticky;
+            top: calc(var(--space-16) + var(--space-4));
+            overflow-y: auto;
+            max-height: calc(100vh - var(--space-16) - var(--space-8));
+        }
+        
+        @media (min-width: 1024px) {
+            .sidebar {
+                order: 1;
+            }
+        }
+        
+        .sidebar-content {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .sidebar-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sidebar-nav a {
+            display: block;
+            padding: var(--space-2) var(--space-3);
+            border-radius: var(--radius-md);
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+            font-size: var(--text-sm);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sidebar-nav a:hover,
+        .sidebar-nav a.active {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+        
+        .sidebar-nav a.active {
+            background-color: var(--accent-primary / 0.1);
+            color: var(--accent-primary);
+            font-weight: var(--font-weight-medium);
+        }
+        
+        .sidebar-nav a.active::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background-color: var(--accent-primary);
+        }
+        
+        .content {
+            grid-column: 2;
+            order: 1;
+            min-width: 0;
+        }
+        
+        @media (min-width: 1024px) {
+            .content {
+                order: 2;
+            }
+        }
+        
+        .content-inner {
+            max-width: none;
+            margin: 0;
+        }
+        
+        article {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: var(--space-8);
+        }
+        
+        .article-header h1 {
+            font-size: var(--text-4xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+            scroll-margin: calc(var(--space-16) + var(--space-4));
+        }
+        
+        .article-content {
+            color: var(--text-secondary);
+            line-height: var(--leading-relaxed);
+        }
+        
+        .article-content h1,
+        .article-content h2,
+        .article-content h3,
+        .article-content h4,
+        .article-content h5,
+        .article-content h6 {
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+        }
+        
+        .article-content p {
+            margin-bottom: var(--space-4);
+            max-width: 65ch;
+        }
+        
+        .footer {
+            grid-row: 3;
+            background-color: var(--bg-tertiary);
+            border-top: 1px solid var(--border-light);
+            padding: var(--space-8) 0;
+            margin-top: auto;
+        }
+        
+        .footer-container {
+            max-width: var(--container-2xl);
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-8);
+        }
+        
+        .footer-section h3 {
+            font-size: var(--text-base);
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--space-4);
+            color: var(--text-primary);
+        }
+        
+        .footer-section p,
+        .footer-section ul {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        .footer-section a:hover {
+            color: var(--accent-primary);
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--accent-primary);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 10000;
+            font-weight: 500;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        /* Basic element styling */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: var(--font-weight-semibold);
+            line-height: var(--leading-tight);
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+        }
+        
+        p {
+            margin-bottom: var(--space-4);
+            color: var(--text-secondary);
+        }
+        
+        a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        a:hover {
+            color: var(--accent-primary-hover);
+        }
+        
+        /* Code styling */
+        code {
+            font-family: var(--font-mono);
+            font-size: 0.875em;
+            background-color: var(--bg-code);
+            padding: var(--space-1) var(--space-2);
+            border-radius: var(--radius-sm);
+            color: var(--text-code);
+            border: 1px solid var(--border-light);
+        }
+        
+        pre {
+            margin: var(--space-6) 0;
+            padding: var(--space-6);
+            background-color: var(--bg-code);
+            border-radius: var(--radius-lg);
+            overflow-x: auto;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+            border: none;
+            font-size: 0.9375em;
+            line-height: var(--leading-relaxed);
+        }
+        
+        /* Lists */
+        ul, ol {
+            margin-bottom: var(--space-4);
+            padding-left: var(--space-6);
+            color: var(--text-secondary);
+        }
+        
+        li {
+            margin-bottom: var(--space-2);
+        }
+        
+        /* Blockquotes */
+        blockquote {
+            margin: var(--space-6) 0;
+            padding: var(--space-4) var(--space-6);
+            border-left: 4px solid var(--accent-primary);
+            background-color: var(--bg-tertiary);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            font-style: italic;
+            color: var(--text-primary);
+        }
+        
+        blockquote p {
+            margin-bottom: 0;
+            font-size: var(--text-lg);
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--space-6) 0;
+            font-size: var(--text-sm);
+        }
+        
+        th, td {
+            padding: var(--space-3) var(--space-4);
+            text-align: left;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        th {
+            font-weight: var(--font-weight-semibold);
+            color: var(--text-primary);
+            background-color: var(--bg-tertiary);
+        }
+        
+        tbody tr:hover {
+            background-color: var(--bg-tertiary);
+        }
+        
+        /* Horizontal rule */
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border-light), transparent);
+            margin: var(--space-8) 0;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-6);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            font-family: var(--font-sans);
+            font-size: var(--text-sm);
+            font-weight: var(--font-weight-medium);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-ghost {
+            background-color: transparent;
+            color: var(--text-secondary);
+            border-color: transparent;
+        }
+        
+        .btn-ghost:hover {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+            border-color: var(--border-medium);
+        }
+        
+        .btn-sm {
+            padding: var(--space-2) var(--space-4);
+            font-size: var(--text-xs);
+        }
+        
+        /* Responsive fixes */
+        @media (max-width: 768px) {
+            .header-container,
+            .main-container {
+                padding: 0 var(--space-4);
+            }
+            
+            .main-container {
+                gap: var(--space-6);
+            }
+            
+            article {
+                padding: var(--space-6);
+                border-radius: var(--radius-lg);
+            }
+            
+            .sidebar {
+                position: static;
+                max-height: none;
+                margin-bottom: var(--space-6);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-container,
+            .main-container {
+                padding: 0 var(--space-3);
+            }
+            
+            article {
+                padding: var(--space-4);
+                border-radius: var(--radius-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="devatelier-theme">
+        <!-- Skip to main content for accessibility -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="header-container">
+                <a href="../" class="header-title" rel="home">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                    </svg>
+                    Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio
+                </a>
+                
+                <nav class="header-nav">
+                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        GitHub
+                    </a>
+                </nav>
+            </div>
+        </header>
 
-                <div id="mdbook-content" class="content">
-                    <main>
-                        <h1 id="interview-preparation"><a class="header" href="#interview-preparation">Interview Preparation</a></h1>
-<p>Interview preparation is the key to landing your dream job. This comprehensive guide covers everything from technical skills to behavioral questions, helping you ace any developer interview.</p>
-<h2 id="-interview-success-framework"><a class="header" href="#-interview-success-framework">🎯 Interview Success Framework</a></h2>
-<h3 id="the-three-pillars-of-interview-success"><a class="header" href="#the-three-pillars-of-interview-success">The Three Pillars of Interview Success</a></h3>
-<ol>
-<li><strong>Technical Excellence</strong>: Strong coding skills and system design knowledge</li>
-<li><strong>Communication</strong>: Clear articulation of technical concepts</li>
-<li><strong>Problem-Solving</strong>: Structured approach to complex challenges</li>
-</ol>
-<h3 id="interview-types--preparation"><a class="header" href="#interview-types--preparation">Interview Types &amp; Preparation</a></h3>
-<pre><code class="language-javascript">// Interview preparation matrix
-const interviewTypes = {
+        <!-- Main Content -->
+        <div class="main-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-content">
+                    <div class="sidebar-title">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="4" y1="6" x2="20" y2="6"></line>
+                            <line x1="4" y1="12" x2="20" y2="12"></line>
+                            <line x1="4" y1="18" x2="16" y2="18"></line>
+                        </svg>
+                        Table of Contents
+                    </div>
+                    
+                    <nav class="sidebar-nav">
+<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
+                </div>
+            </aside>
+
+            <!-- Content Area -->
+            <main class="content" id="main-content">
+                <div class="content-inner">
+                    <article>
+                        <header class="article-header">
+                            <h1>Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
+                        </header>
+                        
+                        <div class="article-content">
+                            &lt;h1 id&#x3D;&quot;interview-preparation&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#interview-preparation&quot;&gt;Interview Preparation&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Interview preparation is the key to landing your dream job. This comprehensive guide covers everything from technical skills to behavioral questions, helping you ace any developer interview.&lt;/p&gt;
+&lt;h2 id&#x3D;&quot;-interview-success-framework&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-interview-success-framework&quot;&gt;🎯 Interview Success Framework&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id&#x3D;&quot;the-three-pillars-of-interview-success&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#the-three-pillars-of-interview-success&quot;&gt;The Three Pillars of Interview Success&lt;/a&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Technical Excellence&lt;/strong&gt;: Strong coding skills and system design knowledge&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Communication&lt;/strong&gt;: Clear articulation of technical concepts&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Problem-Solving&lt;/strong&gt;: Structured approach to complex challenges&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id&#x3D;&quot;interview-types--preparation&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#interview-types--preparation&quot;&gt;Interview Types &amp;amp; Preparation&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Interview preparation matrix
+const interviewTypes &#x3D; {
   technical: {
-    types: ["Coding challenge", "System design", "Code review", "Debugging"],
-    preparation: "LeetCode practice, system design study, code reviews",
-    duration: "45-90 minutes",
-    focus: "Problem-solving speed and accuracy"
+    types: [&quot;Coding challenge&quot;, &quot;System design&quot;, &quot;Code review&quot;, &quot;Debugging&quot;],
+    preparation: &quot;LeetCode practice, system design study, code reviews&quot;,
+    duration: &quot;45-90 minutes&quot;,
+    focus: &quot;Problem-solving speed and accuracy&quot;
   },
   
   behavioral: {
-    types: ["STAR questions", "Situational judgment", "Cultural fit", "Conflict resolution"],
-    preparation: "Story bank, company research, self-reflection",
-    duration: "30-60 minutes",
-    focus: "Communication and soft skills"
+    types: [&quot;STAR questions&quot;, &quot;Situational judgment&quot;, &quot;Cultural fit&quot;, &quot;Conflict resolution&quot;],
+    preparation: &quot;Story bank, company research, self-reflection&quot;,
+    duration: &quot;30-60 minutes&quot;,
+    focus: &quot;Communication and soft skills&quot;
   },
   
   systemDesign: {
-    types: ["Architecture design", "Scalability", "Database design", "API design"],
-    preparation: "System design patterns, scalability principles, case studies",
-    duration: "60-90 minutes",
-    focus: "Trade-offs and design decisions"
+    types: [&quot;Architecture design&quot;, &quot;Scalability&quot;, &quot;Database design&quot;, &quot;API design&quot;],
+    preparation: &quot;System design patterns, scalability principles, case studies&quot;,
+    duration: &quot;60-90 minutes&quot;,
+    focus: &quot;Trade-offs and design decisions&quot;
   },
   
   pairProgramming: {
-    types: ["Live coding", "Collaborative problem-solving", "Code review"],
-    preparation: "Pair programming practice, communication skills",
-    duration: "45-75 minutes",
-    focus: "Collaboration and communication"
+    types: [&quot;Live coding&quot;, &quot;Collaborative problem-solving&quot;, &quot;Code review&quot;],
+    preparation: &quot;Pair programming practice, communication skills&quot;,
+    duration: &quot;45-75 minutes&quot;,
+    focus: &quot;Collaboration and communication&quot;
   }
 };
-</code></pre>
-<h2 id="-technical-interview-preparation"><a class="header" href="#-technical-interview-preparation">💻 Technical Interview Preparation</a></h2>
-<h3 id="coding-challenge-mastery"><a class="header" href="#coding-challenge-mastery">Coding Challenge Mastery</a></h3>
-<h4 id="essential-data-structures"><a class="header" href="#essential-data-structures">Essential Data Structures</a></h4>
-<pre><code class="language-javascript">// Data structures with time/space complexity
-const dataStructures = {
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id&#x3D;&quot;-technical-interview-preparation&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-technical-interview-preparation&quot;&gt;💻 Technical Interview Preparation&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id&#x3D;&quot;coding-challenge-mastery&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#coding-challenge-mastery&quot;&gt;Coding Challenge Mastery&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id&#x3D;&quot;essential-data-structures&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#essential-data-structures&quot;&gt;Essential Data Structures&lt;/a&gt;&lt;/h4&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Data structures with time/space complexity
+const dataStructures &#x3D; {
   arrays: {
-    operations: ["access", "search", "insertion", "deletion"],
+    operations: [&quot;access&quot;, &quot;search&quot;, &quot;insertion&quot;, &quot;deletion&quot;],
     timeComplexity: {
-      access: "O(1)",
-      search: "O(n)",
-      insertion: "O(n)",
-      deletion: "O(n)"
+      access: &quot;O(1)&quot;,
+      search: &quot;O(n)&quot;,
+      insertion: &quot;O(n)&quot;,
+      deletion: &quot;O(n)&quot;
     },
-    spaceComplexity: "O(n)",
-    commonProblems: ["Two pointers", "Sliding window", "Sorting", "Searching"]
+    spaceComplexity: &quot;O(n)&quot;,
+    commonProblems: [&quot;Two pointers&quot;, &quot;Sliding window&quot;, &quot;Sorting&quot;, &quot;Searching&quot;]
   },
   
   strings: {
-    operations: ["access", "search", "concatenation", "substring"],
+    operations: [&quot;access&quot;, &quot;search&quot;, &quot;concatenation&quot;, &quot;substring&quot;],
     timeComplexity: {
-      access: "O(1)",
-      search: "O(n*m)", // n = string length, m = pattern length
-      concatenation: "O(n+m)",
-      substring: "O(m)"
+      access: &quot;O(1)&quot;,
+      search: &quot;O(n*m)&quot;, // n &#x3D; string length, m &#x3D; pattern length
+      concatenation: &quot;O(n+m)&quot;,
+      substring: &quot;O(m)&quot;
     },
-    spaceComplexity: "O(n)",
-    commonProblems: ["Pattern matching", "String manipulation", "Palindrome"]
+    spaceComplexity: &quot;O(n)&quot;,
+    commonProblems: [&quot;Pattern matching&quot;, &quot;String manipulation&quot;, &quot;Palindrome&quot;]
   },
   
   linkedLists: {
-    operations: ["access", "search", "insertion", "deletion"],
+    operations: [&quot;access&quot;, &quot;search&quot;, &quot;insertion&quot;, &quot;deletion&quot;],
     timeComplexity: {
-      access: "O(n)",
-      search: "O(n)",
-      insertion: "O(1)",
-      deletion: "O(1)"
+      access: &quot;O(n)&quot;,
+      search: &quot;O(n)&quot;,
+      insertion: &quot;O(1)&quot;,
+      deletion: &quot;O(1)&quot;
     },
-    spaceComplexity: "O(n)",
-    commonProblems: ["Reversal", "Cycle detection", "Merge two lists"]
+    spaceComplexity: &quot;O(n)&quot;,
+    commonProblems: [&quot;Reversal&quot;, &quot;Cycle detection&quot;, &quot;Merge two lists&quot;]
   },
   
   stacks: {
-    operations: ["push", "pop", "peek", "isEmpty"],
+    operations: [&quot;push&quot;, &quot;pop&quot;, &quot;peek&quot;, &quot;isEmpty&quot;],
     timeComplexity: {
-      push: "O(1)",
-      pop: "O(1)",
-      peek: "O(1)",
-      isEmpty: "O(1)"
+      push: &quot;O(1)&quot;,
+      pop: &quot;O(1)&quot;,
+      peek: &quot;O(1)&quot;,
+      isEmpty: &quot;O(1)&quot;
     },
-    spaceComplexity: "O(n)",
-    commonProblems: ["Valid parentheses", "Min stack", "Evaluate expressions"]
+    spaceComplexity: &quot;O(n)&quot;,
+    commonProblems: [&quot;Valid parentheses&quot;, &quot;Min stack&quot;, &quot;Evaluate expressions&quot;]
   },
   
   queues: {
-    operations: ["enqueue", "dequeue", "front", "isEmpty"],
+    operations: [&quot;enqueue&quot;, &quot;dequeue&quot;, &quot;front&quot;, &quot;isEmpty&quot;],
     timeComplexity: {
-      enqueue: "O(1)",
-      dequeue: "O(1)",
-      front: "O(1)",
-      isEmpty: "O(1)"
+      enqueue: &quot;O(1)&quot;,
+      dequeue: &quot;O(1)&quot;,
+      front: &quot;O(1)&quot;,
+      isEmpty: &quot;O(1)&quot;
     },
-    spaceComplexity: "O(n)",
-    commonProblems: ["Level order traversal", "BFS", "Task scheduling"]
+    spaceComplexity: &quot;O(n)&quot;,
+    commonProblems: [&quot;Level order traversal&quot;, &quot;BFS&quot;, &quot;Task scheduling&quot;]
   },
   
   trees: {
-    operations: ["search", "insertion", "deletion", "traversal"],
+    operations: [&quot;search&quot;, &quot;insertion&quot;, &quot;deletion&quot;, &quot;traversal&quot;],
     timeComplexity: {
-      search: "O(log n)",
-      insertion: "O(log n)",
-      deletion: "O(log n)",
-      traversal: "O(n)"
+      search: &quot;O(log n)&quot;,
+      insertion: &quot;O(log n)&quot;,
+      deletion: &quot;O(log n)&quot;,
+      traversal: &quot;O(n)&quot;
     },
-    spaceComplexity: "O(n)",
-    commonProblems: ["BST operations", "Tree traversal", "LCA"]
+    spaceComplexity: &quot;O(n)&quot;,
+    commonProblems: [&quot;BST operations&quot;, &quot;Tree traversal&quot;, &quot;LCA&quot;]
   },
   
   graphs: {
-    operations: ["DFS", "BFS", "Dijkstra", "Topological sort"],
+    operations: [&quot;DFS&quot;, &quot;BFS&quot;, &quot;Dijkstra&quot;, &quot;Topological sort&quot;],
     timeComplexity: {
-      dfs: "O(V+E)",
-      bfs: "O(V+E)",
-      dijkstra: "O((V+E) log V)",
-      topological: "O(V+E)"
+      dfs: &quot;O(V+E)&quot;,
+      bfs: &quot;O(V+E)&quot;,
+      dijkstra: &quot;O((V+E) log V)&quot;,
+      topological: &quot;O(V+E)&quot;
     },
-    spaceComplexity: "O(V+E)",
-    commonProblems: ["Shortest path", "Cycle detection", "Connected components"]
+    spaceComplexity: &quot;O(V+E)&quot;,
+    commonProblems: [&quot;Shortest path&quot;, &quot;Cycle detection&quot;, &quot;Connected components&quot;]
   }
 };
-</code></pre>
-<h4 id="algorithm-patterns"><a class="header" href="#algorithm-patterns">Algorithm Patterns</a></h4>
-<pre><code class="language-javascript">// Common algorithm patterns with examples
-const algorithmPatterns = {
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id&#x3D;&quot;algorithm-patterns&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#algorithm-patterns&quot;&gt;Algorithm Patterns&lt;/a&gt;&lt;/h4&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Common algorithm patterns with examples
+const algorithmPatterns &#x3D; {
   twoPointers: {
-    description: "Use two pointers to solve array/string problems",
-    template: `
-let left = 0, right = arr.length - 1;
-while (left &lt; right) {
+    description: &quot;Use two pointers to solve array/string problems&quot;,
+    template: &#x60;
+let left &#x3D; 0, right &#x3D; arr.length - 1;
+while (left &amp;lt; right) {
   // Process based on condition
   left++;
   right--;
 }
-    `,
-    problems: ["Two sum", "Container with most water", "Remove duplicates"]
+    &#x60;,
+    problems: [&quot;Two sum&quot;, &quot;Container with most water&quot;, &quot;Remove duplicates&quot;]
   },
   
   slidingWindow: {
-    description: "Maintain a window of elements for optimization",
-    template: `
-let left = 0, sum = 0, maxSum = 0;
-for (let right = 0; right &lt; arr.length; right++) {
-  sum += arr[right];
-  while (windowSize &gt; right - left + 1) {
-    sum -= arr[left];
+    description: &quot;Maintain a window of elements for optimization&quot;,
+    template: &#x60;
+let left &#x3D; 0, sum &#x3D; 0, maxSum &#x3D; 0;
+for (let right &#x3D; 0; right &amp;lt; arr.length; right++) {
+  sum +&#x3D; arr[right];
+  while (windowSize &amp;gt; right - left + 1) {
+    sum -&#x3D; arr[left];
     left++;
   }
-  maxSum = Math.max(maxSum, sum);
+  maxSum &#x3D; Math.max(maxSum, sum);
 }
-    `,
-    problems: ["Maximum sum subarray", "Longest substring without repeats"]
+    &#x60;,
+    problems: [&quot;Maximum sum subarray&quot;, &quot;Longest substring without repeats&quot;]
   },
   
   binarySearch: {
-    description: "Search in sorted array using divide and conquer",
-    template: `
-let left = 0, right = arr.length - 1;
-while (left &lt;= right) {
-  const mid = Math.floor((left + right) / 2);
-  if (arr[mid] === target) return mid;
-  if (arr[mid] &lt; target) left = mid + 1;
-  else right = mid - 1;
+    description: &quot;Search in sorted array using divide and conquer&quot;,
+    template: &#x60;
+let left &#x3D; 0, right &#x3D; arr.length - 1;
+while (left &amp;lt;&#x3D; right) {
+  const mid &#x3D; Math.floor((left + right) / 2);
+  if (arr[mid] &#x3D;&#x3D;&#x3D; target) return mid;
+  if (arr[mid] &amp;lt; target) left &#x3D; mid + 1;
+  else right &#x3D; mid - 1;
 }
 return -1;
-    `,
-    problems: ["Search in sorted array", "Find first bad version", "Minimum capacity"]
+    &#x60;,
+    problems: [&quot;Search in sorted array&quot;, &quot;Find first bad version&quot;, &quot;Minimum capacity&quot;]
   },
   
   dynamicProgramming: {
-    description: "Break problems into overlapping subproblems",
-    template: `
-const dp = new Array(n + 1).fill(0);
-dp[0] = 1; // Base case
-for (let i = 1; i &lt;= n; i++) {
-  for (let j = 1; j &lt;= i; j++) {
-    dp[i] += dp[i - j];
+    description: &quot;Break problems into overlapping subproblems&quot;,
+    template: &#x60;
+const dp &#x3D; new Array(n + 1).fill(0);
+dp[0] &#x3D; 1; // Base case
+for (let i &#x3D; 1; i &amp;lt;&#x3D; n; i++) {
+  for (let j &#x3D; 1; j &amp;lt;&#x3D; i; j++) {
+    dp[i] +&#x3D; dp[i - j];
   }
 }
-    `,
-    problems: ["Fibonacci", "Coin change", "Longest increasing subsequence"]
+    &#x60;,
+    problems: [&quot;Fibonacci&quot;, &quot;Coin change&quot;, &quot;Longest increasing subsequence&quot;]
   },
   
   backtracking: {
-    description: "Explore all possibilities by making choices",
-    template: `
+    description: &quot;Explore all possibilities by making choices&quot;,
+    template: &#x60;
 function backtrack(current, remaining) {
-  if (remaining.length === 0) {
+  if (remaining.length &#x3D;&#x3D;&#x3D; 0) {
     result.push([...current]);
     return;
   }
   
-  for (let i = 0; i &lt; remaining.length; i++) {
+  for (let i &#x3D; 0; i &amp;lt; remaining.length; i++) {
     current.push(remaining[i]);
     backtrack(current, remaining.slice(0, i) + remaining.slice(i + 1));
     current.pop();
   }
 }
-    `,
-    problems: ["Permutations", "Combinations", "Sudoku solver"]
+    &#x60;,
+    problems: [&quot;Permutations&quot;, &quot;Combinations&quot;, &quot;Sudoku solver&quot;]
   }
 };
-</code></pre>
-<h3 id="react-native-specific-questions"><a class="header" href="#react-native-specific-questions">React Native Specific Questions</a></h3>
-<h4 id="core-react-native-concepts"><a class="header" href="#core-react-native-concepts">Core React Native Concepts</a></h4>
-<pre><code class="language-javascript">// React Native interview questions and answers
-const reactNativeQuestions = {
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id&#x3D;&quot;react-native-specific-questions&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#react-native-specific-questions&quot;&gt;React Native Specific Questions&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id&#x3D;&quot;core-react-native-concepts&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#core-react-native-concepts&quot;&gt;Core React Native Concepts&lt;/a&gt;&lt;/h4&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// React Native interview questions and answers
+const reactNativeQuestions &#x3D; {
   fundamentals: {
-    question: "How does React Native differ from React?",
-    answer: `
+    question: &quot;How does React Native differ from React?&quot;,
+    answer: &#x60;
 React Native uses native components instead of web DOM:
 1. React Native renders to native UI components (UIView, android.view.View)
 2. React uses Virtual DOM and renders to web elements
 3. React Native has a bridge for native module communication
 4. Performance is better in React Native for mobile apps
 5. Access to native device APIs is direct in React Native
-    `
+    &#x60;
   },
   
   bridge: {
-    question: "Explain the React Native Bridge",
-    answer: `
+    question: &quot;Explain the React Native Bridge&quot;,
+    answer: &#x60;
 The Bridge enables communication between JavaScript and native code:
 
 1. Asynchronous communication: JSON messages over the bridge
@@ -420,12 +1033,12 @@ The Bridge enables communication between JavaScript and native code:
 4. JS modules expose JavaScript functionality to native
 5. Three threads: JS thread, native UI thread, shadow queue
 6. Message serialization/deserialization overhead
-    `
+    &#x60;
   },
   
   performance: {
-    question: "How do you optimize React Native app performance?",
-    answer: `
+    question: &quot;How do you optimize React Native app performance?&quot;,
+    answer: &#x60;
 Performance optimization strategies:
 
 1. Use React.memo for component memoization
@@ -438,12 +1051,12 @@ Performance optimization strategies:
 8. Profile with Flipper and React DevTools
 9. Minimize bridge calls and batch operations
 10. Use useCallback and useMemo hooks appropriately
-    `
+    &#x60;
   },
   
   navigation: {
-    question: "Compare React Navigation libraries",
-    answer: `
+    question: &quot;Compare React Navigation libraries&quot;,
+    answer: &#x60;
 Navigation libraries comparison:
 
 React Navigation:
@@ -466,197 +1079,197 @@ Wix Navigation:
 - Advanced features like deep linking
 - Complex API
 - Requires Wix ecosystem
-    `
+    &#x60;
   }
 };
-</code></pre>
-<h2 id="-system-design-interview"><a class="header" href="#-system-design-interview">🏗️ System Design Interview</a></h2>
-<h3 id="system-design-framework"><a class="header" href="#system-design-framework">System Design Framework</a></h3>
-<pre><code class="language-javascript">// System design interview approach
-const systemDesignFramework = {
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id&#x3D;&quot;-system-design-interview&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-system-design-interview&quot;&gt;🏗️ System Design Interview&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id&#x3D;&quot;system-design-framework&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#system-design-framework&quot;&gt;System Design Framework&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// System design interview approach
+const systemDesignFramework &#x3D; {
   // Step 1: Requirements Clarification
   requirements: {
     questions: [
-      "What are the functional requirements?",
-      "What are the non-functional requirements?",
-      "What is the expected scale?",
-      "What are the constraints and assumptions?"
+      &quot;What are the functional requirements?&quot;,
+      &quot;What are the non-functional requirements?&quot;,
+      &quot;What is the expected scale?&quot;,
+      &quot;What are the constraints and assumptions?&quot;
     ],
     scale: {
-      users: "Daily active users (DAU)",
-      requests: "Requests per second (RPS)",
-      storage: "Data storage requirements",
-      growth: "Expected growth rate"
+      users: &quot;Daily active users (DAU)&quot;,
+      requests: &quot;Requests per second (RPS)&quot;,
+      storage: &quot;Data storage requirements&quot;,
+      growth: &quot;Expected growth rate&quot;
     }
   },
   
   // Step 2: High-Level Design
   highLevel: {
     components: [
-      "Load balancer",
-      "Web servers",
-      "Database",
-      "Cache",
-      "CDN"
+      &quot;Load balancer&quot;,
+      &quot;Web servers&quot;,
+      &quot;Database&quot;,
+      &quot;Cache&quot;,
+      &quot;CDN&quot;
     ],
     apis: [
-      "RESTful APIs",
-      "GraphQL",
-      "WebSocket for real-time"
+      &quot;RESTful APIs&quot;,
+      &quot;GraphQL&quot;,
+      &quot;WebSocket for real-time&quot;
     ]
   },
   
   // Step 3: Component Deep Dive
   components: {
     loadBalancer: {
-      types: ["L4 (TCP)", "L7 (HTTP)"],
-      algorithms: ["Round robin", "Least connections", "IP hash"],
-      considerations: ["Health checks", "Failover", "Session persistence"]
+      types: [&quot;L4 (TCP)&quot;, &quot;L7 (HTTP)&quot;],
+      algorithms: [&quot;Round robin&quot;, &quot;Least connections&quot;, &quot;IP hash&quot;],
+      considerations: [&quot;Health checks&quot;, &quot;Failover&quot;, &quot;Session persistence&quot;]
     },
     
     database: {
-      types: ["SQL", "NoSQL"],
-      selection: "Based on consistency, scale, query patterns",
-      scaling: ["Read replicas", "Sharding", "Partitioning"]
+      types: [&quot;SQL&quot;, &quot;NoSQL&quot;],
+      selection: &quot;Based on consistency, scale, query patterns&quot;,
+      scaling: [&quot;Read replicas&quot;, &quot;Sharding&quot;, &quot;Partitioning&quot;]
     },
     
     cache: {
-      strategies: ["Cache-aside", "Read-through", "Write-through"],
-      eviction: ["LRU", "LFU", "TTL"],
-      distribution: ["Client-side", "Server-side", "CDN"]
+      strategies: [&quot;Cache-aside&quot;, &quot;Read-through&quot;, &quot;Write-through&quot;],
+      eviction: [&quot;LRU&quot;, &quot;LFU&quot;, &quot;TTL&quot;],
+      distribution: [&quot;Client-side&quot;, &quot;Server-side&quot;, &quot;CDN&quot;]
     }
   },
   
-  // Step 4: Scalability &amp; Trade-offs
+  // Step 4: Scalability &amp;amp; Trade-offs
   scalability: {
-    vertical: "Scale up individual servers",
-    horizontal: "Scale out across multiple servers",
-    considerations: ["Cost", "Complexity", "Reliability"]
+    vertical: &quot;Scale up individual servers&quot;,
+    horizontal: &quot;Scale out across multiple servers&quot;,
+    considerations: [&quot;Cost&quot;, &quot;Complexity&quot;, &quot;Reliability&quot;]
   },
   
   tradeoffs: {
-    consistency: "Strong vs eventual consistency",
-    availability: "High availability vs consistency",
-    performance: "Latency vs throughput",
-    cost: "Performance vs infrastructure cost"
+    consistency: &quot;Strong vs eventual consistency&quot;,
+    availability: &quot;High availability vs consistency&quot;,
+    performance: &quot;Latency vs throughput&quot;,
+    cost: &quot;Performance vs infrastructure cost&quot;
   }
 };
-</code></pre>
-<h3 id="common-system-design-problems"><a class="header" href="#common-system-design-problems">Common System Design Problems</a></h3>
-<pre><code class="language-javascript">// System design patterns for common problems
-const systemDesignPatterns = {
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id&#x3D;&quot;common-system-design-problems&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#common-system-design-problems&quot;&gt;Common System Design Problems&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// System design patterns for common problems
+const systemDesignPatterns &#x3D; {
   urlShortener: {
     requirements: {
-      functional: ["Generate short URL", "Redirect to long URL", "Custom aliases"],
-      nonFunctional: ["Low latency redirection", "High availability", "Analytics"]
+      functional: [&quot;Generate short URL&quot;, &quot;Redirect to long URL&quot;, &quot;Custom aliases&quot;],
+      nonFunctional: [&quot;Low latency redirection&quot;, &quot;High availability&quot;, &quot;Analytics&quot;]
     },
     design: {
-      encoding: "Base62 encoding for shorter URLs",
-      database: "Distributed database for scalability",
-      cache: "Redis for hot URLs",
-      analytics: "Event tracking for click analytics"
+      encoding: &quot;Base62 encoding for shorter URLs&quot;,
+      database: &quot;Distributed database for scalability&quot;,
+      cache: &quot;Redis for hot URLs&quot;,
+      analytics: &quot;Event tracking for click analytics&quot;
     }
   },
   
   chatApplication: {
     requirements: {
-      functional: ["Real-time messaging", "User presence", "Message history"],
-      nonFunctional: ["Low latency", "Message ordering", "Offline support"]
+      functional: [&quot;Real-time messaging&quot;, &quot;User presence&quot;, &quot;Message history&quot;],
+      nonFunctional: [&quot;Low latency&quot;, &quot;Message ordering&quot;, &quot;Offline support&quot;]
     },
     design: {
-      architecture: "Microservices with WebSocket",
-      database: "Document database for messages",
-      scaling: "Horizontal scaling with load balancing",
-      features: ["Read receipts", "Typing indicators", "Push notifications"]
+      architecture: &quot;Microservices with WebSocket&quot;,
+      database: &quot;Document database for messages&quot;,
+      scaling: &quot;Horizontal scaling with load balancing&quot;,
+      features: [&quot;Read receipts&quot;, &quot;Typing indicators&quot;, &quot;Push notifications&quot;]
     }
   },
   
   videoStreaming: {
     requirements: {
-      functional: ["Video upload", "Processing", "Streaming", "Comments"],
-      nonFunctional: ["Fast upload", "Adaptive streaming", "CDN delivery"]
+      functional: [&quot;Video upload&quot;, &quot;Processing&quot;, &quot;Streaming&quot;, &quot;Comments&quot;],
+      nonFunctional: [&quot;Fast upload&quot;, &quot;Adaptive streaming&quot;, &quot;CDN delivery&quot;]
     },
     design: {
-      upload: "Direct upload to cloud storage",
-      processing: "Message queue for async processing",
-      streaming: "Adaptive bitrate streaming",
-      cdn: "Geographically distributed CDN"
+      upload: &quot;Direct upload to cloud storage&quot;,
+      processing: &quot;Message queue for async processing&quot;,
+      streaming: &quot;Adaptive bitrate streaming&quot;,
+      cdn: &quot;Geographically distributed CDN&quot;
     }
   }
 };
-</code></pre>
-<h2 id="-behavioral-interview-preparation"><a class="header" href="#-behavioral-interview-preparation">🗣️ Behavioral Interview Preparation</a></h2>
-<h3 id="star-method-framework"><a class="header" href="#star-method-framework">STAR Method Framework</a></h3>
-<pre><code class="language-javascript">// STAR method for behavioral questions
-const starMethod = {
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id&#x3D;&quot;-behavioral-interview-preparation&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-behavioral-interview-preparation&quot;&gt;🗣️ Behavioral Interview Preparation&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id&#x3D;&quot;star-method-framework&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#star-method-framework&quot;&gt;STAR Method Framework&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// STAR method for behavioral questions
+const starMethod &#x3D; {
   structure: {
-    situation: "Describe the context and background",
-    task: "Explain your specific responsibility",
-    action: "Detail the steps you took",
-    result: "Share the outcome and what you learned"
+    situation: &quot;Describe the context and background&quot;,
+    task: &quot;Explain your specific responsibility&quot;,
+    action: &quot;Detail the steps you took&quot;,
+    result: &quot;Share the outcome and what you learned&quot;
   },
   
   examples: {
     conflict: {
-      situation: "Team member disagreed with my technical approach",
-      task: "Resolve conflict and maintain team cohesion",
-      action: "Listened to concerns, explained my reasoning, found compromise",
-      result: "We combined approaches and delivered successful solution"
+      situation: &quot;Team member disagreed with my technical approach&quot;,
+      task: &quot;Resolve conflict and maintain team cohesion&quot;,
+      action: &quot;Listened to concerns, explained my reasoning, found compromise&quot;,
+      result: &quot;We combined approaches and delivered successful solution&quot;
     },
     
     failure: {
-      situation: "Project deadline was missed due to unexpected issues",
-      task: "Address the delay and prevent future occurrences",
-      action: "Communicated with stakeholders, implemented fixes, improved planning",
-      result: "Delivered project with minimal delay, improved team processes"
+      situation: &quot;Project deadline was missed due to unexpected issues&quot;,
+      task: &quot;Address the delay and prevent future occurrences&quot;,
+      action: &quot;Communicated with stakeholders, implemented fixes, improved planning&quot;,
+      result: &quot;Delivered project with minimal delay, improved team processes&quot;
     },
     
     leadership: {
-      situation: "Junior team member struggling with complex feature",
-      task: "Mentor and help them succeed",
-      action: "Provided guidance, pair programming, code reviews",
-      result: "Team member gained confidence and delivered quality work"
+      situation: &quot;Junior team member struggling with complex feature&quot;,
+      task: &quot;Mentor and help them succeed&quot;,
+      action: &quot;Provided guidance, pair programming, code reviews&quot;,
+      result: &quot;Team member gained confidence and delivered quality work&quot;
     }
   }
 };
-</code></pre>
-<h3 id="common-behavioral-questions"><a class="header" href="#common-behavioral-questions">Common Behavioral Questions</a></h3>
-<pre><code class="language-javascript">// Behavioral questions and preparation
-const behavioralQuestions = {
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id&#x3D;&quot;common-behavioral-questions&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#common-behavioral-questions&quot;&gt;Common Behavioral Questions&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Behavioral questions and preparation
+const behavioralQuestions &#x3D; {
   teamwork: [
-    "Tell me about a time you worked with a difficult team member",
-    "Describe a situation where you had to convince your team",
-    "How do you handle disagreements with technical decisions?"
+    &quot;Tell me about a time you worked with a difficult team member&quot;,
+    &quot;Describe a situation where you had to convince your team&quot;,
+    &quot;How do you handle disagreements with technical decisions?&quot;
   ],
   
   problemSolving: [
-    "Describe a complex problem you solved",
-    "Tell me about a time you had to learn something quickly",
-    "How do you approach debugging complex issues?"
+    &quot;Describe a complex problem you solved&quot;,
+    &quot;Tell me about a time you had to learn something quickly&quot;,
+    &quot;How do you approach debugging complex issues?&quot;
   ],
   
   leadership: [
-    "Tell me about a time you led a project",
-    "How do you mentor junior developers?",
-    "Describe a situation where you took initiative"
+    &quot;Tell me about a time you led a project&quot;,
+    &quot;How do you mentor junior developers?&quot;,
+    &quot;Describe a situation where you took initiative&quot;
   ],
   
   learning: [
-    "How do you stay updated with technology?",
-    "Tell me about a time you had to learn a new technology",
-    "What's the most challenging technical concept you learned?"
+    &quot;How do you stay updated with technology?&quot;,
+    &quot;Tell me about a time you had to learn a new technology&quot;,
+    &quot;What&#x27;s the most challenging technical concept you learned?&quot;
   ],
   
   failure: [
-    "Tell me about a time you failed",
-    "Describe a project that didn't go as planned",
-    "How do you handle constructive criticism?"
+    &quot;Tell me about a time you failed&quot;,
+    &quot;Describe a project that didn&#x27;t go as planned&quot;,
+    &quot;How do you handle constructive criticism?&quot;
   ]
 };
-</code></pre>
-<h2 id="-interview-day-preparation"><a class="header" href="#-interview-day-preparation">🎯 Interview Day Preparation</a></h2>
-<h3 id="pre-interview-checklist"><a class="header" href="#pre-interview-checklist">Pre-Interview Checklist</a></h3>
-<pre><code class="language-markdown">## Interview Day Preparation
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id&#x3D;&quot;-interview-day-preparation&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-interview-day-preparation&quot;&gt;🎯 Interview Day Preparation&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id&#x3D;&quot;pre-interview-checklist&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#pre-interview-checklist&quot;&gt;Pre-Interview Checklist&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-markdown&quot;&gt;## Interview Day Preparation
 
 ### Technical Setup
 - [ ] Test internet connection
@@ -680,51 +1293,51 @@ const behavioralQuestions = {
 - [ ] Backup power source
 
 ### Mental Preparation
-- [ ] Good night's sleep
+- [ ] Good night&#x27;s sleep
 - [ ] Practice positive visualization
 - [ ] Review key concepts
 - [ ] Prepare talking points
 - [ ] Plan outfit and appearance
-</code></pre>
-<h3 id="virtual-interview-setup"><a class="header" href="#virtual-interview-setup">Virtual Interview Setup</a></h3>
-<pre><code class="language-javascript">// Virtual interview preparation
-const virtualInterviewSetup = {
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id&#x3D;&quot;virtual-interview-setup&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#virtual-interview-setup&quot;&gt;Virtual Interview Setup&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Virtual interview preparation
+const virtualInterviewSetup &#x3D; {
   environment: {
-    lighting: "Ensure good front lighting",
-    background: "Clean, professional background",
-    camera: "Eye-level camera, good angle",
-    audio: "Test microphone quality, use headset if needed"
+    lighting: &quot;Ensure good front lighting&quot;,
+    background: &quot;Clean, professional background&quot;,
+    camera: &quot;Eye-level camera, good angle&quot;,
+    audio: &quot;Test microphone quality, use headset if needed&quot;
   },
   
   technical: {
-    internet: "Stable connection, backup hotspot",
-    platform: "Test Zoom/Teams/Meet beforehand",
-    screenSharing: "Prepare code editor for sharing",
-    backup: "Phone ready for connection issues"
+    internet: &quot;Stable connection, backup hotspot&quot;,
+    platform: &quot;Test Zoom/Teams/Meet beforehand&quot;,
+    screenSharing: &quot;Prepare code editor for sharing&quot;,
+    backup: &quot;Phone ready for connection issues&quot;
   },
   
   professional: {
-    attire: "Business casual, professional top",
-    space: "Quiet, distraction-free environment",
-    timing: "Log in 10 minutes early",
-    materials: "Have resume and notes ready"
+    attire: &quot;Business casual, professional top&quot;,
+    space: &quot;Quiet, distraction-free environment&quot;,
+    timing: &quot;Log in 10 minutes early&quot;,
+    materials: &quot;Have resume and notes ready&quot;
   }
 };
-</code></pre>
-<h2 id="-post-interview-follow-up"><a class="header" href="#-post-interview-follow-up">📝 Post-Interview Follow-up</a></h2>
-<h3 id="thank-you-email-template"><a class="header" href="#thank-you-email-template">Thank You Email Template</a></h3>
-<pre><code class="language-javascript">// Post-interview thank you template
-const thankYouTemplate = {
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id&#x3D;&quot;-post-interview-follow-up&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-post-interview-follow-up&quot;&gt;📝 Post-Interview Follow-up&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id&#x3D;&quot;thank-you-email-template&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#thank-you-email-template&quot;&gt;Thank You Email Template&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Post-interview thank you template
+const thankYouTemplate &#x3D; {
   immediate: {
-    subject: "Thank you for the [Position] interview",
-    body: `
+    subject: &quot;Thank you for the [Position] interview&quot;,
+    body: &#x60;
 Dear [Interviewer Name],
 
 Thank you for taking the time to speak with me today about the [Position] role at [Company].
 
 I really enjoyed our discussion about [specific topic discussed] and learning more about [company initiative or project]. I was particularly interested in [specific aspect of role/company].
 
-Based on our conversation, I'm even more excited about this opportunity and believe my experience in [relevant skill/experience] would be valuable for [specific team or project].
+Based on our conversation, I&#x27;m even more excited about this opportunity and believe my experience in [relevant skill/experience] would be valuable for [specific team or project].
 
 Please let me know if you need any additional information from my end. I look forward to hearing about the next steps.
 
@@ -734,18 +1347,18 @@ Best regards,
 [Your Email]
 [LinkedIn Profile]
 [Portfolio Website]
-    `
+    &#x60;
   },
   
   followUp: {
-    timing: "1 week after interview if no response",
-    subject: "Following up on [Position] interview",
-    body: `
+    timing: &quot;1 week after interview if no response&quot;,
+    subject: &quot;Following up on [Position] interview&quot;,
+    body: &#x60;
 Dear [Interviewer Name],
 
-I hope you're having a great week. I'm following up on our conversation last [Day] about the [Position] role.
+I hope you&#x27;re having a great week. I&#x27;m following up on our conversation last [Day] about the [Position] role.
 
-I remain very interested in this opportunity and am excited about the possibility of joining your team. My experience in [relevant skill] aligns well with what you're looking for, and I'm confident I can contribute to [specific goal or project].
+I remain very interested in this opportunity and am excited about the possibility of joining your team. My experience in [relevant skill] aligns well with what you&#x27;re looking for, and I&#x27;m confident I can contribute to [specific goal or project].
 
 Is there any additional information I can provide to help with the decision process?
 
@@ -753,127 +1366,126 @@ Thank you for your time and consideration.
 
 Best regards,
 [Your Name]
-    `
+    &#x60;
   }
 };
-</code></pre>
-<h2 id="-interview-performance-tracking"><a class="header" href="#-interview-performance-tracking">📊 Interview Performance Tracking</a></h2>
-<h3 id="self-assessment-framework"><a class="header" href="#self-assessment-framework">Self-Assessment Framework</a></h3>
-<pre><code class="language-javascript">// Interview performance evaluation
-const interviewPerformance = {
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id&#x3D;&quot;-interview-performance-tracking&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-interview-performance-tracking&quot;&gt;📊 Interview Performance Tracking&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id&#x3D;&quot;self-assessment-framework&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#self-assessment-framework&quot;&gt;Self-Assessment Framework&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Interview performance evaluation
+const interviewPerformance &#x3D; {
   technical: {
     problemSolving: {
-      understanding: "Did I understand the problem correctly?",
-      approach: "Was my approach logical and efficient?",
-      code: "Was my code clean and bug-free?",
-      optimization: "Did I consider edge cases and optimizations?"
+      understanding: &quot;Did I understand the problem correctly?&quot;,
+      approach: &quot;Was my approach logical and efficient?&quot;,
+      code: &quot;Was my code clean and bug-free?&quot;,
+      optimization: &quot;Did I consider edge cases and optimizations?&quot;
     },
     communication: {
-      explanation: "Did I explain my thought process clearly?",
-      questions: "Did I ask clarifying questions?",
-      collaboration: "Did I engage in productive discussion?",
-      technical: "Did I communicate technical concepts accurately?"
+      explanation: &quot;Did I explain my thought process clearly?&quot;,
+      questions: &quot;Did I ask clarifying questions?&quot;,
+      collaboration: &quot;Did I engage in productive discussion?&quot;,
+      technical: &quot;Did I communicate technical concepts accurately?&quot;
     }
   },
   
   behavioral: {
-    structure: "Did I use STAR method effectively?",
-    relevance: "Were my examples relevant and impactful?",
-    authenticity: "Did I sound genuine and honest?",
-    learning: "Did I demonstrate growth and learning mindset?"
+    structure: &quot;Did I use STAR method effectively?&quot;,
+    relevance: &quot;Were my examples relevant and impactful?&quot;,
+    authenticity: &quot;Did I sound genuine and honest?&quot;,
+    learning: &quot;Did I demonstrate growth and learning mindset?&quot;
   },
   
   overall: {
-    preparation: "How well was I prepared?",
-    confidence: "Did I project appropriate confidence?",
-    engagement: "Was I engaged and enthusiastic?",
-    fit: "Did I demonstrate cultural fit?"
+    preparation: &quot;How well was I prepared?&quot;,
+    confidence: &quot;Did I project appropriate confidence?&quot;,
+    engagement: &quot;Was I engaged and enthusiastic?&quot;,
+    fit: &quot;Did I demonstrate cultural fit?&quot;
   }
 };
-</code></pre>
-<h3 id="continuous-improvement"><a class="header" href="#continuous-improvement">Continuous Improvement</a></h3>
-<pre><code class="language-javascript">// Interview improvement plan
-const improvementPlan = {
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id&#x3D;&quot;continuous-improvement&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#continuous-improvement&quot;&gt;Continuous Improvement&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Interview improvement plan
+const improvementPlan &#x3D; {
   analyze: {
-    identify: "Identify areas of weakness",
-    patterns: "Recognize recurring issues",
-    feedback: "Collect feedback from interviewers",
-    metrics: "Track performance over time"
+    identify: &quot;Identify areas of weakness&quot;,
+    patterns: &quot;Recognize recurring issues&quot;,
+    feedback: &quot;Collect feedback from interviewers&quot;,
+    metrics: &quot;Track performance over time&quot;
   },
   
   practice: {
-    technical: "Daily coding practice, weekly mock interviews",
-    behavioral: "Practice STAR responses, record and review",
-    systemDesign: "Weekly system design practice with peers",
-    communication: "Practice explaining concepts out loud"
+    technical: &quot;Daily coding practice, weekly mock interviews&quot;,
+    behavioral: &quot;Practice STAR responses, record and review&quot;,
+    systemDesign: &quot;Weekly system design practice with peers&quot;,
+    communication: &quot;Practice explaining concepts out loud&quot;
   },
   
   resources: {
-    books: ["Cracking the Coding Interview", "System Design Interview"],
-    platforms: ["LeetCode", "HackerRank", "Pramp"],
-    mock: "Mock interviews with peers or services",
-    community: "Join interview preparation communities"
+    books: [&quot;Cracking the Coding Interview&quot;, &quot;System Design Interview&quot;],
+    platforms: [&quot;LeetCode&quot;, &quot;HackerRank&quot;, &quot;Pramp&quot;],
+    mock: &quot;Mock interviews with peers or services&quot;,
+    community: &quot;Join interview preparation communities&quot;
   }
 };
-</code></pre>
-<hr>
-<p><strong>Next Up</strong>: Learn about System Design! 🏗️</p>
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Next Up&lt;/strong&gt;: Learn about System Design! 🏗️&lt;/p&gt;
 
-                    </main>
-
-                    <nav class="nav-wrapper" aria-label="Page navigation">
-                        <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../career/branding.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
-                            </a>
-
-                            <a rel="next prefetch" href="../career/system-design.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                            </a>
-
-                        <div style="clear: both"></div>
-                    </nav>
+                        </div>
+                        
+                    </article>
                 </div>
-            </div>
-
-            <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../career/branding.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
-                    </a>
-
-                    <a rel="next prefetch" href="../career/system-design.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                    </a>
-            </nav>
-
+            </main>
         </div>
 
-        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
-        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
-        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
-        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
-        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
-
-
-
-        <script>
-            window.playground_copyable = true;
-        </script>
-
-
-        <script src="../elasticlunr-ef4e11c1.min.js"></script>
-        <script src="../mark-09e88c2c.min.js"></script>
-        <script src="../searcher-c2a407aa.js"></script>
-
-        <script src="../clipboard-1626706a.min.js"></script>
-        <script src="../highlight-abc7f01d.js"></script>
-        <script src="../book-a0b12cfe.js"></script>
-
-        <!-- Custom JS scripts -->
-        <script src="../advanced-interactions-dd74314b.js"></script>
-
-
-
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contribute</h3>
+                    <p>Found an issue or want to contribute?</p>
+                    <ul>
+                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="../">Home</a></li>
+                        <li><a href="../print.html" target="_blank">Print Version</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
+                </div>
+            </div>
+        </footer>
     </div>
-    </body>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize theme
+        document.documentElement.setAttribute('data-theme', 'light');
+        
+        // Global variables for mdBook compatibility
+        window.path_to_root = "../";
+        window.current_page = "career/interviews.md";
+        
+        // Search data will be loaded by mdBook
+    </script>
+    
+    <!-- Theme scripts -->
+    <script src="../theme/js/core.js"></script>
+    <script src="../theme/js/animations.js"></script>
+    <script src="../theme/js/search.js"></script>
+    
+</body>
 </html>

@@ -1,0 +1,220 @@
+/* minimal.css - override everything with fixed neutral theme */
+
+/* Hardcoded colors - no variables */
+:root {
+    --bg: #ffffff;
+    --fg: #1e1e1e;
+    --sidebar-bg: #fafafa;
+    --sidebar-fg: #1e1e1e;
+    --sidebar-active: #e6e6e6;
+    --border: #eaecef;
+    --code-bg: #f6f8fa;
+    --link-color: #0066cc;
+    --link-hover: #0052a3;
+}
+
+/* Remove all animations, transitions, and effects */
+* {
+    transition: none !important;
+    animation: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    transform: none !important;
+}
+
+/* Base styles */
+html, body {
+    background: #ffffff !important;
+    color: #1e1e1e !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    line-height: 1.6 !important;
+}
+
+/* Content area */
+.content {
+    background: #ffffff !important;
+    color: #1e1e1e !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    padding: 2rem !important;
+}
+
+/* Sidebar */
+.sidebar {
+    background: #fafafa !important;
+    color: #1e1e1e !important;
+    border-right: 1px solid #eaecef !important;
+    width: 300px !important;
+}
+
+.sidebar a {
+    color: #1e1e1e !important;
+    text-decoration: none !important;
+}
+
+.sidebar a:hover {
+    background: #e6e6e6 !important;
+    color: #1e1e1e !important;
+}
+
+/* Links */
+a {
+    color: #0066cc !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #0052a3 !important;
+    text-decoration: underline !important;
+}
+
+/* Code blocks */
+code {
+    background: #f6f8fa !important;
+    color: #1e1e1e !important;
+    padding: 0.2em 0.4em !important;
+    border-radius: 3px !important;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace !important;
+}
+
+pre {
+    background: #f6f8fa !important;
+    border: 1px solid #eaecef !important;
+    border-radius: 6px !important;
+    padding: 1rem !important;
+    overflow-x: auto !important;
+}
+
+pre code {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: #1e1e1e !important;
+    font-weight: 600 !important;
+    margin-top: 1.5em !important;
+    margin-bottom: 0.5em !important;
+}
+
+h1 {
+    font-size: 2.5em !important;
+    border-bottom: 2px solid #eaecef !important;
+    padding-bottom: 0.5em !important;
+}
+
+h2 {
+    font-size: 2em !important;
+    border-bottom: 1px solid #eaecef !important;
+    padding-bottom: 0.3em !important;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    margin: 1rem 0 !important;
+}
+
+th, td {
+    border: 1px solid #eaecef !important;
+    padding: 0.5rem !important;
+    text-align: left !important;
+}
+
+th {
+    background: #f6f8fa !important;
+    font-weight: 600 !important;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid #0066cc !important;
+    margin: 1rem 0 !important;
+    padding: 0.5rem 1rem !important;
+    background: #f6f8fa !important;
+    color: #666666 !important;
+}
+
+/* Lists */
+ul, ol {
+    margin: 1rem 0 !important;
+    padding-left: 2rem !important;
+}
+
+li {
+    margin: 0.5rem 0 !important;
+}
+
+/* Search */
+.search {
+    background: #ffffff !important;
+    border: 1px solid #eaecef !important;
+    color: #1e1e1e !important;
+}
+
+.search input {
+    background: #ffffff !important;
+    color: #1e1e1e !important;
+    border: none !important;
+    outline: none !important;
+}
+
+/* Theme switcher removal */
+.theme-popup, .theme-toggle, #theme-list {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    left: -9999px !important;
+}
+
+/* Navigation */
+.nav {
+    background: #ffffff !important;
+    color: #1e1e1e !important;
+}
+
+.nav a {
+    color: #0066cc !important;
+}
+
+.nav a:hover {
+    color: #0052a3 !important;
+}
+
+/* Buttons */
+button {
+    background: #f6f8fa !important;
+    color: #1e1e1e !important;
+    border: 1px solid #eaecef !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+}
+
+button:hover {
+    background: #e6e6e6 !important;
+}
+
+/* Remove any remaining theme classes */
+[class*="theme-"], [class*="dark"], [class*="light"] {
+    background: inherit !important;
+    color: inherit !important;
+}
+
+/* Force override mdBook default styles */
+html, body, .page-wrapper, .content, .sidebar, .nav {
+    background: #ffffff !important;
+    color: #1e1e1e !important;
+}
+
+/* Ensure no dark mode media queries work */
+@media (prefers-color-scheme: dark), (prefers-color-scheme: light) {
+    * {
+        background: inherit !important;
+        color: inherit !important;
+    }
+}

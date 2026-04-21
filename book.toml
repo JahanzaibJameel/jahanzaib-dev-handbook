@@ -9,15 +9,28 @@ description = "Ultra-premium, FAANG-level developer handbook and portfolio showc
 build-dir = "book"
 
 [output.html]
-default-theme = "dark"
-preferred-dark-theme = "coal"
+default-theme = "none"
+preferred-dark-theme = "none"
 git-repository-url = "https://github.com/JahanzaibJameel/jahanzaib-dev-handbook"
 edit-url-template = "https://github.com/JahanzaibJameel/jahanzaib-dev-handbook/edit/main/{path}"
-site-url = "https://jahanzaibjameel.github.io/jahanzaib-dev-handbook"
+# site-url = "/"  # Commented out for local development
+hash-files = false
 
-# Advanced animations and interactions
-additional-css = ["advanced-animations.css"]
-additional-js = ["advanced-interactions.js"]
+# DevAtelier 2026 - Premium theme assets
+additional-css = [
+    "theme/css/tokens.css",
+    "theme/css/base.css",
+    "theme/css/layout.css",
+    "theme/css/components.css",
+    "theme/css/animations.css",
+    "theme/css/syntax.css",
+    "theme/css/utilities.css"
+]
+additional-js = [
+    "theme/js/core.js",
+    "theme/js/animations.js",
+    "theme/js/search.js"
+]
 
 # Premium sidebar navigation
 sidebar-header-nav = true
@@ -36,3 +49,8 @@ level = 3
 [output.html.print]
 enable = true
 page-break = true
+
+# Copy code plugin
+[preprocessor.copy-code]
+command = "mdbook-copy-code"
+optional = true

@@ -1,0 +1,383 @@
+/* DevAtelier 2026 - Syntax Highlighting */
+/* Premium, accessible code highlighting theme */
+
+@layer syntax;
+
+@layer syntax {
+  /* ===== BASE SYNTAX HIGHLIGHTING ===== */
+  .hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0;
+    background: transparent;
+    color: var(--text-code);
+    font-family: var(--font-mono);
+    font-size: 0.9375em;
+    line-height: var(--leading-relaxed);
+  }
+
+  /* ===== LIGHT THEME COLORS ===== */
+  :root {
+    /* Syntax colors - Light theme */
+    --syntax-comment: oklch(45% 0.01 250);
+    --syntax-keyword: oklch(40% 0.18 280);
+    --syntax-string: oklch(35% 0.16 160);
+    --syntax-number: oklch(35% 0.20 30);
+    --syntax-function: oklch(40% 0.15 220);
+    --syntax-variable: oklch(50% 0.08 260);
+    --syntax-type: oklch(45% 0.12 200);
+    --syntax-operator: oklch(40% 0.06 260);
+    --syntax-punctuation: oklch(50% 0.03 260);
+    --syntax-tag: oklch(40% 0.18 280);
+    --syntax-attribute: oklch(45% 0.12 200);
+    --syntax-class: oklch(40% 0.15 220);
+    --syntax-id: oklch(35% 0.20 30);
+    --syntax-important: oklch(50% 0.25 30);
+    --syntax-heading: oklch(40% 0.18 280);
+    --syntax-link: oklch(55% 0.28 260);
+    --syntax-quote: oklch(45% 0.01 250);
+    --syntax-deletion: oklch(50% 0.25 30);
+    --syntax-addition: oklch(35% 0.16 160);
+    --syntax-emphasis: oklch(40% 0.15 220);
+    --syntax-strong: oklch(35% 0.20 30);
+  }
+
+  /* ===== DARK THEME COLORS ===== */
+  [data-theme="dark"] {
+    /* Syntax colors - Dark theme */
+    --syntax-comment: oklch(60% 0.01 240);
+    --syntax-keyword: oklch(65% 0.16 280);
+    --syntax-string: oklch(70% 0.14 160);
+    --syntax-number: oklch(70% 0.18 30);
+    --syntax-function: oklch(65% 0.13 220);
+    --syntax-variable: oklch(75% 0.06 240);
+    --syntax-type: oklch(70% 0.10 200);
+    --syntax-operator: oklch(65% 0.04 240);
+    --syntax-punctuation: oklch(75% 0.02 240);
+    --syntax-tag: oklch(65% 0.16 280);
+    --syntax-attribute: oklch(70% 0.10 200);
+    --syntax-class: oklch(65% 0.13 220);
+    --syntax-id: oklch(70% 0.18 30);
+    --syntax-important: oklch(65% 0.22 30);
+    --syntax-heading: oklch(65% 0.16 280);
+    --syntax-link: oklch(65% 0.24 260);
+    --syntax-quote: oklch(60% 0.01 240);
+    --syntax-deletion: oklch(65% 0.22 30);
+    --syntax-addition: oklch(70% 0.14 160);
+    --syntax-emphasis: oklch(65% 0.13 220);
+    --syntax-strong: oklch(70% 0.18 30);
+  }
+
+  /* ===== SYNTAX HIGHLIGHTING RULES ===== */
+  /* Comments */
+  .hljs-comment,
+  .hljs-quote {
+    color: var(--syntax-comment);
+    font-style: italic;
+  }
+
+  /* Keywords */
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-literal,
+  .hljs-section,
+  .hljs-doctag,
+  .hljs-variable,
+  .hljs-template-variable {
+    color: var(--syntax-keyword);
+    font-weight: var(--font-weight-medium);
+  }
+
+  /* Strings */
+  .hljs-string,
+  .hljs-selector-attr,
+  .hljs-selector-pseudo,
+  .hljs-regexp,
+  .hljs-symbol,
+  .hljs-bullet {
+    color: var(--syntax-string);
+  }
+
+  /* Numbers */
+  .hljs-number,
+  .hljs-meta {
+    color: var(--syntax-number);
+  }
+
+  /* Functions */
+  .hljs-title,
+  .hljs-name,
+  .hljs-attr,
+  .hljs-attribute {
+    color: var(--syntax-function);
+  }
+
+  /* Variables */
+  .hljs-variable,
+  .hljs-template-variable {
+    color: var(--syntax-variable);
+  }
+
+  /* Types */
+  .hljs-type,
+  .hljs-built_in {
+    color: var(--syntax-type);
+  }
+
+  /* Operators */
+  .hljs-operator,
+  .hljs-punctuation {
+    color: var(--syntax-operator);
+  }
+
+  /* Punctuation */
+  .hljs-punctuation {
+    color: var(--syntax-punctuation);
+  }
+
+  /* HTML/XML Tags */
+  .hljs-tag {
+    color: var(--syntax-tag);
+  }
+
+  .hljs-tag .hljs-name {
+    color: var(--syntax-tag);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .hljs-tag .hljs-attr {
+    color: var(--syntax-attribute);
+  }
+
+  /* CSS Classes and IDs */
+  .hljs-class,
+  .hljs-id {
+    color: var(--syntax-class);
+    font-weight: var(--font-weight-medium);
+  }
+
+  /* Important statements */
+  .hljs-important,
+  .hljs-strong {
+    color: var(--syntax-important);
+    font-weight: var(--font-weight-bold);
+  }
+
+  /* Headings */
+  .hljs-heading {
+    color: var(--syntax-heading);
+    font-weight: var(--font-weight-bold);
+  }
+
+  /* Links */
+  .hljs-link {
+    color: var(--syntax-link);
+    text-decoration: underline;
+  }
+
+  /* Deletions and Additions */
+  .hljs-deletion {
+    background-color: var(--syntax-deletion / 0.1);
+    color: var(--syntax-deletion);
+  }
+
+  .hljs-addition {
+    background-color: var(--syntax-addition / 0.1);
+    color: var(--syntax-addition);
+  }
+
+  /* Emphasis */
+  .hljs-emphasis {
+    color: var(--syntax-emphasis);
+    font-style: italic;
+  }
+
+  /* ===== LANGUAGE-SPECIFIC HIGHLIGHTING ===== */
+  /* JavaScript/TypeScript */
+  .hljs-javascript .hljs-keyword,
+  .hljs-typescript .hljs-keyword {
+    color: var(--syntax-keyword);
+  }
+
+  .hljs-javascript .hljs-function,
+  .hljs-typescript .hljs-function {
+    color: var(--syntax-function);
+  }
+
+  /* Python */
+  .hljs-python .hljs-keyword {
+    color: var(--syntax-keyword);
+  }
+
+  .hljs-python .hljs-function {
+    color: var(--syntax-function);
+  }
+
+  .hljs-python .hljs-string {
+    color: var(--syntax-string);
+  }
+
+  /* Rust */
+  .hljs-rust .hljs-keyword {
+    color: var(--syntax-keyword);
+  }
+
+  .hljs-rust .hljs-function {
+    color: var(--syntax-function);
+  }
+
+  .hljs-rust .hljs-type {
+    color: var(--syntax-type);
+  }
+
+  /* Go */
+  .hljs-go .hljs-keyword {
+    color: var(--syntax-keyword);
+  }
+
+  .hljs-go .hljs-function {
+    color: var(--syntax-function);
+  }
+
+  /* CSS/SCSS */
+  .hljs-css .hljs-selector-tag {
+    color: var(--syntax-tag);
+  }
+
+  .hljs-css .hljs-attribute {
+    color: var(--syntax-attribute);
+  }
+
+  /* ===== CODE BLOCK ENHANCEMENTS ===== */
+  .code-block-wrapper .hljs {
+    background: none;
+  }
+
+  /* Line numbers */
+  .hljs-ln {
+    border-right: 1px solid var(--border-light);
+    padding-right: var(--space-3);
+    margin-right: var(--space-3);
+    color: var(--text-tertiary);
+    user-select: none;
+    text-align: right;
+  }
+
+  /* Highlighted lines */
+  .hljs-line-highlight {
+    background-color: var(--accent-primary / 0.1);
+    border-left: 3px solid var(--accent-primary);
+    padding-left: var(--space-3);
+    margin-left: calc(-1 * var(--space-3));
+  }
+
+  /* ===== INLINE CODE ===== */
+  :not(pre) > code {
+    background-color: var(--bg-code);
+    color: var(--text-code);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-light);
+    font-size: 0.875em;
+    font-family: var(--font-mono);
+  }
+
+  /* ===== TERMINAL/THEME SPECIFIC ===== */
+  /* Terminal-like appearance for shell commands */
+  .language-bash,
+  .language-sh,
+  .language-shell,
+  .language-powershell,
+  .language-cmd {
+    background-color: oklch(15% 0.005 240);
+    color: oklch(90% 0.01 240);
+  }
+
+  [data-theme="dark"] .language-bash,
+  [data-theme="dark"] .language-sh,
+  [data-theme="dark"] .language-shell,
+  [data-theme="dark"] .language-powershell,
+  [data-theme="dark"] .language-cmd {
+    background-color: oklch(10% 0.005 240);
+    color: oklch(95% 0.01 240);
+  }
+
+  /* ===== ACCESSIBILITY ===== */
+  /* High contrast mode */
+  @media (prefers-contrast: high) {
+    .hljs {
+      color: var(--text-primary);
+    }
+
+    .hljs-keyword,
+    .hljs-string,
+    .hljs-number,
+    .hljs-function {
+      font-weight: var(--font-weight-bold);
+    }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .code-block-wrapper::before {
+      display: none;
+    }
+  }
+
+  /* ===== PRINT STYLES ===== */
+  @media print {
+    .hljs {
+      color: black !important;
+      background: transparent !important;
+    }
+
+    .hljs-comment,
+    .hljs-quote {
+      color: #666 !important;
+      font-style: italic;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-literal {
+      color: #000 !important;
+      font-weight: bold;
+    }
+
+    .hljs-string,
+    .hljs-symbol {
+      color: #006400 !important;
+    }
+
+    .hljs-number {
+      color: #0000ff !important;
+    }
+  }
+
+  /* ===== PERFORMANCE OPTIMIZATIONS ===== */
+  /* Optimize for large code blocks */
+  .hljs {
+    contain: layout style paint;
+  }
+
+  /* Prevent layout shift during syntax highlighting */
+  .code-block-wrapper {
+    min-height: 1.5em;
+  }
+
+  /* ===== CUSTOM PROPERTIES FOR DYNAMIC THEMING ===== */
+  .syntax-theme-light {
+    --syntax-bg: var(--bg-code);
+    --syntax-text: var(--text-code);
+  }
+
+  .syntax-theme-dark {
+    --syntax-bg: var(--bg-code);
+    --syntax-text: var(--text-code);
+  }
+
+  .syntax-theme-high-contrast {
+    --syntax-bg: var(--bg-primary);
+    --syntax-text: var(--text-primary);
+  }
+}
