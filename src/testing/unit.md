@@ -214,3 +214,460 @@ it('increments counter when button is clicked', () => {
 ---
 
 **Next Up**: Learn about Integration Testing! 🔄
+
+---
+
+## **Mocking & Test Doubles**
+
+### **Mocking External Dependencies**
+
+```javascript
+// __tests__/services/apiService.test.js
+import ApiService from '../../src/services/ApiService';
+
+// Mock axios
+jest.mock('axios');
+import axios from 'axios';
+
+describe('ApiService', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  describe('fetchUsers', () => {
+    it('returns users data on successful API call', async () => {
+      const mockUsers = [
+        { id: 1, name: 'John', email: 'john@example.com' }
+      ];
+      
+      axios.get.mockResolvedValue({ data: mockUsers });
+
+      const result = await ApiService.fetchUsers();
+
+      expect(axios.get).toHaveBeenCalledWith('/api/users');
+      expect(result).toEqual(mockUsers);
+    });
+
+    it('handles API errors gracefully', async () => {
+      const errorMessage = 'Network Error';
+      axios.get.mockRejectedValue(new Error(errorMessage));
+
+      await expect(ApiService.fetchUsers()).rejects.toThrow(errorMessage);
+    });
+  });
+});
+```
+
+### **Mocking React Navigation**
+
+```javascript
+// __tests__/navigation/NavigationContainer.test.js
+import React from 'react';
+import { render } from '@testing-library/react-native';
+import { NavigationContainer } from '@react-navigation/native';
+
+// Mock navigation container
+jest.mock('@react-navigation/native', () => ({
+  ...jest.requireActual('@react-navigation/native'),
+  useNavigation: () => ({
+    navigate: jest.fn(),
+    goBack: jest.fn(),
+  }),
+  useRoute: () => ({
+    params: {},
+  }),
+}));
+
+describe('NavigationContainer', () => {
+  it('renders without crashing', () => {
+    const { getByTestId } = render(
+      <NavigationContainer>
+        <View testID="test-screen">
+          <Text>Test Screen</Text>
+        </View>
+      </NavigationContainer>
+    );
+
+    expect(getByTestId('test-screen')).toBeTruthy();
+  });
+});
+```
+
+---
+
+## **Advanced Testing Patterns**
+
+### **Property-Based Testing**
+
+```javascript
+// __tests__/utils/stringUtils.test.js
+import { capitalize, truncate } from '../../src/utils/stringUtils';
+
+describe('String Utils', () => {
+  describe('capitalize', () => {
+    it('capitalizes first letter of any string', () => {
+      const testCases = [
+        ['hello', 'Hello'],
+        ['WORLD', 'World'],
+        ['javascript', 'JavaScript'],
+        ['', ''],
+        ['a', 'A'],
+      ];
+
+      testCases.forEach(([input, expected]) => {
+        expect(capitalize(input)).toBe(expected);
+      });
+    });
+  });
+
+  describe('truncate', () => {
+    it('truncates strings to specified length', () => {
+      const longString = 'This is a very long string that needs truncation';
+      
+      expect(truncate(longString, 10)).toBe('This is a...');
+      expect(truncate(longString, 20)).toBe('This is a very lo...');
+      expect(truncate('short', 10)).toBe('short');
+    });
+  });
+});
+```
+
+### **Testing Async Operations**
+
+```javascript
+// __tests__/hooks/useAsyncData.test.js
+import { renderHook, act, waitFor } from '@testing-library/react-hooks';
+import useAsyncData from '../../src/hooks/useAsyncData';
+
+describe('useAsyncData', () => {
+  it('loads data successfully', async () => {
+    const mockData = { id: 1, name: 'Test Data' };
+    const mockFetch = jest.fn().mockResolvedValue(mockData);
+
+    const { result } = renderHook(() => useAsyncData(mockFetch));
+
+    expect(result.current.loading).toBe(true);
+    expect(result.current.data).toBe(null);
+    expect(result.current.error).toBe(null);
+
+    await waitFor(() => {
+      expect(result.current.loading).toBe(false);
+      expect(result.current.data).toEqual(mockData);
+      expect(result.current.error).toBe(null);
+    });
+
+    expect(mockFetch).toHaveBeenCalledTimes(1);
+  });
+
+  it('handles errors correctly', async () => {
+    const mockError = new Error('Fetch failed');
+    const mockFetch = jest.fn().mockRejectedValue(mockError);
+
+    const { result } = renderHook(() => useAsyncData(mockFetch));
+
+    await waitFor(() => {
+      expect(result.current.loading).toBe(false);
+      expect(result.current.data).toBe(null);
+      expect(result.current.error).toEqual(mockError);
+    });
+  });
+});
+```
+
+---
+
+## **Testing Best Practices**
+
+### **Test Naming Conventions**
+
+```javascript
+// Good test names - descriptive and clear
+describe('UserService', () => {
+  describe('createUser', () => {
+    it('should create user with valid data');
+    it('should throw error when email is invalid');
+    it('should hash password before saving');
+    it('should return user object without password');
+  });
+});
+
+// Bad test names - vague and unclear
+describe('UserService', () => {
+  it('works correctly');
+  it('handles errors');
+  it('returns data');
+});
+```
+
+### **Test Organization**
+
+```javascript
+// Organize tests by feature, then by method, then by scenario
+describe('PaymentService', () => {
+  describe('processPayment', () => {
+    describe('when payment is successful', () => {
+      it('should charge the customer');
+      it('should update order status');
+      it('should send confirmation email');
+    });
+
+    describe('when payment fails', () => {
+      it('should not charge the customer');
+      it('should log the error');
+      it('should notify admin');
+    });
+  });
+});
+```
+
+### **Test Data Management**
+
+```javascript
+// __tests__/fixtures/userFixtures.js
+export const validUser = {
+  id: 1,
+  name: 'John Doe',
+  email: 'john@example.com',
+  password: 'password123',
+};
+
+export const invalidUser = {
+  id: 1,
+  name: '',
+  email: 'invalid-email',
+  password: '123',
+};
+
+export const multipleUsers = [
+  validUser,
+  { ...validUser, id: 2, email: 'jane@example.com' },
+];
+
+// Using fixtures in tests
+import { validUser, invalidUser } from '../fixtures/userFixtures';
+
+describe('UserValidator', () => {
+  it('should validate correct user data', () => {
+    expect(UserValidator.isValid(validUser)).toBe(true);
+  });
+
+  it('should reject invalid user data', () => {
+    expect(UserValidator.isValid(invalidUser)).toBe(false);
+  });
+});
+```
+
+---
+
+## **Real Use Case**
+
+### **Testing a Complete React Native Component**
+
+```javascript
+// src/components/ProfileCard.js
+import React from 'react';
+import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+
+const ProfileCard = ({ user, onPress, showEmail = true }) => {
+  return (
+    <TouchableOpacity 
+      style={styles.container} 
+      onPress={() => onPress(user)}
+      testID="profile-card"
+    >
+      <Image 
+        source={{ uri: user.avatar }} 
+        style={styles.avatar}
+        testID="user-avatar"
+      />
+      <View style={styles.info}>
+        <Text style={styles.name} testID="user-name">
+          {user.name}
+        </Text>
+        {showEmail && (
+          <Text style={styles.email} testID="user-email">
+            {user.email}
+          </Text>
+        )}
+        <Text style={styles.bio} testID="user-bio">
+          {user.bio}
+        </Text>
+      </View>
+    </TouchableOpacity>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    padding: 16,
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  avatar: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    marginRight: 16,
+  },
+  info: {
+    flex: 1,
+  },
+  name: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 4,
+  },
+  email: {
+    fontSize: 14,
+    color: '#666',
+    marginBottom: 4,
+  },
+  bio: {
+    fontSize: 14,
+    color: '#333',
+  },
+});
+
+export default ProfileCard;
+```
+
+```javascript
+// __tests__/components/ProfileCard.test.js
+import React from 'react';
+import { render, fireEvent } from '@testing-library/react-native';
+import ProfileCard from '../../src/components/ProfileCard';
+
+describe('ProfileCard Component', () => {
+  const mockUser = {
+    id: 1,
+    name: 'John Doe',
+    email: 'john@example.com',
+    avatar: 'https://example.com/avatar.jpg',
+    bio: 'Software developer passionate about React Native',
+  };
+
+  const mockOnPress = jest.fn();
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('renders user information correctly', () => {
+    const { getByTestId, getByText } = render(
+      <ProfileCard user={mockUser} onPress={mockOnPress} />
+    );
+
+    expect(getByTestId('user-avatar')).toBeTruthy();
+    expect(getByTestId('user-name')).toBeTruthy();
+    expect(getByTestId('user-email')).toBeTruthy();
+    expect(getByTestId('user-bio')).toBeTruthy();
+
+    expect(getByText('John Doe')).toBeTruthy();
+    expect(getByText('john@example.com')).toBeTruthy();
+    expect(getByText('Software developer passionate about React Native')).toBeTruthy();
+  });
+
+  it('hides email when showEmail is false', () => {
+    const { getByTestId, queryByTestId } = render(
+      <ProfileCard user={mockUser} onPress={mockOnPress} showEmail={false} />
+    );
+
+    expect(getByTestId('user-name')).toBeTruthy();
+    expect(queryByTestId('user-email')).toBeFalsy();
+  });
+
+  it('calls onPress when card is pressed', () => {
+    const { getByTestId } = render(
+      <ProfileCard user={mockUser} onPress={mockOnPress} />
+    );
+
+    fireEvent.press(getByTestId('profile-card'));
+    expect(mockOnPress).toHaveBeenCalledWith(mockUser);
+    expect(mockOnPress).toHaveBeenCalledTimes(1);
+  });
+
+  it('applies correct styles', () => {
+    const { getByTestId } = render(
+      <ProfileCard user={mockUser} onPress={mockOnPress} />
+    );
+
+    const card = getByTestId('profile-card');
+    expect(card.props.style).toContainEqual(
+      expect.objectContaining({
+        flexDirection: 'row',
+        padding: 16,
+        backgroundColor: '#fff',
+      })
+    );
+  });
+});
+```
+
+---
+
+## **Pro Tip**
+
+**Write tests before you write the code (Test-Driven Development). This forces you to think about the requirements and edge cases before implementation, leading to better design and fewer bugs.**
+
+```javascript
+// TDD Example: Write test first
+describe('Calculator', () => {
+  it('should add two numbers correctly', () => {
+    expect(calculator.add(2, 3)).toBe(5);
+  });
+
+  it('should handle negative numbers', () => {
+    expect(calculator.add(-2, 3)).toBe(1);
+  });
+
+  it('should throw error for non-numeric inputs', () => {
+    expect(() => calculator.add('a', 3)).toThrow('Invalid input');
+  });
+});
+
+// Then implement the code to make tests pass
+class Calculator {
+  add(a, b) {
+    if (typeof a !== 'number' || typeof b !== 'number') {
+      throw new Error('Invalid input');
+    }
+    return a + b;
+  }
+}
+```
+
+---
+
+## **Exercise / Mini Task**
+
+**Task**: Create comprehensive unit tests for a todo application with the following features:
+
+1. **Todo Model**: Create, read, update, delete operations
+2. **Todo Service**: Business logic for todo management
+3. **Todo Component**: React Native component for displaying todos
+4. **Todo Hook**: Custom hook for todo state management
+
+**Requirements**:
+- Test all CRUD operations
+- Test error handling
+- Test component rendering and interactions
+- Test custom hook behavior
+- Achieve 90% code coverage
+- Use proper mocking for external dependencies
+
+**Bonus**:
+- Add property-based testing
+- Create test fixtures and factories
+- Implement test utilities for common operations
+- Add performance tests
+- Create visual regression tests
+
+---
+
+**Unit testing is the foundation of reliable software development. Master these techniques to build robust, maintainable applications with confidence and speed.**🔄
