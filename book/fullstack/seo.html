@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>SEO &amp; Performance - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="SEO &amp; Performance - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, SEO &amp; Performance - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>SEO &amp; Performance - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="fullstack/seo.md">
-    <meta property="og:title" content="SEO &amp; Performance - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="SEO &amp; Performance - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="fullstack/seo.md">
-    <meta property="twitter:title" content="SEO &amp; Performance - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="SEO &amp; Performance - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="SEO &amp; Performance - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="fullstack/seo.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "SEO &amp; Performance - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,181 +525,132 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    SEO &amp; Performance - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
+        <div id="content">
+            <main>
+                <h1 id="seo--performance-optimization"><a class="header" href="#seo--performance-optimization">SEO &amp; Performance Optimization</a></h1>
+<h2 id="what-is-seo--performance"><a class="header" href="#what-is-seo--performance">What is SEO &amp; Performance?</a></h2>
+<p>SEO (Search Engine Optimization) is the process of optimizing your website to rank higher in search engine results. Performance optimization focuses on making your website load faster and run more efficiently. Both are crucial for user experience and search engine rankings.</p>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<h3 id="nextjs-seo-implementation"><a class="header" href="#nextjs-seo-implementation">Next.js SEO Implementation</a></h3>
+<pre><code class="language-javascript">// components/SEOHead.js
+import Head from 'next/head';
 
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
-
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>SEO &amp; Performance - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;seo--performance-optimization&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#seo--performance-optimization&quot;&gt;SEO &amp;amp; Performance Optimization&lt;/a&gt;&lt;/h1&gt;
-&lt;h2 id&#x3D;&quot;what-is-seo--performance&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#what-is-seo--performance&quot;&gt;What is SEO &amp;amp; Performance?&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;SEO (Search Engine Optimization) is the process of optimizing your website to rank higher in search engine results. Performance optimization focuses on making your website load faster and run more efficiently. Both are crucial for user experience and search engine rankings.&lt;/p&gt;
-&lt;h2 id&#x3D;&quot;example&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#example&quot;&gt;Example&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;nextjs-seo-implementation&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#nextjs-seo-implementation&quot;&gt;Next.js SEO Implementation&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// components/SEOHead.js
-import Head from &#x27;next/head&#x27;;
-
-const SEOHead &#x3D; ({ 
+const SEOHead = ({ 
   title, 
   description, 
   keywords, 
   image, 
   url, 
-  type &#x3D; &#x27;website&#x27;,
+  type = 'website',
   canonical,
-  noindex &#x3D; false 
-}) &#x3D;&amp;gt; {
-  const siteTitle &#x3D; &#x27;Jahanzaib Dev Handbook&#x27;;
-  const fullTitle &#x3D; title ? &#x60;${title} | ${siteTitle}&#x60; : siteTitle;
-  const siteDescription &#x3D; description || &#x27;Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise&#x27;;
-  const siteImage &#x3D; image || &#x27;https://jahanzaibjameel.github.io/jahanzaib-dev-handbook/og-image.jpg&#x27;;
-  const siteUrl &#x3D; url || &#x27;https://jahanzaibjameel.github.io/jahanzaib-dev-handbook&#x27;;
+  noindex = false 
+}) =&gt; {
+  const siteTitle = 'Jahanzaib Dev Handbook';
+  const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+  const siteDescription = description || 'Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise';
+  const siteImage = image || 'https://jahanzaibjameel.github.io/jahanzaib-dev-handbook/og-image.jpg';
+  const siteUrl = url || 'https://jahanzaibjameel.github.io/jahanzaib-dev-handbook';
 
   return (
-    &amp;lt;Head&amp;gt;
+    &lt;Head&gt;
       {/* Basic Meta Tags */}
-      &amp;lt;title&amp;gt;{fullTitle}&amp;lt;/title&amp;gt;
-      &amp;lt;meta name&#x3D;&quot;description&quot; content&#x3D;{siteDescription} /&amp;gt;
-      &amp;lt;meta name&#x3D;&quot;keywords&quot; content&#x3D;{keywords || &#x27;developer, portfolio, react, nextjs, fullstack, ai, react native&#x27;} /&amp;gt;
-      &amp;lt;meta name&#x3D;&quot;author&quot; content&#x3D;&quot;Muhammad Jahanzaib&quot; /&amp;gt;
-      &amp;lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1&quot; /&amp;gt;
+      &lt;title&gt;{fullTitle}&lt;/title&gt;
+      &lt;meta name="description" content={siteDescription} /&gt;
+      &lt;meta name="keywords" content={keywords || 'developer, portfolio, react, nextjs, fullstack, ai, react native'} /&gt;
+      &lt;meta name="author" content="Muhammad Jahanzaib" /&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
       
       {/* Canonical URL */}
-      {canonical &amp;amp;&amp;amp; &amp;lt;link rel&#x3D;&quot;canonical&quot; href&#x3D;{canonical} /&amp;gt;}
+      {canonical &amp;&amp; &lt;link rel="canonical" href={canonical} /&gt;}
       
       {/* Robots Meta */}
-      &amp;lt;meta name&#x3D;&quot;robots&quot; content&#x3D;{noindex ? &#x27;noindex,nofollow&#x27; : &#x27;index,follow&#x27;} /&amp;gt;
+      &lt;meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} /&gt;
       
       {/* Open Graph / Facebook */}
-      &amp;lt;meta property&#x3D;&quot;og:type&quot; content&#x3D;{type} /&amp;gt;
-      &amp;lt;meta property&#x3D;&quot;og:url&quot; content&#x3D;{siteUrl} /&amp;gt;
-      &amp;lt;meta property&#x3D;&quot;og:title&quot; content&#x3D;{fullTitle} /&amp;gt;
-      &amp;lt;meta property&#x3D;&quot;og:description&quot; content&#x3D;{siteDescription} /&amp;gt;
-      &amp;lt;meta property&#x3D;&quot;og:image&quot; content&#x3D;{siteImage} /&amp;gt;
-      &amp;lt;meta property&#x3D;&quot;og:image:width&quot; content&#x3D;&quot;1200&quot; /&amp;gt;
-      &amp;lt;meta property&#x3D;&quot;og:image:height&quot; content&#x3D;&quot;630&quot; /&amp;gt;
-      &amp;lt;meta property&#x3D;&quot;og:site_name&quot; content&#x3D;{siteTitle} /&amp;gt;
+      &lt;meta property="og:type" content={type} /&gt;
+      &lt;meta property="og:url" content={siteUrl} /&gt;
+      &lt;meta property="og:title" content={fullTitle} /&gt;
+      &lt;meta property="og:description" content={siteDescription} /&gt;
+      &lt;meta property="og:image" content={siteImage} /&gt;
+      &lt;meta property="og:image:width" content="1200" /&gt;
+      &lt;meta property="og:image:height" content="630" /&gt;
+      &lt;meta property="og:site_name" content={siteTitle} /&gt;
       
       {/* Twitter */}
-      &amp;lt;meta name&#x3D;&quot;twitter:card&quot; content&#x3D;&quot;summary_large_image&quot; /&amp;gt;
-      &amp;lt;meta name&#x3D;&quot;twitter:creator&quot; content&#x3D;&quot;@jahanzaibjameel&quot; /&amp;gt;
-      &amp;lt;meta name&#x3D;&quot;twitter:title&quot; content&#x3D;{fullTitle} /&amp;gt;
-      &amp;lt;meta name&#x3D;&quot;twitter:description&quot; content&#x3D;{siteDescription} /&amp;gt;
-      &amp;lt;meta name&#x3D;&quot;twitter:image&quot; content&#x3D;{siteImage} /&amp;gt;
+      &lt;meta name="twitter:card" content="summary_large_image" /&gt;
+      &lt;meta name="twitter:creator" content="@jahanzaibjameel" /&gt;
+      &lt;meta name="twitter:title" content={fullTitle} /&gt;
+      &lt;meta name="twitter:description" content={siteDescription} /&gt;
+      &lt;meta name="twitter:image" content={siteImage} /&gt;
       
       {/* Additional SEO */}
-      &amp;lt;meta name&#x3D;&quot;theme-color&quot; content&#x3D;&quot;#007AFF&quot; /&amp;gt;
-      &amp;lt;link rel&#x3D;&quot;icon&quot; href&#x3D;&quot;/favicon.ico&quot; /&amp;gt;
-      &amp;lt;link rel&#x3D;&quot;apple-touch-icon&quot; href&#x3D;&quot;/apple-touch-icon.png&quot; /&amp;gt;
+      &lt;meta name="theme-color" content="#007AFF" /&gt;
+      &lt;link rel="icon" href="/favicon.ico" /&gt;
+      &lt;link rel="apple-touch-icon" href="/apple-touch-icon.png" /&gt;
       
       {/* Structured Data */}
-      &amp;lt;script
-        type&#x3D;&quot;application/ld+json&quot;
-        dangerouslySetInnerHTML&#x3D;{{
+      &lt;script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            &quot;@context&quot;: &quot;https://schema.org&quot;,
-            &quot;@type&quot;: type &#x3D;&#x3D;&#x3D; &#x27;article&#x27; ? &#x27;Article&#x27; : &#x27;WebSite&#x27;,
-            &quot;name&quot;: fullTitle,
-            &quot;description&quot;: siteDescription,
-            &quot;url&quot;: siteUrl,
-            &quot;image&quot;: siteImage,
-            &quot;author&quot;: {
-              &quot;@type&quot;: &quot;Person&quot;,
-              &quot;name&quot;: &quot;Muhammad Jahanzaib&quot;,
-              &quot;url&quot;: &quot;https://jahanzaibjameel.github.io&quot;
+            "@context": "https://schema.org",
+            "@type": type === 'article' ? 'Article' : 'WebSite',
+            "name": fullTitle,
+            "description": siteDescription,
+            "url": siteUrl,
+            "image": siteImage,
+            "author": {
+              "@type": "Person",
+              "name": "Muhammad Jahanzaib",
+              "url": "https://jahanzaibjameel.github.io"
             },
-            &quot;publisher&quot;: {
-              &quot;@type&quot;: &quot;Organization&quot;,
-              &quot;name&quot;: &quot;Jahanzaib Dev Handbook&quot;,
-              &quot;logo&quot;: {
-                &quot;@type&quot;: &quot;ImageObject&quot;,
-                &quot;url&quot;: &quot;https://jahanzaibjameel.github.io/jahanzaib-dev-handbook/logo.png&quot;
+            "publisher": {
+              "@type": "Organization",
+              "name": "Jahanzaib Dev Handbook",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://jahanzaibjameel.github.io/jahanzaib-dev-handbook/logo.png"
               }
             }
           })
         }}
-      /&amp;gt;
-    &amp;lt;/Head&amp;gt;
+      /&gt;
+    &lt;/Head&gt;
   );
 };
 
 export default SEOHead;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;performance-optimization-with-nextjs&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#performance-optimization-with-nextjs&quot;&gt;Performance Optimization with Next.js&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// pages/_app.js
-import { useEffect } from &#x27;react&#x27;;
-import { useRouter } from &#x27;next/router&#x27;;
-import * as gtag from &#x27;../lib/gtag&#x27;;
-import SEOHead from &#x27;../components/SEOHead&#x27;;
-import &#x27;../styles/globals.css&#x27;;
+</code></pre>
+<h3 id="performance-optimization-with-nextjs"><a class="header" href="#performance-optimization-with-nextjs">Performance Optimization with Next.js</a></h3>
+<pre><code class="language-javascript">// pages/_app.js
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import * as gtag from '../lib/gtag';
+import SEOHead from '../components/SEOHead';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
-  const router &#x3D; useRouter();
+  const router = useRouter();
 
   // Google Analytics tracking
-  useEffect(() &#x3D;&amp;gt; {
-    const handleRouteChange &#x3D; (url) &#x3D;&amp;gt; {
+  useEffect(() =&gt; {
+    const handleRouteChange = (url) =&gt; {
       gtag.pageview(url);
     };
-    router.events.on(&#x27;routeChangeComplete&#x27;, handleRouteChange);
-    return () &#x3D;&amp;gt; {
-      router.events.off(&#x27;routeChangeComplete&#x27;, handleRouteChange);
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () =&gt; {
+      router.events.off('routeChangeComplete', handleRouteChange);
     };
   }, [router.events]);
 
   // Performance monitoring
-  useEffect(() &#x3D;&amp;gt; {
-    if (process.env.NODE_ENV &#x3D;&#x3D;&#x3D; &#x27;production&#x27;) {
+  useEffect(() =&gt; {
+    if (process.env.NODE_ENV === 'production') {
       // Report Web Vitals
-      import(&#x27;web-vitals&#x27;).then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) &#x3D;&amp;gt; {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) =&gt; {
         getCLS(console.log);
         getFID(console.log);
         getFCP(console.log);
@@ -924,8 +660,8 @@ function MyApp({ Component, pageProps }) {
     }
   }, []);
 
-  const getSEOProps &#x3D; () &#x3D;&amp;gt; {
-    const { seo } &#x3D; pageProps;
+  const getSEOProps = () =&gt; {
+    const { seo } = pageProps;
     return {
       title: seo?.title,
       description: seo?.description,
@@ -939,196 +675,196 @@ function MyApp({ Component, pageProps }) {
   };
 
   return (
-    &amp;lt;&amp;gt;
-      &amp;lt;SEOHead {...getSEOProps()} /&amp;gt;
-      &amp;lt;Component {...pageProps} /&amp;gt;
-    &amp;lt;/&amp;gt;
+    &lt;&gt;
+      &lt;SEOHead {...getSEOProps()} /&gt;
+      &lt;Component {...pageProps} /&gt;
+    &lt;/&gt;
   );
 }
 
 export default MyApp;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;image-optimization&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#image-optimization&quot;&gt;Image Optimization&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// components/OptimizedImage.js
-import Image from &#x27;next/image&#x27;;
-import { useState } from &#x27;react&#x27;;
+</code></pre>
+<h3 id="image-optimization"><a class="header" href="#image-optimization">Image Optimization</a></h3>
+<pre><code class="language-javascript">// components/OptimizedImage.js
+import Image from 'next/image';
+import { useState } from 'react';
 
-const OptimizedImage &#x3D; ({ 
+const OptimizedImage = ({ 
   src, 
   alt, 
   width, 
   height, 
-  priority &#x3D; false, 
-  className &#x3D; &#x27;&#x27;,
-  sizes &#x3D; &#x27;(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw&#x27;
-}) &#x3D;&amp;gt; {
-  const [isLoading, setIsLoading] &#x3D; useState(true);
-  const [error, setError] &#x3D; useState(false);
+  priority = false, 
+  className = '',
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+}) =&gt; {
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   return (
-    &amp;lt;div className&#x3D;{&#x60;relative ${className}&#x60;}&amp;gt;
-      {isLoading &amp;amp;&amp;amp; (
-        &amp;lt;div className&#x3D;&quot;absolute inset-0 bg-gray-200 animate-pulse rounded&quot; /&amp;gt;
+    &lt;div className={`relative ${className}`}&gt;
+      {isLoading &amp;&amp; (
+        &lt;div className="absolute inset-0 bg-gray-200 animate-pulse rounded" /&gt;
       )}
       
       {error ? (
-        &amp;lt;div className&#x3D;&quot;absolute inset-0 bg-gray-300 rounded flex items-center justify-center&quot;&amp;gt;
-          &amp;lt;span className&#x3D;&quot;text-gray-500 text-sm&quot;&amp;gt;Image not available&amp;lt;/span&amp;gt;
-        &amp;lt;/div&amp;gt;
+        &lt;div className="absolute inset-0 bg-gray-300 rounded flex items-center justify-center"&gt;
+          &lt;span className="text-gray-500 text-sm"&gt;Image not available&lt;/span&gt;
+        &lt;/div&gt;
       ) : (
-        &amp;lt;Image
-          src&#x3D;{src}
-          alt&#x3D;{alt}
-          width&#x3D;{width}
-          height&#x3D;{height}
-          priority&#x3D;{priority}
-          sizes&#x3D;{sizes}
-          className&#x3D;{&#x60;transition-opacity duration-300 ${isLoading ? &#x27;opacity-0&#x27; : &#x27;opacity-100&#x27;}&#x60;}
-          onLoadingComplete&#x3D;{() &#x3D;&amp;gt; setIsLoading(false)}
-          onError&#x3D;{() &#x3D;&amp;gt; {
+        &lt;Image
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          priority={priority}
+          sizes={sizes}
+          className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+          onLoadingComplete={() =&gt; setIsLoading(false)}
+          onError={() =&gt; {
             setIsLoading(false);
             setError(true);
           }}
-          placeholder&#x3D;&quot;blur&quot;
-          blurDataURL&#x3D;&quot;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q&#x3D;&#x3D;&quot;
-        /&amp;gt;
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+        /&gt;
       )}
-    &amp;lt;/div&amp;gt;
+    &lt;/div&gt;
   );
 };
 
 export default OptimizedImage;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;real-use-case&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#real-use-case&quot;&gt;Real Use Case&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;e-commerce-product-page-seo&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#e-commerce-product-page-seo&quot;&gt;E-Commerce Product Page SEO&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Amazon&lt;/strong&gt; and &lt;strong&gt;Shopify&lt;/strong&gt; optimize product pages for search engines:&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// pages/products/[slug].js
-import { GetStaticProps, GetStaticPaths } from &#x27;next&#x27;;
-import { getProductBySlug, getAllProductSlugs } from &#x27;../../lib/products&#x27;;
-import SEOHead from &#x27;../../components/SEOHead&#x27;;
-import OptimizedImage from &#x27;../../components/OptimizedImage&#x27;;
-import StructuredData from &#x27;../../components/StructuredData&#x27;;
+</code></pre>
+<h2 id="real-use-case"><a class="header" href="#real-use-case">Real Use Case</a></h2>
+<h3 id="e-commerce-product-page-seo"><a class="header" href="#e-commerce-product-page-seo">E-Commerce Product Page SEO</a></h3>
+<p><strong>Amazon</strong> and <strong>Shopify</strong> optimize product pages for search engines:</p>
+<pre><code class="language-javascript">// pages/products/[slug].js
+import { GetStaticProps, GetStaticPaths } from 'next';
+import { getProductBySlug, getAllProductSlugs } from '../../lib/products';
+import SEOHead from '../../components/SEOHead';
+import OptimizedImage from '../../components/OptimizedImage';
+import StructuredData from '../../components/StructuredData';
 
 export default function ProductPage({ product }) {
-  const seoProps &#x3D; {
+  const seoProps = {
     title: product.name,
     description: product.metaDescription || product.description,
-    keywords: &#x60;${product.name}, ${product.category}, ${product.tags.join(&#x27;, &#x27;)}&#x60;,
+    keywords: `${product.name}, ${product.category}, ${product.tags.join(', ')}`,
     image: product.images[0]?.url,
-    url: &#x60;https://example.com/products/${product.slug}&#x60;,
-    type: &#x27;product&#x27;,
-    canonical: &#x60;https://example.com/products/${product.slug}&#x60;
+    url: `https://example.com/products/${product.slug}`,
+    type: 'product',
+    canonical: `https://example.com/products/${product.slug}`
   };
 
-  const structuredData &#x3D; {
-    &quot;@context&quot;: &quot;https://schema.org&quot;,
-    &quot;@type&quot;: &quot;Product&quot;,
-    &quot;name&quot;: product.name,
-    &quot;description&quot;: product.description,
-    &quot;image&quot;: product.images.map(img &#x3D;&amp;gt; img.url),
-    &quot;brand&quot;: {
-      &quot;@type&quot;: &quot;Brand&quot;,
-      &quot;name&quot;: &quot;Your Brand&quot;
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.name,
+    "description": product.description,
+    "image": product.images.map(img =&gt; img.url),
+    "brand": {
+      "@type": "Brand",
+      "name": "Your Brand"
     },
-    &quot;offers&quot;: {
-      &quot;@type&quot;: &quot;Offer&quot;,
-      &quot;url&quot;: &#x60;https://example.com/products/${product.slug}&#x60;,
-      &quot;priceCurrency&quot;: &quot;USD&quot;,
-      &quot;price&quot;: product.price,
-      &quot;priceValidUntil&quot;: product.saleEndDate,
-      &quot;itemCondition&quot;: &quot;https://schema.org/NewCondition&quot;,
-      &quot;availability&quot;: product.inStock ? 
-        &quot;https://schema.org/InStock&quot; : 
-        &quot;https://schema.org/OutOfStock&quot;
+    "offers": {
+      "@type": "Offer",
+      "url": `https://example.com/products/${product.slug}`,
+      "priceCurrency": "USD",
+      "price": product.price,
+      "priceValidUntil": product.saleEndDate,
+      "itemCondition": "https://schema.org/NewCondition",
+      "availability": product.inStock ? 
+        "https://schema.org/InStock" : 
+        "https://schema.org/OutOfStock"
     },
-    &quot;aggregateRating&quot;: product.rating ? {
-      &quot;@type&quot;: &quot;AggregateRating&quot;,
-      &quot;ratingValue&quot;: product.rating,
-      &quot;reviewCount&quot;: product.reviewCount
+    "aggregateRating": product.rating ? {
+      "@type": "AggregateRating",
+      "ratingValue": product.rating,
+      "reviewCount": product.reviewCount
     } : undefined,
-    &quot;review&quot;: product.reviews?.map(review &#x3D;&amp;gt; ({
-      &quot;@type&quot;: &quot;Review&quot;,
-      &quot;author&quot;: {
-        &quot;@type&quot;: &quot;Person&quot;,
-        &quot;name&quot;: review.author
+    "review": product.reviews?.map(review =&gt; ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": review.author
       },
-      &quot;datePublished&quot;: review.date,
-      &quot;reviewRating&quot;: {
-        &quot;@type&quot;: &quot;Rating&quot;,
-        &quot;ratingValue&quot;: review.rating
+      "datePublished": review.date,
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": review.rating
       },
-      &quot;reviewBody&quot;: review.content
+      "reviewBody": review.content
     }))
   };
 
   return (
-    &amp;lt;&amp;gt;
-      &amp;lt;SEOHead {...seoProps} /&amp;gt;
-      &amp;lt;StructuredData data&#x3D;{structuredData} /&amp;gt;
+    &lt;&gt;
+      &lt;SEOHead {...seoProps} /&gt;
+      &lt;StructuredData data={structuredData} /&gt;
       
-      &amp;lt;div className&#x3D;&quot;product-page&quot;&amp;gt;
-        &amp;lt;div className&#x3D;&quot;product-images&quot;&amp;gt;
-          {product.images.map((image, index) &#x3D;&amp;gt; (
-            &amp;lt;OptimizedImage
-              key&#x3D;{image.url}
-              src&#x3D;{image.url}
-              alt&#x3D;{&#x60;${product.name} - Image ${index + 1}&#x60;}
-              width&#x3D;{600}
-              height&#x3D;{600}
-              priority&#x3D;{index &#x3D;&#x3D;&#x3D; 0}
-              className&#x3D;&quot;product-image&quot;
-            /&amp;gt;
+      &lt;div className="product-page"&gt;
+        &lt;div className="product-images"&gt;
+          {product.images.map((image, index) =&gt; (
+            &lt;OptimizedImage
+              key={image.url}
+              src={image.url}
+              alt={`${product.name} - Image ${index + 1}`}
+              width={600}
+              height={600}
+              priority={index === 0}
+              className="product-image"
+            /&gt;
           ))}
-        &amp;lt;/div&amp;gt;
+        &lt;/div&gt;
         
-        &amp;lt;div className&#x3D;&quot;product-content&quot;&amp;gt;
-          &amp;lt;h1 className&#x3D;&quot;text-3xl font-bold mb-4&quot;&amp;gt;{product.name}&amp;lt;/h1&amp;gt;
+        &lt;div className="product-content"&gt;
+          &lt;h1 className="text-3xl font-bold mb-4"&gt;{product.name}&lt;/h1&gt;
           
-          &amp;lt;div className&#x3D;&quot;product-meta&quot;&amp;gt;
-            &amp;lt;span className&#x3D;&quot;category&quot;&amp;gt;{product.category}&amp;lt;/span&amp;gt;
-            &amp;lt;span className&#x3D;&quot;price&quot;&amp;gt;${product.price}&amp;lt;/span&amp;gt;
-            &amp;lt;span className&#x3D;{&#x60;stock-status ${product.inStock ? &#x27;in-stock&#x27; : &#x27;out-of-stock&#x27;}&#x60;}&amp;gt;
-              {product.inStock ? &#x27;In Stock&#x27; : &#x27;Out of Stock&#x27;}
-            &amp;lt;/span&amp;gt;
-          &amp;lt;/div&amp;gt;
+          &lt;div className="product-meta"&gt;
+            &lt;span className="category"&gt;{product.category}&lt;/span&gt;
+            &lt;span className="price"&gt;${product.price}&lt;/span&gt;
+            &lt;span className={`stock-status ${product.inStock ? 'in-stock' : 'out-of-stock'}`}&gt;
+              {product.inStock ? 'In Stock' : 'Out of Stock'}
+            &lt;/span&gt;
+          &lt;/div&gt;
           
-          &amp;lt;div className&#x3D;&quot;product-description&quot;&amp;gt;
-            &amp;lt;h2&amp;gt;Description&amp;lt;/h2&amp;gt;
-            &amp;lt;div dangerouslySetInnerHTML&#x3D;{{ __html: product.description }} /&amp;gt;
-          &amp;lt;/div&amp;gt;
+          &lt;div className="product-description"&gt;
+            &lt;h2&gt;Description&lt;/h2&gt;
+            &lt;div dangerouslySetInnerHTML={{ __html: product.description }} /&gt;
+          &lt;/div&gt;
           
-          {product.specifications &amp;amp;&amp;amp; (
-            &amp;lt;div className&#x3D;&quot;product-specs&quot;&amp;gt;
-              &amp;lt;h2&amp;gt;Specifications&amp;lt;/h2&amp;gt;
-              &amp;lt;table&amp;gt;
-                {Object.entries(product.specifications).map(([key, value]) &#x3D;&amp;gt; (
-                  &amp;lt;tr key&#x3D;{key}&amp;gt;
-                    &amp;lt;td&amp;gt;{key}&amp;lt;/td&amp;gt;
-                    &amp;lt;td&amp;gt;{value}&amp;lt;/td&amp;gt;
-                  &amp;lt;/tr&amp;gt;
+          {product.specifications &amp;&amp; (
+            &lt;div className="product-specs"&gt;
+              &lt;h2&gt;Specifications&lt;/h2&gt;
+              &lt;table&gt;
+                {Object.entries(product.specifications).map(([key, value]) =&gt; (
+                  &lt;tr key={key}&gt;
+                    &lt;td&gt;{key}&lt;/td&gt;
+                    &lt;td&gt;{value}&lt;/td&gt;
+                  &lt;/tr&gt;
                 ))}
-              &amp;lt;/table&amp;gt;
-            &amp;lt;/div&amp;gt;
+              &lt;/table&gt;
+            &lt;/div&gt;
           )}
-        &amp;lt;/div&amp;gt;
-      &amp;lt;/div&amp;gt;
-    &amp;lt;/&amp;gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/&gt;
   );
 }
 
-export const getStaticPaths: GetStaticPaths &#x3D; async () &#x3D;&amp;gt; {
-  const slugs &#x3D; await getAllProductSlugs();
+export const getStaticPaths: GetStaticPaths = async () =&gt; {
+  const slugs = await getAllProductSlugs();
   
   return {
-    paths: slugs.map(slug &#x3D;&amp;gt; ({
+    paths: slugs.map(slug =&gt; ({
       params: { slug }
     })),
-    fallback: &#x27;blocking&#x27;
+    fallback: 'blocking'
   };
 };
 
-export const getStaticProps: GetStaticProps &#x3D; async ({ params }) &#x3D;&amp;gt; {
-  const product &#x3D; await getProductBySlug(params.slug);
+export const getStaticProps: GetStaticProps = async ({ params }) =&gt; {
+  const product = await getProductBySlug(params.slug);
   
   if (!product) {
     return { notFound: true };
@@ -1140,35 +876,35 @@ export const getStaticProps: GetStaticProps &#x3D; async ({ params }) &#x3D;&amp
       seo: {
         title: product.name,
         description: product.metaDescription,
-        keywords: &#x60;${product.name}, ${product.category}, ${product.tags.join(&#x27;, &#x27;)}&#x60;,
+        keywords: `${product.name}, ${product.category}, ${product.tags.join(', ')}`,
         image: product.images[0]?.url,
-        url: &#x60;https://example.com/products/${product.slug}&#x60;,
-        type: &#x27;product&#x27;
+        url: `https://example.com/products/${product.slug}`,
+        type: 'product'
       }
     },
     revalidate: 3600 // Revalidate every hour
   };
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;pro-tip&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#pro-tip&quot;&gt;Pro Tip&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Implement Core Web Vitals Optimization&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// utils/performance.js
+</code></pre>
+<h2 id="pro-tip"><a class="header" href="#pro-tip">Pro Tip</a></h2>
+<p><strong>Implement Core Web Vitals Optimization</strong></p>
+<pre><code class="language-javascript">// utils/performance.js
 class PerformanceOptimizer {
   // Lazy load images
   static lazyLoadImages() {
-    if (&#x27;IntersectionObserver&#x27; in window) {
-      const imageObserver &#x3D; new IntersectionObserver((entries, observer) &#x3D;&amp;gt; {
-        entries.forEach(entry &#x3D;&amp;gt; {
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) =&gt; {
+        entries.forEach(entry =&gt; {
           if (entry.isIntersecting) {
-            const img &#x3D; entry.target;
-            img.src &#x3D; img.dataset.src;
-            img.classList.remove(&#x27;lazy&#x27;);
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
             observer.unobserve(img);
           }
         });
       });
 
-      document.querySelectorAll(&#x27;img[data-src]&#x27;).forEach(img &#x3D;&amp;gt; {
+      document.querySelectorAll('img[data-src]').forEach(img =&gt; {
         imageObserver.observe(img);
       });
     }
@@ -1177,82 +913,82 @@ class PerformanceOptimizer {
   // Optimize font loading
   static optimizeFontLoading() {
     // Preload critical fonts
-    const fontLink &#x3D; document.createElement(&#x27;link&#x27;);
-    fontLink.rel &#x3D; &#x27;preload&#x27;;
-    fontLink.href &#x3D; &#x27;/fonts/inter-var.woff2&#x27;;
-    fontLink.as &#x3D; &#x27;font&#x27;;
-    fontLink.type &#x3D; &#x27;font/woff2&#x27;;
-    fontLink.crossOrigin &#x3D; &#x27;anonymous&#x27;;
+    const fontLink = document.createElement('link');
+    fontLink.rel = 'preload';
+    fontLink.href = '/fonts/inter-var.woff2';
+    fontLink.as = 'font';
+    fontLink.type = 'font/woff2';
+    fontLink.crossOrigin = 'anonymous';
     document.head.appendChild(fontLink);
 
     // Load fonts with font-display: swap
-    const style &#x3D; document.createElement(&#x27;style&#x27;);
-    style.textContent &#x3D; &#x60;
+    const style = document.createElement('style');
+    style.textContent = `
       @font-face {
-        font-family: &#x27;Inter&#x27;;
+        font-family: 'Inter';
         font-style: normal;
         font-weight: 100 900;
         font-display: swap;
-        src: url(&#x27;/fonts/inter-var.woff2&#x27;) format(&#x27;woff2&#x27;);
+        src: url('/fonts/inter-var.woff2') format('woff2');
       }
-    &#x60;;
+    `;
     document.head.appendChild(style);
   }
 
   // Minimize layout shifts
   static preventLayoutShifts() {
     // Add aspect-ratio to images
-    document.querySelectorAll(&#x27;img&#x27;).forEach(img &#x3D;&amp;gt; {
-      if (!img.style.aspectRatio &amp;amp;&amp;amp; img.width &amp;amp;&amp;amp; img.height) {
-        img.style.aspectRatio &#x3D; &#x60;${img.width} / ${img.height}&#x60;;
+    document.querySelectorAll('img').forEach(img =&gt; {
+      if (!img.style.aspectRatio &amp;&amp; img.width &amp;&amp; img.height) {
+        img.style.aspectRatio = `${img.width} / ${img.height}`;
       }
     });
 
     // Reserve space for dynamic content
-    const dynamicContainers &#x3D; document.querySelectorAll(&#x27;.dynamic-content&#x27;);
-    dynamicContainers.forEach(container &#x3D;&amp;gt; {
-      container.style.minHeight &#x3D; &#x27;200px&#x27;;
+    const dynamicContainers = document.querySelectorAll('.dynamic-content');
+    dynamicContainers.forEach(container =&gt; {
+      container.style.minHeight = '200px';
     });
   }
 
   // Optimize critical CSS
   static optimizeCriticalCSS() {
     // Inline critical CSS
-    const criticalCSS &#x3D; &#x60;
-      body { font-family: &#x27;Inter&#x27;, system-ui, sans-serif; }
+    const criticalCSS = `
+      body { font-family: 'Inter', system-ui, sans-serif; }
       .loading { opacity: 0; transition: opacity 0.3s; }
       .loaded { opacity: 1; }
-    &#x60;;
+    `;
     
-    const style &#x3D; document.createElement(&#x27;style&#x27;);
-    style.textContent &#x3D; criticalCSS;
+    const style = document.createElement('style');
+    style.textContent = criticalCSS;
     document.head.appendChild(style);
   }
 
   // Monitor performance
   static monitorPerformance() {
-    if (&#x27;PerformanceObserver&#x27; in window) {
+    if ('PerformanceObserver' in window) {
       // Monitor Core Web Vitals
-      const vitalsObserver &#x3D; new PerformanceObserver((list) &#x3D;&amp;gt; {
-        list.getEntries().forEach(entry &#x3D;&amp;gt; {
-          if (entry.entryType &#x3D;&#x3D;&#x3D; &#x27;largest-contentful-paint&#x27;) {
-            console.log(&#x27;LCP:&#x27;, entry.startTime);
-          } else if (entry.entryType &#x3D;&#x3D;&#x3D; &#x27;first-input&#x27;) {
-            console.log(&#x27;FID:&#x27;, entry.processingStart - entry.startTime);
-          } else if (entry.entryType &#x3D;&#x3D;&#x3D; &#x27;layout-shift&#x27;) {
-            console.log(&#x27;CLS:&#x27;, entry.value);
+      const vitalsObserver = new PerformanceObserver((list) =&gt; {
+        list.getEntries().forEach(entry =&gt; {
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
+          } else if (entry.entryType === 'first-input') {
+            console.log('FID:', entry.processingStart - entry.startTime);
+          } else if (entry.entryType === 'layout-shift') {
+            console.log('CLS:', entry.value);
           }
         });
       });
 
-      vitalsObserver.observe({ entryTypes: [&#x27;largest-contentful-paint&#x27;, &#x27;first-input&#x27;, &#x27;layout-shift&#x27;] });
+      vitalsObserver.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
     }
   }
 }
 
 // Initialize performance optimizations
-if (typeof window !&#x3D;&#x3D; &#x27;undefined&#x27;) {
-  document.addEventListener(&#x27;DOMContentLoaded&#x27;, () &#x3D;&amp;gt; {
+if (typeof window !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', () =&gt; {
     PerformanceOptimizer.optimizeFontLoading();
     PerformanceOptimizer.optimizeCriticalCSS();
     PerformanceOptimizer.lazyLoadImages();
@@ -1260,11 +996,11 @@ if (typeof window !&#x3D;&#x3D; &#x27;undefined&#x27;) {
     PerformanceOptimizer.monitorPerformance();
   });
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;exercise&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#exercise&quot;&gt;Exercise&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Build a Complete SEO &amp;amp; Performance System&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Create a comprehensive SEO and performance optimization system:&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Exercise: SEO &amp;amp; Performance Implementation
+</code></pre>
+<h2 id="exercise"><a class="header" href="#exercise">Exercise</a></h2>
+<p><strong>Build a Complete SEO &amp; Performance System</strong></p>
+<p>Create a comprehensive SEO and performance optimization system:</p>
+<pre><code class="language-javascript">// Exercise: SEO &amp; Performance Implementation
 // Requirements:
 // 1. Dynamic SEO meta tags
 // 2. Structured data implementation
@@ -1285,9 +1021,9 @@ class SEOManager {
       keywords,
       image,
       url,
-      type &#x3D; &#x27;website&#x27;,
-      noindex &#x3D; false
-    } &#x3D; pageData;
+      type = 'website',
+      noindex = false
+    } = pageData;
 
     return {
       title: this.generateTitle(title),
@@ -1302,41 +1038,41 @@ class SEOManager {
   }
 
   static generateTitle(title) {
-    const siteName &#x3D; &#x27;Jahanzaib Dev Handbook&#x27;;
-    return title ? &#x60;${title} | ${siteName}&#x60; : siteName;
+    const siteName = 'Jahanzaib Dev Handbook';
+    return title ? `${title} | ${siteName}` : siteName;
   }
 
   static generateDescription(description) {
-    const maxLength &#x3D; 160;
+    const maxLength = 160;
     if (!description) {
-      return &#x27;Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise&#x27;;
+      return 'Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise';
     }
-    return description.length &amp;gt; maxLength ? 
-      description.substring(0, maxLength - 3) + &#x27;...&#x27; : 
+    return description.length &gt; maxLength ? 
+      description.substring(0, maxLength - 3) + '...' : 
       description;
   }
 
   static generateKeywords(keywords) {
-    const defaultKeywords &#x3D; &#x27;developer, portfolio, react, nextjs, fullstack, ai, react native&#x27;;
-    return keywords ? &#x60;${keywords}, ${defaultKeywords}&#x60; : defaultKeywords;
+    const defaultKeywords = 'developer, portfolio, react, nextjs, fullstack, ai, react native';
+    return keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
   }
 
   static generateStructuredData(pageData) {
-    const { type, title, description, url, image, author } &#x3D; pageData;
+    const { type, title, description, url, image, author } = pageData;
     
-    const baseData &#x3D; {
-      &quot;@context&quot;: &quot;https://schema.org&quot;,
-      &quot;@type&quot;: type &#x3D;&#x3D;&#x3D; &#x27;article&#x27; ? &#x27;Article&#x27; : &#x27;WebPage&#x27;,
-      &quot;name&quot;: title,
-      &quot;description&quot;: description,
-      &quot;url&quot;: url,
-      &quot;image&quot;: image
+    const baseData = {
+      "@context": "https://schema.org",
+      "@type": type === 'article' ? 'Article' : 'WebPage',
+      "name": title,
+      "description": description,
+      "url": url,
+      "image": image
     };
 
     if (author) {
-      baseData.author &#x3D; {
-        &quot;@type&quot;: &quot;Person&quot;,
-        &quot;name&quot;: author
+      baseData.author = {
+        "@type": "Person",
+        "name": author
       };
     }
 
@@ -1347,8 +1083,8 @@ class SEOManager {
 // 2. Performance Monitor
 class PerformanceMonitor {
   constructor() {
-    this.metrics &#x3D; {};
-    this.observers &#x3D; [];
+    this.metrics = {};
+    this.observers = [];
   }
 
   startMonitoring() {
@@ -1358,48 +1094,48 @@ class PerformanceMonitor {
   }
 
   observeCoreWebVitals() {
-    if (&#x27;PerformanceObserver&#x27; in window) {
+    if ('PerformanceObserver' in window) {
       // Largest Contentful Paint
-      const lcpObserver &#x3D; new PerformanceObserver((list) &#x3D;&amp;gt; {
-        const entries &#x3D; list.getEntries();
-        const lastEntry &#x3D; entries[entries.length - 1];
-        this.metrics.lcp &#x3D; lastEntry.startTime;
-        this.reportMetric(&#x27;LCP&#x27;, lastEntry.startTime);
+      const lcpObserver = new PerformanceObserver((list) =&gt; {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        this.metrics.lcp = lastEntry.startTime;
+        this.reportMetric('LCP', lastEntry.startTime);
       });
-      lcpObserver.observe({ entryTypes: [&#x27;largest-contentful-paint&#x27;] });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // First Input Delay
-      const fidObserver &#x3D; new PerformanceObserver((list) &#x3D;&amp;gt; {
-        list.getEntries().forEach(entry &#x3D;&amp;gt; {
-          this.metrics.fid &#x3D; entry.processingStart - entry.startTime;
-          this.reportMetric(&#x27;FID&#x27;, this.metrics.fid);
+      const fidObserver = new PerformanceObserver((list) =&gt; {
+        list.getEntries().forEach(entry =&gt; {
+          this.metrics.fid = entry.processingStart - entry.startTime;
+          this.reportMetric('FID', this.metrics.fid);
         });
       });
-      fidObserver.observe({ entryTypes: [&#x27;first-input&#x27;] });
+      fidObserver.observe({ entryTypes: ['first-input'] });
 
       // Cumulative Layout Shift
-      const clsObserver &#x3D; new PerformanceObserver((list) &#x3D;&amp;gt; {
-        let clsValue &#x3D; 0;
-        list.getEntries().forEach(entry &#x3D;&amp;gt; {
+      const clsObserver = new PerformanceObserver((list) =&gt; {
+        let clsValue = 0;
+        list.getEntries().forEach(entry =&gt; {
           if (!entry.hadRecentInput) {
-            clsValue +&#x3D; entry.value;
+            clsValue += entry.value;
           }
         });
-        this.metrics.cls &#x3D; clsValue;
-        this.reportMetric(&#x27;CLS&#x27;, clsValue);
+        this.metrics.cls = clsValue;
+        this.reportMetric('CLS', clsValue);
       });
-      clsObserver.observe({ entryTypes: [&#x27;layout-shift&#x27;] });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
     }
   }
 
   reportMetric(name, value) {
-    console.log(&#x60;${name}: ${value}&#x60;);
+    console.log(`${name}: ${value}`);
     
     // Send to analytics
     if (window.gtag) {
-      window.gtag(&#x27;event&#x27;, name, {
+      window.gtag('event', name, {
         value: Math.round(value),
-        event_category: &#x27;Web Vitals&#x27;
+        event_category: 'Web Vitals'
       });
     }
   }
@@ -1412,109 +1148,60 @@ class PerformanceMonitor {
 // 3. Sitemap Generator
 class SitemapGenerator {
   static generateSitemap(pages) {
-    const baseUrl &#x3D; &#x27;https://jahanzaibjameel.github.io/jahanzaib-dev-handbook&#x27;;
-    const currentDate &#x3D; new Date().toISOString();
+    const baseUrl = 'https://jahanzaibjameel.github.io/jahanzaib-dev-handbook';
+    const currentDate = new Date().toISOString();
     
-    const sitemap &#x3D; &#x60;&amp;lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot;?&amp;gt;
-&amp;lt;urlset xmlns&#x3D;&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;&amp;gt;
-${pages.map(page &#x3D;&amp;gt; &#x60;
-  &amp;lt;url&amp;gt;
-    &amp;lt;loc&amp;gt;${baseUrl}${page.path}&amp;lt;/loc&amp;gt;
-    &amp;lt;lastmod&amp;gt;${page.lastmod || currentDate}&amp;lt;/lastmod&amp;gt;
-    &amp;lt;changefreq&amp;gt;${page.changefreq || &#x27;weekly&#x27;}&amp;lt;/changefreq&amp;gt;
-    &amp;lt;priority&amp;gt;${page.priority || &#x27;0.8&#x27;}&amp;lt;/priority&amp;gt;
-  &amp;lt;/url&amp;gt;&#x60;).join(&#x27;&#x27;)}
-&amp;lt;/urlset&amp;gt;&#x60;;
+    const sitemap = `&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
+${pages.map(page =&gt; `
+  &lt;url&gt;
+    &lt;loc&gt;${baseUrl}${page.path}&lt;/loc&gt;
+    &lt;lastmod&gt;${page.lastmod || currentDate}&lt;/lastmod&gt;
+    &lt;changefreq&gt;${page.changefreq || 'weekly'}&lt;/changefreq&gt;
+    &lt;priority&gt;${page.priority || '0.8'}&lt;/priority&gt;
+  &lt;/url&gt;`).join('')}
+&lt;/urlset&gt;`;
 
     return sitemap;
   }
 
   static generateRobotsTxt() {
-    return &#x60;User-agent: *
+    return `User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
-Sitemap: https://jahanzaibjameel.github.io/jahanzaib-dev-handbook/sitemap.xml&#x60;;
+Sitemap: https://jahanzaibjameel.github.io/jahanzaib-dev-handbook/sitemap.xml`;
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Your Tasks:&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Implement the complete SEO system&lt;/li&gt;
-&lt;li&gt;Add performance monitoring&lt;/li&gt;
-&lt;li&gt;Create sitemap generation&lt;/li&gt;
-&lt;li&gt;Implement Core Web Vitals optimization&lt;/li&gt;
-&lt;li&gt;Add structured data for different content types&lt;/li&gt;
-&lt;li&gt;Create image optimization system&lt;/li&gt;
-&lt;li&gt;Add analytics integration&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This exercise teaches you:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;SEO best practices and implementation&lt;/li&gt;
-&lt;li&gt;Performance optimization techniques&lt;/li&gt;
-&lt;li&gt;Core Web Vitals monitoring&lt;/li&gt;
-&lt;li&gt;Structured data and schema markup&lt;/li&gt;
-&lt;li&gt;Image optimization strategies&lt;/li&gt;
-&lt;li&gt;Sitemap and robots.txt generation&lt;/li&gt;
-&lt;li&gt;Analytics and monitoring integration&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Next Up&lt;/strong&gt;: Learn about DevOps and production deployment! DevOps &amp;amp; Production Excellence&lt;/p&gt;
+</code></pre>
+<p><strong>Your Tasks:</strong></p>
+<ol>
+<li>Implement the complete SEO system</li>
+<li>Add performance monitoring</li>
+<li>Create sitemap generation</li>
+<li>Implement Core Web Vitals optimization</li>
+<li>Add structured data for different content types</li>
+<li>Create image optimization system</li>
+<li>Add analytics integration</li>
+</ol>
+<p>This exercise teaches you:</p>
+<ul>
+<li>SEO best practices and implementation</li>
+<li>Performance optimization techniques</li>
+<li>Core Web Vitals monitoring</li>
+<li>Structured data and schema markup</li>
+<li>Image optimization strategies</li>
+<li>Sitemap and robots.txt generation</li>
+<li>Analytics and monitoring integration</li>
+</ul>
+<hr>
+<p><strong>Next Up</strong>: Learn about DevOps and production deployment! DevOps &amp; Production Excellence</p>
 
-                        </div>
-                        
-                    </article>
-                </div>
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "fullstack/seo.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

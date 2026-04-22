@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>Navigation &amp; Routing - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="Navigation &amp; Routing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Navigation &amp; Routing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>Navigation &amp; Routing - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="react-native/navigation.md">
-    <meta property="og:title" content="Navigation &amp; Routing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Navigation &amp; Routing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="react-native/navigation.md">
-    <meta property="twitter:title" content="Navigation &amp; Routing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="Navigation &amp; Routing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="Navigation &amp; Routing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="react-native/navigation.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "Navigation &amp; Routing - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,116 +525,1019 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    Navigation &amp; Routing - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
+        <div id="content">
+            <main>
+                <h1 id="navigation"><a class="header" href="#navigation">Navigation</a></h1>
+<p>Learn how to implement navigation in React Native applications using React Navigation, including stack navigation, tab navigation, drawer navigation, and advanced navigation patterns.</p>
+<h2 id="what-is-navigation"><a class="header" href="#what-is-navigation"><strong>What is Navigation?</strong></a></h2>
+<p>Navigation in React Native allows users to move between different screens and sections of your app, creating a seamless user experience with proper transitions and state management.</p>
+<h3 id="key-concepts"><a class="header" href="#key-concepts"><strong>Key Concepts</strong></a></h3>
+<ul>
+<li><strong>Screens</strong>: Individual pages or views in your app</li>
+<li><strong>Navigators</strong>: Containers that manage screen transitions</li>
+<li><strong>Routes</strong>: Definitions of available screens</li>
+<li><strong>Navigation State</strong>: Current navigation history and stack</li>
+<li><strong>Deep Linking</strong>: Direct navigation to specific screens</li>
+</ul>
+<hr>
+<h2 id="react-navigation-setup"><a class="header" href="#react-navigation-setup"><strong>React Navigation Setup</strong></a></h2>
+<h3 id="installation"><a class="header" href="#installation"><strong>Installation</strong></a></h3>
+<pre><code class="language-bash"># Install React Navigation packages
+npm install @react-navigation/native @react-navigation/stack @react-navigation/bottom-tabs @react-navigation/drawer
 
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
+# Install dependencies
+npm install react-native-screens react-native-safe-area-context
 
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>Navigation &amp; Routing - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;navigation&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#navigation&quot;&gt;Navigation&lt;/a&gt;&lt;/h1&gt;
+# For gesture handling (optional)
+npm install react-native-gesture-handler react-native-reanimated
+</code></pre>
+<h3 id="basic-setup"><a class="header" href="#basic-setup"><strong>Basic Setup</strong></a></h3>
+<pre><code class="language-javascript">// App.js
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-                        </div>
-                        
-                    </article>
-                </div>
+import HomeScreen from './screens/HomeScreen';
+import ProfileScreen from './screens/ProfileScreen';
+
+const Stack = createStackNavigator();
+
+const App = () =&gt; {
+  return (
+    &lt;NavigationContainer&gt;
+      &lt;Stack.Navigator initialRouteName="Home"&gt;
+        &lt;Stack.Screen name="Home" component={HomeScreen} /&gt;
+        &lt;Stack.Screen name="Profile" component={ProfileScreen} /&gt;
+      &lt;/Stack.Navigator&gt;
+    &lt;/NavigationContainer&gt;
+  );
+};
+
+export default App;
+</code></pre>
+<hr>
+<h2 id="stack-navigation"><a class="header" href="#stack-navigation"><strong>Stack Navigation</strong></a></h2>
+<h3 id="basic-stack-navigator"><a class="header" href="#basic-stack-navigator"><strong>Basic Stack Navigator</strong></a></h3>
+<pre><code class="language-javascript">import { createStackNavigator } from '@react-navigation/stack';
+
+const Stack = createStackNavigator();
+
+const MainStackNavigator = () =&gt; {
+  return (
+    &lt;Stack.Navigator
+      initialRouteName="Home"
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: '#f4511e',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+      }}
+    &gt;
+      &lt;Stack.Screen 
+        name="Home" 
+        component={HomeScreen}
+        options={{ title: 'Welcome' }}
+      /&gt;
+      &lt;Stack.Screen 
+        name="Details" 
+        component={DetailsScreen}
+        options={{ title: 'Product Details' }}
+      /&gt;
+      &lt;Stack.Screen 
+        name="Profile" 
+        component={ProfileScreen}
+        options={{
+          title: 'My Profile',
+          headerRight: () =&gt; (
+            &lt;Button
+              onPress={() =&gt; alert('Settings')}
+              title="Settings"
+              color="#fff"
+            /&gt;
+          ),
+        }}
+      /&gt;
+    &lt;/Stack.Navigator&gt;
+  );
+};
+</code></pre>
+<h3 id="navigation-between-screens"><a class="header" href="#navigation-between-screens"><strong>Navigation Between Screens</strong></a></h3>
+<pre><code class="language-javascript">// HomeScreen.js
+import { View, Button, Text, StyleSheet } from 'react-native';
+
+const HomeScreen = ({ navigation }) =&gt; {
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Text style={styles.title}&gt;Home Screen&lt;/Text&gt;
+      
+      &lt;Button
+        title="Go to Details"
+        onPress={() =&gt; navigation.navigate('Details')}
+      /&gt;
+      
+      &lt;Button
+        title="Go to Profile"
+        onPress={() =&gt; navigation.push('Profile')}
+      /&gt;
+      
+      &lt;Button
+        title="Go Back"
+        onPress={() =&gt; navigation.goBack()}
+      /&gt;
+      
+      &lt;Button
+        title="Go to Details with Params"
+        onPress={() =&gt; navigation.navigate('Details', { 
+          itemId: 42,
+          itemName: 'Sample Item'
+        })}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+});
+</code></pre>
+<h3 id="passing-and-receiving-parameters"><a class="header" href="#passing-and-receiving-parameters"><strong>Passing and Receiving Parameters</strong></a></h3>
+<pre><code class="language-javascript">// DetailsScreen.js
+import { View, Text, StyleSheet } from 'react-native';
+
+const DetailsScreen = ({ route, navigation }) =&gt; {
+  const { itemId, itemName } = route.params;
+
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Text style={styles.title}&gt;Details Screen&lt;/Text&gt;
+      &lt;Text style={styles.text}&gt;Item ID: {itemId}&lt;/Text&gt;
+      &lt;Text style={styles.text}&gt;Item Name: {itemName}&lt;/Text&gt;
+      
+      &lt;Button
+        title="Update Header Title"
+        onPress={() =&gt; navigation.setOptions({ title: itemName })}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+
+// Using the screen
+const HomeScreen = ({ navigation }) =&gt; {
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Button
+        title="Go to Details"
+        onPress={() =&gt; {
+          navigation.navigate('Details', {
+            itemId: 42,
+            itemName: 'Sample Item',
+          });
+        }}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<hr>
+<h2 id="tab-navigation"><a class="header" href="#tab-navigation"><strong>Tab Navigation</strong></a></h2>
+<h3 id="bottom-tab-navigator"><a class="header" href="#bottom-tab-navigator"><strong>Bottom Tab Navigator</strong></a></h3>
+<pre><code class="language-javascript">import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+
+const Tab = createBottomTabNavigator();
+
+const TabNavigator = () =&gt; {
+  return (
+    &lt;Tab.Navigator
+      screenOptions={({ route }) =&gt; ({
+        tabBarIcon: ({ focused, color, size }) =&gt; {
+          let iconName;
+
+          if (route.name === 'Home') {
+            iconName = focused ? 'home' : 'home-outline';
+          } else if (route.name === 'Search') {
+            iconName = focused ? 'search' : 'search-outline';
+          } else if (route.name === 'Profile') {
+            iconName = focused ? 'person' : 'person-outline';
+          }
+
+          return &lt;Icon name={iconName} size={size} color={color} /&gt;;
+        },
+        tabBarActiveTintColor: 'tomato',
+        tabBarInactiveTintColor: 'gray',
+        tabBarStyle: {
+          backgroundColor: '#fff',
+          paddingBottom: 5,
+          paddingTop: 5,
+        },
+      })}
+    &gt;
+      &lt;Tab.Screen 
+        name="Home" 
+        component={HomeScreen}
+        options={{ title: 'Home' }}
+      /&gt;
+      &lt;Tab.Screen 
+        name="Search" 
+        component={SearchScreen}
+        options={{ title: 'Search' }}
+      /&gt;
+      &lt;Tab.Screen 
+        name="Profile" 
+        component={ProfileScreen}
+        options={{ title: 'Profile' }}
+      /&gt;
+    &lt;/Tab.Navigator&gt;
+  );
+};
+</code></pre>
+<h3 id="custom-tab-bar"><a class="header" href="#custom-tab-bar"><strong>Custom Tab Bar</strong></a></h3>
+<pre><code class="language-javascript">import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+
+const CustomTabBar = ({ state, descriptors, navigation }) =&gt; {
+  return (
+    &lt;View style={styles.container}&gt;
+      {state.routes.map((route, index) =&gt; {
+        const { options } = descriptors[route.key];
+        const label =
+          options.tabBarLabel !== undefined
+            ? options.tabBarLabel
+            : options.title !== undefined
+            ? options.title
+            : route.name;
+
+        const isFocused = state.index === index;
+
+        const onPress = () =&gt; {
+          const event = navigation.emit({
+            type: 'tabPress',
+            target: route.key,
+            canPreventDefault: true,
+          });
+
+          if (!isFocused &amp;&amp; !event.defaultPrevented) {
+            navigation.navigate(route.name);
+          }
+        };
+
+        return (
+          &lt;TouchableOpacity
+            key={index}
+            onPress={onPress}
+            style={[
+              styles.tabButton,
+              { backgroundColor: isFocused ? '#f4511e' : '#fff' },
+            ]}
+          &gt;
+            &lt;Text
+              style={[
+                styles.tabText,
+                { color: isFocused ? '#fff' : '#666' },
+              ]}
+            &gt;
+              {label}
+            &lt;/Text&gt;
+          &lt;/TouchableOpacity&gt;
+        );
+      })}
+    &lt;/View&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    height: 60,
+    backgroundColor: '#fff',
+    borderTopWidth: 1,
+    borderTopColor: '#ddd',
+  },
+  tabButton: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  tabText: {
+    fontSize: 12,
+    fontWeight: 'bold',
+  },
+});
+
+// Usage in navigator
+&lt;Tab.Navigator tabBar={(props) =&gt; &lt;CustomTabBar {...props} /&gt;}&gt;
+  {/* Your screens */}
+&lt;/Tab.Navigator&gt;
+</code></pre>
+<hr>
+<h2 id="drawer-navigation"><a class="header" href="#drawer-navigation"><strong>Drawer Navigation</strong></a></h2>
+<h3 id="basic-drawer-navigator"><a class="header" href="#basic-drawer-navigator"><strong>Basic Drawer Navigator</strong></a></h3>
+<pre><code class="language-javascript">import { createDrawerNavigator } from '@react-navigation/drawer';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+
+const Drawer = createDrawerNavigator();
+
+const DrawerNavigator = () =&gt; {
+  return (
+    &lt;Drawer.Navigator
+      screenOptions={{
+        drawerStyle: {
+          backgroundColor: '#fff',
+          width: 240,
+        },
+        drawerPosition: 'left',
+        drawerType: 'front',
+        drawerActiveTintColor: '#f4511e',
+        drawerInactiveTintColor: '#666',
+      }}
+    &gt;
+      &lt;Drawer.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          title: 'Home',
+          drawerIcon: ({ focused, size, color }) =&gt; (
+            &lt;Icon name="home" size={size} color={color} /&gt;
+          ),
+        }}
+      /&gt;
+      &lt;Drawer.Screen
+        name="Profile"
+        component={ProfileScreen}
+        options={{
+          title: 'Profile',
+          drawerIcon: ({ focused, size, color }) =&gt; (
+            &lt;Icon name="person" size={size} color={color} /&gt;
+          ),
+        }}
+      /&gt;
+      &lt;Drawer.Screen
+        name="Settings"
+        component={SettingsScreen}
+        options={{
+          title: 'Settings',
+          drawerIcon: ({ focused, size, color }) =&gt; (
+            &lt;Icon name="settings" size={size} color={color} /&gt;
+          ),
+        }}
+      /&gt;
+    &lt;/Drawer.Navigator&gt;
+  );
+};
+</code></pre>
+<h3 id="custom-drawer-content"><a class="header" href="#custom-drawer-content"><strong>Custom Drawer Content</strong></a></h3>
+<pre><code class="language-javascript">import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+
+const CustomDrawerContent = (props) =&gt; {
+  return (
+    &lt;View style={styles.container}&gt;
+      {/* Header */}
+      &lt;View style={styles.header}&gt;
+        &lt;Image
+          source={require('../assets/avatar.png')}
+          style={styles.avatar}
+        /&gt;
+        &lt;Text style={styles.userName}&gt;John Doe&lt;/Text&gt;
+        &lt;Text style={styles.userEmail}&gt;john.doe@example.com&lt;/Text&gt;
+      &lt;/View&gt;
+
+      {/* Menu Items */}
+      &lt;View style={styles.menuContainer}&gt;
+        &lt;TouchableOpacity
+          style={styles.menuItem}
+          onPress={() =&gt; props.navigation.navigate('Home')}
+        &gt;
+          &lt;Icon name="home" size={24} color="#666" /&gt;
+          &lt;Text style={styles.menuText}&gt;Home&lt;/Text&gt;
+        &lt;/TouchableOpacity&gt;
+
+        &lt;TouchableOpacity
+          style={styles.menuItem}
+          onPress={() =&gt; props.navigation.navigate('Profile')}
+        &gt;
+          &lt;Icon name="person" size={24} color="#666" /&gt;
+          &lt;Text style={styles.menuText}&gt;Profile&lt;/Text&gt;
+        &lt;/TouchableOpacity&gt;
+
+        &lt;TouchableOpacity
+          style={styles.menuItem}
+          onPress={() =&gt; props.navigation.navigate('Settings')}
+        &gt;
+          &lt;Icon name="settings" size={24} color="#666" /&gt;
+          &lt;Text style={styles.menuText}&gt;Settings&lt;/Text&gt;
+        &lt;/TouchableOpacity&gt;
+
+        &lt;View style={styles.divider} /&gt;
+
+        &lt;TouchableOpacity
+          style={styles.menuItem}
+          onPress={() =&gt; props.navigation.navigate('About')}
+        &gt;
+          &lt;Icon name="info" size={24} color="#666" /&gt;
+          &lt;Text style={styles.menuText}&gt;About&lt;/Text&gt;
+        &lt;/TouchableOpacity&gt;
+
+        &lt;TouchableOpacity
+          style={styles.menuItem}
+          onPress={() =&gt; props.navigation.navigate('Help')}
+        &gt;
+          &lt;Icon name="help" size={24} color="#666" /&gt;
+          &lt;Text style={styles.menuText}&gt;Help&lt;/Text&gt;
+        &lt;/TouchableOpacity&gt;
+      &lt;/View&gt;
+
+      {/* Footer */}
+      &lt;View style={styles.footer}&gt;
+        &lt;TouchableOpacity
+          style={styles.logoutButton}
+          onPress={() =&gt; handleLogout()}
+        &gt;
+          &lt;Icon name="logout" size={24} color="#f4511e" /&gt;
+          &lt;Text style={[styles.menuText, { color: '#f4511e' }]}&gt;Logout&lt;/Text&gt;
+        &lt;/TouchableOpacity&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  header: {
+    padding: 20,
+    backgroundColor: '#f4511e',
+    alignItems: 'center',
+  },
+  avatar: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    marginBottom: 10,
+  },
+  userName: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#fff',
+  },
+  userEmail: {
+    fontSize: 14,
+    color: '#fff',
+    opacity: 0.8,
+  },
+  menuContainer: {
+    flex: 1,
+    paddingTop: 20,
+  },
+  menuItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 15,
+    paddingHorizontal: 20,
+  },
+  menuText: {
+    marginLeft: 20,
+    fontSize: 16,
+    color: '#666',
+  },
+  divider: {
+    height: 1,
+    backgroundColor: '#eee',
+    marginVertical: 10,
+  },
+  footer: {
+    padding: 20,
+    borderTopWidth: 1,
+    borderTopColor: '#eee',
+  },
+  logoutButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+});
+
+// Usage in navigator
+&lt;Drawer.Navigator drawerContent={(props) =&gt; &lt;CustomDrawerContent {...props} /&gt;}&gt;
+  {/* Your screens */}
+&lt;/Drawer.Navigator&gt;
+</code></pre>
+<hr>
+<h2 id="nested-navigation"><a class="header" href="#nested-navigation"><strong>Nested Navigation</strong></a></h2>
+<h3 id="combining-navigators"><a class="header" href="#combining-navigators"><strong>Combining Navigators</strong></a></h3>
+<pre><code class="language-javascript">import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+
+const HomeTabNavigator = () =&gt; {
+  return (
+    &lt;Tab.Navigator&gt;
+      &lt;Tab.Screen name="Feed" component={FeedScreen} /&gt;
+      &lt;Tab.Screen name="Search" component={SearchScreen} /&gt;
+      &lt;Tab.Screen name="Notifications" component={NotificationsScreen} /&gt;
+    &lt;/Tab.Navigator&gt;
+  );
+};
+
+const AppNavigator = () =&gt; {
+  return (
+    &lt;Stack.Navigator&gt;
+      &lt;Stack.Screen 
+        name="Main" 
+        component={HomeTabNavigator}
+        options={{ headerShown: false }}
+      /&gt;
+      &lt;Stack.Screen name="Profile" component={ProfileScreen} /&gt;
+      &lt;Stack.Screen name="Post" component={PostScreen} /&gt;
+    &lt;/Stack.Navigator&gt;
+  );
+};
+</code></pre>
+<h3 id="navigation-between-nested-screens"><a class="header" href="#navigation-between-nested-screens"><strong>Navigation Between Nested Screens</strong></a></h3>
+<pre><code class="language-javascript">// In a tab screen
+const FeedScreen = ({ navigation }) =&gt; {
+  return (
+    &lt;View&gt;
+      &lt;Button
+        title="Go to Profile"
+        onPress={() =&gt; navigation.navigate('Profile')}
+      /&gt;
+      &lt;Button
+        title="Go to Post"
+        onPress={() =&gt; navigation.navigate('Post', { postId: 123 })}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+
+// Navigate from parent navigator
+const App = () =&gt; {
+  const navigation = useNavigation();
+  
+  return (
+    &lt;View&gt;
+      &lt;Button
+        title="Navigate to nested screen"
+        onPress={() =&gt; navigation.navigate('Main', { screen: 'Search' })}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<hr>
+<h2 id="advanced-navigation-patterns"><a class="header" href="#advanced-navigation-patterns"><strong>Advanced Navigation Patterns</strong></a></h2>
+<h3 id="modal-navigation"><a class="header" href="#modal-navigation"><strong>Modal Navigation</strong></a></h3>
+<pre><code class="language-javascript">const MainStackNavigator = () =&gt; {
+  return (
+    &lt;Stack.Navigator mode="modal"&gt;
+      &lt;Stack.Screen 
+        name="Main" 
+        component={TabNavigator}
+        options={{ headerShown: false }}
+      /&gt;
+      &lt;Stack.Screen 
+        name="Modal" 
+        component={ModalScreen}
+        options={{
+          headerShown: false,
+          presentation: 'modal',
+          cardStyle: { backgroundColor: 'rgba(0,0,0,0.5)' },
+        }}
+      /&gt;
+    &lt;/Stack.Navigator&gt;
+  );
+};
+</code></pre>
+<h3 id="authentication-flow"><a class="header" href="#authentication-flow"><strong>Authentication Flow</strong></a></h3>
+<pre><code class="language-javascript">import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+const AuthStack = createStackNavigator();
+const MainTab = createBottomTabNavigator();
+
+// Authentication screens
+const LoginScreen = ({ navigation }) =&gt; {
+  return (
+    &lt;View&gt;
+      &lt;Text&gt;Login Screen&lt;/Text&gt;
+      &lt;Button
+        title="Login"
+        onPress={() =&gt; navigation.replace('MainApp')}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+
+const RegisterScreen = ({ navigation }) =&gt; {
+  return (
+    &lt;View&gt;
+      &lt;Text&gt;Register Screen&lt;/Text&gt;
+      &lt;Button
+        title="Register"
+        onPress={() =&gt; navigation.replace('MainApp')}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+
+// Main app screens
+const HomeScreen = ({ navigation }) =&gt; {
+  return (
+    &lt;View&gt;
+      &lt;Text&gt;Home Screen&lt;/Text&gt;
+      &lt;Button
+        title="Logout"
+        onPress={() =&gt; navigation.replace('Auth')}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+
+// Auth navigator
+const AuthNavigator = () =&gt; {
+  return (
+    &lt;AuthStack.Navigator&gt;
+      &lt;AuthStack.Screen name="Login" component={LoginScreen} /&gt;
+      &lt;AuthStack.Screen name="Register" component={RegisterScreen} /&gt;
+    &lt;/AuthStack.Navigator&gt;
+  );
+};
+
+// Main app navigator
+const MainNavigator = () =&gt; {
+  return (
+    &lt;MainTab.Navigator&gt;
+      &lt;MainTab.Screen name="Home" component={HomeScreen} /&gt;
+      &lt;MainTab.Screen name="Profile" component={ProfileScreen} /&gt;
+    &lt;/MainTab.Navigator&gt;
+  );
+};
+
+// Root navigator
+const RootNavigator = () =&gt; {
+  const [user, setUser] = useState(null);
+
+  return (
+    &lt;NavigationContainer&gt;
+      {user ? &lt;MainNavigator /&gt; : &lt;AuthNavigator /&gt;}
+    &lt;/NavigationContainer&gt;
+  );
+};
+</code></pre>
+<hr>
+<h2 id="deep-linking"><a class="header" href="#deep-linking"><strong>Deep Linking</strong></a></h2>
+<h3 id="basic-deep-linking"><a class="header" href="#basic-deep-linking"><strong>Basic Deep Linking</strong></a></h3>
+<pre><code class="language-javascript">import { NavigationContainer, Linking } from '@react-navigation/native';
+
+const linking = {
+  prefixes: ['myapp://', 'https://myapp.com'],
+  config: {
+    screens: {
+      Home: 'home',
+      Profile: 'profile/:userId',
+      Post: 'post/:postId',
+      Settings: 'settings',
+    },
+  },
+};
+
+const App = () =&gt; {
+  return (
+    &lt;NavigationContainer linking={linking}&gt;
+      &lt;AppNavigator /&gt;
+    &lt;/NavigationContainer&gt;
+  );
+};
+</code></pre>
+<h3 id="handling-deep-links"><a class="header" href="#handling-deep-links"><strong>Handling Deep Links</strong></a></h3>
+<pre><code class="language-javascript">const PostScreen = ({ route }) =&gt; {
+  const { postId } = route.params;
+  
+  useEffect(() =&gt; {
+    // Fetch post data based on postId
+    fetchPost(postId);
+  }, [postId]);
+
+  return (
+    &lt;View&gt;
+      &lt;Text&gt;Post ID: {postId}&lt;/Text&gt;
+      {/* Post content */}
+    &lt;/View&gt;
+  );
+};
+
+// Test deep links
+const testDeepLink = () =&gt; {
+  Linking.openURL('myapp://post/123');
+};
+</code></pre>
+<hr>
+<h2 id="navigation-hooks-and-utilities"><a class="header" href="#navigation-hooks-and-utilities"><strong>Navigation Hooks and Utilities</strong></a></h2>
+<h3 id="common-navigation-hooks"><a class="header" href="#common-navigation-hooks"><strong>Common Navigation Hooks</strong></a></h3>
+<pre><code class="language-javascript">import { 
+  useNavigation, 
+  useRoute, 
+  useFocusEffect,
+  useIsFocused 
+} from '@react-navigation/native';
+
+const MyComponent = () =&gt; {
+  const navigation = useNavigation();
+  const route = useRoute();
+  const isFocused = useIsFocused();
+
+  // Run code when screen comes into focus
+  useFocusEffect(
+    React.useCallback(() =&gt; {
+      // Refresh data when screen is focused
+      refreshData();
+      
+      return () =&gt; {
+        // Cleanup when screen loses focus
+        cleanup();
+      };
+    }, [])
+  );
+
+  // Check if screen is focused
+  useEffect(() =&gt; {
+    if (isFocused) {
+      // Do something when screen is focused
+    }
+  }, [isFocused]);
+
+  return (
+    &lt;View&gt;
+      &lt;Button
+        title="Navigate"
+        onPress={() =&gt; navigation.navigate('Details')}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<h3 id="custom-navigation-hook"><a class="header" href="#custom-navigation-hook"><strong>Custom Navigation Hook</strong></a></h3>
+<pre><code class="language-javascript">import { useNavigation } from '@react-navigation/native';
+
+const useNavigationWithParams = () =&gt; {
+  const navigation = useNavigation();
+  const route = useRoute();
+
+  return {
+    ...navigation,
+    params: route.params,
+    navigateWithParams: (screen, params) =&gt; {
+      navigation.navigate(screen, params);
+    },
+    replaceWithParams: (screen, params) =&gt; {
+      navigation.replace(screen, params);
+    },
+    goBackWithData: (data) =&gt; {
+      navigation.goBack();
+      // Handle passing data back
+      route.params?.onGoBack?.(data);
+    },
+  };
+};
+
+// Usage
+const DetailsScreen = () =&gt; {
+  const { params, navigateWithParams, goBackWithData } = useNavigationWithParams();
+  
+  const handleSave = (data) =&gt; {
+    goBackWithData(data);
+  };
+  
+  return (
+    &lt;View&gt;
+      &lt;Text&gt;Details: {params.itemId}&lt;/Text&gt;
+      &lt;Button title="Save" onPress={() =&gt; handleSave({ saved: true })} /&gt;
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<hr>
+<h2 id="performance-optimization"><a class="header" href="#performance-optimization"><strong>Performance Optimization</strong></a></h2>
+<h3 id="lazy-loading-screens"><a class="header" href="#lazy-loading-screens"><strong>Lazy Loading Screens</strong></a></h3>
+<pre><code class="language-javascript">import { createStackNavigator } from '@react-navigation/stack';
+
+const Stack = createStackNavigator();
+
+const AppNavigator = () =&gt; {
+  return (
+    &lt;Stack.Navigator&gt;
+      &lt;Stack.Screen name="Home" component={HomeScreen} /&gt;
+      &lt;Stack.Screen 
+        name="Details" 
+        component={DetailsScreen}
+        lazy={true}
+        options={{ title: 'Details' }}
+      /&gt;
+      &lt;Stack.Screen 
+        name="Profile" 
+        component={ProfileScreen}
+        lazy={true}
+        options={{ title: 'Profile' }}
+      /&gt;
+    &lt;/Stack.Navigator&gt;
+  );
+};
+</code></pre>
+<h3 id="optimizing-tab-navigation"><a class="header" href="#optimizing-tab-navigation"><strong>Optimizing Tab Navigation</strong></a></h3>
+<pre><code class="language-javascript">&lt;Tab.Navigator
+  screenOptions={{
+    lazy: true, // Lazy load tab screens
+    unmountOnBlur: false, // Keep screens in memory
+  }}
+&gt;
+  &lt;Tab.Screen name="Home" component={HomeScreen} /&gt;
+  &lt;Tab.Screen name="Profile" component={ProfileScreen} /&gt;
+&lt;/Tab.Navigator&gt;
+</code></pre>
+<hr>
+<h2 id="real-use-case"><a class="header" href="#real-use-case"><strong>Real Use Case</strong></a></h2>
+<h3 id="e-commerce-app-navigation"><a class="header" href="#e-commerce-app-navigation"><strong>E-commerce App Navigation</strong></a></h3>
+<pre><code class="language-javascript">import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+
+const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+const Drawer = createDrawerNavigator();
+
+// Product stack
+const ProductStack = () =&gt; {
+  return (
+    &lt;Stack.Navigator&gt;
+      &lt;Stack.Screen 
+        name="ProductList" 
+        component={ProductListScreen}
+        options={{ title: 'Products' }}
+      /&gt;
+      &lt;Stack.Screen 
+        name="ProductDetails" 
+        component={ProductDetailsScreen}
+        options={{ title: 'Product Details' }}
+      /&gt;
+      &lt;Stack.Screen 
+        name="Reviews" 
+        component={ReviewsScreen}
+        options={{ title: 'Reviews' }}
+      /&gt;
+    &lt;/Stack.Navigator&gt;
+  );
+};
+
+// Main tab navigator
+const MainTabNavigator = () =&gt; {
+  return (
+    &lt;Tab.Navigator&gt;
+      &lt;Tab.Screen 
+        name="Products" 
+        component={ProductStack}
+        options={{ 
+          title: 'Shop',
+          tabBarIcon: ({ color, size }) =&gt; (
+            &lt;Icon name="shopping-bag" size={size} color={color} /&gt;
+          ),
+        }}
+      /&gt;
+      &lt;Tab.Screen 
+        name="Cart" 
+        component={CartScreen}
+        options={{ 
+          title: 'Cart',
+          tabBarBadge: cartItems.length &gt; 0 ? cartItems.length : null,
+        }}
+      /&gt;
+      &lt;Tab.Screen 
+        name="Orders" 
+        component={OrdersScreen}
+        options={{ title: 'Orders' }}
+      /&gt;
+      &lt;Tab.Screen 
+        name="Account" 
+        component={AccountScreen}
+        options={{ title: 'Account' }}
+      /&gt;
+    &lt;/Tab.Navigator&gt;
+  );
+};
+
+// Main drawer navigator
+const MainDrawerNavigator = () =&gt; {
+  return (
+    &lt;Drawer.Navigator
+      drawerContent={(props) =&gt; &lt;CustomDrawerContent {...props} /&gt;}
+    &gt;
+      &lt;Drawer.Screen 
+        name="Main" 
+        component={MainTabNavigator}
+        options={{ headerShown: false }}
+      /&gt;
+      &lt;Drawer.Screen 
+        name="Wishlist" 
+        component={WishlistScreen}
+        options={{ title: 'Wishlist' }}
+      /&gt;
+      &lt;Drawer.Screen 
+        name="Settings" 
+        component={SettingsScreen}
+        options={{ title: 'Settings' }}
+      /&gt;
+      &lt;Drawer.Screen 
+        name="Help" 
+        component={HelpScreen}
+        options={{ title: 'Help &amp; Support' }}
+      /&gt;
+    &lt;/Drawer.Navigator&gt;
+  );
+};
+
+// Root navigator with authentication
+const AppNavigator = () =&gt; {
+  const [user, setUser] = useState(null);
+
+  return (
+    &lt;NavigationContainer&gt;
+      {user ? (
+        &lt;MainDrawerNavigator /&gt;
+      ) : (
+        &lt;AuthNavigator /&gt;
+      )}
+    &lt;/NavigationContainer&gt;
+  );
+};
+</code></pre>
+<hr>
+<h2 id="pro-tip"><a class="header" href="#pro-tip"><strong>Pro Tip</strong></a></h2>
+<p><strong>Use navigation params sparingly and consider using a state management solution for complex data sharing between screens. For large datasets, pass IDs instead of full objects and fetch the data in the target screen. This improves performance and reduces memory usage.</strong></p>
+<pre><code class="language-javascript">// Bad: Passing large objects
+navigation.navigate('Details', { 
+  user: largeUserObject, // This can cause performance issues
+});
+
+// Good: Passing IDs and fetching data
+navigation.navigate('Details', { 
+  userId: user.id, // Much more efficient
+});
+
+// In DetailsScreen
+const DetailsScreen = ({ route }) =&gt; {
+  const { userId } = route.params;
+  const [user, setUser] = useState(null);
+  
+  useEffect(() =&gt; {
+    fetchUser(userId).then(setUser);
+  }, [userId]);
+  
+  // Render user data
+};
+</code></pre>
+<hr>
+<h2 id="exercise--mini-task"><a class="header" href="#exercise--mini-task"><strong>Exercise / Mini Task</strong></a></h2>
+<p><strong>Task</strong>: Create a complete navigation structure for a social media app with the following requirements:</p>
+<ol>
+<li><strong>Authentication Flow</strong>: Login and Register screens</li>
+<li><strong>Main App</strong>: Bottom tab navigation with Home, Search, Notifications, and Profile tabs</li>
+<li><strong>Nested Navigation</strong>: Each tab should have its own stack navigator</li>
+<li><strong>Drawer Navigation</strong>: Include additional screens like Settings, About, and Help</li>
+<li><strong>Deep Linking</strong>: Support deep links to user profiles and posts</li>
+<li><strong>Custom Components</strong>: Create custom tab bar and drawer content</li>
+</ol>
+<p><strong>Bonus</strong>:</p>
+<ul>
+<li>Implement lazy loading for all screens</li>
+<li>Add navigation animations</li>
+<li>Create a custom navigation hook</li>
+<li>Handle back button properly on Android</li>
+<li>Add navigation guards for protected routes</li>
+</ul>
+<hr>
+<p><em>Navigation is a crucial aspect of mobile app development. Master these concepts to create intuitive, performant, and user-friendly navigation experiences in your React Native applications.</em></p>
+
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "react-native/navigation.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>Frontend Development Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="Frontend Development Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Frontend Development Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>Frontend Development Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="fullstack/frontend.md">
-    <meta property="og:title" content="Frontend Development Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Frontend Development Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="fullstack/frontend.md">
-    <meta property="twitter:title" content="Frontend Development Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="Frontend Development Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="Frontend Development Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="fullstack/frontend.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "Frontend Development Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,98 +525,49 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    Frontend Development Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
-
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>Frontend Development Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;frontend-development-with-nextjs&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#frontend-development-with-nextjs&quot;&gt;Frontend Development with Next.js&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Next.js is a React framework that enables production-ready web applications with server-side rendering, static site generation, and optimized performance.&lt;/p&gt;
-&lt;h2 id&#x3D;&quot;-what-is-nextjs&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-what-is-nextjs&quot;&gt;🎯 What is Next.js?&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Next.js is a React framework that provides:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Server-Side Rendering (SSR)&lt;/strong&gt;: Improved SEO and performance&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Static Site Generation (SSG)&lt;/strong&gt;: Blazing-fast static sites&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;API Routes&lt;/strong&gt;: Backend functionality in your frontend app&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;File-based Routing&lt;/strong&gt;: Simple and intuitive routing&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Automatic Code Splitting&lt;/strong&gt;: Optimized bundle sizes&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Built-in CSS Support&lt;/strong&gt;: Styled-jsx, CSS Modules, and more&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id&#x3D;&quot;-why-nextjs&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-why-nextjs&quot;&gt;🚀 Why Next.js?&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;performance-benefits&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#performance-benefits&quot;&gt;Performance Benefits&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Faster Initial Load&lt;/strong&gt;: Server-rendered HTML&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Better SEO&lt;/strong&gt;: Search engines can crawl content easily&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Automatic Optimization&lt;/strong&gt;: Image optimization, code splitting&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Incremental Static Regeneration&lt;/strong&gt;: Update static content without rebuild&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id&#x3D;&quot;developer-experience&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#developer-experience&quot;&gt;Developer Experience&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Zero Configuration&lt;/strong&gt;: Start coding immediately&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Hot Reloading&lt;/strong&gt;: Instant feedback during development&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;TypeScript Support&lt;/strong&gt;: Built-in TypeScript integration&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Fast Refresh&lt;/strong&gt;: Component state preserved during reloads&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id&#x3D;&quot;-getting-started&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-getting-started&quot;&gt;🛠️ Getting Started&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;installation&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#installation&quot;&gt;Installation&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-bash&quot;&gt;# Create new Next.js app
+        <div id="content">
+            <main>
+                <h1 id="frontend-development-with-nextjs"><a class="header" href="#frontend-development-with-nextjs">Frontend Development with Next.js</a></h1>
+<p>Next.js is a React framework that enables production-ready web applications with server-side rendering, static site generation, and optimized performance.</p>
+<h2 id="-what-is-nextjs"><a class="header" href="#-what-is-nextjs">🎯 What is Next.js?</a></h2>
+<p>Next.js is a React framework that provides:</p>
+<ul>
+<li><strong>Server-Side Rendering (SSR)</strong>: Improved SEO and performance</li>
+<li><strong>Static Site Generation (SSG)</strong>: Blazing-fast static sites</li>
+<li><strong>API Routes</strong>: Backend functionality in your frontend app</li>
+<li><strong>File-based Routing</strong>: Simple and intuitive routing</li>
+<li><strong>Automatic Code Splitting</strong>: Optimized bundle sizes</li>
+<li><strong>Built-in CSS Support</strong>: Styled-jsx, CSS Modules, and more</li>
+</ul>
+<h2 id="-why-nextjs"><a class="header" href="#-why-nextjs">🚀 Why Next.js?</a></h2>
+<h3 id="performance-benefits"><a class="header" href="#performance-benefits">Performance Benefits</a></h3>
+<ul>
+<li><strong>Faster Initial Load</strong>: Server-rendered HTML</li>
+<li><strong>Better SEO</strong>: Search engines can crawl content easily</li>
+<li><strong>Automatic Optimization</strong>: Image optimization, code splitting</li>
+<li><strong>Incremental Static Regeneration</strong>: Update static content without rebuild</li>
+</ul>
+<h3 id="developer-experience"><a class="header" href="#developer-experience">Developer Experience</a></h3>
+<ul>
+<li><strong>Zero Configuration</strong>: Start coding immediately</li>
+<li><strong>Hot Reloading</strong>: Instant feedback during development</li>
+<li><strong>TypeScript Support</strong>: Built-in TypeScript integration</li>
+<li><strong>Fast Refresh</strong>: Component state preserved during reloads</li>
+</ul>
+<h2 id="-getting-started"><a class="header" href="#-getting-started">🛠️ Getting Started</a></h2>
+<h3 id="installation"><a class="header" href="#installation">Installation</a></h3>
+<pre><code class="language-bash"># Create new Next.js app
 npx create-next-app@latest my-app
 cd my-app
 
 # Start development server
 npm run dev
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;project-structure&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#project-structure&quot;&gt;Project Structure&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-text&quot;&gt;my-app/
+</code></pre>
+<h3 id="project-structure"><a class="header" href="#project-structure">Project Structure</a></h3>
+<pre><code class="language-text">my-app/
 ├── pages/              # Page components
 │   ├── _app.js         # App component (global styles, layout)
 │   ├── _document.js    # Document HTML structure
@@ -842,35 +578,35 @@ npm run dev
 ├── public/            # Static assets
 ├── utils/             # Utility functions
 └── lib/               # Library configurations
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-core-concepts&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-core-concepts&quot;&gt;📁 Core Concepts&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;file-based-routing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#file-based-routing&quot;&gt;File-based Routing&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Every file in the &lt;code&gt;pages/&lt;/code&gt; directory becomes a route:&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// pages/index.js -&amp;gt; /
-// pages/about.js -&amp;gt; /about
-// pages/blog/[slug].js -&amp;gt; /blog/:slug
-// pages/posts/[id]/edit.js -&amp;gt; /posts/:id/edit
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;dynamic-routes&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#dynamic-routes&quot;&gt;Dynamic Routes&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// pages/posts/[id].js
-import { useRouter } from &#x27;next/router&#x27;;
+</code></pre>
+<h2 id="-core-concepts"><a class="header" href="#-core-concepts">📁 Core Concepts</a></h2>
+<h3 id="file-based-routing"><a class="header" href="#file-based-routing">File-based Routing</a></h3>
+<p>Every file in the <code>pages/</code> directory becomes a route:</p>
+<pre><code class="language-javascript">// pages/index.js -&gt; /
+// pages/about.js -&gt; /about
+// pages/blog/[slug].js -&gt; /blog/:slug
+// pages/posts/[id]/edit.js -&gt; /posts/:id/edit
+</code></pre>
+<h3 id="dynamic-routes"><a class="header" href="#dynamic-routes">Dynamic Routes</a></h3>
+<pre><code class="language-javascript">// pages/posts/[id].js
+import { useRouter } from 'next/router';
 
 function Post({ post }) {
-  const router &#x3D; useRouter();
-  const { id } &#x3D; router.query;
+  const router = useRouter();
+  const { id } = router.query;
 
   return (
-    &amp;lt;div&amp;gt;
-      &amp;lt;h1&amp;gt;{post.title}&amp;lt;/h1&amp;gt;
-      &amp;lt;p&amp;gt;{post.content}&amp;lt;/p&amp;gt;
-    &amp;lt;/div&amp;gt;
+    &lt;div&gt;
+      &lt;h1&gt;{post.title}&lt;/h1&gt;
+      &lt;p&gt;{post.content}&lt;/p&gt;
+    &lt;/div&gt;
   );
 }
 
 export async function getStaticPaths() {
   // Return all possible post IDs
-  const posts &#x3D; await getPosts();
-  const paths &#x3D; posts.map(post &#x3D;&amp;gt; ({
+  const posts = await getPosts();
+  const paths = posts.map(post =&gt; ({
     params: { id: post.id.toString() }
   }));
 
@@ -882,7 +618,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   // Fetch data for specific post
-  const post &#x3D; await getPost(params.id);
+  const post = await getPost(params.id);
   
   return {
     props: { post }
@@ -890,29 +626,29 @@ export async function getStaticProps({ params }) {
 }
 
 export default Post;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;api-routes&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#api-routes&quot;&gt;API Routes&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Create backend endpoints in your frontend app:&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// pages/api/users.js
+</code></pre>
+<h3 id="api-routes"><a class="header" href="#api-routes">API Routes</a></h3>
+<p>Create backend endpoints in your frontend app:</p>
+<pre><code class="language-javascript">// pages/api/users.js
 export default async function handler(req, res) {
-  if (req.method &#x3D;&#x3D;&#x3D; &#x27;GET&#x27;) {
+  if (req.method === 'GET') {
     // Handle GET request
-    const users &#x3D; await getUsers();
+    const users = await getUsers();
     res.status(200).json(users);
-  } else if (req.method &#x3D;&#x3D;&#x3D; &#x27;POST&#x27;) {
+  } else if (req.method === 'POST') {
     // Handle POST request
-    const user &#x3D; await createUser(req.body);
+    const user = await createUser(req.body);
     res.status(201).json(user);
   } else {
     // Handle other methods
-    res.setHeader(&#x27;Allow&#x27;, [&#x27;GET&#x27;, &#x27;POST&#x27;]);
-    res.status(405).end(&#x60;Method ${req.method} Not Allowed&#x60;);
+    res.setHeader('Allow', ['GET', 'POST']);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-styling-in-nextjs&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-styling-in-nextjs&quot;&gt;🎨 Styling in Next.js&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;css-modules&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#css-modules&quot;&gt;CSS Modules&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-css&quot;&gt;/* styles/Button.module.css */
+</code></pre>
+<h2 id="-styling-in-nextjs"><a class="header" href="#-styling-in-nextjs">🎨 Styling in Next.js</a></h2>
+<h3 id="css-modules"><a class="header" href="#css-modules">CSS Modules</a></h3>
+<pre><code class="language-css">/* styles/Button.module.css */
 .button {
   background: #0070f3;
   color: white;
@@ -925,29 +661,29 @@ export default async function handler(req, res) {
 .button:hover {
   background: #0051cc;
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// components/Button.js
-import styles from &#x27;../styles/Button.module.css&#x27;;
+</code></pre>
+<pre><code class="language-javascript">// components/Button.js
+import styles from '../styles/Button.module.css';
 
 function Button({ children, onClick }) {
   return (
-    &amp;lt;button className&#x3D;{styles.button} onClick&#x3D;{onClick}&amp;gt;
+    &lt;button className={styles.button} onClick={onClick}&gt;
       {children}
-    &amp;lt;/button&amp;gt;
+    &lt;/button&gt;
   );
 }
 
 export default Button;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;styled-jsx&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#styled-jsx&quot;&gt;Styled-jsx&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// components/Card.js
+</code></pre>
+<h3 id="styled-jsx"><a class="header" href="#styled-jsx">Styled-jsx</a></h3>
+<pre><code class="language-javascript">// components/Card.js
 function Card({ title, content }) {
   return (
-    &amp;lt;div className&#x3D;&quot;card&quot;&amp;gt;
-      &amp;lt;h2&amp;gt;{title}&amp;lt;/h2&amp;gt;
-      &amp;lt;p&amp;gt;{content}&amp;lt;/p&amp;gt;
+    &lt;div className="card"&gt;
+      &lt;h2&gt;{title}&lt;/h2&gt;
+      &lt;p&gt;{content}&lt;/p&gt;
       
-      &amp;lt;style jsx&amp;gt;{&#x60;
+      &lt;style jsx&gt;{`
         .card {
           background: white;
           border-radius: 8px;
@@ -959,19 +695,19 @@ function Card({ title, content }) {
           color: #333;
           margin-bottom: 12px;
         }
-      &#x60;}&amp;lt;/style&amp;gt;
-    &amp;lt;/div&amp;gt;
+      `}&lt;/style&gt;
+    &lt;/div&gt;
   );
 }
 
 export default Card;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-data-fetching&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-data-fetching&quot;&gt;🔄 Data Fetching&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;getstaticprops-ssg&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#getstaticprops-ssg&quot;&gt;getStaticProps (SSG)&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// pages/blog.js
+</code></pre>
+<h2 id="-data-fetching"><a class="header" href="#-data-fetching">🔄 Data Fetching</a></h2>
+<h3 id="getstaticprops-ssg"><a class="header" href="#getstaticprops-ssg">getStaticProps (SSG)</a></h3>
+<pre><code class="language-javascript">// pages/blog.js
 export async function getStaticProps() {
   // Fetch data at build time
-  const posts &#x3D; await getBlogPosts();
+  const posts = await getBlogPosts();
   
   return {
     props: {
@@ -983,36 +719,36 @@ export async function getStaticProps() {
 
 function Blog({ posts }) {
   return (
-    &amp;lt;div&amp;gt;
-      &amp;lt;h1&amp;gt;Blog Posts&amp;lt;/h1&amp;gt;
-      {posts.map(post &#x3D;&amp;gt; (
-        &amp;lt;article key&#x3D;{post.id}&amp;gt;
-          &amp;lt;h2&amp;gt;{post.title}&amp;lt;/h2&amp;gt;
-          &amp;lt;p&amp;gt;{post.excerpt}&amp;lt;/p&amp;gt;
-        &amp;lt;/article&amp;gt;
+    &lt;div&gt;
+      &lt;h1&gt;Blog Posts&lt;/h1&gt;
+      {posts.map(post =&gt; (
+        &lt;article key={post.id}&gt;
+          &lt;h2&gt;{post.title}&lt;/h2&gt;
+          &lt;p&gt;{post.excerpt}&lt;/p&gt;
+        &lt;/article&gt;
       ))}
-    &amp;lt;/div&amp;gt;
+    &lt;/div&gt;
   );
 }
 
 export default Blog;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;getserversideprops-ssr&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#getserversideprops-ssr&quot;&gt;getServerSideProps (SSR)&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// pages/dashboard.js
+</code></pre>
+<h3 id="getserversideprops-ssr"><a class="header" href="#getserversideprops-ssr">getServerSideProps (SSR)</a></h3>
+<pre><code class="language-javascript">// pages/dashboard.js
 export async function getServerSideProps(context) {
   // Fetch data on each request
-  const session &#x3D; await getSession(context);
+  const session = await getSession(context);
   
   if (!session) {
     return {
       redirect: {
-        destination: &#x27;/login&#x27;,
+        destination: '/login',
         permanent: false
       }
     };
   }
   
-  const userData &#x3D; await getUserData(session.user.id);
+  const userData = await getUserData(session.user.id);
   
   return {
     props: {
@@ -1020,35 +756,35 @@ export async function getServerSideProps(context) {
     }
   };
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-advanced-features&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-advanced-features&quot;&gt;🎯 Advanced Features&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;image-optimization&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#image-optimization&quot;&gt;Image Optimization&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;import Image from &#x27;next/image&#x27;;
+</code></pre>
+<h2 id="-advanced-features"><a class="header" href="#-advanced-features">🎯 Advanced Features</a></h2>
+<h3 id="image-optimization"><a class="header" href="#image-optimization">Image Optimization</a></h3>
+<pre><code class="language-javascript">import Image from 'next/image';
 
 function ProductCard({ product }) {
   return (
-    &amp;lt;div&amp;gt;
-      &amp;lt;Image
-        src&#x3D;{product.image}
-        alt&#x3D;{product.name}
-        width&#x3D;{300}
-        height&#x3D;{200}
-        priority&#x3D;{product.featured}
-        placeholder&#x3D;&quot;blur&quot;
-        blurDataURL&#x3D;&quot;data:image/jpeg;base64,...&quot;
-      /&amp;gt;
-      &amp;lt;h3&amp;gt;{product.name}&amp;lt;/h3&amp;gt;
-      &amp;lt;p&amp;gt;${product.price}&amp;lt;/p&amp;gt;
-    &amp;lt;/div&amp;gt;
+    &lt;div&gt;
+      &lt;Image
+        src={product.image}
+        alt={product.name}
+        width={300}
+        height={200}
+        priority={product.featured}
+        placeholder="blur"
+        blurDataURL="data:image/jpeg;base64,..."
+      /&gt;
+      &lt;h3&gt;{product.name}&lt;/h3&gt;
+      &lt;p&gt;${product.price}&lt;/p&gt;
+    &lt;/div&gt;
   );
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;authentication-with-nextauth&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#authentication-with-nextauth&quot;&gt;Authentication with NextAuth&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-bash&quot;&gt;npm install next-auth
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// pages/api/auth/[...nextauth].js
-import NextAuth from &#x27;next-auth&#x27;;
-import GoogleProvider from &#x27;next-auth/providers/google&#x27;;
+</code></pre>
+<h3 id="authentication-with-nextauth"><a class="header" href="#authentication-with-nextauth">Authentication with NextAuth</a></h3>
+<pre><code class="language-bash">npm install next-auth
+</code></pre>
+<pre><code class="language-javascript">// pages/api/auth/[...nextauth].js
+import NextAuth from 'next-auth';
+import GoogleProvider from 'next-auth/providers/google';
 
 export default NextAuth({
   providers: [
@@ -1058,168 +794,119 @@ export default NextAuth({
     }),
   ],
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-testing-nextjs-applications&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-testing-nextjs-applications&quot;&gt;🧪 Testing Next.js Applications&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;unit-testing-with-jest&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#unit-testing-with-jest&quot;&gt;Unit Testing with Jest&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// __tests__/components/Button.test.js
-import { render, screen, fireEvent } from &#x27;@testing-library/react&#x27;;
-import Button from &#x27;../components/Button&#x27;;
+</code></pre>
+<h2 id="-testing-nextjs-applications"><a class="header" href="#-testing-nextjs-applications">🧪 Testing Next.js Applications</a></h2>
+<h3 id="unit-testing-with-jest"><a class="header" href="#unit-testing-with-jest">Unit Testing with Jest</a></h3>
+<pre><code class="language-javascript">// __tests__/components/Button.test.js
+import { render, screen, fireEvent } from '@testing-library/react';
+import Button from '../components/Button';
 
-describe(&#x27;Button Component&#x27;, () &#x3D;&amp;gt; {
-  it(&#x27;renders button with text&#x27;, () &#x3D;&amp;gt; {
-    render(&amp;lt;Button&amp;gt;Click me&amp;lt;/Button&amp;gt;);
-    expect(screen.getByText(&#x27;Click me&#x27;)).toBeInTheDocument();
+describe('Button Component', () =&gt; {
+  it('renders button with text', () =&gt; {
+    render(&lt;Button&gt;Click me&lt;/Button&gt;);
+    expect(screen.getByText('Click me')).toBeInTheDocument();
   });
 
-  it(&#x27;calls onClick when clicked&#x27;, () &#x3D;&amp;gt; {
-    const handleClick &#x3D; jest.fn();
-    render(&amp;lt;Button onClick&#x3D;{handleClick}&amp;gt;Click me&amp;lt;/Button&amp;gt;);
+  it('calls onClick when clicked', () =&gt; {
+    const handleClick = jest.fn();
+    render(&lt;Button onClick={handleClick}&gt;Click me&lt;/Button&gt;);
     
-    fireEvent.click(screen.getByText(&#x27;Click me&#x27;));
+    fireEvent.click(screen.getByText('Click me'));
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-performance-optimization&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-performance-optimization&quot;&gt;🚀 Performance Optimization&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;code-splitting&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#code-splitting&quot;&gt;Code Splitting&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;import dynamic from &#x27;next/dynamic&#x27;;
+</code></pre>
+<h2 id="-performance-optimization"><a class="header" href="#-performance-optimization">🚀 Performance Optimization</a></h2>
+<h3 id="code-splitting"><a class="header" href="#code-splitting">Code Splitting</a></h3>
+<pre><code class="language-javascript">import dynamic from 'next/dynamic';
 
 // Dynamically import heavy components
-const HeavyComponent &#x3D; dynamic(() &#x3D;&amp;gt; import(&#x27;../components/HeavyComponent&#x27;), {
-  loading: () &#x3D;&amp;gt; &amp;lt;p&amp;gt;Loading...&amp;lt;/p&amp;gt;,
+const HeavyComponent = dynamic(() =&gt; import('../components/HeavyComponent'), {
+  loading: () =&gt; &lt;p&gt;Loading...&lt;/p&gt;,
   ssr: false // Disable server-side rendering if needed
 });
 
 function HomePage() {
   return (
-    &amp;lt;div&amp;gt;
-      &amp;lt;h1&amp;gt;Welcome&amp;lt;/h1&amp;gt;
-      &amp;lt;HeavyComponent /&amp;gt;
-    &amp;lt;/div&amp;gt;
+    &lt;div&gt;
+      &lt;h1&gt;Welcome&lt;/h1&gt;
+      &lt;HeavyComponent /&gt;
+    &lt;/div&gt;
   );
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-best-practices&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-best-practices&quot;&gt;🔧 Best Practices&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;component-structure&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#component-structure&quot;&gt;Component Structure&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// components/ProductCard.js
-import Image from &#x27;next/image&#x27;;
-import styles from &#x27;./ProductCard.module.css&#x27;;
+</code></pre>
+<h2 id="-best-practices"><a class="header" href="#-best-practices">🔧 Best Practices</a></h2>
+<h3 id="component-structure"><a class="header" href="#component-structure">Component Structure</a></h3>
+<pre><code class="language-javascript">// components/ProductCard.js
+import Image from 'next/image';
+import styles from './ProductCard.module.css';
 
 function ProductCard({ product, onAddToCart }) {
   return (
-    &amp;lt;article className&#x3D;{styles.card}&amp;gt;
-      &amp;lt;div className&#x3D;{styles.imageContainer}&amp;gt;
-        &amp;lt;Image
-          src&#x3D;{product.image}
-          alt&#x3D;{product.name}
-          width&#x3D;{200}
-          height&#x3D;{150}
-          className&#x3D;{styles.image}
-        /&amp;gt;
-      &amp;lt;/div&amp;gt;
+    &lt;article className={styles.card}&gt;
+      &lt;div className={styles.imageContainer}&gt;
+        &lt;Image
+          src={product.image}
+          alt={product.name}
+          width={200}
+          height={150}
+          className={styles.image}
+        /&gt;
+      &lt;/div&gt;
       
-      &amp;lt;div className&#x3D;{styles.content}&amp;gt;
-        &amp;lt;h3 className&#x3D;{styles.title}&amp;gt;{product.name}&amp;lt;/h3&amp;gt;
-        &amp;lt;p className&#x3D;{styles.description}&amp;gt;{product.description}&amp;lt;/p&amp;gt;
-        &amp;lt;div className&#x3D;{styles.footer}&amp;gt;
-          &amp;lt;span className&#x3D;{styles.price}&amp;gt;${product.price}&amp;lt;/span&amp;gt;
-          &amp;lt;button 
-            className&#x3D;{styles.button}
-            onClick&#x3D;{() &#x3D;&amp;gt; onAddToCart(product)}
-          &amp;gt;
+      &lt;div className={styles.content}&gt;
+        &lt;h3 className={styles.title}&gt;{product.name}&lt;/h3&gt;
+        &lt;p className={styles.description}&gt;{product.description}&lt;/p&gt;
+        &lt;div className={styles.footer}&gt;
+          &lt;span className={styles.price}&gt;${product.price}&lt;/span&gt;
+          &lt;button 
+            className={styles.button}
+            onClick={() =&gt; onAddToCart(product)}
+          &gt;
             Add to Cart
-          &amp;lt;/button&amp;gt;
-        &amp;lt;/div&amp;gt;
-      &amp;lt;/div&amp;gt;
-    &amp;lt;/article&amp;gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
   );
 }
 
 export default ProductCard;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;error-handling&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#error-handling&quot;&gt;Error Handling&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// pages/_error.js
+</code></pre>
+<h3 id="error-handling"><a class="header" href="#error-handling">Error Handling</a></h3>
+<pre><code class="language-javascript">// pages/_error.js
 function Error({ statusCode }) {
   return (
-    &amp;lt;div className&#x3D;&quot;min-h-screen flex items-center justify-center&quot;&amp;gt;
-      &amp;lt;div className&#x3D;&quot;text-center&quot;&amp;gt;
-        &amp;lt;h1 className&#x3D;&quot;text-4xl font-bold text-gray-900&quot;&amp;gt;
+    &lt;div className="min-h-screen flex items-center justify-center"&gt;
+      &lt;div className="text-center"&gt;
+        &lt;h1 className="text-4xl font-bold text-gray-900"&gt;
           {statusCode
-            ? &#x60;An error ${statusCode} occurred on server&#x60;
-            : &#x27;An error occurred on client&#x27;}
-        &amp;lt;/h1&amp;gt;
-        &amp;lt;p className&#x3D;&quot;mt-4 text-gray-600&quot;&amp;gt;
+            ? `An error ${statusCode} occurred on server`
+            : 'An error occurred on client'}
+        &lt;/h1&gt;
+        &lt;p className="mt-4 text-gray-600"&gt;
           Please try again later or contact support.
-        &amp;lt;/p&amp;gt;
-      &amp;lt;/div&amp;gt;
-    &amp;lt;/div&amp;gt;
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
   );
 }
 
-Error.getInitialProps &#x3D; ({ res, err }) &#x3D;&amp;gt; {
-  const statusCode &#x3D; res ? res.statusCode : err ? err.statusCode : 404;
+Error.getInitialProps = ({ res, err }) =&gt; {
+  const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
   return { statusCode };
 };
 
 export default Error;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Next Up&lt;/strong&gt;: Learn about backend development with Node.js! 🚀&lt;/p&gt;
+</code></pre>
+<hr>
+<p><strong>Next Up</strong>: Learn about backend development with Node.js! 🚀</p>
 
-                        </div>
-                        
-                    </article>
-                </div>
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "fullstack/frontend.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

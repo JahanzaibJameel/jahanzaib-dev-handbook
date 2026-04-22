@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>Authentication &amp; Authorization - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="Authentication &amp; Authorization - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Authentication &amp; Authorization - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>Authentication &amp; Authorization - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="fullstack/auth.md">
-    <meta property="og:title" content="Authentication &amp; Authorization - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Authentication &amp; Authorization - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="fullstack/auth.md">
-    <meta property="twitter:title" content="Authentication &amp; Authorization - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="Authentication &amp; Authorization - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="Authentication &amp; Authorization - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="fullstack/auth.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "Authentication &amp; Authorization - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,81 +525,32 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    Authentication &amp; Authorization - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
-
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>Authentication &amp; Authorization - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;authentication--authorization&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#authentication--authorization&quot;&gt;Authentication &amp;amp; Authorization&lt;/a&gt;&lt;/h1&gt;
-&lt;h2 id&#x3D;&quot;what-is-authentication--authorization&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#what-is-authentication--authorization&quot;&gt;What is Authentication &amp;amp; Authorization?&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Authentication is the process of verifying who a user is, while authorization determines what that user is allowed to do. Together, they form the foundation of secure application access control.&lt;/p&gt;
-&lt;h2 id&#x3D;&quot;example&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#example&quot;&gt;Example&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;jwt-authentication-system&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#jwt-authentication-system&quot;&gt;JWT Authentication System&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// utils/jwt.js
-const jwt &#x3D; require(&#x27;jsonwebtoken&#x27;);
-const bcrypt &#x3D; require(&#x27;bcryptjs&#x27;);
+        <div id="content">
+            <main>
+                <h1 id="authentication--authorization"><a class="header" href="#authentication--authorization">Authentication &amp; Authorization</a></h1>
+<h2 id="what-is-authentication--authorization"><a class="header" href="#what-is-authentication--authorization">What is Authentication &amp; Authorization?</a></h2>
+<p>Authentication is the process of verifying who a user is, while authorization determines what that user is allowed to do. Together, they form the foundation of secure application access control.</p>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<h3 id="jwt-authentication-system"><a class="header" href="#jwt-authentication-system">JWT Authentication System</a></h3>
+<pre><code class="language-javascript">// utils/jwt.js
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
 
 class AuthManager {
   constructor() {
-    this.jwtSecret &#x3D; process.env.JWT_SECRET;
-    this.jwtExpire &#x3D; process.env.JWT_EXPIRE || &#x27;30d&#x27;;
+    this.jwtSecret = process.env.JWT_SECRET;
+    this.jwtExpire = process.env.JWT_EXPIRE || '30d';
   }
 
   // Generate JWT token
   generateToken(payload) {
     return jwt.sign(payload, this.jwtSecret, {
       expiresIn: this.jwtExpire,
-      issuer: &#x27;your-app-name&#x27;,
-      audience: &#x27;your-app-users&#x27;
+      issuer: 'your-app-name',
+      audience: 'your-app-users'
     });
   }
 
@@ -823,13 +559,13 @@ class AuthManager {
     try {
       return jwt.verify(token, this.jwtSecret);
     } catch (error) {
-      throw new Error(&#x27;Invalid token&#x27;);
+      throw new Error('Invalid token');
     }
   }
 
   // Hash password
   async hashPassword(password) {
-    const salt &#x3D; await bcrypt.genSalt(12);
+    const salt = await bcrypt.genSalt(12);
     return bcrypt.hash(password, salt);
   }
 
@@ -840,46 +576,46 @@ class AuthManager {
 
   // Generate refresh token
   generateRefreshToken() {
-    return require(&#x27;crypto&#x27;).randomBytes(64).toString(&#x27;hex&#x27;);
+    return require('crypto').randomBytes(64).toString('hex');
   }
 }
 
 // middleware/auth.js
-const authManager &#x3D; new AuthManager();
+const authManager = new AuthManager();
 
 // Authentication middleware
-const authenticate &#x3D; async (req, res, next) &#x3D;&amp;gt; {
+const authenticate = async (req, res, next) =&gt; {
   try {
-    const token &#x3D; req.header(&#x27;Authorization&#x27;)?.replace(&#x27;Bearer &#x27;, &#x27;&#x27;);
+    const token = req.header('Authorization')?.replace('Bearer ', '');
     
     if (!token) {
       return res.status(401).json({ 
-        error: &#x27;Access denied. No token provided.&#x27; 
+        error: 'Access denied. No token provided.' 
       });
     }
 
-    const decoded &#x3D; authManager.verifyToken(token);
-    req.user &#x3D; decoded;
+    const decoded = authManager.verifyToken(token);
+    req.user = decoded;
     next();
   } catch (error) {
     res.status(401).json({ 
-      error: &#x27;Invalid token.&#x27; 
+      error: 'Invalid token.' 
     });
   }
 };
 
 // Authorization middleware
-const authorize &#x3D; (...roles) &#x3D;&amp;gt; {
-  return (req, res, next) &#x3D;&amp;gt; {
+const authorize = (...roles) =&gt; {
+  return (req, res, next) =&gt; {
     if (!req.user) {
       return res.status(401).json({ 
-        error: &#x27;Access denied. User not authenticated.&#x27; 
+        error: 'Access denied. User not authenticated.' 
       });
     }
 
-    if (roles.length &amp;amp;&amp;amp; !roles.includes(req.user.role)) {
+    if (roles.length &amp;&amp; !roles.includes(req.user.role)) {
       return res.status(403).json({ 
-        error: &#x27;Access denied. Insufficient permissions.&#x27; 
+        error: 'Access denied. Insufficient permissions.' 
       });
     }
 
@@ -888,31 +624,31 @@ const authorize &#x3D; (...roles) &#x3D;&amp;gt; {
 };
 
 // Rate limiting middleware
-const rateLimit &#x3D; require(&#x27;express-rate-limit&#x27;);
+const rateLimit = require('express-rate-limit');
 
-const loginLimiter &#x3D; rateLimit({
+const loginLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 5, // Limit each IP to 5 login attempts
   message: {
-    error: &#x27;Too many login attempts. Please try again later.&#x27;
+    error: 'Too many login attempts. Please try again later.'
   },
   standardHeaders: true,
   legacyHeaders: false,
 });
 
-module.exports &#x3D; {
+module.exports = {
   authenticate,
   authorize,
   loginLimiter,
   authManager
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;user-model-with-authentication&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#user-model-with-authentication&quot;&gt;User Model with Authentication&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// models/User.js
-const mongoose &#x3D; require(&#x27;mongoose&#x27;);
-const authManager &#x3D; require(&#x27;../utils/jwt&#x27;);
+</code></pre>
+<h3 id="user-model-with-authentication"><a class="header" href="#user-model-with-authentication">User Model with Authentication</a></h3>
+<pre><code class="language-javascript">// models/User.js
+const mongoose = require('mongoose');
+const authManager = require('../utils/jwt');
 
-const userSchema &#x3D; new mongoose.Schema({
+const userSchema = new mongoose.Schema({
   // Basic info
   username: {
     type: String,
@@ -927,13 +663,13 @@ const userSchema &#x3D; new mongoose.Schema({
     required: true,
     unique: true,
     lowercase: true,
-    match: [/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/, &#x27;Please enter a valid email&#x27;]
+    match: [/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/, 'Please enter a valid email']
   },
   password: {
     type: String,
     required: true,
     minlength: 6,
-    select: false // Don&#x27;t include password in queries by default
+    select: false // Don't include password in queries by default
   },
   
   // Profile
@@ -947,8 +683,8 @@ const userSchema &#x3D; new mongoose.Schema({
   // Account status
   role: {
     type: String,
-    enum: [&#x27;user&#x27;, &#x27;admin&#x27;, &#x27;moderator&#x27;],
-    default: &#x27;user&#x27;
+    enum: ['user', 'admin', 'moderator'],
+    default: 'user'
   },
   isActive: {
     type: Boolean,
@@ -985,11 +721,11 @@ const userSchema &#x3D; new mongoose.Schema({
 });
 
 // Password hashing middleware
-userSchema.pre(&#x27;save&#x27;, async function(next) {
-  if (!this.isModified(&#x27;password&#x27;)) return next();
+userSchema.pre('save', async function(next) {
+  if (!this.isModified('password')) return next();
   
   try {
-    this.password &#x3D; await authManager.hashPassword(this.password);
+    this.password = await authManager.hashPassword(this.password);
     next();
   } catch (error) {
     next(error);
@@ -997,12 +733,12 @@ userSchema.pre(&#x27;save&#x27;, async function(next) {
 });
 
 // Instance methods
-userSchema.methods.comparePassword &#x3D; async function(candidatePassword) {
+userSchema.methods.comparePassword = async function(candidatePassword) {
   return authManager.comparePassword(candidatePassword, this.password);
 };
 
-userSchema.methods.generateAuthToken &#x3D; function() {
-  const payload &#x3D; {
+userSchema.methods.generateAuthToken = function() {
+  const payload = {
     id: this._id,
     username: this.username,
     email: this.email,
@@ -1012,8 +748,8 @@ userSchema.methods.generateAuthToken &#x3D; function() {
   return authManager.generateToken(payload);
 };
 
-userSchema.methods.addRefreshToken &#x3D; function(token, userAgent, ipAddress) {
-  const refreshToken &#x3D; {
+userSchema.methods.addRefreshToken = function(token, userAgent, ipAddress) {
+  const refreshToken = {
     token,
     userAgent,
     ipAddress,
@@ -1023,99 +759,99 @@ userSchema.methods.addRefreshToken &#x3D; function(token, userAgent, ipAddress) 
   this.refreshTokens.push(refreshToken);
   
   // Remove expired tokens
-  this.refreshTokens &#x3D; this.refreshTokens.filter(rt &#x3D;&amp;gt; rt.expiresAt &amp;gt; new Date());
+  this.refreshTokens = this.refreshTokens.filter(rt =&gt; rt.expiresAt &gt; new Date());
   
   // Limit to 5 active refresh tokens
-  if (this.refreshTokens.length &amp;gt; 5) {
-    this.refreshTokens &#x3D; this.refreshTokens.slice(-5);
+  if (this.refreshTokens.length &gt; 5) {
+    this.refreshTokens = this.refreshTokens.slice(-5);
   }
   
   return this.save();
 };
 
-userSchema.methods.removeRefreshToken &#x3D; function(token) {
-  this.refreshTokens &#x3D; this.refreshTokens.filter(rt &#x3D;&amp;gt; rt.token !&#x3D;&#x3D; token);
+userSchema.methods.removeRefreshToken = function(token) {
+  this.refreshTokens = this.refreshTokens.filter(rt =&gt; rt.token !== token);
   return this.save();
 };
 
-userSchema.methods.clearRefreshTokens &#x3D; function() {
-  this.refreshTokens &#x3D; [];
+userSchema.methods.clearRefreshTokens = function() {
+  this.refreshTokens = [];
   return this.save();
 };
 
 // Virtual for account lock status
-userSchema.virtual(&#x27;isLocked&#x27;).get(function() {
-  return !!(this.lockUntil &amp;amp;&amp;amp; this.lockUntil &amp;gt; Date.now());
+userSchema.virtual('isLocked').get(function() {
+  return !!(this.lockUntil &amp;&amp; this.lockUntil &gt; Date.now());
 });
 
 // Static methods
-userSchema.statics.findByCredentials &#x3D; async function(email, password) {
-  const user &#x3D; await this.findOne({ email }).select(&#x27;+password&#x27;);
+userSchema.statics.findByCredentials = async function(email, password) {
+  const user = await this.findOne({ email }).select('+password');
   
   if (!user) {
-    throw new Error(&#x27;Invalid login credentials&#x27;);
+    throw new Error('Invalid login credentials');
   }
   
   if (user.isLocked) {
-    throw new Error(&#x27;Account temporarily locked due to failed login attempts&#x27;);
+    throw new Error('Account temporarily locked due to failed login attempts');
   }
   
-  const isMatch &#x3D; await user.comparePassword(password);
+  const isMatch = await user.comparePassword(password);
   
   if (!isMatch) {
     await this.handleFailedLogin(user);
-    throw new Error(&#x27;Invalid login credentials&#x27;);
+    throw new Error('Invalid login credentials');
   }
   
   await this.handleSuccessfulLogin(user);
   return user;
 };
 
-userSchema.statics.handleFailedLogin &#x3D; async function(user) {
-  user.loginAttempts +&#x3D; 1;
+userSchema.statics.handleFailedLogin = async function(user) {
+  user.loginAttempts += 1;
   
-  if (user.loginAttempts &amp;gt;&#x3D; 5 &amp;amp;&amp;amp; !user.isLocked) {
-    user.lockUntil &#x3D; Date.now() + 2 * 60 * 60 * 1000; // Lock for 2 hours
+  if (user.loginAttempts &gt;= 5 &amp;&amp; !user.isLocked) {
+    user.lockUntil = Date.now() + 2 * 60 * 60 * 1000; // Lock for 2 hours
   }
   
   await user.save();
 };
 
-userSchema.statics.handleSuccessfulLogin &#x3D; async function(user) {
-  user.loginAttempts &#x3D; 0;
-  user.lockUntil &#x3D; undefined;
-  user.lastLogin &#x3D; new Date();
+userSchema.statics.handleSuccessfulLogin = async function(user) {
+  user.loginAttempts = 0;
+  user.lockUntil = undefined;
+  user.lastLogin = new Date();
   await user.save();
 };
 
-module.exports &#x3D; mongoose.model(&#x27;User&#x27;, userSchema);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;authentication-routes&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#authentication-routes&quot;&gt;Authentication Routes&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// routes/auth.js
-const express &#x3D; require(&#x27;express&#x27;);
-const User &#x3D; require(&#x27;../models/User&#x27;);
-const authManager &#x3D; require(&#x27;../utils/auth&#x27;);
-const { authenticate, loginLimiter } &#x3D; require(&#x27;../middleware/auth&#x27;);
-const router &#x3D; express.Router();
+module.exports = mongoose.model('User', userSchema);
+</code></pre>
+<h3 id="authentication-routes"><a class="header" href="#authentication-routes">Authentication Routes</a></h3>
+<pre><code class="language-javascript">// routes/auth.js
+const express = require('express');
+const User = require('../models/User');
+const authManager = require('../utils/auth');
+const { authenticate, loginLimiter } = require('../middleware/auth');
+const router = express.Router();
 
 // Register
-router.post(&#x27;/register&#x27;, async (req, res) &#x3D;&amp;gt; {
+router.post('/register', async (req, res) =&gt; {
   try {
-    const { username, email, password, firstName, lastName } &#x3D; req.body;
+    const { username, email, password, firstName, lastName } = req.body;
     
     // Check if user already exists
-    const existingUser &#x3D; await User.findOne({
+    const existingUser = await User.findOne({
       $or: [{ email }, { username }]
     });
     
     if (existingUser) {
       return res.status(400).json({
-        error: &#x27;User with this email or username already exists&#x27;
+        error: 'User with this email or username already exists'
       });
     }
     
     // Create new user
-    const user &#x3D; new User({
+    const user = new User({
       username,
       email,
       password,
@@ -1125,12 +861,12 @@ router.post(&#x27;/register&#x27;, async (req, res) &#x3D;&amp;gt; {
     await user.save();
     
     // Generate tokens
-    const token &#x3D; user.generateAuthToken();
-    const refreshToken &#x3D; authManager.generateRefreshToken();
-    await user.addRefreshToken(refreshToken, req.get(&#x27;User-Agent&#x27;), req.ip);
+    const token = user.generateAuthToken();
+    const refreshToken = authManager.generateRefreshToken();
+    await user.addRefreshToken(refreshToken, req.get('User-Agent'), req.ip);
     
     res.status(201).json({
-      message: &#x27;User registered successfully&#x27;,
+      message: 'User registered successfully',
       user: {
         id: user._id,
         username: user.username,
@@ -1147,18 +883,18 @@ router.post(&#x27;/register&#x27;, async (req, res) &#x3D;&amp;gt; {
 });
 
 // Login
-router.post(&#x27;/login&#x27;, loginLimiter, async (req, res) &#x3D;&amp;gt; {
+router.post('/login', loginLimiter, async (req, res) =&gt; {
   try {
-    const { email, password } &#x3D; req.body;
+    const { email, password } = req.body;
     
-    const user &#x3D; await User.findByCredentials(email, password);
+    const user = await User.findByCredentials(email, password);
     
-    const token &#x3D; user.generateAuthToken();
-    const refreshToken &#x3D; authManager.generateRefreshToken();
-    await user.addRefreshToken(refreshToken, req.get(&#x27;User-Agent&#x27;), req.ip);
+    const token = user.generateAuthToken();
+    const refreshToken = authManager.generateRefreshToken();
+    await user.addRefreshToken(refreshToken, req.get('User-Agent'), req.ip);
     
     res.json({
-      message: &#x27;Login successful&#x27;,
+      message: 'Login successful',
       user: {
         id: user._id,
         username: user.username,
@@ -1175,26 +911,26 @@ router.post(&#x27;/login&#x27;, loginLimiter, async (req, res) &#x3D;&amp;gt; {
 });
 
 // Refresh token
-router.post(&#x27;/refresh&#x27;, async (req, res) &#x3D;&amp;gt; {
+router.post('/refresh', async (req, res) =&gt; {
   try {
-    const { refreshToken } &#x3D; req.body;
+    const { refreshToken } = req.body;
     
     if (!refreshToken) {
-      return res.status(401).json({ error: &#x27;Refresh token required&#x27; });
+      return res.status(401).json({ error: 'Refresh token required' });
     }
     
     // Find user with this refresh token
-    const user &#x3D; await User.findOne({
-      &#x27;refreshTokens.token&#x27;: refreshToken,
-      &#x27;refreshTokens.expiresAt&#x27;: { $gt: new Date() }
+    const user = await User.findOne({
+      'refreshTokens.token': refreshToken,
+      'refreshTokens.expiresAt': { $gt: new Date() }
     });
     
     if (!user) {
-      return res.status(401).json({ error: &#x27;Invalid refresh token&#x27; });
+      return res.status(401).json({ error: 'Invalid refresh token' });
     }
     
     // Generate new access token
-    const token &#x3D; user.generateAuthToken();
+    const token = user.generateAuthToken();
     
     res.json({ token });
   } catch (error) {
@@ -1203,32 +939,32 @@ router.post(&#x27;/refresh&#x27;, async (req, res) &#x3D;&amp;gt; {
 });
 
 // Logout
-router.post(&#x27;/logout&#x27;, authenticate, async (req, res) &#x3D;&amp;gt; {
+router.post('/logout', authenticate, async (req, res) =&gt; {
   try {
-    const { refreshToken } &#x3D; req.body;
+    const { refreshToken } = req.body;
     
     if (refreshToken) {
       await req.user.removeRefreshToken(refreshToken);
     }
     
-    res.json({ message: &#x27;Logout successful&#x27; });
+    res.json({ message: 'Logout successful' });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
 });
 
 // Logout from all devices
-router.post(&#x27;/logout-all&#x27;, authenticate, async (req, res) &#x3D;&amp;gt; {
+router.post('/logout-all', authenticate, async (req, res) =&gt; {
   try {
     await req.user.clearRefreshTokens();
-    res.json({ message: &#x27;Logged out from all devices&#x27; });
+    res.json({ message: 'Logged out from all devices' });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
 });
 
 // Get current user
-router.get(&#x27;/me&#x27;, authenticate, async (req, res) &#x3D;&amp;gt; {
+router.get('/me', authenticate, async (req, res) =&gt; {
   res.json({
     user: {
       id: req.user.id,
@@ -1241,19 +977,19 @@ router.get(&#x27;/me&#x27;, authenticate, async (req, res) &#x3D;&amp;gt; {
   });
 });
 
-module.exports &#x3D; router;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;real-use-case&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#real-use-case&quot;&gt;Real Use Case&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;oauth-integration-with-google&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#oauth-integration-with-google&quot;&gt;OAuth Integration with Google&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;GitHub&lt;/strong&gt; and &lt;strong&gt;Google&lt;/strong&gt; use OAuth for secure authentication:&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// services/oauth.js
-const { google } &#x3D; require(&#x27;googleapis&#x27;);
-const User &#x3D; require(&#x27;../models/User&#x27;);
-const authManager &#x3D; require(&#x27;../utils/jwt&#x27;);
+module.exports = router;
+</code></pre>
+<h2 id="real-use-case"><a class="header" href="#real-use-case">Real Use Case</a></h2>
+<h3 id="oauth-integration-with-google"><a class="header" href="#oauth-integration-with-google">OAuth Integration with Google</a></h3>
+<p><strong>GitHub</strong> and <strong>Google</strong> use OAuth for secure authentication:</p>
+<pre><code class="language-javascript">// services/oauth.js
+const { google } = require('googleapis');
+const User = require('../models/User');
+const authManager = require('../utils/jwt');
 
 class OAuthService {
   constructor() {
-    this.googleOAuth2Client &#x3D; new google.auth.OAuth2(
+    this.googleOAuth2Client = new google.auth.OAuth2(
       process.env.GOOGLE_CLIENT_ID,
       process.env.GOOGLE_CLIENT_SECRET,
       process.env.GOOGLE_REDIRECT_URI
@@ -1263,20 +999,20 @@ class OAuthService {
   async googleAuth(code) {
     try {
       // Exchange code for tokens
-      const { tokens } &#x3D; await this.googleOAuth2Client.getToken(code);
+      const { tokens } = await this.googleOAuth2Client.getToken(code);
       this.googleOAuth2Client.setCredentials(tokens);
       
       // Get user info
-      const oauth2 &#x3D; google.oauth2({ version: &#x27;v2&#x27;, auth: this.googleOAuth2Client });
-      const { data: userInfo } &#x3D; await oauth2.userinfo.get();
+      const oauth2 = google.oauth2({ version: 'v2', auth: this.googleOAuth2Client });
+      const { data: userInfo } = await oauth2.userinfo.get();
       
       // Find or create user
-      let user &#x3D; await User.findOne({ email: userInfo.email });
+      let user = await User.findOne({ email: userInfo.email });
       
       if (!user) {
         // Create new user from OAuth data
-        user &#x3D; new User({
-          username: userInfo.email.split(&#x27;@&#x27;)[0] + &#x27;_&#x27; + Date.now(),
+        user = new User({
+          username: userInfo.email.split('@')[0] + '_' + Date.now(),
           email: userInfo.email,
           password: authManager.generateRefreshToken(), // Random password
           profile: {
@@ -1289,20 +1025,20 @@ class OAuthService {
         
         await user.save();
       } else {
-        // Update existing user&#x27;s info
-        if (!user.profile.avatar &amp;amp;&amp;amp; userInfo.picture) {
-          user.profile.avatar &#x3D; userInfo.picture;
+        // Update existing user's info
+        if (!user.profile.avatar &amp;&amp; userInfo.picture) {
+          user.profile.avatar = userInfo.picture;
         }
-        if (!user.isEmailVerified &amp;amp;&amp;amp; userInfo.verified_email) {
-          user.isEmailVerified &#x3D; true;
+        if (!user.isEmailVerified &amp;&amp; userInfo.verified_email) {
+          user.isEmailVerified = true;
         }
         await user.save();
       }
       
       // Generate tokens
-      const token &#x3D; user.generateAuthToken();
-      const refreshToken &#x3D; authManager.generateRefreshToken();
-      await user.addRefreshToken(refreshToken, &#x27;OAuth&#x27;, &#x27;OAuth&#x27;);
+      const token = user.generateAuthToken();
+      const refreshToken = authManager.generateRefreshToken();
+      await user.addRefreshToken(refreshToken, 'OAuth', 'OAuth');
       
       return {
         user: {
@@ -1316,59 +1052,59 @@ class OAuthService {
         refreshToken
       };
     } catch (error) {
-      throw new Error(&#x27;OAuth authentication failed&#x27;);
+      throw new Error('OAuth authentication failed');
     }
   }
 
   getGoogleAuthUrl() {
-    const scopes &#x3D; [
-      &#x27;https://www.googleapis.com/auth/userinfo.email&#x27;,
-      &#x27;https://www.googleapis.com/auth/userinfo.profile&#x27;
+    const scopes = [
+      'https://www.googleapis.com/auth/userinfo.email',
+      'https://www.googleapis.com/auth/userinfo.profile'
     ];
     
     return this.googleOAuth2Client.generateAuthUrl({
-      access_type: &#x27;offline&#x27;,
-      scope: scopes.join(&#x27; &#x27;),
-      prompt: &#x27;consent&#x27;
+      access_type: 'offline',
+      scope: scopes.join(' '),
+      prompt: 'consent'
     });
   }
 }
 
 // OAuth routes
-router.get(&#x27;/google&#x27;, (req, res) &#x3D;&amp;gt; {
-  const oauthService &#x3D; new OAuthService();
-  const url &#x3D; oauthService.getGoogleAuthUrl();
+router.get('/google', (req, res) =&gt; {
+  const oauthService = new OAuthService();
+  const url = oauthService.getGoogleAuthUrl();
   res.redirect(url);
 });
 
-router.get(&#x27;/google/callback&#x27;, async (req, res) &#x3D;&amp;gt; {
+router.get('/google/callback', async (req, res) =&gt; {
   try {
-    const { code } &#x3D; req.query;
-    const oauthService &#x3D; new OAuthService();
-    const result &#x3D; await oauthService.googleAuth(code);
+    const { code } = req.query;
+    const oauthService = new OAuthService();
+    const result = await oauthService.googleAuth(code);
     
     // Redirect to frontend with tokens
-    const redirectUrl &#x3D; &#x60;${process.env.FRONTEND_URL}/auth/callback?&#x60; +
-      &#x60;token&#x3D;${result.token}&amp;amp;refreshToken&#x3D;${result.refreshToken}&#x60;;
+    const redirectUrl = `${process.env.FRONTEND_URL}/auth/callback?` +
+      `token=${result.token}&amp;refreshToken=${result.refreshToken}`;
     
     res.redirect(redirectUrl);
   } catch (error) {
-    res.redirect(&#x60;${process.env.FRONTEND_URL}/auth/error?message&#x3D;OAuth failed&#x60;);
+    res.redirect(`${process.env.FRONTEND_URL}/auth/error?message=OAuth failed`);
   }
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;pro-tip&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#pro-tip&quot;&gt;Pro Tip&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Implement Multi-Factor Authentication (MFA)&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// services/mfa.js
-const speakeasy &#x3D; require(&#x27;speakeasy&#x27;);
-const qrcode &#x3D; require(&#x27;qrcode&#x27;);
+</code></pre>
+<h2 id="pro-tip"><a class="header" href="#pro-tip">Pro Tip</a></h2>
+<p><strong>Implement Multi-Factor Authentication (MFA)</strong></p>
+<pre><code class="language-javascript">// services/mfa.js
+const speakeasy = require('speakeasy');
+const qrcode = require('qrcode');
 
 class MFAService {
   // Generate secret for user
   static generateSecret(userEmail) {
     return speakeasy.generateSecret({
-      name: &#x60;Your App (${userEmail})&#x60;,
-      issuer: &#x27;Your App&#x27;,
+      name: `Your App (${userEmail})`,
+      issuer: 'Your App',
       length: 32
     });
   }
@@ -1376,7 +1112,7 @@ class MFAService {
   // Generate QR code for secret
   static async generateQRCode(secret) {
     try {
-      const otpauthUrl &#x3D; speakeasy.otpauthURL({
+      const otpauthUrl = speakeasy.otpauthURL({
         secret: secret.base32,
         label: secret.name,
         issuer: secret.issuer
@@ -1384,7 +1120,7 @@ class MFAService {
       
       return await qrcode.toDataURL(otpauthUrl);
     } catch (error) {
-      throw new Error(&#x27;Failed to generate QR code&#x27;);
+      throw new Error('Failed to generate QR code');
     }
   }
 
@@ -1392,16 +1128,16 @@ class MFAService {
   static verifyToken(secret, token) {
     return speakeasy.totp.verify({
       secret: secret,
-      encoding: &#x27;base32&#x27;,
+      encoding: 'base32',
       token: token,
       window: 2 // Allow 2 steps before/after current time
     });
   }
 
   // Generate backup codes
-  static generateBackupCodes(count &#x3D; 10) {
-    const codes &#x3D; [];
-    for (let i &#x3D; 0; i &amp;lt; count; i++) {
+  static generateBackupCodes(count = 10) {
+    const codes = [];
+    for (let i = 0; i &lt; count; i++) {
       codes.push(speakeasy.generateSecret().base32.slice(0, 8).toUpperCase());
     }
     return codes;
@@ -1409,26 +1145,26 @@ class MFAService {
 }
 
 // MFA routes
-router.post(&#x27;/mfa/setup&#x27;, authenticate, async (req, res) &#x3D;&amp;gt; {
+router.post('/mfa/setup', authenticate, async (req, res) =&gt; {
   try {
-    const user &#x3D; await User.findById(req.user.id);
+    const user = await User.findById(req.user.id);
     
     if (user.mfaSecret) {
       return res.status(400).json({
-        error: &#x27;MFA is already enabled for this account&#x27;
+        error: 'MFA is already enabled for this account'
       });
     }
     
-    const secret &#x3D; MFAService.generateSecret(user.email);
-    const qrCode &#x3D; await MFAService.generateQRCode(secret);
-    const backupCodes &#x3D; MFAService.generateBackupCodes();
+    const secret = MFAService.generateSecret(user.email);
+    const qrCode = await MFAService.generateQRCode(secret);
+    const backupCodes = MFAService.generateBackupCodes();
     
     // Store secret and backup codes (hashed)
-    user.mfaSecret &#x3D; secret.base32;
-    user.mfaBackupCodes &#x3D; backupCodes.map(code &#x3D;&amp;gt; 
-      require(&#x27;crypto&#x27;).createHash(&#x27;sha256&#x27;).update(code).digest(&#x27;hex&#x27;)
+    user.mfaSecret = secret.base32;
+    user.mfaBackupCodes = backupCodes.map(code =&gt; 
+      require('crypto').createHash('sha256').update(code).digest('hex')
     );
-    user.mfaEnabled &#x3D; false; // Enable after verification
+    user.mfaEnabled = false; // Enable after verification
     await user.save();
     
     res.json({
@@ -1441,40 +1177,40 @@ router.post(&#x27;/mfa/setup&#x27;, authenticate, async (req, res) &#x3D;&amp;gt
   }
 });
 
-router.post(&#x27;/mfa/verify&#x27;, authenticate, async (req, res) &#x3D;&amp;gt; {
+router.post('/mfa/verify', authenticate, async (req, res) =&gt; {
   try {
-    const { token } &#x3D; req.body;
-    const user &#x3D; await User.findById(req.user.id);
+    const { token } = req.body;
+    const user = await User.findById(req.user.id);
     
     if (!user.mfaSecret) {
       return res.status(400).json({
-        error: &#x27;MFA not set up for this account&#x27;
+        error: 'MFA not set up for this account'
       });
     }
     
-    const isValid &#x3D; MFAService.verifyToken(user.mfaSecret, token);
+    const isValid = MFAService.verifyToken(user.mfaSecret, token);
     
     if (!isValid) {
       return res.status(400).json({
-        error: &#x27;Invalid verification code&#x27;
+        error: 'Invalid verification code'
       });
     }
     
-    user.mfaEnabled &#x3D; true;
+    user.mfaEnabled = true;
     await user.save();
     
     res.json({
-      message: &#x27;MFA enabled successfully&#x27;
+      message: 'MFA enabled successfully'
     });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;exercise&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#exercise&quot;&gt;Exercise&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Build a Complete Authentication System&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Create a comprehensive authentication system with the following features:&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Exercise: Complete Auth System
+</code></pre>
+<h2 id="exercise"><a class="header" href="#exercise">Exercise</a></h2>
+<p><strong>Build a Complete Authentication System</strong></p>
+<p>Create a comprehensive authentication system with the following features:</p>
+<pre><code class="language-javascript">// Exercise: Complete Auth System
 // Requirements:
 // 1. User registration and login
 // 2. JWT token management
@@ -1489,11 +1225,11 @@ router.post(&#x27;/mfa/verify&#x27;, authenticate, async (req, res) &#x3D;&amp;g
 // 1. Password reset service
 class PasswordResetService {
   static async generateResetToken(user) {
-    const token &#x3D; require(&#x27;crypto&#x27;).randomBytes(32).toString(&#x27;hex&#x27;);
-    const expires &#x3D; Date.now() + 10 * 60 * 1000; // 10 minutes
+    const token = require('crypto').randomBytes(32).toString('hex');
+    const expires = Date.now() + 10 * 60 * 1000; // 10 minutes
     
-    user.passwordResetToken &#x3D; token;
-    user.passwordResetExpires &#x3D; new Date(expires);
+    user.passwordResetToken = token;
+    user.passwordResetExpires = new Date(expires);
     await user.save();
     
     return token;
@@ -1501,25 +1237,25 @@ class PasswordResetService {
 
   static async sendResetEmail(user, token) {
     // Implementation with email service
-    const resetUrl &#x3D; &#x60;${process.env.FRONTEND_URL}/reset-password?token&#x3D;${token}&#x60;;
+    const resetUrl = `${process.env.FRONTEND_URL}/reset-password?token=${token}`;
     
     // Send email logic here
-    console.log(&#x60;Password reset link: ${resetUrl}&#x60;);
+    console.log(`Password reset link: ${resetUrl}`);
   }
 
   static async resetPassword(token, newPassword) {
-    const user &#x3D; await User.findOne({
+    const user = await User.findOne({
       passwordResetToken: token,
       passwordResetExpires: { $gt: Date.now() }
     });
     
     if (!user) {
-      throw new Error(&#x27;Invalid or expired reset token&#x27;);
+      throw new Error('Invalid or expired reset token');
     }
     
-    user.password &#x3D; newPassword;
-    user.passwordResetToken &#x3D; undefined;
-    user.passwordResetExpires &#x3D; undefined;
+    user.password = newPassword;
+    user.passwordResetToken = undefined;
+    user.passwordResetExpires = undefined;
     await user.save();
     
     return user;
@@ -1529,30 +1265,30 @@ class PasswordResetService {
 // 2. Email verification service
 class EmailVerificationService {
   static async generateVerificationToken(user) {
-    const token &#x3D; require(&#x27;crypto&#x27;).randomBytes(32).toString(&#x27;hex&#x27;);
+    const token = require('crypto').randomBytes(32).toString('hex');
     
-    user.emailVerificationToken &#x3D; token;
+    user.emailVerificationToken = token;
     await user.save();
     
     return token;
   }
 
   static async sendVerificationEmail(user, token) {
-    const verificationUrl &#x3D; &#x60;${process.env.FRONTEND_URL}/verify-email?token&#x3D;${token}&#x60;;
+    const verificationUrl = `${process.env.FRONTEND_URL}/verify-email?token=${token}`;
     
     // Send email logic here
-    console.log(&#x60;Email verification link: ${verificationUrl}&#x60;);
+    console.log(`Email verification link: ${verificationUrl}`);
   }
 
   static async verifyEmail(token) {
-    const user &#x3D; await User.findOne({ emailVerificationToken: token });
+    const user = await User.findOne({ emailVerificationToken: token });
     
     if (!user) {
-      throw new Error(&#x27;Invalid verification token&#x27;);
+      throw new Error('Invalid verification token');
     }
     
-    user.isEmailVerified &#x3D; true;
-    user.emailVerificationToken &#x3D; undefined;
+    user.isEmailVerified = true;
+    user.emailVerificationToken = undefined;
     await user.save();
     
     return user;
@@ -1560,123 +1296,74 @@ class EmailVerificationService {
 }
 
 // 3. Enhanced authentication middleware
-const enhancedAuth &#x3D; {
+const enhancedAuth = {
   // Require email verification
-  requireVerified: (req, res, next) &#x3D;&amp;gt; {
+  requireVerified: (req, res, next) =&gt; {
     if (!req.user.isEmailVerified) {
       return res.status(403).json({
-        error: &#x27;Email verification required. Please verify your email address.&#x27;
+        error: 'Email verification required. Please verify your email address.'
       });
     }
     next();
   },
 
   // Require MFA
-  requireMFA: (req, res, next) &#x3D;&amp;gt; {
+  requireMFA: (req, res, next) =&gt; {
     if (!req.user.mfaEnabled) {
       return res.status(403).json({
-        error: &#x27;Multi-factor authentication required&#x27;
+        error: 'Multi-factor authentication required'
       });
     }
     next();
   },
 
   // Check session validity
-  validateSession: async (req, res, next) &#x3D;&amp;gt; {
+  validateSession: async (req, res, next) =&gt; {
     try {
-      const user &#x3D; await User.findById(req.user.id);
+      const user = await User.findById(req.user.id);
       
       if (!user || !user.isActive) {
         return res.status(401).json({
-          error: &#x27;Account deactivated or not found&#x27;
+          error: 'Account deactivated or not found'
         });
       }
       
-      req.user &#x3D; user;
+      req.user = user;
       next();
     } catch (error) {
-      res.status(401).json({ error: &#x27;Invalid session&#x27; });
+      res.status(401).json({ error: 'Invalid session' });
     }
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Your Tasks:&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Implement the complete authentication system&lt;/li&gt;
-&lt;li&gt;Add email verification functionality&lt;/li&gt;
-&lt;li&gt;Create password reset flow&lt;/li&gt;
-&lt;li&gt;Implement MFA support&lt;/li&gt;
-&lt;li&gt;Add comprehensive rate limiting&lt;/li&gt;
-&lt;li&gt;Create session management&lt;/li&gt;
-&lt;li&gt;Add audit logging for security events&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This exercise teaches you:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;JWT token management and security&lt;/li&gt;
-&lt;li&gt;Password hashing and comparison&lt;/li&gt;
-&lt;li&gt;OAuth integration&lt;/li&gt;
-&lt;li&gt;Multi-factor authentication&lt;/li&gt;
-&lt;li&gt;Rate limiting and security best practices&lt;/li&gt;
-&lt;li&gt;Session management and validation&lt;/li&gt;
-&lt;li&gt;Email verification workflows&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Next Up&lt;/strong&gt;: Learn about security best practices for web applications! Security Best Practices&lt;/p&gt;
+</code></pre>
+<p><strong>Your Tasks:</strong></p>
+<ol>
+<li>Implement the complete authentication system</li>
+<li>Add email verification functionality</li>
+<li>Create password reset flow</li>
+<li>Implement MFA support</li>
+<li>Add comprehensive rate limiting</li>
+<li>Create session management</li>
+<li>Add audit logging for security events</li>
+</ol>
+<p>This exercise teaches you:</p>
+<ul>
+<li>JWT token management and security</li>
+<li>Password hashing and comparison</li>
+<li>OAuth integration</li>
+<li>Multi-factor authentication</li>
+<li>Rate limiting and security best practices</li>
+<li>Session management and validation</li>
+<li>Email verification workflows</li>
+</ul>
+<hr>
+<p><strong>Next Up</strong>: Learn about security best practices for web applications! Security Best Practices</p>
 
-                        </div>
-                        
-                    </article>
-                </div>
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "fullstack/auth.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

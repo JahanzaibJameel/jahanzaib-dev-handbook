@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>Storage &amp; Persistence - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="Storage &amp; Persistence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Storage &amp; Persistence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>Storage &amp; Persistence - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="react-native/storage.md">
-    <meta property="og:title" content="Storage &amp; Persistence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Storage &amp; Persistence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="react-native/storage.md">
-    <meta property="twitter:title" content="Storage &amp; Persistence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="Storage &amp; Persistence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="Storage &amp; Persistence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="react-native/storage.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "Storage &amp; Persistence - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,116 +525,1030 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    Storage &amp; Persistence - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
+        <div id="content">
+            <main>
+                <h1 id="storage--persistence"><a class="header" href="#storage--persistence">Storage &amp; Persistence</a></h1>
+<p>Learn how to implement data storage and persistence in React Native applications using AsyncStorage, SQLite, Realm, and other storage solutions.</p>
+<h2 id="what-is-data-persistence"><a class="header" href="#what-is-data-persistence"><strong>What is Data Persistence?</strong></a></h2>
+<p>Data persistence in React Native involves storing data locally on the device so it persists between app launches and can be accessed offline. This includes user preferences, cached data, and offline content.</p>
+<h3 id="storage-types"><a class="header" href="#storage-types"><strong>Storage Types</strong></a></h3>
+<ul>
+<li><strong>AsyncStorage</strong>: Simple key-value storage for small amounts of data</li>
+<li><strong>SQLite</strong>: Relational database for structured data</li>
+<li><strong>Realm</strong>: Object-oriented database for complex data models</li>
+<li><strong>File System</strong>: Direct file storage for documents and media</li>
+<li><strong>Secure Storage</strong>: Encrypted storage for sensitive data</li>
+</ul>
+<hr>
+<h2 id="asyncstorage"><a class="header" href="#asyncstorage"><strong>AsyncStorage</strong></a></h2>
+<h3 id="basic-usage"><a class="header" href="#basic-usage"><strong>Basic Usage</strong></a></h3>
+<h4 id="installation"><a class="header" href="#installation"><strong>Installation</strong></a></h4>
+<pre><code class="language-bash"># Install AsyncStorage
+npm install @react-native-async-storage/async-storage
 
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
+# For iOS
+cd ios &amp;&amp; pod install
+</code></pre>
+<h4 id="basic-operations"><a class="header" href="#basic-operations"><strong>Basic Operations</strong></a></h4>
+<pre><code class="language-javascript">import AsyncStorage from '@react-native-async-storage/async-storage';
 
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>Storage &amp; Persistence - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;storage--persistence&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#storage--persistence&quot;&gt;Storage &amp;amp; Persistence&lt;/a&gt;&lt;/h1&gt;
+// Store data
+const storeData = async (key, value) =&gt; {
+  try {
+    await AsyncStorage.setItem(key, JSON.stringify(value));
+    console.log('Data stored successfully');
+  } catch (error) {
+    console.error('Error storing data:', error);
+  }
+};
 
-                        </div>
-                        
-                    </article>
-                </div>
+// Retrieve data
+const getData = async (key) =&gt; {
+  try {
+    const value = await AsyncStorage.getItem(key);
+    if (value !== null) {
+      return JSON.parse(value);
+    }
+    return null;
+  } catch (error) {
+    console.error('Error retrieving data:', error);
+    return null;
+  }
+};
+
+// Remove data
+const removeData = async (key) =&gt; {
+  try {
+    await AsyncStorage.removeItem(key);
+    console.log('Data removed successfully');
+  } catch (error) {
+    console.error('Error removing data:', error);
+  }
+};
+
+// Clear all data
+const clearAllData = async () =&gt; {
+  try {
+    await AsyncStorage.clear();
+    console.log('All data cleared');
+  } catch (error) {
+    console.error('Error clearing data:', error);
+  }
+};
+</code></pre>
+<h4 id="user-preferences-example"><a class="header" href="#user-preferences-example"><strong>User Preferences Example</strong></a></h4>
+<pre><code class="language-javascript">import React, { useState, useEffect } from 'react';
+import { View, Text, Switch, Button } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+const SettingsScreen = () =&gt; {
+  const [darkMode, setDarkMode] = useState(false);
+  const [notifications, setNotifications] = useState(true);
+  const [fontSize, setFontSize] = useState('medium');
+
+  // Load settings on component mount
+  useEffect(() =&gt; {
+    loadSettings();
+  }, []);
+
+  const loadSettings = async () =&gt; {
+    try {
+      const savedDarkMode = await AsyncStorage.getItem('darkMode');
+      const savedNotifications = await AsyncStorage.getItem('notifications');
+      const savedFontSize = await AsyncStorage.getItem('fontSize');
+
+      if (savedDarkMode !== null) {
+        setDarkMode(JSON.parse(savedDarkMode));
+      }
+      if (savedNotifications !== null) {
+        setNotifications(JSON.parse(savedNotifications));
+      }
+      if (savedFontSize !== null) {
+        setFontSize(savedFontSize);
+      }
+    } catch (error) {
+      console.error('Error loading settings:', error);
+    }
+  };
+
+  const saveSettings = async (key, value) =&gt; {
+    try {
+      await AsyncStorage.setItem(key, JSON.stringify(value));
+    } catch (error) {
+      console.error('Error saving settings:', error);
+    }
+  };
+
+  const toggleDarkMode = (value) =&gt; {
+    setDarkMode(value);
+    saveSettings('darkMode', value);
+  };
+
+  const toggleNotifications = (value) =&gt; {
+    setNotifications(value);
+    saveSettings('notifications', value);
+  };
+
+  const changeFontSize = (size) =&gt; {
+    setFontSize(size);
+    saveSettings('fontSize', size);
+  };
+
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Text style={styles.title}&gt;Settings&lt;/Text&gt;
+      
+      &lt;View style={styles.settingItem}&gt;
+        &lt;Text&gt;Dark Mode&lt;/Text&gt;
+        &lt;Switch
+          value={darkMode}
+          onValueChange={toggleDarkMode}
+        /&gt;
+      &lt;/View&gt;
+      
+      &lt;View style={styles.settingItem}&gt;
+        &lt;Text&gt;Notifications&lt;/Text&gt;
+        &lt;Switch
+          value={notifications}
+          onValueChange={toggleNotifications}
+        /&gt;
+      &lt;/View&gt;
+      
+      &lt;View style={styles.settingItem}&gt;
+        &lt;Text&gt;Font Size&lt;/Text&gt;
+        &lt;View style={styles.fontSizeButtons}&gt;
+          {['small', 'medium', 'large'].map(size =&gt; (
+            &lt;Button
+              key={size}
+              title={size}
+              onPress={() =&gt; changeFontSize(size)}
+              color={fontSize === size ? '#007AFF' : '#ccc'}
+            /&gt;
+          ))}
+        &lt;/View&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<hr>
+<h2 id="sqlite-database"><a class="header" href="#sqlite-database"><strong>SQLite Database</strong></a></h2>
+<h3 id="setup-and-configuration"><a class="header" href="#setup-and-configuration"><strong>Setup and Configuration</strong></a></h3>
+<h4 id="installation-1"><a class="header" href="#installation-1"><strong>Installation</strong></a></h4>
+<pre><code class="language-bash"># Install SQLite
+npm install react-native-sqlite-storage
+
+# For iOS
+cd ios &amp;&amp; pod install
+</code></pre>
+<h4 id="database-setup"><a class="header" href="#database-setup"><strong>Database Setup</strong></a></h4>
+<pre><code class="language-javascript">import SQLite from 'react-native-sqlite-storage';
+
+// Enable debugging
+SQLite.DEBUG(true);
+SQLite.enablePromise(true);
+
+// Database configuration
+const database_name = 'AppDatabase.db';
+const database_version = '1.0';
+const database_displayname = 'App Database';
+const database_size = 200000;
+
+let db;
+
+// Open database
+const openDatabase = () =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    SQLite.openDatabase(
+      database_name,
+      database_version,
+      database_displayname,
+      database_size,
+      (db) =&gt; {
+        console.log('Database opened');
+        resolve(db);
+      },
+      (error) =&gt; {
+        console.error('Error opening database:', error);
+        reject(error);
+      }
+    );
+  });
+};
+
+// Initialize database
+const initDatabase = async () =&gt; {
+  try {
+    db = await openDatabase();
+    await createTables();
+    return db;
+  } catch (error) {
+    console.error('Error initializing database:', error);
+    throw error;
+  }
+};
+
+// Create tables
+const createTables = () =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    db.transaction((tx) =&gt; {
+      // Users table
+      tx.executeSql(
+        `CREATE TABLE IF NOT EXISTS users (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          name TEXT NOT NULL,
+          email TEXT UNIQUE NOT NULL,
+          created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        );`,
+        [],
+        () =&gt; {
+          console.log('Users table created successfully');
+        },
+        (error) =&gt; {
+          console.error('Error creating users table:', error);
+        }
+      );
+
+      // Posts table
+      tx.executeSql(
+        `CREATE TABLE IF NOT EXISTS posts (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          title TEXT NOT NULL,
+          content TEXT,
+          user_id INTEGER,
+          created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+          FOREIGN KEY (user_id) REFERENCES users (id)
+        );`,
+        [],
+        () =&gt; {
+          console.log('Posts table created successfully');
+          resolve();
+        },
+        (error) =&gt; {
+          console.error('Error creating posts table:', error);
+          reject(error);
+        }
+      );
+    });
+  });
+};
+</code></pre>
+<h4 id="crud-operations"><a class="header" href="#crud-operations"><strong>CRUD Operations</strong></a></h4>
+<pre><code class="language-javascript">// Insert data
+const insertUser = (name, email) =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    db.transaction((tx) =&gt; {
+      tx.executeSql(
+        'INSERT INTO users (name, email) VALUES (?, ?)',
+        [name, email],
+        (tx, results) =&gt; {
+          console.log('User inserted successfully');
+          resolve(results.insertId);
+        },
+        (tx, error) =&gt; {
+          console.error('Error inserting user:', error);
+          reject(error);
+        }
+      );
+    });
+  });
+};
+
+// Query data
+const getUsers = () =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    db.transaction((tx) =&gt; {
+      tx.executeSql(
+        'SELECT * FROM users ORDER BY created_at DESC',
+        [],
+        (tx, results) =&gt; {
+          const users = [];
+          for (let i = 0; i &lt; results.rows.length; i++) {
+            users.push(results.rows.item(i));
+          }
+          console.log('Users retrieved successfully');
+          resolve(users);
+        },
+        (tx, error) =&gt; {
+          console.error('Error retrieving users:', error);
+          reject(error);
+        }
+      );
+    });
+  });
+};
+
+// Update data
+const updateUser = (id, name, email) =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    db.transaction((tx) =&gt; {
+      tx.executeSql(
+        'UPDATE users SET name = ?, email = ? WHERE id = ?',
+        [name, email, id],
+        (tx, results) =&gt; {
+          console.log('User updated successfully');
+          resolve(results.rowsAffected);
+        },
+        (tx, error) =&gt; {
+          console.error('Error updating user:', error);
+          reject(error);
+        }
+      );
+    });
+  });
+};
+
+// Delete data
+const deleteUser = (id) =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    db.transaction((tx) =&gt; {
+      tx.executeSql(
+        'DELETE FROM users WHERE id = ?',
+        [id],
+        (tx, results) =&gt; {
+          console.log('User deleted successfully');
+          resolve(results.rowsAffected);
+        },
+        (tx, error) =&gt; {
+          console.error('Error deleting user:', error);
+          reject(error);
+        }
+      );
+    });
+  });
+};
+</code></pre>
+<h4 id="react-component-integration"><a class="header" href="#react-component-integration"><strong>React Component Integration</strong></a></h4>
+<pre><code class="language-javascript">import React, { useState, useEffect } from 'react';
+import { View, Text, FlatList, Button, TextInput } from 'react-native';
+
+const UserListScreen = () =&gt; {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
+  useEffect(() =&gt; {
+    initializeDatabase();
+    loadUsers();
+  }, []);
+
+  const initializeDatabase = async () =&gt; {
+    try {
+      await initDatabase();
+    } catch (error) {
+      console.error('Database initialization failed:', error);
+    }
+  };
+
+  const loadUsers = async () =&gt; {
+    try {
+      const userList = await getUsers();
+      setUsers(userList);
+    } catch (error) {
+      console.error('Error loading users:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const addUser = async () =&gt; {
+    if (!name || !email) {
+      alert('Please enter both name and email');
+      return;
+    }
+
+    try {
+      await insertUser(name, email);
+      setName('');
+      setEmail('');
+      loadUsers();
+    } catch (error) {
+      console.error('Error adding user:', error);
+      alert('Failed to add user');
+    }
+  };
+
+  const deleteUser = async (id) =&gt; {
+    try {
+      await deleteUser(id);
+      loadUsers();
+    } catch (error) {
+      console.error('Error deleting user:', error);
+      alert('Failed to delete user');
+    }
+  };
+
+  const renderUser = ({ item }) =&gt; (
+    &lt;View style={styles.userItem}&gt;
+      &lt;View style={styles.userInfo}&gt;
+        &lt;Text style={styles.userName}&gt;{item.name}&lt;/Text&gt;
+        &lt;Text style={styles.userEmail}&gt;{item.email}&lt;/Text&gt;
+      &lt;/View&gt;
+      &lt;Button
+        title="Delete"
+        onPress={() =&gt; deleteUser(item.id)}
+        color="red"
+      /&gt;
+    &lt;/View&gt;
+  );
+
+  if (loading) {
+    return &lt;ActivityIndicator size="large" /&gt;;
+  }
+
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Text style={styles.title}&gt;User Management&lt;/Text&gt;
+      
+      &lt;View style={styles.inputContainer}&gt;
+        &lt;TextInput
+          style={styles.input}
+          placeholder="Name"
+          value={name}
+          onChangeText={setName}
+        /&gt;
+        &lt;TextInput
+          style={styles.input}
+          placeholder="Email"
+          value={email}
+          onChangeText={setEmail}
+          keyboardType="email-address"
+        /&gt;
+        &lt;Button title="Add User" onPress={addUser} /&gt;
+      &lt;/View&gt;
+      
+      &lt;FlatList
+        data={users}
+        renderItem={renderUser}
+        keyExtractor={item =&gt; item.id.toString()}
+        ListEmptyComponent={&lt;Text&gt;No users found&lt;/Text&gt;}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<hr>
+<h2 id="realm-database"><a class="header" href="#realm-database"><strong>Realm Database</strong></a></h2>
+<h3 id="setup-and-configuration-1"><a class="header" href="#setup-and-configuration-1"><strong>Setup and Configuration</strong></a></h3>
+<h4 id="installation-2"><a class="header" href="#installation-2"><strong>Installation</strong></a></h4>
+<pre><code class="language-bash"># Install Realm
+npm install realm
+
+# For iOS
+cd ios &amp;&amp; pod install
+</code></pre>
+<h4 id="database-setup-1"><a class="header" href="#database-setup-1"><strong>Database Setup</strong></a></h4>
+<pre><code class="language-javascript">import Realm from 'realm';
+
+// Define schema
+const UserSchema = {
+  name: 'User',
+  properties: {
+    id: { type: 'int', default: Date.now() },
+    name: 'string',
+    email: 'string',
+    posts: { type: 'list', objectType: 'Post' },
+    createdAt: { type: 'date', default: new Date() },
+  },
+};
+
+const PostSchema = {
+  name: 'Post',
+  properties: {
+    id: { type: 'int', default: Date.now() },
+    title: 'string',
+    content: 'string',
+    user: { type: 'linkingObjects', objectType: 'User', property: 'posts' },
+    createdAt: { type: 'date', default: new Date() },
+  },
+};
+
+// Initialize Realm
+const realm = new Realm({
+  schema: [UserSchema, PostSchema],
+  schemaVersion: 1,
+});
+
+export default realm;
+</code></pre>
+<h4 id="crud-operations-1"><a class="header" href="#crud-operations-1"><strong>CRUD Operations</strong></a></h4>
+<pre><code class="language-javascript">// Create user
+const createUser = (name, email) =&gt; {
+  realm.write(() =&gt; {
+    const user = realm.create('User', {
+      name: name,
+      email: email,
+    });
+    return user;
+  });
+};
+
+// Read users
+const getUsers = () =&gt; {
+  return realm.objects('User');
+};
+
+// Update user
+const updateUser = (id, name, email) =&gt; {
+  realm.write(() =&gt; {
+    const user = realm.objects('User').filtered(`id = ${id}`)[0];
+    if (user) {
+      user.name = name;
+      user.email = email;
+    }
+  });
+};
+
+// Delete user
+const deleteUser = (id) =&gt; {
+  realm.write(() =&gt; {
+    const user = realm.objects('User').filtered(`id = ${id}`)[0];
+    if (user) {
+      realm.delete(user);
+    }
+  });
+};
+
+// Query with filters
+const searchUsers = (searchTerm) =&gt; {
+  return realm.objects('User').filtered(
+    `name CONTAINS[c] $0 OR email CONTAINS[c] $0`,
+    searchTerm
+  );
+};
+</code></pre>
+<hr>
+<h2 id="file-system-storage"><a class="header" href="#file-system-storage"><strong>File System Storage</strong></a></h2>
+<h3 id="document-storage"><a class="header" href="#document-storage"><strong>Document Storage</strong></a></h3>
+<pre><code class="language-javascript">import { DocumentDirectoryPath, writeFile, readFile, exists } from 'react-native-fs';
+
+const saveDocument = async (filename, content) =&gt; {
+  try {
+    const path = `${DocumentDirectoryPath}/${filename}`;
+    await writeFile(path, content, 'utf8');
+    console.log('Document saved successfully');
+    return path;
+  } catch (error) {
+    console.error('Error saving document:', error);
+    throw error;
+  }
+};
+
+const loadDocument = async (filename) =&gt; {
+  try {
+    const path = `${DocumentDirectoryPath}/${filename}`;
+    const exists = await exists(path);
+    
+    if (!exists) {
+      return null;
+    }
+    
+    const content = await readFile(path, 'utf8');
+    return content;
+  } catch (error) {
+    console.error('Error loading document:', error);
+    throw error;
+  }
+};
+
+// Usage example
+const DocumentManager = () =&gt; {
+  const [document, setDocument] = useState('');
+  const [filename, setFilename] = useState('notes.txt');
+
+  const saveDocument = async () =&gt; {
+    try {
+      await saveDocument(filename, document);
+      alert('Document saved successfully');
+    } catch (error) {
+      alert('Failed to save document');
+    }
+  };
+
+  const loadDocument = async () =&gt; {
+    try {
+      const content = await loadDocument(filename);
+      if (content) {
+        setDocument(content);
+      }
+    } catch (error) {
+      alert('Failed to load document');
+    }
+  };
+
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;TextInput
+        style={styles.input}
+        placeholder="Filename"
+        value={filename}
+        onChangeText={setFilename}
+      /&gt;
+      &lt;TextInput
+        style={[styles.input, styles.textArea]}
+        placeholder="Document content"
+        value={document}
+        onChangeText={setDocument}
+        multiline
+        numberOfLines={10}
+      /&gt;
+      &lt;View style={styles.buttonContainer}&gt;
+        &lt;Button title="Load" onPress={loadDocument} /&gt;
+        &lt;Button title="Save" onPress={saveDocument} /&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<hr>
+<h2 id="secure-storage"><a class="header" href="#secure-storage"><strong>Secure Storage</strong></a></h2>
+<h3 id="encrypted-storage"><a class="header" href="#encrypted-storage"><strong>Encrypted Storage</strong></a></h3>
+<pre><code class="language-javascript">import EncryptedStorage from 'react-native-encrypted-storage';
+
+// Store sensitive data
+const storeSecureData = async (key, value) =&gt; {
+  try {
+    await EncryptedStorage.setItem(key, JSON.stringify(value));
+    console.log('Secure data stored successfully');
+  } catch (error) {
+    console.error('Error storing secure data:', error);
+  }
+};
+
+// Retrieve sensitive data
+const getSecureData = async (key) =&gt; {
+  try {
+    const value = await EncryptedStorage.getItem(key);
+    if (value !== null) {
+      return JSON.parse(value);
+    }
+    return null;
+  } catch (error) {
+    console.error('Error retrieving secure data:', error);
+    return null;
+  }
+};
+
+// Authentication token storage
+const TokenManager = {
+  storeToken: async (token) =&gt; {
+    await storeSecureData('auth_token', {
+      token: token,
+      expiresAt: Date.now() + (24 * 60 * 60 * 1000), // 24 hours
+    });
+  },
+
+  getToken: async () =&gt; {
+    const tokenData = await getSecureData('auth_token');
+    if (!tokenData) {
+      return null;
+    }
+
+    if (Date.now() &gt; tokenData.expiresAt) {
+      await EncryptedStorage.removeItem('auth_token');
+      return null;
+    }
+
+    return tokenData.token;
+  },
+
+  removeToken: async () =&gt; {
+    try {
+      await EncryptedStorage.removeItem('auth_token');
+    } catch (error) {
+      console.error('Error removing token:', error);
+    }
+  },
+};
+</code></pre>
+<hr>
+<h2 id="data-synchronization"><a class="header" href="#data-synchronization"><strong>Data Synchronization</strong></a></h2>
+<h3 id="offline-first-architecture"><a class="header" href="#offline-first-architecture"><strong>Offline-First Architecture</strong></a></h3>
+<pre><code class="language-javascript">import NetInfo from '@react-native-community/netinfo';
+
+class DataManager {
+  constructor() {
+    this.isOnline = true;
+    this.pendingOperations = [];
+    this.setupNetworkListener();
+  }
+
+  setupNetworkListener() {
+    NetInfo.addEventListener(state =&gt; {
+      this.isOnline = state.isConnected;
+      if (this.isOnline) {
+        this.syncPendingOperations();
+      }
+    });
+  }
+
+  async saveData(data, isCritical = false) {
+    // Save to local storage immediately
+    await this.saveToLocalStorage(data);
+
+    if (this.isOnline || isCritical) {
+      try {
+        // Sync with server
+        await this.syncWithServer(data);
+      } catch (error) {
+        // Add to pending operations if sync fails
+        this.pendingOperations.push({ type: 'save', data });
+      }
+    } else {
+      // Add to pending operations for later sync
+      this.pendingOperations.push({ type: 'save', data });
+    }
+  }
+
+  async syncPendingOperations() {
+    const operations = [...this.pendingOperations];
+    this.pendingOperations = [];
+
+    for (const operation of operations) {
+      try {
+        if (operation.type === 'save') {
+          await this.syncWithServer(operation.data);
+        }
+      } catch (error) {
+        // Re-add to pending operations if sync fails
+        this.pendingOperations.push(operation);
+      }
+    }
+  }
+
+  async saveToLocalStorage(data) {
+    // Implement local storage logic
+    await AsyncStorage.setItem(`data_${data.id}`, JSON.stringify(data));
+  }
+
+  async syncWithServer(data) {
+    // Implement server sync logic
+    const response = await fetch('https://api.example.com/data', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error('Sync failed');
+    }
+
+    return response.json();
+  }
+}
+
+const dataManager = new DataManager();
+</code></pre>
+<hr>
+<h2 id="real-use-case"><a class="header" href="#real-use-case"><strong>Real Use Case</strong></a></h2>
+<h3 id="e-commerce-app-storage"><a class="header" href="#e-commerce-app-storage"><strong>E-commerce App Storage</strong></a></h3>
+<pre><code class="language-javascript">// Storage service for e-commerce app
+class EcommerceStorage {
+  constructor() {
+    this.initDatabase();
+  }
+
+  async initDatabase() {
+    try {
+      this.db = await initDatabase();
+    } catch (error) {
+      console.error('Database initialization failed:', error);
+    }
+  }
+
+  // User preferences
+  async saveUserPreferences(preferences) {
+    await AsyncStorage.setItem('user_preferences', JSON.stringify(preferences));
+  }
+
+  async getUserPreferences() {
+    const preferences = await AsyncStorage.getItem('user_preferences');
+    return preferences ? JSON.parse(preferences) : {};
+  }
+
+  // Shopping cart
+  async saveCart(cart) {
+    await AsyncStorage.setItem('shopping_cart', JSON.stringify(cart));
+  }
+
+  async getCart() {
+    const cart = await AsyncStorage.getItem('shopping_cart');
+    return cart ? JSON.parse(cart) : { items: [], total: 0 };
+  }
+
+  // Order history
+  async saveOrder(order) {
+    return new Promise((resolve, reject) =&gt; {
+      this.db.transaction((tx) =&gt; {
+        tx.executeSql(
+          `INSERT INTO orders (user_id, total, status, items, created_at) 
+           VALUES (?, ?, ?, ?, ?)`,
+          [order.userId, order.total, order.status, JSON.stringify(order.items), new Date()],
+          (tx, results) =&gt; {
+            resolve(results.insertId);
+          },
+          (tx, error) =&gt; {
+            reject(error);
+          }
+        );
+      });
+    });
+  }
+
+  async getOrders(userId) {
+    return new Promise((resolve, reject) =&gt; {
+      this.db.transaction((tx) =&gt; {
+        tx.executeSql(
+          'SELECT * FROM orders WHERE user_id = ? ORDER BY created_at DESC',
+          [userId],
+          (tx, results) =&gt; {
+            const orders = [];
+            for (let i = 0; i &lt; results.rows.length; i++) {
+              const order = results.rows.item(i);
+              order.items = JSON.parse(order.items);
+              orders.push(order);
+            }
+            resolve(orders);
+          },
+          (tx, error) =&gt; {
+            reject(error);
+          }
+        );
+      });
+    });
+  }
+
+  // Product cache
+  async cacheProducts(products) {
+    await AsyncStorage.setItem('cached_products', JSON.stringify(products));
+  }
+
+  async getCachedProducts() {
+    const cached = await AsyncStorage.getItem('cached_products');
+    return cached ? JSON.parse(cached) : [];
+  }
+
+  // Wishlist
+  async addToWishlist(productId) {
+    const wishlist = await this.getWishlist();
+    if (!wishlist.includes(productId)) {
+      wishlist.push(productId);
+      await AsyncStorage.setItem('wishlist', JSON.stringify(wishlist));
+    }
+  }
+
+  async removeFromWishlist(productId) {
+    const wishlist = await this.getWishlist();
+    const index = wishlist.indexOf(productId);
+    if (index &gt; -1) {
+      wishlist.splice(index, 1);
+      await AsyncStorage.setItem('wishlist', JSON.stringify(wishlist));
+    }
+  }
+
+  async getWishlist() {
+    const wishlist = await AsyncStorage.getItem('wishlist');
+    return wishlist ? JSON.parse(wishlist) : [];
+  }
+}
+
+const storage = new EcommerceStorage();
+
+// Usage in component
+const ShoppingCartScreen = () =&gt; {
+  const [cart, setCart] = useState({ items: [], total: 0 });
+
+  useEffect(() =&gt; {
+    loadCart();
+  }, []);
+
+  const loadCart = async () =&gt; {
+    try {
+      const savedCart = await storage.getCart();
+      setCart(savedCart);
+    } catch (error) {
+      console.error('Error loading cart:', error);
+    }
+  };
+
+  const updateCart = async (newCart) =&gt; {
+    try {
+      setCart(newCart);
+      await storage.saveCart(newCart);
+    } catch (error) {
+      console.error('Error saving cart:', error);
+    }
+  };
+
+  const addToCart = (product) =&gt; {
+    const existingItem = cart.items.find(item =&gt; item.id === product.id);
+    let newItems;
+
+    if (existingItem) {
+      newItems = cart.items.map(item =&gt;
+        item.id === product.id
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      );
+    } else {
+      newItems = [...cart.items, { ...product, quantity: 1 }];
+    }
+
+    const newTotal = newItems.reduce((sum, item) =&gt; sum + (item.price * item.quantity), 0);
+    updateCart({ items: newItems, total: newTotal });
+  };
+
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Text style={styles.title}&gt;Shopping Cart&lt;/Text&gt;
+      &lt;Text style={styles.total}&gt;Total: ${cart.total.toFixed(2)}&lt;/Text&gt;
+      {/* Cart items rendering */}
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<hr>
+<h2 id="pro-tip"><a class="header" href="#pro-tip"><strong>Pro Tip</strong></a></h2>
+<p><strong>Implement a storage abstraction layer to make it easy to switch between different storage solutions. This allows you to start with AsyncStorage for simple use cases and migrate to SQLite or Realm as your needs grow, without changing your application code.</strong></p>
+<pre><code class="language-javascript">// Storage abstraction
+class StorageService {
+  constructor(storageType = 'async') {
+    this.storageType = storageType;
+    this.initStorage();
+  }
+
+  initStorage() {
+    switch (this.storageType) {
+      case 'async':
+        this.storage = AsyncStorage;
+        break;
+      case 'sqlite':
+        this.storage = new SQLiteService();
+        break;
+      case 'realm':
+        this.storage = new RealmService();
+        break;
+      default:
+        this.storage = AsyncStorage;
+    }
+  }
+
+  async set(key, value) {
+    return this.storage.set(key, value);
+  }
+
+  async get(key) {
+    return this.storage.get(key);
+  }
+
+  async remove(key) {
+    return this.storage.remove(key);
+  }
+}
+
+// Usage
+const storage = new StorageService('sqlite'); // Easy to switch storage type
+</code></pre>
+<hr>
+<h2 id="exercise--mini-task"><a class="header" href="#exercise--mini-task"><strong>Exercise / Mini Task</strong></a></h2>
+<p><strong>Task</strong>: Create a comprehensive storage solution for a note-taking app with the following features:</p>
+<ol>
+<li><strong>AsyncStorage</strong>: Store user preferences and settings</li>
+<li><strong>SQLite</strong>: Store notes with categories and tags</li>
+<li><strong>File System</strong>: Store attachments and images</li>
+<li><strong>Secure Storage</strong>: Store sensitive information like passwords</li>
+<li><strong>Offline Sync</strong>: Implement offline-first architecture</li>
+</ol>
+<p><strong>Requirements</strong>:</p>
+<ul>
+<li>Create, read, update, and delete notes</li>
+<li>Add categories and tags to notes</li>
+<li>Store attachments with notes</li>
+<li>Sync data when online</li>
+<li>Cache recent notes for offline access</li>
+<li>Implement search functionality</li>
+<li>Add user preferences (theme, font size, etc.)</li>
+</ul>
+<p><strong>Bonus</strong>:</p>
+<ul>
+<li>Implement data encryption</li>
+<li>Add backup and restore functionality</li>
+<li>Create data migration system</li>
+<li>Implement conflict resolution</li>
+<li>Add data analytics and usage tracking</li>
+</ul>
+<hr>
+<p><em>Data persistence is essential for creating robust React Native applications. Choose the right storage solution based on your data structure, size, and security requirements to ensure optimal performance and user experience.</em></p>
+
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "react-native/storage.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

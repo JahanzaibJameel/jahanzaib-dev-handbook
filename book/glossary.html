@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>Glossary &amp; Terminology - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="Glossary &amp; Terminology - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Glossary &amp; Terminology - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>Glossary &amp; Terminology - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="custom.css">
+    <script src="custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="glossary.md">
-    <meta property="og:title" content="Glossary &amp; Terminology - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Glossary &amp; Terminology - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="glossary.md">
-    <meta property="twitter:title" content="Glossary &amp; Terminology - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="Glossary &amp; Terminology - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="Glossary &amp; Terminology - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="glossary.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="theme/css/tokens.css" as="style">
-    <link rel="preload" href="theme/css/base.css" as="style">
-    <link rel="preload" href="theme/css/layout.css" as="style">
-    <link rel="preload" href="theme/css/components.css" as="style">
-    <link rel="preload" href="theme/css/animations.css" as="style">
-    <link rel="preload" href="theme/css/syntax.css" as="style">
-    <link rel="preload" href="theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="theme/css/tokens.css">
-    <link rel="stylesheet" href="theme/css/base.css">
-    <link rel="stylesheet" href="theme/css/layout.css">
-    <link rel="stylesheet" href="theme/css/components.css">
-    <link rel="stylesheet" href="theme/css/animations.css">
-    <link rel="stylesheet" href="theme/css/syntax.css">
-    <link rel="stylesheet" href="theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" href="icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "Glossary &amp; Terminology - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="theme/js/core.js">
-    <link rel="modulepreload" href="theme/js/animations.js">
-    <link rel="modulepreload" href="theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,108 +525,260 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    Glossary &amp; Terminology - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
+        <div id="content">
+            <main>
+                <h1 id="glossary--terminology"><a class="header" href="#glossary--terminology">Glossary &amp; Terminology</a></h1>
+<p>A comprehensive dictionary of technical terms, concepts, and jargon used throughout this handbook.</p>
+<h2 id="a"><a class="header" href="#a"><strong>A</strong></a></h2>
+<h3 id="api-application-programming-interface"><a class="header" href="#api-application-programming-interface">API (Application Programming Interface)</a></h3>
+<p>A set of rules and protocols that allows different software applications to communicate with each other.</p>
+<h3 id="asynchronous-programming"><a class="header" href="#asynchronous-programming">Asynchronous Programming</a></h3>
+<p>A programming paradigm that allows operations to run independently without blocking the main thread.</p>
+<h3 id="agile-development"><a class="header" href="#agile-development">Agile Development</a></h3>
+<p>An iterative approach to software development that emphasizes flexibility, collaboration, and customer feedback.</p>
+<hr>
+<h2 id="b"><a class="header" href="#b"><strong>B</strong></a></h2>
+<h3 id="backend"><a class="header" href="#backend">Backend</a></h3>
+<p>The server-side of an application that handles business logic, database operations, and API endpoints.</p>
+<h3 id="bug"><a class="header" href="#bug">Bug</a></h3>
+<p>An error, flaw, or fault in a computer program that causes it to produce incorrect or unexpected results.</p>
+<h3 id="bundle"><a class="header" href="#bundle">Bundle</a></h3>
+<p>In JavaScript development, the process of combining multiple files into a single file for deployment.</p>
+<hr>
+<h2 id="c"><a class="header" href="#c"><strong>C</strong></a></h2>
+<h3 id="component"><a class="header" href="#component">Component</a></h3>
+<p>A reusable, self-contained piece of UI in React or React Native applications.</p>
+<h3 id="cors-cross-origin-resource-sharing"><a class="header" href="#cors-cross-origin-resource-sharing">CORS (Cross-Origin Resource Sharing)</a></h3>
+<p>A security feature that allows web applications to request resources from different domains.</p>
+<h3 id="css-in-js"><a class="header" href="#css-in-js">CSS-in-JS</a></h3>
+<p>A technique for writing CSS within JavaScript code, often used in React applications.</p>
+<h3 id="cache"><a class="header" href="#cache">Cache</a></h3>
+<p>A temporary storage area that holds frequently accessed data to improve performance.</p>
+<hr>
+<h2 id="d"><a class="header" href="#d"><strong>D</strong></a></h2>
+<h3 id="database"><a class="header" href="#database">Database</a></h3>
+<p>An organized collection of structured information, or data, typically stored electronically in a computer system.</p>
+<h3 id="deployment"><a class="header" href="#deployment">Deployment</a></h3>
+<p>The process of making a software application available for use by installing it on servers or app stores.</p>
+<h3 id="dom-document-object-model"><a class="header" href="#dom-document-object-model">DOM (Document Object Model)</a></h3>
+<p>A programming interface for HTML documents that allows programs to change the document structure, style, and content.</p>
+<hr>
+<h2 id="e"><a class="header" href="#e"><strong>E</strong></a></h2>
+<h3 id="end-to-end-testing"><a class="header" href="#end-to-end-testing">End-to-End Testing</a></h3>
+<p>A testing methodology that validates the entire application workflow from start to finish.</p>
+<h3 id="environment"><a class="header" href="#environment">Environment</a></h3>
+<p>The set of conditions and configurations in which software runs (development, staging, production).</p>
+<h3 id="event-loop"><a class="header" href="#event-loop">Event Loop</a></h3>
+<p>A programming construct that handles asynchronous operations in JavaScript.</p>
+<hr>
+<h2 id="f"><a class="header" href="#f"><strong>F</strong></a></h2>
+<h3 id="frontend"><a class="header" href="#frontend">Frontend</a></h3>
+<p>The client-side of an application that users interact with directly in their browsers or mobile devices.</p>
+<h3 id="framework"><a class="header" href="#framework">Framework</a></h3>
+<p>A pre-written collection of code, libraries, and tools that provides a foundation for building applications.</p>
+<h3 id="full-stack"><a class="header" href="#full-stack">Full-Stack</a></h3>
+<p>Development that involves both frontend and backend technologies.</p>
+<hr>
+<h2 id="g"><a class="header" href="#g"><strong>G</strong></a></h2>
+<h3 id="git"><a class="header" href="#git">Git</a></h3>
+<p>A distributed version control system for tracking changes in source code during software development.</p>
+<h3 id="github"><a class="header" href="#github">GitHub</a></h3>
+<p>A web-based platform for hosting Git repositories and collaborating on software projects.</p>
+<h3 id="graphql"><a class="header" href="#graphql">GraphQL</a></h3>
+<p>A query language for APIs that allows clients to request exactly the data they need.</p>
+<hr>
+<h2 id="h"><a class="header" href="#h"><strong>H</strong></a></h2>
+<h3 id="hook-react"><a class="header" href="#hook-react">Hook (React)</a></h3>
+<p>Functions that let you use state and other React features in functional components.</p>
+<h3 id="http-hypertext-transfer-protocol"><a class="header" href="#http-hypertext-transfer-protocol">HTTP (Hypertext Transfer Protocol)</a></h3>
+<p>The foundation of data communication on the World Wide Web.</p>
+<h3 id="hot-reloading"><a class="header" href="#hot-reloading">Hot Reloading</a></h3>
+<p>A development feature that automatically updates the application when code changes are saved.</p>
+<hr>
+<h2 id="i"><a class="header" href="#i"><strong>I</strong></a></h2>
+<h3 id="ide-integrated-development-environment"><a class="header" href="#ide-integrated-development-environment">IDE (Integrated Development Environment)</a></h3>
+<p>A software application that provides comprehensive facilities for software development.</p>
+<h3 id="integration-testing"><a class="header" href="#integration-testing">Integration Testing</a></h3>
+<p>Testing that verifies different modules or services work together correctly.</p>
+<h3 id="iot-internet-of-things"><a class="header" href="#iot-internet-of-things">IoT (Internet of Things)</a></h3>
+<p>The network of physical devices embedded with sensors and connectivity for data exchange.</p>
+<hr>
+<h2 id="j"><a class="header" href="#j"><strong>J</strong></a></h2>
+<h3 id="javascript"><a class="header" href="#javascript">JavaScript</a></h3>
+<p>A high-level, interpreted programming language that is one of the core technologies of the World Wide Web.</p>
+<h3 id="jsx-javascript-xml"><a class="header" href="#jsx-javascript-xml">JSX (JavaScript XML)</a></h3>
+<p>A syntax extension for JavaScript that allows you to write HTML-like code in JavaScript.</p>
+<h3 id="json-javascript-object-notation"><a class="header" href="#json-javascript-object-notation">JSON (JavaScript Object Notation)</a></h3>
+<p>A lightweight data-interchange format that is easy for humans to read and write.</p>
+<hr>
+<h2 id="k"><a class="header" href="#k"><strong>K</strong></a></h2>
+<h3 id="key"><a class="header" href="#key">Key</a></h3>
+<p>In databases, a field that uniquely identifies a record in a table.</p>
+<h3 id="kubernetes"><a class="header" href="#kubernetes">Kubernetes</a></h3>
+<p>An open-source container orchestration platform for automating deployment, scaling, and management.</p>
+<hr>
+<h2 id="l"><a class="header" href="#l"><strong>L</strong></a></h2>
+<h3 id="library"><a class="header" href="#library">Library</a></h3>
+<p>A collection of pre-written code that developers can use to perform common tasks.</p>
+<h3 id="local-storage"><a class="header" href="#local-storage">Local Storage</a></h3>
+<p>A web storage API that allows websites to store data locally in the user’s browser.</p>
+<h3 id="lazy-loading"><a class="header" href="#lazy-loading">Lazy Loading</a></h3>
+<p>A design pattern that defers loading of non-critical resources until they are needed.</p>
+<hr>
+<h2 id="m"><a class="header" href="#m"><strong>M</strong></a></h2>
+<h3 id="middleware"><a class="header" href="#middleware">Middleware</a></h3>
+<p>Software that acts as a bridge between an operating system and applications.</p>
+<h3 id="mock"><a class="header" href="#mock">Mock</a></h3>
+<p>A simulated object that mimics the behavior of real objects in a controlled manner for testing.</p>
+<h3 id="mvc-model-view-controller"><a class="header" href="#mvc-model-view-controller">MVC (Model-View-Controller)</a></h3>
+<p>An architectural pattern that separates an application into three main components.</p>
+<hr>
+<h2 id="n"><a class="header" href="#n"><strong>N</strong></a></h2>
+<h3 id="nodejs"><a class="header" href="#nodejs">Node.js</a></h3>
+<p>A JavaScript runtime built on Chrome’s V8 JavaScript engine for server-side development.</p>
+<h3 id="nosql"><a class="header" href="#nosql">NoSQL</a></h3>
+<p>A database type that provides a mechanism for storage and retrieval of data that is modeled in means other than the tabular relations used in relational databases.</p>
+<h3 id="npm-node-package-manager"><a class="header" href="#npm-node-package-manager">npm (Node Package Manager)</a></h3>
+<p>The default package manager for Node.js, used to install and manage JavaScript packages.</p>
+<hr>
+<h2 id="o"><a class="header" href="#o"><strong>O</strong></a></h2>
+<h3 id="object-oriented-programming-oop"><a class="header" href="#object-oriented-programming-oop">Object-Oriented Programming (OOP)</a></h3>
+<p>A programming paradigm based on the concept of “objects” which contain data and code.</p>
+<h3 id="oauth"><a class="header" href="#oauth">OAuth</a></h3>
+<p>An open standard for access delegation, commonly used for token-based authentication.</p>
+<h3 id="openapi"><a class="header" href="#openapi">OpenAPI</a></h3>
+<p>A specification for building RESTful APIs that provides a standardized way to describe API endpoints.</p>
+<hr>
+<h2 id="p"><a class="header" href="#p"><strong>P</strong></a></h2>
+<h3 id="package-manager"><a class="header" href="#package-manager">Package Manager</a></h3>
+<p>A tool that automates the process of installing, upgrading, configuring, and removing software packages.</p>
+<h3 id="promise"><a class="header" href="#promise">Promise</a></h3>
+<p>An object representing the eventual completion or failure of an asynchronous operation.</p>
+<h3 id="pull-request"><a class="header" href="#pull-request">Pull Request</a></h3>
+<p>A mechanism for developers to notify team members that they have completed a feature.</p>
+<hr>
+<h2 id="q"><a class="header" href="#q"><strong>Q</strong></a></h2>
+<h3 id="query"><a class="header" href="#query">Query</a></h3>
+<p>A request for information from a database.</p>
+<h3 id="queue"><a class="header" href="#queue">Queue</a></h3>
+<p>A data structure that follows the First-In-First-Out (FIFO) principle.</p>
+<hr>
+<h2 id="r"><a class="header" href="#r"><strong>R</strong></a></h2>
+<h3 id="react"><a class="header" href="#react">React</a></h3>
+<p>A JavaScript library for building user interfaces, particularly single-page applications.</p>
+<h3 id="react-native"><a class="header" href="#react-native">React Native</a></h3>
+<p>A framework for building native mobile apps using JavaScript and React.</p>
+<h3 id="redux"><a class="header" href="#redux">Redux</a></h3>
+<p>A predictable state container for JavaScript applications, commonly used with React.</p>
+<h3 id="rest-representational-state-transfer"><a class="header" href="#rest-representational-state-transfer">REST (Representational State Transfer)</a></h3>
+<p>An architectural style for designing networked applications.</p>
+<hr>
+<h2 id="s"><a class="header" href="#s"><strong>S</strong></a></h2>
+<h3 id="sdk-software-development-kit"><a class="header" href="#sdk-software-development-kit">SDK (Software Development Kit)</a></h3>
+<p>A collection of software development tools in one installable package.</p>
+<h3 id="server"><a class="header" href="#server">Server</a></h3>
+<p>A computer or system that provides resources, data, services, or programs to other computers over a network.</p>
+<h3 id="state"><a class="header" href="#state">State</a></h3>
+<p>The data that a component maintains and can change over time in a React application.</p>
+<h3 id="sql-structured-query-language"><a class="header" href="#sql-structured-query-language">SQL (Structured Query Language)</a></h3>
+<p>A domain-specific language used for managing and querying relational databases.</p>
+<hr>
+<h2 id="t"><a class="header" href="#t"><strong>T</strong></a></h2>
+<h3 id="testing"><a class="header" href="#testing">Testing</a></h3>
+<p>The process of evaluating and verifying that a software application works as expected.</p>
+<h3 id="typescript"><a class="header" href="#typescript">TypeScript</a></h3>
+<p>A strongly typed programming language that builds on JavaScript, adding static type definitions.</p>
+<h3 id="token"><a class="header" href="#token">Token</a></h3>
+<p>In authentication, a piece of data that represents a user’s identity and permissions.</p>
+<hr>
+<h2 id="u"><a class="header" href="#u"><strong>U</strong></a></h2>
+<h3 id="ui-user-interface"><a class="header" href="#ui-user-interface">UI (User Interface)</a></h3>
+<p>The space where interactions between humans and computers occur.</p>
+<h3 id="unit-testing"><a class="header" href="#unit-testing">Unit Testing</a></h3>
+<p>The practice of testing individual components or functions in isolation.</p>
+<h3 id="url-uniform-resource-locator"><a class="header" href="#url-uniform-resource-locator">URL (Uniform Resource Locator)</a></h3>
+<p>The address of a specific web page or file on the internet.</p>
+<hr>
+<h2 id="v"><a class="header" href="#v"><strong>V</strong></a></h2>
+<h3 id="validation"><a class="header" href="#validation">Validation</a></h3>
+<p>The process of ensuring that data conforms to specific rules or constraints.</p>
+<h3 id="version-control"><a class="header" href="#version-control">Version Control</a></h3>
+<p>A system that records changes to files over time so you can recall specific versions later.</p>
+<h3 id="virtual-dom"><a class="header" href="#virtual-dom">Virtual DOM</a></h3>
+<p>A JavaScript representation of the real DOM used by React for efficient UI updates.</p>
+<hr>
+<h2 id="w"><a class="header" href="#w"><strong>W</strong></a></h2>
+<h3 id="webhook"><a class="header" href="#webhook">Webhook</a></h3>
+<p>A way for an app to provide other applications with real-time information.</p>
+<h3 id="websocket"><a class="header" href="#websocket">WebSocket</a></h3>
+<p>A communication protocol that provides full-duplex communication channels over a single TCP connection.</p>
+<hr>
+<h2 id="x"><a class="header" href="#x"><strong>X</strong></a></h2>
+<h3 id="xml-extensible-markup-language"><a class="header" href="#xml-extensible-markup-language">XML (eXtensible Markup Language)</a></h3>
+<p>A markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable.</p>
+<hr>
+<h2 id="y"><a class="header" href="#y"><strong>Y</strong></a></h2>
+<h3 id="yaml-yaml-aint-markup-language"><a class="header" href="#yaml-yaml-aint-markup-language">YAML (YAML Ain’t Markup Language)</a></h3>
+<p>A human-readable data serialization standard that is often used for configuration files.</p>
+<hr>
+<h2 id="z"><a class="header" href="#z"><strong>Z</strong></a></h2>
+<h3 id="zero-day-exploit"><a class="header" href="#zero-day-exploit">Zero-Day Exploit</a></h3>
+<p>A cyberattack that occurs on the same day a weakness is discovered in software.</p>
+<hr>
+<h2 id="common-acronyms"><a class="header" href="#common-acronyms"><strong>Common Acronyms</strong></a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Acronym</th><th>Full Form</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>API</strong></td><td>Application Programming Interface</td><td>Interface for software communication</td></tr>
+<tr><td><strong>CI/CD</strong></td><td>Continuous Integration/Continuous Deployment</td><td>Automated software delivery pipeline</td></tr>
+<tr><td><strong>CRUD</strong></td><td>Create, Read, Update, Delete</td><td>Basic database operations</td></tr>
+<tr><td><strong>DOM</strong></td><td>Document Object Model</td><td>Programming interface for HTML documents</td></tr>
+<tr><td><strong>IDE</strong></td><td>Integrated Development Environment</td><td>Software development tool</td></tr>
+<tr><td><strong>JSON</strong></td><td>JavaScript Object Notation</td><td>Data interchange format</td></tr>
+<tr><td><strong>MVC</strong></td><td>Model-View-Controller</td><td>Architectural pattern</td></tr>
+<tr><td><strong>REST</strong></td><td>Representational State Transfer</td><td>API architectural style</td></tr>
+<tr><td><strong>SDK</strong></td><td>Software Development Kit</td><td>Development tools package</td></tr>
+<tr><td><strong>SQL</strong></td><td>Structured Query Language</td><td>Database query language</td></tr>
+<tr><td><strong>UI</strong></td><td>User Interface</td><td>User interaction surface</td></tr>
+<tr><td><strong>UX</strong></td><td>User Experience</td><td>Overall user interaction quality</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="industry-specific-terms"><a class="header" href="#industry-specific-terms"><strong>Industry-Specific Terms</strong></a></h2>
+<h3 id="mobile-development"><a class="header" href="#mobile-development"><strong>Mobile Development</strong></a></h3>
+<ul>
+<li><strong>Native App</strong>: An application developed specifically for a particular platform (iOS or Android)</li>
+<li><strong>Hybrid App</strong>: An application that combines elements of both native and web applications</li>
+<li><strong>Progressive Web App (PWA)</strong>: A web application that provides a native app-like experience</li>
+</ul>
+<h3 id="web-development"><a class="header" href="#web-development"><strong>Web Development</strong></a></h3>
+<ul>
+<li><strong>Single Page Application (SPA)</strong>: A web application that loads a single HTML page and dynamically updates content</li>
+<li><strong>Server-Side Rendering (SSR)</strong>: Rendering web pages on the server before sending to the client</li>
+<li><strong>Client-Side Rendering (CSR)</strong>: Rendering web pages in the browser using JavaScript</li>
+</ul>
+<h3 id="cloud-computing"><a class="header" href="#cloud-computing"><strong>Cloud Computing</strong></a></h3>
+<ul>
+<li><strong>IaaS</strong>: Infrastructure as a Service</li>
+<li><strong>PaaS</strong>: Platform as a Service</li>
+<li><strong>SaaS</strong>: Software as a Service</li>
+<li><strong>Serverless</strong>: Cloud computing model where the cloud provider manages the infrastructure</li>
+</ul>
+<hr>
+<p><em>This glossary is continuously updated with new terms and concepts as technology evolves. If you encounter a term not listed here, feel free to suggest its addition.</em></p>
 
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
-
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>Glossary &amp; Terminology - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;glossary--terminology&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#glossary--terminology&quot;&gt;Glossary &amp;amp; Terminology&lt;/a&gt;&lt;/h1&gt;
-
-                        </div>
-                        
-                    </article>
-                </div>
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "";
-        window.current_page = "glossary.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="theme/js/core.js"></script>
-    <script src="theme/js/animations.js"></script>
-    <script src="theme/js/search.js"></script>
-    
 </body>
 </html>

@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>Advanced Deployment Strategies - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="Advanced Deployment Strategies - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Advanced Deployment Strategies - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>Advanced Deployment Strategies - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="devops/deployment.md">
-    <meta property="og:title" content="Advanced Deployment Strategies - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Advanced Deployment Strategies - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="devops/deployment.md">
-    <meta property="twitter:title" content="Advanced Deployment Strategies - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="Advanced Deployment Strategies - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="Advanced Deployment Strategies - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="devops/deployment.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "Advanced Deployment Strategies - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,75 +525,26 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    Advanced Deployment Strategies - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
-
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>Advanced Deployment Strategies - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;deployment-strategies&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#deployment-strategies&quot;&gt;Deployment Strategies&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Deployment strategies define how you release your applications to production. Choosing the right strategy ensures reliable releases, minimal downtime, and quick rollback capabilities.&lt;/p&gt;
-&lt;h2 id&#x3D;&quot;-what-are-deployment-strategies&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-what-are-deployment-strategies&quot;&gt;🎯 What are Deployment Strategies?&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Deployment strategies are approaches to release new versions of your application while maintaining service availability and minimizing risk.&lt;/p&gt;
-&lt;h3 id&#x3D;&quot;why-deployment-strategies-matter&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#why-deployment-strategies-matter&quot;&gt;Why Deployment Strategies Matter&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Zero Downtime&lt;/strong&gt;: Keep your application available during updates&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Risk Mitigation&lt;/strong&gt;: Reduce impact of failed deployments&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;User Experience&lt;/strong&gt;: Seamless transitions for users&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rollback Capability&lt;/strong&gt;: Quick recovery from issues&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Progressive Delivery&lt;/strong&gt;: Gradual feature rollout&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id&#x3D;&quot;-modern-deployment-platforms&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-modern-deployment-platforms&quot;&gt;🚀 Modern Deployment Platforms&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;vercel---frontend-deployment&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#vercel---frontend-deployment&quot;&gt;Vercel - Frontend Deployment&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-bash&quot;&gt;# Install Vercel CLI
+        <div id="content">
+            <main>
+                <h1 id="deployment-strategies"><a class="header" href="#deployment-strategies">Deployment Strategies</a></h1>
+<p>Deployment strategies define how you release your applications to production. Choosing the right strategy ensures reliable releases, minimal downtime, and quick rollback capabilities.</p>
+<h2 id="-what-are-deployment-strategies"><a class="header" href="#-what-are-deployment-strategies">🎯 What are Deployment Strategies?</a></h2>
+<p>Deployment strategies are approaches to release new versions of your application while maintaining service availability and minimizing risk.</p>
+<h3 id="why-deployment-strategies-matter"><a class="header" href="#why-deployment-strategies-matter">Why Deployment Strategies Matter</a></h3>
+<ul>
+<li><strong>Zero Downtime</strong>: Keep your application available during updates</li>
+<li><strong>Risk Mitigation</strong>: Reduce impact of failed deployments</li>
+<li><strong>User Experience</strong>: Seamless transitions for users</li>
+<li><strong>Rollback Capability</strong>: Quick recovery from issues</li>
+<li><strong>Progressive Delivery</strong>: Gradual feature rollout</li>
+</ul>
+<h2 id="-modern-deployment-platforms"><a class="header" href="#-modern-deployment-platforms">🚀 Modern Deployment Platforms</a></h2>
+<h3 id="vercel---frontend-deployment"><a class="header" href="#vercel---frontend-deployment">Vercel - Frontend Deployment</a></h3>
+<pre><code class="language-bash"># Install Vercel CLI
 npm i -g vercel
 
 # Deploy to Vercel
@@ -819,9 +555,9 @@ vercel link
 
 # Deploy specific directory
 vercel --prod dist/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;railway---backend-deployment&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#railway---backend-deployment&quot;&gt;Railway - Backend Deployment&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-bash&quot;&gt;# Install Railway CLI
+</code></pre>
+<h3 id="railway---backend-deployment"><a class="header" href="#railway---backend-deployment">Railway - Backend Deployment</a></h3>
+<pre><code class="language-bash"># Install Railway CLI
 npm install -g @railway/cli
 
 # Login to Railway
@@ -832,9 +568,9 @@ railway up
 
 # Deploy with Dockerfile
 railway up --dockerfile
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;render---full-stack-deployment&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#render---full-stack-deployment&quot;&gt;Render - Full-Stack Deployment&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-yaml&quot;&gt;# render.yaml
+</code></pre>
+<h3 id="render---full-stack-deployment"><a class="header" href="#render---full-stack-deployment">Render - Full-Stack Deployment</a></h3>
+<pre><code class="language-yaml"># render.yaml
 services:
   # Web service
   - type: web
@@ -862,9 +598,9 @@ services:
       - key: REDIS_URL
         value: redis://my-redis:6379
         sync: false
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;aws-amplify---react-native--web&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#aws-amplify---react-native--web&quot;&gt;AWS Amplify - React Native &amp;amp; Web&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-yaml&quot;&gt;# amplify.yml
+</code></pre>
+<h3 id="aws-amplify---react-native--web"><a class="header" href="#aws-amplify---react-native--web">AWS Amplify - React Native &amp; Web</a></h3>
+<pre><code class="language-yaml"># amplify.yml
 version: 1
 frontend:
   phases:
@@ -877,27 +613,27 @@ frontend:
   artifacts:
     baseDirectory: build
     files:
-      - &#x27;**/*&#x27;
+      - '**/*'
     discard:
-      - &#x27;**/*.map&#x27;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-deployment-strategies&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-deployment-strategies&quot;&gt;🔄 Deployment Strategies&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;blue-green-deployment&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#blue-green-deployment&quot;&gt;Blue-Green Deployment&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Blue-Green deployment maintains two identical production environments. Only one serves live traffic at any time.&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-mermaid&quot;&gt;graph TD
-    A[Developer Push] --&amp;gt; B[Build New Version]
-    B --&amp;gt; C[Deploy to Blue Environment]
-    C --&amp;gt; D[Health Check Blue]
-    D --&amp;gt; E[Switch Traffic to Blue]
-    E --&amp;gt; F[Monitor Blue Performance]
-    F --&amp;gt; G{Performance OK?}
-    G --&amp;gt;|Yes|H[Keep Green for Rollback]
-    G --&amp;gt;|No|I[Switch Back to Green]
-    I --&amp;gt; J[Blue becomes Production]
-    H --&amp;gt; K[Green becomes Staging]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id&#x3D;&quot;implementation&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#implementation&quot;&gt;Implementation&lt;/a&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-yaml&quot;&gt;# .github/workflows/blue-green.yml
+      - '**/*.map'
+</code></pre>
+<h2 id="-deployment-strategies"><a class="header" href="#-deployment-strategies">🔄 Deployment Strategies</a></h2>
+<h3 id="blue-green-deployment"><a class="header" href="#blue-green-deployment">Blue-Green Deployment</a></h3>
+<p>Blue-Green deployment maintains two identical production environments. Only one serves live traffic at any time.</p>
+<pre><code class="language-mermaid">graph TD
+    A[Developer Push] --&gt; B[Build New Version]
+    B --&gt; C[Deploy to Blue Environment]
+    C --&gt; D[Health Check Blue]
+    D --&gt; E[Switch Traffic to Blue]
+    E --&gt; F[Monitor Blue Performance]
+    F --&gt; G{Performance OK?}
+    G --&gt;|Yes|H[Keep Green for Rollback]
+    G --&gt;|No|I[Switch Back to Green]
+    I --&gt; J[Blue becomes Production]
+    H --&gt; K[Green becomes Staging]
+</code></pre>
+<h4 id="implementation"><a class="header" href="#implementation">Implementation</a></h4>
+<pre><code class="language-yaml"># .github/workflows/blue-green.yml
 name: Blue-Green Deployment
 
 on:
@@ -915,7 +651,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: &#x27;18&#x27;
+          node-version: '18'
           
       - name: Configure AWS CLI
         uses: aws-actions/configure-aws-credentials@v4
@@ -928,51 +664,51 @@ jobs:
         run: |
           # Deploy new version to blue environment
           aws s3 sync ./build/ s3://blue-bucket --delete
-          aws cloudfront create-invalidation --distribution-id BLUE_DISTRIBUTION_ID --paths &quot;/*&quot;
+          aws cloudfront create-invalidation --distribution-id BLUE_DISTRIBUTION_ID --paths "/*"
           
       - name: Health Check Blue
         run: |
           # Wait for blue to be healthy
-          timeout 300s bash -c &#x27;
+          timeout 300s bash -c '
             until curl -f https://blue.yourapp.com/health; do
               sleep 5
             done
-          &#x27;
+          '
           
       - name: Switch Traffic
         run: |
           # Update Route53 to point to blue
           aws route53 change-resource-record-sets \
             --hosted-zone-id YOUR_ZONE_ID \
-            --change-batch &#x27;{
-              &quot;Comment&quot;: &quot;Switch to blue deployment&quot;,
-              &quot;Changes&quot;: [{
-                &quot;Action&quot;: &quot;UPSERT&quot;,
-                &quot;ResourceRecordSet&quot;: {
-                  &quot;Name&quot;: &quot;yourapp.com&quot;,
-                  &quot;Type&quot;: &quot;A&quot;,
-                  &quot;AliasTarget&quot;: {
-                    &quot;DNSName&quot;: &quot;blue-bucket.s3.amazonaws.com&quot;,
-                    &quot;EvaluateTargetHealth&quot;: true
+            --change-batch '{
+              "Comment": "Switch to blue deployment",
+              "Changes": [{
+                "Action": "UPSERT",
+                "ResourceRecordSet": {
+                  "Name": "yourapp.com",
+                  "Type": "A",
+                  "AliasTarget": {
+                    "DNSName": "blue-bucket.s3.amazonaws.com",
+                    "EvaluateTargetHealth": true
                   }
                 }
               }]
-            }&#x27;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;canary-deployment&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#canary-deployment&quot;&gt;Canary Deployment&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Canary deployment releases new versions to a small subset of users before full rollout.&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-mermaid&quot;&gt;graph TD
-    A[New Version Ready] --&amp;gt; B[Deploy to Canary]
-    B --&amp;gt; C[Route 5% Traffic to Canary]
-    C --&amp;gt; D[Monitor Canary Metrics]
-    D --&amp;gt; E{Canary Healthy?}
-    E --&amp;gt;|Yes|F[Gradually Increase Traffic]
-    E --&amp;gt;|No|G[Rollback to Stable]
-    F --&amp;gt; H[100% Traffic to New Version]
-    H --&amp;gt; I[Canary becomes Production]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id&#x3D;&quot;implementation-1&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#implementation-1&quot;&gt;Implementation&lt;/a&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-yaml&quot;&gt;# .github/workflows/canary.yml
+            }'
+</code></pre>
+<h3 id="canary-deployment"><a class="header" href="#canary-deployment">Canary Deployment</a></h3>
+<p>Canary deployment releases new versions to a small subset of users before full rollout.</p>
+<pre><code class="language-mermaid">graph TD
+    A[New Version Ready] --&gt; B[Deploy to Canary]
+    B --&gt; C[Route 5% Traffic to Canary]
+    C --&gt; D[Monitor Canary Metrics]
+    D --&gt; E{Canary Healthy?}
+    E --&gt;|Yes|F[Gradually Increase Traffic]
+    E --&gt;|No|G[Rollback to Stable]
+    F --&gt; H[100% Traffic to New Version]
+    H --&gt; I[Canary becomes Production]
+</code></pre>
+<h4 id="implementation-1"><a class="header" href="#implementation-1">Implementation</a></h4>
+<pre><code class="language-yaml"># .github/workflows/canary.yml
 name: Canary Deployment
 
 on:
@@ -995,48 +731,48 @@ jobs:
       - name: Monitor Canary
         run: |
           # Monitor canary performance
-          timeout 900s bash -c &#x27;
+          timeout 900s bash -c '
             for i in {1..10}; do
-              error_rate&#x3D;$(kubectl get canary-metrics | jq &quot;.errorRate&quot;)
-              latency&#x3D;$(kubectl get canary-metrics | jq &quot;.p95Latency&quot;)
+              error_rate=$(kubectl get canary-metrics | jq ".errorRate")
+              latency=$(kubectl get canary-metrics | jq ".p95Latency")
               
-              if (( $(echo &quot;$error_rate&quot; | bc -l) &amp;gt; 1 )); then
-                echo &quot;Canary error rate too high: $error_rate%&quot;
+              if (( $(echo "$error_rate" | bc -l) &gt; 1 )); then
+                echo "Canary error rate too high: $error_rate%"
                 exit 1
               fi
               
-              if (( $(echo &quot;$latency&quot; | bc -l) &amp;gt; 500 )); then
-                echo &quot;Canary latency too high: ${latency}ms&quot;
+              if (( $(echo "$latency" | bc -l) &gt; 500 )); then
+                echo "Canary latency too high: ${latency}ms"
                 exit 1
               fi
               
               sleep 60
             done
-          &#x27;
+          '
           
       - name: Promote Canary
         if: success()
         run: |
           # Promote canary to production
-          kubectl patch service production-service -p &#x27;{&quot;spec&quot;:{&quot;selector&quot;:{&quot;version&quot;:&quot;canary&quot;}}}&#x27;
+          kubectl patch service production-service -p '{"spec":{"selector":{"version":"canary"}}}'
           
       - name: Rollback if Failed
         if: failure()
         run: |
           # Rollback to stable version
           kubectl rollout undo deployment/production
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;rolling-deployment&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#rolling-deployment&quot;&gt;Rolling Deployment&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Rolling deployment updates instances gradually without downtime.&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-mermaid&quot;&gt;graph TD
-    A[Start Rolling Update] --&amp;gt; B[Update 25% of Instances]
-    B --&amp;gt; C[Health Check Updated]
-    C --&amp;gt; D[Update Next 25%]
-    D --&amp;gt; E[Continue Until 100%]
-    E --&amp;gt; F[All Instances Updated]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id&#x3D;&quot;implementation-2&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#implementation-2&quot;&gt;Implementation&lt;/a&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-yaml&quot;&gt;# kubernetes/rolling-deployment.yaml
+</code></pre>
+<h3 id="rolling-deployment"><a class="header" href="#rolling-deployment">Rolling Deployment</a></h3>
+<p>Rolling deployment updates instances gradually without downtime.</p>
+<pre><code class="language-mermaid">graph TD
+    A[Start Rolling Update] --&gt; B[Update 25% of Instances]
+    B --&gt; C[Health Check Updated]
+    C --&gt; D[Update Next 25%]
+    D --&gt; E[Continue Until 100%]
+    E --&gt; F[All Instances Updated]
+</code></pre>
+<h4 id="implementation-2"><a class="header" href="#implementation-2">Implementation</a></h4>
+<pre><code class="language-yaml"># kubernetes/rolling-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -1073,10 +809,10 @@ spec:
             port: 3000
           initialDelaySeconds: 15
           periodSeconds: 20
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;ab-testing-deployment&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#ab-testing-deployment&quot;&gt;A/B Testing Deployment&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;A/B testing deploys different versions to different user segments for comparison.&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-yaml&quot;&gt;# .github/workflows/ab-testing.yml
+</code></pre>
+<h3 id="ab-testing-deployment"><a class="header" href="#ab-testing-deployment">A/B Testing Deployment</a></h3>
+<p>A/B testing deploys different versions to different user segments for comparison.</p>
+<pre><code class="language-yaml"># .github/workflows/ab-testing.yml
 name: A/B Testing Deployment
 
 on:
@@ -1104,147 +840,147 @@ jobs:
       - name: Configure Traffic Split
         run: |
           # Use feature flags or load balancer
-          curl -X POST &quot;https://api.vercel.com/v1/traffic&quot; \
-            -H &quot;Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}&quot; \
-            -d &#x27;{
-              &quot;projectId&quot;: &quot;${{ secrets.VERCEL_PROJECT_ID }}&quot;,
-              &quot;rules&quot;: [
+          curl -X POST "https://api.vercel.com/v1/traffic" \
+            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            -d '{
+              "projectId": "${{ secrets.VERCEL_PROJECT_ID }}",
+              "rules": [
                 {
-                  &quot;source&quot;: {
-                    &quot;type&quot;: &quot;header&quot;,
-                    &quot;value&quot;: &quot;version-a&quot;
+                  "source": {
+                    "type": "header",
+                    "value": "version-a"
                   },
-                  &quot;destination&quot;: {
-                    &quot;type&quot;: &quot;url&quot;,
-                    &quot;value&quot;: &quot;https://version-a.vercel.app&quot;
+                  "destination": {
+                    "type": "url",
+                    "value": "https://version-a.vercel.app"
                   },
-                  &quot;weight&quot;: 50
+                  "weight": 50
                 },
                 {
-                  &quot;source&quot;: {
-                    &quot;type&quot;: &quot;header&quot;,
-                    &quot;value&quot;: &quot;version-b&quot;
+                  "source": {
+                    "type": "header",
+                    "value": "version-b"
                   },
-                  &quot;destination&quot;: {
-                    &quot;type&quot;: &quot;url&quot;,
-                    &quot;value&quot;: &quot;https://version-b.vercel.app&quot;
+                  "destination": {
+                    "type": "url",
+                    "value": "https://version-b.vercel.app"
                   },
-                  &quot;weight&quot;: 50
+                  "weight": 50
                 }
               ]
-            }&#x27;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-multi-environment-deployment&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-multi-environment-deployment&quot;&gt;🌍 Multi-Environment Deployment&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;environment-configuration&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#environment-configuration&quot;&gt;Environment Configuration&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// config/environments.js
-const environments &#x3D; {
+            }'
+</code></pre>
+<h2 id="-multi-environment-deployment"><a class="header" href="#-multi-environment-deployment">🌍 Multi-Environment Deployment</a></h2>
+<h3 id="environment-configuration"><a class="header" href="#environment-configuration">Environment Configuration</a></h3>
+<pre><code class="language-javascript">// config/environments.js
+const environments = {
   development: {
-    apiUrl: &#x27;http://localhost:3001&#x27;,
-    databaseUrl: &#x27;postgresql://localhost:5432/myapp_dev&#x27;,
-    redisUrl: &#x27;redis://localhost:6379&#x27;,
-    logLevel: &#x27;debug&#x27;,
+    apiUrl: 'http://localhost:3001',
+    databaseUrl: 'postgresql://localhost:5432/myapp_dev',
+    redisUrl: 'redis://localhost:6379',
+    logLevel: 'debug',
     enableMockData: true
   },
   
   staging: {
-    apiUrl: &#x27;https://staging-api.myapp.com&#x27;,
+    apiUrl: 'https://staging-api.myapp.com',
     databaseUrl: process.env.STAGING_DATABASE_URL,
     redisUrl: process.env.STAGING_REDIS_URL,
-    logLevel: &#x27;info&#x27;,
+    logLevel: 'info',
     enableMockData: false
   },
   
   production: {
-    apiUrl: &#x27;https://api.myapp.com&#x27;,
+    apiUrl: 'https://api.myapp.com',
     databaseUrl: process.env.PRODUCTION_DATABASE_URL,
     redisUrl: process.env.PRODUCTION_REDIS_URL,
-    logLevel: &#x27;error&#x27;,
+    logLevel: 'error',
     enableMockData: false
   }
 };
 
-const currentEnv &#x3D; environments[process.env.NODE_ENV] || environments.development;
-module.exports &#x3D; currentEnv;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;environment-specific-builds&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#environment-specific-builds&quot;&gt;Environment-Specific Builds&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-json&quot;&gt;// package.json
+const currentEnv = environments[process.env.NODE_ENV] || environments.development;
+module.exports = currentEnv;
+</code></pre>
+<h3 id="environment-specific-builds"><a class="header" href="#environment-specific-builds">Environment-Specific Builds</a></h3>
+<pre><code class="language-json">// package.json
 {
-  &quot;scripts&quot;: {
-    &quot;build:dev&quot;: &quot;NODE_ENV&#x3D;development npm run build&quot;,
-    &quot;build:staging&quot;: &quot;NODE_ENV&#x3D;staging npm run build&quot;,
-    &quot;build:prod&quot;: &quot;NODE_ENV&#x3D;production npm run build&quot;,
-    &quot;deploy:dev&quot;: &quot;npm run build:dev &amp;amp;&amp;amp; npm run deploy:dev-env&quot;,
-    &quot;deploy:staging&quot;: &quot;npm run build:staging &amp;amp;&amp;amp; npm run deploy:staging-env&quot;,
-    &quot;deploy:prod&quot;: &quot;npm run build:prod &amp;amp;&amp;amp; npm run deploy:prod-env&quot;
+  "scripts": {
+    "build:dev": "NODE_ENV=development npm run build",
+    "build:staging": "NODE_ENV=staging npm run build",
+    "build:prod": "NODE_ENV=production npm run build",
+    "deploy:dev": "npm run build:dev &amp;&amp; npm run deploy:dev-env",
+    "deploy:staging": "npm run build:staging &amp;&amp; npm run deploy:staging-env",
+    "deploy:prod": "npm run build:prod &amp;&amp; npm run deploy:prod-env"
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-infrastructure-as-code-iac&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-infrastructure-as-code-iac&quot;&gt;🔧 Infrastructure as Code (IaC)&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;terraform-deployment&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#terraform-deployment&quot;&gt;Terraform Deployment&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-hcl&quot;&gt;# terraform/main.tf
-provider &quot;aws&quot; {
-  region &#x3D; var.aws_region
+</code></pre>
+<h2 id="-infrastructure-as-code-iac"><a class="header" href="#-infrastructure-as-code-iac">🔧 Infrastructure as Code (IaC)</a></h2>
+<h3 id="terraform-deployment"><a class="header" href="#terraform-deployment">Terraform Deployment</a></h3>
+<pre><code class="language-hcl"># terraform/main.tf
+provider "aws" {
+  region = var.aws_region
 }
 
 # S3 bucket for static assets
-resource &quot;aws_s3_bucket&quot; &quot;static_assets&quot; {
-  bucket &#x3D; &quot;my-app-static-${var.environment}&quot;
-  acl    &#x3D; &quot;private&quot;
+resource "aws_s3_bucket" "static_assets" {
+  bucket = "my-app-static-${var.environment}"
+  acl    = "private"
   
   versioning {
-    enabled &#x3D; true
+    enabled = true
   }
 }
 
 # CloudFront distribution
-resource &quot;aws_cloudfront_distribution&quot; &quot;cdn&quot; {
+resource "aws_cloudfront_distribution" "cdn" {
   origin {
-    domain_name &#x3D; aws_s3_bucket.static_assets.bucket_domain_name
-    origin_id   &#x3D; aws_s3_bucket.static_assets.id
+    domain_name = aws_s3_bucket.static_assets.bucket_domain_name
+    origin_id   = aws_s3_bucket.static_assets.id
   }
   
-  enabled             &#x3D; true
-  is_ipv6_enabled     &#x3D; true
-  default_root_object &#x3D; &quot;index.html&quot;
+  enabled             = true
+  is_ipv6_enabled     = true
+  default_root_object = "index.html"
   
   default_cache_behavior {
-    allowed_methods        &#x3D; [&quot;DELETE&quot;, &quot;GET&quot;, &quot;HEAD&quot;, &quot;OPTIONS&quot;, &quot;PATCH&quot;, &quot;POST&quot;, &quot;PUT&quot;]
-    cached_methods         &#x3D; [&quot;GET&quot;, &quot;HEAD&quot;]
-    target_origin_id       &#x3D; aws_s3_bucket.static_assets.id
-    compress              &#x3D; true
-    viewer_protocol_policy &#x3D; &quot;redirect-to-https&quot;
+    allowed_methods        = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
+    cached_methods         = ["GET", "HEAD"]
+    target_origin_id       = aws_s3_bucket.static_assets.id
+    compress              = true
+    viewer_protocol_policy = "redirect-to-https"
   }
   
   restrictions {
     geo_restriction {
-      restriction_type &#x3D; &quot;none&quot;
+      restriction_type = "none"
     }
   }
   
   viewer_certificate {
-    acm_certificate_arn &#x3D; var.ssl_certificate_arn
-    ssl_support_method       &#x3D; &quot;sni-only&quot;
+    acm_certificate_arn = var.ssl_certificate_arn
+    ssl_support_method       = "sni-only"
   }
   
-  aliases &#x3D; var.domain_names
+  aliases = var.domain_names
 }
 
 # ECS service for backend
-resource &quot;aws_ecs_service&quot; &quot;backend&quot; {
-  name            &#x3D; &quot;my-app-backend-${var.environment}&quot;
-  cluster         &#x3D; aws_ecs_cluster.main.id
-  task_definition &#x3D; aws_ecs_task_definition.backend.arn
-  desired_count   &#x3D; 2
+resource "aws_ecs_service" "backend" {
+  name            = "my-app-backend-${var.environment}"
+  cluster         = aws_ecs_cluster.main.id
+  task_definition = aws_ecs_task_definition.backend.arn
+  desired_count   = 2
   
   load_balancer {
-    target_group_arn &#x3D; aws_lb_target_group.backend.arn
-    container_name    &#x3D; &quot;backend&quot;
-    container_port   &#x3D; 3000
+    target_group_arn = aws_lb_target_group.backend.arn
+    container_name    = "backend"
+    container_port   = 3000
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;kubernetes-deployment&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#kubernetes-deployment&quot;&gt;Kubernetes Deployment&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-yaml&quot;&gt;# k8s/deployment.yaml
+</code></pre>
+<h3 id="kubernetes-deployment"><a class="header" href="#kubernetes-deployment">Kubernetes Deployment</a></h3>
+<pre><code class="language-yaml"># k8s/deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -1270,7 +1006,7 @@ spec:
         - containerPort: 3000
         env:
         - name: NODE_ENV
-          value: &quot;production&quot;
+          value: "production"
         - name: DATABASE_URL
           valueFrom:
             secretKeyRef:
@@ -1278,11 +1014,11 @@ spec:
               key: database-url
         resources:
           requests:
-            memory: &quot;256Mi&quot;
-            cpu: &quot;250m&quot;
+            memory: "256Mi"
+            cpu: "250m"
           limits:
-            memory: &quot;512Mi&quot;
-            cpu: &quot;500m&quot;
+            memory: "512Mi"
+            cpu: "500m"
         livenessProbe:
           httpGet:
             path: /health
@@ -1308,16 +1044,16 @@ spec:
       port: 80
       targetPort: 3000
   type: LoadBalancer
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-monitoring--observability&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-monitoring--observability&quot;&gt;📊 Monitoring &amp;amp; Observability&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;health-checks&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#health-checks&quot;&gt;Health Checks&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// health/healthCheck.js
-const express &#x3D; require(&#x27;express&#x27;);
-const app &#x3D; express();
+</code></pre>
+<h2 id="-monitoring--observability"><a class="header" href="#-monitoring--observability">📊 Monitoring &amp; Observability</a></h2>
+<h3 id="health-checks"><a class="header" href="#health-checks">Health Checks</a></h3>
+<pre><code class="language-javascript">// health/healthCheck.js
+const express = require('express');
+const app = express();
 
-app.get(&#x27;/health&#x27;, (req, res) &#x3D;&amp;gt; {
-  const health &#x3D; {
-    status: &#x27;ok&#x27;,
+app.get('/health', (req, res) =&gt; {
+  const health = {
+    status: 'ok',
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
     environment: process.env.NODE_ENV,
@@ -1329,7 +1065,7 @@ app.get(&#x27;/health&#x27;, (req, res) &#x3D;&amp;gt; {
     }
   };
   
-  const isHealthy &#x3D; Object.values(health.checks).every(check &#x3D;&amp;gt; check.status &#x3D;&#x3D;&#x3D; &#x27;ok&#x27;);
+  const isHealthy = Object.values(health.checks).every(check =&gt; check.status === 'ok');
   
   res.status(isHealthy ? 200 : 503).json(health);
 });
@@ -1337,54 +1073,54 @@ app.get(&#x27;/health&#x27;, (req, res) &#x3D;&amp;gt; {
 function checkDatabase() {
   try {
     // Check database connection
-    return { status: &#x27;ok&#x27;, responseTime: &#x27;15ms&#x27; };
+    return { status: 'ok', responseTime: '15ms' };
   } catch (error) {
-    return { status: &#x27;error&#x27;, message: error.message };
+    return { status: 'error', message: error.message };
   }
 }
 
 function checkRedis() {
   try {
     // Check Redis connection
-    return { status: &#x27;ok&#x27;, responseTime: &#x27;5ms&#x27; };
+    return { status: 'ok', responseTime: '5ms' };
   } catch (error) {
-    return { status: &#x27;error&#x27;, message: error.message };
+    return { status: 'error', message: error.message };
   }
 }
 
 function checkExternalAPIs() {
   try {
     // Check external API connectivity
-    return { status: &#x27;ok&#x27;, responseTime: &#x27;100ms&#x27; };
+    return { status: 'ok', responseTime: '100ms' };
   } catch (error) {
-    return { status: &#x27;error&#x27;, message: error.message };
+    return { status: 'error', message: error.message };
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;performance-monitoring&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#performance-monitoring&quot;&gt;Performance Monitoring&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// monitoring/performance.js
-const prometheus &#x3D; require(&#x27;prom-client&#x27;);
+</code></pre>
+<h3 id="performance-monitoring"><a class="header" href="#performance-monitoring">Performance Monitoring</a></h3>
+<pre><code class="language-javascript">// monitoring/performance.js
+const prometheus = require('prom-client');
 
 // Custom metrics
-const httpRequestDuration &#x3D; new prometheus.Histogram({
-  name: &#x27;http_request_duration_seconds&#x27;,
-  help: &#x27;Duration of HTTP requests in seconds&#x27;,
-  labelNames: [&#x27;method&#x27;, &#x27;route&#x27;, &#x27;status_code&#x27;]
+const httpRequestDuration = new prometheus.Histogram({
+  name: 'http_request_duration_seconds',
+  help: 'Duration of HTTP requests in seconds',
+  labelNames: ['method', 'route', 'status_code']
 });
 
-const httpRequestTotal &#x3D; new prometheus.Counter({
-  name: &#x27;http_requests_total&#x27;,
-  help: &#x27;Total number of HTTP requests&#x27;,
-  labelNames: [&#x27;method&#x27;, &#x27;route&#x27;, &#x27;status_code&#x27;]
+const httpRequestTotal = new prometheus.Counter({
+  name: 'http_requests_total',
+  help: 'Total number of HTTP requests',
+  labelNames: ['method', 'route', 'status_code']
 });
 
 // Middleware to track metrics
-const metricsMiddleware &#x3D; (req, res, next) &#x3D;&amp;gt; {
-  const start &#x3D; Date.now();
+const metricsMiddleware = (req, res, next) =&gt; {
+  const start = Date.now();
   
-  res.on(&#x27;finish&#x27;, () &#x3D;&amp;gt; {
-    const duration &#x3D; (Date.now() - start) / 1000;
-    const labels &#x3D; {
+  res.on('finish', () =&gt; {
+    const duration = (Date.now() - start) / 1000;
+    const labels = {
       method: req.method,
       route: req.route || req.path,
       status_code: res.statusCode.toString()
@@ -1397,13 +1133,13 @@ const metricsMiddleware &#x3D; (req, res, next) &#x3D;&amp;gt; {
   next();
 };
 
-module.exports &#x3D; { metricsMiddleware, httpRequestDuration, httpRequestTotal };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-best-practices&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-best-practices&quot;&gt;🔧 Best Practices&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;deployment-checklist&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#deployment-checklist&quot;&gt;Deployment Checklist&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-markdown&quot;&gt;## Pre-Deployment Checklist
+module.exports = { metricsMiddleware, httpRequestDuration, httpRequestTotal };
+</code></pre>
+<h2 id="-best-practices"><a class="header" href="#-best-practices">🔧 Best Practices</a></h2>
+<h3 id="deployment-checklist"><a class="header" href="#deployment-checklist">Deployment Checklist</a></h3>
+<pre><code class="language-markdown">## Pre-Deployment Checklist
 - [ ] All tests passing
-- [ ] Code coverage &amp;gt; 80%
+- [ ] Code coverage &gt; 80%
 - [ ] Security scan passed
 - [ ] Performance benchmarks met
 - [ ] Documentation updated
@@ -1421,17 +1157,17 @@ module.exports &#x3D; { metricsMiddleware, httpRequestDuration, httpRequestTotal
 - [ ] Error rates within threshold
 - [ ] Response times acceptable
 - [ ] User analytics tracking
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;security-considerations&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#security-considerations&quot;&gt;Security Considerations&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-yaml&quot;&gt;# Security headers in deployment
+</code></pre>
+<h3 id="security-considerations"><a class="header" href="#security-considerations">Security Considerations</a></h3>
+<pre><code class="language-yaml"># Security headers in deployment
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: my-app-ingress
   annotations:
-    nginx.ingress.kubernetes.io/ssl-redirect: &quot;true&quot;
-    nginx.ingress.kubernetes.io/force-ssl-redirect: &quot;true&quot;
-    cert-manager.io/cluster-issuer: &quot;letsencrypt-prod&quot;
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
   tls:
     - hosts:
@@ -1445,64 +1181,15 @@ spec:
             backend:
               serviceName: my-app-backend
               servicePort: 3000
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Next Up&lt;/strong&gt;: Learn about Environment Management! 🌍&lt;/p&gt;
+</code></pre>
+<hr>
+<p><strong>Next Up</strong>: Learn about Environment Management! 🌍</p>
 
-                        </div>
-                        
-                    </article>
-                </div>
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "devops/deployment.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

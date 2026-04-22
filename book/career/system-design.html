@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>System Design Fundamentals - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="System Design Fundamentals - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, System Design Fundamentals - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>System Design Fundamentals - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="career/system-design.md">
-    <meta property="og:title" content="System Design Fundamentals - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="System Design Fundamentals - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="career/system-design.md">
-    <meta property="twitter:title" content="System Design Fundamentals - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="System Design Fundamentals - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="System Design Fundamentals - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="career/system-design.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "System Design Fundamentals - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,80 +525,31 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    System Design Fundamentals - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
-
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>System Design Fundamentals - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;system-design-fundamentals&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#system-design-fundamentals&quot;&gt;System Design Fundamentals&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;System design is the process of defining the architecture, components, modules, interfaces, and data for a system to satisfy specified requirements. It’s crucial for building scalable, maintainable, and robust applications.&lt;/p&gt;
-&lt;h2 id&#x3D;&quot;-what-is-system-design&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-what-is-system-design&quot;&gt;🎯 What is System Design?&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;System design involves making high-level decisions about the organization and structure of software systems. It bridges the gap between requirements and implementation.&lt;/p&gt;
-&lt;h3 id&#x3D;&quot;why-system-design-matters&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#why-system-design-matters&quot;&gt;Why System Design Matters&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Scalability&lt;/strong&gt;: Handle growing user base and data&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Reliability&lt;/strong&gt;: Ensure system availability and fault tolerance&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Performance&lt;/strong&gt;: Meet response time and throughput requirements&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Maintainability&lt;/strong&gt;: Easy to modify and extend&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cost Efficiency&lt;/strong&gt;: Optimize resource utilization&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id&#x3D;&quot;-system-design-fundamentals&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-system-design-fundamentals&quot;&gt;🏗️ System Design Fundamentals&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;key-design-principles&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#key-design-principles&quot;&gt;Key Design Principles&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// System design principles with examples
-const designPrinciples &#x3D; {
+        <div id="content">
+            <main>
+                <h1 id="system-design-fundamentals"><a class="header" href="#system-design-fundamentals">System Design Fundamentals</a></h1>
+<p>System design is the process of defining the architecture, components, modules, interfaces, and data for a system to satisfy specified requirements. It’s crucial for building scalable, maintainable, and robust applications.</p>
+<h2 id="-what-is-system-design"><a class="header" href="#-what-is-system-design">🎯 What is System Design?</a></h2>
+<p>System design involves making high-level decisions about the organization and structure of software systems. It bridges the gap between requirements and implementation.</p>
+<h3 id="why-system-design-matters"><a class="header" href="#why-system-design-matters">Why System Design Matters</a></h3>
+<ul>
+<li><strong>Scalability</strong>: Handle growing user base and data</li>
+<li><strong>Reliability</strong>: Ensure system availability and fault tolerance</li>
+<li><strong>Performance</strong>: Meet response time and throughput requirements</li>
+<li><strong>Maintainability</strong>: Easy to modify and extend</li>
+<li><strong>Cost Efficiency</strong>: Optimize resource utilization</li>
+</ul>
+<h2 id="-system-design-fundamentals"><a class="header" href="#-system-design-fundamentals">🏗️ System Design Fundamentals</a></h2>
+<h3 id="key-design-principles"><a class="header" href="#key-design-principles">Key Design Principles</a></h3>
+<pre><code class="language-javascript">// System design principles with examples
+const designPrinciples = {
   // Single Responsibility Principle
   singleResponsibility: {
-    description: &quot;Each component should have one reason to change&quot;,
-    example: &#x60;
+    description: "Each component should have one reason to change",
+    example: `
 // Bad: User service handles authentication, profile, and notifications
 class UserService {
   authenticate() { /* ... */ }
@@ -825,23 +561,23 @@ class UserService {
 class AuthService { authenticate() { /* ... */ } }
 class ProfileService { updateProfile() { /* ... */ } }
 class NotificationService { sendNotification() { /* ... */ }
-    &#x60;
+    `
   },
   
   // Separation of Concerns
   separationOfConcerns: {
-    description: &quot;Separate business logic from infrastructure concerns&quot;,
-    example: &#x60;
+    description: "Separate business logic from infrastructure concerns",
+    example: `
 // Separate layers for different concerns
 class UserController {
   constructor(userService, emailService) {
-    this.userService &#x3D; userService;
-    this.emailService &#x3D; emailService;
+    this.userService = userService;
+    this.emailService = emailService;
   }
   
   async createUser(userData) {
     // Business logic
-    const user &#x3D; await this.userService.create(userData);
+    const user = await this.userService.create(userData);
     
     // Infrastructure concern (notification)
     await this.emailService.sendWelcomeEmail(user.email);
@@ -849,129 +585,129 @@ class UserController {
     return user;
   }
 }
-    &#x60;
+    `
   },
   
-  // Don&#x27;t Repeat Yourself (DRY)
+  // Don't Repeat Yourself (DRY)
   dry: {
-    description: &quot;Avoid code duplication through abstraction&quot;,
-    example: &#x60;
+    description: "Avoid code duplication through abstraction",
+    example: `
 // Bad: Duplicate validation logic
 function createUser(userData) {
-  if (!userData.email || !userData.email.includes(&#x27;@&#x27;)) {
-    throw new Error(&#x27;Invalid email&#x27;);
+  if (!userData.email || !userData.email.includes('@')) {
+    throw new Error('Invalid email');
   }
   // ... create user
 }
 
 function updateUser(userId, userData) {
-  if (!userData.email || !userData.email.includes(&#x27;@&#x27;)) {
-    throw new Error(&#x27;Invalid email&#x27;);
+  if (!userData.email || !userData.email.includes('@')) {
+    throw new Error('Invalid email');
   }
   // ... update user
 }
 
 // Good: Extract validation to reusable function
 function validateEmail(email) {
-  return email &amp;amp;&amp;amp; email.includes(&#x27;@&#x27;);
+  return email &amp;&amp; email.includes('@');
 }
 
 function createUser(userData) {
   if (!validateEmail(userData.email)) {
-    throw new Error(&#x27;Invalid email&#x27;);
+    throw new Error('Invalid email');
   }
   // ... create user
 }
-    &#x60;
+    `
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;system-components-architecture&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#system-components-architecture&quot;&gt;System Components Architecture&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-mermaid&quot;&gt;graph TD
-    A[Client Applications] --&amp;gt; B[Load Balancer]
-    B --&amp;gt; C[API Gateway]
-    C --&amp;gt; D[Microservices]
-    D --&amp;gt; E[Database Layer]
-    D --&amp;gt; F[Cache Layer]
-    D --&amp;gt; G[Message Queue]
-    E --&amp;gt; H[Primary Database]
-    E --&amp;gt; I[Read Replicas]
-    F --&amp;gt; J[Redis Cache]
-    G --&amp;gt; K[Event Bus]
-    K --&amp;gt; L[Background Workers]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-scalability-patterns&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-scalability-patterns&quot;&gt;📊 Scalability Patterns&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;horizontal-vs-vertical-scaling&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#horizontal-vs-vertical-scaling&quot;&gt;Horizontal vs Vertical Scaling&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Scaling strategies comparison
-const scalingStrategies &#x3D; {
+</code></pre>
+<h3 id="system-components-architecture"><a class="header" href="#system-components-architecture">System Components Architecture</a></h3>
+<pre><code class="language-mermaid">graph TD
+    A[Client Applications] --&gt; B[Load Balancer]
+    B --&gt; C[API Gateway]
+    C --&gt; D[Microservices]
+    D --&gt; E[Database Layer]
+    D --&gt; F[Cache Layer]
+    D --&gt; G[Message Queue]
+    E --&gt; H[Primary Database]
+    E --&gt; I[Read Replicas]
+    F --&gt; J[Redis Cache]
+    G --&gt; K[Event Bus]
+    K --&gt; L[Background Workers]
+</code></pre>
+<h2 id="-scalability-patterns"><a class="header" href="#-scalability-patterns">📊 Scalability Patterns</a></h2>
+<h3 id="horizontal-vs-vertical-scaling"><a class="header" href="#horizontal-vs-vertical-scaling">Horizontal vs Vertical Scaling</a></h3>
+<pre><code class="language-javascript">// Scaling strategies comparison
+const scalingStrategies = {
   vertical: {
-    description: &quot;Scale up by adding more resources to existing server&quot;,
+    description: "Scale up by adding more resources to existing server",
     pros: [
-      &quot;Simple to implement&quot;,
-      &quot;No architectural changes needed&quot;,
-      &quot;Lower complexity&quot;
+      "Simple to implement",
+      "No architectural changes needed",
+      "Lower complexity"
     ],
     cons: [
-      &quot;Limited by hardware constraints&quot;,
-      &quot;Single point of failure&quot;,
-      &quot;Higher cost per resource&quot;
+      "Limited by hardware constraints",
+      "Single point of failure",
+      "Higher cost per resource"
     ],
-    useCase: &quot;Small applications with predictable growth&quot;
+    useCase: "Small applications with predictable growth"
   },
   
   horizontal: {
-    description: &quot;Scale out by adding more servers to distribute load&quot;,
+    description: "Scale out by adding more servers to distribute load",
     pros: [
-      &quot;Unlimited scaling potential&quot;,
-      &quot;Better fault tolerance&quot;,
-      &quot;Cost-effective at scale&quot;
+      "Unlimited scaling potential",
+      "Better fault tolerance",
+      "Cost-effective at scale"
     ],
     cons: [
-      &quot;Increased complexity&quot;,
-      &quot;Requires load balancing&quot;,
-      &quot;Data consistency challenges&quot;
+      "Increased complexity",
+      "Requires load balancing",
+      "Data consistency challenges"
     ],
-    useCase: &quot;Large applications with variable load&quot;
+    useCase: "Large applications with variable load"
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;load-balancing-strategies&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#load-balancing-strategies&quot;&gt;Load Balancing Strategies&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Load balancing algorithms
-const loadBalancingAlgorithms &#x3D; {
+</code></pre>
+<h3 id="load-balancing-strategies"><a class="header" href="#load-balancing-strategies">Load Balancing Strategies</a></h3>
+<pre><code class="language-javascript">// Load balancing algorithms
+const loadBalancingAlgorithms = {
   roundRobin: {
-    description: &quot;Distribute requests sequentially across servers&quot;,
-    implementation: &#x60;
+    description: "Distribute requests sequentially across servers",
+    implementation: `
 class RoundRobinLoadBalancer {
   constructor(servers) {
-    this.servers &#x3D; servers;
-    this.currentIndex &#x3D; 0;
+    this.servers = servers;
+    this.currentIndex = 0;
   }
   
   getNextServer() {
-    const server &#x3D; this.servers[this.currentIndex];
-    this.currentIndex &#x3D; (this.currentIndex + 1) % this.servers.length;
+    const server = this.servers[this.currentIndex];
+    this.currentIndex = (this.currentIndex + 1) % this.servers.length;
     return server;
   }
 }
-    &#x60;,
-    pros: [&quot;Simple&quot;, &quot;Even distribution&quot;],
-    cons: [&quot;Ignores server capacity&quot;, &quot;No health checks&quot;]
+    `,
+    pros: ["Simple", "Even distribution"],
+    cons: ["Ignores server capacity", "No health checks"]
   },
   
   leastConnections: {
-    description: &quot;Route to server with fewest active connections&quot;,
-    implementation: &#x60;
+    description: "Route to server with fewest active connections",
+    implementation: `
 class LeastConnectionsLoadBalancer {
   constructor(servers) {
-    this.servers &#x3D; servers.map(server &#x3D;&amp;gt; ({
+    this.servers = servers.map(server =&gt; ({
       ...server,
       connections: 0
     }));
   }
   
   getNextServer() {
-    return this.servers.reduce((min, current) &#x3D;&amp;gt; 
-      current.connections &amp;lt; min.connections ? current : min
+    return this.servers.reduce((min, current) =&gt; 
+      current.connections &lt; min.connections ? current : min
     );
   }
   
@@ -983,94 +719,94 @@ class LeastConnectionsLoadBalancer {
     server.connections--;
   }
 }
-    &#x60;,
-    pros: [&quot;Considers server load&quot;, &quot;Better for long connections&quot;],
-    cons: [&quot;More complex&quot;, &quot;Requires connection tracking&quot;]
+    `,
+    pros: ["Considers server load", "Better for long connections"],
+    cons: ["More complex", "Requires connection tracking"]
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-database-design-patterns&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-database-design-patterns&quot;&gt;🗄️ Database Design Patterns&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;database-selection-criteria&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#database-selection-criteria&quot;&gt;Database Selection Criteria&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Database selection framework
-const databaseSelection &#x3D; {
+</code></pre>
+<h2 id="-database-design-patterns"><a class="header" href="#-database-design-patterns">🗄️ Database Design Patterns</a></h2>
+<h3 id="database-selection-criteria"><a class="header" href="#database-selection-criteria">Database Selection Criteria</a></h3>
+<pre><code class="language-javascript">// Database selection framework
+const databaseSelection = {
   criteria: {
     consistency: {
-      strong: &quot;ACID compliance needed (financial, inventory)&quot;,
-      eventual: &quot;Can tolerate temporary inconsistency (social feeds, analytics)&quot;
+      strong: "ACID compliance needed (financial, inventory)",
+      eventual: "Can tolerate temporary inconsistency (social feeds, analytics)"
     },
     structure: {
-      structured: &quot;Well-defined schema (user profiles, orders)&quot;,
-      unstructured: &quot;Flexible schema (logs, content, user-generated data)&quot;
+      structured: "Well-defined schema (user profiles, orders)",
+      unstructured: "Flexible schema (logs, content, user-generated data)"
     },
     scale: {
-      readHeavy: &quot;More reads than writes (product catalogs, news)&quot;,
-      writeHeavy: &quot;More writes than reads (analytics, logging)&quot;
+      readHeavy: "More reads than writes (product catalogs, news)",
+      writeHeavy: "More writes than reads (analytics, logging)"
     },
     query: {
-      complex: &quot;Complex joins and aggregations (reporting)&quot;,
-      simple: &quot;Simple key-value lookups (caching, sessions)&quot;
+      complex: "Complex joins and aggregations (reporting)",
+      simple: "Simple key-value lookups (caching, sessions)"
     }
   },
   
   recommendations: {
     relational: {
-      databases: [&quot;PostgreSQL&quot;, &quot;MySQL&quot;, &quot;SQL Server&quot;],
-      useCases: [&quot;Financial systems&quot;, &quot;E-commerce&quot;, &quot;User management&quot;],
-      strengths: [&quot;ACID compliance&quot;, &quot;Complex queries&quot;, &quot;Data integrity&quot;]
+      databases: ["PostgreSQL", "MySQL", "SQL Server"],
+      useCases: ["Financial systems", "E-commerce", "User management"],
+      strengths: ["ACID compliance", "Complex queries", "Data integrity"]
     },
     document: {
-      databases: [&quot;MongoDB&quot;, &quot;CouchDB&quot;, &quot;DynamoDB&quot;],
-      useCases: [&quot;Content management&quot;, &quot;User profiles&quot;, &quot;Catalogs&quot;],
-      strengths: [&quot;Flexible schema&quot;, &quot;Horizontal scaling&quot;, &quot;Fast writes&quot;]
+      databases: ["MongoDB", "CouchDB", "DynamoDB"],
+      useCases: ["Content management", "User profiles", "Catalogs"],
+      strengths: ["Flexible schema", "Horizontal scaling", "Fast writes"]
     },
     keyvalue: {
-      databases: [&quot;Redis&quot;, &quot;DynamoDB&quot;, &quot;Cassandra&quot;],
-      useCases: [&quot;Caching&quot;, &quot;Sessions&quot;, &quot;Real-time analytics&quot;],
-      strengths: [&quot;High performance&quot;, &quot;Simple API&quot;, &quot;Low latency&quot;]
+      databases: ["Redis", "DynamoDB", "Cassandra"],
+      useCases: ["Caching", "Sessions", "Real-time analytics"],
+      strengths: ["High performance", "Simple API", "Low latency"]
     },
     graph: {
-      databases: [&quot;Neo4j&quot;, &quot;Amazon Neptune&quot;, &quot;ArangoDB&quot;],
-      useCases: [&quot;Social networks&quot;, &quot;Recommendation engines&quot;, &quot;Fraud detection&quot;],
-      strengths: [&quot;Relationship queries&quot;, &quot;Graph algorithms&quot;, &quot;Connected data&quot;]
+      databases: ["Neo4j", "Amazon Neptune", "ArangoDB"],
+      useCases: ["Social networks", "Recommendation engines", "Fraud detection"],
+      strengths: ["Relationship queries", "Graph algorithms", "Connected data"]
     }
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;database-scaling-patterns&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#database-scaling-patterns&quot;&gt;Database Scaling Patterns&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-mermaid&quot;&gt;graph TD
-    A[Application] --&amp;gt; B[Database Router]
-    B --&amp;gt; C[Primary DB - Write]
-    B --&amp;gt; D[Read Replica 1]
-    B --&amp;gt; E[Read Replica 2]
-    B --&amp;gt; F[Read Replica N]
+</code></pre>
+<h3 id="database-scaling-patterns"><a class="header" href="#database-scaling-patterns">Database Scaling Patterns</a></h3>
+<pre><code class="language-mermaid">graph TD
+    A[Application] --&gt; B[Database Router]
+    B --&gt; C[Primary DB - Write]
+    B --&gt; D[Read Replica 1]
+    B --&gt; E[Read Replica 2]
+    B --&gt; F[Read Replica N]
     
-    G[Sharding Layer] --&amp;gt; H[Shard 1 - DB1]
-    G --&amp;gt; I[Shard 2 - DB2]
-    G --&amp;gt; J[Shard 3 - DB3]
+    G[Sharding Layer] --&gt; H[Shard 1 - DB1]
+    G --&gt; I[Shard 2 - DB2]
+    G --&gt; J[Shard 3 - DB3]
     
-    K[Caching Layer] --&amp;gt; L[Redis Cluster]
-    K --&amp;gt; M[CDN]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-caching-strategies&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-caching-strategies&quot;&gt;🚀 Caching Strategies&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;cache-patterns&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#cache-patterns&quot;&gt;Cache Patterns&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Caching patterns with implementations
-const cachingPatterns &#x3D; {
+    K[Caching Layer] --&gt; L[Redis Cluster]
+    K --&gt; M[CDN]
+</code></pre>
+<h2 id="-caching-strategies"><a class="header" href="#-caching-strategies">🚀 Caching Strategies</a></h2>
+<h3 id="cache-patterns"><a class="header" href="#cache-patterns">Cache Patterns</a></h3>
+<pre><code class="language-javascript">// Caching patterns with implementations
+const cachingPatterns = {
   cacheAside: {
-    description: &quot;Application manages cache explicitly&quot;,
-    implementation: &#x60;
+    description: "Application manages cache explicitly",
+    implementation: `
 class CacheAsideService {
   constructor(database, cache) {
-    this.db &#x3D; database;
-    this.cache &#x3D; cache;
+    this.db = database;
+    this.cache = cache;
   }
   
   async get(key) {
     // Try cache first
-    let data &#x3D; await this.cache.get(key);
+    let data = await this.cache.get(key);
     
     if (!data) {
       // Cache miss - get from database
-      data &#x3D; await this.db.get(key);
+      data = await this.db.get(key);
       
       if (data) {
         // Populate cache
@@ -1089,39 +825,39 @@ class CacheAsideService {
     ]);
   }
 }
-    &#x60;,
-    pros: [&quot;Flexible&quot;, &quot;Cache failures don&#x27;t break app&quot;],
-    cons: [&quot;Stale data possible&quot;, &quot;More complex code&quot;]
+    `,
+    pros: ["Flexible", "Cache failures don't break app"],
+    cons: ["Stale data possible", "More complex code"]
   },
   
   readThrough: {
-    description: &quot;Cache manages database reads&quot;,
-    implementation: &#x60;
+    description: "Cache manages database reads",
+    implementation: `
 class ReadThroughCache {
   constructor(database, cache) {
-    this.db &#x3D; database;
-    this.cache &#x3D; cache;
+    this.db = database;
+    this.cache = cache;
   }
   
   async get(key) {
     // Cache handles database lookup
-    return await this.cache.getOrLoad(key, async () &#x3D;&amp;gt; {
+    return await this.cache.getOrLoad(key, async () =&gt; {
       return await this.db.get(key);
     });
   }
 }
-    &#x60;,
-    pros: [&quot;Simpler application code&quot;, &quot;Always consistent&quot;],
-    cons: [&quot;Cache becomes bottleneck&quot;, &quot;Less flexible&quot;]
+    `,
+    pros: ["Simpler application code", "Always consistent"],
+    cons: ["Cache becomes bottleneck", "Less flexible"]
   },
   
   writeThrough: {
-    description: &quot;Write to both cache and database synchronously&quot;,
-    implementation: &#x60;
+    description: "Write to both cache and database synchronously",
+    implementation: `
 class WriteThroughCache {
   constructor(database, cache) {
-    this.db &#x3D; database;
-    this.cache &#x3D; cache;
+    this.db = database;
+    this.cache = cache;
   }
   
   async set(key, data) {
@@ -1132,82 +868,82 @@ class WriteThroughCache {
     ]);
   }
 }
-    &#x60;,
-    pros: [&quot;Data consistency&quot;, &quot;Read performance&quot;],
-    cons: [&quot;Write latency&quot;, &quot;Cache size management&quot;]
+    `,
+    pros: ["Data consistency", "Read performance"],
+    cons: ["Write latency", "Cache size management"]
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;cache-invalidation-strategies&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#cache-invalidation-strategies&quot;&gt;Cache Invalidation Strategies&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Cache invalidation patterns
-const cacheInvalidation &#x3D; {
+</code></pre>
+<h3 id="cache-invalidation-strategies"><a class="header" href="#cache-invalidation-strategies">Cache Invalidation Strategies</a></h3>
+<pre><code class="language-javascript">// Cache invalidation patterns
+const cacheInvalidation = {
   ttl: {
-    description: &quot;Time-based expiration&quot;,
-    implementation: &#x60;
+    description: "Time-based expiration",
+    implementation: `
 // Set TTL when writing to cache
 await cache.set(key, data, { ttl: 3600 }); // 1 hour
-    &#x60;,
-    pros: [&quot;Simple&quot;, &quot;No invalidation logic needed&quot;],
-    cons: [&quot;May serve stale data&quot;, &quot;Fixed expiration regardless of updates&quot;]
+    `,
+    pros: ["Simple", "No invalidation logic needed"],
+    cons: ["May serve stale data", "Fixed expiration regardless of updates"]
   },
   
   writeInvalidate: {
-    description: &quot;Invalidate cache on data changes&quot;,
-    implementation: &#x60;
+    description: "Invalidate cache on data changes",
+    implementation: `
 class WriteInvalidateCache {
   async updateUser(userId, userData) {
     // Update database
     await this.db.update(userId, userData);
     
     // Invalidate cache
-    await this.cache.delete(\&#x60;user:\${userId}\&#x60;);
+    await this.cache.delete(\`user:\${userId}\`);
   }
 }
-    &#x60;,
-    pros: [&quot;Always fresh data&quot;, &quot;Immediate consistency&quot;],
-    cons: [&quot;More complex&quot;, &quot;Cache stampede possible&quot;]
+    `,
+    pros: ["Always fresh data", "Immediate consistency"],
+    cons: ["More complex", "Cache stampede possible"]
   },
   
   lazyLoading: {
-    description: &quot;Invalidate on next access&quot;,
-    implementation: &#x60;
+    description: "Invalidate on next access",
+    implementation: `
 class LazyLoadingCache {
   async get(key) {
-    let data &#x3D; await this.cache.get(key);
+    let data = await this.cache.get(key);
     
-    if (data &amp;amp;&amp;amp; data.isStale()) {
+    if (data &amp;&amp; data.isStale()) {
       // Remove stale data
       await this.cache.delete(key);
-      data &#x3D; null;
+      data = null;
     }
     
     if (!data) {
       // Load fresh data
-      data &#x3D; await this.db.get(key);
+      data = await this.db.get(key);
       await this.cache.set(key, data);
     }
     
     return data;
   }
 }
-    &#x60;,
-    pros: [&quot;No wasted cache updates&quot;, &quot;Simple&quot;],
-    cons: [&quot;First request after update is slow&quot;, &quot;Stale data possible&quot;]
+    `,
+    pros: ["No wasted cache updates", "Simple"],
+    cons: ["First request after update is slow", "Stale data possible"]
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-message-queues--event-systems&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-message-queues--event-systems&quot;&gt;🔄 Message Queues &amp;amp; Event Systems&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;message-queue-patterns&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#message-queue-patterns&quot;&gt;Message Queue Patterns&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Message queue patterns for system design
-const messageQueuePatterns &#x3D; {
+</code></pre>
+<h2 id="-message-queues--event-systems"><a class="header" href="#-message-queues--event-systems">🔄 Message Queues &amp; Event Systems</a></h2>
+<h3 id="message-queue-patterns"><a class="header" href="#message-queue-patterns">Message Queue Patterns</a></h3>
+<pre><code class="language-javascript">// Message queue patterns for system design
+const messageQueuePatterns = {
   pointToPoint: {
-    description: &quot;One producer sends to one consumer&quot;,
-    useCase: &quot;Task processing, command handling&quot;,
-    implementation: &#x60;
+    description: "One producer sends to one consumer",
+    useCase: "Task processing, command handling",
+    implementation: `
 class PointToPointQueue {
   constructor() {
-    this.queue &#x3D; [];
-    this.processing &#x3D; false;
+    this.queue = [];
+    this.processing = false;
   }
   
   async send(message) {
@@ -1216,28 +952,28 @@ class PointToPointQueue {
   }
   
   async process() {
-    if (this.processing || this.queue.length &#x3D;&#x3D;&#x3D; 0) return;
+    if (this.processing || this.queue.length === 0) return;
     
-    this.processing &#x3D; true;
+    this.processing = true;
     
-    while (this.queue.length &amp;gt; 0) {
-      const message &#x3D; this.queue.shift();
+    while (this.queue.length &gt; 0) {
+      const message = this.queue.shift();
       await this.handleMessage(message);
     }
     
-    this.processing &#x3D; false;
+    this.processing = false;
   }
 }
-    &#x60;
+    `
   },
   
   publishSubscribe: {
-    description: &quot;One publisher sends to multiple subscribers&quot;,
-    useCase: &quot;Event notifications, data distribution&quot;,
-    implementation: &#x60;
+    description: "One publisher sends to multiple subscribers",
+    useCase: "Event notifications, data distribution",
+    implementation: `
 class PubSubSystem {
   constructor() {
-    this.subscribers &#x3D; new Map();
+    this.subscribers = new Map();
   }
   
   subscribe(topic, callback) {
@@ -1248,110 +984,110 @@ class PubSubSystem {
   }
   
   publish(topic, message) {
-    const callbacks &#x3D; this.subscribers.get(topic) || [];
-    callbacks.forEach(callback &#x3D;&amp;gt; callback(message));
+    const callbacks = this.subscribers.get(topic) || [];
+    callbacks.forEach(callback =&gt; callback(message));
   }
 }
-    &#x60;
+    `
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;event-driven-architecture&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#event-driven-architecture&quot;&gt;Event-Driven Architecture&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-mermaid&quot;&gt;graph TD
-    A[User Service] --&amp;gt; B[Event Bus]
-    C[Order Service] --&amp;gt; B
-    D[Payment Service] --&amp;gt; B
-    D --&amp;gt; E[Payment Events]
-    E --&amp;gt; B
-    B --&amp;gt; F[Notification Service]
-    B --&amp;gt; G[Analytics Service]
-    B --&amp;gt; H[Inventory Service]
+</code></pre>
+<h3 id="event-driven-architecture"><a class="header" href="#event-driven-architecture">Event-Driven Architecture</a></h3>
+<pre><code class="language-mermaid">graph TD
+    A[User Service] --&gt; B[Event Bus]
+    C[Order Service] --&gt; B
+    D[Payment Service] --&gt; B
+    D --&gt; E[Payment Events]
+    E --&gt; B
+    B --&gt; F[Notification Service]
+    B --&gt; G[Analytics Service]
+    B --&gt; H[Inventory Service]
     
-    I[Event Store] --&amp;gt; B
-    B --&amp;gt; I
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-api-design-patterns&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-api-design-patterns&quot;&gt;🌐 API Design Patterns&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;restful-api-design&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#restful-api-design&quot;&gt;RESTful API Design&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// RESTful API design principles
-const restfulDesign &#x3D; {
+    I[Event Store] --&gt; B
+    B --&gt; I
+</code></pre>
+<h2 id="-api-design-patterns"><a class="header" href="#-api-design-patterns">🌐 API Design Patterns</a></h2>
+<h3 id="restful-api-design"><a class="header" href="#restful-api-design">RESTful API Design</a></h3>
+<pre><code class="language-javascript">// RESTful API design principles
+const restfulDesign = {
   principles: {
     resources: {
-      description: &quot;Everything is a resource with unique identifier&quot;,
+      description: "Everything is a resource with unique identifier",
       examples: {
-        users: &quot;/api/users&quot;,
-        user: &quot;/api/users/{id}&quot;,
-        userOrders: &quot;/api/users/{id}/orders&quot;
+        users: "/api/users",
+        user: "/api/users/{id}",
+        userOrders: "/api/users/{id}/orders"
       }
     },
     
     methods: {
-      GET: &quot;Retrieve resource representation&quot;,
-      POST: &quot;Create new resource&quot;,
-      PUT: &quot;Update entire resource&quot;,
-      PATCH: &quot;Partial resource update&quot;,
-      DELETE: &quot;Remove resource&quot;
+      GET: "Retrieve resource representation",
+      POST: "Create new resource",
+      PUT: "Update entire resource",
+      PATCH: "Partial resource update",
+      DELETE: "Remove resource"
     },
     
     statusCodes: {
-      200: &quot;OK - Request successful&quot;,
-      201: &quot;Created - Resource created&quot;,
-      204: &quot;No Content - Resource deleted&quot;,
-      400: &quot;Bad Request - Invalid input&quot;,
-      401: &quot;Unauthorized - Authentication required&quot;,
-      403: &quot;Forbidden - Insufficient permissions&quot;,
-      404: &quot;Not Found - Resource doesn&#x27;t exist&quot;,
-      500: &quot;Internal Server Error - Server error&quot;
+      200: "OK - Request successful",
+      201: "Created - Resource created",
+      204: "No Content - Resource deleted",
+      400: "Bad Request - Invalid input",
+      401: "Unauthorized - Authentication required",
+      403: "Forbidden - Insufficient permissions",
+      404: "Not Found - Resource doesn't exist",
+      500: "Internal Server Error - Server error"
     }
   },
   
   bestPractices: {
-    versioning: &quot;Use version in URL (/api/v1/users) or headers&quot;,
-    pagination: &quot;Include pagination metadata in responses&quot;,
-    filtering: &quot;Support query parameters for filtering&quot;,
-    sorting: &quot;Support sort parameters&quot;,
-    errorHandling: &quot;Consistent error response format&quot;,
-    documentation: &quot;Comprehensive API documentation&quot;
+    versioning: "Use version in URL (/api/v1/users) or headers",
+    pagination: "Include pagination metadata in responses",
+    filtering: "Support query parameters for filtering",
+    sorting: "Support sort parameters",
+    errorHandling: "Consistent error response format",
+    documentation: "Comprehensive API documentation"
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;graphql-vs-rest&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#graphql-vs-rest&quot;&gt;GraphQL vs REST&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// GraphQL vs REST comparison
-const apiComparison &#x3D; {
+</code></pre>
+<h3 id="graphql-vs-rest"><a class="header" href="#graphql-vs-rest">GraphQL vs REST</a></h3>
+<pre><code class="language-javascript">// GraphQL vs REST comparison
+const apiComparison = {
   rest: {
-    requestType: &quot;Multiple endpoints for different resources&quot;,
-    dataFetching: &quot;Multiple HTTP requests for related data&quot;,
-    overfetching: &quot;Common - receive more data than needed&quot;,
-    underfetching: &quot;Common - need additional requests&quot;,
-    versioning: &quot;URL versioning required&quot;,
-    caching: &quot;HTTP caching built-in&quot;,
-    learningCurve: &quot;Lower&quot;
+    requestType: "Multiple endpoints for different resources",
+    dataFetching: "Multiple HTTP requests for related data",
+    overfetching: "Common - receive more data than needed",
+    underfetching: "Common - need additional requests",
+    versioning: "URL versioning required",
+    caching: "HTTP caching built-in",
+    learningCurve: "Lower"
   },
   
   graphql: {
-    requestType: &quot;Single endpoint with flexible queries&quot;,
-    dataFetching: &quot;Single request for related data&quot;,
-    overfetching: &quot;Eliminated - request exactly what&#x27;s needed&quot;,
-    underfetching: &quot;Eliminated - get all data in one request&quot;,
-    versioning: &quot;Schema evolution without versioning&quot;,
-    caching: &quot;Requires custom implementation&quot;,
-    learningCurve: &quot;Higher&quot;
+    requestType: "Single endpoint with flexible queries",
+    dataFetching: "Single request for related data",
+    overfetching: "Eliminated - request exactly what's needed",
+    underfetching: "Eliminated - get all data in one request",
+    versioning: "Schema evolution without versioning",
+    caching: "Requires custom implementation",
+    learningCurve: "Higher"
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-security-design-patterns&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-security-design-patterns&quot;&gt;🔒 Security Design Patterns&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;authentication--authorization&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#authentication--authorization&quot;&gt;Authentication &amp;amp; Authorization&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Security patterns for system design
-const securityPatterns &#x3D; {
+</code></pre>
+<h2 id="-security-design-patterns"><a class="header" href="#-security-design-patterns">🔒 Security Design Patterns</a></h2>
+<h3 id="authentication--authorization"><a class="header" href="#authentication--authorization">Authentication &amp; Authorization</a></h3>
+<pre><code class="language-javascript">// Security patterns for system design
+const securityPatterns = {
   authentication: {
     jwt: {
-      description: &quot;Stateless authentication with JSON Web Tokens&quot;,
-      implementation: &#x60;
+      description: "Stateless authentication with JSON Web Tokens",
+      implementation: `
 class JWTAuthService {
   generateToken(user) {
     return jwt.sign(
       { userId: user.id, role: user.role },
       process.env.JWT_SECRET,
-      { expiresIn: &#x27;24h&#x27; }
+      { expiresIn: '24h' }
     );
   }
   
@@ -1359,97 +1095,97 @@ class JWTAuthService {
     return jwt.verify(token, process.env.JWT_SECRET);
   }
 }
-      &#x60;,
-      pros: [&quot;Stateless&quot;, &quot;Scalable&quot;, &quot;Cross-domain&quot;],
-      cons: [&quot;Token revocation difficult&quot;, &quot;Size limitations&quot;]
+      `,
+      pros: ["Stateless", "Scalable", "Cross-domain"],
+      cons: ["Token revocation difficult", "Size limitations"]
     },
     
     oauth2: {
-      description: &quot;Delegated authorization for third-party access&quot;,
-      flow: &quot;Authorization code flow for web applications&quot;,
-      pros: [&quot;Standardized&quot;, &quot;Secure&quot;, &quot;User control&quot;],
-      cons: [&quot;Complex implementation&quot;, &quot;Multiple round trips&quot;]
+      description: "Delegated authorization for third-party access",
+      flow: "Authorization code flow for web applications",
+      pros: ["Standardized", "Secure", "User control"],
+      cons: ["Complex implementation", "Multiple round trips"]
     }
   },
   
   authorization: {
     rbac: {
-      description: &quot;Role-Based Access Control&quot;,
-      implementation: &#x60;
+      description: "Role-Based Access Control",
+      implementation: `
 class RBACService {
   constructor() {
-    this.permissions &#x3D; new Map();
+    this.permissions = new Map();
     this.setupPermissions();
   }
   
   hasPermission(user, resource, action) {
-    const userRoles &#x3D; user.roles;
+    const userRoles = user.roles;
     
-    return userRoles.some(role &#x3D;&amp;gt; 
-      this.permissions.get(role)?.has(\&#x60;\${resource}:\${action}\&#x60;)
+    return userRoles.some(role =&gt; 
+      this.permissions.get(role)?.has(\`\${resource}:\${action}\`)
     );
   }
 }
-      &#x60;
+      `
     },
     
     abac: {
-      description: &quot;Attribute-Based Access Control&quot;,
-      factors: [&quot;User attributes&quot;, &quot;Resource attributes&quot;, &quot;Environmental factors&quot;],
-      pros: [&quot;Fine-grained control&quot;, &quot;Dynamic permissions&quot;],
-      cons: [&quot;Complexity&quot;, &quot;Performance overhead&quot;]
+      description: "Attribute-Based Access Control",
+      factors: ["User attributes", "Resource attributes", "Environmental factors"],
+      pros: ["Fine-grained control", "Dynamic permissions"],
+      cons: ["Complexity", "Performance overhead"]
     }
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;security-best-practices&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#security-best-practices&quot;&gt;Security Best Practices&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Security best practices checklist
-const securityChecklist &#x3D; {
+</code></pre>
+<h3 id="security-best-practices"><a class="header" href="#security-best-practices">Security Best Practices</a></h3>
+<pre><code class="language-javascript">// Security best practices checklist
+const securityChecklist = {
   inputValidation: {
-    description: &quot;Validate all user inputs&quot;,
+    description: "Validate all user inputs",
     practices: [
-      &quot;Use parameterized queries for database access&quot;,
-      &quot;Validate input format and length&quot;,
-      &quot;Sanitize HTML output&quot;,
-      &quot;Use allow-lists for file uploads&quot;
+      "Use parameterized queries for database access",
+      "Validate input format and length",
+      "Sanitize HTML output",
+      "Use allow-lists for file uploads"
     ]
   },
   
   encryption: {
-    description: &quot;Encrypt sensitive data&quot;,
+    description: "Encrypt sensitive data",
     practices: [
-      &quot;Use TLS for all communications&quot;,
-      &quot;Encrypt data at rest&quot;,
-      &quot;Use strong encryption algorithms&quot;,
-      &quot;Proper key management&quot;
+      "Use TLS for all communications",
+      "Encrypt data at rest",
+      "Use strong encryption algorithms",
+      "Proper key management"
     ]
   },
   
   rateLimiting: {
-    description: &quot;Prevent abuse and attacks&quot;,
-    implementation: &#x60;
+    description: "Prevent abuse and attacks",
+    implementation: `
 class RateLimiter {
   constructor(maxRequests, windowMs) {
-    this.maxRequests &#x3D; maxRequests;
-    this.windowMs &#x3D; windowMs;
-    this.requests &#x3D; new Map();
+    this.maxRequests = maxRequests;
+    this.windowMs = windowMs;
+    this.requests = new Map();
   }
   
   isAllowed(clientId) {
-    const now &#x3D; Date.now();
-    const windowStart &#x3D; now - this.windowMs;
+    const now = Date.now();
+    const windowStart = now - this.windowMs;
     
     if (!this.requests.has(clientId)) {
       this.requests.set(clientId, []);
     }
     
-    const clientRequests &#x3D; this.requests.get(clientId);
+    const clientRequests = this.requests.get(clientId);
     
     // Remove old requests
-    const validRequests &#x3D; clientRequests.filter(time &#x3D;&amp;gt; time &amp;gt; windowStart);
+    const validRequests = clientRequests.filter(time =&gt; time &gt; windowStart);
     this.requests.set(clientId, validRequests);
     
-    if (validRequests.length &amp;gt;&#x3D; this.maxRequests) {
+    if (validRequests.length &gt;= this.maxRequests) {
       return false;
     }
     
@@ -1457,138 +1193,89 @@ class RateLimiter {
     return true;
   }
 }
-    &#x60;
+    `
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-performance-optimization&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-performance-optimization&quot;&gt;📈 Performance Optimization&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;performance-metrics&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#performance-metrics&quot;&gt;Performance Metrics&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Key performance indicators
-const performanceMetrics &#x3D; {
+</code></pre>
+<h2 id="-performance-optimization"><a class="header" href="#-performance-optimization">📈 Performance Optimization</a></h2>
+<h3 id="performance-metrics"><a class="header" href="#performance-metrics">Performance Metrics</a></h3>
+<pre><code class="language-javascript">// Key performance indicators
+const performanceMetrics = {
   latency: {
-    description: &quot;Time to respond to a single request&quot;,
+    description: "Time to respond to a single request",
     targets: {
-      excellent: &quot;&amp;lt; 100ms&quot;,
-      good: &quot;100-300ms&quot;,
-      acceptable: &quot;300-1000ms&quot;,
-      poor: &quot;&amp;gt; 1000ms&quot;
+      excellent: "&lt; 100ms",
+      good: "100-300ms",
+      acceptable: "300-1000ms",
+      poor: "&gt; 1000ms"
     }
   },
   
   throughput: {
-    description: &quot;Requests processed per second&quot;,
-    calculation: &quot;Total requests / Total time&quot;,
-    optimization: &quot;Horizontal scaling, caching, database optimization&quot;
+    description: "Requests processed per second",
+    calculation: "Total requests / Total time",
+    optimization: "Horizontal scaling, caching, database optimization"
   },
   
   availability: {
-    description: &quot;Percentage of time system is operational&quot;,
+    description: "Percentage of time system is operational",
     targets: {
-      highAvailability: &quot;99.9% (8.76 hours downtime/year)&quot;,
-      critical: &quot;99.99% (52.56 minutes downtime/year)&quot;,
-      fiveNines: &quot;99.999% (5.26 minutes downtime/year)&quot;
+      highAvailability: "99.9% (8.76 hours downtime/year)",
+      critical: "99.99% (52.56 minutes downtime/year)",
+      fiveNines: "99.999% (5.26 minutes downtime/year)"
     }
   },
   
   scalability: {
-    description: &quot;Ability to handle increased load&quot;,
-    measurement: &quot;Performance under different load levels&quot;,
-    strategies: [&quot;Horizontal scaling&quot;, &quot;Caching&quot;, &quot;Database optimization&quot;]
+    description: "Ability to handle increased load",
+    measurement: "Performance under different load levels",
+    strategies: ["Horizontal scaling", "Caching", "Database optimization"]
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;optimization-techniques&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#optimization-techniques&quot;&gt;Optimization Techniques&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Performance optimization strategies
-const optimizationTechniques &#x3D; {
+</code></pre>
+<h3 id="optimization-techniques"><a class="header" href="#optimization-techniques">Optimization Techniques</a></h3>
+<pre><code class="language-javascript">// Performance optimization strategies
+const optimizationTechniques = {
   database: {
-    indexing: &quot;Create appropriate indexes for query patterns&quot;,
-    queryOptimization: &quot;Use EXPLAIN to analyze and optimize queries&quot;,
-    connectionPooling: &quot;Reuse database connections to reduce overhead&quot;,
-    readReplicas: &quot;Distribute read queries across replicas&quot;
+    indexing: "Create appropriate indexes for query patterns",
+    queryOptimization: "Use EXPLAIN to analyze and optimize queries",
+    connectionPooling: "Reuse database connections to reduce overhead",
+    readReplicas: "Distribute read queries across replicas"
   },
   
   application: {
-    caching: &quot;Implement multi-level caching strategy&quot;,
-    asyncProcessing: &quot;Use message queues for long-running tasks&quot;,
-    codeOptimization: &quot;Profile and optimize bottlenecks&quot;,
-    resourcePooling: &quot;Pool expensive resources like database connections&quot;
+    caching: "Implement multi-level caching strategy",
+    asyncProcessing: "Use message queues for long-running tasks",
+    codeOptimization: "Profile and optimize bottlenecks",
+    resourcePooling: "Pool expensive resources like database connections"
   },
   
   infrastructure: {
-    cdn: &quot;Use CDN for static content delivery&quot;,
-    loadBalancing: &quot;Distribute traffic across multiple servers&quot;,
-    compression: &quot;Compress responses to reduce bandwidth&quot;,
-    monitoring: &quot;Implement comprehensive monitoring and alerting&quot;
+    cdn: "Use CDN for static content delivery",
+    loadBalancing: "Distribute traffic across multiple servers",
+    compression: "Compress responses to reduce bandwidth",
+    monitoring: "Implement comprehensive monitoring and alerting"
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;System Design Section Complete!&lt;/strong&gt; 🎉&lt;/p&gt;
-&lt;p&gt;You now have a comprehensive understanding of:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Design Principles&lt;/strong&gt;: SOLID, separation of concerns, DRY&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Scalability Patterns&lt;/strong&gt;: Horizontal/vertical scaling, load balancing&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Database Design&lt;/strong&gt;: Selection criteria, scaling patterns&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Caching Strategies&lt;/strong&gt;: Multiple patterns and invalidation&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;API Design&lt;/strong&gt;: RESTful principles and GraphQL&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Security Patterns&lt;/strong&gt;: Authentication, authorization, best practices&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Next Up&lt;/strong&gt;: Learn about Advanced Topics! 🚀&lt;/p&gt;
+</code></pre>
+<hr>
+<p><strong>System Design Section Complete!</strong> 🎉</p>
+<p>You now have a comprehensive understanding of:</p>
+<ul>
+<li><strong>Design Principles</strong>: SOLID, separation of concerns, DRY</li>
+<li><strong>Scalability Patterns</strong>: Horizontal/vertical scaling, load balancing</li>
+<li><strong>Database Design</strong>: Selection criteria, scaling patterns</li>
+<li><strong>Caching Strategies</strong>: Multiple patterns and invalidation</li>
+<li><strong>API Design</strong>: RESTful principles and GraphQL</li>
+<li><strong>Security Patterns</strong>: Authentication, authorization, best practices</li>
+</ul>
+<p><strong>Next Up</strong>: Learn about Advanced Topics! 🚀</p>
 
-                        </div>
-                        
-                    </article>
-                </div>
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "career/system-design.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

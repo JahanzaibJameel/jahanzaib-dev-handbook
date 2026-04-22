@@ -16,21 +16,8 @@ edit-url-template = "https://github.com/JahanzaibJameel/jahanzaib-dev-handbook/e
 # site-url = "/"  # Commented out for local development
 hash-files = false
 
-# DevAtelier 2026 - Premium theme assets
-additional-css = [
-    "theme/css/tokens.css",
-    "theme/css/base.css",
-    "theme/css/layout.css",
-    "theme/css/components.css",
-    "theme/css/animations.css",
-    "theme/css/syntax.css",
-    "theme/css/utilities.css"
-]
-additional-js = [
-    "theme/js/core.js",
-    "theme/js/animations.js",
-    "theme/js/search.js"
-]
+additional-css = ["custom.css"]
+additional-js = ["custom.js"]
 
 # Premium sidebar navigation
 sidebar-header-nav = true

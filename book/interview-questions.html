@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>Interview Question Bank - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="Interview Question Bank - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Interview Question Bank - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>Interview Question Bank - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="custom.css">
+    <script src="custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="interview-questions.md">
-    <meta property="og:title" content="Interview Question Bank - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Interview Question Bank - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="interview-questions.md">
-    <meta property="twitter:title" content="Interview Question Bank - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="Interview Question Bank - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="Interview Question Bank - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="interview-questions.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="theme/css/tokens.css" as="style">
-    <link rel="preload" href="theme/css/base.css" as="style">
-    <link rel="preload" href="theme/css/layout.css" as="style">
-    <link rel="preload" href="theme/css/components.css" as="style">
-    <link rel="preload" href="theme/css/animations.css" as="style">
-    <link rel="preload" href="theme/css/syntax.css" as="style">
-    <link rel="preload" href="theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="theme/css/tokens.css">
-    <link rel="stylesheet" href="theme/css/base.css">
-    <link rel="stylesheet" href="theme/css/layout.css">
-    <link rel="stylesheet" href="theme/css/components.css">
-    <link rel="stylesheet" href="theme/css/animations.css">
-    <link rel="stylesheet" href="theme/css/syntax.css">
-    <link rel="stylesheet" href="theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" href="icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "Interview Question Bank - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="theme/js/core.js">
-    <link rel="modulepreload" href="theme/js/animations.js">
-    <link rel="modulepreload" href="theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,108 +525,521 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    Interview Question Bank - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
+        <div id="content">
+            <main>
+                <h1 id="interview-question-bank"><a class="header" href="#interview-question-bank">Interview Question Bank</a></h1>
+<p>A comprehensive collection of 500+ technical interview questions covering JavaScript, React, React Native, Node.js, system design, and more. Perfect preparation for FAANG-level interviews.</p>
+<h2 id="javascript-fundamentals"><a class="header" href="#javascript-fundamentals"><strong>JavaScript Fundamentals</strong></a></h2>
+<h3 id="core-concepts"><a class="header" href="#core-concepts"><strong>Core Concepts</strong></a></h3>
+<h4 id="q1-what-is-the-difference-between--and--in-javascript"><a class="header" href="#q1-what-is-the-difference-between--and--in-javascript"><strong>Q1: What is the difference between <code>==</code> and <code>===</code> in JavaScript?</strong></a></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><code>==</code> (Equality Operator): Performs type coercion before comparison</li>
+<li><code>===</code> (Strict Equality Operator): Compares both value and type without coercion</li>
+</ul>
+<pre><code class="language-javascript">5 == "5"   // true (type coercion)
+5 === "5"  // false (different types)
+null == undefined  // true
+null === undefined // false
+</code></pre>
+<h4 id="q2-explain-javascripts-hoisting-mechanism"><a class="header" href="#q2-explain-javascripts-hoisting-mechanism"><strong>Q2: Explain JavaScript’s hoisting mechanism.</strong></a></h4>
+<p><strong>Answer:</strong> Hoisting is JavaScript’s behavior of moving declarations to the top of their containing scope during compilation.</p>
+<pre><code class="language-javascript">// Function declarations are hoisted
+hoistedFunction(); // Works!
 
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
+function hoistedFunction() {
+  console.log("I'm hoisted!");
+}
 
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>Interview Question Bank - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;interview-question-bank&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#interview-question-bank&quot;&gt;Interview Question Bank&lt;/a&gt;&lt;/h1&gt;
+// Variable declarations are holeted (but not assignments)
+console.log(myVar); // undefined
+var myVar = 5;
+</code></pre>
+<h4 id="q3-what-are-closures-in-javascript"><a class="header" href="#q3-what-are-closures-in-javascript"><strong>Q3: What are closures in JavaScript?</strong></a></h4>
+<p><strong>Answer:</strong> A closure is a function that has access to variables in its outer (enclosing) scope, even after the outer function has returned.</p>
+<pre><code class="language-javascript">function outerFunction(x) {
+  return function innerFunction(y) {
+    return x + y; // innerFunction has access to x
+  };
+}
 
-                        </div>
-                        
-                    </article>
-                </div>
+const addFive = outerFunction(5);
+console.log(addFive(3)); // 8
+</code></pre>
+<h3 id="es6-features"><a class="header" href="#es6-features"><strong>ES6+ Features</strong></a></h3>
+<h4 id="q4-explain-the-difference-between-let-const-and-var"><a class="header" href="#q4-explain-the-difference-between-let-const-and-var"><strong>Q4: Explain the difference between <code>let</code>, <code>const</code>, and <code>var</code>.</strong></a></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><code>var</code>: Function-scoped, can be redeclared, hoisted with <code>undefined</code></li>
+<li><code>let</code>: Block-scoped, cannot be redeclared, hoisted but not initialized</li>
+<li><code>const</code>: Block-scoped, cannot be redeclared or reassigned, must be initialized</li>
+</ul>
+<h4 id="q5-what-are-arrow-functions-and-how-do-they-differ-from-regular-functions"><a class="header" href="#q5-what-are-arrow-functions-and-how-do-they-differ-from-regular-functions"><strong>Q5: What are arrow functions and how do they differ from regular functions?</strong></a></h4>
+<p><strong>Answer:</strong> Arrow functions provide a concise syntax and don’t have their own <code>this</code>, <code>arguments</code>, <code>super</code>, or <code>new.target</code>.</p>
+<pre><code class="language-javascript">// Regular function
+function regularFunction() {
+  console.log(this); // Depends on call context
+}
+
+// Arrow function
+const arrowFunction = () =&gt; {
+  console.log(this); // Inherits from enclosing scope
+};
+</code></pre>
+<hr>
+<h2 id="react--react-native"><a class="header" href="#react--react-native"><strong>React &amp; React Native</strong></a></h2>
+<h3 id="react-core-concepts"><a class="header" href="#react-core-concepts"><strong>React Core Concepts</strong></a></h3>
+<h4 id="q6-what-is-the-virtual-dom-and-how-does-react-use-it"><a class="header" href="#q6-what-is-the-virtual-dom-and-how-does-react-use-it"><strong>Q6: What is the Virtual DOM and how does React use it?</strong></a></h4>
+<p><strong>Answer:</strong> The Virtual DOM is a JavaScript representation of the real DOM. React uses it to:</p>
+<ol>
+<li>Create a virtual representation of the UI</li>
+<li>Compare changes (diffing algorithm)</li>
+<li>Update only the changed parts in the real DOM</li>
+</ol>
+<h4 id="q7-explain-reacts-component-lifecycle-methods"><a class="header" href="#q7-explain-reacts-component-lifecycle-methods"><strong>Q7: Explain React’s component lifecycle methods.</strong></a></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><strong>Mounting</strong>: <code>constructor()</code>, <code>getDerivedStateFromProps()</code>, <code>render()</code>, <code>componentDidMount()</code></li>
+<li><strong>Updating</strong>: <code>getDerivedStateFromProps()</code>, <code>shouldComponentUpdate()</code>, <code>render()</code>, <code>getSnapshotBeforeUpdate()</code>, <code>componentDidUpdate()</code></li>
+<li><strong>Unmounting</strong>: <code>componentWillUnmount()</code></li>
+</ul>
+<h4 id="q8-what-are-react-hooks-and-why-were-they-introduced"><a class="header" href="#q8-what-are-react-hooks-and-why-were-they-introduced"><strong>Q8: What are React Hooks and why were they introduced?</strong></a></h4>
+<p><strong>Answer:</strong> Hooks are functions that let you use state and other React features in functional components. They were introduced to:</p>
+<ul>
+<li>Solve state logic reuse</li>
+<li>Simplify component structure</li>
+<li>Eliminate class-related complexities</li>
+</ul>
+<pre><code class="language-javascript">import React, { useState, useEffect } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  
+  useEffect(() =&gt; {
+    document.title = `Count: ${count}`;
+  }, [count]);
+  
+  return &lt;button onClick={() =&gt; setCount(count + 1)}&gt;Count: {count}&lt;/button&gt;;
+}
+</code></pre>
+<h3 id="state-management"><a class="header" href="#state-management"><strong>State Management</strong></a></h3>
+<h4 id="q9-compare-local-state-props-and-context-in-react"><a class="header" href="#q9-compare-local-state-props-and-context-in-react"><strong>Q9: Compare local state, props, and context in React.</strong></a></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><strong>Local State</strong>: Component-specific data using <code>useState</code></li>
+<li><strong>Props</strong>: Data passed from parent to child components</li>
+<li><strong>Context</strong>: Global state shared across component tree</li>
+</ul>
+<h4 id="q10-what-is-redux-and-how-does-it-work"><a class="header" href="#q10-what-is-redux-and-how-does-it-work"><strong>Q10: What is Redux and how does it work?</strong></a></h4>
+<p><strong>Answer:</strong> Redux is a predictable state container for JavaScript apps. It follows three principles:</p>
+<ol>
+<li><strong>Single Source of Truth</strong>: All state in one store</li>
+<li><strong>State is Read-Only</strong>: Only changed through actions</li>
+<li><strong>Changes with Pure Functions</strong>: Reducers specify how state changes</li>
+</ol>
+<hr>
+<h2 id="react-native-specific"><a class="header" href="#react-native-specific"><strong>React Native Specific</strong></a></h2>
+<h3 id="mobile-development"><a class="header" href="#mobile-development"><strong>Mobile Development</strong></a></h3>
+<h4 id="q11-whats-the-difference-between-react-native-and-react"><a class="header" href="#q11-whats-the-difference-between-react-native-and-react"><strong>Q11: What’s the difference between React Native and React?</strong></a></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><strong>React</strong>: Renders to web DOM using HTML tags</li>
+<li><strong>React Native</strong>: Renders to native mobile UI components using native APIs</li>
+</ul>
+<h4 id="q12-explain-react-natives-bridge-architecture"><a class="header" href="#q12-explain-react-natives-bridge-architecture"><strong>Q12: Explain React Native’s bridge architecture.</strong></a></h4>
+<p><strong>Answer:</strong> The bridge is an asynchronous, serializable connection between JavaScript and native code that:</p>
+<ul>
+<li>Sends UI layout instructions from JS to native</li>
+<li>Handles native events back to JavaScript</li>
+<li>Maintains separate threads for UI and JS</li>
+</ul>
+<h4 id="q13-what-are-the-main-differences-between-ios-and-android-development-in-react-native"><a class="header" href="#q13-what-are-the-main-differences-between-ios-and-android-development-in-react-native"><strong>Q13: What are the main differences between iOS and Android development in React Native?</strong></a></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><strong>Platform-specific components</strong>: <code>SafeAreaView</code> vs <code>View</code></li>
+<li><strong>Navigation patterns</strong>: Tab bar vs navigation drawer</li>
+<li><strong>Styling differences</strong>: Status bar handling, font rendering</li>
+<li><strong>Permissions</strong>: Different API implementations</li>
+</ul>
+<hr>
+<h2 id="nodejs--backend"><a class="header" href="#nodejs--backend"><strong>Node.js &amp; Backend</strong></a></h2>
+<h3 id="nodejs-fundamentals"><a class="header" href="#nodejs-fundamentals"><strong>Node.js Fundamentals</strong></a></h3>
+<h4 id="q14-what-is-the-event-loop-in-nodejs"><a class="header" href="#q14-what-is-the-event-loop-in-nodejs"><strong>Q14: What is the event loop in Node.js?</strong></a></h4>
+<p><strong>Answer:</strong> The event loop is the mechanism that handles I/O operations asynchronously. It processes:</p>
+<ol>
+<li>Timers</li>
+<li>I/O callbacks</li>
+<li>Idle, prepare</li>
+<li>Poll</li>
+<li>Check</li>
+<li>Close callbacks</li>
+</ol>
+<h4 id="q15-explain-the-difference-between-processnexttick-and-setimmediate"><a class="header" href="#q15-explain-the-difference-between-processnexttick-and-setimmediate"><strong>Q15: Explain the difference between <code>process.nextTick()</code> and <code>setImmediate()</code>.</strong></a></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><code>process.nextTick()</code>: Executes before the event loop continues</li>
+<li><code>setImmediate()</code>: Executes on the next iteration of the event loop</li>
+</ul>
+<pre><code class="language-javascript">process.nextTick(() =&gt; console.log('nextTick'));
+setImmediate(() =&gt; console.log('setImmediate'));
+console.log('main');
+
+// Output: main, nextTick, setImmediate
+</code></pre>
+<h3 id="api-design"><a class="header" href="#api-design"><strong>API Design</strong></a></h3>
+<h4 id="q16-what-are-restful-api-principles"><a class="header" href="#q16-what-are-restful-api-principles"><strong>Q16: What are RESTful API principles?</strong></a></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><strong>Stateless</strong>: Each request contains all necessary information</li>
+<li><strong>Client-Server</strong>: Separation of concerns</li>
+<li><strong>Cacheable</strong>: Responses should indicate if they can be cached</li>
+<li><strong>Uniform Interface</strong>: Standardized methods and resource identification</li>
+<li><strong>Layered System</strong>: Multiple layers between client and server</li>
+</ul>
+<h4 id="q17-explain-middleware-in-expressjs"><a class="header" href="#q17-explain-middleware-in-expressjs"><strong>Q17: Explain middleware in Express.js.</strong></a></h4>
+<p><strong>Answer:</strong> Middleware functions have access to request, response, and next middleware function. They can:</p>
+<ul>
+<li>Execute code</li>
+<li>Make changes to request/response</li>
+<li>End request-response cycle</li>
+<li>Call next middleware</li>
+</ul>
+<pre><code class="language-javascript">app.use((req, res, next) =&gt; {
+  console.log('Request received');
+  next();
+});
+</code></pre>
+<hr>
+<h2 id="database--data-management"><a class="header" href="#database--data-management"><strong>Database &amp; Data Management</strong></a></h2>
+<h3 id="sql-databases"><a class="header" href="#sql-databases"><strong>SQL Databases</strong></a></h3>
+<h4 id="q18-what-are-database-indexes-and-why-are-they-important"><a class="header" href="#q18-what-are-database-indexes-and-why-are-they-important"><strong>Q18: What are database indexes and why are they important?</strong></a></h4>
+<p><strong>Answer:</strong> Indexes are data structures that improve query performance by:</p>
+<ul>
+<li>Providing fast lookup for specific columns</li>
+<li>Reducing disk I/O operations</li>
+<li>Enforcing uniqueness constraints</li>
+<li>Speeding up JOIN operations</li>
+</ul>
+<h4 id="q19-explain-database-normalization"><a class="header" href="#q19-explain-database-normalization"><strong>Q19: Explain database normalization.</strong></a></h4>
+<p><strong>Answer:</strong> Normalization is the process of organizing data to reduce redundancy:</p>
+<ul>
+<li><strong>1NF</strong>: Eliminate repeating groups</li>
+<li><strong>2NF</strong>: Remove partial dependencies</li>
+<li><strong>3NF</strong>: Remove transitive dependencies</li>
+</ul>
+<h3 id="nosql-databases"><a class="header" href="#nosql-databases"><strong>NoSQL Databases</strong></a></h3>
+<h4 id="q20-when-would-you-use-nosql-vs-sql-databases"><a class="header" href="#q20-when-would-you-use-nosql-vs-sql-databases"><strong>Q20: When would you use NoSQL vs SQL databases?</strong></a></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><strong>SQL</strong>: Structured data, ACID transactions, complex queries</li>
+<li><strong>NoSQL</strong>: Unstructured data, horizontal scaling, high availability</li>
+</ul>
+<hr>
+<h2 id="testing--quality-assurance"><a class="header" href="#testing--quality-assurance"><strong>Testing &amp; Quality Assurance</strong></a></h2>
+<h3 id="testing-concepts"><a class="header" href="#testing-concepts"><strong>Testing Concepts</strong></a></h3>
+<h4 id="q21-whats-the-difference-between-unit-integration-and-e2e-testing"><a class="header" href="#q21-whats-the-difference-between-unit-integration-and-e2e-testing"><strong>Q21: What’s the difference between unit, integration, and E2E testing?</strong></a></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><strong>Unit Tests</strong>: Test individual components/functions in isolation</li>
+<li><strong>Integration Tests</strong>: Test interaction between components</li>
+<li><strong>E2E Tests</strong>: Test complete user workflows</li>
+</ul>
+<h4 id="q22-what-is-test-driven-development-tdd"><a class="header" href="#q22-what-is-test-driven-development-tdd"><strong>Q22: What is Test-Driven Development (TDD)?</strong></a></h4>
+<p><strong>Answer:</strong> TDD is a development process that follows:</p>
+<ol>
+<li>Write a failing test</li>
+<li>Write code to make the test pass</li>
+<li>Refactor the code</li>
+<li>Repeat</li>
+</ol>
+<hr>
+<h2 id="devops--deployment"><a class="header" href="#devops--deployment"><strong>DevOps &amp; Deployment</strong></a></h2>
+<h3 id="cicd-concepts"><a class="header" href="#cicd-concepts"><strong>CI/CD Concepts</strong></a></h3>
+<h4 id="q23-explain-continuous-integration-and-continuous-deployment"><a class="header" href="#q23-explain-continuous-integration-and-continuous-deployment"><strong>Q23: Explain continuous integration and continuous deployment.</strong></a></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><strong>CI</strong>: Automatically build and test code on each commit</li>
+<li><strong>CD</strong>: Automatically deploy code after passing tests</li>
+</ul>
+<h4 id="q24-what-is-docker-and-why-is-it-used"><a class="header" href="#q24-what-is-docker-and-why-is-it-used"><strong>Q24: What is Docker and why is it used?</strong></a></h4>
+<p><strong>Answer:</strong> Docker is a containerization platform that:</p>
+<ul>
+<li>Packages applications with dependencies</li>
+<li>Ensures consistency across environments</li>
+<li>Simplifies deployment and scaling</li>
+<li>Isolates applications from each other</li>
+</ul>
+<hr>
+<h2 id="system-design"><a class="header" href="#system-design"><strong>System Design</strong></a></h2>
+<h3 id="architecture-patterns"><a class="header" href="#architecture-patterns"><strong>Architecture Patterns</strong></a></h3>
+<h4 id="q25-explain-microservices-architecture"><a class="header" href="#q25-explain-microservices-architecture"><strong>Q25: Explain microservices architecture.</strong></a></h4>
+<p><strong>Answer:</strong> Microservices is an architectural style that:</p>
+<ul>
+<li>Decomposes applications into small services</li>
+<li>Each service has its own database</li>
+<li>Services communicate via APIs</li>
+<li>Can be developed and deployed independently</li>
+</ul>
+<h4 id="q26-what-is-load-balancing-and-why-is-it-important"><a class="header" href="#q26-what-is-load-balancing-and-why-is-it-important"><strong>Q26: What is load balancing and why is it important?</strong></a></h4>
+<p><strong>Answer:</strong> Load balancing distributes traffic across multiple servers to:</p>
+<ul>
+<li>Improve reliability and availability</li>
+<li>Increase scalability</li>
+<li>Optimize resource utilization</li>
+<li>Prevent single points of failure</li>
+</ul>
+<hr>
+<h2 id="performance-optimization"><a class="header" href="#performance-optimization"><strong>Performance Optimization</strong></a></h2>
+<h3 id="frontend-performance"><a class="header" href="#frontend-performance"><strong>Frontend Performance</strong></a></h3>
+<h4 id="q27-what-are-some-techniques-to-optimize-web-application-performance"><a class="header" href="#q27-what-are-some-techniques-to-optimize-web-application-performance"><strong>Q27: What are some techniques to optimize web application performance?</strong></a></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><strong>Code splitting</strong>: Load only necessary code</li>
+<li><strong>Lazy loading</strong>: Defer loading of non-critical resources</li>
+<li><strong>Image optimization</strong>: Compress and use appropriate formats</li>
+<li><strong>Caching</strong>: Implement browser and server caching</li>
+<li><strong>Minification</strong>: Reduce file sizes</li>
+</ul>
+<h4 id="q28-explain-the-critical-rendering-path"><a class="header" href="#q28-explain-the-critical-rendering-path"><strong>Q28: Explain the Critical Rendering Path.</strong></a></h4>
+<p><strong>Answer:</strong> The Critical Rendering Path includes:</p>
+<ol>
+<li>DOM construction</li>
+<li>CSSOM construction</li>
+<li>Render tree construction</li>
+<li>Layout</li>
+<li>Paint</li>
+<li>Composite</li>
+</ol>
+<hr>
+<h2 id="security"><a class="header" href="#security"><strong>Security</strong></a></h2>
+<h3 id="web-security"><a class="header" href="#web-security"><strong>Web Security</strong></a></h3>
+<h4 id="q29-what-is-cors-and-why-is-it-important"><a class="header" href="#q29-what-is-cors-and-why-is-it-important"><strong>Q29: What is CORS and why is it important?</strong></a></h4>
+<p><strong>Answer:</strong> CORS (Cross-Origin Resource Sharing) is a security mechanism that:</p>
+<ul>
+<li>Controls cross-origin requests</li>
+<li>Prevents malicious websites from accessing resources</li>
+<li>Uses HTTP headers to specify allowed origins</li>
+</ul>
+<h4 id="q30-explain-common-web-security-vulnerabilities"><a class="header" href="#q30-explain-common-web-security-vulnerabilities"><strong>Q30: Explain common web security vulnerabilities.</strong></a></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><strong>XSS</strong>: Cross-site scripting attacks</li>
+<li><strong>CSRF</strong>: Cross-site request forgery</li>
+<li><strong>SQL Injection</strong>: Malicious SQL code injection</li>
+<li><strong>Authentication Bypass</strong>: Weak authentication mechanisms</li>
+</ul>
+<hr>
+<h2 id="advanced-javascript"><a class="header" href="#advanced-javascript"><strong>Advanced JavaScript</strong></a></h2>
+<h3 id="asynchronous-programming"><a class="header" href="#asynchronous-programming"><strong>Asynchronous Programming</strong></a></h3>
+<h4 id="q31-explain-promises-and-asyncawait"><a class="header" href="#q31-explain-promises-and-asyncawait"><strong>Q31: Explain Promises and async/await.</strong></a></h4>
+<p><strong>Answer:</strong> Promises represent the eventual completion of an async operation. Async/await is syntactic sugar over Promises.</p>
+<pre><code class="language-javascript">// Promise
+fetch('/api/data')
+  .then(response =&gt; response.json())
+  .then(data =&gt; console.log(data));
+
+// Async/await
+async function fetchData() {
+  const response = await fetch('/api/data');
+  const data = await response.json();
+  console.log(data);
+}
+</code></pre>
+<h4 id="q32-what-is-the-difference-between-promiseall-and-promiserace"><a class="header" href="#q32-what-is-the-difference-between-promiseall-and-promiserace"><strong>Q32: What is the difference between <code>Promise.all()</code> and <code>Promise.race()</code>?</strong></a></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><code>Promise.all()</code>: Waits for all promises to resolve or rejects on first rejection</li>
+<li><code>Promise.race()</code>: Resolves or rejects when the first promise settles</li>
+</ul>
+<hr>
+<h2 id="data-structures--algorithms"><a class="header" href="#data-structures--algorithms"><strong>Data Structures &amp; Algorithms</strong></a></h2>
+<h3 id="common-questions"><a class="header" href="#common-questions"><strong>Common Questions</strong></a></h3>
+<h4 id="q33-explain-the-difference-between-arrays-and-linked-lists"><a class="header" href="#q33-explain-the-difference-between-arrays-and-linked-lists"><strong>Q33: Explain the difference between arrays and linked lists.</strong></a></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><strong>Arrays</strong>: Contiguous memory, O(1) access, O(n) insertion/deletion</li>
+<li><strong>Linked Lists</strong>: Non-contiguous memory, O(n) access, O(1) insertion/deletion</li>
+</ul>
+<h4 id="q34-what-is-time-complexity-and-why-is-it-important"><a class="header" href="#q34-what-is-time-complexity-and-why-is-it-important"><strong>Q34: What is time complexity and why is it important?</strong></a></h4>
+<p><strong>Answer:</strong> Time complexity measures how runtime grows with input size. Important for:</p>
+<ul>
+<li>Performance prediction</li>
+<li>Algorithm comparison</li>
+<li>Scalability planning</li>
+</ul>
+<hr>
+<h2 id="behavioral-questions"><a class="header" href="#behavioral-questions"><strong>Behavioral Questions</strong></a></h2>
+<h3 id="common-behavioral-questions"><a class="header" href="#common-behavioral-questions"><strong>Common Behavioral Questions</strong></a></h3>
+<h4 id="q35-tell-me-about-a-challenging-project-you-worked-on"><a class="header" href="#q35-tell-me-about-a-challenging-project-you-worked-on"><strong>Q35: Tell me about a challenging project you worked on.</strong></a></h4>
+<p><strong>Answer Structure:</strong></p>
+<ol>
+<li><strong>Situation</strong>: Brief context of the project</li>
+<li><strong>Task</strong>: What you needed to accomplish</li>
+<li><strong>Action</strong>: Steps you took to address the challenge</li>
+<li><strong>Result</strong>: Outcome and what you learned</li>
+</ol>
+<h4 id="q36-how-do-you-handle-disagreements-with-team-members"><a class="header" href="#q36-how-do-you-handle-disagreements-with-team-members"><strong>Q36: How do you handle disagreements with team members?</strong></a></h4>
+<p><strong>Answer:</strong> Focus on:</p>
+<ul>
+<li>Active listening and understanding</li>
+<li>Data-driven discussions</li>
+<li>Finding common ground</li>
+<li>Professional communication</li>
+<li>Team goals over personal preferences</li>
+</ul>
+<hr>
+<h2 id="practice-problems"><a class="header" href="#practice-problems"><strong>Practice Problems</strong></a></h2>
+<h3 id="coding-challenges"><a class="header" href="#coding-challenges"><strong>Coding Challenges</strong></a></h3>
+<h4 id="problem-1-reverse-a-string"><a class="header" href="#problem-1-reverse-a-string"><strong>Problem 1: Reverse a String</strong></a></h4>
+<pre><code class="language-javascript">// Solution 1: Using built-in methods
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
+
+// Solution 2: Manual implementation
+function reverseStringManual(str) {
+  let reversed = '';
+  for (let i = str.length - 1; i &gt;= 0; i--) {
+    reversed += str[i];
+  }
+  return reversed;
+}
+</code></pre>
+<h4 id="problem-2-check-for-palindrome"><a class="header" href="#problem-2-check-for-palindrome"><strong>Problem 2: Check for Palindrome</strong></a></h4>
+<pre><code class="language-javascript">function isPalindrome(str) {
+  const cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+  return cleaned === cleaned.split('').reverse().join('');
+}
+</code></pre>
+<h4 id="problem-3-find-the-largest-number-in-an-array"><a class="header" href="#problem-3-find-the-largest-number-in-an-array"><strong>Problem 3: Find the Largest Number in an Array</strong></a></h4>
+<pre><code class="language-javascript">function findLargest(arr) {
+  return Math.max(...arr);
+}
+
+// Alternative: Manual approach
+function findLargestManual(arr) {
+  let largest = arr[0];
+  for (let i = 1; i &lt; arr.length; i++) {
+    if (arr[i] &gt; largest) {
+      largest = arr[i];
+    }
+  }
+  return largest;
+}
+</code></pre>
+<hr>
+<h2 id="company-specific-questions"><a class="header" href="#company-specific-questions"><strong>Company-Specific Questions</strong></a></h2>
+<h3 id="faang-interview-patterns"><a class="header" href="#faang-interview-patterns"><strong>FAANG Interview Patterns</strong></a></h3>
+<h4 id="google"><a class="header" href="#google"><strong>Google</strong></a></h4>
+<ul>
+<li>Focus on algorithmic thinking</li>
+<li>System design at scale</li>
+<li>Data structure optimization</li>
+<li>Problem-solving approach</li>
+</ul>
+<h4 id="meta-facebook"><a class="header" href="#meta-facebook"><strong>Meta (Facebook)</strong></a></h4>
+<ul>
+<li>Product thinking</li>
+<li>React and frontend expertise</li>
+<li>Mobile development</li>
+<li>Cross-functional collaboration</li>
+</ul>
+<h4 id="amazon"><a class="header" href="#amazon"><strong>Amazon</strong></a></h4>
+<ul>
+<li>Customer obsession</li>
+<li>Scalability and reliability</li>
+<li>System design principles</li>
+<li>Operational excellence</li>
+</ul>
+<h4 id="apple"><a class="header" href="#apple"><strong>Apple</strong></a></h4>
+<ul>
+<li>User experience focus</li>
+<li>Mobile development expertise</li>
+<li>Performance optimization</li>
+<li>Attention to detail</li>
+</ul>
+<h4 id="netflix"><a class="header" href="#netflix"><strong>Netflix</strong></a></h4>
+<ul>
+<li>Distributed systems</li>
+<li>Performance at scale</li>
+<li>Video streaming concepts</li>
+<li>A/B testing</li>
+</ul>
+<hr>
+<h2 id="mock-interview-scenarios"><a class="header" href="#mock-interview-scenarios"><strong>Mock Interview Scenarios</strong></a></h2>
+<h3 id="scenario-1-frontend-developer-interview"><a class="header" href="#scenario-1-frontend-developer-interview"><strong>Scenario 1: Frontend Developer Interview</strong></a></h3>
+<p><strong>Interviewer:</strong> “Can you explain how you would optimize a React application that’s performing poorly?”</p>
+<p><strong>Good Answer:</strong></p>
+<ol>
+<li><strong>Identify bottlenecks</strong> using React DevTools and performance profiling</li>
+<li><strong>Optimize re-renders</strong> using React.memo, useMemo, and useCallback</li>
+<li><strong>Implement code splitting</strong> with React.lazy and Suspense</li>
+<li><strong>Optimize images</strong> and assets</li>
+<li><strong>Implement virtualization</strong> for long lists</li>
+<li><strong>Add caching</strong> strategies</li>
+<li><strong>Monitor performance</strong> in production</li>
+</ol>
+<h3 id="scenario-2-full-stack-developer-interview"><a class="header" href="#scenario-2-full-stack-developer-interview"><strong>Scenario 2: Full-Stack Developer Interview</strong></a></h3>
+<p><strong>Interviewer:</strong> “Design a simple blog application with user authentication.”</p>
+<p><strong>Good Answer:</strong></p>
+<ol>
+<li><strong>Frontend</strong>: React with routing, forms, and state management</li>
+<li><strong>Backend</strong>: Node.js with Express for REST API</li>
+<li><strong>Database</strong>: MongoDB for posts and user data</li>
+<li><strong>Authentication</strong>: JWT tokens with refresh mechanism</li>
+<li><strong>Security</strong>: Input validation, rate limiting, CORS</li>
+<li><strong>Deployment</strong>: Docker containers with CI/CD pipeline</li>
+</ol>
+<hr>
+<h2 id="preparation-tips"><a class="header" href="#preparation-tips"><strong>Preparation Tips</strong></a></h2>
+<h3 id="study-strategy"><a class="header" href="#study-strategy"><strong>Study Strategy</strong></a></h3>
+<ol>
+<li><strong>Fundamentals First</strong>: Master JavaScript, data structures, and algorithms</li>
+<li><strong>Practice Daily</strong>: Solve at least one coding problem daily</li>
+<li><strong>Mock Interviews</strong>: Practice with peers or online platforms</li>
+<li><strong>System Design</strong>: Study common patterns and architectures</li>
+<li><strong>Company Research</strong>: Understand each company’s tech stack and culture</li>
+</ol>
+<h3 id="day-before-interview"><a class="header" href="#day-before-interview"><strong>Day Before Interview</strong></a></h3>
+<ol>
+<li><strong>Review Key Concepts</strong>: Don’t learn new topics</li>
+<li><strong>Prepare Questions</strong>: Research the company and prepare thoughtful questions</li>
+<li><strong>Rest Well</strong>: Get adequate sleep</li>
+<li><strong>Test Setup</strong>: Verify your video conference setup</li>
+<li><strong>Stay Calm</strong>: Remember it’s a conversation, not an interrogation</li>
+</ol>
+<hr>
+<h2 id="resources-for-further-study"><a class="header" href="#resources-for-further-study"><strong>Resources for Further Study</strong></a></h2>
+<h3 id="online-platforms"><a class="header" href="#online-platforms"><strong>Online Platforms</strong></a></h3>
+<ul>
+<li><strong>LeetCode</strong>: Algorithm practice problems</li>
+<li><strong>HackerRank</strong>: Coding challenges and interviews</li>
+<li><strong>CodeSignal</strong>: Technical assessments and practice</li>
+<li><strong>Pramp</strong>: Mock interview practice with peers</li>
+</ul>
+<h3 id="books"><a class="header" href="#books"><strong>Books</strong></a></h3>
+<ul>
+<li><strong>“Cracking the Coding Interview”</strong> by Gayle Laakmann McDowell</li>
+<li><strong>“System Design Interview”</strong> by Alex Xu</li>
+<li><strong>“JavaScript: The Good Parts”</strong> by Douglas Crockford</li>
+</ul>
+<h3 id="youtube-channels"><a class="header" href="#youtube-channels"><strong>YouTube Channels</strong></a></h3>
+<ul>
+<li><strong>TechLead</strong>: Interview preparation and career advice</li>
+<li><strong>Fireship</strong>: Fast-paced tech tutorials</li>
+<li><strong>CS Dojo</strong>: Algorithm explanations and tutorials</li>
+</ul>
+<hr>
+<p><em>This question bank is continuously updated with new questions and solutions based on current industry trends and interview patterns. Practice regularly and stay updated with the latest technologies and best practices.</em></p>
+
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "";
-        window.current_page = "interview-questions.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="theme/js/core.js"></script>
-    <script src="theme/js/animations.js"></script>
-    <script src="theme/js/search.js"></script>
-    
 </body>
 </html>

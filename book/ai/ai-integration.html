@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>AI Integration Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="AI Integration Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, AI Integration Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>AI Integration Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="ai/ai-integration.md">
-    <meta property="og:title" content="AI Integration Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="AI Integration Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="ai/ai-integration.md">
-    <meta property="twitter:title" content="AI Integration Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="AI Integration Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="AI Integration Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="ai/ai-integration.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "AI Integration Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,82 +525,33 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    AI Integration Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
-
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>AI Integration Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;ai-integration&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#ai-integration&quot;&gt;AI Integration&lt;/a&gt;&lt;/h1&gt;
-&lt;h2 id&#x3D;&quot;what-is-ai-integration&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#what-is-ai-integration&quot;&gt;What is AI Integration?&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;AI integration is the process of incorporating artificial intelligence capabilities into software applications to enhance functionality, automate processes, and provide intelligent user experiences. It transforms traditional applications into smart systems that can learn, predict, and adapt.&lt;/p&gt;
-&lt;h2 id&#x3D;&quot;example&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#example&quot;&gt;Example&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;openai-api-integration-in-nodejs&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#openai-api-integration-in-nodejs&quot;&gt;OpenAI API Integration in Node.js&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// services/aiService.js
-const OpenAI &#x3D; require(&#x27;openai&#x27;);
+        <div id="content">
+            <main>
+                <h1 id="ai-integration"><a class="header" href="#ai-integration">AI Integration</a></h1>
+<h2 id="what-is-ai-integration"><a class="header" href="#what-is-ai-integration">What is AI Integration?</a></h2>
+<p>AI integration is the process of incorporating artificial intelligence capabilities into software applications to enhance functionality, automate processes, and provide intelligent user experiences. It transforms traditional applications into smart systems that can learn, predict, and adapt.</p>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<h3 id="openai-api-integration-in-nodejs"><a class="header" href="#openai-api-integration-in-nodejs">OpenAI API Integration in Node.js</a></h3>
+<pre><code class="language-javascript">// services/aiService.js
+const OpenAI = require('openai');
 
 class AIService {
   constructor() {
-    this.openai &#x3D; new OpenAI({
+    this.openai = new OpenAI({
       apiKey: process.env.OPENAI_API_KEY,
     });
   }
 
-  async generateResponse(prompt, options &#x3D; {}) {
+  async generateResponse(prompt, options = {}) {
     try {
-      const completion &#x3D; await this.openai.chat.completions.create({
-        model: options.model || &#x27;gpt-3.5-turbo&#x27;,
+      const completion = await this.openai.chat.completions.create({
+        model: options.model || 'gpt-3.5-turbo',
         messages: [
-          { role: &#x27;system&#x27;, content: &#x27;You are a helpful assistant.&#x27; },
-          { role: &#x27;user&#x27;, content: prompt }
+          { role: 'system', content: 'You are a helpful assistant.' },
+          { role: 'user', content: prompt }
         ],
         max_tokens: options.maxTokens || 1000,
         temperature: options.temperature || 0.7,
@@ -823,36 +559,36 @@ class AIService {
 
       return completion.choices[0].message.content;
     } catch (error) {
-      console.error(&#x27;AI Service Error:&#x27;, error);
-      throw new Error(&#x27;Failed to generate AI response&#x27;);
+      console.error('AI Service Error:', error);
+      throw new Error('Failed to generate AI response');
     }
   }
 
   async analyzeText(text) {
-    const prompt &#x3D; &#x60;Analyze this text for sentiment, key topics, and insights: &quot;${text}&quot;&#x60;;
+    const prompt = `Analyze this text for sentiment, key topics, and insights: "${text}"`;
     return this.generateResponse(prompt);
   }
 }
 
-module.exports &#x3D; AIService;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;react-native-ai-integration&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#react-native-ai-integration&quot;&gt;React Native AI Integration&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// hooks/useAI.js
-import { useState, useCallback } from &#x27;react&#x27;;
-import AIService from &#x27;../services/aiService&#x27;;
+module.exports = AIService;
+</code></pre>
+<h3 id="react-native-ai-integration"><a class="header" href="#react-native-ai-integration">React Native AI Integration</a></h3>
+<pre><code class="language-javascript">// hooks/useAI.js
+import { useState, useCallback } from 'react';
+import AIService from '../services/aiService';
 
-export const useAI &#x3D; () &#x3D;&amp;gt; {
-  const [loading, setLoading] &#x3D; useState(false);
-  const [response, setResponse] &#x3D; useState(&#x27;&#x27;);
-  const [error, setError] &#x3D; useState(null);
+export const useAI = () =&gt; {
+  const [loading, setLoading] = useState(false);
+  const [response, setResponse] = useState('');
+  const [error, setError] = useState(null);
 
-  const generateResponse &#x3D; useCallback(async (prompt, options) &#x3D;&amp;gt; {
+  const generateResponse = useCallback(async (prompt, options) =&gt; {
     setLoading(true);
     setError(null);
     
     try {
-      const aiService &#x3D; new AIService();
-      const result &#x3D; await aiService.generateResponse(prompt, options);
+      const aiService = new AIService();
+      const result = await aiService.generateResponse(prompt, options);
       setResponse(result);
     } catch (err) {
       setError(err.message);
@@ -863,71 +599,71 @@ export const useAI &#x3D; () &#x3D;&amp;gt; {
 
   return { generateResponse, response, loading, error };
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;real-use-case&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#real-use-case&quot;&gt;Real Use Case&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;customer-support-chatbot&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#customer-support-chatbot&quot;&gt;Customer Support Chatbot&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Companies like &lt;strong&gt;Intercom&lt;/strong&gt; and &lt;strong&gt;Zendesk&lt;/strong&gt; use AI integration to power customer support:&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// components/AIChatbot.js
-import React, { useState } from &#x27;react&#x27;;
-import { useAI } from &#x27;../hooks/useAI&#x27;;
+</code></pre>
+<h2 id="real-use-case"><a class="header" href="#real-use-case">Real Use Case</a></h2>
+<h3 id="customer-support-chatbot"><a class="header" href="#customer-support-chatbot">Customer Support Chatbot</a></h3>
+<p>Companies like <strong>Intercom</strong> and <strong>Zendesk</strong> use AI integration to power customer support:</p>
+<pre><code class="language-javascript">// components/AIChatbot.js
+import React, { useState } from 'react';
+import { useAI } from '../hooks/useAI';
 
-const AIChatbot &#x3D; () &#x3D;&amp;gt; {
-  const [messages, setMessages] &#x3D; useState([]);
-  const [input, setInput] &#x3D; useState(&#x27;&#x27;);
-  const { generateResponse, loading } &#x3D; useAI();
+const AIChatbot = () =&gt; {
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState('');
+  const { generateResponse, loading } = useAI();
 
-  const sendMessage &#x3D; async () &#x3D;&amp;gt; {
+  const sendMessage = async () =&gt; {
     if (!input.trim()) return;
 
-    const userMessage &#x3D; { role: &#x27;user&#x27;, content: input };
-    setMessages(prev &#x3D;&amp;gt; [...prev, userMessage]);
+    const userMessage = { role: 'user', content: input };
+    setMessages(prev =&gt; [...prev, userMessage]);
 
     // Generate AI response
-    const aiPrompt &#x3D; &#x60;Customer asked: &quot;${input}&quot;. Provide helpful customer support response.&#x60;;
-    const aiResponse &#x3D; await generateResponse(aiPrompt);
+    const aiPrompt = `Customer asked: "${input}". Provide helpful customer support response.`;
+    const aiResponse = await generateResponse(aiPrompt);
     
-    const botMessage &#x3D; { role: &#x27;assistant&#x27;, content: aiResponse };
-    setMessages(prev &#x3D;&amp;gt; [...prev, botMessage]);
-    setInput(&#x27;&#x27;);
+    const botMessage = { role: 'assistant', content: aiResponse };
+    setMessages(prev =&gt; [...prev, botMessage]);
+    setInput('');
   };
 
   return (
-    &amp;lt;div className&#x3D;&quot;chatbot&quot;&amp;gt;
-      &amp;lt;div className&#x3D;&quot;messages&quot;&amp;gt;
-        {messages.map((msg, i) &#x3D;&amp;gt; (
-          &amp;lt;div key&#x3D;{i} className&#x3D;{&#x60;message ${msg.role}&#x60;}&amp;gt;
+    &lt;div className="chatbot"&gt;
+      &lt;div className="messages"&gt;
+        {messages.map((msg, i) =&gt; (
+          &lt;div key={i} className={`message ${msg.role}`}&gt;
             {msg.content}
-          &amp;lt;/div&amp;gt;
+          &lt;/div&gt;
         ))}
-      &amp;lt;/div&amp;gt;
-      &amp;lt;div className&#x3D;&quot;input-area&quot;&amp;gt;
-        &amp;lt;input
-          value&#x3D;{input}
-          onChange&#x3D;{(e) &#x3D;&amp;gt; setInput(e.target.value)}
-          placeholder&#x3D;&quot;Ask me anything...&quot;
-          onKeyPress&#x3D;{(e) &#x3D;&amp;gt; e.key &#x3D;&#x3D;&#x3D; &#x27;Enter&#x27; &amp;amp;&amp;amp; sendMessage()}
-        /&amp;gt;
-        &amp;lt;button onClick&#x3D;{sendMessage} disabled&#x3D;{loading}&amp;gt;
-          {loading ? &#x27;Thinking...&#x27; : &#x27;Send&#x27;}
-        &amp;lt;/button&amp;gt;
-      &amp;lt;/div&amp;gt;
-    &amp;lt;/div&amp;gt;
+      &lt;/div&gt;
+      &lt;div className="input-area"&gt;
+        &lt;input
+          value={input}
+          onChange={(e) =&gt; setInput(e.target.value)}
+          placeholder="Ask me anything..."
+          onKeyPress={(e) =&gt; e.key === 'Enter' &amp;&amp; sendMessage()}
+        /&gt;
+        &lt;button onClick={sendMessage} disabled={loading}&gt;
+          {loading ? 'Thinking...' : 'Send'}
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
   );
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;pro-tip&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#pro-tip&quot;&gt;Pro Tip&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Implement Rate Limiting and Caching&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// utils/aiCache.js
+</code></pre>
+<h2 id="pro-tip"><a class="header" href="#pro-tip">Pro Tip</a></h2>
+<p><strong>Implement Rate Limiting and Caching</strong></p>
+<pre><code class="language-javascript">// utils/aiCache.js
 class AICache {
-  constructor(maxSize &#x3D; 100) {
-    this.cache &#x3D; new Map();
-    this.maxSize &#x3D; maxSize;
+  constructor(maxSize = 100) {
+    this.cache = new Map();
+    this.maxSize = maxSize;
   }
 
   get(key) {
     if (this.cache.has(key)) {
       // Move to end (LRU)
-      const value &#x3D; this.cache.get(key);
+      const value = this.cache.get(key);
       this.cache.delete(key);
       this.cache.set(key, value);
       return value;
@@ -936,9 +672,9 @@ class AICache {
   }
 
   set(key, value) {
-    if (this.cache.size &amp;gt;&#x3D; this.maxSize) {
+    if (this.cache.size &gt;= this.maxSize) {
       // Remove oldest entry
-      const firstKey &#x3D; this.cache.keys().next().value;
+      const firstKey = this.cache.keys().next().value;
       this.cache.delete(firstKey);
     }
     this.cache.set(key, value);
@@ -949,32 +685,32 @@ class AICache {
 class EnhancedAIService extends AIService {
   constructor() {
     super();
-    this.cache &#x3D; new AICache();
-    this.rateLimiter &#x3D; new Map(); // Simple rate limiting
+    this.cache = new AICache();
+    this.rateLimiter = new Map(); // Simple rate limiting
   }
 
-  async generateResponse(prompt, options &#x3D; {}) {
-    const cacheKey &#x3D; &#x60;${prompt}_${JSON.stringify(options)}&#x60;;
+  async generateResponse(prompt, options = {}) {
+    const cacheKey = `${prompt}_${JSON.stringify(options)}`;
     
     // Check cache first
-    const cached &#x3D; this.cache.get(cacheKey);
+    const cached = this.cache.get(cacheKey);
     if (cached) {
       return cached;
     }
 
     // Simple rate limiting
-    const clientId &#x3D; options.clientId || &#x27;default&#x27;;
-    const now &#x3D; Date.now();
-    const lastRequest &#x3D; this.rateLimiter.get(clientId) || 0;
+    const clientId = options.clientId || 'default';
+    const now = Date.now();
+    const lastRequest = this.rateLimiter.get(clientId) || 0;
     
-    if (now - lastRequest &amp;lt; 1000) { // 1 second between requests
-      throw new Error(&#x27;Rate limit exceeded. Please wait.&#x27;);
+    if (now - lastRequest &lt; 1000) { // 1 second between requests
+      throw new Error('Rate limit exceeded. Please wait.');
     }
     
     this.rateLimiter.set(clientId, now);
 
     // Generate response
-    const response &#x3D; await super.generateResponse(prompt, options);
+    const response = await super.generateResponse(prompt, options);
     
     // Cache the result
     this.cache.set(cacheKey, response);
@@ -982,157 +718,108 @@ class EnhancedAIService extends AIService {
     return response;
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;exercise&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#exercise&quot;&gt;Exercise&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Build a Simple AI Content Generator&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Create a React Native component that uses AI to generate blog post titles based on a topic:&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// components/AIContentGenerator.js
-import React, { useState } from &#x27;react&#x27;;
-import { useAI } from &#x27;../hooks/useAI&#x27;;
+</code></pre>
+<h2 id="exercise"><a class="header" href="#exercise">Exercise</a></h2>
+<p><strong>Build a Simple AI Content Generator</strong></p>
+<p>Create a React Native component that uses AI to generate blog post titles based on a topic:</p>
+<pre><code class="language-javascript">// components/AIContentGenerator.js
+import React, { useState } from 'react';
+import { useAI } from '../hooks/useAI';
 
-const AIContentGenerator &#x3D; () &#x3D;&amp;gt; {
-  const [topic, setTopic] &#x3D; useState(&#x27;&#x27;);
-  const [titles, setTitles] &#x3D; useState([]);
-  const { generateResponse, loading } &#x3D; useAI();
+const AIContentGenerator = () =&gt; {
+  const [topic, setTopic] = useState('');
+  const [titles, setTitles] = useState([]);
+  const { generateResponse, loading } = useAI();
 
-  const generateTitles &#x3D; async () &#x3D;&amp;gt; {
+  const generateTitles = async () =&gt; {
     if (!topic.trim()) return;
 
-    const prompt &#x3D; &#x60;Generate 5 catchy blog post titles about: &quot;${topic}&quot;. Return as a numbered list.&#x60;;
+    const prompt = `Generate 5 catchy blog post titles about: "${topic}". Return as a numbered list.`;
     
     try {
-      const response &#x3D; await generateResponse(prompt);
+      const response = await generateResponse(prompt);
       // Parse the numbered list
-      const titleList &#x3D; response
-        .split(&#x27;\n&#x27;)
-        .filter(line &#x3D;&amp;gt; line.match(/^\d+\./))
-        .map(line &#x3D;&amp;gt; line.replace(/^\d+\.\s*/, &#x27;&#x27;).trim());
+      const titleList = response
+        .split('\n')
+        .filter(line =&gt; line.match(/^\d+\./))
+        .map(line =&gt; line.replace(/^\d+\.\s*/, '').trim());
       
       setTitles(titleList);
     } catch (error) {
-      console.error(&#x27;Failed to generate titles:&#x27;, error);
+      console.error('Failed to generate titles:', error);
     }
   };
 
   return (
-    &amp;lt;div style&#x3D;{{ padding: 20 }}&amp;gt;
-      &amp;lt;h2&amp;gt;AI Blog Title Generator&amp;lt;/h2&amp;gt;
+    &lt;div style={{ padding: 20 }}&gt;
+      &lt;h2&gt;AI Blog Title Generator&lt;/h2&gt;
       
-      &amp;lt;input
-        value&#x3D;{topic}
-        onChange&#x3D;{(e) &#x3D;&amp;gt; setTopic(e.target.value)}
-        placeholder&#x3D;&quot;Enter a topic...&quot;
-        style&#x3D;{{ 
-          width: &#x27;100%&#x27;, 
+      &lt;input
+        value={topic}
+        onChange={(e) =&gt; setTopic(e.target.value)}
+        placeholder="Enter a topic..."
+        style={{ 
+          width: '100%', 
           padding: 10, 
           marginBottom: 10,
-          border: &#x27;1px solid #ccc&#x27;,
+          border: '1px solid #ccc',
           borderRadius: 5
         }}
-      /&amp;gt;
+      /&gt;
       
-      &amp;lt;button 
-        onClick&#x3D;{generateTitles}
-        disabled&#x3D;{loading || !topic.trim()}
-        style&#x3D;{{
+      &lt;button 
+        onClick={generateTitles}
+        disabled={loading || !topic.trim()}
+        style={{
           padding: 10,
-          backgroundColor: loading ? &#x27;#ccc&#x27; : &#x27;#007bff&#x27;,
-          color: &#x27;white&#x27;,
-          border: &#x27;none&#x27;,
+          backgroundColor: loading ? '#ccc' : '#007bff',
+          color: 'white',
+          border: 'none',
           borderRadius: 5,
-          cursor: loading ? &#x27;not-allowed&#x27; : &#x27;pointer&#x27;
+          cursor: loading ? 'not-allowed' : 'pointer'
         }}
-      &amp;gt;
-        {loading ? &#x27;Generating...&#x27; : &#x27;Generate Titles&#x27;}
-      &amp;lt;/button&amp;gt;
+      &gt;
+        {loading ? 'Generating...' : 'Generate Titles'}
+      &lt;/button&gt;
 
-      {titles.length &amp;gt; 0 &amp;amp;&amp;amp; (
-        &amp;lt;div style&#x3D;{{ marginTop: 20 }}&amp;gt;
-          &amp;lt;h3&amp;gt;Generated Titles:&amp;lt;/h3&amp;gt;
-          {titles.map((title, i) &#x3D;&amp;gt; (
-            &amp;lt;div key&#x3D;{i} style&#x3D;{{ 
+      {titles.length &gt; 0 &amp;&amp; (
+        &lt;div style={{ marginTop: 20 }}&gt;
+          &lt;h3&gt;Generated Titles:&lt;/h3&gt;
+          {titles.map((title, i) =&gt; (
+            &lt;div key={i} style={{ 
               padding: 10, 
-              backgroundColor: &#x27;#f8f9fa&#x27;,
+              backgroundColor: '#f8f9fa',
               marginBottom: 5,
               borderRadius: 5 
-            }}&amp;gt;
+            }}&gt;
               {title}
-            &amp;lt;/div&amp;gt;
+            &lt;/div&gt;
           ))}
-        &amp;lt;/div&amp;gt;
+        &lt;/div&gt;
       )}
-    &amp;lt;/div&amp;gt;
+    &lt;/div&gt;
   );
 };
 
 export default AIContentGenerator;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Your Tasks:&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Implement the AI content generator component&lt;/li&gt;
-&lt;li&gt;Add error handling for API failures&lt;/li&gt;
-&lt;li&gt;Create a loading indicator during AI generation&lt;/li&gt;
-&lt;li&gt;Add a feature to save favorite titles&lt;/li&gt;
-&lt;li&gt;Implement character limit for the topic input&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This exercise teaches you practical AI integration, error handling, and user experience considerations when working with AI APIs.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Next Up&lt;/strong&gt;: Learn about building a complete ChatGPT Clone! ChatGPT Clone&lt;/p&gt;
+</code></pre>
+<p><strong>Your Tasks:</strong></p>
+<ol>
+<li>Implement the AI content generator component</li>
+<li>Add error handling for API failures</li>
+<li>Create a loading indicator during AI generation</li>
+<li>Add a feature to save favorite titles</li>
+<li>Implement character limit for the topic input</li>
+</ol>
+<p>This exercise teaches you practical AI integration, error handling, and user experience considerations when working with AI APIs.</p>
+<hr>
+<p><strong>Next Up</strong>: Learn about building a complete ChatGPT Clone! ChatGPT Clone</p>
 
-                        </div>
-                        
-                    </article>
-                </div>
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "ai/ai-integration.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

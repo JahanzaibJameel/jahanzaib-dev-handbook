@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>Welcome &amp; Vision - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="Welcome &amp; Vision - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Welcome &amp; Vision - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>Welcome &amp; Vision - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="custom.css">
+    <script src="custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="introduction.md">
-    <meta property="og:title" content="Welcome &amp; Vision - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Welcome &amp; Vision - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="introduction.md">
-    <meta property="twitter:title" content="Welcome &amp; Vision - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="Welcome &amp; Vision - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="Welcome &amp; Vision - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="introduction.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="theme/css/tokens.css" as="style">
-    <link rel="preload" href="theme/css/base.css" as="style">
-    <link rel="preload" href="theme/css/layout.css" as="style">
-    <link rel="preload" href="theme/css/components.css" as="style">
-    <link rel="preload" href="theme/css/animations.css" as="style">
-    <link rel="preload" href="theme/css/syntax.css" as="style">
-    <link rel="preload" href="theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="theme/css/tokens.css">
-    <link rel="stylesheet" href="theme/css/base.css">
-    <link rel="stylesheet" href="theme/css/layout.css">
-    <link rel="stylesheet" href="theme/css/components.css">
-    <link rel="stylesheet" href="theme/css/animations.css">
-    <link rel="stylesheet" href="theme/css/syntax.css">
-    <link rel="stylesheet" href="theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" href="icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "Welcome &amp; Vision - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="theme/js/core.js">
-    <link rel="modulepreload" href="theme/js/animations.js">
-    <link rel="modulepreload" href="theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,276 +525,186 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    Welcome &amp; Vision - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
-
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>Welcome &amp; Vision - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;welcome-to-the-jahanzaib-dev-handbook&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#welcome-to-the-jahanzaib-dev-handbook&quot;&gt;Welcome to the Jahanzaib Dev Handbook&lt;/a&gt;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;“Where Code Meets Excellence - The World’s Most Comprehensive Developer Portfolio”&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Welcome to the &lt;strong&gt;ultra-premium, FAANG-level developer handbook&lt;/strong&gt; - the definitive resource that transforms aspiring developers into world-class software engineers. This isn’t just another tutorial; it’s your complete journey from code novice to tech industry leader.&lt;/p&gt;
-&lt;h2 id&#x3D;&quot;the-vision-redefining-developer-education&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#the-vision-redefining-developer-education&quot;&gt;&lt;strong&gt;The Vision: Redefining Developer Education&lt;/strong&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;In a world saturated with mediocre tutorials and fragmented learning paths, we’ve created something extraordinary: a &lt;strong&gt;holistic, production-grade learning experience&lt;/strong&gt; that mirrors the standards of top-tier tech companies.&lt;/p&gt;
-&lt;h3 id&#x3D;&quot;what-makes-this-handbook-revolutionary&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#what-makes-this-handbook-revolutionary&quot;&gt;&lt;strong&gt;What Makes This Handbook Revolutionary&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-mermaid&quot;&gt;graph TD
-    A[Beginner Developer] --&amp;gt; B[Fundamental Concepts]
-    B --&amp;gt; C[Advanced Technologies]
-    C --&amp;gt; D[Real-World Projects]
-    D --&amp;gt; E[Production Deployment]
-    E --&amp;gt; F[Career Excellence]
-    F --&amp;gt; G[Industry Leader]
+        <div id="content">
+            <main>
+                <h1 id="welcome-to-the-jahanzaib-dev-handbook"><a class="header" href="#welcome-to-the-jahanzaib-dev-handbook">Welcome to the Jahanzaib Dev Handbook</a></h1>
+<blockquote>
+<p><strong>“Where Code Meets Excellence - The World’s Most Comprehensive Developer Portfolio”</strong></p>
+</blockquote>
+<p>Welcome to the <strong>ultra-premium, FAANG-level developer handbook</strong> - the definitive resource that transforms aspiring developers into world-class software engineers. This isn’t just another tutorial; it’s your complete journey from code novice to tech industry leader.</p>
+<h2 id="the-vision-redefining-developer-education"><a class="header" href="#the-vision-redefining-developer-education"><strong>The Vision: Redefining Developer Education</strong></a></h2>
+<p>In a world saturated with mediocre tutorials and fragmented learning paths, we’ve created something extraordinary: a <strong>holistic, production-grade learning experience</strong> that mirrors the standards of top-tier tech companies.</p>
+<h3 id="what-makes-this-handbook-revolutionary"><a class="header" href="#what-makes-this-handbook-revolutionary"><strong>What Makes This Handbook Revolutionary</strong></a></h3>
+<pre><code class="language-mermaid">graph TD
+    A[Beginner Developer] --&gt; B[Fundamental Concepts]
+    B --&gt; C[Advanced Technologies]
+    C --&gt; D[Real-World Projects]
+    D --&gt; E[Production Deployment]
+    E --&gt; F[Career Excellence]
+    F --&gt; G[Industry Leader]
     
     style A fill:#667eea,stroke:#764ba2,color:#fff
     style G fill:#f093fb,stroke:#f5576c,color:#fff
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;the-premium-learning-ecosystem&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#the-premium-learning-ecosystem&quot;&gt;&lt;strong&gt;The Premium Learning Ecosystem&lt;/strong&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;world-class-technical-curriculum&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#world-class-technical-curriculum&quot;&gt;&lt;strong&gt;World-Class Technical Curriculum&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;React Native Mastery&lt;/strong&gt; - Build production mobile apps that scale to millions&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Next.js Excellence&lt;/strong&gt; - Enterprise-grade web applications with optimal performance&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Node.js Architecture&lt;/strong&gt; - Scalable backend systems with microservices&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;AI Integration&lt;/strong&gt; - Cutting-edge ChatGPT and ML applications&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Database Design&lt;/strong&gt; - From MongoDB to distributed systems&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Testing Excellence&lt;/strong&gt; - Comprehensive quality assurance strategies&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;DevOps &amp;amp; CI/CD&lt;/strong&gt; - Production deployment and infrastructure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id&#x3D;&quot;beyond-code-the-complete-developer-journey&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#beyond-code-the-complete-developer-journey&quot;&gt;&lt;strong&gt;Beyond Code: The Complete Developer Journey&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;System Design Fundamentals&lt;/strong&gt; - Architect systems like FAANG engineers&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Career Development&lt;/strong&gt; - Freelancing, branding, and interview mastery&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Portfolio Projects&lt;/strong&gt; - GitHub-worthy applications that impress recruiters&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Industry Best Practices&lt;/strong&gt; - Code reviews, security, and scalability&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id&#x3D;&quot;the-ultra-premium-experience&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#the-ultra-premium-experience&quot;&gt;&lt;strong&gt;The Ultra-Premium Experience&lt;/strong&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;glassmorphism-design-system&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#glassmorphism-design-system&quot;&gt;&lt;strong&gt;Glassmorphism Design System&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Immerse yourself in a visually stunning interface that sets the global standard for developer documentation.&lt;/p&gt;
-&lt;h3 id&#x3D;&quot;interactive-learning&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#interactive-learning&quot;&gt;&lt;strong&gt;Interactive Learning&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Live code examples&lt;/strong&gt; with real-time execution&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Interactive diagrams&lt;/strong&gt; and visualizations&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Progress tracking&lt;/strong&gt; and achievement badges&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Premium animations&lt;/strong&gt; and micro-interactions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id&#x3D;&quot;production-ready-content&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#production-ready-content&quot;&gt;&lt;strong&gt;Production-Ready Content&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Every line of code, every architectural decision, every best practice has been &lt;strong&gt;battle-tested in production environments&lt;/strong&gt;.&lt;/p&gt;
-&lt;h2 id&#x3D;&quot;the-learning-path-from-zero-to-hero&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#the-learning-path-from-zero-to-hero&quot;&gt;&lt;strong&gt;The Learning Path: From Zero to Hero&lt;/strong&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;phase-1-foundation-building-weeks-1-4&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#phase-1-foundation-building-weeks-1-4&quot;&gt;&lt;strong&gt;Phase 1: Foundation Building&lt;/strong&gt; (Weeks 1-4)&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;const foundationSkills &#x3D; {
-  fundamentals: [&quot;JavaScript ES6+&quot;, &quot;React Basics&quot;, &quot;Git &amp;amp; GitHub&quot;],
-  tools: [&quot;VS Code&quot;, &quot;Terminal Mastery&quot;, &quot;Debugging&quot;],
-  concepts: [&quot;Data Structures&quot;, &quot;Algorithms&quot;, &quot;Problem Solving&quot;]
+</code></pre>
+<h2 id="the-premium-learning-ecosystem"><a class="header" href="#the-premium-learning-ecosystem"><strong>The Premium Learning Ecosystem</strong></a></h2>
+<h3 id="world-class-technical-curriculum"><a class="header" href="#world-class-technical-curriculum"><strong>World-Class Technical Curriculum</strong></a></h3>
+<ul>
+<li><strong>React Native Mastery</strong> - Build production mobile apps that scale to millions</li>
+<li><strong>Next.js Excellence</strong> - Enterprise-grade web applications with optimal performance</li>
+<li><strong>Node.js Architecture</strong> - Scalable backend systems with microservices</li>
+<li><strong>AI Integration</strong> - Cutting-edge ChatGPT and ML applications</li>
+<li><strong>Database Design</strong> - From MongoDB to distributed systems</li>
+<li><strong>Testing Excellence</strong> - Comprehensive quality assurance strategies</li>
+<li><strong>DevOps &amp; CI/CD</strong> - Production deployment and infrastructure</li>
+</ul>
+<h3 id="beyond-code-the-complete-developer-journey"><a class="header" href="#beyond-code-the-complete-developer-journey"><strong>Beyond Code: The Complete Developer Journey</strong></a></h3>
+<ul>
+<li><strong>System Design Fundamentals</strong> - Architect systems like FAANG engineers</li>
+<li><strong>Career Development</strong> - Freelancing, branding, and interview mastery</li>
+<li><strong>Portfolio Projects</strong> - GitHub-worthy applications that impress recruiters</li>
+<li><strong>Industry Best Practices</strong> - Code reviews, security, and scalability</li>
+</ul>
+<h2 id="the-ultra-premium-experience"><a class="header" href="#the-ultra-premium-experience"><strong>The Ultra-Premium Experience</strong></a></h2>
+<h3 id="glassmorphism-design-system"><a class="header" href="#glassmorphism-design-system"><strong>Glassmorphism Design System</strong></a></h3>
+<p>Immerse yourself in a visually stunning interface that sets the global standard for developer documentation.</p>
+<h3 id="interactive-learning"><a class="header" href="#interactive-learning"><strong>Interactive Learning</strong></a></h3>
+<ul>
+<li><strong>Live code examples</strong> with real-time execution</li>
+<li><strong>Interactive diagrams</strong> and visualizations</li>
+<li><strong>Progress tracking</strong> and achievement badges</li>
+<li><strong>Premium animations</strong> and micro-interactions</li>
+</ul>
+<h3 id="production-ready-content"><a class="header" href="#production-ready-content"><strong>Production-Ready Content</strong></a></h3>
+<p>Every line of code, every architectural decision, every best practice has been <strong>battle-tested in production environments</strong>.</p>
+<h2 id="the-learning-path-from-zero-to-hero"><a class="header" href="#the-learning-path-from-zero-to-hero"><strong>The Learning Path: From Zero to Hero</strong></a></h2>
+<h3 id="phase-1-foundation-building-weeks-1-4"><a class="header" href="#phase-1-foundation-building-weeks-1-4"><strong>Phase 1: Foundation Building</strong> (Weeks 1-4)</a></h3>
+<pre><code class="language-javascript">const foundationSkills = {
+  fundamentals: ["JavaScript ES6+", "React Basics", "Git &amp; GitHub"],
+  tools: ["VS Code", "Terminal Mastery", "Debugging"],
+  concepts: ["Data Structures", "Algorithms", "Problem Solving"]
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;phase-2-technology-mastery-weeks-5-12&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#phase-2-technology-mastery-weeks-5-12&quot;&gt;&lt;strong&gt;Phase 2: Technology Mastery&lt;/strong&gt; (Weeks 5-12)&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;const advancedSkills &#x3D; {
-  frontend: [&quot;Next.js&quot;, &quot;TypeScript&quot;, &quot;Tailwind CSS&quot;],
-  backend: [&quot;Node.js&quot;, &quot;Express&quot;, &quot;Database Design&quot;],
-  mobile: [&quot;React Native&quot;, &quot;Navigation&quot;, &quot;State Management&quot;],
-  ai: [&quot;ChatGPT API&quot;, &quot;Prompt Engineering&quot;, &quot;ML Basics&quot;]
+</code></pre>
+<h3 id="phase-2-technology-mastery-weeks-5-12"><a class="header" href="#phase-2-technology-mastery-weeks-5-12"><strong>Phase 2: Technology Mastery</strong> (Weeks 5-12)</a></h3>
+<pre><code class="language-javascript">const advancedSkills = {
+  frontend: ["Next.js", "TypeScript", "Tailwind CSS"],
+  backend: ["Node.js", "Express", "Database Design"],
+  mobile: ["React Native", "Navigation", "State Management"],
+  ai: ["ChatGPT API", "Prompt Engineering", "ML Basics"]
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;phase-3-production-excellence-weeks-13-20&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#phase-3-production-excellence-weeks-13-20&quot;&gt;&lt;strong&gt;Phase 3: Production Excellence&lt;/strong&gt; (Weeks 13-20)&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;const productionSkills &#x3D; {
-  testing: [&quot;Unit Tests&quot;, &quot;Integration&quot;, &quot;E2E Testing&quot;],
-  devops: [&quot;CI/CD&quot;, &quot;Docker&quot;, &quot;Cloud Deployment&quot;],
-  architecture: [&quot;Microservices&quot;, &quot;System Design&quot;, &quot;Scalability&quot;],
-  quality: [&quot;Code Reviews&quot;, &quot;Security&quot;, &quot;Performance&quot;]
+</code></pre>
+<h3 id="phase-3-production-excellence-weeks-13-20"><a class="header" href="#phase-3-production-excellence-weeks-13-20"><strong>Phase 3: Production Excellence</strong> (Weeks 13-20)</a></h3>
+<pre><code class="language-javascript">const productionSkills = {
+  testing: ["Unit Tests", "Integration", "E2E Testing"],
+  devops: ["CI/CD", "Docker", "Cloud Deployment"],
+  architecture: ["Microservices", "System Design", "Scalability"],
+  quality: ["Code Reviews", "Security", "Performance"]
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;phase-4-career-transformation-weeks-21-24&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#phase-4-career-transformation-weeks-21-24&quot;&gt;&lt;strong&gt;Phase 4: Career Transformation&lt;/strong&gt; (Weeks 21-24)&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;const careerSkills &#x3D; {
-  portfolio: [&quot;GitHub Projects&quot;, &quot;Personal Branding&quot;, &quot;Technical Writing&quot;],
-  freelancing: [&quot;Client Acquisition&quot;, &quot;Pricing Strategy&quot;, &quot;Project Management&quot;],
-  interviews: [&quot;Technical Questions&quot;, &quot;System Design&quot;, &quot;Behavioral Prep&quot;],
-  leadership: [&quot;Mentorship&quot;, &quot;Team Collaboration&quot;, &quot;Industry Networking&quot;]
+</code></pre>
+<h3 id="phase-4-career-transformation-weeks-21-24"><a class="header" href="#phase-4-career-transformation-weeks-21-24"><strong>Phase 4: Career Transformation</strong> (Weeks 21-24)</a></h3>
+<pre><code class="language-javascript">const careerSkills = {
+  portfolio: ["GitHub Projects", "Personal Branding", "Technical Writing"],
+  freelancing: ["Client Acquisition", "Pricing Strategy", "Project Management"],
+  interviews: ["Technical Questions", "System Design", "Behavioral Prep"],
+  leadership: ["Mentorship", "Team Collaboration", "Industry Networking"]
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;the-competitive-advantage&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#the-competitive-advantage&quot;&gt;&lt;strong&gt;The Competitive Advantage&lt;/strong&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;what-sets-this-apart&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#what-sets-this-apart&quot;&gt;&lt;strong&gt;What Sets This Apart&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;div class&#x3D;&quot;table-wrapper&quot;&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th&gt;Feature&lt;/th&gt;&lt;th&gt;Typical Resources&lt;/th&gt;&lt;th&gt;&lt;strong&gt;This Handbook&lt;/strong&gt;&lt;/th&gt;&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Code Quality&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Basic examples&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Production-grade, battle-tested&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Projects&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Simple tutorials&lt;/td&gt;&lt;td&gt;&lt;strong&gt;GitHub-worthy portfolio pieces&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Career Focus&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;None&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Comprehensive career development&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Industry Standards&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Outdated practices&lt;/td&gt;&lt;td&gt;&lt;strong&gt;FAANG-level best practices&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Visual Design&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Plain text&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Ultra-premium glassmorphism&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Interactive&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Static content&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Live demos and animations&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Support&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;None&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Community and mentorship&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;h3 id&#x3D;&quot;real-world-impact&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#real-world-impact&quot;&gt;&lt;strong&gt;Real-World Impact&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Portfolio Projects&lt;/strong&gt; that have secured jobs at top companies&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Interview Preparation&lt;/strong&gt; that has helped developers land 6-figure salaries&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Freelancing Strategies&lt;/strong&gt; that have generated $100k+ incomes&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;System Design&lt;/strong&gt; knowledge that passes technical interviews at Google, Meta, Amazon&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id&#x3D;&quot;the-target-audience&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#the-target-audience&quot;&gt;&lt;strong&gt;The Target Audience&lt;/strong&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;for-the-ambitious-beginner&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#for-the-ambitious-beginner&quot;&gt;&lt;strong&gt;For the Ambitious Beginner&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;You’re starting from zero but have the drive to become exceptional. This handbook will be your complete roadmap.&lt;/p&gt;
-&lt;h3 id&#x3D;&quot;for-the-determined-intermediate&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#for-the-determined-intermediate&quot;&gt;&lt;strong&gt;For the Determined Intermediate&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;You know the basics but want to bridge the gap to senior-level expertise. We’ll fill every knowledge gap.&lt;/p&gt;
-&lt;h3 id&#x3D;&quot;for-the-advanced-developer&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#for-the-advanced-developer&quot;&gt;&lt;strong&gt;For the Advanced Developer&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;You’re already good but want to become great. Master system design, architecture, and leadership.&lt;/p&gt;
-&lt;h2 id&#x3D;&quot;getting-started-your-premium-journey&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#getting-started-your-premium-journey&quot;&gt;&lt;strong&gt;Getting Started: Your Premium Journey&lt;/strong&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;step-1-set-up-your-environment&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#step-1-set-up-your-environment&quot;&gt;&lt;strong&gt;Step 1: Set Up Your Environment&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-bash&quot;&gt;# Install essential tools
+</code></pre>
+<h2 id="the-competitive-advantage"><a class="header" href="#the-competitive-advantage"><strong>The Competitive Advantage</strong></a></h2>
+<h3 id="what-sets-this-apart"><a class="header" href="#what-sets-this-apart"><strong>What Sets This Apart</strong></a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Feature</th><th>Typical Resources</th><th><strong>This Handbook</strong></th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Code Quality</strong></td><td>Basic examples</td><td><strong>Production-grade, battle-tested</strong></td></tr>
+<tr><td><strong>Projects</strong></td><td>Simple tutorials</td><td><strong>GitHub-worthy portfolio pieces</strong></td></tr>
+<tr><td><strong>Career Focus</strong></td><td>None</td><td><strong>Comprehensive career development</strong></td></tr>
+<tr><td><strong>Industry Standards</strong></td><td>Outdated practices</td><td><strong>FAANG-level best practices</strong></td></tr>
+<tr><td><strong>Visual Design</strong></td><td>Plain text</td><td><strong>Ultra-premium glassmorphism</strong></td></tr>
+<tr><td><strong>Interactive</strong></td><td>Static content</td><td><strong>Live demos and animations</strong></td></tr>
+<tr><td><strong>Support</strong></td><td>None</td><td><strong>Community and mentorship</strong></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="real-world-impact"><a class="header" href="#real-world-impact"><strong>Real-World Impact</strong></a></h3>
+<ul>
+<li><strong>Portfolio Projects</strong> that have secured jobs at top companies</li>
+<li><strong>Interview Preparation</strong> that has helped developers land 6-figure salaries</li>
+<li><strong>Freelancing Strategies</strong> that have generated $100k+ incomes</li>
+<li><strong>System Design</strong> knowledge that passes technical interviews at Google, Meta, Amazon</li>
+</ul>
+<h2 id="the-target-audience"><a class="header" href="#the-target-audience"><strong>The Target Audience</strong></a></h2>
+<h3 id="for-the-ambitious-beginner"><a class="header" href="#for-the-ambitious-beginner"><strong>For the Ambitious Beginner</strong></a></h3>
+<p>You’re starting from zero but have the drive to become exceptional. This handbook will be your complete roadmap.</p>
+<h3 id="for-the-determined-intermediate"><a class="header" href="#for-the-determined-intermediate"><strong>For the Determined Intermediate</strong></a></h3>
+<p>You know the basics but want to bridge the gap to senior-level expertise. We’ll fill every knowledge gap.</p>
+<h3 id="for-the-advanced-developer"><a class="header" href="#for-the-advanced-developer"><strong>For the Advanced Developer</strong></a></h3>
+<p>You’re already good but want to become great. Master system design, architecture, and leadership.</p>
+<h2 id="getting-started-your-premium-journey"><a class="header" href="#getting-started-your-premium-journey"><strong>Getting Started: Your Premium Journey</strong></a></h2>
+<h3 id="step-1-set-up-your-environment"><a class="header" href="#step-1-set-up-your-environment"><strong>Step 1: Set Up Your Environment</strong></a></h3>
+<pre><code class="language-bash"># Install essential tools
 npm install -g @mdbook/cli
 git clone https://github.com/JahanzaibJameel/jahanzaib-dev-handbook
 cd jahanzaib-dev-handbook
 mdbook serve
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;step-2-choose-your-path&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#step-2-choose-your-path&quot;&gt;&lt;strong&gt;Step 2: Choose Your Path&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Complete Journey&lt;/strong&gt;: Follow the structured roadmap&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Skill-Specific&lt;/strong&gt;: Jump to sections that match your goals&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Project-Based&lt;/strong&gt;: Build portfolio pieces immediately&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id&#x3D;&quot;step-3-engage-with-the-community&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#step-3-engage-with-the-community&quot;&gt;&lt;strong&gt;Step 3: Engage with the Community&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Join our Discord community&lt;/li&gt;
-&lt;li&gt;Contribute to the handbook&lt;/li&gt;
-&lt;li&gt;Share your progress and projects&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id&#x3D;&quot;the-premium-guarantee&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#the-premium-guarantee&quot;&gt;&lt;strong&gt;The Premium Guarantee&lt;/strong&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;This handbook isn’t just content; it’s a &lt;strong&gt;transformational experience&lt;/strong&gt;. We guarantee:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Production-Ready Code&lt;/strong&gt; that works in real applications&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Industry Best Practices&lt;/strong&gt; used by top tech companies&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Career Development&lt;/strong&gt; that accelerates your professional growth&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Continuous Updates&lt;/strong&gt; with cutting-edge technologies&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id&#x3D;&quot;your-investment-in-excellence&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#your-investment-in-excellence&quot;&gt;&lt;strong&gt;Your Investment in Excellence&lt;/strong&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;time-commitment&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#time-commitment&quot;&gt;&lt;strong&gt;Time Commitment&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;24 weeks&lt;/strong&gt; to complete the full journey&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;10-15 hours&lt;/strong&gt; per week for optimal results&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Lifetime access&lt;/strong&gt; to all content and updates&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id&#x3D;&quot;prerequisites&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#prerequisites&quot;&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Zero programming experience&lt;/strong&gt; required&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Growth mindset&lt;/strong&gt; and willingness to learn&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Computer with internet&lt;/strong&gt; connection&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Determination to become exceptional&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id&#x3D;&quot;the-future-awaits&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#the-future-awaits&quot;&gt;&lt;strong&gt;The Future Awaits&lt;/strong&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;This is more than a handbook; it’s your &lt;strong&gt;launchpad to a world-class tech career&lt;/strong&gt;. Whether you want to work at FAANG companies, build your own startup, or become a freelance developer, this handbook provides the complete foundation.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id&#x3D;&quot;ready-to-transform-your-career&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#ready-to-transform-your-career&quot;&gt;&lt;strong&gt;Ready to Transform Your Career?&lt;/strong&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;“The best time to plant a tree was 20 years ago. The second best time is now.”&lt;/strong&gt; - Chinese Proverb&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Your journey to becoming a world-class developer starts &lt;strong&gt;right now&lt;/strong&gt;. Every expert was once a beginner. Every senior developer once wrote their first line of code.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The only difference between them and you?&lt;/strong&gt; They started.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Let’s build your extraordinary future together.&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Next Step&lt;/strong&gt;: &lt;a href&#x3D;&quot;roadmap.html&quot;&gt;Begin Your Journey&lt;/a&gt; - Your personalized roadmap to developer excellence&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;This handbook is continuously updated with the latest technologies, best practices, and industry insights. Your success is our mission.&lt;/em&gt;&lt;/p&gt;
+</code></pre>
+<h3 id="step-2-choose-your-path"><a class="header" href="#step-2-choose-your-path"><strong>Step 2: Choose Your Path</strong></a></h3>
+<ul>
+<li><strong>Complete Journey</strong>: Follow the structured roadmap</li>
+<li><strong>Skill-Specific</strong>: Jump to sections that match your goals</li>
+<li><strong>Project-Based</strong>: Build portfolio pieces immediately</li>
+</ul>
+<h3 id="step-3-engage-with-the-community"><a class="header" href="#step-3-engage-with-the-community"><strong>Step 3: Engage with the Community</strong></a></h3>
+<ul>
+<li>Join our Discord community</li>
+<li>Contribute to the handbook</li>
+<li>Share your progress and projects</li>
+</ul>
+<h2 id="the-premium-guarantee"><a class="header" href="#the-premium-guarantee"><strong>The Premium Guarantee</strong></a></h2>
+<p>This handbook isn’t just content; it’s a <strong>transformational experience</strong>. We guarantee:</p>
+<ul>
+<li><strong>Production-Ready Code</strong> that works in real applications</li>
+<li><strong>Industry Best Practices</strong> used by top tech companies</li>
+<li><strong>Career Development</strong> that accelerates your professional growth</li>
+<li><strong>Continuous Updates</strong> with cutting-edge technologies</li>
+</ul>
+<h2 id="your-investment-in-excellence"><a class="header" href="#your-investment-in-excellence"><strong>Your Investment in Excellence</strong></a></h2>
+<h3 id="time-commitment"><a class="header" href="#time-commitment"><strong>Time Commitment</strong></a></h3>
+<ul>
+<li><strong>24 weeks</strong> to complete the full journey</li>
+<li><strong>10-15 hours</strong> per week for optimal results</li>
+<li><strong>Lifetime access</strong> to all content and updates</li>
+</ul>
+<h3 id="prerequisites"><a class="header" href="#prerequisites"><strong>Prerequisites</strong></a></h3>
+<ul>
+<li><strong>Zero programming experience</strong> required</li>
+<li><strong>Growth mindset</strong> and willingness to learn</li>
+<li><strong>Computer with internet</strong> connection</li>
+<li><strong>Determination to become exceptional</strong></li>
+</ul>
+<h2 id="the-future-awaits"><a class="header" href="#the-future-awaits"><strong>The Future Awaits</strong></a></h2>
+<p>This is more than a handbook; it’s your <strong>launchpad to a world-class tech career</strong>. Whether you want to work at FAANG companies, build your own startup, or become a freelance developer, this handbook provides the complete foundation.</p>
+<hr>
+<h2 id="ready-to-transform-your-career"><a class="header" href="#ready-to-transform-your-career"><strong>Ready to Transform Your Career?</strong></a></h2>
+<blockquote>
+<p><strong>“The best time to plant a tree was 20 years ago. The second best time is now.”</strong> - Chinese Proverb</p>
+</blockquote>
+<p>Your journey to becoming a world-class developer starts <strong>right now</strong>. Every expert was once a beginner. Every senior developer once wrote their first line of code.</p>
+<p><strong>The only difference between them and you?</strong> They started.</p>
+<p><strong>Let’s build your extraordinary future together.</strong></p>
+<hr>
+<p><strong>Next Step</strong>: <a href="roadmap.html">Begin Your Journey</a> - Your personalized roadmap to developer excellence</p>
+<hr>
+<p><em>This handbook is continuously updated with the latest technologies, best practices, and industry insights. Your success is our mission.</em></p>
 
-                        </div>
-                        
-                    </article>
-                </div>
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "";
-        window.current_page = "introduction.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="theme/js/core.js"></script>
-    <script src="theme/js/animations.js"></script>
-    <script src="theme/js/search.js"></script>
-    
 </body>
 </html>

@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>Contributing Guidelines - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="Contributing Guidelines - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Contributing Guidelines - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>Contributing Guidelines - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="custom.css">
+    <script src="custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="contributing.md">
-    <meta property="og:title" content="Contributing Guidelines - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Contributing Guidelines - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="contributing.md">
-    <meta property="twitter:title" content="Contributing Guidelines - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="Contributing Guidelines - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="Contributing Guidelines - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="contributing.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="theme/css/tokens.css" as="style">
-    <link rel="preload" href="theme/css/base.css" as="style">
-    <link rel="preload" href="theme/css/layout.css" as="style">
-    <link rel="preload" href="theme/css/components.css" as="style">
-    <link rel="preload" href="theme/css/animations.css" as="style">
-    <link rel="preload" href="theme/css/syntax.css" as="style">
-    <link rel="preload" href="theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="theme/css/tokens.css">
-    <link rel="stylesheet" href="theme/css/base.css">
-    <link rel="stylesheet" href="theme/css/layout.css">
-    <link rel="stylesheet" href="theme/css/components.css">
-    <link rel="stylesheet" href="theme/css/animations.css">
-    <link rel="stylesheet" href="theme/css/syntax.css">
-    <link rel="stylesheet" href="theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" href="icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "Contributing Guidelines - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="theme/js/core.js">
-    <link rel="modulepreload" href="theme/js/animations.js">
-    <link rel="modulepreload" href="theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,108 +525,421 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    Contributing Guidelines - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
+        <div id="content">
+            <main>
+                <h1 id="contributing-guidelines"><a class="header" href="#contributing-guidelines">Contributing Guidelines</a></h1>
+<p>Thank you for your interest in contributing to the Jahanzaib Dev Handbook! This document provides comprehensive guidelines for contributing to our project.</p>
+<h2 id="ways-to-contribute"><a class="header" href="#ways-to-contribute"><strong>Ways to Contribute</strong></a></h2>
+<h3 id="content-contributions"><a class="header" href="#content-contributions"><strong>Content Contributions</strong></a></h3>
+<ul>
+<li><strong>Write new chapters</strong> and tutorials</li>
+<li><strong>Update existing content</strong> with latest information</li>
+<li><strong>Create code examples</strong> and projects</li>
+<li><strong>Translate content</strong> to other languages</li>
+<li><strong>Add exercises</strong> and quizzes</li>
+</ul>
+<h3 id="technical-contributions"><a class="header" href="#technical-contributions"><strong>Technical Contributions</strong></a></h3>
+<ul>
+<li><strong>Fix bugs</strong> and typos</li>
+<li><strong>Improve documentation</strong></li>
+<li><strong>Add new features</strong></li>
+<li><strong>Optimize performance</strong></li>
+<li><strong>Enhance accessibility</strong></li>
+</ul>
+<h3 id="community-contributions"><a class="header" href="#community-contributions"><strong>Community Contributions</strong></a></h3>
+<ul>
+<li><strong>Answer questions</strong> in discussions</li>
+<li><strong>Review pull requests</strong></li>
+<li><strong>Mentor new contributors</strong></li>
+<li><strong>Organize events</strong></li>
+<li><strong>Share feedback</strong></li>
+</ul>
+<hr>
+<h2 id="getting-started"><a class="header" href="#getting-started"><strong>Getting Started</strong></a></h2>
+<h3 id="step-1-fork-the-repository"><a class="header" href="#step-1-fork-the-repository"><strong>Step 1: Fork the Repository</strong></a></h3>
+<ol>
+<li><strong>Visit</strong> <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">our GitHub repository</a></li>
+<li><strong>Click</strong> the “Fork” button in the top-right corner</li>
+<li><strong>Clone</strong> your fork locally:
+<pre><code class="language-bash">git clone https://github.com/YOUR_USERNAME/jahanzaib-dev-handbook.git
+cd jahanzaib-dev-handbook
+</code></pre>
+</li>
+</ol>
+<h3 id="step-2-set-up-your-development-environment"><a class="header" href="#step-2-set-up-your-development-environment"><strong>Step 2: Set Up Your Development Environment</strong></a></h3>
+<ol>
+<li><strong>Install mdBook</strong> (if not already installed):
+<pre><code class="language-bash">cargo install mdbook
+</code></pre>
+</li>
+<li><strong>Install additional plugins</strong>:
+<pre><code class="language-bash">mdbook install copy-code
+</code></pre>
+</li>
+<li><strong>Start the development server</strong>:
+<pre><code class="language-bash">mdbook serve
+</code></pre>
+</li>
+<li><strong>Open</strong> http://localhost:3000 in your browser</li>
+</ol>
+<h3 id="step-3-create-a-branch"><a class="header" href="#step-3-create-a-branch"><strong>Step 3: Create a Branch</strong></a></h3>
+<pre><code class="language-bash">git checkout -b feature/your-feature-name
+# or
+git checkout -b fix/issue-description
+</code></pre>
+<hr>
+<h2 id="content-guidelines"><a class="header" href="#content-guidelines"><strong>Content Guidelines</strong></a></h2>
+<h3 id="writing-style"><a class="header" href="#writing-style"><strong>Writing Style</strong></a></h3>
+<ul>
+<li><strong>Be clear and concise</strong> - Use simple, accessible language</li>
+<li><strong>Be practical</strong> - Focus on real-world applications</li>
+<li><strong>Be comprehensive</strong> - Cover topics thoroughly</li>
+<li><strong>Be engaging</strong> - Use examples and interactive elements</li>
+</ul>
+<h3 id="content-structure"><a class="header" href="#content-structure"><strong>Content Structure</strong></a></h3>
+<p>Each chapter should follow this structure:</p>
+<pre><code class="language-markdown"># Chapter Title
 
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
+## What is it?
+Brief explanation of the concept
 
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>Contributing Guidelines - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;contributing-guidelines&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#contributing-guidelines&quot;&gt;Contributing Guidelines&lt;/a&gt;&lt;/h1&gt;
+## Example
+Practical code example with explanations
 
-                        </div>
-                        
-                    </article>
-                </div>
+## Real Use Case
+Real-world application or case study
+
+## Pro Tip
+Advanced tip or best practice
+
+## Exercise / Mini Task
+Hands-on practice activity
+</code></pre>
+<h3 id="code-examples"><a class="header" href="#code-examples"><strong>Code Examples</strong></a></h3>
+<ul>
+<li><strong>Use syntax highlighting</strong> with appropriate language tags</li>
+<li><strong>Keep examples focused</strong> and relevant</li>
+<li><strong>Add comments</strong> for complex code</li>
+<li><strong>Test all code examples</strong> before submission</li>
+<li><strong>Include error handling</strong> where appropriate</li>
+</ul>
+<h3 id="formatting-guidelines"><a class="header" href="#formatting-guidelines"><strong>Formatting Guidelines</strong></a></h3>
+<ul>
+<li><strong>Use markdown</strong> for all formatting</li>
+<li><strong>Include table of contents</strong> for long chapters</li>
+<li><strong>Add navigation links</strong> between related sections</li>
+<li><strong>Use consistent heading levels</strong> (H1, H2, H3)</li>
+<li><strong>Include alt text</strong> for images</li>
+</ul>
+<hr>
+<h2 id="technical-guidelines"><a class="header" href="#technical-guidelines"><strong>Technical Guidelines</strong></a></h2>
+<h3 id="file-organization"><a class="header" href="#file-organization"><strong>File Organization</strong></a></h3>
+<pre><code>src/
+  category/
+    topic-name.md
+  category/
+    another-topic.md
+</code></pre>
+<h3 id="naming-conventions"><a class="header" href="#naming-conventions"><strong>Naming Conventions</strong></a></h3>
+<ul>
+<li><strong>Files</strong>: Use kebab-case (e.g., <code>react-native-intro.md</code>)</li>
+<li><strong>Directories</strong>: Use kebab-case (e.g., <code>react-native/</code>)</li>
+<li><strong>Headings</strong>: Use title case with appropriate formatting</li>
+</ul>
+<h3 id="image-and-media"><a class="header" href="#image-and-media"><strong>Image and Media</strong></a></h3>
+<ul>
+<li><strong>Place images</strong> in appropriate directories</li>
+<li><strong>Use descriptive filenames</strong></li>
+<li><strong>Optimize images</strong> for web (under 500KB)</li>
+<li><strong>Include alt text</strong> for accessibility</li>
+<li><strong>Use SVG</strong> when possible for diagrams</li>
+</ul>
+<h3 id="link-guidelines"><a class="header" href="#link-guidelines"><strong>Link Guidelines</strong></a></h3>
+<ul>
+<li><strong>Use relative links</strong> for internal content</li>
+<li><strong>Include descriptive anchor text</strong></li>
+<li><strong>Test all links</strong> before submitting</li>
+<li><strong>Avoid broken links</strong> in final content</li>
+</ul>
+<hr>
+<h2 id="pull-request-process"><a class="header" href="#pull-request-process"><strong>Pull Request Process</strong></a></h2>
+<h3 id="before-submitting"><a class="header" href="#before-submitting"><strong>Before Submitting</strong></a></h3>
+<ol>
+<li><strong>Test your changes</strong> thoroughly</li>
+<li><strong>Check for typos</strong> and grammatical errors</li>
+<li><strong>Verify all links</strong> work correctly</li>
+<li><strong>Ensure code examples</strong> run without errors</li>
+<li><strong>Follow all style guidelines</strong></li>
+</ol>
+<h3 id="creating-a-pull-request"><a class="header" href="#creating-a-pull-request"><strong>Creating a Pull Request</strong></a></h3>
+<ol>
+<li><strong>Push your changes</strong> to your fork:
+<pre><code class="language-bash">git push origin feature/your-feature-name
+</code></pre>
+</li>
+<li><strong>Open a pull request</strong> on GitHub</li>
+<li><strong>Fill out the PR template</strong> completely</li>
+<li><strong>Link related issues</strong> if applicable</li>
+<li><strong>Request reviews</strong> from appropriate team members</li>
+</ol>
+<h3 id="pr-template"><a class="header" href="#pr-template"><strong>PR Template</strong></a></h3>
+<pre><code class="language-markdown">## Description
+Brief description of your changes
+
+## Type of Change
+- [ ] Bug fix
+- [ ] New feature
+- [ ] Documentation update
+- [ ] Content addition
+- [ ] Other (please describe)
+
+## Testing
+- [ ] I have tested this locally
+- [ ] All links work correctly
+- [ ] Code examples run without errors
+- [ ] Content follows style guidelines
+
+## Checklist
+- [ ] I have read the contributing guidelines
+- [ ] My code follows the style guidelines
+- [ ] I have performed a self-review
+- [ ] I have added necessary documentation
+</code></pre>
+<hr>
+<h2 id="review-process"><a class="header" href="#review-process"><strong>Review Process</strong></a></h2>
+<h3 id="what-we-review"><a class="header" href="#what-we-review"><strong>What We Review</strong></a></h3>
+<ul>
+<li><strong>Content accuracy</strong> and technical correctness</li>
+<li><strong>Writing quality</strong> and clarity</li>
+<li><strong>Code quality</strong> and best practices</li>
+<li><strong>Adherence to guidelines</strong> and standards</li>
+<li><strong>Integration with existing content</strong></li>
+</ul>
+<h3 id="review-timeline"><a class="header" href="#review-timeline"><strong>Review Timeline</strong></a></h3>
+<ul>
+<li><strong>Initial review</strong>: Within 3-5 business days</li>
+<li><strong>Follow-up review</strong>: Within 2 business days after updates</li>
+<li><strong>Final approval</strong>: Within 1 business day after final review</li>
+</ul>
+<h3 id="review-criteria"><a class="header" href="#review-criteria"><strong>Review Criteria</strong></a></h3>
+<ul>
+<li><strong>Technical accuracy</strong> - Is the information correct?</li>
+<li><strong>Clarity</strong> - Is it easy to understand?</li>
+<li><strong>Completeness</strong> - Does it cover the topic adequately?</li>
+<li><strong>Relevance</strong> - Does it fit with the handbook’s scope?</li>
+<li><strong>Quality</strong> - Does it meet our standards?</li>
+</ul>
+<hr>
+<h2 id="community-standards"><a class="header" href="#community-standards"><strong>Community Standards</strong></a></h2>
+<h3 id="code-of-conduct"><a class="header" href="#code-of-conduct"><strong>Code of Conduct</strong></a></h3>
+<p>All contributors must follow our <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>.</p>
+<h3 id="communication-guidelines"><a class="header" href="#communication-guidelines"><strong>Communication Guidelines</strong></a></h3>
+<ul>
+<li><strong>Be respectful</strong> and constructive in all interactions</li>
+<li><strong>Welcome newcomers</strong> and help them learn</li>
+<li><strong>Focus on what</strong> is best for the community</li>
+<li><strong>Show empathy</strong> towards other community members</li>
+</ul>
+<h3 id="conflict-resolution"><a class="header" href="#conflict-resolution"><strong>Conflict Resolution</strong></a></h3>
+<ul>
+<li><strong>Address issues privately</strong> when possible</li>
+<li><strong>Seek mediation</strong> from community managers</li>
+<li><strong>Focus on solutions</strong> rather than blame</li>
+<li><strong>Maintain professionalism</strong> at all times</li>
+</ul>
+<hr>
+<h2 id="types-of-contributions"><a class="header" href="#types-of-contributions"><strong>Types of Contributions</strong></a></h2>
+<h3 id="major-contributions"><a class="header" href="#major-contributions"><strong>Major Contributions</strong></a></h3>
+<ul>
+<li><strong>New chapters</strong> or major sections</li>
+<li><strong>Complete project tutorials</strong></li>
+<li><strong>Translation of entire sections</strong></li>
+<li><strong>Major feature additions</strong></li>
+</ul>
+<h3 id="medium-contributions"><a class="header" href="#medium-contributions"><strong>Medium Contributions</strong></a></h3>
+<ul>
+<li><strong>Individual tutorials</strong> or guides</li>
+<li><strong>Code example additions</strong></li>
+<li><strong>Content updates</strong> and improvements</li>
+<li><strong>Bug fixes</strong> and corrections</li>
+</ul>
+<h3 id="minor-contributions"><a class="header" href="#minor-contributions"><strong>Minor Contributions</strong></a></h3>
+<ul>
+<li><strong>Typo fixes</strong></li>
+<li><strong>Link corrections</strong></li>
+<li><strong>Grammar improvements</strong></li>
+<li><strong>Formatting updates</strong></li>
+</ul>
+<hr>
+<h2 id="recognition-and-credits"><a class="header" href="#recognition-and-credits"><strong>Recognition and Credits</strong></a></h2>
+<h3 id="contributor-recognition"><a class="header" href="#contributor-recognition"><strong>Contributor Recognition</strong></a></h3>
+<ul>
+<li><strong>GitHub contributors</strong> list</li>
+<li><strong>Chapter author credits</strong></li>
+<li><strong>Community shoutouts</strong></li>
+<li><strong>Annual contributor awards</strong></li>
+</ul>
+<h3 id="attribution-guidelines"><a class="header" href="#attribution-guidelines"><strong>Attribution Guidelines</strong></a></h3>
+<ul>
+<li><strong>Add your name</strong> to chapters you significantly contribute to</li>
+<li><strong>Include your GitHub profile</strong> in contributor lists</li>
+<li><strong>Maintain original attribution</strong> for modified content</li>
+<li><strong>Credit external sources</strong> appropriately</li>
+</ul>
+<hr>
+<h2 id="tools-and-resources"><a class="header" href="#tools-and-resources"><strong>Tools and Resources</strong></a></h2>
+<h3 id="required-tools"><a class="header" href="#required-tools"><strong>Required Tools</strong></a></h3>
+<ul>
+<li><strong>mdBook</strong> - For building and serving the handbook</li>
+<li><strong>Git</strong> - For version control</li>
+<li><strong>Text editor</strong> - VS Code recommended</li>
+<li><strong>Markdown linter</strong> - For formatting consistency</li>
+</ul>
+<h3 id="recommended-tools"><a class="header" href="#recommended-tools"><strong>Recommended Tools</strong></a></h3>
+<ul>
+<li><strong>Grammar checker</strong> - For writing quality</li>
+<li><strong>Link checker</strong> - For verifying links</li>
+<li><strong>Image optimizer</strong> - For media optimization</li>
+<li><strong>Spell checker</strong> - For typo prevention</li>
+</ul>
+<h3 id="helpful-resources"><a class="header" href="#helpful-resources"><strong>Helpful Resources</strong></a></h3>
+<ul>
+<li><strong><a href="https://www.markdownguide.org/">Markdown Guide</a></strong> - Markdown syntax reference</li>
+<li><strong><a href="https://rust-lang.github.io/mdBook/">mdBook Documentation</a></strong> - mdBook usage guide</li>
+<li><strong><a href="https://docs.github.com/">GitHub Docs</a></strong> - GitHub platform documentation</li>
+<li><strong><a href="STYLE_GUIDE.html">Style Guide</a></strong> - Our specific style guidelines</li>
+</ul>
+<hr>
+<h2 id="getting-help"><a class="header" href="#getting-help"><strong>Getting Help</strong></a></h2>
+<h3 id="support-channels"><a class="header" href="#support-channels"><strong>Support Channels</strong></a></h3>
+<ul>
+<li><strong>GitHub Discussions</strong> - General questions and help</li>
+<li><strong>GitHub Issues</strong> - Bug reports and feature requests</li>
+<li><strong>Discord Community</strong> - Real-time help and discussion</li>
+<li><strong>Email</strong> - Private support for sensitive issues</li>
+</ul>
+<h3 id="mentorship-program"><a class="header" href="#mentorship-program"><strong>Mentorship Program</strong></a></h3>
+<ul>
+<li><strong>New contributor mentorship</strong> available</li>
+<li><strong>Technical guidance</strong> for complex contributions</li>
+<li><strong>Writing assistance</strong> for content creators</li>
+<li><strong>Code review</strong> partnerships</li>
+</ul>
+<hr>
+<h2 id="special-programs"><a class="header" href="#special-programs"><strong>Special Programs</strong></a></h2>
+<h3 id="open-source-fellowship"><a class="header" href="#open-source-fellowship"><strong>Open Source Fellowship</strong></a></h3>
+<ul>
+<li><strong>3-month program</strong> for dedicated contributors</li>
+<li><strong>Stipend and recognition</strong> for major contributions</li>
+<li><strong>Mentorship from industry experts</strong></li>
+<li><strong>Career development</strong> opportunities</li>
+</ul>
+<h3 id="content-creator-program"><a class="header" href="#content-creator-program"><strong>Content Creator Program</strong></a></h3>
+<ul>
+<li><strong>Compensation</strong> for high-quality content</li>
+<li><strong>Editorial support</strong> and guidance</li>
+<li><strong>Promotion and distribution</strong></li>
+<li><strong>Professional development</strong> resources</li>
+</ul>
+<h3 id="translation-program"><a class="header" href="#translation-program"><strong>Translation Program</strong></a></h3>
+<ul>
+<li><strong>Coordinated translation</strong> efforts</li>
+<li><strong>Review process</strong> for quality assurance</li>
+<li><strong>Cultural adaptation</strong> guidance</li>
+<li><strong>Community recognition</strong> for translators</li>
+</ul>
+<hr>
+<h2 id="legal-and-licensing"><a class="header" href="#legal-and-licensing"><strong>Legal and Licensing</strong></a></h2>
+<h3 id="content-license"><a class="header" href="#content-license"><strong>Content License</strong></a></h3>
+<p>All contributions are licensed under the <a href="LICENSE.html">MIT License</a>.</p>
+<h3 id="copyright"><a class="header" href="#copyright"><strong>Copyright</strong></a></h3>
+<ul>
+<li><strong>You retain copyright</strong> to your original contributions</li>
+<li><strong>Grant license</strong> for use in the handbook</li>
+<li><strong>Ensure proper attribution</strong> for all content</li>
+<li><strong>Respect intellectual property</strong> rights</li>
+</ul>
+<h3 id="third-party-content"><a class="header" href="#third-party-content"><strong>Third-Party Content</strong></a></h3>
+<ul>
+<li><strong>Obtain permission</strong> for copyrighted material</li>
+<li><strong>Provide proper attribution</strong> for all sources</li>
+<li><strong>Use open-source content</strong> when possible</li>
+<li><strong>Follow fair use guidelines</strong> appropriately</li>
+</ul>
+<hr>
+<h2 id="quality-assurance"><a class="header" href="#quality-assurance"><strong>Quality Assurance</strong></a></h2>
+<h3 id="pre-submission-checklist"><a class="header" href="#pre-submission-checklist"><strong>Pre-Submission Checklist</strong></a></h3>
+<ul>
+<li><input disabled="" type="checkbox"> Content is technically accurate</li>
+<li><input disabled="" type="checkbox"> Code examples are tested and working</li>
+<li><input disabled="" type="checkbox"> All links are functional</li>
+<li><input disabled="" type="checkbox"> Formatting follows guidelines</li>
+<li><input disabled="" type="checkbox"> Grammar and spelling are correct</li>
+<li><input disabled="" type="checkbox"> Images are optimized and accessible</li>
+<li><input disabled="" type="checkbox"> Content is comprehensive and complete</li>
+</ul>
+<h3 id="testing-guidelines"><a class="header" href="#testing-guidelines"><strong>Testing Guidelines</strong></a></h3>
+<ul>
+<li><strong>Test code examples</strong> in multiple environments</li>
+<li><strong>Verify links</strong> work across different platforms</li>
+<li><strong>Check accessibility</strong> with screen readers</li>
+<li><strong>Validate HTML/CSS</strong> markup</li>
+<li><strong>Test on mobile devices</strong></li>
+</ul>
+<hr>
+<h2 id="release-process"><a class="header" href="#release-process"><strong>Release Process</strong></a></h2>
+<h3 id="content-releases"><a class="header" href="#content-releases"><strong>Content Releases</strong></a></h3>
+<ul>
+<li><strong>Monthly updates</strong> for minor changes</li>
+<li><strong>Quarterly releases</strong> for major additions</li>
+<li><strong>Annual editions</strong> for comprehensive updates</li>
+<li><strong>Emergency patches</strong> for critical issues</li>
+</ul>
+<h3 id="version-control"><a class="header" href="#version-control"><strong>Version Control</strong></a></h3>
+<ul>
+<li><strong>Semantic versioning</strong> for releases</li>
+<li><strong>Change logs</strong> for all updates</li>
+<li><strong>Tagged releases</strong> on GitHub</li>
+<li><strong>Archive of previous versions</strong></li>
+</ul>
+<hr>
+<h2 id="frequently-asked-questions"><a class="header" href="#frequently-asked-questions"><strong>Frequently Asked Questions</strong></a></h2>
+<h3 id="q-how-long-does-it-take-for-my-pr-to-be-reviewed"><a class="header" href="#q-how-long-does-it-take-for-my-pr-to-be-reviewed"><strong>Q: How long does it take for my PR to be reviewed?</strong></a></h3>
+<p>A: Most PRs are reviewed within 3-5 business days. Complex contributions may take longer.</p>
+<h3 id="q-can-i-contribute-if-im-a-beginner"><a class="header" href="#q-can-i-contribute-if-im-a-beginner"><strong>Q: Can I contribute if I’m a beginner?</strong></a></h3>
+<p>A: Absolutely! We welcome contributors of all skill levels and provide mentorship for newcomers.</p>
+<h3 id="q-what-if-im-not-sure-about-my-contribution"><a class="header" href="#q-what-if-im-not-sure-about-my-contribution"><strong>Q: What if I’m not sure about my contribution?</strong></a></h3>
+<p>A: Open an issue or discussion first to get feedback before starting your work.</p>
+<h3 id="q-can-i-contribute-anonymously"><a class="header" href="#q-can-i-contribute-anonymously"><strong>Q: Can I contribute anonymously?</strong></a></h3>
+<p>A: Yes, you can contribute under a pseudonym, but we encourage open attribution.</p>
+<h3 id="q-how-do-i-become-a-maintainer"><a class="header" href="#q-how-do-i-become-a-maintainer"><strong>Q: How do I become a maintainer?</strong></a></h3>
+<p>A: Active, high-quality contributors may be invited to become maintainers after demonstrating commitment and expertise.</p>
+<hr>
+<h2 id="contact-information"><a class="header" href="#contact-information"><strong>Contact Information</strong></a></h2>
+<h3 id="contributor-support"><a class="header" href="#contributor-support"><strong>Contributor Support</strong></a></h3>
+<ul>
+<li><strong>Email</strong>: contributors@jahanzaib.dev</li>
+<li><strong>GitHub</strong>: <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook/issues">Create an issue</a></li>
+<li><strong>Discord</strong>: #contributors channel</li>
+</ul>
+<h3 id="leadership-team"><a class="header" href="#leadership-team"><strong>Leadership Team</strong></a></h3>
+<ul>
+<li><strong>Project Lead</strong>: Jahanzaib Jameel</li>
+<li><strong>Content Manager</strong>: [Contact info]</li>
+<li><strong>Technical Lead</strong>: [Contact info]</li>
+<li><strong>Community Manager</strong>: [Contact info]</li>
+</ul>
+<hr>
+<p><em>Thank you for contributing to the Jahanzaib Dev Handbook! Your contributions help thousands of developers learn and grow. Together, we’re building the most comprehensive developer handbook available.</em></p>
+
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "";
-        window.current_page = "contributing.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="theme/js/core.js"></script>
-    <script src="theme/js/animations.js"></script>
-    <script src="theme/js/search.js"></script>
-    
 </body>
 </html>

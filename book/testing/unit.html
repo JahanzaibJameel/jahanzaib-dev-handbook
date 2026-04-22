@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>Unit Testing Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="Unit Testing Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Unit Testing Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>Unit Testing Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="testing/unit.md">
-    <meta property="og:title" content="Unit Testing Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Unit Testing Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="testing/unit.md">
-    <meta property="twitter:title" content="Unit Testing Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="Unit Testing Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="Unit Testing Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="testing/unit.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "Unit Testing Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,75 +525,26 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    Unit Testing Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
-
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>Unit Testing Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;unit-testing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#unit-testing&quot;&gt;Unit Testing&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Unit testing is the foundation of reliable software development. It involves testing individual components or functions in isolation to ensure they work correctly.&lt;/p&gt;
-&lt;h2 id&#x3D;&quot;-what-is-unit-testing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-what-is-unit-testing&quot;&gt;🎯 What is Unit Testing?&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Unit testing focuses on the smallest testable parts of an application, called “units.” A unit can be a function, method, module, or component that can be tested independently.&lt;/p&gt;
-&lt;h3 id&#x3D;&quot;why-unit-testing-matters&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#why-unit-testing-matters&quot;&gt;Why Unit Testing Matters&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Early Bug Detection&lt;/strong&gt;: Catch issues before they reach production&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Documentation&lt;/strong&gt;: Tests serve as living documentation&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Refactoring Safety&lt;/strong&gt;: Confidently modify code without breaking functionality&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Design Improvement&lt;/strong&gt;: Writing tests forces better code structure&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Development Speed&lt;/strong&gt;: Faster feedback loop than manual testing&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id&#x3D;&quot;-testing-tools--setup&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-testing-tools--setup&quot;&gt;🛠️ Testing Tools &amp;amp; Setup&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;jest---the-industry-standard&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#jest---the-industry-standard&quot;&gt;Jest - The Industry Standard&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-bash&quot;&gt;# Install Jest for different environments
+        <div id="content">
+            <main>
+                <h1 id="unit-testing"><a class="header" href="#unit-testing">Unit Testing</a></h1>
+<p>Unit testing is the foundation of reliable software development. It involves testing individual components or functions in isolation to ensure they work correctly.</p>
+<h2 id="-what-is-unit-testing"><a class="header" href="#-what-is-unit-testing">🎯 What is Unit Testing?</a></h2>
+<p>Unit testing focuses on the smallest testable parts of an application, called “units.” A unit can be a function, method, module, or component that can be tested independently.</p>
+<h3 id="why-unit-testing-matters"><a class="header" href="#why-unit-testing-matters">Why Unit Testing Matters</a></h3>
+<ul>
+<li><strong>Early Bug Detection</strong>: Catch issues before they reach production</li>
+<li><strong>Documentation</strong>: Tests serve as living documentation</li>
+<li><strong>Refactoring Safety</strong>: Confidently modify code without breaking functionality</li>
+<li><strong>Design Improvement</strong>: Writing tests forces better code structure</li>
+<li><strong>Development Speed</strong>: Faster feedback loop than manual testing</li>
+</ul>
+<h2 id="-testing-tools--setup"><a class="header" href="#-testing-tools--setup">🛠️ Testing Tools &amp; Setup</a></h2>
+<h3 id="jest---the-industry-standard"><a class="header" href="#jest---the-industry-standard">Jest - The Industry Standard</a></h3>
+<pre><code class="language-bash"># Install Jest for different environments
 # React Native
 npm install --save-dev jest @testing-library/react-native react-test-renderer
 
@@ -817,223 +553,590 @@ npm install --save-dev jest @testing-library/react @testing-library/jest-dom
 
 # Node.js
 npm install --save-dev jest supertest
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;jest-configuration&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#jest-configuration&quot;&gt;Jest Configuration&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// jest.config.js
-module.exports &#x3D; {
+</code></pre>
+<h3 id="jest-configuration"><a class="header" href="#jest-configuration">Jest Configuration</a></h3>
+<pre><code class="language-javascript">// jest.config.js
+module.exports = {
   // Test environment
-  testEnvironment: &#x27;jsdom&#x27;, // for React apps
-  // testEnvironment: &#x27;node&#x27;, // for Node.js apps
+  testEnvironment: 'jsdom', // for React apps
+  // testEnvironment: 'node', // for Node.js apps
   
   // Test file patterns
   testMatch: [
-    &#x27;**/__tests__/**/*.js&#x27;,
-    &#x27;**/?(*.)+(spec|test).js&#x27;
+    '**/__tests__/**/*.js',
+    '**/?(*.)+(spec|test).js'
   ],
   
   // Setup files
-  setupFilesAfterEnv: [&#x27;&amp;lt;rootDir&amp;gt;/jest.setup.js&#x27;],
+  setupFilesAfterEnv: ['&lt;rootDir&gt;/jest.setup.js'],
   
   // Coverage
   collectCoverage: true,
-  coverageDirectory: &#x27;coverage&#x27;,
-  coverageReporters: [&#x27;text&#x27;, &#x27;lcov&#x27;, &#x27;html&#x27;],
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text', 'lcov', 'html'],
   collectCoverageFrom: [
-    &#x27;src/**/*.{js,jsx}&#x27;,
-    &#x27;!src/**/*.test.{js,jsx}&#x27;,
-    &#x27;!src/index.js&#x27;
+    'src/**/*.{js,jsx}',
+    '!src/**/*.test.{js,jsx}',
+    '!src/index.js'
   ],
   
   // Mocks
   moduleNameMapping: {
-    &#x27;^@/(.*)$&#x27;: &#x27;&amp;lt;rootDir&amp;gt;/src/$1&#x27;
+    '^@/(.*)$': '&lt;rootDir&gt;/src/$1'
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-react-native-unit-testing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-react-native-unit-testing&quot;&gt;🧪 React Native Unit Testing&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;testing-components&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#testing-components&quot;&gt;Testing Components&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// __tests__/components/Button.test.js
-import React from &#x27;react&#x27;;
-import { render, fireEvent } from &#x27;@testing-library/react-native&#x27;;
-import Button from &#x27;../../src/components/Button&#x27;;
+</code></pre>
+<h2 id="-react-native-unit-testing"><a class="header" href="#-react-native-unit-testing">🧪 React Native Unit Testing</a></h2>
+<h3 id="testing-components"><a class="header" href="#testing-components">Testing Components</a></h3>
+<pre><code class="language-javascript">// __tests__/components/Button.test.js
+import React from 'react';
+import { render, fireEvent } from '@testing-library/react-native';
+import Button from '../../src/components/Button';
 
-describe(&#x27;Button Component&#x27;, () &#x3D;&amp;gt; {
+describe('Button Component', () =&gt; {
   // Test basic rendering
-  it(&#x27;renders correctly with title&#x27;, () &#x3D;&amp;gt; {
-    const { getByText } &#x3D; render(&amp;lt;Button title&#x3D;&quot;Click Me&quot; /&amp;gt;);
+  it('renders correctly with title', () =&gt; {
+    const { getByText } = render(&lt;Button title="Click Me" /&gt;);
     
-    expect(getByText(&#x27;Click Me&#x27;)).toBeTruthy();
+    expect(getByText('Click Me')).toBeTruthy();
   });
 
   // Test interaction
-  it(&#x27;calls onPress when pressed&#x27;, () &#x3D;&amp;gt; {
-    const mockOnPress &#x3D; jest.fn();
-    const { getByText } &#x3D; render(
-      &amp;lt;Button title&#x3D;&quot;Click Me&quot; onPress&#x3D;{mockOnPress} /&amp;gt;
+  it('calls onPress when pressed', () =&gt; {
+    const mockOnPress = jest.fn();
+    const { getByText } = render(
+      &lt;Button title="Click Me" onPress={mockOnPress} /&gt;
     );
     
-    fireEvent.press(getByText(&#x27;Click Me&#x27;));
+    fireEvent.press(getByText('Click Me'));
     expect(mockOnPress).toHaveBeenCalledTimes(1);
   });
 
   // Test different states
-  it(&#x27;shows loading state correctly&#x27;, () &#x3D;&amp;gt; {
-    const { getByTestId } &#x3D; render(
-      &amp;lt;Button title&#x3D;&quot;Loading&quot; loading&#x3D;{true} /&amp;gt;
+  it('shows loading state correctly', () =&gt; {
+    const { getByTestId } = render(
+      &lt;Button title="Loading" loading={true} /&gt;
     );
     
-    expect(getByTestId(&#x27;loading-indicator&#x27;)).toBeTruthy();
+    expect(getByTestId('loading-indicator')).toBeTruthy();
   });
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;testing-custom-hooks&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#testing-custom-hooks&quot;&gt;Testing Custom Hooks&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// __tests__/hooks/useCounter.test.js
-import { renderHook, act } from &#x27;@testing-library/react-hooks&#x27;;
-import useCounter from &#x27;../../src/hooks/useCounter&#x27;;
+</code></pre>
+<h3 id="testing-custom-hooks"><a class="header" href="#testing-custom-hooks">Testing Custom Hooks</a></h3>
+<pre><code class="language-javascript">// __tests__/hooks/useCounter.test.js
+import { renderHook, act } from '@testing-library/react-hooks';
+import useCounter from '../../src/hooks/useCounter';
 
-describe(&#x27;useCounter Hook&#x27;, () &#x3D;&amp;gt; {
-  it(&#x27;returns initial count&#x27;, () &#x3D;&amp;gt; {
-    const { result } &#x3D; renderHook(() &#x3D;&amp;gt; useCounter());
+describe('useCounter Hook', () =&gt; {
+  it('returns initial count', () =&gt; {
+    const { result } = renderHook(() =&gt; useCounter());
     
     expect(result.current.count).toBe(0);
   });
 
-  it(&#x27;increments count&#x27;, () &#x3D;&amp;gt; {
-    const { result } &#x3D; renderHook(() &#x3D;&amp;gt; useCounter());
+  it('increments count', () =&gt; {
+    const { result } = renderHook(() =&gt; useCounter());
     
-    act(() &#x3D;&amp;gt; {
+    act(() =&gt; {
       result.current.increment();
     });
     
     expect(result.current.count).toBe(1);
   });
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-nodejs-unit-testing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-nodejs-unit-testing&quot;&gt;🧪 Node.js Unit Testing&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;testing-controllers&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#testing-controllers&quot;&gt;Testing Controllers&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// __tests__/controllers/userController.test.js
-const request &#x3D; require(&#x27;supertest&#x27;);
-const app &#x3D; require(&#x27;../../src/app&#x27;);
-const User &#x3D; require(&#x27;../../src/models/User&#x27;);
+</code></pre>
+<h2 id="-nodejs-unit-testing"><a class="header" href="#-nodejs-unit-testing">🧪 Node.js Unit Testing</a></h2>
+<h3 id="testing-controllers"><a class="header" href="#testing-controllers">Testing Controllers</a></h3>
+<pre><code class="language-javascript">// __tests__/controllers/userController.test.js
+const request = require('supertest');
+const app = require('../../src/app');
+const User = require('../../src/models/User');
 
 // Mock User model
-jest.mock(&#x27;../../src/models/User&#x27;);
+jest.mock('../../src/models/User');
 
-describe(&#x27;User Controller&#x27;, () &#x3D;&amp;gt; {
-  beforeEach(() &#x3D;&amp;gt; {
+describe('User Controller', () =&gt; {
+  beforeEach(() =&gt; {
     jest.clearAllMocks();
   });
 
-  describe(&#x27;GET /api/users&#x27;, () &#x3D;&amp;gt; {
-    it(&#x27;returns all users&#x27;, async () &#x3D;&amp;gt; {
-      const mockUsers &#x3D; [
-        { id: 1, name: &#x27;John&#x27;, email: &#x27;john@example.com&#x27; }
+  describe('GET /api/users', () =&gt; {
+    it('returns all users', async () =&gt; {
+      const mockUsers = [
+        { id: 1, name: 'John', email: 'john@example.com' }
       ];
       
       User.find.mockResolvedValue(mockUsers);
 
-      const response &#x3D; await request(app)
-        .get(&#x27;/api/users&#x27;)
+      const response = await request(app)
+        .get('/api/users')
         .expect(200);
 
       expect(response.body).toEqual(mockUsers);
     });
   });
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-coverage--quality&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-coverage--quality&quot;&gt;📊 Coverage &amp;amp; Quality&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;coverage-configuration&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#coverage-configuration&quot;&gt;Coverage Configuration&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// package.json
+</code></pre>
+<h2 id="-coverage--quality"><a class="header" href="#-coverage--quality">📊 Coverage &amp; Quality</a></h2>
+<h3 id="coverage-configuration"><a class="header" href="#coverage-configuration">Coverage Configuration</a></h3>
+<pre><code class="language-javascript">// package.json
 {
-  &quot;scripts&quot;: {
-    &quot;test&quot;: &quot;jest&quot;,
-    &quot;test:watch&quot;: &quot;jest --watch&quot;,
-    &quot;test:coverage&quot;: &quot;jest --coverage&quot;
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
-  &quot;jest&quot;: {
-    &quot;coverageThreshold&quot;: {
-      &quot;global&quot;: {
-        &quot;branches&quot;: 80,
-        &quot;functions&quot;: 80,
-        &quot;lines&quot;: 80,
-        &quot;statements&quot;: 80
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
       }
     }
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-best-practices&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-best-practices&quot;&gt;🔧 Best Practices&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;test-structure-aaa-pattern&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#test-structure-aaa-pattern&quot;&gt;Test Structure (AAA Pattern)&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Arrange, Act, Assert
-it(&#x27;increments counter when button is clicked&#x27;, () &#x3D;&amp;gt; {
+</code></pre>
+<h2 id="-best-practices"><a class="header" href="#-best-practices">🔧 Best Practices</a></h2>
+<h3 id="test-structure-aaa-pattern"><a class="header" href="#test-structure-aaa-pattern">Test Structure (AAA Pattern)</a></h3>
+<pre><code class="language-javascript">// Arrange, Act, Assert
+it('increments counter when button is clicked', () =&gt; {
   // Arrange
-  const mockOnPress &#x3D; jest.fn();
-  const { getByText } &#x3D; render(&amp;lt;Button onPress&#x3D;{mockOnPress} /&amp;gt;);
+  const mockOnPress = jest.fn();
+  const { getByText } = render(&lt;Button onPress={mockOnPress} /&gt;);
   
   // Act
-  fireEvent.press(getByText(&#x27;Increment&#x27;));
+  fireEvent.press(getByText('Increment'));
   
   // Assert
   expect(mockOnPress).toHaveBeenCalledTimes(1);
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Next Up&lt;/strong&gt;: Learn about Integration Testing! 🔄&lt;/p&gt;
+</code></pre>
+<hr>
+<p><strong>Next Up</strong>: Learn about Integration Testing! 🔄</p>
+<hr>
+<h2 id="mocking--test-doubles"><a class="header" href="#mocking--test-doubles"><strong>Mocking &amp; Test Doubles</strong></a></h2>
+<h3 id="mocking-external-dependencies"><a class="header" href="#mocking-external-dependencies"><strong>Mocking External Dependencies</strong></a></h3>
+<pre><code class="language-javascript">// __tests__/services/apiService.test.js
+import ApiService from '../../src/services/ApiService';
 
-                        </div>
-                        
-                    </article>
-                </div>
+// Mock axios
+jest.mock('axios');
+import axios from 'axios';
+
+describe('ApiService', () =&gt; {
+  beforeEach(() =&gt; {
+    jest.clearAllMocks();
+  });
+
+  describe('fetchUsers', () =&gt; {
+    it('returns users data on successful API call', async () =&gt; {
+      const mockUsers = [
+        { id: 1, name: 'John', email: 'john@example.com' }
+      ];
+      
+      axios.get.mockResolvedValue({ data: mockUsers });
+
+      const result = await ApiService.fetchUsers();
+
+      expect(axios.get).toHaveBeenCalledWith('/api/users');
+      expect(result).toEqual(mockUsers);
+    });
+
+    it('handles API errors gracefully', async () =&gt; {
+      const errorMessage = 'Network Error';
+      axios.get.mockRejectedValue(new Error(errorMessage));
+
+      await expect(ApiService.fetchUsers()).rejects.toThrow(errorMessage);
+    });
+  });
+});
+</code></pre>
+<h3 id="mocking-react-navigation"><a class="header" href="#mocking-react-navigation"><strong>Mocking React Navigation</strong></a></h3>
+<pre><code class="language-javascript">// __tests__/navigation/NavigationContainer.test.js
+import React from 'react';
+import { render } from '@testing-library/react-native';
+import { NavigationContainer } from '@react-navigation/native';
+
+// Mock navigation container
+jest.mock('@react-navigation/native', () =&gt; ({
+  ...jest.requireActual('@react-navigation/native'),
+  useNavigation: () =&gt; ({
+    navigate: jest.fn(),
+    goBack: jest.fn(),
+  }),
+  useRoute: () =&gt; ({
+    params: {},
+  }),
+}));
+
+describe('NavigationContainer', () =&gt; {
+  it('renders without crashing', () =&gt; {
+    const { getByTestId } = render(
+      &lt;NavigationContainer&gt;
+        &lt;View testID="test-screen"&gt;
+          &lt;Text&gt;Test Screen&lt;/Text&gt;
+        &lt;/View&gt;
+      &lt;/NavigationContainer&gt;
+    );
+
+    expect(getByTestId('test-screen')).toBeTruthy();
+  });
+});
+</code></pre>
+<hr>
+<h2 id="advanced-testing-patterns"><a class="header" href="#advanced-testing-patterns"><strong>Advanced Testing Patterns</strong></a></h2>
+<h3 id="property-based-testing"><a class="header" href="#property-based-testing"><strong>Property-Based Testing</strong></a></h3>
+<pre><code class="language-javascript">// __tests__/utils/stringUtils.test.js
+import { capitalize, truncate } from '../../src/utils/stringUtils';
+
+describe('String Utils', () =&gt; {
+  describe('capitalize', () =&gt; {
+    it('capitalizes first letter of any string', () =&gt; {
+      const testCases = [
+        ['hello', 'Hello'],
+        ['WORLD', 'World'],
+        ['javascript', 'JavaScript'],
+        ['', ''],
+        ['a', 'A'],
+      ];
+
+      testCases.forEach(([input, expected]) =&gt; {
+        expect(capitalize(input)).toBe(expected);
+      });
+    });
+  });
+
+  describe('truncate', () =&gt; {
+    it('truncates strings to specified length', () =&gt; {
+      const longString = 'This is a very long string that needs truncation';
+      
+      expect(truncate(longString, 10)).toBe('This is a...');
+      expect(truncate(longString, 20)).toBe('This is a very lo...');
+      expect(truncate('short', 10)).toBe('short');
+    });
+  });
+});
+</code></pre>
+<h3 id="testing-async-operations"><a class="header" href="#testing-async-operations"><strong>Testing Async Operations</strong></a></h3>
+<pre><code class="language-javascript">// __tests__/hooks/useAsyncData.test.js
+import { renderHook, act, waitFor } from '@testing-library/react-hooks';
+import useAsyncData from '../../src/hooks/useAsyncData';
+
+describe('useAsyncData', () =&gt; {
+  it('loads data successfully', async () =&gt; {
+    const mockData = { id: 1, name: 'Test Data' };
+    const mockFetch = jest.fn().mockResolvedValue(mockData);
+
+    const { result } = renderHook(() =&gt; useAsyncData(mockFetch));
+
+    expect(result.current.loading).toBe(true);
+    expect(result.current.data).toBe(null);
+    expect(result.current.error).toBe(null);
+
+    await waitFor(() =&gt; {
+      expect(result.current.loading).toBe(false);
+      expect(result.current.data).toEqual(mockData);
+      expect(result.current.error).toBe(null);
+    });
+
+    expect(mockFetch).toHaveBeenCalledTimes(1);
+  });
+
+  it('handles errors correctly', async () =&gt; {
+    const mockError = new Error('Fetch failed');
+    const mockFetch = jest.fn().mockRejectedValue(mockError);
+
+    const { result } = renderHook(() =&gt; useAsyncData(mockFetch));
+
+    await waitFor(() =&gt; {
+      expect(result.current.loading).toBe(false);
+      expect(result.current.data).toBe(null);
+      expect(result.current.error).toEqual(mockError);
+    });
+  });
+});
+</code></pre>
+<hr>
+<h2 id="testing-best-practices"><a class="header" href="#testing-best-practices"><strong>Testing Best Practices</strong></a></h2>
+<h3 id="test-naming-conventions"><a class="header" href="#test-naming-conventions"><strong>Test Naming Conventions</strong></a></h3>
+<pre><code class="language-javascript">// Good test names - descriptive and clear
+describe('UserService', () =&gt; {
+  describe('createUser', () =&gt; {
+    it('should create user with valid data');
+    it('should throw error when email is invalid');
+    it('should hash password before saving');
+    it('should return user object without password');
+  });
+});
+
+// Bad test names - vague and unclear
+describe('UserService', () =&gt; {
+  it('works correctly');
+  it('handles errors');
+  it('returns data');
+});
+</code></pre>
+<h3 id="test-organization"><a class="header" href="#test-organization"><strong>Test Organization</strong></a></h3>
+<pre><code class="language-javascript">// Organize tests by feature, then by method, then by scenario
+describe('PaymentService', () =&gt; {
+  describe('processPayment', () =&gt; {
+    describe('when payment is successful', () =&gt; {
+      it('should charge the customer');
+      it('should update order status');
+      it('should send confirmation email');
+    });
+
+    describe('when payment fails', () =&gt; {
+      it('should not charge the customer');
+      it('should log the error');
+      it('should notify admin');
+    });
+  });
+});
+</code></pre>
+<h3 id="test-data-management"><a class="header" href="#test-data-management"><strong>Test Data Management</strong></a></h3>
+<pre><code class="language-javascript">// __tests__/fixtures/userFixtures.js
+export const validUser = {
+  id: 1,
+  name: 'John Doe',
+  email: 'john@example.com',
+  password: 'password123',
+};
+
+export const invalidUser = {
+  id: 1,
+  name: '',
+  email: 'invalid-email',
+  password: '123',
+};
+
+export const multipleUsers = [
+  validUser,
+  { ...validUser, id: 2, email: 'jane@example.com' },
+];
+
+// Using fixtures in tests
+import { validUser, invalidUser } from '../fixtures/userFixtures';
+
+describe('UserValidator', () =&gt; {
+  it('should validate correct user data', () =&gt; {
+    expect(UserValidator.isValid(validUser)).toBe(true);
+  });
+
+  it('should reject invalid user data', () =&gt; {
+    expect(UserValidator.isValid(invalidUser)).toBe(false);
+  });
+});
+</code></pre>
+<hr>
+<h2 id="real-use-case"><a class="header" href="#real-use-case"><strong>Real Use Case</strong></a></h2>
+<h3 id="testing-a-complete-react-native-component"><a class="header" href="#testing-a-complete-react-native-component"><strong>Testing a Complete React Native Component</strong></a></h3>
+<pre><code class="language-javascript">// src/components/ProfileCard.js
+import React from 'react';
+import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+
+const ProfileCard = ({ user, onPress, showEmail = true }) =&gt; {
+  return (
+    &lt;TouchableOpacity 
+      style={styles.container} 
+      onPress={() =&gt; onPress(user)}
+      testID="profile-card"
+    &gt;
+      &lt;Image 
+        source={{ uri: user.avatar }} 
+        style={styles.avatar}
+        testID="user-avatar"
+      /&gt;
+      &lt;View style={styles.info}&gt;
+        &lt;Text style={styles.name} testID="user-name"&gt;
+          {user.name}
+        &lt;/Text&gt;
+        {showEmail &amp;&amp; (
+          &lt;Text style={styles.email} testID="user-email"&gt;
+            {user.email}
+          &lt;/Text&gt;
+        )}
+        &lt;Text style={styles.bio} testID="user-bio"&gt;
+          {user.bio}
+        &lt;/Text&gt;
+      &lt;/View&gt;
+    &lt;/TouchableOpacity&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    padding: 16,
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  avatar: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    marginRight: 16,
+  },
+  info: {
+    flex: 1,
+  },
+  name: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 4,
+  },
+  email: {
+    fontSize: 14,
+    color: '#666',
+    marginBottom: 4,
+  },
+  bio: {
+    fontSize: 14,
+    color: '#333',
+  },
+});
+
+export default ProfileCard;
+</code></pre>
+<pre><code class="language-javascript">// __tests__/components/ProfileCard.test.js
+import React from 'react';
+import { render, fireEvent } from '@testing-library/react-native';
+import ProfileCard from '../../src/components/ProfileCard';
+
+describe('ProfileCard Component', () =&gt; {
+  const mockUser = {
+    id: 1,
+    name: 'John Doe',
+    email: 'john@example.com',
+    avatar: 'https://example.com/avatar.jpg',
+    bio: 'Software developer passionate about React Native',
+  };
+
+  const mockOnPress = jest.fn();
+
+  beforeEach(() =&gt; {
+    jest.clearAllMocks();
+  });
+
+  it('renders user information correctly', () =&gt; {
+    const { getByTestId, getByText } = render(
+      &lt;ProfileCard user={mockUser} onPress={mockOnPress} /&gt;
+    );
+
+    expect(getByTestId('user-avatar')).toBeTruthy();
+    expect(getByTestId('user-name')).toBeTruthy();
+    expect(getByTestId('user-email')).toBeTruthy();
+    expect(getByTestId('user-bio')).toBeTruthy();
+
+    expect(getByText('John Doe')).toBeTruthy();
+    expect(getByText('john@example.com')).toBeTruthy();
+    expect(getByText('Software developer passionate about React Native')).toBeTruthy();
+  });
+
+  it('hides email when showEmail is false', () =&gt; {
+    const { getByTestId, queryByTestId } = render(
+      &lt;ProfileCard user={mockUser} onPress={mockOnPress} showEmail={false} /&gt;
+    );
+
+    expect(getByTestId('user-name')).toBeTruthy();
+    expect(queryByTestId('user-email')).toBeFalsy();
+  });
+
+  it('calls onPress when card is pressed', () =&gt; {
+    const { getByTestId } = render(
+      &lt;ProfileCard user={mockUser} onPress={mockOnPress} /&gt;
+    );
+
+    fireEvent.press(getByTestId('profile-card'));
+    expect(mockOnPress).toHaveBeenCalledWith(mockUser);
+    expect(mockOnPress).toHaveBeenCalledTimes(1);
+  });
+
+  it('applies correct styles', () =&gt; {
+    const { getByTestId } = render(
+      &lt;ProfileCard user={mockUser} onPress={mockOnPress} /&gt;
+    );
+
+    const card = getByTestId('profile-card');
+    expect(card.props.style).toContainEqual(
+      expect.objectContaining({
+        flexDirection: 'row',
+        padding: 16,
+        backgroundColor: '#fff',
+      })
+    );
+  });
+});
+</code></pre>
+<hr>
+<h2 id="pro-tip"><a class="header" href="#pro-tip"><strong>Pro Tip</strong></a></h2>
+<p><strong>Write tests before you write the code (Test-Driven Development). This forces you to think about the requirements and edge cases before implementation, leading to better design and fewer bugs.</strong></p>
+<pre><code class="language-javascript">// TDD Example: Write test first
+describe('Calculator', () =&gt; {
+  it('should add two numbers correctly', () =&gt; {
+    expect(calculator.add(2, 3)).toBe(5);
+  });
+
+  it('should handle negative numbers', () =&gt; {
+    expect(calculator.add(-2, 3)).toBe(1);
+  });
+
+  it('should throw error for non-numeric inputs', () =&gt; {
+    expect(() =&gt; calculator.add('a', 3)).toThrow('Invalid input');
+  });
+});
+
+// Then implement the code to make tests pass
+class Calculator {
+  add(a, b) {
+    if (typeof a !== 'number' || typeof b !== 'number') {
+      throw new Error('Invalid input');
+    }
+    return a + b;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="exercise--mini-task"><a class="header" href="#exercise--mini-task"><strong>Exercise / Mini Task</strong></a></h2>
+<p><strong>Task</strong>: Create comprehensive unit tests for a todo application with the following features:</p>
+<ol>
+<li><strong>Todo Model</strong>: Create, read, update, delete operations</li>
+<li><strong>Todo Service</strong>: Business logic for todo management</li>
+<li><strong>Todo Component</strong>: React Native component for displaying todos</li>
+<li><strong>Todo Hook</strong>: Custom hook for todo state management</li>
+</ol>
+<p><strong>Requirements</strong>:</p>
+<ul>
+<li>Test all CRUD operations</li>
+<li>Test error handling</li>
+<li>Test component rendering and interactions</li>
+<li>Test custom hook behavior</li>
+<li>Achieve 90% code coverage</li>
+<li>Use proper mocking for external dependencies</li>
+</ul>
+<p><strong>Bonus</strong>:</p>
+<ul>
+<li>Add property-based testing</li>
+<li>Create test fixtures and factories</li>
+<li>Implement test utilities for common operations</li>
+<li>Add performance tests</li>
+<li>Create visual regression tests</li>
+</ul>
+<hr>
+<p><strong>Unit testing is the foundation of reliable software development. Master these techniques to build robust, maintainable applications with confidence and speed.</strong>🔄</p>
+
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "testing/unit.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

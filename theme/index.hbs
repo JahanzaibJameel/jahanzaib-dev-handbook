@@ -1,9 +1,22 @@
 <!DOCTYPE html>
-<html lang="{{ language }}" data-theme="light">
+<html lang="{{ language }}">
 <head>
-    {{> head}}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description }}">
+    <title>{{ title }}</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="{{ path_to_root }}custom.css">
+    <script src="{{ path_to_root }}custom.js" defer></script>
+    {{{ print }}}
+    {{{ scripts }}}
+    
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -46,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -512,207 +525,17 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
-        
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="{{ path_to_root }}" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    {{ title }}
-                </a>
-                
-                <nav class="header-nav">
-                    {{#if git_repository_url}}
-                    <a href="{{ git_repository_url }}" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                    {{/if}}
-                </nav>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    {{#if path_to_root}}
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    {{/if}}
-                    
-                    <nav class="sidebar-nav">
-                        {{#toc}}
-                        <ol class="chapter">
-                            {{#each this}}
-                            <li class="chapter-item expanded">
-                                <a href="{{ path_to_root }}{{ this.path }}" class="chapter-link">
-                                    <strong>{{ this.title }}</strong>
-                                </a>
-                                {{#if this.sections.length}}
-                                <ol class="nav-children">
-                                    {{#each this.sections}}
-                                    <li class="chapter-item">
-                                        <a href="{{ ../path_to_root }}{{ this.path }}" class="chapter-link">
-                                            {{ this.title }}
-                                        </a>
-                                    </li>
-                                    {{/each}}
-                                </ol>
-                                {{/if}}
-                            </li>
-                            {{/each}}
-                        </ol>
-                        {{/toc}}
-                    </nav>
-                </div>
-            </aside>
-
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    {{#if title}}
-                    <article>
-                        <header class="article-header">
-                            <h1>{{ title }}</h1>
-                            {{#if date}}
-                            <div class="article-meta">
-                                <time datetime="{{ date }}">{{ date }}</time>
-                            </div>
-                            {{/if}}
-                        </header>
-                        
-                        <div class="article-content">
-                            {{ content }}
-                        </div>
-                        
-                        {{#if previous_title}}
-                        <nav class="article-navigation">
-                            <a href="{{ previous_href }}" class="article-nav-prev">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="15 18 9 12 15 6"></polyline>
-                                </svg>
-                                <div>
-                                    <div class="article-nav-label">Previous</div>
-                                    <div class="article-nav-title">{{ previous_title }}</div>
-                                </div>
-                            </a>
-                            
-                            {{#if next_title}}
-                            <a href="{{ next_href }}" class="article-nav-next">
-                                <div>
-                                    <div class="article-nav-label">Next</div>
-                                    <div class="article-nav-title">{{ next_title }}</div>
-                                </div>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="9 18 15 12 9 6"></polyline>
-                                </svg>
-                            </a>
-                            {{/if}}
-                        </nav>
-                        {{else}}
-                        {{#if next_title}}
-                        <nav class="article-navigation">
-                            <a href="{{ next_href }}" class="article-nav-next">
-                                <div>
-                                    <div class="article-nav-label">Next</div>
-                                    <div class="article-nav-title">{{ next_title }}</div>
-                                </div>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="9 18 15 12 9 6"></polyline>
-                                </svg>
-                            </a>
-                        </nav>
-                        {{/if}}
-                        {{/if}}
-                    </article>
-                    {{else}}
-                    <div class="content-wrapper">
-                        {{ content }}
-                    </div>
-                    {{/if}}
-                </div>
+<body class="light">
+    <div id="page-wrapper">
+        {{{ header }}}
+        <div id="content">
+            <main>
+                {{{ content }}}
             </main>
+            {{{ footer }}}
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>{{ description }}</p>
-                </div>
-                
-                {{#if git_repository_url}}
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="{{ git_repository_url }}">View on GitHub</a></li>
-                        {{#if edit_url_template}}
-                        <li><a href="{{ edit_url }}">Edit this page</a></li>
-                        {{/if}}
-                    </ul>
-                </div>
-                {{/if}}
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="{{ path_to_root }}">Home</a></li>
-                        {{#if print_enable}}
-                        <li><a href="{{ path_to_root }}print.html" target="_blank">Print Version</a></li>
-                        {{/if}}
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy; {{ year }} {{ authors }}. Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        {{{ search_input }}}
+        {{{ search_results }}}
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "{{ path_to_root }}";
-        window.current_page = "{{ path }}";
-        
-        {{#if search_enabled}}
-        // Search data will be loaded by mdBook
-        {{/if}}
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="{{ path_to_root }}theme/js/core.js"></script>
-    <script src="{{ path_to_root }}theme/js/animations.js"></script>
-    {{#if search_enabled}}
-    <script src="{{ path_to_root }}theme/js/search.js"></script>
-    {{/if}}
-    
-    {{#if mathjax_support}}
-    <!-- MathJax support -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    {{/if}}
 </body>
 </html>

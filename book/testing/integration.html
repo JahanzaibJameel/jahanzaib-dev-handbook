@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>Integration Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="Integration Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Integration Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>Integration Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="testing/integration.md">
-    <meta property="og:title" content="Integration Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Integration Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="testing/integration.md">
-    <meta property="twitter:title" content="Integration Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="Integration Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="Integration Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="testing/integration.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "Integration Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,190 +525,141 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    Integration Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
-
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>Integration Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;integration-testing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#integration-testing&quot;&gt;Integration Testing&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Integration testing verifies that different parts of your application work together correctly. It tests the interaction between components, services, databases, and external APIs.&lt;/p&gt;
-&lt;h2 id&#x3D;&quot;-what-is-integration-testing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-what-is-integration-testing&quot;&gt;🎯 What is Integration Testing?&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Integration testing sits between unit testing and end-to-end testing. It combines multiple units to test their interactions and ensure they work together as expected.&lt;/p&gt;
-&lt;h3 id&#x3D;&quot;why-integration-testing-matters&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#why-integration-testing-matters&quot;&gt;Why Integration Testing Matters&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Catch Integration Issues&lt;/strong&gt;: Find problems when components interact&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Database Integration&lt;/strong&gt;: Verify data flow between app and database&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;API Integration&lt;/strong&gt;: Test communication with external services&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Component Integration&lt;/strong&gt;: Ensure UI components work together&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Real Environment&lt;/strong&gt;: Test with actual dependencies&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id&#x3D;&quot;-integration-testing-tools&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-integration-testing-tools&quot;&gt;🛠️ Integration Testing Tools&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;react-native-testing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#react-native-testing&quot;&gt;React Native Testing&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-bash&quot;&gt;npm install --save-dev @testing-library/react-native jest
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;reactnextjs-testing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#reactnextjs-testing&quot;&gt;React/Next.js Testing&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-bash&quot;&gt;npm install --save-dev @testing-library/react @testing-library/jest-dom
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;nodejs-api-testing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#nodejs-api-testing&quot;&gt;Node.js API Testing&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-bash&quot;&gt;npm install --save-dev supertest mongodb-memory-server
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-react-native-integration-testing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-react-native-integration-testing&quot;&gt;🧪 React Native Integration Testing&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;testing-component-integration&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#testing-component-integration&quot;&gt;Testing Component Integration&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// __tests__/integration/LoginFlow.test.js
-import React from &#x27;react&#x27;;
-import { render, fireEvent, waitFor } from &#x27;@testing-library/react-native&#x27;;
-import { NavigationContainer } from &#x27;@react-navigation/native&#x27;;
-import { Provider } from &#x27;react-redux&#x27;;
-import LoginScreen from &#x27;../../src/screens/LoginScreen&#x27;;
-import store from &#x27;../../src/store&#x27;;
+        <div id="content">
+            <main>
+                <h1 id="integration-testing"><a class="header" href="#integration-testing">Integration Testing</a></h1>
+<p>Integration testing verifies that different parts of your application work together correctly. It tests the interaction between components, services, databases, and external APIs.</p>
+<h2 id="-what-is-integration-testing"><a class="header" href="#-what-is-integration-testing">🎯 What is Integration Testing?</a></h2>
+<p>Integration testing sits between unit testing and end-to-end testing. It combines multiple units to test their interactions and ensure they work together as expected.</p>
+<h3 id="why-integration-testing-matters"><a class="header" href="#why-integration-testing-matters">Why Integration Testing Matters</a></h3>
+<ul>
+<li><strong>Catch Integration Issues</strong>: Find problems when components interact</li>
+<li><strong>Database Integration</strong>: Verify data flow between app and database</li>
+<li><strong>API Integration</strong>: Test communication with external services</li>
+<li><strong>Component Integration</strong>: Ensure UI components work together</li>
+<li><strong>Real Environment</strong>: Test with actual dependencies</li>
+</ul>
+<h2 id="-integration-testing-tools"><a class="header" href="#-integration-testing-tools">🛠️ Integration Testing Tools</a></h2>
+<h3 id="react-native-testing"><a class="header" href="#react-native-testing">React Native Testing</a></h3>
+<pre><code class="language-bash">npm install --save-dev @testing-library/react-native jest
+</code></pre>
+<h3 id="reactnextjs-testing"><a class="header" href="#reactnextjs-testing">React/Next.js Testing</a></h3>
+<pre><code class="language-bash">npm install --save-dev @testing-library/react @testing-library/jest-dom
+</code></pre>
+<h3 id="nodejs-api-testing"><a class="header" href="#nodejs-api-testing">Node.js API Testing</a></h3>
+<pre><code class="language-bash">npm install --save-dev supertest mongodb-memory-server
+</code></pre>
+<h2 id="-react-native-integration-testing"><a class="header" href="#-react-native-integration-testing">🧪 React Native Integration Testing</a></h2>
+<h3 id="testing-component-integration"><a class="header" href="#testing-component-integration">Testing Component Integration</a></h3>
+<pre><code class="language-javascript">// __tests__/integration/LoginFlow.test.js
+import React from 'react';
+import { render, fireEvent, waitFor } from '@testing-library/react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { Provider } from 'react-redux';
+import LoginScreen from '../../src/screens/LoginScreen';
+import store from '../../src/store';
 
 // Mock navigation
-const mockNavigation &#x3D; {
+const mockNavigation = {
   navigate: jest.fn(),
   replace: jest.fn(),
 };
 
 // Mock AsyncStorage
-jest.mock(&#x27;@react-native-async-storage/async-storage&#x27;, () &#x3D;&amp;gt; ({
+jest.mock('@react-native-async-storage/async-storage', () =&gt; ({
   setItem: jest.fn(),
-  getItem: jest.fn(() &#x3D;&amp;gt; Promise.resolve(null)),
+  getItem: jest.fn(() =&gt; Promise.resolve(null)),
   removeItem: jest.fn(),
 }));
 
-describe(&#x27;Login Flow Integration&#x27;, () &#x3D;&amp;gt; {
-  const renderWithProviders &#x3D; (component) &#x3D;&amp;gt; {
+describe('Login Flow Integration', () =&gt; {
+  const renderWithProviders = (component) =&gt; {
     return render(
-      &amp;lt;Provider store&#x3D;{store}&amp;gt;
-        &amp;lt;NavigationContainer&amp;gt;
+      &lt;Provider store={store}&gt;
+        &lt;NavigationContainer&gt;
           {component}
-        &amp;lt;/NavigationContainer&amp;gt;
-      &amp;lt;/Provider&amp;gt;
+        &lt;/NavigationContainer&gt;
+      &lt;/Provider&gt;
     );
   };
 
-  it(&#x27;completes login flow successfully&#x27;, async () &#x3D;&amp;gt; {
-    const mockResponse &#x3D; {
-      user: { id: 1, name: &#x27;John&#x27;, email: &#x27;john@example.com&#x27; },
-      token: &#x27;mock-jwt-token&#x27;
+  it('completes login flow successfully', async () =&gt; {
+    const mockResponse = {
+      user: { id: 1, name: 'John', email: 'john@example.com' },
+      token: 'mock-jwt-token'
     };
 
     // Mock API call
-    global.fetch &#x3D; jest.fn().mockResolvedValueOnce({
+    global.fetch = jest.fn().mockResolvedValueOnce({
       ok: true,
-      json: async () &#x3D;&amp;gt; mockResponse
+      json: async () =&gt; mockResponse
     });
 
-    const { getByPlaceholderText, getByText } &#x3D; renderWithProviders(
-      &amp;lt;LoginScreen navigation&#x3D;{mockNavigation} /&amp;gt;
+    const { getByPlaceholderText, getByText } = renderWithProviders(
+      &lt;LoginScreen navigation={mockNavigation} /&gt;
     );
 
     // Enter credentials
-    fireEvent.changeText(getByPlaceholderText(&#x27;Email&#x27;), &#x27;john@example.com&#x27;);
-    fireEvent.changeText(getByPlaceholderText(&#x27;Password&#x27;), &#x27;password123&#x27;);
+    fireEvent.changeText(getByPlaceholderText('Email'), 'john@example.com');
+    fireEvent.changeText(getByPlaceholderText('Password'), 'password123');
 
     // Submit form
-    fireEvent.press(getByText(&#x27;Login&#x27;));
+    fireEvent.press(getByText('Login'));
 
     // Wait for navigation
-    await waitFor(() &#x3D;&amp;gt; {
-      expect(mockNavigation.replace).toHaveBeenCalledWith(&#x27;Home&#x27;);
+    await waitFor(() =&gt; {
+      expect(mockNavigation.replace).toHaveBeenCalledWith('Home');
     });
 
     // Verify token storage
-    const AsyncStorage &#x3D; require(&#x27;@react-native-async-storage/async-storage&#x27;);
+    const AsyncStorage = require('@react-native-async-storage/async-storage');
     expect(AsyncStorage.setItem).toHaveBeenCalledWith(
-      &#x27;auth_token&#x27;,
+      'auth_token',
       mockResponse.token
     );
   });
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-nodejs-api-integration-testing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-nodejs-api-integration-testing&quot;&gt;🧪 Node.js API Integration Testing&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;testing-database-integration&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#testing-database-integration&quot;&gt;Testing Database Integration&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// __tests__/integration/userController.test.js
-const request &#x3D; require(&#x27;supertest&#x27;);
-const mongoose &#x3D; require(&#x27;mongoose&#x27;);
-const { MongoMemoryServer } &#x3D; require(&#x27;mongodb-memory-server&#x27;);
-const app &#x3D; require(&#x27;../../src/app&#x27;);
-const User &#x3D; require(&#x27;../../src/models/User&#x27;);
+</code></pre>
+<h2 id="-nodejs-api-integration-testing"><a class="header" href="#-nodejs-api-integration-testing">🧪 Node.js API Integration Testing</a></h2>
+<h3 id="testing-database-integration"><a class="header" href="#testing-database-integration">Testing Database Integration</a></h3>
+<pre><code class="language-javascript">// __tests__/integration/userController.test.js
+const request = require('supertest');
+const mongoose = require('mongoose');
+const { MongoMemoryServer } = require('mongodb-memory-server');
+const app = require('../../src/app');
+const User = require('../../src/models/User');
 
-describe(&#x27;User Controller Integration&#x27;, () &#x3D;&amp;gt; {
+describe('User Controller Integration', () =&gt; {
   let mongoServer;
 
-  beforeAll(async () &#x3D;&amp;gt; {
-    mongoServer &#x3D; await MongoMemoryServer.create();
-    const mongoUri &#x3D; mongoServer.getUri();
+  beforeAll(async () =&gt; {
+    mongoServer = await MongoMemoryServer.create();
+    const mongoUri = mongoServer.getUri();
     await mongoose.connect(mongoUri);
   });
 
-  beforeEach(async () &#x3D;&amp;gt; {
+  beforeEach(async () =&gt; {
     await User.deleteMany({});
   });
 
-  afterAll(async () &#x3D;&amp;gt; {
+  afterAll(async () =&gt; {
     await mongoose.disconnect();
     await mongoServer.stop();
   });
 
-  describe(&#x27;POST /api/users&#x27;, () &#x3D;&amp;gt; {
-    it(&#x27;creates user and saves to database&#x27;, async () &#x3D;&amp;gt; {
-      const userData &#x3D; {
-        name: &#x27;John Doe&#x27;,
-        email: &#x27;john@example.com&#x27;,
-        password: &#x27;password123&#x27;
+  describe('POST /api/users', () =&gt; {
+    it('creates user and saves to database', async () =&gt; {
+      const userData = {
+        name: 'John Doe',
+        email: 'john@example.com',
+        password: 'password123'
       };
 
-      const response &#x3D; await request(app)
-        .post(&#x27;/api/users&#x27;)
+      const response = await request(app)
+        .post('/api/users')
         .send(userData)
         .expect(201);
 
@@ -932,16 +668,16 @@ describe(&#x27;User Controller Integration&#x27;, () &#x3D;&amp;gt; {
       expect(response.body.email).toBe(userData.email);
 
       // Verify database
-      const userInDb &#x3D; await User.findOne({ email: userData.email });
+      const userInDb = await User.findOne({ email: userData.email });
       expect(userInDb).toBeTruthy();
       expect(userInDb.name).toBe(userData.name);
     });
   });
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-integration-testing-best-practices&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-integration-testing-best-practices&quot;&gt;🔧 Integration Testing Best Practices&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;test-organization&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#test-organization&quot;&gt;Test Organization&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-text&quot;&gt;__tests__/
+</code></pre>
+<h2 id="-integration-testing-best-practices"><a class="header" href="#-integration-testing-best-practices">🔧 Integration Testing Best Practices</a></h2>
+<h3 id="test-organization"><a class="header" href="#test-organization">Test Organization</a></h3>
+<pre><code class="language-text">__tests__/
 ├── integration/
 │   ├── auth/
 │   │   ├── loginFlow.test.js
@@ -952,17 +688,17 @@ describe(&#x27;User Controller Integration&#x27;, () &#x3D;&amp;gt; {
 │   └── components/
 │       ├── shoppingCart.test.js
 │       └── userProfile.test.js
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;test-data-management&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#test-data-management&quot;&gt;Test Data Management&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// __tests__/utils/testData.js
-import { MongoMemoryServer } from &#x27;mongodb-memory-server&#x27;;
-import mongoose from &#x27;mongoose&#x27;;
+</code></pre>
+<h3 id="test-data-management"><a class="header" href="#test-data-management">Test Data Management</a></h3>
+<pre><code class="language-javascript">// __tests__/utils/testData.js
+import { MongoMemoryServer } from 'mongodb-memory-server';
+import mongoose from 'mongoose';
 
 export class TestDatabase {
   async connect() {
-    this.server &#x3D; await MongoMemoryServer.create();
-    const uri &#x3D; this.server.getUri();
-    this.connection &#x3D; await mongoose.connect(uri);
+    this.server = await MongoMemoryServer.create();
+    const uri = this.server.getUri();
+    this.connection = await mongoose.connect(uri);
   }
 
   async disconnect() {
@@ -971,70 +707,606 @@ export class TestDatabase {
   }
 
   async clear() {
-    const collections &#x3D; mongoose.connection.collections;
+    const collections = mongoose.connection.collections;
     for (const key in collections) {
       await collections[key].deleteMany({});
     }
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Next Up&lt;/strong&gt;: Learn about End-to-End Testing! 🎭&lt;/p&gt;
 
-                        </div>
-                        
-                    </article>
-                </div>
+## **API Integration Testing**
+
+### **Testing External API Integration**
+
+```javascript
+// __tests__/integration/weatherService.test.js
+import WeatherService from '../../src/services/WeatherService';
+import { setupServer } from 'msw/node';
+import { rest } from 'msw';
+
+// Mock API server
+const server = setupServer(
+  rest.get('https://api.openweathermap.org/data/2.5/weather', (req, res, ctx) =&gt; {
+    const city = req.url.searchParams.get('q');
+    
+    if (city === 'London') {
+      return res(
+        ctx.json({
+          name: 'London',
+          main: { temp: 15, humidity: 70 },
+          weather: [{ main: 'Clouds', description: 'cloudy' }]
+        })
+      );
+    }
+    
+    if (city === 'InvalidCity') {
+      return res(
+        ctx.status(404),
+        ctx.json({ message: 'city not found' })
+      );
+    }
+    
+    return res(
+      ctx.status(500),
+      ctx.json({ message: 'Internal server error' })
+    );
+  })
+);
+
+describe('WeatherService Integration', () =&gt; {
+  beforeAll(() =&gt; server.listen());
+  afterEach(() =&gt; server.resetHandlers());
+  afterAll(() =&gt; server.close());
+
+  it('fetches weather data successfully', async () =&gt; {
+    const weather = await WeatherService.getWeather('London');
+    
+    expect(weather.name).toBe('London');
+    expect(weather.main.temp).toBe(15);
+    expect(weather.weather[0].main).toBe('Clouds');
+  });
+
+  it('handles city not found error', async () =&gt; {
+    await expect(WeatherService.getWeather('InvalidCity'))
+      .rejects.toThrow('city not found');
+  });
+
+  it('handles server errors', async () =&gt; {
+    await expect(WeatherService.getWeather('ServerError'))
+      .rejects.toThrow('Internal server error');
+  });
+});
+
+### **Testing File Upload Integration**
+
+```javascript
+// __tests__/integration/fileUpload.test.js
+import request from 'supertest';
+import path from 'path';
+import fs from 'fs';
+import app from '../../src/app';
+
+describe('File Upload Integration', () =&gt; {
+  const testFilePath = path.join(__dirname, '../fixtures/test-image.jpg');
+  
+  beforeAll(() =&gt; {
+    // Create test file if it doesn't exist
+    if (!fs.existsSync(testFilePath)) {
+      fs.writeFileSync(testFilePath, 'fake image content');
+    }
+  });
+
+  afterAll(() =&gt; {
+    // Clean up test file
+    if (fs.existsSync(testFilePath)) {
+      fs.unlinkSync(testFilePath);
+    }
+  });
+
+  it('uploads file successfully', async () =&gt; {
+    const response = await request(app)
+      .post('/api/upload')
+      .attach('file', testFilePath)
+      .expect(200);
+
+    expect(response.body.message).toBe('File uploaded successfully');
+    expect(response.body.file).toHaveProperty('filename');
+    expect(response.body.file).toHaveProperty('path');
+  });
+
+  it('rejects invalid file types', async () =&gt; {
+    const invalidFile = path.join(__dirname, '../fixtures/invalid-file.txt');
+    fs.writeFileSync(invalidFile, 'text content');
+
+    try {
+      await request(app)
+        .post('/api/upload')
+        .attach('file', invalidFile)
+        .expect(400);
+    } finally {
+      fs.unlinkSync(invalidFile);
+    }
+  });
+});
+
+---
+
+## **Component Integration Testing**
+
+### **Testing Multi-Component Workflows**
+
+```javascript
+// __tests__/integration/shoppingCart.test.js
+import React from 'react';
+import { render, fireEvent, waitFor } from '@testing-library/react-native';
+import { Provider } from 'react-redux';
+import ShoppingCart from '../../src/components/ShoppingCart';
+import ProductList from '../../src/components/ProductList';
+import store from '../../src/store';
+
+// Mock API service
+jest.mock('../../src/services/ProductService', () =&gt; ({
+  getProducts: jest.fn(),
+  addToCart: jest.fn(),
+  getCart: jest.fn(),
+}));
+
+import ProductService from '../../src/services/ProductService';
+
+describe('Shopping Cart Integration', () =&gt; {
+  const mockProducts = [
+    { id: 1, name: 'Laptop', price: 999.99, stock: 10 },
+    { id: 2, name: 'Mouse', price: 29.99, stock: 50 },
+  ];
+
+  const mockCart = {
+    items: [],
+    total: 0,
+  };
+
+  beforeEach(() =&gt; {
+    jest.clearAllMocks();
+    ProductService.getProducts.mockResolvedValue(mockProducts);
+    ProductService.getCart.mockResolvedValue(mockCart);
+    ProductService.addToCart.mockResolvedValue({ success: true });
+  });
+
+  const renderWithStore = (component) =&gt; {
+    return render(
+      &lt;Provider store={store}&gt;
+        {component}
+      &lt;/Provider&gt;
+    );
+  };
+
+  it('adds product to cart and updates total', async () =&gt; {
+    const { getByText, getByTestId } = renderWithStore(
+      &lt;&gt;
+        &lt;ProductList /&gt;
+        &lt;ShoppingCart /&gt;
+      &lt;/&gt;
+    );
+
+    // Wait for products to load
+    await waitFor(() =&gt; {
+      expect(getByText('Laptop')).toBeTruthy();
+    });
+
+    // Add laptop to cart
+    fireEvent.press(getByTestId('add-to-cart-1'));
+
+    // Verify cart update
+    await waitFor(() =&gt; {
+      expect(ProductService.addToCart).toHaveBeenCalledWith(1, 1);
+    });
+  });
+
+  it('shows out of stock message for unavailable products', async () =&gt; {
+    // Mock out of stock product
+    ProductService.getProducts.mockResolvedValue([
+      { ...mockProducts[0], stock: 0 }
+    ]);
+
+    const { getByText, queryByTestId } = renderWithStore(
+      &lt;ProductList /&gt;
+    );
+
+    await waitFor(() =&gt; {
+      expect(getByText('Out of Stock')).toBeTruthy();
+      expect(queryByTestId('add-to-cart-1')).toBeFalsy();
+    });
+  });
+});
+
+---
+
+## **Database Integration Testing**
+
+### **Testing with Test Database**
+
+```javascript
+// __tests__/integration/sequelize.test.js
+const { Sequelize, DataTypes } = require('sequelize');
+const { setupTestDatabase, teardownTestDatabase } = require('../utils/database');
+
+describe('Database Integration', () =&gt; {
+  let sequelize;
+  let User;
+  let Post;
+
+  beforeAll(async () =&gt; {
+    sequelize = await setupTestDatabase();
+    
+    // Define models
+    User = sequelize.define('User', {
+      name: DataTypes.STRING,
+      email: DataTypes.STRING,
+    });
+
+    Post = sequelize.define('Post', {
+      title: DataTypes.STRING,
+      content: DataTypes.TEXT,
+      userId: DataTypes.INTEGER,
+    });
+
+    // Set up associations
+    User.hasMany(Post);
+    Post.belongsTo(User);
+
+    await sequelize.sync({ force: true });
+  });
+
+  afterAll(async () =&gt; {
+    await teardownTestDatabase(sequelize);
+  });
+
+  beforeEach(async () =&gt; {
+    await User.destroy({ where: {} });
+    await Post.destroy({ where: {} });
+  });
+
+  it('creates user with posts', async () =&gt; {
+    const user = await User.create({
+      name: 'John Doe',
+      email: 'john@example.com',
+    });
+
+    await Post.create({
+      title: 'First Post',
+      content: 'This is my first post',
+      userId: user.id,
+    });
+
+    await Post.create({
+      title: 'Second Post',
+      content: 'This is my second post',
+      userId: user.id,
+    });
+
+    // Test the association
+    const userWithPosts = await User.findByPk(user.id, {
+      include: [Post],
+    });
+
+    expect(userWithPosts.Posts).toHaveLength(2);
+    expect(userWithPosts.Posts[0].title).toBe('First Post');
+    expect(userWithPosts.Posts[1].title).toBe('Second Post');
+  });
+
+  it('enforces foreign key constraints', async () =&gt; {
+    await expect(
+      Post.create({
+        title: 'Orphan Post',
+        content: 'This post has no user',
+        userId: 999, // Non-existent user ID
+      })
+    ).rejects.toThrow();
+  });
+});
+
+### **Testing Database Migrations**
+
+```javascript
+// __tests__/integration/migrations.test.js
+const { sequelize } = require('../../src/database');
+const migrationRunner = require('../../src/migrations/runner');
+
+describe('Database Migrations', () =&gt; {
+  beforeAll(async () =&gt; {
+    // Use test database
+    process.env.NODE_ENV = 'test';
+    await sequelize.authenticate();
+  });
+
+  afterAll(async () =&gt; {
+    await sequelize.close();
+  });
+
+  it('runs all migrations successfully', async () =&gt; {
+    const migrations = await migrationRunner.runPending();
+    
+    expect(migrations.length).toBeGreaterThan(0);
+    expect(migrations.every(m =&gt; m.status === 'executed')).toBe(true);
+  });
+
+  it('creates expected tables after migration', async () =&gt; {
+    await migrationRunner.runPending();
+    
+    const [results] = await sequelize.query(
+      "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'"
+    );
+    
+    const tableNames = results.map(r =&gt; r.table_name);
+    expect(tableNames).toContain('users');
+    expect(tableNames).toContain('posts');
+    expect(tableNames).toContain('comments');
+  });
+});
+
+---
+
+## **Advanced Integration Patterns**
+
+### **Contract Testing**
+
+```javascript
+// __tests__/integration/contract.test.js
+import { Pact } from '@pact-foundation/pact';
+import { API } from '../../src/api';
+
+describe('API Contract Testing', () =&gt; {
+  const provider = new Pact({
+    consumer: 'mobile-app',
+    provider: 'user-service',
+    port: 1234,
+  });
+
+  beforeAll(async () =&gt; {
+    await provider.setup();
+  });
+
+  afterAll(async () =&gt; {
+    await provider.finalize();
+  });
+
+  describe('Get User', () =&gt; {
+    beforeEach(async () =&gt; {
+      await provider.addInteraction({
+        state: 'user exists',
+        uponReceiving: 'a request for user 123',
+        withRequest: {
+          method: 'GET',
+          path: '/api/users/123',
+          headers: {
+            Authorization: Pact.like('Bearer token'),
+          },
+        },
+        willRespondWith: {
+          status: 200,
+          headers: {
+            'Content-Type': 'application/json; charset=utf-8',
+          },
+          body: {
+            id: 123,
+            name: 'John Doe',
+            email: 'john@example.com',
+          },
+        },
+      });
+    });
+
+    it('returns user data', async () =&gt; {
+      const api = new API(provider.mockService.baseUrl);
+      const user = await api.getUser(123, 'Bearer token');
+
+      expect(user.id).toBe(123);
+      expect(user.name).toBe('John Doe');
+      expect(user.email).toBe('john@example.com');
+    });
+  });
+});
+
+### **Performance Integration Testing**
+
+```javascript
+// __tests__/integration/performance.test.js
+import request from 'supertest';
+import app from '../../src/app';
+
+describe('Performance Integration Tests', () =&gt; {
+  it('responds within acceptable time limits', async () =&gt; {
+    const startTime = Date.now();
+    
+    await request(app)
+      .get('/api/users')
+      .expect(200);
+    
+    const responseTime = Date.now() - startTime;
+    expect(responseTime).toBeLessThan(1000); // 1 second max
+  });
+
+  it('handles concurrent requests', async () =&gt; {
+    const concurrentRequests = 10;
+    const promises = [];
+
+    for (let i = 0; i &lt; concurrentRequests; i++) {
+      promises.push(
+        request(app)
+          .get('/api/users')
+          .expect(200)
+      );
+    }
+
+    const results = await Promise.all(promises);
+    
+    // All requests should succeed
+    results.forEach(response =&gt; {
+      expect(response.status).toBe(200);
+    });
+  });
+});
+
+---
+
+## **Real Use Case**
+
+### **Complete E-commerce Integration Test**
+
+```javascript
+// __tests__/integration/ecommerce.test.js
+import React from 'react';
+import { render, fireEvent, waitFor } from '@testing-library/react-native';
+import { Provider } from 'react-redux';
+import { NavigationContainer } from '@react-navigation/native';
+import EcommerceApp from '../../src/EcommerceApp';
+import { setupTestDatabase } from '../utils/database';
+
+describe('E-commerce Integration Tests', () =&gt; {
+  let database;
+
+  beforeAll(async () =&gt; {
+    database = await setupTestDatabase();
+  });
+
+  afterAll(async () =&gt; {
+    await database.close();
+  });
+
+  const renderApp = () =&gt; {
+    return render(
+      &lt;Provider store={store}&gt;
+        &lt;NavigationContainer&gt;
+          &lt;EcommerceApp /&gt;
+        &lt;/NavigationContainer&gt;
+      &lt;/Provider&gt;
+    );
+  };
+
+  it('completes full purchase flow', async () =&gt; {
+    const { getByText, getByPlaceholderText, getByTestId } = renderApp();
+
+    // 1. Browse products
+    await waitFor(() =&gt; {
+      expect(getByText('Featured Products')).toBeTruthy();
+    });
+
+    // 2. Search for product
+    fireEvent.changeText(getByPlaceholderText('Search products'), 'laptop');
+    fireEvent.press(getByTestId('search-button'));
+
+    // 3. Select product
+    await waitFor(() =&gt; {
+      expect(getByText('Premium Laptop')).toBeTruthy();
+    });
+    fireEvent.press(getByText('Premium Laptop'));
+
+    // 4. Add to cart
+    fireEvent.press(getByTestId('add-to-cart'));
+
+    // 5. View cart
+    fireEvent.press(getByTestId('view-cart'));
+
+    // 6. Proceed to checkout
+    fireEvent.press(getByText('Proceed to Checkout'));
+
+    // 7. Fill shipping information
+    fireEvent.changeText(getByPlaceholderText('Full Name'), 'John Doe');
+    fireEvent.changeText(getByPlaceholderText('Address'), '123 Main St');
+    fireEvent.changeText(getByPlaceholderText('City'), 'New York');
+
+    // 8. Select payment method
+    fireEvent.press(getByText('Credit Card'));
+
+    // 9. Place order
+    fireEvent.press(getByText('Place Order'));
+
+    // 10. Verify order confirmation
+    await waitFor(() =&gt; {
+      expect(getByText('Order Placed Successfully!')).toBeTruthy();
+      expect(getByText('Order #')).toBeTruthy();
+    });
+  });
+
+  it('handles out of stock scenario', async () =&gt; {
+    // Mock product with zero stock
+    jest.spyOn(ProductService, 'getProductById').mockResolvedValue({
+      id: 1,
+      name: 'Out of Stock Product',
+      price: 99.99,
+      stock: 0,
+    });
+
+    const { getByText, getByTestId, queryByText } = renderApp();
+
+    // Navigate to product
+    fireEvent.press(getByText('Out of Stock Product'));
+
+    // Verify out of stock state
+    expect(getByText('Out of Stock')).toBeTruthy();
+    expect(queryByText('Add to Cart')).toBeFalsy();
+    expect(getByTestId('notify-when-available')).toBeTruthy();
+  });
+});
+
+---
+
+## **Pro Tip**
+
+**Use contract testing to ensure your frontend and backend APIs remain compatible as they evolve independently. This catches integration issues early in development rather than in production.**
+
+```javascript
+// Contract test example
+describe('API Contract', () =&gt; {
+  it('maintains backward compatibility', async () =&gt; {
+    const response = await api.getUsers();
+    
+    // Ensure required fields exist
+    expect(response.users[0]).toHaveProperty('id');
+    expect(response.users[0]).toHaveProperty('name');
+    expect(response.users[0]).toHaveProperty('email');
+    
+    // Ensure no breaking changes
+    expect(response.users[0]).not.toHaveProperty('deprecated_field');
+  });
+});
+
+---
+
+## **Exercise / Mini Task**
+
+**Task**: Create comprehensive integration tests for a social media application with the following features:
+
+1. **User Authentication**: Login, registration, token management
+2. **Post Management**: Create, read, update, delete posts
+3. **Social Features**: Like, comment, follow users
+4. **Real-time Updates**: WebSocket integration for live notifications
+5. **File Upload**: Profile pictures and post images
+
+**Requirements**:
+- Test complete user flows from registration to posting
+- Verify database consistency across operations
+- Test API integration with proper error handling
+- Include WebSocket integration testing
+- Test file upload and storage
+- Use test database and mock external services
+
+**Bonus**:
+- Add contract testing for API compatibility
+- Implement performance testing for critical paths
+- Create visual regression tests for UI flows
+- Add load testing for concurrent users
+- Test data migration and backup/restore
+
+---
+
+**Integration testing ensures your application components work together seamlessly. Master these techniques to build robust, reliable systems that maintain quality across complex interactions.**🎭
+</code></pre>
+
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "testing/integration.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

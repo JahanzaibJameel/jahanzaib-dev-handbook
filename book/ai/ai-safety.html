@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>AI Safety &amp; Ethics - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="AI Safety &amp; Ethics - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, AI Safety &amp; Ethics - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>AI Safety &amp; Ethics - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="ai/ai-safety.md">
-    <meta property="og:title" content="AI Safety &amp; Ethics - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="AI Safety &amp; Ethics - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="ai/ai-safety.md">
-    <meta property="twitter:title" content="AI Safety &amp; Ethics - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="AI Safety &amp; Ethics - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="AI Safety &amp; Ethics - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="ai/ai-safety.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "AI Safety &amp; Ethics - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,90 +525,41 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    AI Safety &amp; Ethics - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
-
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>AI Safety &amp; Ethics - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;ai-safety--ethics&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#ai-safety--ethics&quot;&gt;AI Safety &amp;amp; Ethics&lt;/a&gt;&lt;/h1&gt;
-&lt;h2 id&#x3D;&quot;what-is-ai-safety--ethics&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#what-is-ai-safety--ethics&quot;&gt;What is AI Safety &amp;amp; Ethics?&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;AI Safety &amp;amp; Ethics encompasses the principles, practices, and guidelines for developing and deploying artificial intelligence systems responsibly. It focuses on ensuring AI systems are safe, fair, transparent, and beneficial to humanity.&lt;/p&gt;
-&lt;h2 id&#x3D;&quot;example&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#example&quot;&gt;Example&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;content-moderation-system&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#content-moderation-system&quot;&gt;Content Moderation System&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// utils/AISafetyFilter.js
+        <div id="content">
+            <main>
+                <h1 id="ai-safety--ethics"><a class="header" href="#ai-safety--ethics">AI Safety &amp; Ethics</a></h1>
+<h2 id="what-is-ai-safety--ethics"><a class="header" href="#what-is-ai-safety--ethics">What is AI Safety &amp; Ethics?</a></h2>
+<p>AI Safety &amp; Ethics encompasses the principles, practices, and guidelines for developing and deploying artificial intelligence systems responsibly. It focuses on ensuring AI systems are safe, fair, transparent, and beneficial to humanity.</p>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<h3 id="content-moderation-system"><a class="header" href="#content-moderation-system">Content Moderation System</a></h3>
+<pre><code class="language-javascript">// utils/AISafetyFilter.js
 class AISafetyFilter {
   constructor() {
-    this.prohibitedContent &#x3D; {
+    this.prohibitedContent = {
       hateSpeech: [
-        &#x27;racial slurs&#x27;, &#x27;discriminatory language&#x27;, &#x27;hate symbols&#x27;,
-        &#x27;threats against protected groups&#x27;
+        'racial slurs', 'discriminatory language', 'hate symbols',
+        'threats against protected groups'
       ],
       violence: [
-        &#x27;graphic violence&#x27;, &#x27;self-harm instructions&#x27;, &#x27;terrorism&#x27;,
-        &#x27;weapon manufacturing instructions&#x27;
+        'graphic violence', 'self-harm instructions', 'terrorism',
+        'weapon manufacturing instructions'
       ],
       illegalActivities: [
-        &#x27;drug manufacturing&#x27;, &#x27;hacking tutorials&#x27;, &#x27;fraud schemes&#x27;,
-        &#x27;copyright infringement instructions&#x27;
+        'drug manufacturing', 'hacking tutorials', 'fraud schemes',
+        'copyright infringement instructions'
       ],
       personalInfo: [
-        &#x27;ssn&#x27;, &#x27;credit card numbers&#x27;, &#x27;private addresses&#x27;,
-        &#x27;medical records&#x27;, &#x27;password sharing&#x27;
+        'ssn', 'credit card numbers', 'private addresses',
+        'medical records', 'password sharing'
       ]
     };
   }
 
   async filterContent(input, output) {
-    const safetyChecks &#x3D; [
+    const safetyChecks = [
       this.checkHateSpeech(input, output),
       this.checkViolence(input, output),
       this.checkIllegalActivities(input, output),
@@ -831,100 +567,100 @@ class AISafetyFilter {
       this.checkBias(output)
     ];
 
-    const results &#x3D; await Promise.all(safetyChecks);
-    const violations &#x3D; results.filter(result &#x3D;&amp;gt; result.hasViolation);
+    const results = await Promise.all(safetyChecks);
+    const violations = results.filter(result =&gt; result.hasViolation);
 
     return {
-      isSafe: violations.length &#x3D;&#x3D;&#x3D; 0,
+      isSafe: violations.length === 0,
       violations: violations,
-      filteredContent: violations.length &amp;gt; 0 ? 
+      filteredContent: violations.length &gt; 0 ? 
         this.sanitizeOutput(output, violations) : output
     };
   }
 
   checkHateSpeech(input, output) {
-    const hateSpeechPatterns &#x3D; this.prohibitedContent.hateSpeech;
-    const combinedText &#x3D; (input + &#x27; &#x27; + output).toLowerCase();
+    const hateSpeechPatterns = this.prohibitedContent.hateSpeech;
+    const combinedText = (input + ' ' + output).toLowerCase();
     
-    const detectedPatterns &#x3D; hateSpeechPatterns.filter(pattern &#x3D;&amp;gt; 
+    const detectedPatterns = hateSpeechPatterns.filter(pattern =&gt; 
       combinedText.includes(pattern.toLowerCase())
     );
 
     return {
-      type: &#x27;hate_speech&#x27;,
-      hasViolation: detectedPatterns.length &amp;gt; 0,
+      type: 'hate_speech',
+      hasViolation: detectedPatterns.length &gt; 0,
       patterns: detectedPatterns,
-      severity: detectedPatterns.length &amp;gt; 2 ? &#x27;high&#x27; : &#x27;medium&#x27;
+      severity: detectedPatterns.length &gt; 2 ? 'high' : 'medium'
     };
   }
 
   checkBias(output) {
     // Detect gender, racial, or other biases
-    const biasIndicators &#x3D; [
+    const biasIndicators = [
       /women are|men are|girls are|boys are/gi,
       /all \w+ people are/gi,
       /typical \w+ behavior/gi
     ];
 
-    const detectedBias &#x3D; biasIndicators.map(pattern &#x3D;&amp;gt; {
-      const matches &#x3D; output.match(pattern);
+    const detectedBias = biasIndicators.map(pattern =&gt; {
+      const matches = output.match(pattern);
       return matches ? matches.length : 0;
-    }).reduce((sum, count) &#x3D;&amp;gt; sum + count, 0);
+    }).reduce((sum, count) =&gt; sum + count, 0);
 
     return {
-      type: &#x27;bias&#x27;,
-      hasViolation: detectedBias &amp;gt; 0,
+      type: 'bias',
+      hasViolation: detectedBias &gt; 0,
       count: detectedBias,
-      severity: detectedBias &amp;gt; 3 ? &#x27;high&#x27; : detectedBias &amp;gt; 0 ? &#x27;medium&#x27; : &#x27;low&#x27;
+      severity: detectedBias &gt; 3 ? 'high' : detectedBias &gt; 0 ? 'medium' : 'low'
     };
   }
 
   sanitizeOutput(output, violations) {
-    let sanitized &#x3D; output;
+    let sanitized = output;
     
-    violations.forEach(violation &#x3D;&amp;gt; {
-      if (violation.type &#x3D;&#x3D;&#x3D; &#x27;hate_speech&#x27;) {
-        sanitized &#x3D; sanitized.replace(/hate speech detected/gi, &#x27;[CONTENT REMOVED]&#x27;);
+    violations.forEach(violation =&gt; {
+      if (violation.type === 'hate_speech') {
+        sanitized = sanitized.replace(/hate speech detected/gi, '[CONTENT REMOVED]');
       }
-      if (violation.type &#x3D;&#x3D;&#x3D; &#x27;personal_info&#x27;) {
-        sanitized &#x3D; sanitized.replace(/\b\d{3}-\d{2}-\d{4}\b/g, &#x27;[SSN REMOVED]&#x27;);
-        sanitized &#x3D; sanitized.replace(/\b\d{4}[-\s]?\d{4}[-\s]?\d{4}[-\s]?\d{4}\b/g, &#x27;[CARD REMOVED]&#x27;);
+      if (violation.type === 'personal_info') {
+        sanitized = sanitized.replace(/\b\d{3}-\d{2}-\d{4}\b/g, '[SSN REMOVED]');
+        sanitized = sanitized.replace(/\b\d{4}[-\s]?\d{4}[-\s]?\d{4}[-\s]?\d{4}\b/g, '[CARD REMOVED]');
       }
     });
 
-    return sanitized + &#x27;\n\n[Some content has been filtered for safety]&#x27;;
+    return sanitized + '\n\n[Some content has been filtered for safety]';
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;ethical-ai-implementation&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#ethical-ai-implementation&quot;&gt;Ethical AI Implementation&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// services/EthicalAIService.js
+</code></pre>
+<h3 id="ethical-ai-implementation"><a class="header" href="#ethical-ai-implementation">Ethical AI Implementation</a></h3>
+<pre><code class="language-javascript">// services/EthicalAIService.js
 class EthicalAIService {
   constructor() {
-    this.safetyFilter &#x3D; new AISafetyFilter();
-    this.usageLimits &#x3D; {
+    this.safetyFilter = new AISafetyFilter();
+    this.usageLimits = {
       requestsPerMinute: 60,
       requestsPerHour: 1000,
       requestsPerDay: 10000
     };
-    this.userUsage &#x3D; new Map();
+    this.userUsage = new Map();
   }
 
-  async generateResponse(prompt, options &#x3D; {}) {
-    const userId &#x3D; options.userId || &#x27;anonymous&#x27;;
+  async generateResponse(prompt, options = {}) {
+    const userId = options.userId || 'anonymous';
     
     // Check usage limits
     if (!this.checkUsageLimits(userId)) {
-      throw new Error(&#x27;Usage limit exceeded. Please try again later.&#x27;);
+      throw new Error('Usage limit exceeded. Please try again later.');
     }
 
     // Add safety guidelines to prompt
-    const safePrompt &#x3D; this.addSafetyGuidelines(prompt);
+    const safePrompt = this.addSafetyGuidelines(prompt);
     
     try {
-      const response &#x3D; await this.callAI(safePrompt, options);
+      const response = await this.callAI(safePrompt, options);
       
       // Filter the response for safety
-      const safetyCheck &#x3D; await this.safetyFilter.filterContent(prompt, response);
+      const safetyCheck = await this.safetyFilter.filterContent(prompt, response);
       
       if (!safetyCheck.isSafe) {
         // Log violation for monitoring
@@ -936,13 +672,13 @@ class EthicalAIService {
       
       return response;
     } catch (error) {
-      console.error(&#x27;AI Service Error:&#x27;, error);
-      throw new Error(&#x27;Unable to generate response at this time.&#x27;);
+      console.error('AI Service Error:', error);
+      throw new Error('Unable to generate response at this time.');
     }
   }
 
   addSafetyGuidelines(prompt) {
-    return &#x60;
+    return `
 Please respond to the following request while adhering to these ethical guidelines:
 
 1. Be helpful and harmless
@@ -955,33 +691,33 @@ Please respond to the following request while adhering to these ethical guidelin
 User Request: ${prompt}
 
 Remember: Your response should be safe, ethical, and beneficial.
-&#x60;;
+`;
   }
 
   checkUsageLimits(userId) {
-    const now &#x3D; Date.now();
-    const usage &#x3D; this.userUsage.get(userId) || {
+    const now = Date.now();
+    const usage = this.userUsage.get(userId) || {
       requests: [],
       lastReset: now
     };
 
     // Clean old requests (older than 24 hours)
-    usage.requests &#x3D; usage.requests.filter(timestamp &#x3D;&amp;gt; 
-      now - timestamp &amp;lt; 24 * 60 * 60 * 1000
+    usage.requests = usage.requests.filter(timestamp =&gt; 
+      now - timestamp &lt; 24 * 60 * 60 * 1000
     );
 
     // Check limits
-    const minuteAgo &#x3D; now - 60 * 1000;
-    const hourAgo &#x3D; now - 60 * 60 * 1000;
-    const dayAgo &#x3D; now - 24 * 60 * 60 * 1000;
+    const minuteAgo = now - 60 * 1000;
+    const hourAgo = now - 60 * 60 * 1000;
+    const dayAgo = now - 24 * 60 * 60 * 1000;
 
-    const requestsPerMinute &#x3D; usage.requests.filter(t &#x3D;&amp;gt; t &amp;gt; minuteAgo).length;
-    const requestsPerHour &#x3D; usage.requests.filter(t &#x3D;&amp;gt; t &amp;gt; hourAgo).length;
-    const requestsPerDay &#x3D; usage.requests.filter(t &#x3D;&amp;gt; t &amp;gt; dayAgo).length;
+    const requestsPerMinute = usage.requests.filter(t =&gt; t &gt; minuteAgo).length;
+    const requestsPerHour = usage.requests.filter(t =&gt; t &gt; hourAgo).length;
+    const requestsPerDay = usage.requests.filter(t =&gt; t &gt; dayAgo).length;
 
-    if (requestsPerMinute &amp;gt;&#x3D; this.usageLimits.requestsPerMinute ||
-        requestsPerHour &amp;gt;&#x3D; this.usageLimits.requestsPerHour ||
-        requestsPerDay &amp;gt;&#x3D; this.usageLimits.requestsPerDay) {
+    if (requestsPerMinute &gt;= this.usageLimits.requestsPerMinute ||
+        requestsPerHour &gt;= this.usageLimits.requestsPerHour ||
+        requestsPerDay &gt;= this.usageLimits.requestsPerDay) {
       return false;
     }
 
@@ -993,132 +729,132 @@ Remember: Your response should be safe, ethical, and beneficial.
   }
 
   logSafetyViolation(userId, violations) {
-    const violationLog &#x3D; {
+    const violationLog = {
       timestamp: new Date().toISOString(),
       userId: userId,
       violations: violations,
-      severity: violations.some(v &#x3D;&amp;gt; v.severity &#x3D;&#x3D;&#x3D; &#x27;high&#x27;) ? &#x27;high&#x27; : &#x27;medium&#x27;
+      severity: violations.some(v =&gt; v.severity === 'high') ? 'high' : 'medium'
     };
 
     // In production, send to monitoring service
-    console.warn(&#x27;Safety violation detected:&#x27;, violationLog);
+    console.warn('Safety violation detected:', violationLog);
     
     // Could integrate with services like Sentry, DataDog, etc.
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;real-use-case&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#real-use-case&quot;&gt;Real Use Case&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;content-moderation-at-scale&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#content-moderation-at-scale&quot;&gt;Content Moderation at Scale&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Facebook&lt;/strong&gt; and &lt;strong&gt;Twitter&lt;/strong&gt; use AI safety systems to moderate billions of posts:&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// services/ContentModerator.js
+</code></pre>
+<h2 id="real-use-case"><a class="header" href="#real-use-case">Real Use Case</a></h2>
+<h3 id="content-moderation-at-scale"><a class="header" href="#content-moderation-at-scale">Content Moderation at Scale</a></h3>
+<p><strong>Facebook</strong> and <strong>Twitter</strong> use AI safety systems to moderate billions of posts:</p>
+<pre><code class="language-javascript">// services/ContentModerator.js
 class ContentModerator {
   constructor() {
-    this.aiSafety &#x3D; new AISafetyFilter();
-    this.humanReviewQueue &#x3D; [];
-    this.automatedActions &#x3D; {
-      low: &#x27;flag_for_review&#x27;,
-      medium: &#x27;remove_content&#x27;,
-      high: &#x27;suspend_user&#x27;
+    this.aiSafety = new AISafetyFilter();
+    this.humanReviewQueue = [];
+    this.automatedActions = {
+      low: 'flag_for_review',
+      medium: 'remove_content',
+      high: 'suspend_user'
     };
   }
 
   async moderateContent(content, userContext) {
-    const moderationResult &#x3D; await this.analyzeContent(content, userContext);
+    const moderationResult = await this.analyzeContent(content, userContext);
     
     switch (moderationResult.action) {
-      case &#x27;approve&#x27;:
-        return { status: &#x27;approved&#x27;, content };
+      case 'approve':
+        return { status: 'approved', content };
       
-      case &#x27;flag_for_review&#x27;:
+      case 'flag_for_review':
         await this.queueForHumanReview(content, moderationResult);
-        return { status: &#x27;pending_review&#x27;, content };
+        return { status: 'pending_review', content };
       
-      case &#x27;remove_content&#x27;:
+      case 'remove_content':
         await this.removeContent(content, moderationResult);
-        return { status: &#x27;removed&#x27;, reason: moderationResult.reason };
+        return { status: 'removed', reason: moderationResult.reason };
       
-      case &#x27;suspend_user&#x27;:
+      case 'suspend_user':
         await this.suspendUser(userContext.userId, moderationResult);
-        return { status: &#x27;user_suspended&#x27;, reason: moderationResult.reason };
+        return { status: 'user_suspended', reason: moderationResult.reason };
       
       default:
-        return { status: &#x27;approved&#x27;, content };
+        return { status: 'approved', content };
     }
   }
 
   async analyzeContent(content, userContext) {
-    const safetyCheck &#x3D; await this.aiSafety.filterContent(&#x27;&#x27;, content);
+    const safetyCheck = await this.aiSafety.filterContent('', content);
     
     if (!safetyCheck.isSafe) {
-      const highSeverityViolations &#x3D; safetyCheck.violations.filter(v &#x3D;&amp;gt; v.severity &#x3D;&#x3D;&#x3D; &#x27;high&#x27;);
-      const mediumSeverityViolations &#x3D; safetyCheck.violations.filter(v &#x3D;&amp;gt; v.severity &#x3D;&#x3D;&#x3D; &#x27;medium&#x27;);
+      const highSeverityViolations = safetyCheck.violations.filter(v =&gt; v.severity === 'high');
+      const mediumSeverityViolations = safetyCheck.violations.filter(v =&gt; v.severity === 'medium');
       
-      if (highSeverityViolations.length &amp;gt; 0) {
+      if (highSeverityViolations.length &gt; 0) {
         return {
           action: this.automatedActions.high,
-          reason: &#x27;High severity safety violations detected&#x27;,
+          reason: 'High severity safety violations detected',
           violations: highSeverityViolations
         };
-      } else if (mediumSeverityViolations.length &amp;gt; 2) {
+      } else if (mediumSeverityViolations.length &gt; 2) {
         return {
           action: this.automatedActions.medium,
-          reason: &#x27;Multiple medium severity violations&#x27;,
+          reason: 'Multiple medium severity violations',
           violations: mediumSeverityViolations
         };
       } else {
         return {
           action: this.automatedActions.low,
-          reason: &#x27;Content flagged for human review&#x27;,
+          reason: 'Content flagged for human review',
           violations: safetyCheck.violations
         };
       }
     }
 
     // Check for context-specific issues
-    const contextCheck &#x3D; this.analyzeUserContext(userContext);
+    const contextCheck = this.analyzeUserContext(userContext);
     if (contextCheck.needsReview) {
       return {
-        action: &#x27;flag_for_review&#x27;,
+        action: 'flag_for_review',
         reason: contextCheck.reason
       };
     }
 
-    return { action: &#x27;approve&#x27; };
+    return { action: 'approve' };
   }
 
   analyzeUserContext(userContext) {
-    // Check user&#x27;s history, reputation, etc.
-    if (userContext.violationCount &amp;gt; 5) {
-      return { needsReview: true, reason: &#x27;User has history of violations&#x27; };
+    // Check user's history, reputation, etc.
+    if (userContext.violationCount &gt; 5) {
+      return { needsReview: true, reason: 'User has history of violations' };
     }
     
-    if (userContext.accountAge &amp;lt; 7) {
-      return { needsReview: true, reason: &#x27;New account - extra review required&#x27; };
+    if (userContext.accountAge &lt; 7) {
+      return { needsReview: true, reason: 'New account - extra review required' };
     }
 
     return { needsReview: false };
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;pro-tip&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#pro-tip&quot;&gt;Pro Tip&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Implement Transparency and Explainability&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// utils/AITransparency.js
+</code></pre>
+<h2 id="pro-tip"><a class="header" href="#pro-tip">Pro Tip</a></h2>
+<p><strong>Implement Transparency and Explainability</strong></p>
+<pre><code class="language-javascript">// utils/AITransparency.js
 class AITransparency {
   constructor() {
-    this.modelInfo &#x3D; {
-      &#x27;gpt-3.5-turbo&#x27;: {
-        name: &#x27;GPT-3.5 Turbo&#x27;,
-        version: &#x27;0613&#x27;,
-        trainingData: &#x27;Up to September 2021&#x27;,
-        limitations: &#x27;May not have information about recent events&#x27;,
-        capabilities: [&#x27;text generation&#x27;, &#x27;analysis&#x27;, &#x27;translation&#x27;]
+    this.modelInfo = {
+      'gpt-3.5-turbo': {
+        name: 'GPT-3.5 Turbo',
+        version: '0613',
+        trainingData: 'Up to September 2021',
+        limitations: 'May not have information about recent events',
+        capabilities: ['text generation', 'analysis', 'translation']
       },
-      &#x27;gpt-4&#x27;: {
-        name: &#x27;GPT-4&#x27;,
-        version: &#x27;0613&#x27;,
-        trainingData: &#x27;Up to September 2021&#x27;,
-        limitations: &#x27;May not have information about recent events&#x27;,
-        capabilities: [&#x27;advanced reasoning&#x27;, &#x27;code generation&#x27;, &#x27;analysis&#x27;]
+      'gpt-4': {
+        name: 'GPT-4',
+        version: '0613',
+        trainingData: 'Up to September 2021',
+        limitations: 'May not have information about recent events',
+        capabilities: ['advanced reasoning', 'code generation', 'analysis']
       }
     };
   }
@@ -1126,7 +862,7 @@ class AITransparency {
   generateTransparencyReport(request, response, model) {
     return {
       timestamp: new Date().toISOString(),
-      model: this.modelInfo[model] || { name: &#x27;Unknown Model&#x27; },
+      model: this.modelInfo[model] || { name: 'Unknown Model' },
       requestMetadata: {
         inputLength: request.length,
         estimatedTokens: this.estimateTokens(request),
@@ -1143,214 +879,165 @@ class AITransparency {
         personalInfoDetected: false
       },
       limitations: [
-        &#x27;AI responses may contain inaccuracies&#x27;,
-        &#x27;Information may be outdated&#x27;,
-        &#x27;AI does not have personal experiences&#x27;,
-        &#x27;Critical decisions should be verified&#x27;
+        'AI responses may contain inaccuracies',
+        'Information may be outdated',
+        'AI does not have personal experiences',
+        'Critical decisions should be verified'
       ]
     };
   }
 
   addTransparencyFooter(response) {
-    const footer &#x3D; &#x60;
+    const footer = `
 ---
 *This response was generated by an AI system. Please verify important information and use critical judgment.*
 *AI Limitations: May contain errors, outdated information, or biases. Always fact-check critical information.*
-&#x60;;
+`;
     return response + footer;
   }
 
   categorizeRequest(request) {
-    const categories &#x3D; {
-      &#x27;factual&#x27;: [&#x27;what is&#x27;, &#x27;who is&#x27;, &#x27;when did&#x27;, &#x27;where is&#x27;, &#x27;how does&#x27;],
-      &#x27;creative&#x27;: [&#x27;write&#x27;, &#x27;create&#x27;, &#x27;generate&#x27;, &#x27;imagine&#x27;],
-      &#x27;coding&#x27;: [&#x27;code&#x27;, &#x27;program&#x27;, &#x27;debug&#x27;, &#x27;function&#x27;, &#x27;algorithm&#x27;],
-      &#x27;analysis&#x27;: [&#x27;analyze&#x27;, &#x27;compare&#x27;, &#x27;evaluate&#x27;, &#x27;explain&#x27;],
-      &#x27;personal&#x27;: [&#x27;i need&#x27;, &#x27;help me&#x27;, &#x27;my&#x27;, &#x27;i am&#x27;]
+    const categories = {
+      'factual': ['what is', 'who is', 'when did', 'where is', 'how does'],
+      'creative': ['write', 'create', 'generate', 'imagine'],
+      'coding': ['code', 'program', 'debug', 'function', 'algorithm'],
+      'analysis': ['analyze', 'compare', 'evaluate', 'explain'],
+      'personal': ['i need', 'help me', 'my', 'i am']
     };
 
-    const lowerRequest &#x3D; request.toLowerCase();
+    const lowerRequest = request.toLowerCase();
     
     for (const [category, keywords] of Object.entries(categories)) {
-      if (keywords.some(keyword &#x3D;&amp;gt; lowerRequest.includes(keyword))) {
+      if (keywords.some(keyword =&gt; lowerRequest.includes(keyword))) {
         return category;
       }
     }
     
-    return &#x27;general&#x27;;
+    return 'general';
   }
 
   estimateConfidence(response) {
     // Simple confidence estimation based on response characteristics
-    const indicators &#x3D; {
-      high: response.length &amp;gt; 200 &amp;amp;&amp;amp; response.includes(&#x27;specific&#x27;),
-      medium: response.length &amp;gt; 50 &amp;amp;&amp;amp; response.includes(&#x27;generally&#x27;),
-      low: response.length &amp;lt; 50 || response.includes(&#x27;uncertain&#x27;)
+    const indicators = {
+      high: response.length &gt; 200 &amp;&amp; response.includes('specific'),
+      medium: response.length &gt; 50 &amp;&amp; response.includes('generally'),
+      low: response.length &lt; 50 || response.includes('uncertain')
     };
 
     for (const [level, condition] of Object.entries(indicators)) {
       if (condition) return level;
     }
     
-    return &#x27;medium&#x27;;
+    return 'medium';
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;exercise&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#exercise&quot;&gt;Exercise&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Build an Ethical AI Application with Safety Features&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Create a complete AI application with comprehensive safety measures:&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// App.js - Ethical AI Chat Application
-import React, { useState } from &#x27;react&#x27;;
-import { View, Text, Alert } from &#x27;react-native&#x27;;
-import ChatInterface from &#x27;./components/ChatInterface&#x27;;
-import EthicalAIService from &#x27;./services/EthicalAIService&#x27;;
-import AITransparency from &#x27;./utils/AITransparency&#x27;;
+</code></pre>
+<h2 id="exercise"><a class="header" href="#exercise">Exercise</a></h2>
+<p><strong>Build an Ethical AI Application with Safety Features</strong></p>
+<p>Create a complete AI application with comprehensive safety measures:</p>
+<pre><code class="language-javascript">// App.js - Ethical AI Chat Application
+import React, { useState } from 'react';
+import { View, Text, Alert } from 'react-native';
+import ChatInterface from './components/ChatInterface';
+import EthicalAIService from './services/EthicalAIService';
+import AITransparency from './utils/AITransparency';
 
-const EthicalAIApp &#x3D; () &#x3D;&amp;gt; {
-  const [aiService] &#x3D; useState(() &#x3D;&amp;gt; new EthicalAIService());
-  const [transparency] &#x3D; useState(() &#x3D;&amp;gt; new AITransparency());
-  const [showTransparency, setShowTransparency] &#x3D; useState(false);
-  const [lastTransparencyReport, setLastTransparencyReport] &#x3D; useState(null);
+const EthicalAIApp = () =&gt; {
+  const [aiService] = useState(() =&gt; new EthicalAIService());
+  const [transparency] = useState(() =&gt; new AITransparency());
+  const [showTransparency, setShowTransparency] = useState(false);
+  const [lastTransparencyReport, setLastTransparencyReport] = useState(null);
 
-  const handleSendMessage &#x3D; async (message, userId) &#x3D;&amp;gt; {
+  const handleSendMessage = async (message, userId) =&gt; {
     try {
-      const response &#x3D; await aiService.generateResponse(message, { userId });
+      const response = await aiService.generateResponse(message, { userId });
       
       // Generate transparency report
-      const report &#x3D; transparency.generateTransparencyReport(
+      const report = transparency.generateTransparencyReport(
         message, 
         response, 
-        &#x27;gpt-3.5-turbo&#x27;
+        'gpt-3.5-turbo'
       );
       
       setLastTransparencyReport(report);
       
       return transparency.addTransparencyFooter(response);
     } catch (error) {
-      if (error.message.includes(&#x27;Usage limit&#x27;)) {
+      if (error.message.includes('Usage limit')) {
         Alert.alert(
-          &#x27;Usage Limit&#x27;,
-          &#x27;You\&#x27;ve reached the usage limit. Please try again later.&#x27;,
-          [{ text: &#x27;OK&#x27; }]
+          'Usage Limit',
+          'You\'ve reached the usage limit. Please try again later.',
+          [{ text: 'OK' }]
         );
-      } else if (error.message.includes(&#x27;safety&#x27;)) {
+      } else if (error.message.includes('safety')) {
         Alert.alert(
-          &#x27;Content Warning&#x27;,
-          &#x27;Your request was flagged for safety concerns. Please rephrase your request.&#x27;,
-          [{ text: &#x27;OK&#x27; }]
+          'Content Warning',
+          'Your request was flagged for safety concerns. Please rephrase your request.',
+          [{ text: 'OK' }]
         );
       } else {
         Alert.alert(
-          &#x27;Error&#x27;,
-          &#x27;Unable to process your request. Please try again.&#x27;,
-          [{ text: &#x27;OK&#x27; }]
+          'Error',
+          'Unable to process your request. Please try again.',
+          [{ text: 'OK' }]
         );
       }
       throw error;
     }
   };
 
-  const showTransparencyInfo &#x3D; () &#x3D;&amp;gt; {
+  const showTransparencyInfo = () =&gt; {
     if (lastTransparencyReport) {
       Alert.alert(
-        &#x27;AI Transparency Report&#x27;,
-        &#x60;Model: ${lastTransparencyReport.model.name}\n&#x60; +
-        &#x60;Request Type: ${lastTransparencyReport.requestMetadata.requestType}\n&#x60; +
-        &#x60;Confidence: ${lastTransparencyReport.responseMetadata.confidenceLevel}\n&#x60; +
-        &#x60;Safety Checks: ${lastTransparencyReport.safetyChecks.contentFiltered ? &#x27;Content Filtered&#x27; : &#x27;Passed&#x27;}&#x60;,
-        [{ text: &#x27;OK&#x27; }]
+        'AI Transparency Report',
+        `Model: ${lastTransparencyReport.model.name}\n` +
+        `Request Type: ${lastTransparencyReport.requestMetadata.requestType}\n` +
+        `Confidence: ${lastTransparencyReport.responseMetadata.confidenceLevel}\n` +
+        `Safety Checks: ${lastTransparencyReport.safetyChecks.contentFiltered ? 'Content Filtered' : 'Passed'}`,
+        [{ text: 'OK' }]
       );
     }
   };
 
   return (
-    &amp;lt;View style&#x3D;{{ flex: 1 }}&amp;gt;
-      &amp;lt;ChatInterface
-        onSendMessage&#x3D;{handleSendMessage}
-        onTransparencyRequest&#x3D;{showTransparencyInfo}
-      /&amp;gt;
-    &amp;lt;/View&amp;gt;
+    &lt;View style={{ flex: 1 }}&gt;
+      &lt;ChatInterface
+        onSendMessage={handleSendMessage}
+        onTransparencyRequest={showTransparencyInfo}
+      /&gt;
+    &lt;/View&gt;
   );
 };
 
 export default EthicalAIApp;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Your Tasks:&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Implement the complete ethical AI application&lt;/li&gt;
-&lt;li&gt;Add comprehensive content filtering&lt;/li&gt;
-&lt;li&gt;Create user usage tracking and limits&lt;/li&gt;
-&lt;li&gt;Implement transparency reporting&lt;/li&gt;
-&lt;li&gt;Add bias detection and mitigation&lt;/li&gt;
-&lt;li&gt;Create a user consent system&lt;/li&gt;
-&lt;li&gt;Implement audit logging for compliance&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This exercise teaches you:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;AI safety principles and implementation&lt;/li&gt;
-&lt;li&gt;Content moderation techniques&lt;/li&gt;
-&lt;li&gt;Ethical AI development practices&lt;/li&gt;
-&lt;li&gt;User protection and privacy&lt;/li&gt;
-&lt;li&gt;Transparency and explainability&lt;/li&gt;
-&lt;li&gt;Compliance and regulatory considerations&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Next Up&lt;/strong&gt;: Learn about full-stack development with modern web technologies! Full-Stack Development&lt;/p&gt;
+</code></pre>
+<p><strong>Your Tasks:</strong></p>
+<ol>
+<li>Implement the complete ethical AI application</li>
+<li>Add comprehensive content filtering</li>
+<li>Create user usage tracking and limits</li>
+<li>Implement transparency reporting</li>
+<li>Add bias detection and mitigation</li>
+<li>Create a user consent system</li>
+<li>Implement audit logging for compliance</li>
+</ol>
+<p>This exercise teaches you:</p>
+<ul>
+<li>AI safety principles and implementation</li>
+<li>Content moderation techniques</li>
+<li>Ethical AI development practices</li>
+<li>User protection and privacy</li>
+<li>Transparency and explainability</li>
+<li>Compliance and regulatory considerations</li>
+</ul>
+<hr>
+<p><strong>Next Up</strong>: Learn about full-stack development with modern web technologies! Full-Stack Development</p>
 
-                        </div>
-                        
-                    </article>
-                </div>
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "ai/ai-safety.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

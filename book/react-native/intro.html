@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>Introduction to React Native - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="Introduction to React Native - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Introduction to React Native - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>Introduction to React Native - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="react-native/intro.md">
-    <meta property="og:title" content="Introduction to React Native - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Introduction to React Native - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="react-native/intro.md">
-    <meta property="twitter:title" content="Introduction to React Native - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="Introduction to React Native - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="Introduction to React Native - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="react-native/intro.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "Introduction to React Native - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,376 +525,278 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    Introduction to React Native - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
+        <div id="content">
+            <main>
+                <h1 id="introduction-to-react-native"><a class="header" href="#introduction-to-react-native">Introduction to React Native</a></h1>
+<p>React Native is a framework for building native mobile apps using JavaScript and React. It lets you write real, natively rendered mobile applications for iOS and Android - all from a single codebase.</p>
+<h2 id="-what-is-react-native"><a class="header" href="#-what-is-react-native">🎯 What is React Native?</a></h2>
+<p>React Native is:</p>
+<ul>
+<li><strong>Cross-platform</strong>: One codebase for iOS and Android</li>
+<li><strong>Native Performance</strong>: Uses actual native UI components</li>
+<li><strong>JavaScript-based</strong>: Use your web development skills</li>
+<li><strong>React-powered</strong>: Component-based architecture</li>
+<li><strong>Facebook-backed</strong>: Strong community and support</li>
+</ul>
+<h2 id="-why-react-native"><a class="header" href="#-why-react-native">🚀 Why React Native?</a></h2>
+<h3 id="advantages"><a class="header" href="#advantages">Advantages</a></h3>
+<ul>
+<li><strong>Single Codebase</strong>: Write once, deploy everywhere</li>
+<li><strong>Fast Development</strong>: Hot reloading, instant feedback</li>
+<li><strong>Native Feel</strong>: Real native UI components</li>
+<li><strong>Large Community</strong>: Extensive libraries and support</li>
+<li><strong>Cost Effective</strong>: Half the development cost of native apps</li>
+</ul>
+<h3 id="use-cases"><a class="header" href="#use-cases">Use Cases</a></h3>
+<ul>
+<li>Startups and MVPs</li>
+<li>Content-driven apps</li>
+<li>Social applications</li>
+<li>E-commerce mobile apps</li>
+<li>Business productivity apps</li>
+</ul>
+<h2 id="-core-concepts"><a class="header" href="#-core-concepts">🛠️ Core Concepts</a></h2>
+<h3 id="components"><a class="header" href="#components">Components</a></h3>
+<p>React Native uses the same component concepts as React:</p>
+<pre><code class="language-javascript">import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
-
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>Introduction to React Native - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;introduction-to-react-native&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#introduction-to-react-native&quot;&gt;Introduction to React Native&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;React Native is a framework for building native mobile apps using JavaScript and React. It lets you write real, natively rendered mobile applications for iOS and Android - all from a single codebase.&lt;/p&gt;
-&lt;h2 id&#x3D;&quot;-what-is-react-native&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-what-is-react-native&quot;&gt;🎯 What is React Native?&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;React Native is:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Cross-platform&lt;/strong&gt;: One codebase for iOS and Android&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Native Performance&lt;/strong&gt;: Uses actual native UI components&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;JavaScript-based&lt;/strong&gt;: Use your web development skills&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;React-powered&lt;/strong&gt;: Component-based architecture&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Facebook-backed&lt;/strong&gt;: Strong community and support&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id&#x3D;&quot;-why-react-native&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-why-react-native&quot;&gt;🚀 Why React Native?&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;advantages&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#advantages&quot;&gt;Advantages&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Single Codebase&lt;/strong&gt;: Write once, deploy everywhere&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Fast Development&lt;/strong&gt;: Hot reloading, instant feedback&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Native Feel&lt;/strong&gt;: Real native UI components&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Large Community&lt;/strong&gt;: Extensive libraries and support&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cost Effective&lt;/strong&gt;: Half the development cost of native apps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id&#x3D;&quot;use-cases&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#use-cases&quot;&gt;Use Cases&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Startups and MVPs&lt;/li&gt;
-&lt;li&gt;Content-driven apps&lt;/li&gt;
-&lt;li&gt;Social applications&lt;/li&gt;
-&lt;li&gt;E-commerce mobile apps&lt;/li&gt;
-&lt;li&gt;Business productivity apps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id&#x3D;&quot;-core-concepts&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-core-concepts&quot;&gt;🛠️ Core Concepts&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;components&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#components&quot;&gt;Components&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;React Native uses the same component concepts as React:&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;import React from &#x27;react&#x27;;
-import { View, Text, StyleSheet } from &#x27;react-native&#x27;;
-
-const WelcomeScreen &#x3D; () &#x3D;&amp;gt; {
+const WelcomeScreen = () =&gt; {
   return (
-    &amp;lt;View style&#x3D;{styles.container}&amp;gt;
-      &amp;lt;Text style&#x3D;{styles.title}&amp;gt;Welcome to React Native!&amp;lt;/Text&amp;gt;
-    &amp;lt;/View&amp;gt;
+    &lt;View style={styles.container}&gt;
+      &lt;Text style={styles.title}&gt;Welcome to React Native!&lt;/Text&gt;
+    &lt;/View&gt;
   );
 };
 
-const styles &#x3D; StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: &#x27;center&#x27;,
-    alignItems: &#x27;center&#x27;,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   title: {
     fontSize: 24,
-    fontWeight: &#x27;bold&#x27;,
+    fontWeight: 'bold',
   },
 });
 
 export default WelcomeScreen;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;core-components&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#core-components&quot;&gt;Core Components&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;View&lt;/strong&gt;: Container component (like div in web)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Text&lt;/strong&gt;: Text display component&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Image&lt;/strong&gt;: Image display component&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ScrollView&lt;/strong&gt;: Scrollable container&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;TextInput&lt;/strong&gt;: User input field&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;TouchableOpacity&lt;/strong&gt;: Pressable button&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;FlatList&lt;/strong&gt;: Efficient list rendering&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id&#x3D;&quot;-architecture&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-architecture&quot;&gt;🏗️ Architecture&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;react-native-bridge&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#react-native-bridge&quot;&gt;React Native Bridge&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;React Native uses a bridge to communicate between JavaScript and native code:&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-text&quot;&gt;JavaScript Code → React Native Bridge → Native Modules → Native UI
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;thread-model&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#thread-model&quot;&gt;Thread Model&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;UI Thread&lt;/strong&gt;: Renders native UI components&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;JavaScript Thread&lt;/strong&gt;: Runs your JavaScript code&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Shadow Thread&lt;/strong&gt;: Calculates layouts&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id&#x3D;&quot;-setup-options&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-setup-options&quot;&gt;📱 Setup Options&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;1-expo-recommended-for-beginners&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#1-expo-recommended-for-beginners&quot;&gt;1. Expo (Recommended for Beginners)&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Expo is a framework and platform for universal React applications.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Advantages:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;No native code required&lt;/li&gt;
-&lt;li&gt;Easy setup and deployment&lt;/li&gt;
-&lt;li&gt;Built-in services (push notifications, OTA updates)&lt;/li&gt;
-&lt;li&gt;Great for beginners&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Installation:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-bash&quot;&gt;npm install -g expo-cli
+</code></pre>
+<h3 id="core-components"><a class="header" href="#core-components">Core Components</a></h3>
+<ul>
+<li><strong>View</strong>: Container component (like div in web)</li>
+<li><strong>Text</strong>: Text display component</li>
+<li><strong>Image</strong>: Image display component</li>
+<li><strong>ScrollView</strong>: Scrollable container</li>
+<li><strong>TextInput</strong>: User input field</li>
+<li><strong>TouchableOpacity</strong>: Pressable button</li>
+<li><strong>FlatList</strong>: Efficient list rendering</li>
+</ul>
+<h2 id="-architecture"><a class="header" href="#-architecture">🏗️ Architecture</a></h2>
+<h3 id="react-native-bridge"><a class="header" href="#react-native-bridge">React Native Bridge</a></h3>
+<p>React Native uses a bridge to communicate between JavaScript and native code:</p>
+<pre><code class="language-text">JavaScript Code → React Native Bridge → Native Modules → Native UI
+</code></pre>
+<h3 id="thread-model"><a class="header" href="#thread-model">Thread Model</a></h3>
+<ul>
+<li><strong>UI Thread</strong>: Renders native UI components</li>
+<li><strong>JavaScript Thread</strong>: Runs your JavaScript code</li>
+<li><strong>Shadow Thread</strong>: Calculates layouts</li>
+</ul>
+<h2 id="-setup-options"><a class="header" href="#-setup-options">📱 Setup Options</a></h2>
+<h3 id="1-expo-recommended-for-beginners"><a class="header" href="#1-expo-recommended-for-beginners">1. Expo (Recommended for Beginners)</a></h3>
+<p>Expo is a framework and platform for universal React applications.</p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>No native code required</li>
+<li>Easy setup and deployment</li>
+<li>Built-in services (push notifications, OTA updates)</li>
+<li>Great for beginners</li>
+</ul>
+<p><strong>Installation:</strong></p>
+<pre><code class="language-bash">npm install -g expo-cli
 expo init my-app
 cd my-app
 npm start
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;2-react-native-cli&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#2-react-native-cli&quot;&gt;2. React Native CLI&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;For more control and native module access.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Advantages:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Full control over native code&lt;/li&gt;
-&lt;li&gt;Access to any native module&lt;/li&gt;
-&lt;li&gt;Better for complex apps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Installation:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-bash&quot;&gt;npx react-native init MyApp
+</code></pre>
+<h3 id="2-react-native-cli"><a class="header" href="#2-react-native-cli">2. React Native CLI</a></h3>
+<p>For more control and native module access.</p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Full control over native code</li>
+<li>Access to any native module</li>
+<li>Better for complex apps</li>
+</ul>
+<p><strong>Installation:</strong></p>
+<pre><code class="language-bash">npx react-native init MyApp
 cd MyApp
 npx react-native run-android  # or run-ios
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-styling-in-react-native&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-styling-in-react-native&quot;&gt;🎨 Styling in React Native&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;stylesheet-api&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#stylesheet-api&quot;&gt;StyleSheet API&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;React Native uses JavaScript-based styling:&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;import { StyleSheet } from &#x27;react-native&#x27;;
+</code></pre>
+<h2 id="-styling-in-react-native"><a class="header" href="#-styling-in-react-native">🎨 Styling in React Native</a></h2>
+<h3 id="stylesheet-api"><a class="header" href="#stylesheet-api">StyleSheet API</a></h3>
+<p>React Native uses JavaScript-based styling:</p>
+<pre><code class="language-javascript">import { StyleSheet } from 'react-native';
 
-const styles &#x3D; StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: &#x27;#fff&#x27;,
+    backgroundColor: '#fff',
     padding: 20,
   },
   button: {
-    backgroundColor: &#x27;#007AFF&#x27;,
+    backgroundColor: '#007AFF',
     padding: 15,
     borderRadius: 8,
-    alignItems: &#x27;center&#x27;,
+    alignItems: 'center',
   },
   buttonText: {
-    color: &#x27;#fff&#x27;,
+    color: '#fff',
     fontSize: 16,
-    fontWeight: &#x27;bold&#x27;,
+    fontWeight: 'bold',
   },
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;flexbox-layout&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#flexbox-layout&quot;&gt;Flexbox Layout&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;React Native uses Flexbox for layout (default direction is column):&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;const styles &#x3D; StyleSheet.create({
+</code></pre>
+<h3 id="flexbox-layout"><a class="header" href="#flexbox-layout">Flexbox Layout</a></h3>
+<p>React Native uses Flexbox for layout (default direction is column):</p>
+<pre><code class="language-javascript">const styles = StyleSheet.create({
   row: {
-    flexDirection: &#x27;row&#x27;,    // Horizontal layout
-    justifyContent: &#x27;center&#x27;, // Horizontal alignment
-    alignItems: &#x27;center&#x27;,     // Vertical alignment
+    flexDirection: 'row',    // Horizontal layout
+    justifyContent: 'center', // Horizontal alignment
+    alignItems: 'center',     // Vertical alignment
   },
   column: {
-    flexDirection: &#x27;column&#x27;,  // Vertical layout (default)
-    justifyContent: &#x27;space-between&#x27;,
-    alignItems: &#x27;stretch&#x27;,
+    flexDirection: 'column',  // Vertical layout (default)
+    justifyContent: 'space-between',
+    alignItems: 'stretch',
   },
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-development-workflow&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-development-workflow&quot;&gt;🔄 Development Workflow&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;hot-reloading&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#hot-reloading&quot;&gt;Hot Reloading&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Fast Refresh&lt;/strong&gt;: Instantly see changes&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;State Preservation&lt;/strong&gt;: Component state maintained during reload&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Error Recovery&lt;/strong&gt;: Automatic recovery from errors&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id&#x3D;&quot;debugging-tools&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#debugging-tools&quot;&gt;Debugging Tools&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;React Native Debugger&lt;/strong&gt;: Comprehensive debugging&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Flipper&lt;/strong&gt;: Extensible mobile app debugger&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Console Logs&lt;/strong&gt;: Built-in logging&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Remote Debugging&lt;/strong&gt;: Chrome DevTools integration&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id&#x3D;&quot;-essential-libraries&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-essential-libraries&quot;&gt;📦 Essential Libraries&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;navigation&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#navigation&quot;&gt;Navigation&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-bash&quot;&gt;npm install @react-navigation/native @react-navigation/stack
+</code></pre>
+<h2 id="-development-workflow"><a class="header" href="#-development-workflow">🔄 Development Workflow</a></h2>
+<h3 id="hot-reloading"><a class="header" href="#hot-reloading">Hot Reloading</a></h3>
+<ul>
+<li><strong>Fast Refresh</strong>: Instantly see changes</li>
+<li><strong>State Preservation</strong>: Component state maintained during reload</li>
+<li><strong>Error Recovery</strong>: Automatic recovery from errors</li>
+</ul>
+<h3 id="debugging-tools"><a class="header" href="#debugging-tools">Debugging Tools</a></h3>
+<ul>
+<li><strong>React Native Debugger</strong>: Comprehensive debugging</li>
+<li><strong>Flipper</strong>: Extensible mobile app debugger</li>
+<li><strong>Console Logs</strong>: Built-in logging</li>
+<li><strong>Remote Debugging</strong>: Chrome DevTools integration</li>
+</ul>
+<h2 id="-essential-libraries"><a class="header" href="#-essential-libraries">📦 Essential Libraries</a></h2>
+<h3 id="navigation"><a class="header" href="#navigation">Navigation</a></h3>
+<pre><code class="language-bash">npm install @react-navigation/native @react-navigation/stack
 npm install react-native-screens react-native-safe-area-context
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;state-management&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#state-management&quot;&gt;State Management&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-bash&quot;&gt;npm install @reduxjs/toolkit react-redux
+</code></pre>
+<h3 id="state-management"><a class="header" href="#state-management">State Management</a></h3>
+<pre><code class="language-bash">npm install @reduxjs/toolkit react-redux
 # or
 npm install @apollo/client graphql  # for GraphQL
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;ui-components&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#ui-components&quot;&gt;UI Components&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-bash&quot;&gt;npm install react-native-elements
+</code></pre>
+<h3 id="ui-components"><a class="header" href="#ui-components">UI Components</a></h3>
+<pre><code class="language-bash">npm install react-native-elements
 npm install react-native-vector-icons
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;utilities&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#utilities&quot;&gt;Utilities&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-bash&quot;&gt;npm install react-native-async-storage
+</code></pre>
+<h3 id="utilities"><a class="header" href="#utilities">Utilities</a></h3>
+<pre><code class="language-bash">npm install react-native-async-storage
 npm install react-native-device-info
 npm install react-native-permissions
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-first-project-ideas&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-first-project-ideas&quot;&gt;🎯 First Project Ideas&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;beginner-projects&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#beginner-projects&quot;&gt;Beginner Projects&lt;/a&gt;&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Calculator App&lt;/strong&gt;: Basic arithmetic operations&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Todo List&lt;/strong&gt;: CRUD operations with local storage&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Weather App&lt;/strong&gt;: API integration and data display&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Recipe App&lt;/strong&gt;: Search and display recipes&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id&#x3D;&quot;intermediate-projects&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#intermediate-projects&quot;&gt;Intermediate Projects&lt;/a&gt;&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Chat App&lt;/strong&gt;: Real-time messaging with Firebase&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;E-commerce App&lt;/strong&gt;: Product catalog and cart&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Fitness Tracker&lt;/strong&gt;: Workout logging and statistics&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Social Media App&lt;/strong&gt;: Posts, likes, and comments&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id&#x3D;&quot;-best-practices&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-best-practices&quot;&gt;🚀 Best Practices&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;component-structure&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#component-structure&quot;&gt;Component Structure&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Good component structure
-import React, { useState, useEffect } from &#x27;react&#x27;;
-import { View, Text, StyleSheet } from &#x27;react-native&#x27;;
+</code></pre>
+<h2 id="-first-project-ideas"><a class="header" href="#-first-project-ideas">🎯 First Project Ideas</a></h2>
+<h3 id="beginner-projects"><a class="header" href="#beginner-projects">Beginner Projects</a></h3>
+<ol>
+<li><strong>Calculator App</strong>: Basic arithmetic operations</li>
+<li><strong>Todo List</strong>: CRUD operations with local storage</li>
+<li><strong>Weather App</strong>: API integration and data display</li>
+<li><strong>Recipe App</strong>: Search and display recipes</li>
+</ol>
+<h3 id="intermediate-projects"><a class="header" href="#intermediate-projects">Intermediate Projects</a></h3>
+<ol>
+<li><strong>Chat App</strong>: Real-time messaging with Firebase</li>
+<li><strong>E-commerce App</strong>: Product catalog and cart</li>
+<li><strong>Fitness Tracker</strong>: Workout logging and statistics</li>
+<li><strong>Social Media App</strong>: Posts, likes, and comments</li>
+</ol>
+<h2 id="-best-practices"><a class="header" href="#-best-practices">🚀 Best Practices</a></h2>
+<h3 id="component-structure"><a class="header" href="#component-structure">Component Structure</a></h3>
+<pre><code class="language-javascript">// Good component structure
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
-const MyComponent &#x3D; ({ prop1, prop2 }) &#x3D;&amp;gt; {
-  const [state, setState] &#x3D; useState(null);
+const MyComponent = ({ prop1, prop2 }) =&gt; {
+  const [state, setState] = useState(null);
   
-  useEffect(() &#x3D;&amp;gt; {
+  useEffect(() =&gt; {
     // Side effects here
   }, []);
 
   return (
-    &amp;lt;View style&#x3D;{styles.container}&amp;gt;
-      &amp;lt;Text&amp;gt;{prop1}&amp;lt;/Text&amp;gt;
-    &amp;lt;/View&amp;gt;
+    &lt;View style={styles.container}&gt;
+      &lt;Text&gt;{prop1}&lt;/Text&gt;
+    &lt;/View&gt;
   );
 };
 
-const styles &#x3D; StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     // Styles here
   },
 });
 
 export default MyComponent;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;performance-tips&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#performance-tips&quot;&gt;Performance Tips&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Use &lt;code&gt;FlatList&lt;/code&gt; for long lists instead of &lt;code&gt;ScrollView&lt;/code&gt; with &lt;code&gt;map&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Avoid unnecessary re-renders with &lt;code&gt;React.memo&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Use &lt;code&gt;useCallback&lt;/code&gt; and &lt;code&gt;useMemo&lt;/code&gt; for expensive operations&lt;/li&gt;
-&lt;li&gt;Optimize images and use appropriate formats&lt;/li&gt;
-&lt;li&gt;Test on real devices, not just simulators&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id&#x3D;&quot;-learning-path&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-learning-path&quot;&gt;🎓 Learning Path&lt;/a&gt;&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Week 1&lt;/strong&gt;: Setup and basic components&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Week 2&lt;/strong&gt;: Styling and layout&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Week 3&lt;/strong&gt;: Navigation and state management&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Week 4&lt;/strong&gt;: API integration and data handling&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Week 5&lt;/strong&gt;: Testing and debugging&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Week 6&lt;/strong&gt;: Performance optimization&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Week 7&lt;/strong&gt;: Advanced patterns and architecture&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Week 8&lt;/strong&gt;: Deployment and publishing&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id&#x3D;&quot;-resources&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-resources&quot;&gt;🔗 Resources&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;official-documentation&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#official-documentation&quot;&gt;Official Documentation&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href&#x3D;&quot;https://reactnative.dev/&quot;&gt;React Native Docs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href&#x3D;&quot;https://docs.expo.dev/&quot;&gt;Expo Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href&#x3D;&quot;https://github.com/react-native-community/&quot;&gt;React Native Community&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id&#x3D;&quot;learning-resources&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#learning-resources&quot;&gt;Learning Resources&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href&#x3D;&quot;https://reactnativeschool.com/&quot;&gt;React Native School&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href&#x3D;&quot;https://reactnative.training/&quot;&gt;React Native Training&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href&#x3D;&quot;https://www.youtube.com/results?search_query&#x3D;react+native+tutorial&quot;&gt;YouTube: React Native&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id&#x3D;&quot;community&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#community&quot;&gt;Community&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href&#x3D;&quot;https://www.reddit.com/r/reactnative/&quot;&gt;React Native Reddit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href&#x3D;&quot;https://discord.gg/react-native&quot;&gt;Discord: React Native&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href&#x3D;&quot;https://stackoverflow.com/questions/tagged/react-native&quot;&gt;Stack Overflow&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Ready to start building?&lt;/strong&gt; Let’s dive into components and props in the next section! 🚀&lt;/p&gt;
+</code></pre>
+<h3 id="performance-tips"><a class="header" href="#performance-tips">Performance Tips</a></h3>
+<ul>
+<li>Use <code>FlatList</code> for long lists instead of <code>ScrollView</code> with <code>map</code></li>
+<li>Avoid unnecessary re-renders with <code>React.memo</code></li>
+<li>Use <code>useCallback</code> and <code>useMemo</code> for expensive operations</li>
+<li>Optimize images and use appropriate formats</li>
+<li>Test on real devices, not just simulators</li>
+</ul>
+<h2 id="-learning-path"><a class="header" href="#-learning-path">🎓 Learning Path</a></h2>
+<ol>
+<li><strong>Week 1</strong>: Setup and basic components</li>
+<li><strong>Week 2</strong>: Styling and layout</li>
+<li><strong>Week 3</strong>: Navigation and state management</li>
+<li><strong>Week 4</strong>: API integration and data handling</li>
+<li><strong>Week 5</strong>: Testing and debugging</li>
+<li><strong>Week 6</strong>: Performance optimization</li>
+<li><strong>Week 7</strong>: Advanced patterns and architecture</li>
+<li><strong>Week 8</strong>: Deployment and publishing</li>
+</ol>
+<h2 id="-resources"><a class="header" href="#-resources">🔗 Resources</a></h2>
+<h3 id="official-documentation"><a class="header" href="#official-documentation">Official Documentation</a></h3>
+<ul>
+<li><a href="https://reactnative.dev/">React Native Docs</a></li>
+<li><a href="https://docs.expo.dev/">Expo Documentation</a></li>
+<li><a href="https://github.com/react-native-community/">React Native Community</a></li>
+</ul>
+<h3 id="learning-resources"><a class="header" href="#learning-resources">Learning Resources</a></h3>
+<ul>
+<li><a href="https://reactnativeschool.com/">React Native School</a></li>
+<li><a href="https://reactnative.training/">React Native Training</a></li>
+<li><a href="https://www.youtube.com/results?search_query=react+native+tutorial">YouTube: React Native</a></li>
+</ul>
+<h3 id="community"><a class="header" href="#community">Community</a></h3>
+<ul>
+<li><a href="https://www.reddit.com/r/reactnative/">React Native Reddit</a></li>
+<li><a href="https://discord.gg/react-native">Discord: React Native</a></li>
+<li><a href="https://stackoverflow.com/questions/tagged/react-native">Stack Overflow</a></li>
+</ul>
+<hr>
+<p><strong>Ready to start building?</strong> Let’s dive into components and props in the next section! 🚀</p>
 
-                        </div>
-                        
-                    </article>
-                </div>
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "react-native/intro.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

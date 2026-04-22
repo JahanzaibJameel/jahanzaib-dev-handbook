@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>Production Deployment - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="Production Deployment - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Production Deployment - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>Production Deployment - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="react-native/deployment.md">
-    <meta property="og:title" content="Production Deployment - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Production Deployment - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="react-native/deployment.md">
-    <meta property="twitter:title" content="Production Deployment - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="Production Deployment - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="Production Deployment - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="react-native/deployment.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "Production Deployment - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,116 +525,774 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    Production Deployment - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
+        <div id="content">
+            <main>
+                <h1 id="deployment"><a class="header" href="#deployment">Deployment</a></h1>
+<p>Learn how to build and deploy React Native applications to app stores, including App Store, Google Play, and alternative distribution methods.</p>
+<h2 id="what-is-app-deployment"><a class="header" href="#what-is-app-deployment"><strong>What is App Deployment?</strong></a></h2>
+<p>App deployment is the process of preparing, building, and distributing your React Native application to users through official app stores or alternative channels.</p>
+<h3 id="deployment-overview"><a class="header" href="#deployment-overview"><strong>Deployment Overview</strong></a></h3>
+<ul>
+<li><strong>Build Process</strong>: Convert source code into distributable app packages</li>
+<li><strong>Store Submission</strong>: Upload apps to official app stores</li>
+<li><strong>Review Process</strong>: Pass store review and approval</li>
+<li><strong>Distribution</strong>: Make apps available to end users</li>
+<li><strong>Updates</strong>: Handle app updates and version management</li>
+</ul>
+<hr>
+<h2 id="building-for-production"><a class="header" href="#building-for-production"><strong>Building for Production</strong></a></h2>
+<h3 id="ios-build-process"><a class="header" href="#ios-build-process"><strong>iOS Build Process</strong></a></h3>
+<h4 id="prerequisites"><a class="header" href="#prerequisites"><strong>Prerequisites</strong></a></h4>
+<ul>
+<li><strong>Apple Developer Account</strong>: Required for App Store distribution</li>
+<li><strong>Xcode</strong>: Latest version for iOS development</li>
+<li><strong>Mac Computer</strong>: Required for iOS builds</li>
+<li><strong>Code Signing Certificates</strong>: Provisioning profiles and certificates</li>
+</ul>
+<h4 id="build-configuration"><a class="header" href="#build-configuration"><strong>Build Configuration</strong></a></h4>
+<pre><code class="language-bash"># Install dependencies
+npm install
 
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
+# Clean previous builds
+npx react-native clean
 
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>Production Deployment - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;deployment&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#deployment&quot;&gt;Deployment&lt;/a&gt;&lt;/h1&gt;
+# Build for iOS
+cd ios
+xcodebuild -workspace YourApp.xcworkspace \
+  -scheme YourApp \
+  -configuration Release \
+  -destination generic/platform=iOS \
+  -archivePath YourApp.xcarchive \
+  archive
+</code></pre>
+<h4 id="xcode-configuration"><a class="header" href="#xcode-configuration"><strong>Xcode Configuration</strong></a></h4>
+<ol>
+<li>
+<p><strong>Open Project</strong>: Open <code>ios/YourApp.xcworkspace</code> in Xcode</p>
+</li>
+<li>
+<p><strong>Select Target</strong>: Choose your app target</p>
+</li>
+<li>
+<p><strong>Build Settings</strong>:</p>
+<ul>
+<li><strong>Deployment Target</strong>: Set minimum iOS version</li>
+<li><strong>Bundle Identifier</strong>: Unique app identifier</li>
+<li><strong>Code Signing</strong>: Configure provisioning profile</li>
+<li><strong>Version</strong>: Set app version and build number</li>
+</ul>
+</li>
+<li>
+<p><strong>Capabilities</strong>:</p>
+<ul>
+<li>Push notifications</li>
+<li>Background modes</li>
+<li>App transport security</li>
+<li>Custom URL schemes</li>
+</ul>
+</li>
+</ol>
+<h3 id="android-build-process"><a class="header" href="#android-build-process"><strong>Android Build Process</strong></a></h3>
+<h4 id="prerequisites-1"><a class="header" href="#prerequisites-1"><strong>Prerequisites</strong></a></h4>
+<ul>
+<li><strong>Google Play Developer Account</strong>: Required for Play Store distribution</li>
+<li><strong>Android Studio</strong>: Latest version for Android development</li>
+<li><strong>Keystore</strong>: Signing key for app distribution</li>
+<li><strong>API Keys</strong>: Google Play Console API access</li>
+</ul>
+<h4 id="generate-signing-key"><a class="header" href="#generate-signing-key"><strong>Generate Signing Key</strong></a></h4>
+<pre><code class="language-bash"># Generate release keystore
+keytool -genkey -v -keystore your-app-release-key.keystore \
+  -alias your-app-key-alias -keyalg RSA -keysize 2048 \
+  -validity 10000
 
-                        </div>
-                        
-                    </article>
-                </div>
+# Set environment variables
+export MYAPP_RELEASE_STORE_FILE=your-app-release-key.keystore
+export MYAPP_RELEASE_KEY_ALIAS=your-app-key-alias
+export MYAPP_RELEASE_KEY_PASSWORD=your-keystore-password
+export MYAPP_RELEASE_KEY_STORE_PASSWORD=your-keystore-password
+</code></pre>
+<h4 id="build-configuration-1"><a class="header" href="#build-configuration-1"><strong>Build Configuration</strong></a></h4>
+<pre><code class="language-javascript">// android/app/build.gradle
+android {
+    ...
+    signingConfigs {
+        release {
+            if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
+                storeFile file(MYAPP_RELEASE_STORE_FILE)
+                storePassword MYAPP_RELEASE_KEY_STORE_PASSWORD
+                keyAlias MYAPP_RELEASE_KEY_ALIAS
+                keyPassword MYAPP_RELEASE_KEY_PASSWORD
+            }
+        }
+    }
+    buildTypes {
+        release {
+            ...
+            signingConfig signingConfigs.release
+            minifyEnabled enableProguardInReleaseBuilds
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+}
+</code></pre>
+<h4 id="build-apkaab"><a class="header" href="#build-apkaab"><strong>Build APK/AAB</strong></a></h4>
+<pre><code class="language-bash"># Build APK
+cd android
+./gradlew assembleRelease
+
+# Build AAB (recommended for Play Store)
+./gradlew bundleRelease
+</code></pre>
+<hr>
+<h2 id="app-store-deployment"><a class="header" href="#app-store-deployment"><strong>App Store Deployment</strong></a></h2>
+<h3 id="ios-app-store"><a class="header" href="#ios-app-store"><strong>iOS App Store</strong></a></h3>
+<h4 id="app-store-connect-setup"><a class="header" href="#app-store-connect-setup"><strong>App Store Connect Setup</strong></a></h4>
+<ol>
+<li>
+<p><strong>Create App Record</strong>:</p>
+<ul>
+<li>Log in to App Store Connect</li>
+<li>Click “My Apps” then “+”</li>
+<li>Fill app information and metadata</li>
+</ul>
+</li>
+<li>
+<p><strong>App Information</strong>:</p>
+<ul>
+<li><strong>App Name</strong>: Display name in App Store</li>
+<li><strong>Primary Language</strong>: Default language</li>
+<li><strong>Bundle ID</strong>: Unique identifier</li>
+<li><strong>SKU</strong>: Internal product identifier</li>
+</ul>
+</li>
+<li>
+<p><strong>Pricing and Availability</strong>:</p>
+<ul>
+<li><strong>Price Tier</strong>: Set app price</li>
+<li><strong>Availability</strong>: Countries/regions</li>
+<li><strong>Release Date</strong>: Initial release schedule</li>
+</ul>
+</li>
+</ol>
+<h4 id="app-metadata"><a class="header" href="#app-metadata"><strong>App Metadata</strong></a></h4>
+<pre><code class="language-json">{
+  "name": "Your App Name",
+  "description": "Comprehensive app description",
+  "keywords": ["keyword1", "keyword2", "keyword3"],
+  "category": "App Store category",
+  "privacy_policy": "https://yourapp.com/privacy",
+  "support_url": "https://yourapp.com/support"
+}
+</code></pre>
+<h4 id="screenshots-and-media"><a class="header" href="#screenshots-and-media"><strong>Screenshots and Media</strong></a></h4>
+<p><strong>Required Screenshots</strong>:</p>
+<ul>
+<li><strong>iPhone 6.7“ Display</strong>: 1290 x 2796 pixels</li>
+<li><strong>iPhone 6.5“ Display</strong>: 1242 x 2208 pixels</li>
+<li><strong>iPhone 5.5“ Display</strong>: 1242 x 2208 pixels</li>
+<li><strong>iPad Pro (12.9“)</strong>: 2048 x 2732 pixels</li>
+<li><strong>iPad Pro (11“)</strong>: 1668 x 2388 pixels</li>
+</ul>
+<p><strong>App Preview Requirements</strong>:</p>
+<ul>
+<li><strong>Duration</strong>: 15-30 seconds</li>
+<li><strong>Format</strong>: MPEG-4 video (.mp4)</li>
+<li><strong>Resolution</strong>: Same as screenshots</li>
+<li><strong>Frame Rate</strong>: 30-60 FPS</li>
+</ul>
+<h4 id="app-review-process"><a class="header" href="#app-review-process"><strong>App Review Process</strong></a></h4>
+<ol>
+<li>
+<p><strong>Submit for Review</strong>:</p>
+<ul>
+<li>Upload build through Xcode or Application Loader</li>
+<li>Complete app information</li>
+<li>Submit for review</li>
+</ul>
+</li>
+<li>
+<p><strong>Review Timeline</strong>:</p>
+<ul>
+<li><strong>Initial Review</strong>: 24-48 hours</li>
+<li><strong>Additional Review</strong>: 1-7 days</li>
+<li><strong>Rejection</strong>: Fix issues and resubmit</li>
+</ul>
+</li>
+<li>
+<p><strong>Common Rejection Reasons</strong>:</p>
+<ul>
+<li><strong>Crashes</strong>: App crashes on launch or during use</li>
+<li><strong>Metadata</strong>: Incomplete or inaccurate information</li>
+<li><strong>Guidelines</strong>: Violation of App Store guidelines</li>
+<li><strong>Performance</strong>: Poor performance or battery drain</li>
+</ul>
+</li>
+</ol>
+<h3 id="google-play-store"><a class="header" href="#google-play-store"><strong>Google Play Store</strong></a></h3>
+<h4 id="google-play-console-setup"><a class="header" href="#google-play-console-setup"><strong>Google Play Console Setup</strong></a></h4>
+<ol>
+<li>
+<p><strong>Create Application</strong>:</p>
+<ul>
+<li>Log in to Google Play Console</li>
+<li>Click “Create application”</li>
+<li>Select app type and fill details</li>
+</ul>
+</li>
+<li>
+<p><strong>Store Listing</strong>:</p>
+<ul>
+<li><strong>App Name</strong>: 30 characters max</li>
+<li><strong>Short Description</strong>: 80 characters max</li>
+<li><strong>Full Description</strong>: 4000 characters max</li>
+<li><strong>Category</strong>: Primary and secondary categories</li>
+</ul>
+</li>
+<li>
+<p><strong>Content Rating</strong>:</p>
+<ul>
+<li>Complete content rating questionnaire</li>
+<li>Target audience and content warnings</li>
+<li>Age-appropriate ratings</li>
+</ul>
+</li>
+</ol>
+<h4 id="app-release"><a class="header" href="#app-release"><strong>App Release</strong></a></h4>
+<pre><code class="language-bash"># Upload AAB to Google Play Console
+# Or use Google Play CLI
+bundletool build-apks --bundle=app-release.aab --output=app-release.apks
+</code></pre>
+<p><strong>Release Tracks</strong>:</p>
+<ul>
+<li><strong>Internal</strong>: Testing with specific users</li>
+<li><strong>Alpha</strong>: Limited testing with opt-in users</li>
+<li><strong>Beta</strong>: Open testing with public access</li>
+<li><strong>Production</strong>: Full public release</li>
+</ul>
+<h4 id="review-process"><a class="header" href="#review-process"><strong>Review Process</strong></a></h4>
+<ol>
+<li>
+<p><strong>Automated Review</strong>:</p>
+<ul>
+<li><strong>Malware Scanning</strong>: Security analysis</li>
+<li><strong>Policy Compliance</strong>: Automated policy checks</li>
+<li><strong>Performance Analysis</strong>: App performance metrics</li>
+</ul>
+</li>
+<li>
+<p><strong>Manual Review</strong>:</p>
+<ul>
+<li><strong>Content Review</strong>: Human review of app content</li>
+<li><strong>Functionality Testing</strong>: App functionality verification</li>
+<li><strong>User Experience</strong>: Overall user experience assessment</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="alternative-distribution"><a class="header" href="#alternative-distribution"><strong>Alternative Distribution</strong></a></h2>
+<h3 id="enterprise-distribution"><a class="header" href="#enterprise-distribution"><strong>Enterprise Distribution</strong></a></h3>
+<h4 id="ios-enterprise-program"><a class="header" href="#ios-enterprise-program"><strong>iOS Enterprise Program</strong></a></h4>
+<pre><code class="language-bash"># Build enterprise distribution
+xcodebuild -workspace YourApp.xcworkspace \
+  -scheme YourApp \
+  -configuration Release \
+  -destination generic/platform=iOS \
+  -archivePath YourApp.xcarchive \
+  archive
+
+# Export enterprise IPA
+xcodebuild -exportArchive \
+  -archivePath YourApp.xcarchive \
+  -exportPath ./export \
+  -exportOptionsPlist EnterpriseExport.plist
+</code></pre>
+<p><strong>Enterprise Distribution Methods</strong>:</p>
+<ul>
+<li><strong>MDM (Mobile Device Management)</strong>: Centralized device management</li>
+<li><strong>Web Distribution</strong>: Direct download from website</li>
+<li><strong>Email Distribution</strong>: Send IPA files via email</li>
+</ul>
+<h4 id="android-enterprise"><a class="header" href="#android-enterprise"><strong>Android Enterprise</strong></a></h4>
+<pre><code class="language-bash"># Build signed APK for enterprise
+./gradlew assembleRelease
+
+# Upload to enterprise console
+# Or distribute via private channels
+</code></pre>
+<h3 id="direct-distribution"><a class="header" href="#direct-distribution"><strong>Direct Distribution</strong></a></h3>
+<h4 id="over-the-air-ota-updates"><a class="header" href="#over-the-air-ota-updates"><strong>Over-the-Air (OTA) Updates</strong></a></h4>
+<pre><code class="language-javascript">// Check for updates
+const checkForUpdates = async () =&gt; {
+  try {
+    const response = await fetch('https://api.yourapp.com/version');
+    const latestVersion = await response.json();
+    
+    const currentVersion = Constants.manifest.version;
+    
+    if (latestVersion.version &gt; currentVersion) {
+      // Prompt user to update
+      Alert.alert(
+        'Update Available',
+        'A new version is available. Would you like to update?',
+        [
+          { text: 'Later', style: 'cancel' },
+          { text: 'Update', onPress: () =&gt; downloadUpdate(latestVersion.url) }
+        ]
+      );
+    }
+  } catch (error) {
+    console.error('Error checking for updates:', error);
+  }
+};
+</code></pre>
+<h4 id="codepush-react-native"><a class="header" href="#codepush-react-native"><strong>CodePush (React Native)</strong></a></h4>
+<pre><code class="language-bash"># Install CodePush
+npm install @react-native-code-push/code-push
+
+# Link native dependencies
+npx react-native link @react-native-code-push/code-push
+</code></pre>
+<pre><code class="language-javascript">import CodePush from "@react-native-code-push/code-push";
+
+// Wrap your app component
+class App extends Component {
+  // ... your app code
+}
+
+export default CodePush(App);
+</code></pre>
+<hr>
+<h2 id="continuous-deployment"><a class="header" href="#continuous-deployment"><strong>Continuous Deployment</strong></a></h2>
+<h3 id="cicd-pipeline-setup"><a class="header" href="#cicd-pipeline-setup"><strong>CI/CD Pipeline Setup</strong></a></h3>
+<h4 id="github-actions-for-ios"><a class="header" href="#github-actions-for-ios"><strong>GitHub Actions for iOS</strong></a></h4>
+<pre><code class="language-yaml"># .github/workflows/ios-build.yml
+name: Build and Deploy iOS
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: |
+        npm install
+        cd ios &amp;&amp; pod install
+        
+    - name: Build iOS
+      run: |
+        cd ios
+        xcodebuild -workspace YourApp.xcworkspace \
+          -scheme YourApp \
+          -configuration Release \
+          -destination generic/platform=iOS \
+          -archivePath YourApp.xcarchive \
+          archive
+          
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: ios-build
+        path: ios/YourApp.xcarchive
+</code></pre>
+<h4 id="github-actions-for-android"><a class="header" href="#github-actions-for-android"><strong>GitHub Actions for Android</strong></a></h4>
+<pre><code class="language-yaml"># .github/workflows/android-build.yml
+name: Build and Deploy Android
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Setup Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '11'
+        
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v2
+      
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Build Android
+      run: |
+        cd android
+        ./gradlew assembleRelease
+        
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: android-build
+        path: android/app/build/outputs/apk/release/
+</code></pre>
+<h3 id="automated-deployment-scripts"><a class="header" href="#automated-deployment-scripts"><strong>Automated Deployment Scripts</strong></a></h3>
+<h4 id="fastlane-integration"><a class="header" href="#fastlane-integration"><strong>Fastlane Integration</strong></a></h4>
+<pre><code class="language-ruby"># Fastfile
+platform :ios do
+  desc "Build and upload to TestFlight"
+  lane :beta do
+    build_app(
+      workspace: "YourApp.xcworkspace",
+      scheme: "YourApp",
+      export_method: "app-store"
+    )
+    
+    upload_to_testflight(
+      skip_waiting_for_build_processing: true
+    )
+  end
+  
+  desc "Build and upload to App Store"
+  lane :release do
+    build_app(
+      workspace: "YourApp.xcworkspace",
+      scheme: "YourApp",
+      export_method: "app-store"
+    )
+    
+    upload_to_app_store(
+      force: true,
+      reject_if_possible: false
+    )
+  end
+end
+
+platform :android do
+  desc "Build and upload to Google Play"
+  lane :release do
+    gradle(
+      task: "bundleRelease",
+      project_dir: "android"
+    )
+    
+    upload_to_play_store(
+      track: "production",
+      aab: "../android/app/build/outputs/bundle/release/app-release.aab"
+    )
+  end
+end
+</code></pre>
+<hr>
+<h2 id="version-management"><a class="header" href="#version-management"><strong>Version Management</strong></a></h2>
+<h3 id="semantic-versioning"><a class="header" href="#semantic-versioning"><strong>Semantic Versioning</strong></a></h3>
+<h4 id="version-structure"><a class="header" href="#version-structure"><strong>Version Structure</strong></a></h4>
+<ul>
+<li><strong>Major</strong>: Breaking changes (2.0.0)</li>
+<li><strong>Minor</strong>: New features (1.2.0)</li>
+<li><strong>Patch</strong>: Bug fixes (1.2.1)</li>
+</ul>
+<h4 id="version-configuration"><a class="header" href="#version-configuration"><strong>Version Configuration</strong></a></h4>
+<pre><code class="language-javascript">// package.json
+{
+  "version": "1.2.3",
+  "name": "your-app"
+}
+
+// iOS version (Info.plist)
+&lt;key&gt;CFBundleShortVersionString&lt;/key&gt;
+&lt;string&gt;1.2.3&lt;/string&gt;
+&lt;key&gt;CFBundleVersion&lt;/key&gt;
+&lt;string&gt;123&lt;/string&gt;
+
+// Android version (build.gradle)
+android {
+    defaultConfig {
+        versionCode 123
+        versionName "1.2.3"
+    }
+}
+</code></pre>
+<h3 id="update-strategies"><a class="header" href="#update-strategies"><strong>Update Strategies</strong></a></h3>
+<h4 id="forced-updates"><a class="header" href="#forced-updates"><strong>Forced Updates</strong></a></h4>
+<pre><code class="language-javascript">const checkForcedUpdate = async () =&gt; {
+  try {
+    const response = await fetch('https://api.yourapp.com/version');
+    const { minVersion, currentVersion } = await response.json();
+    
+    const appVersion = Constants.manifest.version;
+    
+    if (compareVersions(appVersion, minVersion) &lt; 0) {
+      // Force update required
+      Alert.alert(
+        'Update Required',
+        'This version is no longer supported. Please update to continue using the app.',
+        [
+          { text: 'Update', onPress: () =&gt; Linking.openURL(updateUrl) }
+        ],
+        { cancelable: false }
+      );
+    } else if (compareVersions(appVersion, currentVersion) &lt; 0) {
+      // Optional update available
+      Alert.alert(
+        'Update Available',
+        'A new version is available with new features and improvements.',
+        [
+          { text: 'Later', style: 'cancel' },
+          { text: 'Update', onPress: () =&gt; Linking.openURL(updateUrl) }
+        ]
+      );
+    }
+  } catch (error) {
+    console.error('Error checking for updates:', error);
+  }
+};
+</code></pre>
+<hr>
+<h2 id="security-considerations"><a class="header" href="#security-considerations"><strong>Security Considerations</strong></a></h2>
+<h3 id="code-obfuscation"><a class="header" href="#code-obfuscation"><strong>Code Obfuscation</strong></a></h3>
+<h4 id="android-proguard"><a class="header" href="#android-proguard"><strong>Android ProGuard</strong></a></h4>
+<pre><code class="language-javascript">// android/app/proguard-rules.pro
+# Keep React Native classes
+-keep class com.facebook.react.** { *; }
+-keep class com.facebook.hermes.** { *; }
+-keep class com.facebook.jni.** { *; }
+
+# Keep native modules
+-keep class com.yourapp.** { *; }
+
+# Remove debug logs
+-assumenosideeffects class android.util.Log {
+    public static *** v(...);
+    public static *** d(...);
+    public static *** i(...);
+}
+</code></pre>
+<h4 id="ios-code-protection"><a class="header" href="#ios-code-protection"><strong>iOS Code Protection</strong></a></h4>
+<pre><code class="language-bash"># Enable bitcode in Xcode build settings
+# Enable address sanitizer
+# Enable stack protection
+# Strip debug symbols
+</code></pre>
+<h3 id="api-security"><a class="header" href="#api-security"><strong>API Security</strong></a></h3>
+<h4 id="environment-variables"><a class="header" href="#environment-variables"><strong>Environment Variables</strong></a></h4>
+<pre><code class="language-javascript">// Use environment variables for sensitive data
+const API_BASE_URL = __DEV__ 
+  ? 'https://dev-api.yourapp.com'
+  : 'https://api.yourapp.com';
+
+const API_KEY = __DEV__ 
+  ? 'dev-api-key'
+  : process.env.API_KEY; // Set at build time
+</code></pre>
+<h4 id="network-security"><a class="header" href="#network-security"><strong>Network Security</strong></a></h4>
+<pre><code class="language-xml">&lt;!-- android/res/xml/network_security_config.xml --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;network-security-config&gt;
+    &lt;domain-config cleartextTrafficPermitted="false"&gt;
+        &lt;domain includeSubdomains="true"&gt;yourapp.com&lt;/domain&gt;
+    &lt;/domain-config&gt;
+&lt;/network-security-config&gt;
+</code></pre>
+<hr>
+<h2 id="performance-optimization"><a class="header" href="#performance-optimization"><strong>Performance Optimization</strong></a></h2>
+<h3 id="bundle-size-optimization"><a class="header" href="#bundle-size-optimization"><strong>Bundle Size Optimization</strong></a></h3>
+<h4 id="android-bundle-analysis"><a class="header" href="#android-bundle-analysis"><strong>Android Bundle Analysis</strong></a></h4>
+<pre><code class="language-bash"># Analyze APK size
+./gradlew analyzeReleaseBundle
+
+# Check bundle size
+bundletool build-apks --bundle=app-release.aab --output=app.apks
+</code></pre>
+<h4 id="ios-bundle-analysis"><a class="header" href="#ios-bundle-analysis"><strong>iOS Bundle Analysis</strong></a></h4>
+<pre><code class="language-bash"># Analyze app size
+xcodebuild -workspace YourApp.xcworkspace \
+  -scheme YourApp \
+  -configuration Release \
+  -showBuildSettings | grep PRODUCT_NAME
+</code></pre>
+<h3 id="asset-optimization"><a class="header" href="#asset-optimization"><strong>Asset Optimization</strong></a></h3>
+<h4 id="image-optimization"><a class="header" href="#image-optimization"><strong>Image Optimization</strong></a></h4>
+<pre><code class="language-javascript">// Use optimized image formats
+const optimizedImages = {
+  // Use WebP for Android
+  android: 'image.webp',
+  // Use HEIC for iOS
+  ios: 'image.heic',
+  // Fallback to PNG
+  default: 'image.png'
+};
+
+// Compress images at build time
+const compressImages = () =&gt; {
+  // Implement image compression logic
+};
+</code></pre>
+<hr>
+<h2 id="testing-before-deployment"><a class="header" href="#testing-before-deployment"><strong>Testing Before Deployment</strong></a></h2>
+<h3 id="pre-deployment-checklist"><a class="header" href="#pre-deployment-checklist"><strong>Pre-deployment Checklist</strong></a></h3>
+<h4 id="functionality-testing"><a class="header" href="#functionality-testing"><strong>Functionality Testing</strong></a></h4>
+<ul>
+<li><input disabled="" type="checkbox"> All features work as expected</li>
+<li><input disabled="" type="checkbox"> No crashes or freezes</li>
+<li><input disabled="" type="checkbox"> Proper error handling</li>
+<li><input disabled="" type="checkbox"> Offline functionality works</li>
+<li><input disabled="" type="checkbox"> Push notifications work</li>
+</ul>
+<h4 id="performance-testing"><a class="header" href="#performance-testing"><strong>Performance Testing</strong></a></h4>
+<ul>
+<li><input disabled="" type="checkbox"> App launches within acceptable time</li>
+<li><input disabled="" type="checkbox"> Smooth scrolling and animations</li>
+<li><input disabled="" type="checkbox"> Memory usage is acceptable</li>
+<li><input disabled="" type="checkbox"> Battery drain is minimal</li>
+<li><input disabled="" type="checkbox"> Network requests are optimized</li>
+</ul>
+<h4 id="compatibility-testing"><a class="header" href="#compatibility-testing"><strong>Compatibility Testing</strong></a></h4>
+<ul>
+<li><input disabled="" type="checkbox"> Works on minimum supported OS versions</li>
+<li><input disabled="" type="checkbox"> Works on different screen sizes</li>
+<li><input disabled="" type="checkbox"> Works on different device types</li>
+<li><input disabled="" type="checkbox"> Works with different network conditions</li>
+<li><input disabled="" type="checkbox"> Works with accessibility features</li>
+</ul>
+<h4 id="store-requirements"><a class="header" href="#store-requirements"><strong>Store Requirements</strong></a></h4>
+<ul>
+<li><input disabled="" type="checkbox"> App metadata is complete</li>
+<li><input disabled="" type="checkbox"> Screenshots meet requirements</li>
+<li><input disabled="" type="checkbox"> Privacy policy is available</li>
+<li><input disabled="" type="checkbox"> Terms of service are available</li>
+<li><input disabled="" type="checkbox"> App icon and splash screen are set</li>
+</ul>
+<hr>
+<h2 id="real-use-case"><a class="header" href="#real-use-case"><strong>Real Use Case</strong></a></h2>
+<h3 id="e-commerce-app-deployment"><a class="header" href="#e-commerce-app-deployment"><strong>E-commerce App Deployment</strong></a></h3>
+<pre><code class="language-javascript">// Deployment configuration
+const deploymentConfig = {
+  // Environment-specific settings
+  development: {
+    apiUrl: 'https://dev-api.ecommerce.com',
+    enableDebugMode: true,
+    crashReporting: false
+  },
+  staging: {
+    apiUrl: 'https://staging-api.ecommerce.com',
+    enableDebugMode: false,
+    crashReporting: true
+  },
+  production: {
+    apiUrl: 'https://api.ecommerce.com',
+    enableDebugMode: false,
+    crashReporting: true
+  }
+};
+
+// Environment detection
+const getEnvironment = () =&gt; {
+  if (__DEV__) return 'development';
+  if (Constants.manifest.releaseChannel === 'staging') return 'staging';
+  return 'production';
+};
+
+// Deployment script
+const deployApp = async (environment) =&gt; {
+  const config = deploymentConfig[environment];
+  
+  console.log(`Deploying to ${environment}...`);
+  
+  // Build configuration
+  await buildApp(environment);
+  
+  // Upload to appropriate store
+  if (environment === 'production') {
+    await uploadToAppStore();
+    await uploadToPlayStore();
+  } else {
+    await uploadToTestFlight();
+    await uploadToPlayStore('internal');
+  }
+  
+  console.log(`Deployment to ${environment} completed!`);
+};
+</code></pre>
+<hr>
+<h2 id="pro-tip"><a class="header" href="#pro-tip"><strong>Pro Tip</strong></a></h2>
+<p><strong>Implement feature flags to control feature rollout and enable instant updates without app store approval. Use a remote configuration service to toggle features dynamically, allowing you to fix issues or roll out new features instantly.</strong></p>
+<pre><code class="language-javascript">// Feature flags implementation
+const featureFlags = {
+  newCheckoutFlow: false,
+  enhancedSearch: true,
+  darkMode: true
+};
+
+const checkFeatureFlag = async (featureName) =&gt; {
+  try {
+    const response = await fetch(`https://api.yourapp.com/features/${featureName}`);
+    const { enabled } = await response.json();
+    return enabled;
+  } catch (error) {
+    // Fallback to default value
+    return featureFlags[featureName] || false;
+  }
+};
+
+// Usage in components
+const CheckoutFlow = () =&gt; {
+  const [useNewFlow, setUseNewFlow] = useState(false);
+  
+  useEffect(() =&gt; {
+    checkFeatureFlag('newCheckoutFlow').then(setUseNewFlow);
+  }, []);
+  
+  return useNewFlow ? &lt;NewCheckoutFlow /&gt; : &lt;OldCheckoutFlow /&gt;;
+};
+</code></pre>
+<hr>
+<h2 id="exercise--mini-task"><a class="header" href="#exercise--mini-task"><strong>Exercise / Mini Task</strong></a></h2>
+<p><strong>Task</strong>: Create a deployment pipeline for a React Native app using GitHub Actions that automatically builds and deploys to TestFlight (iOS) and Internal Testing (Android) when code is pushed to the main branch.</p>
+<p><strong>Requirements</strong>:</p>
+<ol>
+<li>Set up GitHub Actions workflow for both iOS and Android</li>
+<li>Configure automatic build and upload to testing platforms</li>
+<li>Implement version management</li>
+<li>Add environment-specific configurations</li>
+<li>Include build artifact storage</li>
+<li>Add deployment notifications</li>
+</ol>
+<p><strong>Bonus</strong>:</p>
+<ul>
+<li>Implement automated testing before deployment</li>
+<li>Add rollback functionality</li>
+<li>Include deployment analytics</li>
+<li>Set up staging environment</li>
+</ul>
+<hr>
+<p><em>App deployment is the final step in bringing your React Native application to users. Master these concepts to ensure smooth, secure, and successful app releases.</em></p>
+
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "react-native/deployment.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

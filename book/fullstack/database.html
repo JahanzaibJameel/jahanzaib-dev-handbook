@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>Database Design Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="Database Design Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Database Design Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>Database Design Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="fullstack/database.md">
-    <meta property="og:title" content="Database Design Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Database Design Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="fullstack/database.md">
-    <meta property="twitter:title" content="Database Design Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="Database Design Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="Database Design Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="fullstack/database.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "Database Design Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,70 +525,21 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    Database Design Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
+        <div id="content">
+            <main>
+                <h1 id="database-design-mastery"><a class="header" href="#database-design-mastery">Database Design Mastery</a></h1>
+<h2 id="what-is-database-design"><a class="header" href="#what-is-database-design">What is Database Design?</a></h2>
+<p>Database design is the process of structuring data in a way that ensures efficiency, integrity, and scalability. It involves choosing the right database type, designing schemas, creating relationships, and optimizing queries for performance.</p>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<h3 id="mongodb-schema-design"><a class="header" href="#mongodb-schema-design">MongoDB Schema Design</a></h3>
+<pre><code class="language-javascript">// models/User.js
+const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
 
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
-
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>Database Design Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;database-design-mastery&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#database-design-mastery&quot;&gt;Database Design Mastery&lt;/a&gt;&lt;/h1&gt;
-&lt;h2 id&#x3D;&quot;what-is-database-design&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#what-is-database-design&quot;&gt;What is Database Design?&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Database design is the process of structuring data in a way that ensures efficiency, integrity, and scalability. It involves choosing the right database type, designing schemas, creating relationships, and optimizing queries for performance.&lt;/p&gt;
-&lt;h2 id&#x3D;&quot;example&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#example&quot;&gt;Example&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;mongodb-schema-design&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#mongodb-schema-design&quot;&gt;MongoDB Schema Design&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// models/User.js
-const mongoose &#x3D; require(&#x27;mongoose&#x27;);
-const bcrypt &#x3D; require(&#x27;bcryptjs&#x27;);
-
-const userSchema &#x3D; new mongoose.Schema({
+const userSchema = new mongoose.Schema({
   // Basic information
   username: {
     type: String,
@@ -818,7 +554,7 @@ const userSchema &#x3D; new mongoose.Schema({
     required: true,
     unique: true,
     lowercase: true,
-    match: [/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/, &#x27;Please enter a valid email&#x27;]
+    match: [/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/, 'Please enter a valid email']
   },
   password: {
     type: String,
@@ -859,25 +595,25 @@ const userSchema &#x3D; new mongoose.Schema({
   // Relationships
   posts: [{
     type: mongoose.Schema.Types.ObjectId,
-    ref: &#x27;Post&#x27;
+    ref: 'Post'
   }],
   followers: [{
     type: mongoose.Schema.Types.ObjectId,
-    ref: &#x27;User&#x27;
+    ref: 'User'
   }],
   following: [{
     type: mongoose.Schema.Types.ObjectId,
-    ref: &#x27;User&#x27;
+    ref: 'User'
   }]
 });
 
 // Password hashing middleware
-userSchema.pre(&#x27;save&#x27;, async function(next) {
-  if (!this.isModified(&#x27;password&#x27;)) return next();
+userSchema.pre('save', async function(next) {
+  if (!this.isModified('password')) return next();
   
   try {
-    const salt &#x3D; await bcrypt.genSalt(12);
-    this.password &#x3D; await bcrypt.hash(this.password, salt);
+    const salt = await bcrypt.genSalt(12);
+    this.password = await bcrypt.hash(this.password, salt);
     next();
   } catch (error) {
     next(error);
@@ -885,20 +621,20 @@ userSchema.pre(&#x27;save&#x27;, async function(next) {
 });
 
 // Password comparison method
-userSchema.methods.comparePassword &#x3D; async function(candidatePassword) {
+userSchema.methods.comparePassword = async function(candidatePassword) {
   return bcrypt.compare(candidatePassword, this.password);
 };
 
 // Update timestamp on save
-userSchema.pre(&#x27;save&#x27;, function(next) {
-  this.updatedAt &#x3D; Date.now();
+userSchema.pre('save', function(next) {
+  this.updatedAt = Date.now();
   next();
 });
 
-module.exports &#x3D; mongoose.model(&#x27;User&#x27;, userSchema);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;postgresql-schema-design&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#postgresql-schema-design&quot;&gt;PostgreSQL Schema Design&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-sql&quot;&gt;-- Users table
+module.exports = mongoose.model('User', userSchema);
+</code></pre>
+<h3 id="postgresql-schema-design"><a class="header" href="#postgresql-schema-design">PostgreSQL Schema Design</a></h3>
+<pre><code class="language-sql">-- Users table
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username VARCHAR(50) UNIQUE NOT NULL,
@@ -924,7 +660,7 @@ CREATE TABLE posts (
     content TEXT NOT NULL,
     excerpt TEXT,
     featured_image VARCHAR(500),
-    status VARCHAR(20) DEFAULT &#x27;draft&#x27; CHECK (status IN (&#x27;draft&#x27;, &#x27;published&#x27;, &#x27;archived&#x27;)),
+    status VARCHAR(20) DEFAULT 'draft' CHECK (status IN ('draft', 'published', 'archived')),
     author_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
     views INTEGER DEFAULT 0,
     likes INTEGER DEFAULT 0,
@@ -974,10 +710,10 @@ CREATE INDEX idx_comments_author ON comments(author_id);
 CREATE OR REPLACE FUNCTION update_updated_at_column()
 RETURNS TRIGGER AS $$
 BEGIN
-    NEW.updated_at &#x3D; CURRENT_TIMESTAMP;
+    NEW.updated_at = CURRENT_TIMESTAMP;
     RETURN NEW;
 END;
-$$ language &#x27;plpgsql&#x27;;
+$$ language 'plpgsql';
 
 CREATE TRIGGER update_users_updated_at BEFORE UPDATE ON users
     FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
@@ -987,12 +723,12 @@ CREATE TRIGGER update_posts_updated_at BEFORE UPDATE ON posts
 
 CREATE TRIGGER update_comments_updated_at BEFORE UPDATE ON comments
     FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;real-use-case&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#real-use-case&quot;&gt;Real Use Case&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;e-commerce-database-design&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#e-commerce-database-design&quot;&gt;E-Commerce Database Design&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Amazon&lt;/strong&gt; and &lt;strong&gt;Shopify&lt;/strong&gt; use complex database designs for e-commerce:&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// MongoDB E-Commerce Schema
-const productSchema &#x3D; new mongoose.Schema({
+</code></pre>
+<h2 id="real-use-case"><a class="header" href="#real-use-case">Real Use Case</a></h2>
+<h3 id="e-commerce-database-design"><a class="header" href="#e-commerce-database-design">E-Commerce Database Design</a></h3>
+<p><strong>Amazon</strong> and <strong>Shopify</strong> use complex database designs for e-commerce:</p>
+<pre><code class="language-javascript">// MongoDB E-Commerce Schema
+const productSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -1013,7 +749,7 @@ const productSchema &#x3D; new mongoose.Schema({
   price: {
     current: { type: Number, required: true, min: 0 },
     original: { type: Number, min: 0 },
-    currency: { type: String, default: &#x27;USD&#x27; }
+    currency: { type: String, default: 'USD' }
   },
   
   // Inventory
@@ -1026,7 +762,7 @@ const productSchema &#x3D; new mongoose.Schema({
   // Categories and tags
   categories: [{
     type: mongoose.Schema.Types.ObjectId,
-    ref: &#x27;Category&#x27;
+    ref: 'Category'
   }],
   tags: [String],
   
@@ -1039,8 +775,8 @@ const productSchema &#x3D; new mongoose.Schema({
   
   // Variants (for products with options like size, color)
   variants: [{
-    name: { type: String, required: true }, // e.g., &quot;Size&quot;, &quot;Color&quot;
-    options: [String], // e.g., [&quot;S&quot;, &quot;M&quot;, &quot;L&quot;, &quot;XL&quot;]
+    name: { type: String, required: true }, // e.g., "Size", "Color"
+    options: [String], // e.g., ["S", "M", "L", "XL"]
     required: { type: Boolean, default: false }
   }],
   
@@ -1054,15 +790,15 @@ const productSchema &#x3D; new mongoose.Schema({
   // Status
   status: {
     type: String,
-    enum: [&#x27;active&#x27;, &#x27;inactive&#x27;, &#x27;draft&#x27;],
-    default: &#x27;draft&#x27;
+    enum: ['active', 'inactive', 'draft'],
+    default: 'draft'
   },
   
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now }
 });
 
-const orderSchema &#x3D; new mongoose.Schema({
+const orderSchema = new mongoose.Schema({
   orderNumber: {
     type: String,
     required: true,
@@ -1070,7 +806,7 @@ const orderSchema &#x3D; new mongoose.Schema({
   },
   customer: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: &#x27;User&#x27;,
+    ref: 'User',
     required: true
   },
   
@@ -1078,7 +814,7 @@ const orderSchema &#x3D; new mongoose.Schema({
   items: [{
     product: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: &#x27;Product&#x27;,
+      ref: 'Product',
       required: true
     },
     variant: {
@@ -1119,33 +855,33 @@ const orderSchema &#x3D; new mongoose.Schema({
   // Order status
   status: {
     type: String,
-    enum: [&#x27;pending&#x27;, &#x27;confirmed&#x27;, &#x27;processing&#x27;, &#x27;shipped&#x27;, &#x27;delivered&#x27;, &#x27;cancelled&#x27;],
-    default: &#x27;pending&#x27;
+    enum: ['pending', 'confirmed', 'processing', 'shipped', 'delivered', 'cancelled'],
+    default: 'pending'
   },
   
   paymentStatus: {
     type: String,
-    enum: [&#x27;pending&#x27;, &#x27;paid&#x27;, &#x27;failed&#x27;, &#x27;refunded&#x27;],
-    default: &#x27;pending&#x27;
+    enum: ['pending', 'paid', 'failed', 'refunded'],
+    default: 'pending'
   },
   
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now }
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;pro-tip&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#pro-tip&quot;&gt;Pro Tip&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Implement Database Indexing Strategy&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// MongoDB Indexing Strategy
+</code></pre>
+<h2 id="pro-tip"><a class="header" href="#pro-tip">Pro Tip</a></h2>
+<p><strong>Implement Database Indexing Strategy</strong></p>
+<pre><code class="language-javascript">// MongoDB Indexing Strategy
 class DatabaseOptimizer {
   static async createIndexes() {
-    const User &#x3D; require(&#x27;../models/User&#x27;);
-    const Post &#x3D; require(&#x27;../models/Post&#x27;);
-    const Product &#x3D; require(&#x27;../models/Product&#x27;);
+    const User = require('../models/User');
+    const Post = require('../models/Post');
+    const Product = require('../models/Product');
 
     // User indexes
     await User.collection.createIndex({ email: 1 }, { unique: true });
     await User.collection.createIndex({ username: 1 }, { unique: true });
-    await User.collection.createIndex({ &#x27;profile.location&#x27;: 1 });
+    await User.collection.createIndex({ 'profile.location': 1 });
     await User.collection.createIndex({ createdAt: -1 });
 
     // Post indexes
@@ -1154,11 +890,11 @@ class DatabaseOptimizer {
     await Post.collection.createIndex({ publishedAt: -1 });
     await Post.collection.createIndex({ tags: 1 });
     await Post.collection.createIndex({ 
-      title: &#x27;text&#x27;, 
-      content: &#x27;text&#x27;, 
-      excerpt: &#x27;text&#x27; 
+      title: 'text', 
+      content: 'text', 
+      excerpt: 'text' 
     }, { 
-      name: &#x27;search_index&#x27;,
+      name: 'search_index',
       weights: {
         title: 10,
         content: 5,
@@ -1180,43 +916,43 @@ class DatabaseOptimizer {
     await Product.collection.createIndex({ sku: 1 }, { unique: true });
     await Product.collection.createIndex({ categories: 1 });
     await Product.collection.createIndex({ tags: 1 });
-    await Product.collection.createIndex({ &#x27;price.current&#x27;: 1 });
+    await Product.collection.createIndex({ 'price.current': 1 });
     await Product.collection.createIndex({ status: 1 });
     await Product.collection.createIndex({ 
-      name: &#x27;text&#x27;, 
-      description: &#x27;text&#x27; 
+      name: 'text', 
+      description: 'text' 
     }, { 
-      name: &#x27;product_search&#x27;
+      name: 'product_search'
     });
 
-    console.log(&#x27;Database indexes created successfully&#x27;);
+    console.log('Database indexes created successfully');
   }
 
   static async analyzeQueryPerformance() {
-    const db &#x3D; mongoose.connection.db;
+    const db = mongoose.connection.db;
     
     // Get collection statistics
-    const collections &#x3D; await db.listCollections().toArray();
+    const collections = await db.listCollections().toArray();
     
     for (const collection of collections) {
-      const stats &#x3D; await db.collection(collection.name).stats();
-      console.log(&#x60;Collection: ${collection.name}&#x60;);
-      console.log(&#x60;Documents: ${stats.count}&#x60;);
-      console.log(&#x60;Avg doc size: ${stats.avgObjSize} bytes&#x60;);
-      console.log(&#x60;Total size: ${stats.size} bytes&#x60;);
+      const stats = await db.collection(collection.name).stats();
+      console.log(`Collection: ${collection.name}`);
+      console.log(`Documents: ${stats.count}`);
+      console.log(`Avg doc size: ${stats.avgObjSize} bytes`);
+      console.log(`Total size: ${stats.size} bytes`);
       
       // Get index information
-      const indexes &#x3D; await db.collection(collection.name).indexInformation();
-      console.log(&#x60;Indexes: ${Object.keys(indexes).length}&#x60;);
-      console.log(&#x27;---&#x27;);
+      const indexes = await db.collection(collection.name).indexInformation();
+      console.log(`Indexes: ${Object.keys(indexes).length}`);
+      console.log('---');
     }
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;exercise&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#exercise&quot;&gt;Exercise&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Design a Complete Blog Database System&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Create a comprehensive database design for a blog platform:&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Database Design Exercise
+</code></pre>
+<h2 id="exercise"><a class="header" href="#exercise">Exercise</a></h2>
+<p><strong>Design a Complete Blog Database System</strong></p>
+<p>Create a comprehensive database design for a blog platform:</p>
+<pre><code class="language-javascript">// Database Design Exercise
 // Design a database for a blog platform with the following requirements:
 // 1. Users can create posts and comments
 // 2. Posts can have multiple categories
@@ -1228,7 +964,7 @@ class DatabaseOptimizer {
 // Solution:
 
 // 1. MongoDB Schema Design
-const blogUserSchema &#x3D; new mongoose.Schema({
+const blogUserSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
@@ -1257,26 +993,26 @@ const blogUserSchema &#x3D; new mongoose.Schema({
   updatedAt: { type: Date, default: Date.now }
 });
 
-const blogPostSchema &#x3D; new mongoose.Schema({
+const blogPostSchema = new mongoose.Schema({
   title: { type: String, required: true, maxlength: 200 },
   slug: { type: String, required: true, unique: true },
   content: { type: String, required: true },
   excerpt: { type: String, maxlength: 500 },
   author: { 
     type: mongoose.Schema.Types.ObjectId, 
-    ref: &#x27;BlogUser&#x27;, 
+    ref: 'BlogUser', 
     required: true 
   },
   categories: [{
     type: mongoose.Schema.Types.ObjectId,
-    ref: &#x27;Category&#x27;
+    ref: 'Category'
   }],
   tags: [String],
   featuredImage: String,
   status: {
     type: String,
-    enum: [&#x27;draft&#x27;, &#x27;published&#x27;, &#x27;archived&#x27;],
-    default: &#x27;draft&#x27;
+    enum: ['draft', 'published', 'archived'],
+    default: 'draft'
   },
   seo: {
     metaTitle: String,
@@ -1295,7 +1031,7 @@ const blogPostSchema &#x3D; new mongoose.Schema({
   updatedAt: { type: Date, default: Date.now }
 });
 
-const categorySchema &#x3D; new mongoose.Schema({
+const categorySchema = new mongoose.Schema({
   name: { type: String, required: true, unique: true },
   slug: { type: String, required: true, unique: true },
   description: String,
@@ -1303,29 +1039,29 @@ const categorySchema &#x3D; new mongoose.Schema({
   icon: String,
   parentCategory: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: &#x27;Category&#x27;
+    ref: 'Category'
   },
   postsCount: { type: Number, default: 0 },
   createdAt: { type: Date, default: Date.now }
 });
 
-const commentSchema &#x3D; new mongoose.Schema({
+const commentSchema = new mongoose.Schema({
   content: { type: String, required: true, maxlength: 1000 },
   author: { 
     type: mongoose.Schema.Types.ObjectId, 
-    ref: &#x27;BlogUser&#x27;, 
+    ref: 'BlogUser', 
     required: true 
   },
   post: { 
     type: mongoose.Schema.Types.ObjectId, 
-    ref: &#x27;BlogPost&#x27;, 
+    ref: 'BlogPost', 
     required: true 
   },
   parent: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: &#x27;Comment&#x27;
+    ref: 'Comment'
   },
-  likes: [{ type: mongoose.Schema.Types.ObjectId, ref: &#x27;BlogUser&#x27; }],
+  likes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'BlogUser' }],
   isApproved: { type: Boolean, default: false },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now }
@@ -1342,7 +1078,7 @@ class BlogDatabase {
     // User indexes
     await BlogUser.collection.createIndex({ email: 1 }, { unique: true });
     await BlogUser.collection.createIndex({ username: 1 }, { unique: true });
-    await BlogUser.collection.createIndex({ &#x27;stats.postsCount&#x27;: -1 });
+    await BlogUser.collection.createIndex({ 'stats.postsCount': -1 });
     await BlogUser.collection.createIndex({ createdAt: -1 });
 
     // Post indexes
@@ -1352,17 +1088,17 @@ class BlogDatabase {
     await BlogPost.collection.createIndex({ publishedAt: -1 });
     await BlogPost.collection.createIndex({ categories: 1 });
     await BlogPost.collection.createIndex({ tags: 1 });
-    await BlogPost.collection.createIndex({ &#x27;stats.views&#x27;: -1 });
-    await BlogPost.collection.createIndex({ &#x27;stats.likes&#x27;: -1 });
+    await BlogPost.collection.createIndex({ 'stats.views': -1 });
+    await BlogPost.collection.createIndex({ 'stats.likes': -1 });
     
     // Search index
     await BlogPost.collection.createIndex({
-      title: &#x27;text&#x27;,
-      content: &#x27;text&#x27;,
-      excerpt: &#x27;text&#x27;,
-      tags: &#x27;text&#x27;
+      title: 'text',
+      content: 'text',
+      excerpt: 'text',
+      tags: 'text'
     }, {
-      name: &#x27;blog_search&#x27;,
+      name: 'blog_search',
       weights: {
         title: 10,
         content: 5,
@@ -1382,30 +1118,30 @@ class BlogDatabase {
     await Comment.collection.createIndex({ createdAt: -1 });
   }
 
-  static async getPopularPosts(limit &#x3D; 10) {
-    return BlogPost.find({ status: &#x27;published&#x27; })
-      .sort({ &#x27;stats.likes&#x27;: -1, &#x27;stats.views&#x27;: -1 })
+  static async getPopularPosts(limit = 10) {
+    return BlogPost.find({ status: 'published' })
+      .sort({ 'stats.likes': -1, 'stats.views': -1 })
       .limit(limit)
-      .populate(&#x27;author&#x27;, &#x27;username profile.displayName profile.avatar&#x27;)
-      .populate(&#x27;categories&#x27;, &#x27;name slug&#x27;);
+      .populate('author', 'username profile.displayName profile.avatar')
+      .populate('categories', 'name slug');
   }
 
-  static async getPostsByCategory(categorySlug, page &#x3D; 1, limit &#x3D; 10) {
-    const category &#x3D; await Category.findOne({ slug: categorySlug });
+  static async getPostsByCategory(categorySlug, page = 1, limit = 10) {
+    const category = await Category.findOne({ slug: categorySlug });
     if (!category) return null;
 
-    const posts &#x3D; await BlogPost.find({ 
+    const posts = await BlogPost.find({ 
       categories: category._id, 
-      status: &#x27;published&#x27; 
+      status: 'published' 
     })
     .sort({ publishedAt: -1 })
     .skip((page - 1) * limit)
     .limit(limit)
-    .populate(&#x27;author&#x27;, &#x27;username profile.displayName profile.avatar&#x27;);
+    .populate('author', 'username profile.displayName profile.avatar');
 
-    const total &#x3D; await BlogPost.countDocuments({ 
+    const total = await BlogPost.countDocuments({ 
       categories: category._id, 
-      status: &#x27;published&#x27; 
+      status: 'published' 
     });
 
     return {
@@ -1419,83 +1155,34 @@ class BlogDatabase {
     };
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Your Tasks:&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Implement the complete blog database schema&lt;/li&gt;
-&lt;li&gt;Create database migration scripts&lt;/li&gt;
-&lt;li&gt;Add proper indexing strategy&lt;/li&gt;
-&lt;li&gt;Implement data validation and constraints&lt;/li&gt;
-&lt;li&gt;Create database backup and restore procedures&lt;/li&gt;
-&lt;li&gt;Add database monitoring and performance optimization&lt;/li&gt;
-&lt;li&gt;Implement database testing strategies&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This exercise teaches you:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Database schema design principles&lt;/li&gt;
-&lt;li&gt;SQL vs NoSQL database selection&lt;/li&gt;
-&lt;li&gt;Indexing and performance optimization&lt;/li&gt;
-&lt;li&gt;Data relationships and integrity&lt;/li&gt;
-&lt;li&gt;Database security and backup strategies&lt;/li&gt;
-&lt;li&gt;Scalability considerations&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Next Up&lt;/strong&gt;: Learn about authentication and authorization systems! Authentication &amp;amp; Authorization&lt;/p&gt;
+</code></pre>
+<p><strong>Your Tasks:</strong></p>
+<ol>
+<li>Implement the complete blog database schema</li>
+<li>Create database migration scripts</li>
+<li>Add proper indexing strategy</li>
+<li>Implement data validation and constraints</li>
+<li>Create database backup and restore procedures</li>
+<li>Add database monitoring and performance optimization</li>
+<li>Implement database testing strategies</li>
+</ol>
+<p>This exercise teaches you:</p>
+<ul>
+<li>Database schema design principles</li>
+<li>SQL vs NoSQL database selection</li>
+<li>Indexing and performance optimization</li>
+<li>Data relationships and integrity</li>
+<li>Database security and backup strategies</li>
+<li>Scalability considerations</li>
+</ul>
+<hr>
+<p><strong>Next Up</strong>: Learn about authentication and authorization systems! Authentication &amp; Authorization</p>
 
-                        </div>
-                        
-                    </article>
-                </div>
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "fullstack/database.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

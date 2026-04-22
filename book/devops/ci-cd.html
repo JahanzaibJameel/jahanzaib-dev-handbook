@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>CI/CD Pipeline Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="CI/CD Pipeline Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, CI/CD Pipeline Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>CI/CD Pipeline Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="devops/ci-cd.md">
-    <meta property="og:title" content="CI/CD Pipeline Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="CI/CD Pipeline Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="devops/ci-cd.md">
-    <meta property="twitter:title" content="CI/CD Pipeline Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="CI/CD Pipeline Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="CI/CD Pipeline Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="devops/ci-cd.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "CI/CD Pipeline Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,75 +525,26 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    CI/CD Pipeline Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
-
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>CI/CD Pipeline Mastery - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;cicd-pipeline&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#cicd-pipeline&quot;&gt;CI/CD Pipeline&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Continuous Integration and Continuous Deployment (CI/CD) automates the process of building, testing, and deploying your applications. This ensures consistent, reliable deployments and faster development cycles.&lt;/p&gt;
-&lt;h2 id&#x3D;&quot;-what-is-cicd&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-what-is-cicd&quot;&gt;🎯 What is CI/CD?&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;CI/CD is a practice where developers integrate code into a shared repository multiple times per day, and each integration is automatically built and tested.&lt;/p&gt;
-&lt;h3 id&#x3D;&quot;cicd-pipeline-benefits&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#cicd-pipeline-benefits&quot;&gt;CI/CD Pipeline Benefits&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Automated Testing&lt;/strong&gt;: Catch bugs early in development&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Consistent Deployments&lt;/strong&gt;: Reduce human error&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Faster Delivery&lt;/strong&gt;: Ship features to production quickly&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Quality Assurance&lt;/strong&gt;: Automated quality checks&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rollback Capability&lt;/strong&gt;: Easy rollback if issues occur&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id&#x3D;&quot;-cicd-tools--platforms&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-cicd-tools--platforms&quot;&gt;🛠️ CI/CD Tools &amp;amp; Platforms&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;github-actions---most-popular&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#github-actions---most-popular&quot;&gt;GitHub Actions - Most Popular&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-yaml&quot;&gt;# .github/workflows/ci-cd.yml
+        <div id="content">
+            <main>
+                <h1 id="cicd-pipeline"><a class="header" href="#cicd-pipeline">CI/CD Pipeline</a></h1>
+<p>Continuous Integration and Continuous Deployment (CI/CD) automates the process of building, testing, and deploying your applications. This ensures consistent, reliable deployments and faster development cycles.</p>
+<h2 id="-what-is-cicd"><a class="header" href="#-what-is-cicd">🎯 What is CI/CD?</a></h2>
+<p>CI/CD is a practice where developers integrate code into a shared repository multiple times per day, and each integration is automatically built and tested.</p>
+<h3 id="cicd-pipeline-benefits"><a class="header" href="#cicd-pipeline-benefits">CI/CD Pipeline Benefits</a></h3>
+<ul>
+<li><strong>Automated Testing</strong>: Catch bugs early in development</li>
+<li><strong>Consistent Deployments</strong>: Reduce human error</li>
+<li><strong>Faster Delivery</strong>: Ship features to production quickly</li>
+<li><strong>Quality Assurance</strong>: Automated quality checks</li>
+<li><strong>Rollback Capability</strong>: Easy rollback if issues occur</li>
+</ul>
+<h2 id="-cicd-tools--platforms"><a class="header" href="#-cicd-tools--platforms">🛠️ CI/CD Tools &amp; Platforms</a></h2>
+<h3 id="github-actions---most-popular"><a class="header" href="#github-actions---most-popular">GitHub Actions - Most Popular</a></h3>
+<pre><code class="language-yaml"># .github/workflows/ci-cd.yml
 name: CI/CD Pipeline
 
 on:
@@ -818,12 +554,12 @@ on:
     branches: [main]
 
 env:
-  NODE_VERSION: &#x27;18&#x27;
+  NODE_VERSION: '18'
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  # Code Quality &amp;amp; Testing
+  # Code Quality &amp; Testing
   test:
     runs-on: ubuntu-latest
     
@@ -835,7 +571,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: &#x27;npm&#x27;
+          cache: 'npm'
           
       - name: Install dependencies
         run: npm ci
@@ -876,11 +612,11 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
-  # Build &amp;amp; Deploy Frontend
+  # Build &amp; Deploy Frontend
   deploy-frontend:
     runs-on: ubuntu-latest
     needs: [test, security]
-    if: github.ref &#x3D;&#x3D; &#x27;refs/heads/main&#x27;
+    if: github.ref == 'refs/heads/main'
     
     steps:
       - name: Checkout code
@@ -890,7 +626,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: &#x27;npm&#x27;
+          cache: 'npm'
           
       - name: Install dependencies
         run: npm ci
@@ -911,11 +647,11 @@ jobs:
       - name: Run E2E tests
         run: npm run test:e2e:production
 
-  # Build &amp;amp; Deploy Backend
+  # Build &amp; Deploy Backend
   deploy-backend:
     runs-on: ubuntu-latest
     needs: [test, security]
-    if: github.ref &#x3D;&#x3D; &#x27;refs/heads/main&#x27;
+    if: github.ref == 'refs/heads/main'
     
     steps:
       - name: Checkout code
@@ -937,10 +673,10 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type&#x3D;ref,event&#x3D;branch
-            type&#x3D;ref,event&#x3D;pr
-            type&#x3D;sha,prefix&#x3D;{{branch}}-
-            type&#x3D;raw,value&#x3D;latest,enable&#x3D;{{is_default_branch}}
+            type=ref,event=branch
+            type=ref,event=pr
+            type=sha,prefix={{branch}}-
+            type=raw,value=latest,enable={{is_default_branch}}
             
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
@@ -950,24 +686,24 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type&#x3D;gha
-          cache-to: type&#x3D;gha,mode&#x3D;max
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
           
       - name: Deploy to Railway
         run: |
           curl -X POST https://backboard.railway.app/v2/deployments \
-            -H &quot;Authorization: Bearer ${{ secrets.RAILWAY_TOKEN }}&quot; \
-            -H &quot;Content-Type: application/json&quot; \
-            -d &#x27;{
-              &quot;serviceId&quot;: &quot;${{ secrets.RAILWAY_SERVICE_ID }}&quot;,
-              &quot;image&quot;: &quot;${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}&quot;
-            }&#x27;
+            -H "Authorization: Bearer ${{ secrets.RAILWAY_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "serviceId": "${{ secrets.RAILWAY_SERVICE_ID }}",
+              "image": "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}"
+            }'
 
   # Deploy Documentation
   deploy-docs:
     runs-on: ubuntu-latest
     needs: [test, security]
-    if: github.ref &#x3D;&#x3D; &#x27;refs/heads/main&#x27;
+    if: github.ref == 'refs/heads/main'
     
     steps:
       - name: Checkout code
@@ -987,9 +723,9 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./book
           cname: docs.yourapp.com
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;advanced-multi-environment-pipeline&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#advanced-multi-environment-pipeline&quot;&gt;Advanced Multi-Environment Pipeline&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-yaml&quot;&gt;# .github/workflows/advanced-ci-cd.yml
+</code></pre>
+<h3 id="advanced-multi-environment-pipeline"><a class="header" href="#advanced-multi-environment-pipeline">Advanced Multi-Environment Pipeline</a></h3>
+<pre><code class="language-yaml"># .github/workflows/advanced-ci-cd.yml
 name: Advanced CI/CD
 
 on:
@@ -1033,7 +769,7 @@ jobs:
   performance:
     runs-on: ubuntu-latest
     needs: test-matrix
-    if: github.ref &#x3D;&#x3D; &#x27;refs/heads/main&#x27;
+    if: github.ref == 'refs/heads/main'
     
     steps:
       - name: Checkout
@@ -1042,7 +778,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: &#x27;18&#x27;
+          node-version: '18'
           
       - name: Install dependencies
         run: npm ci
@@ -1067,56 +803,56 @@ jobs:
   deploy-canary:
     runs-on: ubuntu-latest
     needs: [test-matrix, performance]
-    if: github.ref &#x3D;&#x3D; &#x27;refs/heads/develop&#x27;
+    if: github.ref == 'refs/heads/develop'
     
     steps:
       - name: Deploy to Canary
         run: |
           # Deploy 10% of traffic to canary version
-          curl -X POST &quot;https://api.vercel.com/v13/deployments&quot; \
-            -H &quot;Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}&quot; \
-            -d &#x27;{
-              &quot;name&quot;: &quot;canary-${{ github.sha }}&quot;,
-              &quot;project&quot;: &quot;${{ secrets.VERCEL_PROJECT_ID }}&quot;,
-              &quot;target&quot;: &quot;production&quot;,
-              &quot;alias&quot;: &quot;canary&quot;
-            }&#x27;
+          curl -X POST "https://api.vercel.com/v13/deployments" \
+            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            -d '{
+              "name": "canary-${{ github.sha }}",
+              "project": "${{ secrets.VERCEL_PROJECT_ID }}",
+              "target": "production",
+              "alias": "canary"
+            }'
 
   # Production Deployment
   deploy-production:
     runs-on: ubuntu-latest
     needs: [test-matrix, performance]
-    if: github.ref &#x3D;&#x3D; &#x27;refs/heads/main&#x27;
+    if: github.ref == 'refs/heads/main'
     
     steps:
       - name: Deploy to Production
         run: |
           # Full production deployment
-          curl -X POST &quot;https://api.vercel.com/v13/deployments&quot; \
-            -H &quot;Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}&quot; \
-            -d &#x27;{
-              &quot;name&quot;: &quot;production-${{ github.sha }}&quot;,
-              &quot;project&quot;: &quot;${{ secrets.VERCEL_PROJECT_ID }}&quot;,
-              &quot;target&quot;: &quot;production&quot;
-            }&#x27;
+          curl -X POST "https://api.vercel.com/v13/deployments" \
+            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            -d '{
+              "name": "production-${{ github.sha }}",
+              "project": "${{ secrets.VERCEL_PROJECT_ID }}",
+              "target": "production"
+            }'
             
       - name: Update deployment status
         uses: chrnorm/deployment-status@v2
         with:
-          token: &#x27;${{ secrets.GITHUB_TOKEN }}&#x27;
+          token: '${{ secrets.GITHUB_TOKEN }}'
           environment-url: https://yourapp.com
           environment: production
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-docker-integration&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-docker-integration&quot;&gt;🐳 Docker Integration&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;multi-stage-dockerfile&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#multi-stage-dockerfile&quot;&gt;Multi-Stage Dockerfile&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-dockerfile&quot;&gt;# backend/Dockerfile
+</code></pre>
+<h2 id="-docker-integration"><a class="header" href="#-docker-integration">🐳 Docker Integration</a></h2>
+<h3 id="multi-stage-dockerfile"><a class="header" href="#multi-stage-dockerfile">Multi-Stage Dockerfile</a></h3>
+<pre><code class="language-dockerfile"># backend/Dockerfile
 FROM node:18-alpine AS base
 
 # Install dependencies
 FROM base AS deps
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --only&#x3D;production &amp;amp;&amp;amp; npm cache clean
+RUN npm ci --only=production &amp;&amp; npm cache clean
 
 # Build application
 FROM base AS builder
@@ -1135,26 +871,26 @@ RUN addgroup -g 1001 -S nodejs
 RUN adduser -S nextjs -u 1001
 
 # Copy built application
-COPY --from&#x3D;builder --chown&#x3D;nextjs:nodejs /app/dist ./dist
-COPY --from&#x3D;deps --chown&#x3D;nextjs:nodejs /app/node_modules ./node_modules
-COPY --from&#x3D;builder --chown&#x3D;nextjs:nodejs /app/package.json ./package.json
+COPY --from=builder --chown=nextjs:nodejs /app/dist ./dist
+COPY --from=deps --chown=nextjs:nodejs /app/node_modules ./node_modules
+COPY --from=builder --chown=nextjs:nodejs /app/package.json ./package.json
 
 USER nextjs
 
 EXPOSE 3000
 
-ENV NODE_ENV&#x3D;production
-ENV PORT&#x3D;3000
+ENV NODE_ENV=production
+ENV PORT=3000
 
-CMD [&quot;npm&quot;, &quot;start&quot;]
+CMD ["npm", "start"]
 
 # Health check
-HEALTHCHECK --interval&#x3D;30s --timeout&#x3D;3s --start-period&#x3D;5s --retries&#x3D;3 \
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
   CMD curl -f http://localhost:3000/health || exit 1
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;docker-compose-for-development&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#docker-compose-for-development&quot;&gt;Docker Compose for Development&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-yaml&quot;&gt;# docker-compose.dev.yml
-version: &#x27;3.8&#x27;
+</code></pre>
+<h3 id="docker-compose-for-development"><a class="header" href="#docker-compose-for-development">Docker Compose for Development</a></h3>
+<pre><code class="language-yaml"># docker-compose.dev.yml
+version: '3.8'
 
 services:
   app:
@@ -1162,11 +898,11 @@ services:
       context: .
       dockerfile: Dockerfile.dev
     ports:
-      - &quot;3000:3000&quot;
+      - "3000:3000"
     environment:
-      - NODE_ENV&#x3D;development
-      - DATABASE_URL&#x3D;postgresql://postgres:password@postgres:5432/myapp
-      - REDIS_URL&#x3D;redis://redis:6379
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://postgres:password@postgres:5432/myapp
+      - REDIS_URL=redis://redis:6379
     volumes:
       - .:/app
       - /app/node_modules
@@ -1177,25 +913,25 @@ services:
   postgres:
     image: postgres:15-alpine
     environment:
-      - POSTGRES_DB&#x3D;myapp
-      - POSTGRES_USER&#x3D;postgres
-      - POSTGRES_PASSWORD&#x3D;password
+      - POSTGRES_DB=myapp
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
-      - &quot;5432:5432&quot;
+      - "5432:5432"
       
   redis:
     image: redis:7-alpine
     ports:
-      - &quot;6379:6379&quot;
+      - "6379:6379"
     volumes:
       - redis_data:/data
       
   nginx:
     image: nginx:alpine
     ports:
-      - &quot;80:80&quot;
+      - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
     depends_on:
@@ -1204,15 +940,15 @@ services:
 volumes:
   postgres_data:
   redis_data:
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-monitoring--observability&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-monitoring--observability&quot;&gt;🔧 Monitoring &amp;amp; Observability&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;application-performance-monitoring&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#application-performance-monitoring&quot;&gt;Application Performance Monitoring&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-yaml&quot;&gt;# .github/workflows/monitoring.yml
+</code></pre>
+<h2 id="-monitoring--observability"><a class="header" href="#-monitoring--observability">🔧 Monitoring &amp; Observability</a></h2>
+<h3 id="application-performance-monitoring"><a class="header" href="#application-performance-monitoring">Application Performance Monitoring</a></h3>
+<pre><code class="language-yaml"># .github/workflows/monitoring.yml
 name: Performance Monitoring
 
 on:
   schedule:
-    - cron: &#x27;0 */6 * * *&#x27;  # Every 6 hours
+    - cron: '0 */6 * * *'  # Every 6 hours
   workflow_dispatch:
 
 jobs:
@@ -1230,9 +966,9 @@ jobs:
           
       - name: Check application health
         run: |
-          response&#x3D;$(curl -s -o /dev/null -w &quot;%{http_code}&quot; https://yourapp.com/health)
+          response=$(curl -s -o /dev/null -w "%{http_code}" https://yourapp.com/health)
           if [ $response -ne 200 ]; then
-            echo &quot;Health check failed&quot;
+            echo "Health check failed"
             exit 1
           fi
           
@@ -1240,7 +976,7 @@ jobs:
         uses: lencx/uptime-check@v1
         with:
           url: https://yourapp.com
-          expected-statuses: &#x27;200,301&#x27;
+          expected-statuses: '200,301'
           max-attempts: 3
           
       - name: Notify on failure
@@ -1248,12 +984,12 @@ jobs:
         uses: 8398a7/action-slack@v3
         with:
           status: failure
-          channel: &#x27;#alerts&#x27;
-          text: &#x27;Performance monitoring detected issues!&#x27;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;error-tracking-integration&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#error-tracking-integration&quot;&gt;Error Tracking Integration&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// monitoring/errorTracking.js
-const Sentry &#x3D; require(&#x27;@sentry/node&#x27;);
+          channel: '#alerts'
+          text: 'Performance monitoring detected issues!'
+</code></pre>
+<h3 id="error-tracking-integration"><a class="header" href="#error-tracking-integration">Error Tracking Integration</a></h3>
+<pre><code class="language-javascript">// monitoring/errorTracking.js
+const Sentry = require('@sentry/node');
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
@@ -1262,41 +998,41 @@ Sentry.init({
 });
 
 // Error handling middleware
-const errorHandler &#x3D; (err, req, res, next) &#x3D;&amp;gt; {
+const errorHandler = (err, req, res, next) =&gt; {
   // Send to Sentry
   Sentry.captureException(err);
   
   // Log error details
-  console.error(&#x27;Error:&#x27;, {
+  console.error('Error:', {
     message: err.message,
     stack: err.stack,
     url: req.url,
     method: req.method,
-    userAgent: req.get(&#x27;User-Agent&#x27;),
+    userAgent: req.get('User-Agent'),
     timestamp: new Date().toISOString()
   });
   
   // Respond with error
   res.status(500).json({
-    error: &#x27;Internal server error&#x27;,
+    error: 'Internal server error',
     requestId: req.id
   });
 };
 
-module.exports &#x3D; errorHandler;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-quality-gates--policies&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-quality-gates--policies&quot;&gt;📊 Quality Gates &amp;amp; Policies&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;branch-protection-rules&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#branch-protection-rules&quot;&gt;Branch Protection Rules&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-yaml&quot;&gt;# .github/branch-protection.yml
+module.exports = errorHandler;
+</code></pre>
+<h2 id="-quality-gates--policies"><a class="header" href="#-quality-gates--policies">📊 Quality Gates &amp; Policies</a></h2>
+<h3 id="branch-protection-rules"><a class="header" href="#branch-protection-rules">Branch Protection Rules</a></h3>
+<pre><code class="language-yaml"># .github/branch-protection.yml
 protection_rules:
   main:
     required_status_checks:
       strict: true
       contexts:
-        - &quot;CI/CD Pipeline (test)&quot;
-        - &quot;CI/CD Pipeline (security)&quot;
-        - &quot;CodeQL Analysis&quot;
-        - &quot;Dependency Review&quot;
+        - "CI/CD Pipeline (test)"
+        - "CI/CD Pipeline (security)"
+        - "CodeQL Analysis"
+        - "Dependency Review"
     required_pull_request_reviews:
       required_approving_review_count: 2
       dismiss_stale_reviews: true
@@ -1304,10 +1040,10 @@ protection_rules:
     enforce_admins: true
     restrictions:
       users: []
-      teams: [&quot;core-developers&quot;]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;automated-quality-checks&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#automated-quality-checks&quot;&gt;Automated Quality Checks&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-yaml&quot;&gt;# .github/workflows/quality-gates.yml
+      teams: ["core-developers"]
+</code></pre>
+<h3 id="automated-quality-checks"><a class="header" href="#automated-quality-checks">Automated Quality Checks</a></h3>
+<pre><code class="language-yaml"># .github/workflows/quality-gates.yml
 name: Quality Gates
 
 on:
@@ -1332,7 +1068,7 @@ jobs:
       - name: Security Vulnerability Scan
         uses: securecodewarrior/github-action-add-sarif@v1
         with:
-          sarif-file: &#x27;security-scan-results.sarif&#x27;
+          sarif-file: 'security-scan-results.sarif'
           
       - name: Dependency Review
         uses: actions/dependency-review-action@v3
@@ -1341,30 +1077,30 @@ jobs:
           
       - name: Check test coverage
         run: |
-          coverage&#x3D;$(npm run test:coverage:extract)
-          if (( $(echo &quot;$coverage&quot; | bc -l) &amp;lt; 80 )); then
-            echo &quot;Coverage below threshold&quot;
+          coverage=$(npm run test:coverage:extract)
+          if (( $(echo "$coverage" | bc -l) &lt; 80 )); then
+            echo "Coverage below threshold"
             exit 1
           fi
           
       - name: Bundle size analysis
         uses: preactjs/compressed-size-action@v2
         with:
-          repo-token: &quot;${{ secrets.GITHUB_TOKEN }}&quot;
-          exclude: &quot;{**/node_modules/**}&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-deployment-strategies&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-deployment-strategies&quot;&gt;🚀 Deployment Strategies&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;blue-green-deployment&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#blue-green-deployment&quot;&gt;Blue-Green Deployment&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-yaml&quot;&gt;# .github/workflows/blue-green.yml
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          exclude: "{**/node_modules/**}"
+</code></pre>
+<h2 id="-deployment-strategies"><a class="header" href="#-deployment-strategies">🚀 Deployment Strategies</a></h2>
+<h3 id="blue-green-deployment"><a class="header" href="#blue-green-deployment">Blue-Green Deployment</a></h3>
+<pre><code class="language-yaml"># .github/workflows/blue-green.yml
 name: Blue-Green Deployment
 
 on:
   workflow_dispatch:
     inputs:
       environment:
-        description: &#x27;Target environment&#x27;
+        description: 'Target environment'
         required: true
-        default: &#x27;staging&#x27;
+        default: 'staging'
 
 jobs:
   deploy-blue-green:
@@ -1382,7 +1118,7 @@ jobs:
       - name: Health Check Blue
         run: |
           # Wait for blue to be healthy
-          timeout 300s bash -c &#x27;until curl -f http://blue.yourapp.com/health; do sleep 5; done&#x27;
+          timeout 300s bash -c 'until curl -f http://blue.yourapp.com/health; do sleep 5; done'
           
       - name: Switch Traffic
         run: |
@@ -1390,8 +1126,8 @@ jobs:
           aws elbv2 set-weights \
             --load-balancer-app-name your-app-lb \
             --target-group-arn arn:aws:elasticloadbalancing:...:targetgroup/blue/... \
-            --targets TargetGroup&#x3D;arn:aws:elasticloadbalancing:...:targetgroup/blue/...,Weight&#x3D;100 \
-            --targets TargetGroup&#x3D;arn:aws:elasticloadbalancing:...:targetgroup/green/...,Weight&#x3D;0
+            --targets TargetGroup=arn:aws:elasticloadbalancing:...:targetgroup/blue/...,Weight=100 \
+            --targets TargetGroup=arn:aws:elasticloadbalancing:...:targetgroup/green/...,Weight=0
             
       - name: Final Health Check
         run: |
@@ -1401,10 +1137,10 @@ jobs:
       - name: Cleanup Green
         run: |
           # Keep green for rollback
-          echo &quot;Green environment kept for rollback&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;canary-deployments&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#canary-deployments&quot;&gt;Canary Deployments&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-yaml&quot;&gt;# .github/workflows/canary.yml
+          echo "Green environment kept for rollback"
+</code></pre>
+<h3 id="canary-deployments"><a class="header" href="#canary-deployments">Canary Deployments</a></h3>
+<pre><code class="language-yaml"># .github/workflows/canary.yml
 name: Canary Deployment
 
 on:
@@ -1423,40 +1159,40 @@ jobs:
         run: |
           # Deploy to canary environment
           helm upgrade --install canary ./helm-chart \
-            --set image.tag&#x3D;${{ github.sha }} \
-            --set trafficWeight&#x3D;10 \
-            --set environment&#x3D;canary
+            --set image.tag=${{ github.sha }} \
+            --set trafficWeight=10 \
+            --set environment=canary
             
       - name: Monitor Canary
         run: |
           # Monitor for 15 minutes
-          timeout 900s bash -c &#x27;
+          timeout 900s bash -c '
             while true; do
-              error_rate&#x3D;$(curl -s http://canary.yourapp.com/metrics | jq &quot;.errorRate&quot;)
-              if (( $(echo &quot;$error_rate&quot; | bc -l) &amp;gt; 5 )); then
-                echo &quot;Canary error rate too high: $error_rate%&quot;
+              error_rate=$(curl -s http://canary.yourapp.com/metrics | jq ".errorRate")
+              if (( $(echo "$error_rate" | bc -l) &gt; 5 )); then
+                echo "Canary error rate too high: $error_rate%"
                 exit 1
               fi
               sleep 30
             done
-          &#x27;
+          '
           
       - name: Promote Canary
         if: success()
         run: |
           # Promote canary to production
           helm upgrade --install production ./helm-chart \
-            --set image.tag&#x3D;${{ github.sha }} \
-            --set trafficWeight&#x3D;100
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-best-practices&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-best-practices&quot;&gt;🔧 Best Practices&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;pipeline-optimization&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#pipeline-optimization&quot;&gt;Pipeline Optimization&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-yaml&quot;&gt;# Use caching for faster builds
+            --set image.tag=${{ github.sha }} \
+            --set trafficWeight=100
+</code></pre>
+<h2 id="-best-practices"><a class="header" href="#-best-practices">🔧 Best Practices</a></h2>
+<h3 id="pipeline-optimization"><a class="header" href="#pipeline-optimization">Pipeline Optimization</a></h3>
+<pre><code class="language-yaml"># Use caching for faster builds
 - name: Cache node modules
   uses: actions/cache@v3
   with:
     path: ~/.npm
-    key: ${{ runner.os }}-node-${{ hashFiles(&#x27;**/package-lock.json&#x27;) }}
+    key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
     restore-keys: |
       ${{ runner.os }}-node-
 
@@ -1479,9 +1215,9 @@ jobs:
       dist/
       coverage/
     retention-days: 30
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;security-best-practices&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#security-best-practices&quot;&gt;Security Best Practices&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-yaml&quot;&gt;# Use secrets properly
+</code></pre>
+<h3 id="security-best-practices"><a class="header" href="#security-best-practices">Security Best Practices</a></h3>
+<pre><code class="language-yaml"># Use secrets properly
 env:
   API_KEY: ${{ secrets.API_KEY }}
   DATABASE_URL: ${{ secrets.DATABASE_URL }}
@@ -1490,75 +1226,26 @@ env:
 - name: Build Docker image
   run: |
     docker build \
-      --build-arg API_KEY&#x3D;${{ secrets.API_KEY }} \
-      --build-arg DATABASE_URL&#x3D;${{ secrets.DATABASE_URL }} \
+      --build-arg API_KEY=${{ secrets.API_KEY }} \
+      --build-arg DATABASE_URL=${{ secrets.DATABASE_URL }} \
       -t myapp:${{ github.sha }} .
       
 # Security scanning
 - name: Run security scan
   uses: aquasecurity/trivy-action@master
   with:
-    image-ref: &#x27;docker.io/myapp:${{ github.sha }}&#x27;
-    format: &#x27;sarif&#x27;
-    output: &#x27;trivy-results.sarif&#x27;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Next Up&lt;/strong&gt;: Learn about Deployment Strategies! 🚀&lt;/p&gt;
+    image-ref: 'docker.io/myapp:${{ github.sha }}'
+    format: 'sarif'
+    output: 'trivy-results.sarif'
+</code></pre>
+<hr>
+<p><strong>Next Up</strong>: Learn about Deployment Strategies! 🚀</p>
 
-                        </div>
-                        
-                    </article>
-                </div>
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "devops/ci-cd.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

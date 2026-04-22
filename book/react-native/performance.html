@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>Performance Optimization - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="Performance Optimization - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Performance Optimization - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>Performance Optimization - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="react-native/performance.md">
-    <meta property="og:title" content="Performance Optimization - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Performance Optimization - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="react-native/performance.md">
-    <meta property="twitter:title" content="Performance Optimization - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="Performance Optimization - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="Performance Optimization - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="react-native/performance.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "Performance Optimization - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,116 +525,933 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    Performance Optimization - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
+        <div id="content">
+            <main>
+                <h1 id="performance-optimization"><a class="header" href="#performance-optimization">Performance Optimization</a></h1>
+<p>Learn how to optimize React Native applications for better performance, including rendering optimization, memory management, and app startup improvements.</p>
+<h2 id="what-is-performance-optimization"><a class="header" href="#what-is-performance-optimization"><strong>What is Performance Optimization?</strong></a></h2>
+<p>Performance optimization in React Native involves improving your app’s speed, responsiveness, and resource usage to provide a better user experience and reduce battery consumption.</p>
+<h3 id="key-performance-metrics"><a class="header" href="#key-performance-metrics"><strong>Key Performance Metrics</strong></a></h3>
+<ul>
+<li><strong>App Startup Time</strong>: Time from app launch to first meaningful paint</li>
+<li><strong>Frame Rate</strong>: Smooth 60 FPS animations and interactions</li>
+<li><strong>Memory Usage</strong>: Efficient memory allocation and garbage collection</li>
+<li><strong>Network Performance</strong>: Optimized API calls and data loading</li>
+<li><strong>Battery Usage</strong>: Minimal battery drain during app usage</li>
+</ul>
+<hr>
+<h2 id="rendering-optimization"><a class="header" href="#rendering-optimization"><strong>Rendering Optimization</strong></a></h2>
+<h3 id="component-optimization"><a class="header" href="#component-optimization"><strong>Component Optimization</strong></a></h3>
+<h4 id="reactmemo-for-component-memoization"><a class="header" href="#reactmemo-for-component-memoization"><strong>React.memo for Component Memoization</strong></a></h4>
+<pre><code class="language-javascript">import React, { memo } from 'react';
 
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
+// Without memo - re-renders on every parent render
+const ExpensiveComponent = ({ data, onAction }) =&gt; {
+  console.log('ExpensiveComponent rendered');
+  
+  return (
+    &lt;View&gt;
+      {data.map(item =&gt; (
+        &lt;Text key={item.id}&gt;{item.name}&lt;/Text&gt;
+      ))}
+    &lt;/View&gt;
+  );
+};
 
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>Performance Optimization - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;performance-optimization&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#performance-optimization&quot;&gt;Performance Optimization&lt;/a&gt;&lt;/h1&gt;
+// With memo - only re-renders when props change
+const MemoizedComponent = memo(({ data, onAction }) =&gt; {
+  console.log('MemoizedComponent rendered');
+  
+  return (
+    &lt;View&gt;
+      {data.map(item =&gt; (
+        &lt;Text key={item.id}&gt;{item.name}&lt;/Text&gt;
+      ))}
+    &lt;/View&gt;
+  );
+});
 
-                        </div>
-                        
-                    </article>
-                </div>
+// Custom comparison function
+const CustomMemoComponent = memo(({ data, onAction }) =&gt; {
+  return (
+    &lt;View&gt;
+      {data.map(item =&gt; (
+        &lt;Text key={item.id}&gt;{item.name}&lt;/Text&gt;
+      ))}
+    &lt;/View&gt;
+  );
+}, (prevProps, nextProps) =&gt; {
+  // Return true if props are equal (don't re-render)
+  return prevProps.data.length === nextProps.data.length &amp;&amp;
+         prevProps.data.every((item, index) =&gt; 
+           item.id === nextProps.data[index].id
+         );
+});
+</code></pre>
+<h4 id="usememo-for-expensive-computations"><a class="header" href="#usememo-for-expensive-computations"><strong>useMemo for Expensive Computations</strong></a></h4>
+<pre><code class="language-javascript">import React, { useMemo, useState } from 'react';
+
+const ProductList = ({ products, filter }) =&gt; {
+  const expensiveFiltering = useMemo(() =&gt; {
+    console.log('Expensive filtering executed');
+    
+    return products.filter(product =&gt; {
+      // Complex filtering logic
+      return product.name.toLowerCase().includes(filter.toLowerCase()) ||
+             product.category.toLowerCase().includes(filter.toLowerCase()) ||
+             product.tags.some(tag =&gt; tag.toLowerCase().includes(filter.toLowerCase()));
+    });
+  }, [products, filter]);
+
+  return (
+    &lt;FlatList
+      data={expensiveFiltering}
+      keyExtractor={item =&gt; item.id}
+      renderItem={({ item }) =&gt; (
+        &lt;View style={styles.productItem}&gt;
+          &lt;Text style={styles.productName}&gt;{item.name}&lt;/Text&gt;
+          &lt;Text style={styles.productPrice}&gt;${item.price}&lt;/Text&gt;
+        &lt;/View&gt;
+      )}
+    /&gt;
+  );
+};
+</code></pre>
+<h4 id="usecallback-for-function-references"><a class="header" href="#usecallback-for-function-references"><strong>useCallback for Function References</strong></a></h4>
+<pre><code class="language-javascript">import React, { useState, useCallback } from 'react';
+
+const ParentComponent = () =&gt; {
+  const [count, setCount] = useState(0);
+  
+  // Without useCallback - new function on every render
+  const handleIncrement = () =&gt; {
+    setCount(prev =&gt; prev + 1);
+  };
+  
+  // With useCallback - same function reference unless dependencies change
+  const handleIncrementCallback = useCallback(() =&gt; {
+    setCount(prev =&gt; prev + 1);
+  }, []); // Empty dependency array means function never changes
+  
+  const handleIncrementWithValue = useCallback((value) =&gt; {
+    setCount(prev =&gt; prev + value);
+  }, []); // Dependencies array empty since we don't use external values
+
+  return (
+    &lt;View&gt;
+      &lt;Text&gt;Count: {count}&lt;/Text&gt;
+      &lt;ChildComponent onIncrement={handleIncrementCallback} /&gt;
+    &lt;/View&gt;
+  );
+};
+
+const ChildComponent = React.memo(({ onIncrement }) =&gt; {
+  console.log('ChildComponent rendered');
+  
+  return (
+    &lt;Button title="Increment" onPress={onIncrement} /&gt;
+  );
+});
+</code></pre>
+<h3 id="flatlist-optimization"><a class="header" href="#flatlist-optimization"><strong>FlatList Optimization</strong></a></h3>
+<h4 id="basic-flatlist-optimization"><a class="header" href="#basic-flatlist-optimization"><strong>Basic FlatList Optimization</strong></a></h4>
+<pre><code class="language-javascript">import React, { useMemo } from 'react';
+
+const OptimizedFlatList = ({ data }) =&gt; {
+  // Memoize key extractor
+  const keyExtractor = useMemo(() =&gt; (item) =&gt; item.id, []);
+  
+  // Memoize render item
+  const renderItem = useMemo(() =&gt; ({ item }) =&gt; (
+    &lt;View style={styles.itemContainer}&gt;
+      &lt;Text style={styles.itemTitle}&gt;{item.title}&lt;/Text&gt;
+      &lt;Text style={styles.itemDescription}&gt;{item.description}&lt;/Text&gt;
+    &lt;/View&gt;
+  ), []);
+
+  return (
+    &lt;FlatList
+      data={data}
+      keyExtractor={keyExtractor}
+      renderItem={renderItem}
+      getItemLayout={(data, index) =&gt; ({
+        length: ITEM_HEIGHT,
+        offset: ITEM_HEIGHT * index,
+        index,
+      })}
+      initialNumToRender={10}
+      maxToRenderPerBatch={10}
+      updateCellsBatchingPeriod={50}
+      windowSize={10}
+      removeClippedSubviews={true}
+    /&gt;
+  );
+};
+
+const ITEM_HEIGHT = 80;
+</code></pre>
+<h4 id="advanced-flatlist-with-virtualization"><a class="header" href="#advanced-flatlist-with-virtualization"><strong>Advanced FlatList with Virtualization</strong></a></h4>
+<pre><code class="language-javascript">import React, { useState, useCallback, useMemo } from 'react';
+
+const AdvancedFlatList = () =&gt; {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
+
+  // Optimized key extractor
+  const keyExtractor = useCallback((item) =&gt; `item-${item.id}`, []);
+
+  // Optimized render item with memoization
+  const renderItem = useCallback(({ item, index }) =&gt; (
+    &lt;ListItem
+      item={item}
+      index={index}
+      onPress={handleItemPress}
+      onLongPress={handleItemLongPress}
+    /&gt;
+  ), []);
+
+  // Optimized item layout
+  const getItemLayout = useCallback((data, index) =&gt; ({
+    length: ITEM_HEIGHT,
+    offset: ITEM_HEIGHT * index,
+    index,
+  }), []);
+
+  // Handle refresh
+  const handleRefresh = useCallback(async () =&gt; {
+    setRefreshing(true);
+    try {
+      await fetchData();
+    } finally {
+      setRefreshing(false);
+    }
+  }, []);
+
+  // Handle load more
+  const handleLoadMore = useCallback(async () =&gt; {
+    if (loading) return;
+    
+    setLoading(true);
+    try {
+      const newData = await fetchMoreData();
+      setData(prev =&gt; [...prev, ...newData]);
+    } finally {
+      setLoading(false);
+    }
+  }, [loading]);
+
+  // Memoized list header
+  const ListHeaderComponent = useMemo(() =&gt; (
+    &lt;View style={styles.header}&gt;
+      &lt;Text style={styles.headerTitle}&gt;Product List&lt;/Text&gt;
+    &lt;/View&gt;
+  ), []);
+
+  // Memoized list footer
+  const ListFooterComponent = useMemo(() =&gt; (
+    &lt;View style={styles.footer}&gt;
+      {loading &amp;&amp; &lt;ActivityIndicator size="small" /&gt;}
+    &lt;/View&gt;
+  ), [loading]);
+
+  return (
+    &lt;FlatList
+      data={data}
+      keyExtractor={keyExtractor}
+      renderItem={renderItem}
+      getItemLayout={getItemLayout}
+      ListHeaderComponent={ListHeaderComponent}
+      ListFooterComponent={ListFooterComponent}
+      onRefresh={handleRefresh}
+      refreshing={refreshing}
+      onEndReached={handleLoadMore}
+      onEndReachedThreshold={0.5}
+      removeClippedSubviews={true}
+      maxToRenderPerBatch={5}
+      updateCellsBatchingPeriod={100}
+      windowSize={21}
+      initialNumToRender={15}
+    /&gt;
+  );
+};
+</code></pre>
+<hr>
+<h2 id="memory-management"><a class="header" href="#memory-management"><strong>Memory Management</strong></a></h2>
+<h3 id="memory-leak-prevention"><a class="header" href="#memory-leak-prevention"><strong>Memory Leak Prevention</strong></a></h3>
+<h4 id="proper-cleanup-in-useeffect"><a class="header" href="#proper-cleanup-in-useeffect"><strong>Proper Cleanup in useEffect</strong></a></h4>
+<pre><code class="language-javascript">import React, { useState, useEffect } from 'react';
+import { Timer, EventEmitter } from 'react-native';
+
+const TimerComponent = () =&gt; {
+  const [seconds, setSeconds] = useState(0);
+  
+  useEffect(() =&gt; {
+    // Set up timer
+    const timer = setInterval(() =&gt; {
+      setSeconds(prev =&gt; prev + 1);
+    }, 1000);
+
+    // Cleanup function - crucial for preventing memory leaks
+    return () =&gt; {
+      clearInterval(timer);
+    };
+  }, []); // Empty dependency array means this runs once
+
+  return &lt;Text&gt;Timer: {seconds}s&lt;/Text&gt;;
+};
+
+// Event listener cleanup
+const EventListenerComponent = () =&gt; {
+  useEffect(() =&gt; {
+    const handleAppStateChange = (nextAppState) =&gt; {
+      console.log('App state changed to:', nextAppState);
+    };
+
+    // Add event listener
+    const subscription = AppState.addEventListener('change', handleAppStateChange);
+
+    // Cleanup
+    return () =&gt; {
+      subscription.remove();
+    };
+  }, []);
+};
+</code></pre>
+<h4 id="animation-cleanup"><a class="header" href="#animation-cleanup"><strong>Animation Cleanup</strong></a></h4>
+<pre><code class="language-javascript">import React, { useRef, useEffect } from 'react';
+import { Animated } from 'react-native';
+
+const AnimationComponent = () =&gt; {
+  const fadeAnim = useRef(new Animated.Value(0)).current;
+
+  useEffect(() =&gt; {
+    const animation = Animated.timing(fadeAnim, {
+      toValue: 1,
+      duration: 1000,
+      useNativeDriver: true,
+    });
+
+    animation.start();
+
+    // Cleanup animation
+    return () =&gt; {
+      animation.stop();
+    };
+  }, [fadeAnim]);
+
+  return (
+    &lt;Animated.View style={{ opacity: fadeAnim }}&gt;
+      &lt;Text&gt;Fading Content&lt;/Text&gt;
+    &lt;/Animated.View&gt;
+  );
+};
+</code></pre>
+<h3 id="image-memory-management"><a class="header" href="#image-memory-management"><strong>Image Memory Management</strong></a></h3>
+<h4 id="optimized-image-loading"><a class="header" href="#optimized-image-loading"><strong>Optimized Image Loading</strong></a></h4>
+<pre><code class="language-javascript">import React, { useState, useCallback } from 'react';
+import { Image, FlatList } from 'react-native';
+
+const OptimizedImageList = ({ images }) =&gt; {
+  const [loadedImages, setLoadedImages] = useState(new Set());
+
+  const handleImageLoad = useCallback((imageId) =&gt; {
+    setLoadedImages(prev =&gt; new Set(prev).add(imageId));
+  }, []);
+
+  const handleImageError = useCallback((error, imageId) =&gt; {
+    console.error('Image load error:', error, imageId);
+  }, []);
+
+  const renderItem = useCallback(({ item }) =&gt; (
+    &lt;View style={styles.imageContainer}&gt;
+      &lt;Image
+        source={{ uri: item.url }}
+        style={styles.image}
+        resizeMode="cover"
+        onLoad={() =&gt; handleImageLoad(item.id)}
+        onError={(error) =&gt; handleImageError(error, item.id)}
+        // Performance optimizations
+        defaultSource={require('./placeholder.png')}
+        blurRadius={loadedImages.has(item.id) ? 0 : 5}
+      /&gt;
+      {!loadedImages.has(item.id) &amp;&amp; (
+        &lt;ActivityIndicator style={styles.loader} /&gt;
+      )}
+    &lt;/View&gt;
+  ), [loadedImages, handleImageLoad, handleImageError]);
+
+  return (
+    &lt;FlatList
+      data={images}
+      renderItem={renderItem}
+      keyExtractor={item =&gt; item.id}
+      removeClippedSubviews={true}
+      maxToRenderPerBatch={5}
+      windowSize={10}
+    /&gt;
+  );
+};
+</code></pre>
+<hr>
+<h2 id="app-startup-optimization"><a class="header" href="#app-startup-optimization"><strong>App Startup Optimization</strong></a></h2>
+<h3 id="bundle-size-reduction"><a class="header" href="#bundle-size-reduction"><strong>Bundle Size Reduction</strong></a></h3>
+<h4 id="code-splitting"><a class="header" href="#code-splitting"><strong>Code Splitting</strong></a></h4>
+<pre><code class="language-javascript">// Lazy loading heavy components
+import React, { useState } from 'react';
+import { View, Button, Text } from 'react-native';
+
+const LazyLoadedComponent = () =&gt; {
+  const [HeavyComponent, setHeavyComponent] = useState(null);
+
+  const loadHeavyComponent = async () =&gt; {
+    try {
+      // Dynamically import the component
+      const { default: Component } = await import('./HeavyComponent');
+      setHeavyComponent(() =&gt; Component);
+    } catch (error) {
+      console.error('Failed to load component:', error);
+    }
+  };
+
+  return (
+    &lt;View&gt;
+      &lt;Button
+        title="Load Heavy Component"
+        onPress={loadHeavyComponent}
+      /&gt;
+      {HeavyComponent &amp;&amp; &lt;HeavyComponent /&gt;}
+    &lt;/View&gt;
+  );
+};
+
+// Conditional imports
+const ConditionalComponent = ({ shouldLoadHeavy }) =&gt; {
+  const [component, setComponent] = useState(null);
+
+  React.useEffect(() =&gt; {
+    if (shouldLoadHeavy) {
+      import('./HeavyComponent').then(({ default: Component }) =&gt; {
+        setComponent(() =&gt; Component);
+      });
+    }
+  }, [shouldLoadHeavy]);
+
+  return component ? component() : null;
+};
+</code></pre>
+<h4 id="asset-optimization"><a class="header" href="#asset-optimization"><strong>Asset Optimization</strong></a></h4>
+<pre><code class="language-javascript">// Optimized image loading
+const OptimizedImage = ({ source, style, ...props }) =&gt; {
+  return (
+    &lt;Image
+      source={source}
+      style={style}
+      // Performance optimizations
+      resizeMode="cover"
+      fadeDuration={0}
+      // Use native driver when possible
+      {...props}
+    /&gt;
+  );
+};
+
+// Preload critical images
+const ImagePreloader = ({ images }) =&gt; {
+  React.useEffect(() =&gt; {
+    images.forEach(imageUri =&gt; {
+      Image.prefetch(imageUri).catch(error =&gt; {
+        console.warn('Failed to preload image:', error);
+      });
+    });
+  }, [images]);
+
+  return null;
+};
+</code></pre>
+<h3 id="initial-render-optimization"><a class="header" href="#initial-render-optimization"><strong>Initial Render Optimization</strong></a></h3>
+<h4 id="splash-screen-optimization"><a class="header" href="#splash-screen-optimization"><strong>Splash Screen Optimization</strong></a></h4>
+<pre><code class="language-javascript">// App.js
+import React, { useEffect, useState } from 'react';
+import { View, Text, ActivityIndicator } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+
+const App = () =&gt; {
+  const [isReady, setIsReady] = useState(false);
+  const [initialRoute, setInitialRoute] = useState('Splash');
+
+  useEffect(() =&gt; {
+    // Initialize app asynchronously
+    const initializeApp = async () =&gt; {
+      try {
+        // Load critical data
+        await Promise.all([
+          loadUserData(),
+          preloadImages(),
+          initializeAnalytics(),
+        ]);
+        
+        setInitialRoute('Main');
+      } catch (error) {
+        console.error('App initialization failed:', error);
+        setInitialRoute('Error');
+      } finally {
+        setIsReady(true);
+      }
+    };
+
+    initializeApp();
+  }, []);
+
+  if (!isReady) {
+    return &lt;SplashScreen /&gt;;
+  }
+
+  return (
+    &lt;NavigationContainer&gt;
+      &lt;AppNavigator initialRoute={initialRoute} /&gt;
+    &lt;/NavigationContainer&gt;
+  );
+};
+
+const SplashScreen = () =&gt; (
+  &lt;View style={styles.container}&gt;
+    &lt;Text style={styles.title}&gt;My App&lt;/Text&gt;
+    &lt;ActivityIndicator size="large" /&gt;
+  &lt;/View&gt;
+);
+</code></pre>
+<hr>
+<h2 id="network-performance"><a class="header" href="#network-performance"><strong>Network Performance</strong></a></h2>
+<h3 id="api-optimization"><a class="header" href="#api-optimization"><strong>API Optimization</strong></a></h3>
+<h4 id="request-deduplication"><a class="header" href="#request-deduplication"><strong>Request Deduplication</strong></a></h4>
+<pre><code class="language-javascript">class RequestCache {
+  constructor() {
+    this.cache = new Map();
+  }
+
+  async get(key, requestFn) {
+    if (this.cache.has(key)) {
+      return this.cache.get(key);
+    }
+
+    const promise = requestFn();
+    this.cache.set(key, promise);
+
+    // Clear cache after request completes
+    promise.finally(() =&gt; {
+      setTimeout(() =&gt; this.cache.delete(key), 5000); // 5 second cache
+    });
+
+    return promise;
+  }
+}
+
+const requestCache = new RequestCache();
+
+const useApi = () =&gt; {
+  const fetchData = useCallback(async (endpoint, params = {}) =&gt; {
+    const cacheKey = `${endpoint}-${JSON.stringify(params)}`;
+    
+    return requestCache.get(cacheKey, async () =&gt; {
+      const response = await fetch(`https://api.example.com${endpoint}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(params),
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      return response.json();
+    });
+  }, []);
+
+  return { fetchData };
+};
+</code></pre>
+<h4 id="batch-requests"><a class="header" href="#batch-requests"><strong>Batch Requests</strong></a></h4>
+<pre><code class="language-javascript">const BatchApiService = {
+  requests: [],
+  timeout: null,
+
+  addRequest(request) {
+    this.requests.push(request);
+    
+    if (this.timeout) {
+      clearTimeout(this.timeout);
+    }
+    
+    this.timeout = setTimeout(() =&gt; {
+      this.executeBatch();
+    }, 50); // 50ms batch window
+  },
+
+  async executeBatch() {
+    if (this.requests.length === 0) return;
+
+    const batch = this.requests.splice(0);
+    
+    try {
+      const response = await fetch('https://api.example.com/batch', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          requests: batch.map(req =&gt; ({
+            id: req.id,
+            method: req.method,
+            endpoint: req.endpoint,
+            data: req.data,
+          })),
+        }),
+      });
+
+      const results = await response.json();
+      
+      // Resolve individual requests
+      batch.forEach(req =&gt; {
+        const result = results.find(r =&gt; r.id === req.id);
+        if (result) {
+          req.resolve(result.data);
+        } else {
+          req.reject(new Error('Request not found in batch response'));
+        }
+      });
+    } catch (error) {
+      // Reject all requests
+      batch.forEach(req =&gt; req.reject(error));
+    }
+  },
+};
+
+const useBatchedApi = () =&gt; {
+  const fetchData = useCallback((endpoint, data) =&gt; {
+    return new Promise((resolve, reject) =&gt; {
+      BatchApiService.addRequest({
+        id: Date.now() + Math.random(),
+        method: 'GET',
+        endpoint,
+        data,
+        resolve,
+        reject,
+      });
+    });
+  }, []);
+
+  return { fetchData };
+};
+</code></pre>
+<hr>
+<h2 id="animation-performance"><a class="header" href="#animation-performance"><strong>Animation Performance</strong></a></h2>
+<h3 id="native-driver-animations"><a class="header" href="#native-driver-animations"><strong>Native Driver Animations</strong></a></h3>
+<pre><code class="language-javascript">import React, { useRef, useEffect } from 'react';
+import { Animated, View, Text } from 'react-native';
+
+const NativeDriverAnimation = () =&gt; {
+  const fadeAnim = useRef(new Animated.Value(0)).current;
+  const slideAnim = useRef(new Animated.Value(-100)).current;
+
+  useEffect(() =&gt; {
+    // Use native driver for better performance
+    const animation = Animated.parallel([
+      Animated.timing(fadeAnim, {
+        toValue: 1,
+        duration: 1000,
+        useNativeDriver: true, // Enable native driver
+      }),
+      Animated.timing(slideAnim, {
+        toValue: 0,
+        duration: 1000,
+        useNativeDriver: true, // Enable native driver
+      }),
+    ]);
+
+    animation.start();
+
+    return () =&gt; animation.stop();
+  }, []);
+
+  return (
+    &lt;Animated.View
+      style={{
+        opacity: fadeAnim,
+        transform: [{ translateY: slideAnim }],
+      }}
+    &gt;
+      &lt;Text&gt;Animated Content&lt;/Text&gt;
+    &lt;/Animated.View&gt;
+  );
+};
+</code></pre>
+<h3 id="layout-animation"><a class="header" href="#layout-animation"><strong>Layout Animation</strong></a></h3>
+<pre><code class="language-javascript">import React, { useState } from 'react';
+import { LayoutAnimation, UIManager, View, Text, Button } from 'react-native';
+
+// Enable layout animations
+if (UIManager.setLayoutAnimationEnabledExperimental) {
+  UIManager.setLayoutAnimationEnabledExperimental(true);
+}
+
+const LayoutAnimationExample = () =&gt; {
+  const [items, setItems] = useState([1, 2, 3]);
+
+  const addItem = () =&gt; {
+    LayoutAnimation.configureNext({
+      duration: 300,
+      create: { type: 'spring', property: 'scale' },
+      update: { type: 'spring', property: 'scale' },
+    });
+
+    setItems(prev =&gt; [...prev, Date.now()]);
+  };
+
+  const removeItem = (index) =&gt; {
+    LayoutAnimation.configureNext({
+      duration: 300,
+      delete: { type: 'spring', property: 'scale' },
+    });
+
+    setItems(prev =&gt; prev.filter((_, i) =&gt; i !== index));
+  };
+
+  return (
+    &lt;View&gt;
+      &lt;Button title="Add Item" onPress={addItem} /&gt;
+      {items.map((item, index) =&gt; (
+        &lt;View key={item} style={styles.item}&gt;
+          &lt;Text&gt;Item {index + 1}&lt;/Text&gt;
+          &lt;Button title="Remove" onPress={() =&gt; removeItem(index)} /&gt;
+        &lt;/View&gt;
+      ))}
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<hr>
+<h2 id="performance-monitoring"><a class="header" href="#performance-monitoring"><strong>Performance Monitoring</strong></a></h2>
+<h3 id="performance-profiling"><a class="header" href="#performance-profiling"><strong>Performance Profiling</strong></a></h3>
+<pre><code class="language-javascript">import React, { useEffect, useRef } from 'react';
+import { View, Text } from 'react-native';
+
+const PerformanceProfiler = ({ children, name }) =&gt; {
+  const startTime = useRef(Date.now());
+  const renderCount = useRef(0);
+
+  useEffect(() =&gt; {
+    renderCount.current += 1;
+    const endTime = Date.now();
+    const renderTime = endTime - startTime.current;
+    
+    console.log(`${name} render #${renderCount.current}: ${renderTime}ms`);
+    
+    startTime.current = Date.now();
+  });
+
+  return children;
+};
+
+// Usage
+const MyComponent = () =&gt; {
+  return (
+    &lt;PerformanceProfiler name="MyComponent"&gt;
+      &lt;View&gt;
+        &lt;Text&gt;Component Content&lt;/Text&gt;
+      &lt;/View&gt;
+    &lt;/PerformanceProfiler&gt;
+  );
+};
+</code></pre>
+<h3 id="fps-monitoring"><a class="header" href="#fps-monitoring"><strong>FPS Monitoring</strong></a></h3>
+<pre><code class="language-javascript">import React, { useEffect, useState } from 'react';
+import { View, Text } from 'react-native';
+
+const FPSMonitor = () =&gt; {
+  const [fps, setFps] = useState(60);
+  const frameCount = useRef(0);
+  const lastTime = useRef(Date.now());
+
+  useEffect(() =&gt; {
+    let animationFrameId;
+
+    const calculateFPS = () =&gt; {
+      frameCount.current += 1;
+      const currentTime = Date.now();
+      const elapsed = currentTime - lastTime.current;
+
+      if (elapsed &gt;= 1000) {
+        const currentFPS = Math.round((frameCount.current * 1000) / elapsed);
+        setFps(currentFPS);
+        frameCount.current = 0;
+        lastTime.current = currentTime;
+      }
+
+      animationFrameId = requestAnimationFrame(calculateFPS);
+    };
+
+    animationFrameId = requestAnimationFrame(calculateFPS);
+
+    return () =&gt; {
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
+
+  return (
+    &lt;View style={styles.fpsContainer}&gt;
+      &lt;Text style={styles.fpsText}&gt;FPS: {fps}&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<hr>
+<h2 id="real-use-case"><a class="header" href="#real-use-case"><strong>Real Use Case</strong></a></h2>
+<h3 id="e-commerce-product-list-optimization"><a class="header" href="#e-commerce-product-list-optimization"><strong>E-commerce Product List Optimization</strong></a></h3>
+<pre><code class="language-javascript">import React, { useState, useCallback, useMemo } from 'react';
+import { FlatList, View, Text, Image, ActivityIndicator } from 'react-native';
+
+const OptimizedProductList = () =&gt; {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [favorites, setFavorites] = useState(new Set());
+
+  // Memoized key extractor
+  const keyExtractor = useCallback((item) =&gt; `product-${item.id}`, []);
+
+  // Memoized render item with optimizations
+  const renderItem = useCallback(({ item, index }) =&gt; (
+    &lt;ProductItem
+      product={item}
+      index={index}
+      isFavorite={favorites.has(item.id)}
+      onToggleFavorite={handleToggleFavorite}
+      onPress={handleProductPress}
+    /&gt;
+  ), [favorites, handleToggleFavorite, handleProductPress]);
+
+  // Optimized item layout
+  const getItemLayout = useCallback((data, index) =&gt; ({
+    length: PRODUCT_ITEM_HEIGHT,
+    offset: PRODUCT_ITEM_HEIGHT * index,
+    index,
+  }), []);
+
+  // Memoized product filtering
+  const filteredProducts = useMemo(() =&gt; {
+    return products.filter(product =&gt; 
+      product.price &lt;= maxPrice &amp;&amp; 
+      product.category === selectedCategory
+    );
+  }, [products, maxPrice, selectedCategory]);
+
+  // Handle favorite toggle
+  const handleToggleFavorite = useCallback((productId) =&gt; {
+    setFavorites(prev =&gt; {
+      const newFavorites = new Set(prev);
+      if (newFavorites.has(productId)) {
+        newFavorites.delete(productId);
+      } else {
+        newFavorites.add(productId);
+      }
+      return newFavorites;
+    });
+  }, []);
+
+  // Handle product press
+  const handleProductPress = useCallback((product) =&gt; {
+    navigation.navigate('ProductDetails', { productId: product.id });
+  }, [navigation]);
+
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;FlatList
+        data={filteredProducts}
+        keyExtractor={keyExtractor}
+        renderItem={renderItem}
+        getItemLayout={getItemLayout}
+        initialNumToRender={10}
+        maxToRenderPerBatch={5}
+        windowSize={15}
+        removeClippedSubviews={true}
+        updateCellsBatchingPeriod={100}
+        onEndReached={handleLoadMore}
+        onEndReachedThreshold={0.5}
+        ListFooterComponent={loading ? &lt;ActivityIndicator /&gt; : null}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+
+const ProductItem = React.memo(({ product, isFavorite, onToggleFavorite, onPress }) =&gt; {
+  return (
+    &lt;View style={styles.productItem}&gt;
+      &lt;Image
+        source={{ uri: product.imageUrl }}
+        style={styles.productImage}
+        defaultSource={require('./placeholder.png')}
+      /&gt;
+      &lt;View style={styles.productInfo}&gt;
+        &lt;Text style={styles.productName}&gt;{product.name}&lt;/Text&gt;
+        &lt;Text style={styles.productPrice}&gt;${product.price}&lt;/Text&gt;
+      &lt;/View&gt;
+      &lt;Button
+        title={isFavorite ? 'Unfavorite' : 'Favorite'}
+        onPress={() =&gt; onToggleFavorite(product.id)}
+      /&gt;
+    &lt;/View&gt;
+  );
+});
+</code></pre>
+<hr>
+<h2 id="pro-tip"><a class="header" href="#pro-tip"><strong>Pro Tip</strong></a></h2>
+<p><strong>Use the React DevTools Profiler to identify performance bottlenecks in your React Native app. Focus on optimizing components that render frequently or have expensive render operations. Look for unnecessary re-renders and component trees that could be memoized.</strong></p>
+<pre><code class="language-javascript">// Install React DevTools
+npm install react-devtools-core
+
+// In your app entry point
+import { DevSettings } from 'react-native';
+
+if (__DEV__) {
+  import('./ReactotronConfig').then(() =&gt; console.log('Reactotron Configured'));
+  DevSettings.reload();
+}
+</code></pre>
+<hr>
+<h2 id="exercise--mini-task"><a class="header" href="#exercise--mini-task"><strong>Exercise / Mini Task</strong></a></h2>
+<p><strong>Task</strong>: Optimize a React Native app with the following performance issues:</p>
+<ol>
+<li><strong>Slow FlatList</strong>: A list with 1000+ items that lags when scrolling</li>
+<li><strong>Memory Leaks</strong>: Components that don’t clean up properly</li>
+<li><strong>Excessive Re-renders</strong>: Components re-rendering unnecessarily</li>
+<li><strong>Large Bundle Size</strong>: App takes too long to start up</li>
+<li><strong>Poor Image Loading</strong>: Images load slowly and consume too much memory</li>
+</ol>
+<p><strong>Requirements</strong>:</p>
+<ul>
+<li>Implement memoization for expensive components</li>
+<li>Optimize FlatList performance</li>
+<li>Fix memory leaks in useEffect hooks</li>
+<li>Implement lazy loading for heavy components</li>
+<li>Optimize image loading and caching</li>
+</ul>
+<p><strong>Bonus</strong>:</p>
+<ul>
+<li>Add performance monitoring</li>
+<li>Implement request deduplication</li>
+<li>Create a performance profiler</li>
+<li>Optimize animations with native driver</li>
+<li>Implement bundle splitting</li>
+</ul>
+<hr>
+<p><em>Performance optimization is crucial for creating smooth, responsive React Native applications. Master these techniques to ensure your apps provide excellent user experiences while maintaining efficient resource usage.</em></p>
+
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "react-native/performance.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

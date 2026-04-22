@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="career/interviews.md">
-    <meta property="og:title" content="Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="career/interviews.md">
-    <meta property="twitter:title" content="Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="career/interviews.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,291 +525,242 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
-
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>Interview Preparation - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;interview-preparation&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#interview-preparation&quot;&gt;Interview Preparation&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Interview preparation is the key to landing your dream job. This comprehensive guide covers everything from technical skills to behavioral questions, helping you ace any developer interview.&lt;/p&gt;
-&lt;h2 id&#x3D;&quot;-interview-success-framework&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-interview-success-framework&quot;&gt;🎯 Interview Success Framework&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;the-three-pillars-of-interview-success&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#the-three-pillars-of-interview-success&quot;&gt;The Three Pillars of Interview Success&lt;/a&gt;&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Technical Excellence&lt;/strong&gt;: Strong coding skills and system design knowledge&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Communication&lt;/strong&gt;: Clear articulation of technical concepts&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Problem-Solving&lt;/strong&gt;: Structured approach to complex challenges&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id&#x3D;&quot;interview-types--preparation&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#interview-types--preparation&quot;&gt;Interview Types &amp;amp; Preparation&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Interview preparation matrix
-const interviewTypes &#x3D; {
+        <div id="content">
+            <main>
+                <h1 id="interview-preparation"><a class="header" href="#interview-preparation">Interview Preparation</a></h1>
+<p>Interview preparation is the key to landing your dream job. This comprehensive guide covers everything from technical skills to behavioral questions, helping you ace any developer interview.</p>
+<h2 id="-interview-success-framework"><a class="header" href="#-interview-success-framework">🎯 Interview Success Framework</a></h2>
+<h3 id="the-three-pillars-of-interview-success"><a class="header" href="#the-three-pillars-of-interview-success">The Three Pillars of Interview Success</a></h3>
+<ol>
+<li><strong>Technical Excellence</strong>: Strong coding skills and system design knowledge</li>
+<li><strong>Communication</strong>: Clear articulation of technical concepts</li>
+<li><strong>Problem-Solving</strong>: Structured approach to complex challenges</li>
+</ol>
+<h3 id="interview-types--preparation"><a class="header" href="#interview-types--preparation">Interview Types &amp; Preparation</a></h3>
+<pre><code class="language-javascript">// Interview preparation matrix
+const interviewTypes = {
   technical: {
-    types: [&quot;Coding challenge&quot;, &quot;System design&quot;, &quot;Code review&quot;, &quot;Debugging&quot;],
-    preparation: &quot;LeetCode practice, system design study, code reviews&quot;,
-    duration: &quot;45-90 minutes&quot;,
-    focus: &quot;Problem-solving speed and accuracy&quot;
+    types: ["Coding challenge", "System design", "Code review", "Debugging"],
+    preparation: "LeetCode practice, system design study, code reviews",
+    duration: "45-90 minutes",
+    focus: "Problem-solving speed and accuracy"
   },
   
   behavioral: {
-    types: [&quot;STAR questions&quot;, &quot;Situational judgment&quot;, &quot;Cultural fit&quot;, &quot;Conflict resolution&quot;],
-    preparation: &quot;Story bank, company research, self-reflection&quot;,
-    duration: &quot;30-60 minutes&quot;,
-    focus: &quot;Communication and soft skills&quot;
+    types: ["STAR questions", "Situational judgment", "Cultural fit", "Conflict resolution"],
+    preparation: "Story bank, company research, self-reflection",
+    duration: "30-60 minutes",
+    focus: "Communication and soft skills"
   },
   
   systemDesign: {
-    types: [&quot;Architecture design&quot;, &quot;Scalability&quot;, &quot;Database design&quot;, &quot;API design&quot;],
-    preparation: &quot;System design patterns, scalability principles, case studies&quot;,
-    duration: &quot;60-90 minutes&quot;,
-    focus: &quot;Trade-offs and design decisions&quot;
+    types: ["Architecture design", "Scalability", "Database design", "API design"],
+    preparation: "System design patterns, scalability principles, case studies",
+    duration: "60-90 minutes",
+    focus: "Trade-offs and design decisions"
   },
   
   pairProgramming: {
-    types: [&quot;Live coding&quot;, &quot;Collaborative problem-solving&quot;, &quot;Code review&quot;],
-    preparation: &quot;Pair programming practice, communication skills&quot;,
-    duration: &quot;45-75 minutes&quot;,
-    focus: &quot;Collaboration and communication&quot;
+    types: ["Live coding", "Collaborative problem-solving", "Code review"],
+    preparation: "Pair programming practice, communication skills",
+    duration: "45-75 minutes",
+    focus: "Collaboration and communication"
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-technical-interview-preparation&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-technical-interview-preparation&quot;&gt;💻 Technical Interview Preparation&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;coding-challenge-mastery&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#coding-challenge-mastery&quot;&gt;Coding Challenge Mastery&lt;/a&gt;&lt;/h3&gt;
-&lt;h4 id&#x3D;&quot;essential-data-structures&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#essential-data-structures&quot;&gt;Essential Data Structures&lt;/a&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Data structures with time/space complexity
-const dataStructures &#x3D; {
+</code></pre>
+<h2 id="-technical-interview-preparation"><a class="header" href="#-technical-interview-preparation">💻 Technical Interview Preparation</a></h2>
+<h3 id="coding-challenge-mastery"><a class="header" href="#coding-challenge-mastery">Coding Challenge Mastery</a></h3>
+<h4 id="essential-data-structures"><a class="header" href="#essential-data-structures">Essential Data Structures</a></h4>
+<pre><code class="language-javascript">// Data structures with time/space complexity
+const dataStructures = {
   arrays: {
-    operations: [&quot;access&quot;, &quot;search&quot;, &quot;insertion&quot;, &quot;deletion&quot;],
+    operations: ["access", "search", "insertion", "deletion"],
     timeComplexity: {
-      access: &quot;O(1)&quot;,
-      search: &quot;O(n)&quot;,
-      insertion: &quot;O(n)&quot;,
-      deletion: &quot;O(n)&quot;
+      access: "O(1)",
+      search: "O(n)",
+      insertion: "O(n)",
+      deletion: "O(n)"
     },
-    spaceComplexity: &quot;O(n)&quot;,
-    commonProblems: [&quot;Two pointers&quot;, &quot;Sliding window&quot;, &quot;Sorting&quot;, &quot;Searching&quot;]
+    spaceComplexity: "O(n)",
+    commonProblems: ["Two pointers", "Sliding window", "Sorting", "Searching"]
   },
   
   strings: {
-    operations: [&quot;access&quot;, &quot;search&quot;, &quot;concatenation&quot;, &quot;substring&quot;],
+    operations: ["access", "search", "concatenation", "substring"],
     timeComplexity: {
-      access: &quot;O(1)&quot;,
-      search: &quot;O(n*m)&quot;, // n &#x3D; string length, m &#x3D; pattern length
-      concatenation: &quot;O(n+m)&quot;,
-      substring: &quot;O(m)&quot;
+      access: "O(1)",
+      search: "O(n*m)", // n = string length, m = pattern length
+      concatenation: "O(n+m)",
+      substring: "O(m)"
     },
-    spaceComplexity: &quot;O(n)&quot;,
-    commonProblems: [&quot;Pattern matching&quot;, &quot;String manipulation&quot;, &quot;Palindrome&quot;]
+    spaceComplexity: "O(n)",
+    commonProblems: ["Pattern matching", "String manipulation", "Palindrome"]
   },
   
   linkedLists: {
-    operations: [&quot;access&quot;, &quot;search&quot;, &quot;insertion&quot;, &quot;deletion&quot;],
+    operations: ["access", "search", "insertion", "deletion"],
     timeComplexity: {
-      access: &quot;O(n)&quot;,
-      search: &quot;O(n)&quot;,
-      insertion: &quot;O(1)&quot;,
-      deletion: &quot;O(1)&quot;
+      access: "O(n)",
+      search: "O(n)",
+      insertion: "O(1)",
+      deletion: "O(1)"
     },
-    spaceComplexity: &quot;O(n)&quot;,
-    commonProblems: [&quot;Reversal&quot;, &quot;Cycle detection&quot;, &quot;Merge two lists&quot;]
+    spaceComplexity: "O(n)",
+    commonProblems: ["Reversal", "Cycle detection", "Merge two lists"]
   },
   
   stacks: {
-    operations: [&quot;push&quot;, &quot;pop&quot;, &quot;peek&quot;, &quot;isEmpty&quot;],
+    operations: ["push", "pop", "peek", "isEmpty"],
     timeComplexity: {
-      push: &quot;O(1)&quot;,
-      pop: &quot;O(1)&quot;,
-      peek: &quot;O(1)&quot;,
-      isEmpty: &quot;O(1)&quot;
+      push: "O(1)",
+      pop: "O(1)",
+      peek: "O(1)",
+      isEmpty: "O(1)"
     },
-    spaceComplexity: &quot;O(n)&quot;,
-    commonProblems: [&quot;Valid parentheses&quot;, &quot;Min stack&quot;, &quot;Evaluate expressions&quot;]
+    spaceComplexity: "O(n)",
+    commonProblems: ["Valid parentheses", "Min stack", "Evaluate expressions"]
   },
   
   queues: {
-    operations: [&quot;enqueue&quot;, &quot;dequeue&quot;, &quot;front&quot;, &quot;isEmpty&quot;],
+    operations: ["enqueue", "dequeue", "front", "isEmpty"],
     timeComplexity: {
-      enqueue: &quot;O(1)&quot;,
-      dequeue: &quot;O(1)&quot;,
-      front: &quot;O(1)&quot;,
-      isEmpty: &quot;O(1)&quot;
+      enqueue: "O(1)",
+      dequeue: "O(1)",
+      front: "O(1)",
+      isEmpty: "O(1)"
     },
-    spaceComplexity: &quot;O(n)&quot;,
-    commonProblems: [&quot;Level order traversal&quot;, &quot;BFS&quot;, &quot;Task scheduling&quot;]
+    spaceComplexity: "O(n)",
+    commonProblems: ["Level order traversal", "BFS", "Task scheduling"]
   },
   
   trees: {
-    operations: [&quot;search&quot;, &quot;insertion&quot;, &quot;deletion&quot;, &quot;traversal&quot;],
+    operations: ["search", "insertion", "deletion", "traversal"],
     timeComplexity: {
-      search: &quot;O(log n)&quot;,
-      insertion: &quot;O(log n)&quot;,
-      deletion: &quot;O(log n)&quot;,
-      traversal: &quot;O(n)&quot;
+      search: "O(log n)",
+      insertion: "O(log n)",
+      deletion: "O(log n)",
+      traversal: "O(n)"
     },
-    spaceComplexity: &quot;O(n)&quot;,
-    commonProblems: [&quot;BST operations&quot;, &quot;Tree traversal&quot;, &quot;LCA&quot;]
+    spaceComplexity: "O(n)",
+    commonProblems: ["BST operations", "Tree traversal", "LCA"]
   },
   
   graphs: {
-    operations: [&quot;DFS&quot;, &quot;BFS&quot;, &quot;Dijkstra&quot;, &quot;Topological sort&quot;],
+    operations: ["DFS", "BFS", "Dijkstra", "Topological sort"],
     timeComplexity: {
-      dfs: &quot;O(V+E)&quot;,
-      bfs: &quot;O(V+E)&quot;,
-      dijkstra: &quot;O((V+E) log V)&quot;,
-      topological: &quot;O(V+E)&quot;
+      dfs: "O(V+E)",
+      bfs: "O(V+E)",
+      dijkstra: "O((V+E) log V)",
+      topological: "O(V+E)"
     },
-    spaceComplexity: &quot;O(V+E)&quot;,
-    commonProblems: [&quot;Shortest path&quot;, &quot;Cycle detection&quot;, &quot;Connected components&quot;]
+    spaceComplexity: "O(V+E)",
+    commonProblems: ["Shortest path", "Cycle detection", "Connected components"]
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id&#x3D;&quot;algorithm-patterns&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#algorithm-patterns&quot;&gt;Algorithm Patterns&lt;/a&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Common algorithm patterns with examples
-const algorithmPatterns &#x3D; {
+</code></pre>
+<h4 id="algorithm-patterns"><a class="header" href="#algorithm-patterns">Algorithm Patterns</a></h4>
+<pre><code class="language-javascript">// Common algorithm patterns with examples
+const algorithmPatterns = {
   twoPointers: {
-    description: &quot;Use two pointers to solve array/string problems&quot;,
-    template: &#x60;
-let left &#x3D; 0, right &#x3D; arr.length - 1;
-while (left &amp;lt; right) {
+    description: "Use two pointers to solve array/string problems",
+    template: `
+let left = 0, right = arr.length - 1;
+while (left &lt; right) {
   // Process based on condition
   left++;
   right--;
 }
-    &#x60;,
-    problems: [&quot;Two sum&quot;, &quot;Container with most water&quot;, &quot;Remove duplicates&quot;]
+    `,
+    problems: ["Two sum", "Container with most water", "Remove duplicates"]
   },
   
   slidingWindow: {
-    description: &quot;Maintain a window of elements for optimization&quot;,
-    template: &#x60;
-let left &#x3D; 0, sum &#x3D; 0, maxSum &#x3D; 0;
-for (let right &#x3D; 0; right &amp;lt; arr.length; right++) {
-  sum +&#x3D; arr[right];
-  while (windowSize &amp;gt; right - left + 1) {
-    sum -&#x3D; arr[left];
+    description: "Maintain a window of elements for optimization",
+    template: `
+let left = 0, sum = 0, maxSum = 0;
+for (let right = 0; right &lt; arr.length; right++) {
+  sum += arr[right];
+  while (windowSize &gt; right - left + 1) {
+    sum -= arr[left];
     left++;
   }
-  maxSum &#x3D; Math.max(maxSum, sum);
+  maxSum = Math.max(maxSum, sum);
 }
-    &#x60;,
-    problems: [&quot;Maximum sum subarray&quot;, &quot;Longest substring without repeats&quot;]
+    `,
+    problems: ["Maximum sum subarray", "Longest substring without repeats"]
   },
   
   binarySearch: {
-    description: &quot;Search in sorted array using divide and conquer&quot;,
-    template: &#x60;
-let left &#x3D; 0, right &#x3D; arr.length - 1;
-while (left &amp;lt;&#x3D; right) {
-  const mid &#x3D; Math.floor((left + right) / 2);
-  if (arr[mid] &#x3D;&#x3D;&#x3D; target) return mid;
-  if (arr[mid] &amp;lt; target) left &#x3D; mid + 1;
-  else right &#x3D; mid - 1;
+    description: "Search in sorted array using divide and conquer",
+    template: `
+let left = 0, right = arr.length - 1;
+while (left &lt;= right) {
+  const mid = Math.floor((left + right) / 2);
+  if (arr[mid] === target) return mid;
+  if (arr[mid] &lt; target) left = mid + 1;
+  else right = mid - 1;
 }
 return -1;
-    &#x60;,
-    problems: [&quot;Search in sorted array&quot;, &quot;Find first bad version&quot;, &quot;Minimum capacity&quot;]
+    `,
+    problems: ["Search in sorted array", "Find first bad version", "Minimum capacity"]
   },
   
   dynamicProgramming: {
-    description: &quot;Break problems into overlapping subproblems&quot;,
-    template: &#x60;
-const dp &#x3D; new Array(n + 1).fill(0);
-dp[0] &#x3D; 1; // Base case
-for (let i &#x3D; 1; i &amp;lt;&#x3D; n; i++) {
-  for (let j &#x3D; 1; j &amp;lt;&#x3D; i; j++) {
-    dp[i] +&#x3D; dp[i - j];
+    description: "Break problems into overlapping subproblems",
+    template: `
+const dp = new Array(n + 1).fill(0);
+dp[0] = 1; // Base case
+for (let i = 1; i &lt;= n; i++) {
+  for (let j = 1; j &lt;= i; j++) {
+    dp[i] += dp[i - j];
   }
 }
-    &#x60;,
-    problems: [&quot;Fibonacci&quot;, &quot;Coin change&quot;, &quot;Longest increasing subsequence&quot;]
+    `,
+    problems: ["Fibonacci", "Coin change", "Longest increasing subsequence"]
   },
   
   backtracking: {
-    description: &quot;Explore all possibilities by making choices&quot;,
-    template: &#x60;
+    description: "Explore all possibilities by making choices",
+    template: `
 function backtrack(current, remaining) {
-  if (remaining.length &#x3D;&#x3D;&#x3D; 0) {
+  if (remaining.length === 0) {
     result.push([...current]);
     return;
   }
   
-  for (let i &#x3D; 0; i &amp;lt; remaining.length; i++) {
+  for (let i = 0; i &lt; remaining.length; i++) {
     current.push(remaining[i]);
     backtrack(current, remaining.slice(0, i) + remaining.slice(i + 1));
     current.pop();
   }
 }
-    &#x60;,
-    problems: [&quot;Permutations&quot;, &quot;Combinations&quot;, &quot;Sudoku solver&quot;]
+    `,
+    problems: ["Permutations", "Combinations", "Sudoku solver"]
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;react-native-specific-questions&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#react-native-specific-questions&quot;&gt;React Native Specific Questions&lt;/a&gt;&lt;/h3&gt;
-&lt;h4 id&#x3D;&quot;core-react-native-concepts&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#core-react-native-concepts&quot;&gt;Core React Native Concepts&lt;/a&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// React Native interview questions and answers
-const reactNativeQuestions &#x3D; {
+</code></pre>
+<h3 id="react-native-specific-questions"><a class="header" href="#react-native-specific-questions">React Native Specific Questions</a></h3>
+<h4 id="core-react-native-concepts"><a class="header" href="#core-react-native-concepts">Core React Native Concepts</a></h4>
+<pre><code class="language-javascript">// React Native interview questions and answers
+const reactNativeQuestions = {
   fundamentals: {
-    question: &quot;How does React Native differ from React?&quot;,
-    answer: &#x60;
+    question: "How does React Native differ from React?",
+    answer: `
 React Native uses native components instead of web DOM:
 1. React Native renders to native UI components (UIView, android.view.View)
 2. React uses Virtual DOM and renders to web elements
 3. React Native has a bridge for native module communication
 4. Performance is better in React Native for mobile apps
 5. Access to native device APIs is direct in React Native
-    &#x60;
+    `
   },
   
   bridge: {
-    question: &quot;Explain the React Native Bridge&quot;,
-    answer: &#x60;
+    question: "Explain the React Native Bridge",
+    answer: `
 The Bridge enables communication between JavaScript and native code:
 
 1. Asynchronous communication: JSON messages over the bridge
@@ -1033,12 +769,12 @@ The Bridge enables communication between JavaScript and native code:
 4. JS modules expose JavaScript functionality to native
 5. Three threads: JS thread, native UI thread, shadow queue
 6. Message serialization/deserialization overhead
-    &#x60;
+    `
   },
   
   performance: {
-    question: &quot;How do you optimize React Native app performance?&quot;,
-    answer: &#x60;
+    question: "How do you optimize React Native app performance?",
+    answer: `
 Performance optimization strategies:
 
 1. Use React.memo for component memoization
@@ -1051,12 +787,12 @@ Performance optimization strategies:
 8. Profile with Flipper and React DevTools
 9. Minimize bridge calls and batch operations
 10. Use useCallback and useMemo hooks appropriately
-    &#x60;
+    `
   },
   
   navigation: {
-    question: &quot;Compare React Navigation libraries&quot;,
-    answer: &#x60;
+    question: "Compare React Navigation libraries",
+    answer: `
 Navigation libraries comparison:
 
 React Navigation:
@@ -1079,197 +815,197 @@ Wix Navigation:
 - Advanced features like deep linking
 - Complex API
 - Requires Wix ecosystem
-    &#x60;
+    `
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-system-design-interview&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-system-design-interview&quot;&gt;🏗️ System Design Interview&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;system-design-framework&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#system-design-framework&quot;&gt;System Design Framework&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// System design interview approach
-const systemDesignFramework &#x3D; {
+</code></pre>
+<h2 id="-system-design-interview"><a class="header" href="#-system-design-interview">🏗️ System Design Interview</a></h2>
+<h3 id="system-design-framework"><a class="header" href="#system-design-framework">System Design Framework</a></h3>
+<pre><code class="language-javascript">// System design interview approach
+const systemDesignFramework = {
   // Step 1: Requirements Clarification
   requirements: {
     questions: [
-      &quot;What are the functional requirements?&quot;,
-      &quot;What are the non-functional requirements?&quot;,
-      &quot;What is the expected scale?&quot;,
-      &quot;What are the constraints and assumptions?&quot;
+      "What are the functional requirements?",
+      "What are the non-functional requirements?",
+      "What is the expected scale?",
+      "What are the constraints and assumptions?"
     ],
     scale: {
-      users: &quot;Daily active users (DAU)&quot;,
-      requests: &quot;Requests per second (RPS)&quot;,
-      storage: &quot;Data storage requirements&quot;,
-      growth: &quot;Expected growth rate&quot;
+      users: "Daily active users (DAU)",
+      requests: "Requests per second (RPS)",
+      storage: "Data storage requirements",
+      growth: "Expected growth rate"
     }
   },
   
   // Step 2: High-Level Design
   highLevel: {
     components: [
-      &quot;Load balancer&quot;,
-      &quot;Web servers&quot;,
-      &quot;Database&quot;,
-      &quot;Cache&quot;,
-      &quot;CDN&quot;
+      "Load balancer",
+      "Web servers",
+      "Database",
+      "Cache",
+      "CDN"
     ],
     apis: [
-      &quot;RESTful APIs&quot;,
-      &quot;GraphQL&quot;,
-      &quot;WebSocket for real-time&quot;
+      "RESTful APIs",
+      "GraphQL",
+      "WebSocket for real-time"
     ]
   },
   
   // Step 3: Component Deep Dive
   components: {
     loadBalancer: {
-      types: [&quot;L4 (TCP)&quot;, &quot;L7 (HTTP)&quot;],
-      algorithms: [&quot;Round robin&quot;, &quot;Least connections&quot;, &quot;IP hash&quot;],
-      considerations: [&quot;Health checks&quot;, &quot;Failover&quot;, &quot;Session persistence&quot;]
+      types: ["L4 (TCP)", "L7 (HTTP)"],
+      algorithms: ["Round robin", "Least connections", "IP hash"],
+      considerations: ["Health checks", "Failover", "Session persistence"]
     },
     
     database: {
-      types: [&quot;SQL&quot;, &quot;NoSQL&quot;],
-      selection: &quot;Based on consistency, scale, query patterns&quot;,
-      scaling: [&quot;Read replicas&quot;, &quot;Sharding&quot;, &quot;Partitioning&quot;]
+      types: ["SQL", "NoSQL"],
+      selection: "Based on consistency, scale, query patterns",
+      scaling: ["Read replicas", "Sharding", "Partitioning"]
     },
     
     cache: {
-      strategies: [&quot;Cache-aside&quot;, &quot;Read-through&quot;, &quot;Write-through&quot;],
-      eviction: [&quot;LRU&quot;, &quot;LFU&quot;, &quot;TTL&quot;],
-      distribution: [&quot;Client-side&quot;, &quot;Server-side&quot;, &quot;CDN&quot;]
+      strategies: ["Cache-aside", "Read-through", "Write-through"],
+      eviction: ["LRU", "LFU", "TTL"],
+      distribution: ["Client-side", "Server-side", "CDN"]
     }
   },
   
-  // Step 4: Scalability &amp;amp; Trade-offs
+  // Step 4: Scalability &amp; Trade-offs
   scalability: {
-    vertical: &quot;Scale up individual servers&quot;,
-    horizontal: &quot;Scale out across multiple servers&quot;,
-    considerations: [&quot;Cost&quot;, &quot;Complexity&quot;, &quot;Reliability&quot;]
+    vertical: "Scale up individual servers",
+    horizontal: "Scale out across multiple servers",
+    considerations: ["Cost", "Complexity", "Reliability"]
   },
   
   tradeoffs: {
-    consistency: &quot;Strong vs eventual consistency&quot;,
-    availability: &quot;High availability vs consistency&quot;,
-    performance: &quot;Latency vs throughput&quot;,
-    cost: &quot;Performance vs infrastructure cost&quot;
+    consistency: "Strong vs eventual consistency",
+    availability: "High availability vs consistency",
+    performance: "Latency vs throughput",
+    cost: "Performance vs infrastructure cost"
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;common-system-design-problems&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#common-system-design-problems&quot;&gt;Common System Design Problems&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// System design patterns for common problems
-const systemDesignPatterns &#x3D; {
+</code></pre>
+<h3 id="common-system-design-problems"><a class="header" href="#common-system-design-problems">Common System Design Problems</a></h3>
+<pre><code class="language-javascript">// System design patterns for common problems
+const systemDesignPatterns = {
   urlShortener: {
     requirements: {
-      functional: [&quot;Generate short URL&quot;, &quot;Redirect to long URL&quot;, &quot;Custom aliases&quot;],
-      nonFunctional: [&quot;Low latency redirection&quot;, &quot;High availability&quot;, &quot;Analytics&quot;]
+      functional: ["Generate short URL", "Redirect to long URL", "Custom aliases"],
+      nonFunctional: ["Low latency redirection", "High availability", "Analytics"]
     },
     design: {
-      encoding: &quot;Base62 encoding for shorter URLs&quot;,
-      database: &quot;Distributed database for scalability&quot;,
-      cache: &quot;Redis for hot URLs&quot;,
-      analytics: &quot;Event tracking for click analytics&quot;
+      encoding: "Base62 encoding for shorter URLs",
+      database: "Distributed database for scalability",
+      cache: "Redis for hot URLs",
+      analytics: "Event tracking for click analytics"
     }
   },
   
   chatApplication: {
     requirements: {
-      functional: [&quot;Real-time messaging&quot;, &quot;User presence&quot;, &quot;Message history&quot;],
-      nonFunctional: [&quot;Low latency&quot;, &quot;Message ordering&quot;, &quot;Offline support&quot;]
+      functional: ["Real-time messaging", "User presence", "Message history"],
+      nonFunctional: ["Low latency", "Message ordering", "Offline support"]
     },
     design: {
-      architecture: &quot;Microservices with WebSocket&quot;,
-      database: &quot;Document database for messages&quot;,
-      scaling: &quot;Horizontal scaling with load balancing&quot;,
-      features: [&quot;Read receipts&quot;, &quot;Typing indicators&quot;, &quot;Push notifications&quot;]
+      architecture: "Microservices with WebSocket",
+      database: "Document database for messages",
+      scaling: "Horizontal scaling with load balancing",
+      features: ["Read receipts", "Typing indicators", "Push notifications"]
     }
   },
   
   videoStreaming: {
     requirements: {
-      functional: [&quot;Video upload&quot;, &quot;Processing&quot;, &quot;Streaming&quot;, &quot;Comments&quot;],
-      nonFunctional: [&quot;Fast upload&quot;, &quot;Adaptive streaming&quot;, &quot;CDN delivery&quot;]
+      functional: ["Video upload", "Processing", "Streaming", "Comments"],
+      nonFunctional: ["Fast upload", "Adaptive streaming", "CDN delivery"]
     },
     design: {
-      upload: &quot;Direct upload to cloud storage&quot;,
-      processing: &quot;Message queue for async processing&quot;,
-      streaming: &quot;Adaptive bitrate streaming&quot;,
-      cdn: &quot;Geographically distributed CDN&quot;
+      upload: "Direct upload to cloud storage",
+      processing: "Message queue for async processing",
+      streaming: "Adaptive bitrate streaming",
+      cdn: "Geographically distributed CDN"
     }
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-behavioral-interview-preparation&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-behavioral-interview-preparation&quot;&gt;🗣️ Behavioral Interview Preparation&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;star-method-framework&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#star-method-framework&quot;&gt;STAR Method Framework&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// STAR method for behavioral questions
-const starMethod &#x3D; {
+</code></pre>
+<h2 id="-behavioral-interview-preparation"><a class="header" href="#-behavioral-interview-preparation">🗣️ Behavioral Interview Preparation</a></h2>
+<h3 id="star-method-framework"><a class="header" href="#star-method-framework">STAR Method Framework</a></h3>
+<pre><code class="language-javascript">// STAR method for behavioral questions
+const starMethod = {
   structure: {
-    situation: &quot;Describe the context and background&quot;,
-    task: &quot;Explain your specific responsibility&quot;,
-    action: &quot;Detail the steps you took&quot;,
-    result: &quot;Share the outcome and what you learned&quot;
+    situation: "Describe the context and background",
+    task: "Explain your specific responsibility",
+    action: "Detail the steps you took",
+    result: "Share the outcome and what you learned"
   },
   
   examples: {
     conflict: {
-      situation: &quot;Team member disagreed with my technical approach&quot;,
-      task: &quot;Resolve conflict and maintain team cohesion&quot;,
-      action: &quot;Listened to concerns, explained my reasoning, found compromise&quot;,
-      result: &quot;We combined approaches and delivered successful solution&quot;
+      situation: "Team member disagreed with my technical approach",
+      task: "Resolve conflict and maintain team cohesion",
+      action: "Listened to concerns, explained my reasoning, found compromise",
+      result: "We combined approaches and delivered successful solution"
     },
     
     failure: {
-      situation: &quot;Project deadline was missed due to unexpected issues&quot;,
-      task: &quot;Address the delay and prevent future occurrences&quot;,
-      action: &quot;Communicated with stakeholders, implemented fixes, improved planning&quot;,
-      result: &quot;Delivered project with minimal delay, improved team processes&quot;
+      situation: "Project deadline was missed due to unexpected issues",
+      task: "Address the delay and prevent future occurrences",
+      action: "Communicated with stakeholders, implemented fixes, improved planning",
+      result: "Delivered project with minimal delay, improved team processes"
     },
     
     leadership: {
-      situation: &quot;Junior team member struggling with complex feature&quot;,
-      task: &quot;Mentor and help them succeed&quot;,
-      action: &quot;Provided guidance, pair programming, code reviews&quot;,
-      result: &quot;Team member gained confidence and delivered quality work&quot;
+      situation: "Junior team member struggling with complex feature",
+      task: "Mentor and help them succeed",
+      action: "Provided guidance, pair programming, code reviews",
+      result: "Team member gained confidence and delivered quality work"
     }
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;common-behavioral-questions&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#common-behavioral-questions&quot;&gt;Common Behavioral Questions&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Behavioral questions and preparation
-const behavioralQuestions &#x3D; {
+</code></pre>
+<h3 id="common-behavioral-questions"><a class="header" href="#common-behavioral-questions">Common Behavioral Questions</a></h3>
+<pre><code class="language-javascript">// Behavioral questions and preparation
+const behavioralQuestions = {
   teamwork: [
-    &quot;Tell me about a time you worked with a difficult team member&quot;,
-    &quot;Describe a situation where you had to convince your team&quot;,
-    &quot;How do you handle disagreements with technical decisions?&quot;
+    "Tell me about a time you worked with a difficult team member",
+    "Describe a situation where you had to convince your team",
+    "How do you handle disagreements with technical decisions?"
   ],
   
   problemSolving: [
-    &quot;Describe a complex problem you solved&quot;,
-    &quot;Tell me about a time you had to learn something quickly&quot;,
-    &quot;How do you approach debugging complex issues?&quot;
+    "Describe a complex problem you solved",
+    "Tell me about a time you had to learn something quickly",
+    "How do you approach debugging complex issues?"
   ],
   
   leadership: [
-    &quot;Tell me about a time you led a project&quot;,
-    &quot;How do you mentor junior developers?&quot;,
-    &quot;Describe a situation where you took initiative&quot;
+    "Tell me about a time you led a project",
+    "How do you mentor junior developers?",
+    "Describe a situation where you took initiative"
   ],
   
   learning: [
-    &quot;How do you stay updated with technology?&quot;,
-    &quot;Tell me about a time you had to learn a new technology&quot;,
-    &quot;What&#x27;s the most challenging technical concept you learned?&quot;
+    "How do you stay updated with technology?",
+    "Tell me about a time you had to learn a new technology",
+    "What's the most challenging technical concept you learned?"
   ],
   
   failure: [
-    &quot;Tell me about a time you failed&quot;,
-    &quot;Describe a project that didn&#x27;t go as planned&quot;,
-    &quot;How do you handle constructive criticism?&quot;
+    "Tell me about a time you failed",
+    "Describe a project that didn't go as planned",
+    "How do you handle constructive criticism?"
   ]
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-interview-day-preparation&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-interview-day-preparation&quot;&gt;🎯 Interview Day Preparation&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;pre-interview-checklist&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#pre-interview-checklist&quot;&gt;Pre-Interview Checklist&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-markdown&quot;&gt;## Interview Day Preparation
+</code></pre>
+<h2 id="-interview-day-preparation"><a class="header" href="#-interview-day-preparation">🎯 Interview Day Preparation</a></h2>
+<h3 id="pre-interview-checklist"><a class="header" href="#pre-interview-checklist">Pre-Interview Checklist</a></h3>
+<pre><code class="language-markdown">## Interview Day Preparation
 
 ### Technical Setup
 - [ ] Test internet connection
@@ -1293,51 +1029,51 @@ const behavioralQuestions &#x3D; {
 - [ ] Backup power source
 
 ### Mental Preparation
-- [ ] Good night&#x27;s sleep
+- [ ] Good night's sleep
 - [ ] Practice positive visualization
 - [ ] Review key concepts
 - [ ] Prepare talking points
 - [ ] Plan outfit and appearance
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;virtual-interview-setup&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#virtual-interview-setup&quot;&gt;Virtual Interview Setup&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Virtual interview preparation
-const virtualInterviewSetup &#x3D; {
+</code></pre>
+<h3 id="virtual-interview-setup"><a class="header" href="#virtual-interview-setup">Virtual Interview Setup</a></h3>
+<pre><code class="language-javascript">// Virtual interview preparation
+const virtualInterviewSetup = {
   environment: {
-    lighting: &quot;Ensure good front lighting&quot;,
-    background: &quot;Clean, professional background&quot;,
-    camera: &quot;Eye-level camera, good angle&quot;,
-    audio: &quot;Test microphone quality, use headset if needed&quot;
+    lighting: "Ensure good front lighting",
+    background: "Clean, professional background",
+    camera: "Eye-level camera, good angle",
+    audio: "Test microphone quality, use headset if needed"
   },
   
   technical: {
-    internet: &quot;Stable connection, backup hotspot&quot;,
-    platform: &quot;Test Zoom/Teams/Meet beforehand&quot;,
-    screenSharing: &quot;Prepare code editor for sharing&quot;,
-    backup: &quot;Phone ready for connection issues&quot;
+    internet: "Stable connection, backup hotspot",
+    platform: "Test Zoom/Teams/Meet beforehand",
+    screenSharing: "Prepare code editor for sharing",
+    backup: "Phone ready for connection issues"
   },
   
   professional: {
-    attire: &quot;Business casual, professional top&quot;,
-    space: &quot;Quiet, distraction-free environment&quot;,
-    timing: &quot;Log in 10 minutes early&quot;,
-    materials: &quot;Have resume and notes ready&quot;
+    attire: "Business casual, professional top",
+    space: "Quiet, distraction-free environment",
+    timing: "Log in 10 minutes early",
+    materials: "Have resume and notes ready"
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-post-interview-follow-up&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-post-interview-follow-up&quot;&gt;📝 Post-Interview Follow-up&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;thank-you-email-template&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#thank-you-email-template&quot;&gt;Thank You Email Template&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Post-interview thank you template
-const thankYouTemplate &#x3D; {
+</code></pre>
+<h2 id="-post-interview-follow-up"><a class="header" href="#-post-interview-follow-up">📝 Post-Interview Follow-up</a></h2>
+<h3 id="thank-you-email-template"><a class="header" href="#thank-you-email-template">Thank You Email Template</a></h3>
+<pre><code class="language-javascript">// Post-interview thank you template
+const thankYouTemplate = {
   immediate: {
-    subject: &quot;Thank you for the [Position] interview&quot;,
-    body: &#x60;
+    subject: "Thank you for the [Position] interview",
+    body: `
 Dear [Interviewer Name],
 
 Thank you for taking the time to speak with me today about the [Position] role at [Company].
 
 I really enjoyed our discussion about [specific topic discussed] and learning more about [company initiative or project]. I was particularly interested in [specific aspect of role/company].
 
-Based on our conversation, I&#x27;m even more excited about this opportunity and believe my experience in [relevant skill/experience] would be valuable for [specific team or project].
+Based on our conversation, I'm even more excited about this opportunity and believe my experience in [relevant skill/experience] would be valuable for [specific team or project].
 
 Please let me know if you need any additional information from my end. I look forward to hearing about the next steps.
 
@@ -1347,18 +1083,18 @@ Best regards,
 [Your Email]
 [LinkedIn Profile]
 [Portfolio Website]
-    &#x60;
+    `
   },
   
   followUp: {
-    timing: &quot;1 week after interview if no response&quot;,
-    subject: &quot;Following up on [Position] interview&quot;,
-    body: &#x60;
+    timing: "1 week after interview if no response",
+    subject: "Following up on [Position] interview",
+    body: `
 Dear [Interviewer Name],
 
-I hope you&#x27;re having a great week. I&#x27;m following up on our conversation last [Day] about the [Position] role.
+I hope you're having a great week. I'm following up on our conversation last [Day] about the [Position] role.
 
-I remain very interested in this opportunity and am excited about the possibility of joining your team. My experience in [relevant skill] aligns well with what you&#x27;re looking for, and I&#x27;m confident I can contribute to [specific goal or project].
+I remain very interested in this opportunity and am excited about the possibility of joining your team. My experience in [relevant skill] aligns well with what you're looking for, and I'm confident I can contribute to [specific goal or project].
 
 Is there any additional information I can provide to help with the decision process?
 
@@ -1366,126 +1102,77 @@ Thank you for your time and consideration.
 
 Best regards,
 [Your Name]
-    &#x60;
+    `
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-interview-performance-tracking&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-interview-performance-tracking&quot;&gt;📊 Interview Performance Tracking&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;self-assessment-framework&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#self-assessment-framework&quot;&gt;Self-Assessment Framework&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Interview performance evaluation
-const interviewPerformance &#x3D; {
+</code></pre>
+<h2 id="-interview-performance-tracking"><a class="header" href="#-interview-performance-tracking">📊 Interview Performance Tracking</a></h2>
+<h3 id="self-assessment-framework"><a class="header" href="#self-assessment-framework">Self-Assessment Framework</a></h3>
+<pre><code class="language-javascript">// Interview performance evaluation
+const interviewPerformance = {
   technical: {
     problemSolving: {
-      understanding: &quot;Did I understand the problem correctly?&quot;,
-      approach: &quot;Was my approach logical and efficient?&quot;,
-      code: &quot;Was my code clean and bug-free?&quot;,
-      optimization: &quot;Did I consider edge cases and optimizations?&quot;
+      understanding: "Did I understand the problem correctly?",
+      approach: "Was my approach logical and efficient?",
+      code: "Was my code clean and bug-free?",
+      optimization: "Did I consider edge cases and optimizations?"
     },
     communication: {
-      explanation: &quot;Did I explain my thought process clearly?&quot;,
-      questions: &quot;Did I ask clarifying questions?&quot;,
-      collaboration: &quot;Did I engage in productive discussion?&quot;,
-      technical: &quot;Did I communicate technical concepts accurately?&quot;
+      explanation: "Did I explain my thought process clearly?",
+      questions: "Did I ask clarifying questions?",
+      collaboration: "Did I engage in productive discussion?",
+      technical: "Did I communicate technical concepts accurately?"
     }
   },
   
   behavioral: {
-    structure: &quot;Did I use STAR method effectively?&quot;,
-    relevance: &quot;Were my examples relevant and impactful?&quot;,
-    authenticity: &quot;Did I sound genuine and honest?&quot;,
-    learning: &quot;Did I demonstrate growth and learning mindset?&quot;
+    structure: "Did I use STAR method effectively?",
+    relevance: "Were my examples relevant and impactful?",
+    authenticity: "Did I sound genuine and honest?",
+    learning: "Did I demonstrate growth and learning mindset?"
   },
   
   overall: {
-    preparation: &quot;How well was I prepared?&quot;,
-    confidence: &quot;Did I project appropriate confidence?&quot;,
-    engagement: &quot;Was I engaged and enthusiastic?&quot;,
-    fit: &quot;Did I demonstrate cultural fit?&quot;
+    preparation: "How well was I prepared?",
+    confidence: "Did I project appropriate confidence?",
+    engagement: "Was I engaged and enthusiastic?",
+    fit: "Did I demonstrate cultural fit?"
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;continuous-improvement&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#continuous-improvement&quot;&gt;Continuous Improvement&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Interview improvement plan
-const improvementPlan &#x3D; {
+</code></pre>
+<h3 id="continuous-improvement"><a class="header" href="#continuous-improvement">Continuous Improvement</a></h3>
+<pre><code class="language-javascript">// Interview improvement plan
+const improvementPlan = {
   analyze: {
-    identify: &quot;Identify areas of weakness&quot;,
-    patterns: &quot;Recognize recurring issues&quot;,
-    feedback: &quot;Collect feedback from interviewers&quot;,
-    metrics: &quot;Track performance over time&quot;
+    identify: "Identify areas of weakness",
+    patterns: "Recognize recurring issues",
+    feedback: "Collect feedback from interviewers",
+    metrics: "Track performance over time"
   },
   
   practice: {
-    technical: &quot;Daily coding practice, weekly mock interviews&quot;,
-    behavioral: &quot;Practice STAR responses, record and review&quot;,
-    systemDesign: &quot;Weekly system design practice with peers&quot;,
-    communication: &quot;Practice explaining concepts out loud&quot;
+    technical: "Daily coding practice, weekly mock interviews",
+    behavioral: "Practice STAR responses, record and review",
+    systemDesign: "Weekly system design practice with peers",
+    communication: "Practice explaining concepts out loud"
   },
   
   resources: {
-    books: [&quot;Cracking the Coding Interview&quot;, &quot;System Design Interview&quot;],
-    platforms: [&quot;LeetCode&quot;, &quot;HackerRank&quot;, &quot;Pramp&quot;],
-    mock: &quot;Mock interviews with peers or services&quot;,
-    community: &quot;Join interview preparation communities&quot;
+    books: ["Cracking the Coding Interview", "System Design Interview"],
+    platforms: ["LeetCode", "HackerRank", "Pramp"],
+    mock: "Mock interviews with peers or services",
+    community: "Join interview preparation communities"
   }
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Next Up&lt;/strong&gt;: Learn about System Design! 🏗️&lt;/p&gt;
+</code></pre>
+<hr>
+<p><strong>Next Up</strong>: Learn about System Design! 🏗️</p>
 
-                        </div>
-                        
-                    </article>
-                </div>
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "career/interviews.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

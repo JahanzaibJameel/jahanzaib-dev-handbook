@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>State Management Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="State Management Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, State Management Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>State Management Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="react-native/state.md">
-    <meta property="og:title" content="State Management Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="State Management Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="react-native/state.md">
-    <meta property="twitter:title" content="State Management Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="State Management Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="State Management Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="react-native/state.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "State Management Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,116 +525,953 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    State Management Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
+        <div id="content">
+            <main>
+                <h1 id="state-management"><a class="header" href="#state-management">State Management</a></h1>
+<p>Learn how to manage state in React Native applications using React hooks, Context API, and popular state management libraries like Redux and MobX.</p>
+<h2 id="what-is-state-management"><a class="header" href="#what-is-state-management"><strong>What is State Management?</strong></a></h2>
+<p>State management in React Native involves handling data that changes over time and affects how your app renders. Proper state management ensures your app is predictable, maintainable, and scalable.</p>
+<h3 id="types-of-state"><a class="header" href="#types-of-state"><strong>Types of State</strong></a></h3>
+<ul>
+<li><strong>Local State</strong>: Component-specific data managed with useState</li>
+<li><strong>Global State</strong>: Application-wide data shared across components</li>
+<li><strong>Server State</strong>: Data from APIs and external sources</li>
+<li><strong>URL State</strong>: Data stored in navigation and URLs</li>
+<li><strong>Form State</strong>: Data from user input and forms</li>
+</ul>
+<hr>
+<h2 id="local-state-management"><a class="header" href="#local-state-management"><strong>Local State Management</strong></a></h2>
+<h3 id="usestate-hook"><a class="header" href="#usestate-hook"><strong>useState Hook</strong></a></h3>
+<h4 id="basic-usage"><a class="header" href="#basic-usage"><strong>Basic Usage</strong></a></h4>
+<pre><code class="language-javascript">import React, { useState } from 'react';
+import { View, Text, Button, TextInput } from 'react-native';
 
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
+const Counter = () =&gt; {
+  const [count, setCount] = useState(0);
 
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>State Management Excellence - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;state-management&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#state-management&quot;&gt;State Management&lt;/a&gt;&lt;/h1&gt;
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Text style={styles.text}&gt;Count: {count}&lt;/Text&gt;
+      &lt;Button
+        title="Increment"
+        onPress={() =&gt; setCount(count + 1)}
+      /&gt;
+      &lt;Button
+        title="Decrement"
+        onPress={() =&gt; setCount(count - 1)}
+      /&gt;
+      &lt;Button
+        title="Reset"
+        onPress={() =&gt; setCount(0)}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
 
-                        </div>
-                        
-                    </article>
-                </div>
+// Form example
+const LoginForm = () =&gt; {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async () =&gt; {
+    setIsLoading(true);
+    try {
+      await login(email, password);
+    } catch (error) {
+      console.error('Login failed:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;TextInput
+        value={email}
+        onChangeText={setEmail}
+        placeholder="Email"
+        style={styles.input}
+      /&gt;
+      &lt;TextInput
+        value={password}
+        onChangeText={setPassword}
+        placeholder="Password"
+        secureTextEntry
+        style={styles.input}
+      /&gt;
+      &lt;Button
+        title={isLoading ? "Loading..." : "Login"}
+        onPress={handleSubmit}
+        disabled={isLoading}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<h4 id="functional-updates"><a class="header" href="#functional-updates"><strong>Functional Updates</strong></a></h4>
+<pre><code class="language-javascript">const Counter = () =&gt; {
+  const [count, setCount] = useState(0);
+
+  // Use functional update when new state depends on previous state
+  const increment = () =&gt; {
+    setCount(prevCount =&gt; prevCount + 1);
+  };
+
+  // Batch multiple state updates
+  const complexUpdate = () =&gt; {
+    setCount(prevCount =&gt; prevCount * 2);
+    // React will batch these updates
+    setCount(prevCount =&gt; prevCount + 10);
+  };
+
+  return (
+    &lt;View&gt;
+      &lt;Text&gt;Count: {count}&lt;/Text&gt;
+      &lt;Button title="Increment" onPress={increment} /&gt;
+      &lt;Button title="Complex Update" onPress={complexUpdate} /&gt;
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<h3 id="usereducer-hook"><a class="header" href="#usereducer-hook"><strong>useReducer Hook</strong></a></h3>
+<h4 id="complex-state-logic"><a class="header" href="#complex-state-logic"><strong>Complex State Logic</strong></a></h4>
+<pre><code class="language-javascript">import React, { useReducer } from 'react';
+
+// Reducer function
+const counterReducer = (state, action) =&gt; {
+  switch (action.type) {
+    case 'INCREMENT':
+      return { ...state, count: state.count + 1 };
+    case 'DECREMENT':
+      return { ...state, count: state.count - 1 };
+    case 'SET_VALUE':
+      return { ...state, count: action.payload };
+    case 'RESET':
+      return { ...state, count: 0 };
+    default:
+      return state;
+  }
+};
+
+// Initial state
+const initialState = {
+  count: 0,
+  history: [],
+};
+
+const Counter = () =&gt; {
+  const [state, dispatch] = useReducer(counterReducer, initialState);
+
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Text style={styles.text}&gt;Count: {state.count}&lt;/Text&gt;
+      
+      &lt;Button
+        title="Increment"
+        onPress={() =&gt; dispatch({ type: 'INCREMENT' })}
+      /&gt;
+      
+      &lt;Button
+        title="Decrement"
+        onPress={() =&gt; dispatch({ type: 'DECREMENT' })}
+      /&gt;
+      
+      &lt;Button
+        title="Set to 100"
+        onPress={() =&gt; dispatch({ type: 'SET_VALUE', payload: 100 })}
+      /&gt;
+      
+      &lt;Button
+        title="Reset"
+        onPress={() =&gt; dispatch({ type: 'RESET' })}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<h4 id="async-actions-with-usereducer"><a class="header" href="#async-actions-with-usereducer"><strong>Async Actions with useReducer</strong></a></h4>
+<pre><code class="language-javascript">const asyncReducer = (state, action) =&gt; {
+  switch (action.type) {
+    case 'FETCH_START':
+      return { ...state, loading: true, error: null };
+    case 'FETCH_SUCCESS':
+      return { ...state, loading: false, data: action.payload };
+    case 'FETCH_ERROR':
+      return { ...state, loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
+
+const DataFetcher = () =&gt; {
+  const [state, dispatch] = useReducer(asyncReducer, {
+    loading: false,
+    data: null,
+    error: null,
+  });
+
+  const fetchData = async () =&gt; {
+    dispatch({ type: 'FETCH_START' });
+    
+    try {
+      const response = await fetch('https://api.example.com/data');
+      const data = await response.json();
+      dispatch({ type: 'FETCH_SUCCESS', payload: data });
+    } catch (error) {
+      dispatch({ type: 'FETCH_ERROR', payload: error.message });
+    }
+  };
+
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Button title="Fetch Data" onPress={fetchData} /&gt;
+      
+      {state.loading &amp;&amp; &lt;ActivityIndicator size="large" /&gt;}
+      
+      {state.error &amp;&amp; (
+        &lt;Text style={styles.error}&gt;Error: {state.error}&lt;/Text&gt;
+      )}
+      
+      {state.data &amp;&amp; (
+        &lt;Text style={styles.success}&gt;
+          Data loaded: {JSON.stringify(state.data)}
+        &lt;/Text&gt;
+      )}
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<hr>
+<h2 id="context-api"><a class="header" href="#context-api"><strong>Context API</strong></a></h2>
+<h3 id="basic-context-usage"><a class="header" href="#basic-context-usage"><strong>Basic Context Usage</strong></a></h3>
+<h4 id="creating-context"><a class="header" href="#creating-context"><strong>Creating Context</strong></a></h4>
+<pre><code class="language-javascript">import React, { createContext, useContext, useState } from 'react';
+
+// Create context
+const ThemeContext = createContext();
+
+// Theme provider component
+const ThemeProvider = ({ children }) =&gt; {
+  const [theme, setTheme] = useState('light');
+
+  const toggleTheme = () =&gt; {
+    setTheme(prevTheme =&gt; prevTheme === 'light' ? 'dark' : 'light');
+  };
+
+  const themeValues = {
+    theme,
+    toggleTheme,
+    colors: {
+      light: {
+        background: '#ffffff',
+        text: '#000000',
+        primary: '#007AFF',
+      },
+      dark: {
+        background: '#000000',
+        text: '#ffffff',
+        primary: '#0A84FF',
+      },
+    },
+  };
+
+  return (
+    &lt;ThemeContext.Provider value={themeValues}&gt;
+      {children}
+    &lt;/ThemeContext.Provider&gt;
+  );
+};
+
+// Custom hook for using theme
+const useTheme = () =&gt; {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error('useTheme must be used within a ThemeProvider');
+  }
+  return context;
+};
+
+// Usage in components
+const ThemedButton = ({ title, onPress }) =&gt; {
+  const { theme, colors } = useTheme();
+
+  const buttonStyle = {
+    backgroundColor: colors[theme].primary,
+    padding: 12,
+    borderRadius: 8,
+  };
+
+  const textStyle = {
+    color: colors[theme].background,
+    textAlign: 'center',
+    fontWeight: 'bold',
+  };
+
+  return (
+    &lt;TouchableOpacity style={buttonStyle} onPress={onPress}&gt;
+      &lt;Text style={textStyle}&gt;{title}&lt;/Text&gt;
+    &lt;/TouchableOpacity&gt;
+  );
+};
+
+const ThemedScreen = () =&gt; {
+  const { theme, colors, toggleTheme } = useTheme();
+
+  const containerStyle = {
+    flex: 1,
+    backgroundColor: colors[theme].background,
+    padding: 20,
+  };
+
+  const textStyle = {
+    color: colors[theme].text,
+    fontSize: 18,
+    marginBottom: 20,
+  };
+
+  return (
+    &lt;View style={containerStyle}&gt;
+      &lt;Text style={textStyle}&gt;Current theme: {theme}&lt;/Text&gt;
+      &lt;ThemedButton
+        title="Toggle Theme"
+        onPress={toggleTheme}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<h4 id="multiple-contexts"><a class="header" href="#multiple-contexts"><strong>Multiple Contexts</strong></a></h4>
+<pre><code class="language-javascript">// Auth context
+const AuthContext = createContext();
+
+const AuthProvider = ({ children }) =&gt; {
+  const [user, setUser] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const login = async (credentials) =&gt; {
+    try {
+      const userData = await api.login(credentials);
+      setUser(userData);
+      setIsAuthenticated(true);
+    } catch (error) {
+      console.error('Login failed:', error);
+    }
+  };
+
+  const logout = () =&gt; {
+    setUser(null);
+    setIsAuthenticated(false);
+  };
+
+  return (
+    &lt;AuthContext.Provider value={{
+      user,
+      isAuthenticated,
+      login,
+      logout,
+    }}&gt;
+      {children}
+    &lt;/AuthContext.Provider&gt;
+  );
+};
+
+// Usage with multiple providers
+const App = () =&gt; {
+  return (
+    &lt;AuthProvider&gt;
+      &lt;ThemeProvider&gt;
+        &lt;AppNavigator /&gt;
+      &lt;/ThemeProvider&gt;
+    &lt;/AuthProvider&gt;
+  );
+};
+
+// Component using both contexts
+const ProfileScreen = () =&gt; {
+  const { user, logout } = useContext(AuthContext);
+  const { theme, colors } = useTheme();
+
+  return (
+    &lt;View style={{ backgroundColor: colors[theme].background }}&gt;
+      &lt;Text style={{ color: colors[theme].text }}&gt;
+        Welcome, {user?.name}
+      &lt;/Text&gt;
+      &lt;Button title="Logout" onPress={logout} /&gt;
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<hr>
+<h2 id="redux"><a class="header" href="#redux"><strong>Redux</strong></a></h2>
+<h3 id="redux-setup"><a class="header" href="#redux-setup"><strong>Redux Setup</strong></a></h3>
+<h4 id="installation-and-configuration"><a class="header" href="#installation-and-configuration"><strong>Installation and Configuration</strong></a></h4>
+<pre><code class="language-bash"># Install Redux and React Redux
+npm install @reduxjs/toolkit react-redux
+
+# For React Native
+npm install @react-native-async-storage/async-storage
+</code></pre>
+<h4 id="store-configuration"><a class="header" href="#store-configuration"><strong>Store Configuration</strong></a></h4>
+<pre><code class="language-javascript">// store/index.js
+import { configureStore } from '@reduxjs/toolkit';
+import { persistStore, persistReducer } from 'redux-persist';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import rootReducer from './reducers';
+
+const persistConfig = {
+  key: 'root',
+  storage: AsyncStorage,
+  whitelist: ['auth', 'settings'], // Only persist these reducers
+};
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+export const store = configureStore({
+  reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =&gt;
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: ['persist/PERSIST', 'persist/REHYDRATE'],
+      },
+    }),
+});
+
+export const persistor = persistStore(store);
+</code></pre>
+<h4 id="slice-with-redux-toolkit"><a class="header" href="#slice-with-redux-toolkit"><strong>Slice with Redux Toolkit</strong></a></h4>
+<pre><code class="language-javascript">// store/slices/authSlice.js
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+
+// Async thunk for login
+export const loginUser = createAsyncThunk(
+  'auth/login',
+  async (credentials, { rejectWithValue }) =&gt; {
+    try {
+      const response = await api.login(credentials);
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+const authSlice = createSlice({
+  name: 'auth',
+  initialState: {
+    user: null,
+    token: null,
+    isLoading: false,
+    error: null,
+  },
+  reducers: {
+    logout: (state) =&gt; {
+      state.user = null;
+      state.token = null;
+    },
+    clearError: (state) =&gt; {
+      state.error = null;
+    },
+  },
+  extraReducers: (builder) =&gt; {
+    builder
+      .addCase(loginUser.pending, (state) =&gt; {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(loginUser.fulfilled, (state, action) =&gt; {
+        state.isLoading = false;
+        state.user = action.payload.user;
+        state.token = action.payload.token;
+      })
+      .addCase(loginUser.rejected, (state, action) =&gt; {
+        state.isLoading = false;
+        state.error = action.payload;
+      });
+  },
+});
+
+export const { logout, clearError } = authSlice.actions;
+export default authSlice.reducer;
+</code></pre>
+<h4 id="connecting-components"><a class="header" href="#connecting-components"><strong>Connecting Components</strong></a></h4>
+<pre><code class="language-javascript">// App.js
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { store, persistor } from './store';
+
+const App = () =&gt; {
+  return (
+    &lt;Provider store={store}&gt;
+      &lt;PersistGate loading={null} persistor={persistor}&gt;
+        &lt;AppNavigator /&gt;
+      &lt;/PersistGate&gt;
+    &lt;/Provider&gt;
+  );
+};
+
+// LoginScreen.js
+import { useDispatch, useSelector } from 'react-redux';
+import { loginUser } from '../store/slices/authSlice';
+
+const LoginScreen = () =&gt; {
+  const dispatch = useDispatch();
+  const { isLoading, error, user } = useSelector((state) =&gt; state.auth);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = () =&gt; {
+    dispatch(loginUser({ email, password }));
+  };
+
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;TextInput
+        value={email}
+        onChangeText={setEmail}
+        placeholder="Email"
+        style={styles.input}
+      /&gt;
+      &lt;TextInput
+        value={password}
+        onChangeText={setPassword}
+        placeholder="Password"
+        secureTextEntry
+        style={styles.input}
+      /&gt;
+      
+      {error &amp;&amp; &lt;Text style={styles.error}&gt;{error}&lt;/Text&gt;}
+      
+      &lt;Button
+        title={isLoading ? "Logging in..." : "Login"}
+        onPress={handleLogin}
+        disabled={isLoading}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<hr>
+<h2 id="mobx"><a class="header" href="#mobx"><strong>MobX</strong></a></h2>
+<h3 id="mobx-setup"><a class="header" href="#mobx-setup"><strong>MobX Setup</strong></a></h3>
+<h4 id="installation-and-store"><a class="header" href="#installation-and-store"><strong>Installation and Store</strong></a></h4>
+<pre><code class="language-bash">npm install mobx mobx-react-lite
+</code></pre>
+<pre><code class="language-javascript">// store/AuthStore.js
+import { makeAutoObservable } from 'mobx';
+
+class AuthStore {
+  user = null;
+  token = null;
+  isLoading = false;
+  error = null;
+
+  constructor() {
+    makeAutoObservable(this);
+  }
+
+  async login(credentials) {
+    this.isLoading = true;
+    this.error = null;
+
+    try {
+      const response = await api.login(credentials);
+      this.user = response.user;
+      this.token = response.token;
+    } catch (error) {
+      this.error = error.message;
+    } finally {
+      this.isLoading = false;
+    }
+  }
+
+  logout() {
+    this.user = null;
+    this.token = null;
+  }
+
+  clearError() {
+    this.error = null;
+  }
+
+  get isAuthenticated() {
+    return !!this.token;
+  }
+}
+
+export default new AuthStore();
+</code></pre>
+<h4 id="mobx-components"><a class="header" href="#mobx-components"><strong>MobX Components</strong></a></h4>
+<pre><code class="language-javascript">// LoginScreen.js
+import { observer } from 'mobx-react-lite';
+import authStore from '../store/AuthStore';
+
+const LoginScreen = observer(() =&gt; {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = () =&gt; {
+    authStore.login({ email, password });
+  };
+
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;TextInput
+        value={email}
+        onChangeText={setEmail}
+        placeholder="Email"
+        style={styles.input}
+      /&gt;
+      &lt;TextInput
+        value={password}
+        onChangeText={setPassword}
+        placeholder="Password"
+        secureTextEntry
+        style={styles.input}
+      /&gt;
+      
+      {authStore.error &amp;&amp; (
+        &lt;Text style={styles.error}&gt;{authStore.error}&lt;/Text&gt;
+      )}
+      
+      &lt;Button
+        title={authStore.isLoading ? "Logging in..." : "Login"}
+        onPress={handleLogin}
+        disabled={authStore.isLoading}
+      /&gt;
+    &lt;/View&gt;
+  );
+});
+
+export default LoginScreen;
+</code></pre>
+<hr>
+<h2 id="state-management-patterns"><a class="header" href="#state-management-patterns"><strong>State Management Patterns</strong></a></h2>
+<h3 id="compound-components-pattern"><a class="header" href="#compound-components-pattern"><strong>Compound Components Pattern</strong></a></h3>
+<pre><code class="language-javascript">// Form context
+const FormContext = createContext();
+
+const FormProvider = ({ children, initialValues, onSubmit }) =&gt; {
+  const [values, setValues] = useState(initialValues);
+  const [errors, setErrors] = useState({});
+  const [touched, setTouched] = useState({});
+
+  const setValue = (name, value) =&gt; {
+    setValues(prev =&gt; ({ ...prev, [name]: value }));
+  };
+
+  const setError = (name, error) =&gt; {
+    setErrors(prev =&gt; ({ ...prev, [name]: error }));
+  };
+
+  const setTouched = (name) =&gt; {
+    setTouched(prev =&gt; ({ ...prev, [name]: true }));
+  };
+
+  const handleSubmit = () =&gt; {
+    onSubmit(values);
+  };
+
+  const contextValue = {
+    values,
+    errors,
+    touched,
+    setValue,
+    setError,
+    setTouched,
+    handleSubmit,
+  };
+
+  return (
+    &lt;FormContext.Provider value={contextValue}&gt;
+      {children}
+    &lt;/FormContext.Provider&gt;
+  );
+};
+
+// Form field component
+const FormField = ({ name, label, ...props }) =&gt; {
+  const { values, errors, touched, setValue, setError, setTouched } = useContext(FormContext);
+
+  const handleChange = (value) =&gt; {
+    setValue(name, value);
+    if (touched[name]) {
+      // Validate on change if field has been touched
+      validateField(name, value);
+    }
+  };
+
+  const handleBlur = () =&gt; {
+    setTouched(name);
+    validateField(name, values[name]);
+  };
+
+  const validateField = (fieldName, value) =&gt; {
+    // Add validation logic here
+    if (!value) {
+      setError(fieldName, 'This field is required');
+    } else {
+      setError(fieldName, '');
+    }
+  };
+
+  return (
+    &lt;View style={styles.fieldContainer}&gt;
+      &lt;Text style={styles.label}&gt;{label}&lt;/Text&gt;
+      &lt;TextInput
+        value={values[name] || ''}
+        onChangeText={handleChange}
+        onBlur={handleBlur}
+        style={[
+          styles.input,
+          errors[name] &amp;&amp; styles.errorInput,
+        ]}
+        {...props}
+      /&gt;
+      {errors[name] &amp;&amp; touched[name] &amp;&amp; (
+        &lt;Text style={styles.errorText}&gt;{errors[name]}&lt;/Text&gt;
+      )}
+    &lt;/View&gt;
+  );
+};
+
+// Usage
+const RegistrationForm = () =&gt; {
+  const handleSubmit = (values) =&gt; {
+    console.log('Form submitted:', values);
+  };
+
+  return (
+    &lt;FormProvider
+      initialValues={{ name: '', email: '', password: '' }}
+      onSubmit={handleSubmit}
+    &gt;
+      &lt;View style={styles.container}&gt;
+        &lt;FormField
+          name="name"
+          label="Name"
+          placeholder="Enter your name"
+        /&gt;
+        &lt;FormField
+          name="email"
+          label="Email"
+          placeholder="Enter your email"
+          keyboardType="email-address"
+        /&gt;
+        &lt;FormField
+          name="password"
+          label="Password"
+          placeholder="Enter your password"
+          secureTextEntry
+        /&gt;
+        &lt;SubmitButton title="Register" /&gt;
+      &lt;/View&gt;
+    &lt;/FormProvider&gt;
+  );
+};
+
+const SubmitButton = () =&gt; {
+  const { handleSubmit } = useContext(FormContext);
+  
+  return (
+    &lt;Button title="Submit" onPress={handleSubmit} /&gt;
+  );
+};
+</code></pre>
+<hr>
+<h2 id="real-use-case"><a class="header" href="#real-use-case"><strong>Real Use Case</strong></a></h2>
+<h3 id="e-commerce-app-state-management"><a class="header" href="#e-commerce-app-state-management"><strong>E-commerce App State Management</strong></a></h3>
+<pre><code class="language-javascript">// store/slices/cartSlice.js
+const cartSlice = createSlice({
+  name: 'cart',
+  initialState: {
+    items: [],
+    total: 0,
+    itemCount: 0,
+  },
+  reducers: {
+    addToCart: (state, action) =&gt; {
+      const existingItem = state.items.find(item =&gt; item.id === action.payload.id);
+      
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        state.items.push({ ...action.payload, quantity: 1 });
+      }
+      
+      cartSlice.caseReducers.calculateTotals(state);
+    },
+    removeFromCart: (state, action) =&gt; {
+      state.items = state.items.filter(item =&gt; item.id !== action.payload);
+      cartSlice.caseReducers.calculateTotals(state);
+    },
+    updateQuantity: (state, action) =&gt; {
+      const { id, quantity } = action.payload;
+      const item = state.items.find(item =&gt; item.id === id);
+      
+      if (item) {
+        item.quantity = Math.max(0, quantity);
+        if (item.quantity === 0) {
+          state.items = state.items.filter(item =&gt; item.id !== id);
+        }
+      }
+      
+      cartSlice.caseReducers.calculateTotals(state);
+    },
+    clearCart: (state) =&gt; {
+      state.items = [];
+      state.total = 0;
+      state.itemCount = 0;
+    },
+    calculateTotals: (state) =&gt; {
+      state.total = state.items.reduce(
+        (sum, item) =&gt; sum + item.price * item.quantity,
+        0
+      );
+      state.itemCount = state.items.reduce(
+        (sum, item) =&gt; sum + item.quantity,
+        0
+      );
+    },
+  },
+});
+
+export const { addToCart, removeFromCart, updateQuantity, clearCart } = cartSlice.actions;
+
+// Cart component
+const CartScreen = () =&gt; {
+  const { items, total, itemCount } = useSelector((state) =&gt; state.cart);
+  const dispatch = useDispatch();
+
+  const handleUpdateQuantity = (id, quantity) =&gt; {
+    dispatch(updateQuantity({ id, quantity }));
+  };
+
+  const handleRemoveItem = (id) =&gt; {
+    dispatch(removeFromCart(id));
+  };
+
+  const renderCartItem = ({ item }) =&gt; (
+    &lt;View style={styles.cartItem}&gt;
+      &lt;Image source={{ uri: item.image }} style={styles.itemImage} /&gt;
+      &lt;View style={styles.itemDetails}&gt;
+        &lt;Text style={styles.itemName}&gt;{item.name}&lt;/Text&gt;
+        &lt;Text style={styles.itemPrice}&gt;${item.price}&lt;/Text&gt;
+      &lt;/View&gt;
+      &lt;View style={styles.quantityControls}&gt;
+        &lt;Button
+          title="-"
+          onPress={() =&gt; handleUpdateQuantity(item.id, item.quantity - 1)}
+        /&gt;
+        &lt;Text style={styles.quantity}&gt;{item.quantity}&lt;/Text&gt;
+        &lt;Button
+          title="+"
+          onPress={() =&gt; handleUpdateQuantity(item.id, item.quantity + 1)}
+        /&gt;
+      &lt;/View&gt;
+      &lt;Button
+        title="Remove"
+        onPress={() =&gt; handleRemoveItem(item.id)}
+        color="red"
+      /&gt;
+    &lt;/View&gt;
+  );
+
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Text style={styles.title}&gt;Cart ({itemCount} items)&lt;/Text&gt;
+      
+      &lt;FlatList
+        data={items}
+        renderItem={renderCartItem}
+        keyExtractor={item =&gt; item.id}
+        ListEmptyComponent={&lt;Text&gt;Your cart is empty&lt;/Text&gt;}
+      /&gt;
+      
+      &lt;View style={styles.footer}&gt;
+        &lt;Text style={styles.total}&gt;Total: ${total.toFixed(2)}&lt;/Text&gt;
+        &lt;Button
+          title="Checkout"
+          onPress={() =&gt; navigation.navigate('Checkout')}
+          disabled={items.length === 0}
+        /&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+  );
+};
+</code></pre>
+<hr>
+<h2 id="pro-tip"><a class="header" href="#pro-tip"><strong>Pro Tip</strong></a></h2>
+<p><strong>Use the right tool for the job. For simple component state, use useState. For complex component logic, use useReducer. For global state that’s shared across many components, use Context API. For complex global state with many actions and side effects, consider Redux or MobX. Don’t over-engineer your state management.</strong></p>
+<pre><code class="language-javascript">// Good: Simple local state
+const Counter = () =&gt; {
+  const [count, setCount] = useState(0);
+  return &lt;Text&gt;{count}&lt;/Text&gt;;
+};
+
+// Good: Complex local state
+const Form = () =&gt; {
+  const [state, dispatch] = useReducer(formReducer, initialState);
+  return &lt;FormComponent state={state} dispatch={dispatch} /&gt;;
+};
+
+// Good: Global theme state
+const ThemeProvider = ({ children }) =&gt; {
+  const [theme, setTheme] = useState('light');
+  return (
+    &lt;ThemeContext.Provider value={{ theme, setTheme }}&gt;
+      {children}
+    &lt;/ThemeContext.Provider&gt;
+  );
+};
+
+// Good: Complex global state
+const App = () =&gt; {
+  return (
+    &lt;Provider store={store}&gt;
+      &lt;AppNavigator /&gt;
+    &lt;/Provider&gt;
+  );
+};
+</code></pre>
+<hr>
+<h2 id="exercise--mini-task"><a class="header" href="#exercise--mini-task"><strong>Exercise / Mini Task</strong></a></h2>
+<p><strong>Task</strong>: Create a complete state management solution for a todo app with the following features:</p>
+<ol>
+<li><strong>Local State</strong>: Use useState for simple form inputs</li>
+<li><strong>Context API</strong>: Create a theme context for light/dark mode</li>
+<li><strong>Redux</strong>: Implement a todo slice with CRUD operations</li>
+<li><strong>Persistence</strong>: Save todos to AsyncStorage</li>
+<li><strong>Filters</strong>: Add filtering by completion status</li>
+</ol>
+<p><strong>Requirements</strong>:</p>
+<ul>
+<li>Add, edit, and delete todos</li>
+<li>Toggle todo completion status</li>
+<li>Filter todos (all, active, completed)</li>
+<li>Persist todos across app restarts</li>
+<li>Switch between light and dark themes</li>
+<li>Show loading states for async operations</li>
+</ul>
+<p><strong>Bonus</strong>:</p>
+<ul>
+<li>Add undo/redo functionality</li>
+<li>Implement optimistic updates</li>
+<li>Add search functionality</li>
+<li>Create todo categories</li>
+<li>Add due dates and reminders</li>
+</ul>
+<hr>
+<p><em>State management is a fundamental concept in React Native development. Choose the right approach based on your app’s complexity and requirements to maintain clean, predictable, and scalable code.</em></p>
+
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "react-native/state.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

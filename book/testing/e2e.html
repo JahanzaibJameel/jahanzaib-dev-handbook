@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>End-to-End Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="End-to-End Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, End-to-End Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>End-to-End Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="testing/e2e.md">
-    <meta property="og:title" content="End-to-End Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="End-to-End Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="testing/e2e.md">
-    <meta property="twitter:title" content="End-to-End Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="End-to-End Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="End-to-End Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="testing/e2e.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "End-to-End Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,477 +525,428 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    End-to-End Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
-
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>End-to-End Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;end-to-end-testing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#end-to-end-testing&quot;&gt;End-to-End Testing&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;End-to-end (E2E) testing simulates real user interactions with your application from start to finish. It tests the complete user journey across multiple pages and components.&lt;/p&gt;
-&lt;h2 id&#x3D;&quot;-what-is-e2e-testing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-what-is-e2e-testing&quot;&gt;🎯 What is E2E Testing?&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;E2E testing automates browser interactions to test your application exactly as a user would experience it. It verifies that all parts of your system work together correctly in a real browser environment.&lt;/p&gt;
-&lt;h3 id&#x3D;&quot;why-e2e-testing-matters&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#why-e2e-testing-matters&quot;&gt;Why E2E Testing Matters&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;User Experience Validation&lt;/strong&gt;: Test actual user workflows&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cross-Browser Testing&lt;/strong&gt;: Ensure compatibility across browsers&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Regression Prevention&lt;/strong&gt;: Catch breaking changes before users do&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Confidence in Deployments&lt;/strong&gt;: Verify critical paths work&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Business Logic Verification&lt;/strong&gt;: Test complete user stories&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id&#x3D;&quot;-e2e-testing-tools&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-e2e-testing-tools&quot;&gt;🛠️ E2E Testing Tools&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;playwright---modern-e2e-testing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#playwright---modern-e2e-testing&quot;&gt;Playwright - Modern E2E Testing&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-bash&quot;&gt;# Install Playwright
+        <div id="content">
+            <main>
+                <h1 id="end-to-end-testing"><a class="header" href="#end-to-end-testing">End-to-End Testing</a></h1>
+<p>End-to-end (E2E) testing simulates real user interactions with your application from start to finish. It tests the complete user journey across multiple pages and components.</p>
+<h2 id="-what-is-e2e-testing"><a class="header" href="#-what-is-e2e-testing">🎯 What is E2E Testing?</a></h2>
+<p>E2E testing automates browser interactions to test your application exactly as a user would experience it. It verifies that all parts of your system work together correctly in a real browser environment.</p>
+<h3 id="why-e2e-testing-matters"><a class="header" href="#why-e2e-testing-matters">Why E2E Testing Matters</a></h3>
+<ul>
+<li><strong>User Experience Validation</strong>: Test actual user workflows</li>
+<li><strong>Cross-Browser Testing</strong>: Ensure compatibility across browsers</li>
+<li><strong>Regression Prevention</strong>: Catch breaking changes before users do</li>
+<li><strong>Confidence in Deployments</strong>: Verify critical paths work</li>
+<li><strong>Business Logic Verification</strong>: Test complete user stories</li>
+</ul>
+<h2 id="-e2e-testing-tools"><a class="header" href="#-e2e-testing-tools">🛠️ E2E Testing Tools</a></h2>
+<h3 id="playwright---modern-e2e-testing"><a class="header" href="#playwright---modern-e2e-testing">Playwright - Modern E2E Testing</a></h3>
+<pre><code class="language-bash"># Install Playwright
 npm install --save-dev @playwright/test
 npx playwright install
 
 # Install browsers
 npx playwright install chromium firefox webkit
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;cypress---popular-alternative&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#cypress---popular-alternative&quot;&gt;Cypress - Popular Alternative&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-bash&quot;&gt;# Install Cypress
+</code></pre>
+<h3 id="cypress---popular-alternative"><a class="header" href="#cypress---popular-alternative">Cypress - Popular Alternative</a></h3>
+<pre><code class="language-bash"># Install Cypress
 npm install --save-dev cypress
 
 # Open Cypress
 npx cypress open
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-playwright-e2e-testing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-playwright-e2e-testing&quot;&gt;🧪 Playwright E2E Testing&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;basic-configuration&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#basic-configuration&quot;&gt;Basic Configuration&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// playwright.config.js
-const { defineConfig, devices } &#x3D; require(&#x27;@playwright/test&#x27;);
+</code></pre>
+<h2 id="-playwright-e2e-testing"><a class="header" href="#-playwright-e2e-testing">🧪 Playwright E2E Testing</a></h2>
+<h3 id="basic-configuration"><a class="header" href="#basic-configuration">Basic Configuration</a></h3>
+<pre><code class="language-javascript">// playwright.config.js
+const { defineConfig, devices } = require('@playwright/test');
 
-module.exports &#x3D; defineConfig({
-  testDir: &#x27;./tests/e2e&#x27;,
+module.exports = defineConfig({
+  testDir: './tests/e2e',
   
   // Run tests on multiple browsers
   projects: [
     {
-      name: &#x27;chromium&#x27;,
-      use: { ...devices[&#x27;Desktop Chrome&#x27;] },
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
     },
     {
-      name: &#x27;firefox&#x27;,
-      use: { ...devices[&#x27;Desktop Firefox&#x27;] },
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
     },
     {
-      name: &#x27;webkit&#x27;,
-      use: { ...devices[&#x27;Desktop Safari&#x27;] },
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
     },
   ],
 
   // Test configuration
   use: {
     // Base URL for tests
-    baseURL: &#x27;http://localhost:3000&#x27;,
+    baseURL: 'http://localhost:3000',
     
     // Screenshot on failure
-    screenshot: &#x27;only-on-failure&#x27;,
+    screenshot: 'only-on-failure',
     
     // Video on failure
-    video: &#x27;retain-on-failure&#x27;,
+    video: 'retain-on-failure',
     
     // Trace on failure
-    trace: &#x27;on-first-retry&#x27;,
+    trace: 'on-first-retry',
   },
 
   // Global setup
   webServer: {
-    command: &#x27;npm run dev&#x27;,
+    command: 'npm run dev',
     port: 3000,
   },
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;testing-user-authentication-flow&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#testing-user-authentication-flow&quot;&gt;Testing User Authentication Flow&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// tests/e2e/auth.spec.js
-const { test, expect } &#x3D; require(&#x27;@playwright/test&#x27;);
+</code></pre>
+<h3 id="testing-user-authentication-flow"><a class="header" href="#testing-user-authentication-flow">Testing User Authentication Flow</a></h3>
+<pre><code class="language-javascript">// tests/e2e/auth.spec.js
+const { test, expect } = require('@playwright/test');
 
-test.describe(&#x27;Authentication Flow&#x27;, () &#x3D;&amp;gt; {
-  test.beforeEach(async ({ page }) &#x3D;&amp;gt; {
+test.describe('Authentication Flow', () =&gt; {
+  test.beforeEach(async ({ page }) =&gt; {
     // Clear storage before each test
     await page.context().clearCookies();
-    await page.evaluate(() &#x3D;&amp;gt; localStorage.clear());
+    await page.evaluate(() =&gt; localStorage.clear());
   });
 
-  test(&#x27;user can register and login&#x27;, async ({ page }) &#x3D;&amp;gt; {
+  test('user can register and login', async ({ page }) =&gt; {
     // Navigate to registration
-    await page.goto(&#x27;/register&#x27;);
+    await page.goto('/register');
     
     // Fill registration form
-    await page.fill(&#x27;[data-testid&#x3D;&quot;name-input&quot;]&#x27;, &#x27;John Doe&#x27;);
-    await page.fill(&#x27;[data-testid&#x3D;&quot;email-input&quot;]&#x27;, &#x27;john@example.com&#x27;);
-    await page.fill(&#x27;[data-testid&#x3D;&quot;password-input&quot;]&#x27;, &#x27;password123&#x27;);
-    await page.fill(&#x27;[data-testid&#x3D;&quot;confirm-password-input&quot;]&#x27;, &#x27;password123&#x27;);
+    await page.fill('[data-testid="name-input"]', 'John Doe');
+    await page.fill('[data-testid="email-input"]', 'john@example.com');
+    await page.fill('[data-testid="password-input"]', 'password123');
+    await page.fill('[data-testid="confirm-password-input"]', 'password123');
     
     // Submit registration
-    await page.click(&#x27;[data-testid&#x3D;&quot;register-button&quot;]&#x27;);
+    await page.click('[data-testid="register-button"]');
     
     // Should redirect to login
-    await expect(page).toHaveURL(&#x27;/login&#x27;);
+    await expect(page).toHaveURL('/login');
     
     // Show success message
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;success-message&quot;]&#x27;)).toBeVisible();
+    await expect(page.locator('[data-testid="success-message"]')).toBeVisible();
     
     // Now login
-    await page.fill(&#x27;[data-testid&#x3D;&quot;email-input&quot;]&#x27;, &#x27;john@example.com&#x27;);
-    await page.fill(&#x27;[data-testid&#x3D;&quot;password-input&quot;]&#x27;, &#x27;password123&#x27;);
-    await page.click(&#x27;[data-testid&#x3D;&quot;login-button&quot;]&#x27;);
+    await page.fill('[data-testid="email-input"]', 'john@example.com');
+    await page.fill('[data-testid="password-input"]', 'password123');
+    await page.click('[data-testid="login-button"]');
     
     // Should redirect to dashboard
-    await expect(page).toHaveURL(&#x27;/dashboard&#x27;);
+    await expect(page).toHaveURL('/dashboard');
     
     // Verify user is logged in
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;user-name&quot;]&#x27;)).toContainText(&#x27;John Doe&#x27;);
+    await expect(page.locator('[data-testid="user-name"]')).toContainText('John Doe');
   });
 
-  test(&#x27;shows validation errors for invalid data&#x27;, async ({ page }) &#x3D;&amp;gt; {
-    await page.goto(&#x27;/register&#x27;);
+  test('shows validation errors for invalid data', async ({ page }) =&gt; {
+    await page.goto('/register');
     
     // Submit empty form
-    await page.click(&#x27;[data-testid&#x3D;&quot;register-button&quot;]&#x27;);
+    await page.click('[data-testid="register-button"]');
     
     // Should show validation errors
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;name-error&quot;]&#x27;)).toBeVisible();
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;email-error&quot;]&#x27;)).toBeVisible();
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;password-error&quot;]&#x27;)).toBeVisible();
+    await expect(page.locator('[data-testid="name-error"]')).toBeVisible();
+    await expect(page.locator('[data-testid="email-error"]')).toBeVisible();
+    await expect(page.locator('[data-testid="password-error"]')).toBeVisible();
     
     // Fill with invalid email
-    await page.fill(&#x27;[data-testid&#x3D;&quot;email-input&quot;]&#x27;, &#x27;invalid-email&#x27;);
-    await page.click(&#x27;[data-testid&#x3D;&quot;register-button&quot;]&#x27;);
+    await page.fill('[data-testid="email-input"]', 'invalid-email');
+    await page.click('[data-testid="register-button"]');
     
     // Should show email error
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;email-error&quot;]&#x27;)).toContainText(&#x27;Invalid email format&#x27;);
+    await expect(page.locator('[data-testid="email-error"]')).toContainText('Invalid email format');
   });
 
-  test(&#x27;handles login with wrong credentials&#x27;, async ({ page }) &#x3D;&amp;gt; {
-    await page.goto(&#x27;/login&#x27;);
+  test('handles login with wrong credentials', async ({ page }) =&gt; {
+    await page.goto('/login');
     
     // Fill with wrong credentials
-    await page.fill(&#x27;[data-testid&#x3D;&quot;email-input&quot;]&#x27;, &#x27;john@example.com&#x27;);
-    await page.fill(&#x27;[data-testid&#x3D;&quot;password-input&quot;]&#x27;, &#x27;wrongpassword&#x27;);
-    await page.click(&#x27;[data-testid&#x3D;&quot;login-button&quot;]&#x27;);
+    await page.fill('[data-testid="email-input"]', 'john@example.com');
+    await page.fill('[data-testid="password-input"]', 'wrongpassword');
+    await page.click('[data-testid="login-button"]');
     
     // Should show error message
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;error-message&quot;]&#x27;)).toBeVisible();
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;error-message&quot;]&#x27;)).toContainText(&#x27;Invalid credentials&#x27;);
+    await expect(page.locator('[data-testid="error-message"]')).toBeVisible();
+    await expect(page.locator('[data-testid="error-message"]')).toContainText('Invalid credentials');
     
     // Should not redirect
-    await expect(page).toHaveURL(&#x27;/login&#x27;);
+    await expect(page).toHaveURL('/login');
   });
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;testing-e-commerce-flow&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#testing-e-commerce-flow&quot;&gt;Testing E-Commerce Flow&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// tests/e2e/ecommerce.spec.js
-const { test, expect } &#x3D; require(&#x27;@playwright/test&#x27;);
+</code></pre>
+<h3 id="testing-e-commerce-flow"><a class="header" href="#testing-e-commerce-flow">Testing E-Commerce Flow</a></h3>
+<pre><code class="language-javascript">// tests/e2e/ecommerce.spec.js
+const { test, expect } = require('@playwright/test');
 
-test.describe(&#x27;E-Commerce Flow&#x27;, () &#x3D;&amp;gt; {
-  test(&#x27;complete purchase journey&#x27;, async ({ page }) &#x3D;&amp;gt; {
+test.describe('E-Commerce Flow', () =&gt; {
+  test('complete purchase journey', async ({ page }) =&gt; {
     // Navigate to products
-    await page.goto(&#x27;/products&#x27;);
+    await page.goto('/products');
     
     // Search for product
-    await page.fill(&#x27;[data-testid&#x3D;&quot;search-input&quot;]&#x27;, &#x27;laptop&#x27;);
-    await page.press(&#x27;[data-testid&#x3D;&quot;search-input&quot;]&#x27;, &#x27;Enter&#x27;);
+    await page.fill('[data-testid="search-input"]', 'laptop');
+    await page.press('[data-testid="search-input"]', 'Enter');
     
     // Click on first product
-    await page.click(&#x27;[data-testid&#x3D;&quot;product-card&quot;]:first-child&#x27;);
+    await page.click('[data-testid="product-card"]:first-child');
     
     // Verify product page
-    await expect(page.locator(&#x27;h1&#x27;)).toContainText(&#x27;Laptop&#x27;);
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;product-price&quot;]&#x27;)).toBeVisible();
+    await expect(page.locator('h1')).toContainText('Laptop');
+    await expect(page.locator('[data-testid="product-price"]')).toBeVisible();
     
     // Add to cart
-    await page.click(&#x27;[data-testid&#x3D;&quot;add-to-cart-button&quot;]&#x27;);
+    await page.click('[data-testid="add-to-cart-button"]');
     
     // Verify cart notification
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;cart-count&quot;]&#x27;)).toContainText(&#x27;1&#x27;);
+    await expect(page.locator('[data-testid="cart-count"]')).toContainText('1');
     
     // Go to cart
-    await page.click(&#x27;[data-testid&#x3D;&quot;cart-icon&quot;]&#x27;);
+    await page.click('[data-testid="cart-icon"]');
     
     // Verify cart contents
-    await expect(page).toHaveURL(&#x27;/cart&#x27;);
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;cart-item&quot;]&#x27;)).toHaveCount(1);
+    await expect(page).toHaveURL('/cart');
+    await expect(page.locator('[data-testid="cart-item"]')).toHaveCount(1);
     
     // Proceed to checkout
-    await page.click(&#x27;[data-testid&#x3D;&quot;checkout-button&quot;]&#x27;);
+    await page.click('[data-testid="checkout-button"]');
     
     // Fill shipping information
-    await page.fill(&#x27;[data-testid&#x3D;&quot;shipping-name&quot;]&#x27;, &#x27;John Doe&#x27;);
-    await page.fill(&#x27;[data-testid&#x3D;&quot;shipping-address&quot;]&#x27;, &#x27;123 Main St&#x27;);
-    await page.fill(&#x27;[data-testid&#x3D;&quot;shipping-city&quot;]&#x27;, &#x27;New York&#x27;);
-    await page.fill(&#x27;[data-testid&#x3D;&quot;shipping-zip&quot;]&#x27;, &#x27;10001&#x27;);
+    await page.fill('[data-testid="shipping-name"]', 'John Doe');
+    await page.fill('[data-testid="shipping-address"]', '123 Main St');
+    await page.fill('[data-testid="shipping-city"]', 'New York');
+    await page.fill('[data-testid="shipping-zip"]', '10001');
     
     // Continue to payment
-    await page.click(&#x27;[data-testid&#x3D;&quot;continue-to-payment&quot;]&#x27;);
+    await page.click('[data-testid="continue-to-payment"]');
     
     // Fill payment information
-    await page.fill(&#x27;[data-testid&#x3D;&quot;card-number&quot;]&#x27;, &#x27;4242424242424242&#x27;);
-    await page.fill(&#x27;[data-testid&#x3D;&quot;card-expiry&quot;]&#x27;, &#x27;12/25&#x27;);
-    await page.fill(&#x27;[data-testid&#x3D;&quot;card-cvc&quot;]&#x27;, &#x27;123&#x27;);
+    await page.fill('[data-testid="card-number"]', '4242424242424242');
+    await page.fill('[data-testid="card-expiry"]', '12/25');
+    await page.fill('[data-testid="card-cvc"]', '123');
     
     // Submit order
-    await page.click(&#x27;[data-testid&#x3D;&quot;place-order&quot;]&#x27;);
+    await page.click('[data-testid="place-order"]');
     
     // Verify order confirmation
-    await expect(page).toHaveURL(&#x27;/order-confirmation&#x27;);
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;success-message&quot;]&#x27;)).toContainText(&#x27;Order placed successfully&#x27;);
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;order-number&quot;]&#x27;)).toBeVisible();
+    await expect(page).toHaveURL('/order-confirmation');
+    await expect(page.locator('[data-testid="success-message"]')).toContainText('Order placed successfully');
+    await expect(page.locator('[data-testid="order-number"]')).toBeVisible();
   });
 
-  test(&#x27;handles out of stock products&#x27;, async ({ page }) &#x3D;&amp;gt; {
-    await page.goto(&#x27;/products/out-of-stock-laptop&#x27;);
+  test('handles out of stock products', async ({ page }) =&gt; {
+    await page.goto('/products/out-of-stock-laptop');
     
     // Product should show out of stock
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;out-of-stock-badge&quot;]&#x27;)).toBeVisible();
+    await expect(page.locator('[data-testid="out-of-stock-badge"]')).toBeVisible();
     
     // Add to cart should be disabled
-    const addToCartButton &#x3D; page.locator(&#x27;[data-testid&#x3D;&quot;add-to-cart-button&quot;]&#x27;);
+    const addToCartButton = page.locator('[data-testid="add-to-cart-button"]');
     await expect(addToCartButton).toBeDisabled();
     
     // Should show notification option
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;notify-when-available&quot;]&#x27;)).toBeVisible();
+    await expect(page.locator('[data-testid="notify-when-available"]')).toBeVisible();
   });
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;testing-responsive-design&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#testing-responsive-design&quot;&gt;Testing Responsive Design&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// tests/e2e/responsive.spec.js
-const { test, expect, devices } &#x3D; require(&#x27;@playwright/test&#x27;);
+</code></pre>
+<h3 id="testing-responsive-design"><a class="header" href="#testing-responsive-design">Testing Responsive Design</a></h3>
+<pre><code class="language-javascript">// tests/e2e/responsive.spec.js
+const { test, expect, devices } = require('@playwright/test');
 
-test.describe(&#x27;Responsive Design&#x27;, () &#x3D;&amp;gt; {
-  const viewports &#x3D; [
-    { name: &#x27;Mobile&#x27;, viewport: { width: 375, height: 667 } },
-    { name: &#x27;Tablet&#x27;, viewport: { width: 768, height: 1024 } },
-    { name: &#x27;Desktop&#x27;, viewport: { width: 1280, height: 720 } },
+test.describe('Responsive Design', () =&gt; {
+  const viewports = [
+    { name: 'Mobile', viewport: { width: 375, height: 667 } },
+    { name: 'Tablet', viewport: { width: 768, height: 1024 } },
+    { name: 'Desktop', viewport: { width: 1280, height: 720 } },
   ];
 
-  viewports.forEach(({ name, viewport }) &#x3D;&amp;gt; {
-    test(&#x60;${name}: navigation works correctly&#x60;, async ({ page }) &#x3D;&amp;gt; {
+  viewports.forEach(({ name, viewport }) =&gt; {
+    test(`${name}: navigation works correctly`, async ({ page }) =&gt; {
       await page.setViewportSize(viewport);
-      await page.goto(&#x27;/&#x27;);
+      await page.goto('/');
       
       // Test navigation menu
-      if (name &#x3D;&#x3D;&#x3D; &#x27;Mobile&#x27;) {
+      if (name === 'Mobile') {
         // Mobile should have hamburger menu
-        await expect(page.locator(&#x27;[data-testid&#x3D;&quot;mobile-menu-button&quot;]&#x27;)).toBeVisible();
-        await expect(page.locator(&#x27;[data-testid&#x3D;&quot;desktop-nav&quot;]&#x27;)).toBeHidden();
+        await expect(page.locator('[data-testid="mobile-menu-button"]')).toBeVisible();
+        await expect(page.locator('[data-testid="desktop-nav"]')).toBeHidden();
         
         // Open mobile menu
-        await page.click(&#x27;[data-testid&#x3D;&quot;mobile-menu-button&quot;]&#x27;);
-        await expect(page.locator(&#x27;[data-testid&#x3D;&quot;mobile-menu&quot;]&#x27;)).toBeVisible();
+        await page.click('[data-testid="mobile-menu-button"]');
+        await expect(page.locator('[data-testid="mobile-menu"]')).toBeVisible();
       } else {
         // Desktop should show full navigation
-        await expect(page.locator(&#x27;[data-testid&#x3D;&quot;desktop-nav&quot;]&#x27;)).toBeVisible();
-        await expect(page.locator(&#x27;[data-testid&#x3D;&quot;mobile-menu-button&quot;]&#x27;)).toBeHidden();
+        await expect(page.locator('[data-testid="desktop-nav"]')).toBeVisible();
+        await expect(page.locator('[data-testid="mobile-menu-button"]')).toBeHidden();
       }
     });
 
-    test(&#x60;${name}: product grid layout&#x60;, async ({ page }) &#x3D;&amp;gt; {
+    test(`${name}: product grid layout`, async ({ page }) =&gt; {
       await page.setViewportSize(viewport);
-      await page.goto(&#x27;/products&#x27;);
+      await page.goto('/products');
       
-      const productGrid &#x3D; page.locator(&#x27;[data-testid&#x3D;&quot;product-grid&quot;]&#x27;);
+      const productGrid = page.locator('[data-testid="product-grid"]');
       await expect(productGrid).toBeVisible();
       
-      if (name &#x3D;&#x3D;&#x3D; &#x27;Mobile&#x27;) {
+      if (name === 'Mobile') {
         // Mobile should show single column
-        await expect(productGrid.locator(&#x27;[data-testid&#x3D;&quot;product-card&quot;]&#x27;)).toHaveCount(1, { visible: true });
-      } else if (name &#x3D;&#x3D;&#x3D; &#x27;Tablet&#x27;) {
+        await expect(productGrid.locator('[data-testid="product-card"]')).toHaveCount(1, { visible: true });
+      } else if (name === 'Tablet') {
         // Tablet should show 2 columns
-        await expect(productGrid.locator(&#x27;[data-testid&#x3D;&quot;product-card&quot;]&#x27;)).toHaveCount(2, { visible: true });
+        await expect(productGrid.locator('[data-testid="product-card"]')).toHaveCount(2, { visible: true });
       } else {
         // Desktop should show 3+ columns
-        await expect(productGrid.locator(&#x27;[data-testid&#x3D;&quot;product-card&quot;]&#x27;)).toHaveCount(3, { visible: true });
+        await expect(productGrid.locator('[data-testid="product-card"]')).toHaveCount(3, { visible: true });
       }
     });
   });
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-react-native-e2e-testing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-react-native-e2e-testing&quot;&gt;🧪 React Native E2E Testing&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;detox-for-react-native&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#detox-for-react-native&quot;&gt;Detox for React Native&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-bash&quot;&gt;# Install Detox
+</code></pre>
+<h2 id="-react-native-e2e-testing"><a class="header" href="#-react-native-e2e-testing">🧪 React Native E2E Testing</a></h2>
+<h3 id="detox-for-react-native"><a class="header" href="#detox-for-react-native">Detox for React Native</a></h3>
+<pre><code class="language-bash"># Install Detox
 npm install --save-dev detox
 npx detox init
 
 # Configure for iOS/Android
 npx detox build --configuration ios.sim.debug
 npx detox test --configuration ios.sim.debug
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;e2e-test-for-mobile-app&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#e2e-test-for-mobile-app&quot;&gt;E2E Test for Mobile App&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// e2e/LoginFlow.e2e.js
-const { device, element, by, expect } &#x3D; require(&#x27;detox&#x27;);
+</code></pre>
+<h3 id="e2e-test-for-mobile-app"><a class="header" href="#e2e-test-for-mobile-app">E2E Test for Mobile App</a></h3>
+<pre><code class="language-javascript">// e2e/LoginFlow.e2e.js
+const { device, element, by, expect } = require('detox');
 
-describe(&#x27;Login Flow&#x27;, () &#x3D;&amp;gt; {
-  beforeAll(async () &#x3D;&amp;gt; {
+describe('Login Flow', () =&gt; {
+  beforeAll(async () =&gt; {
     await device.launchApp();
   });
 
-  beforeEach(async () &#x3D;&amp;gt; {
+  beforeEach(async () =&gt; {
     await device.reloadReactNative();
   });
 
-  it(&#x27;should login successfully&#x27;, async () &#x3D;&amp;gt; {
+  it('should login successfully', async () =&gt; {
     // Enter email
-    await element(by.id(&#x27;email-input&#x27;)).typeText(&#x27;john@example.com&#x27;);
+    await element(by.id('email-input')).typeText('john@example.com');
     
     // Enter password
-    await element(by.id(&#x27;password-input&#x27;)).typeText(&#x27;password123&#x27;);
+    await element(by.id('password-input')).typeText('password123');
     
     // Tap login button
-    await element(by.id(&#x27;login-button&#x27;)).tap();
+    await element(by.id('login-button')).tap();
     
     // Should navigate to home screen
-    await expect(element(by.id(&#x27;home-screen&#x27;))).toBeVisible();
+    await expect(element(by.id('home-screen'))).toBeVisible();
     
     // Should show user name
-    await expect(element(by.text(&#x27;Welcome, John&#x27;))).toBeVisible();
+    await expect(element(by.text('Welcome, John'))).toBeVisible();
   });
 
-  it(&#x27;should show error for invalid credentials&#x27;, async () &#x3D;&amp;gt; {
-    await element(by.id(&#x27;email-input&#x27;)).typeText(&#x27;john@example.com&#x27;);
-    await element(by.id(&#x27;password-input&#x27;)).typeText(&#x27;wrongpassword&#x27;);
-    await element(by.id(&#x27;login-button&#x27;)).tap();
+  it('should show error for invalid credentials', async () =&gt; {
+    await element(by.id('email-input')).typeText('john@example.com');
+    await element(by.id('password-input')).typeText('wrongpassword');
+    await element(by.id('login-button')).tap();
     
     // Should show error message
-    await expect(element(by.id(&#x27;error-message&#x27;))).toBeVisible();
-    await expect(element(by.text(&#x27;Invalid credentials&#x27;))).toBeVisible();
+    await expect(element(by.id('error-message'))).toBeVisible();
+    await expect(element(by.text('Invalid credentials'))).toBeVisible();
     
     // Should stay on login screen
-    await expect(element(by.id(&#x27;login-screen&#x27;))).toBeVisible();
+    await expect(element(by.id('login-screen'))).toBeVisible();
   });
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-advanced-e2e-testing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-advanced-e2e-testing&quot;&gt;🔧 Advanced E2E Testing&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;testing-file-upload&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#testing-file-upload&quot;&gt;Testing File Upload&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// tests/e2e/fileUpload.spec.js
-const { test, expect } &#x3D; require(&#x27;@playwright/test&#x27;);
+</code></pre>
+<h2 id="-advanced-e2e-testing"><a class="header" href="#-advanced-e2e-testing">🔧 Advanced E2E Testing</a></h2>
+<h3 id="testing-file-upload"><a class="header" href="#testing-file-upload">Testing File Upload</a></h3>
+<pre><code class="language-javascript">// tests/e2e/fileUpload.spec.js
+const { test, expect } = require('@playwright/test');
 
-test.describe(&#x27;File Upload&#x27;, () &#x3D;&amp;gt; {
-  test(&#x27;uploads profile picture&#x27;, async ({ page }) &#x3D;&amp;gt; {
-    await page.goto(&#x27;/profile&#x27;);
+test.describe('File Upload', () =&gt; {
+  test('uploads profile picture', async ({ page }) =&gt; {
+    await page.goto('/profile');
     
     // Click upload button
-    const fileInput &#x3D; page.locator(&#x27;[data-testid&#x3D;&quot;file-input&quot;]&#x27;);
+    const fileInput = page.locator('[data-testid="file-input"]');
     
     // Upload file
-    await fileInput.setInputFiles(&#x27;tests/fixtures/profile-picture.jpg&#x27;);
+    await fileInput.setInputFiles('tests/fixtures/profile-picture.jpg');
     
     // Should show preview
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;image-preview&quot;]&#x27;)).toBeVisible();
+    await expect(page.locator('[data-testid="image-preview"]')).toBeVisible();
     
     // Click upload
-    await page.click(&#x27;[data-testid&#x3D;&quot;upload-button&quot;]&#x27;);
+    await page.click('[data-testid="upload-button"]');
     
     // Should show success message
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;success-message&quot;]&#x27;)).toContainText(&#x27;Profile picture updated&#x27;);
+    await expect(page.locator('[data-testid="success-message"]')).toContainText('Profile picture updated');
     
     // Should update profile picture
     await page.reload();
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;profile-image&quot;]&#x27;)).toHaveAttribute(&#x27;src&#x27;, /profile-picture/);
+    await expect(page.locator('[data-testid="profile-image"]')).toHaveAttribute('src', /profile-picture/);
   });
 
-  test(&#x27;validates file types and sizes&#x27;, async ({ page }) &#x3D;&amp;gt; {
-    await page.goto(&#x27;/profile&#x27;);
+  test('validates file types and sizes', async ({ page }) =&gt; {
+    await page.goto('/profile');
     
     // Try to upload invalid file
-    const fileInput &#x3D; page.locator(&#x27;[data-testid&#x3D;&quot;file-input&quot;]&#x27;);
-    await fileInput.setInputFiles(&#x27;tests/fixtures/invalid-file.txt&#x27;);
+    const fileInput = page.locator('[data-testid="file-input"]');
+    await fileInput.setInputFiles('tests/fixtures/invalid-file.txt');
     
     // Should show error
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;file-error&quot;]&#x27;)).toContainText(&#x27;Invalid file type&#x27;);
+    await expect(page.locator('[data-testid="file-error"]')).toContainText('Invalid file type');
     
     // Try to upload large file
-    await fileInput.setInputFiles(&#x27;tests/fixtures/large-image.jpg&#x27;);
-    await page.click(&#x27;[data-testid&#x3D;&quot;upload-button&quot;]&#x27;);
+    await fileInput.setInputFiles('tests/fixtures/large-image.jpg');
+    await page.click('[data-testid="upload-button"]');
     
-    await expect(page.locator(&#x27;[data-testid&#x3D;&quot;file-error&quot;]&#x27;)).toContainText(&#x27;File too large&#x27;);
+    await expect(page.locator('[data-testid="file-error"]')).toContainText('File too large');
   });
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;testing-performance&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#testing-performance&quot;&gt;Testing Performance&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// tests/e2e/performance.spec.js
-const { test, expect } &#x3D; require(&#x27;@playwright/test&#x27;);
+</code></pre>
+<h3 id="testing-performance"><a class="header" href="#testing-performance">Testing Performance</a></h3>
+<pre><code class="language-javascript">// tests/e2e/performance.spec.js
+const { test, expect } = require('@playwright/test');
 
-test.describe(&#x27;Performance Tests&#x27;, () &#x3D;&amp;gt; {
-  test(&#x27;page load performance&#x27;, async ({ page }) &#x3D;&amp;gt; {
+test.describe('Performance Tests', () =&gt; {
+  test('page load performance', async ({ page }) =&gt; {
     // Start performance monitoring
-    await page.goto(&#x27;/&#x27;);
+    await page.goto('/');
     
     // Check load time
-    const performanceTiming &#x3D; JSON.parse(
-      await page.evaluate(() &#x3D;&amp;gt; JSON.stringify(window.performance.timing))
+    const performanceTiming = JSON.parse(
+      await page.evaluate(() =&gt; JSON.stringify(window.performance.timing))
     );
     
-    const loadTime &#x3D; performanceTiming.loadEventEnd - performanceTiming.navigationStart;
+    const loadTime = performanceTiming.loadEventEnd - performanceTiming.navigationStart;
     
     // Should load within 3 seconds
     expect(loadTime).toBeLessThan(3000);
     
     // Check Core Web Vitals
-    const webVitals &#x3D; await page.evaluate(() &#x3D;&amp;gt; {
-      return new Promise((resolve) &#x3D;&amp;gt; {
-        new PerformanceObserver((list) &#x3D;&amp;gt; {
-          const entries &#x3D; list.getEntries();
-          const vitals &#x3D; {};
+    const webVitals = await page.evaluate(() =&gt; {
+      return new Promise((resolve) =&gt; {
+        new PerformanceObserver((list) =&gt; {
+          const entries = list.getEntries();
+          const vitals = {};
           
-          entries.forEach((entry) &#x3D;&amp;gt; {
-            if (entry.entryType &#x3D;&#x3D;&#x3D; &#x27;largest-contentful-paint&#x27;) {
-              vitals.LCP &#x3D; entry.startTime;
+          entries.forEach((entry) =&gt; {
+            if (entry.entryType === 'largest-contentful-paint') {
+              vitals.LCP = entry.startTime;
             }
-            if (entry.entryType &#x3D;&#x3D;&#x3D; &#x27;first-input&#x27;) {
-              vitals.FID &#x3D; entry.processingStart - entry.startTime;
+            if (entry.entryType === 'first-input') {
+              vitals.FID = entry.processingStart - entry.startTime;
             }
           });
           
           resolve(vitals);
-        }).observe({ entryTypes: [&#x27;largest-contentful-paint&#x27;, &#x27;first-input&#x27;] });
+        }).observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
       });
     });
     
@@ -1221,11 +957,11 @@ test.describe(&#x27;Performance Tests&#x27;, () &#x3D;&amp;gt; {
     expect(webVitals.FID).toBeLessThan(100);
   });
 
-  test(&#x27;memory usage&#x27;, async ({ page }) &#x3D;&amp;gt; {
-    await page.goto(&#x27;/heavy-page&#x27;);
+  test('memory usage', async ({ page }) =&gt; {
+    await page.goto('/heavy-page');
     
     // Get memory usage
-    const memoryUsage &#x3D; await page.evaluate(() &#x3D;&amp;gt; {
+    const memoryUsage = await page.evaluate(() =&gt; {
       if (performance.memory) {
         return {
           used: performance.memory.usedJSHeapSize,
@@ -1238,15 +974,15 @@ test.describe(&#x27;Performance Tests&#x27;, () &#x3D;&amp;gt; {
     
     if (memoryUsage) {
       // Memory usage should be reasonable
-      const memoryRatio &#x3D; memoryUsage.used / memoryUsage.limit;
+      const memoryRatio = memoryUsage.used / memoryUsage.limit;
       expect(memoryRatio).toBeLessThan(0.7); // Less than 70% of limit
     }
   });
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;-e2e-testing-best-practices&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#-e2e-testing-best-practices&quot;&gt;📊 E2E Testing Best Practices&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;test-organization&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#test-organization&quot;&gt;Test Organization&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-text&quot;&gt;tests/
+</code></pre>
+<h2 id="-e2e-testing-best-practices"><a class="header" href="#-e2e-testing-best-practices">📊 E2E Testing Best Practices</a></h2>
+<h3 id="test-organization"><a class="header" href="#test-organization">Test Organization</a></h3>
+<pre><code class="language-text">tests/
 ├── e2e/
 │   ├── auth/
 │   │   ├── login.spec.js
@@ -1265,20 +1001,20 @@ test.describe(&#x27;Performance Tests&#x27;, () &#x3D;&amp;gt; {
 │   └── fixtures/
 │       ├── users.json
 │       └── products.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;page-object-model&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#page-object-model&quot;&gt;Page Object Model&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// tests/e2e/page-objects/LoginPage.js
+</code></pre>
+<h3 id="page-object-model"><a class="header" href="#page-object-model">Page Object Model</a></h3>
+<pre><code class="language-javascript">// tests/e2e/page-objects/LoginPage.js
 class LoginPage {
   constructor(page) {
-    this.page &#x3D; page;
-    this.emailInput &#x3D; page.locator(&#x27;[data-testid&#x3D;&quot;email-input&quot;]&#x27;);
-    this.passwordInput &#x3D; page.locator(&#x27;[data-testid&#x3D;&quot;password-input&quot;]&#x27;);
-    this.loginButton &#x3D; page.locator(&#x27;[data-testid&#x3D;&quot;login-button&quot;]&#x27;);
-    this.errorMessage &#x3D; page.locator(&#x27;[data-testid&#x3D;&quot;error-message&quot;]&#x27;);
+    this.page = page;
+    this.emailInput = page.locator('[data-testid="email-input"]');
+    this.passwordInput = page.locator('[data-testid="password-input"]');
+    this.loginButton = page.locator('[data-testid="login-button"]');
+    this.errorMessage = page.locator('[data-testid="error-message"]');
   }
 
   async goto() {
-    await this.page.goto(&#x27;/login&#x27;);
+    await this.page.goto('/login');
   }
 
   async login(email, password) {
@@ -1292,45 +1028,45 @@ class LoginPage {
   }
 
   async isLoggedIn() {
-    return await this.page.locator(&#x27;[data-testid&#x3D;&quot;user-profile&quot;]&#x27;).isVisible();
+    return await this.page.locator('[data-testid="user-profile"]').isVisible();
   }
 }
 
-module.exports &#x3D; LoginPage;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;test-data-management&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#test-data-management&quot;&gt;Test Data Management&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// tests/e2e/fixtures/testData.js
-export const users &#x3D; {
+module.exports = LoginPage;
+</code></pre>
+<h3 id="test-data-management"><a class="header" href="#test-data-management">Test Data Management</a></h3>
+<pre><code class="language-javascript">// tests/e2e/fixtures/testData.js
+export const users = {
   valid: {
-    email: &#x27;john@example.com&#x27;,
-    password: &#x27;password123&#x27;,
-    name: &#x27;John Doe&#x27;
+    email: 'john@example.com',
+    password: 'password123',
+    name: 'John Doe'
   },
   invalid: {
-    email: &#x27;invalid-email&#x27;,
-    password: &#x27;wrongpassword&#x27;
+    email: 'invalid-email',
+    password: 'wrongpassword'
   }
 };
 
-export const products &#x3D; {
+export const products = {
   laptop: {
-    name: &#x27;Test Laptop&#x27;,
+    name: 'Test Laptop',
     price: 999.99,
-    category: &#x27;Electronics&#x27;
+    category: 'Electronics'
   }
 };
 
 // Test utilities
-export const generateRandomEmail &#x3D; () &#x3D;&amp;gt; {
-  return &#x60;test${Date.now()}@example.com&#x60;;
+export const generateRandomEmail = () =&gt; {
+  return `test${Date.now()}@example.com`;
 };
 
-export const generateRandomString &#x3D; (length &#x3D; 10) &#x3D;&amp;gt; {
+export const generateRandomString = (length = 10) =&gt; {
   return Math.random().toString(36).substring(2, length + 2);
 };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;cicd-integration&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#cicd-integration&quot;&gt;CI/CD Integration&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// .github/workflows/e2e.yml
+</code></pre>
+<h3 id="cicd-integration"><a class="header" href="#cicd-integration">CI/CD Integration</a></h3>
+<pre><code class="language-javascript">// .github/workflows/e2e.yml
 name: E2E Tests
 
 on: [push, pull_request]
@@ -1345,7 +1081,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: &#x27;18&#x27;
+          node-version: '18'
           
       - name: Install dependencies
         run: npm ci
@@ -1365,71 +1101,22 @@ jobs:
         with:
           name: playwright-report
           path: playwright-report/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Testing Section Complete!&lt;/strong&gt; 🎉&lt;/p&gt;
-&lt;p&gt;You now have a comprehensive understanding of:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Unit Testing&lt;/strong&gt;: Testing individual components and functions&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Integration Testing&lt;/strong&gt;: Testing component interactions&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;End-to-End Testing&lt;/strong&gt;: Testing complete user workflows&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Next Up&lt;/strong&gt;: Learn about DevOps &amp;amp; Deployment! ⚙️&lt;/p&gt;
+</code></pre>
+<hr>
+<p><strong>Testing Section Complete!</strong> 🎉</p>
+<p>You now have a comprehensive understanding of:</p>
+<ul>
+<li><strong>Unit Testing</strong>: Testing individual components and functions</li>
+<li><strong>Integration Testing</strong>: Testing component interactions</li>
+<li><strong>End-to-End Testing</strong>: Testing complete user workflows</li>
+</ul>
+<p><strong>Next Up</strong>: Learn about DevOps &amp; Deployment! ⚙️</p>
 
-                        </div>
-                        
-                    </article>
-                </div>
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "testing/e2e.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

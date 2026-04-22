@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>Project Structure &amp; Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="Project Structure &amp; Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Project Structure &amp; Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>Project Structure &amp; Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="fullstack/project-structure.md">
-    <meta property="og:title" content="Project Structure &amp; Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Project Structure &amp; Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="fullstack/project-structure.md">
-    <meta property="twitter:title" content="Project Structure &amp; Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="Project Structure &amp; Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="Project Structure &amp; Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="fullstack/project-structure.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "Project Structure &amp; Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,66 +525,17 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    Project Structure &amp; Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
-
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>Project Structure &amp; Architecture - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;project-structure--architecture&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#project-structure--architecture&quot;&gt;Project Structure &amp;amp; Architecture&lt;/a&gt;&lt;/h1&gt;
-&lt;h2 id&#x3D;&quot;what-is-project-structure&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#what-is-project-structure&quot;&gt;What is Project Structure?&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Project structure refers to the organization of files, directories, and code in a software application. A well-structured project is easier to maintain, scale, and collaborate on. It follows established patterns and conventions that make the codebase predictable and manageable.&lt;/p&gt;
-&lt;h2 id&#x3D;&quot;example&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#example&quot;&gt;Example&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;modern-full-stack-application-structure&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#modern-full-stack-application-structure&quot;&gt;Modern Full-Stack Application Structure&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;my-project/
+        <div id="content">
+            <main>
+                <h1 id="project-structure--architecture"><a class="header" href="#project-structure--architecture">Project Structure &amp; Architecture</a></h1>
+<h2 id="what-is-project-structure"><a class="header" href="#what-is-project-structure">What is Project Structure?</a></h2>
+<p>Project structure refers to the organization of files, directories, and code in a software application. A well-structured project is easier to maintain, scale, and collaborate on. It follows established patterns and conventions that make the codebase predictable and manageable.</p>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<h3 id="modern-full-stack-application-structure"><a class="header" href="#modern-full-stack-application-structure">Modern Full-Stack Application Structure</a></h3>
+<pre><code>my-project/
 # Configuration and Setup
 .env.example                    # Environment variables template
 .env                            # Local environment variables
@@ -928,25 +664,25 @@ scripts/
   build.sh                     # Build script
   deploy.sh                    # Deployment script
   seed.js                      # Database seeding
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;modular-architecture-pattern&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#modular-architecture-pattern&quot;&gt;Modular Architecture Pattern&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// backend/app.js - Main application setup
-const express &#x3D; require(&#x27;express&#x27;);
-const cors &#x3D; require(&#x27;cors&#x27;);
-const helmet &#x3D; require(&#x27;helmet&#x27;);
-const morgan &#x3D; require(&#x27;morgan&#x27;);
-const rateLimit &#x3D; require(&#x27;express-rate-limit&#x27;);
+</code></pre>
+<h3 id="modular-architecture-pattern"><a class="header" href="#modular-architecture-pattern">Modular Architecture Pattern</a></h3>
+<pre><code class="language-javascript">// backend/app.js - Main application setup
+const express = require('express');
+const cors = require('cors');
+const helmet = require('helmet');
+const morgan = require('morgan');
+const rateLimit = require('express-rate-limit');
 
 // Import modules
-const authRoutes &#x3D; require(&#x27;./routes/auth&#x27;);
-const userRoutes &#x3D; require(&#x27;./routes/users&#x27;);
-const postRoutes &#x3D; require(&#x27;./routes/posts&#x27;);
-const errorHandler &#x3D; require(&#x27;./middleware/errorHandler&#x27;);
-const { connectDatabase } &#x3D; require(&#x27;./config/database&#x27;);
+const authRoutes = require('./routes/auth');
+const userRoutes = require('./routes/users');
+const postRoutes = require('./routes/posts');
+const errorHandler = require('./middleware/errorHandler');
+const { connectDatabase } = require('./config/database');
 
 class Application {
   constructor() {
-    this.app &#x3D; express();
+    this.app = express();
     this.setupMiddleware();
     this.setupRoutes();
     this.setupErrorHandling();
@@ -958,34 +694,34 @@ class Application {
     this.app.use(cors());
     
     // Rate limiting
-    const limiter &#x3D; rateLimit({
+    const limiter = rateLimit({
       windowMs: 15 * 60 * 1000, // 15 minutes
       max: 100 // limit each IP to 100 requests per window
     });
     this.app.use(limiter);
     
     // Body parsing
-    this.app.use(express.json({ limit: &#x27;10mb&#x27; }));
+    this.app.use(express.json({ limit: '10mb' }));
     this.app.use(express.urlencoded({ extended: true }));
     
     // Logging
-    this.app.use(morgan(&#x27;combined&#x27;));
+    this.app.use(morgan('combined'));
   }
 
   setupRoutes() {
     // Health check
-    this.app.get(&#x27;/health&#x27;, (req, res) &#x3D;&amp;gt; {
-      res.json({ status: &#x27;OK&#x27;, timestamp: new Date().toISOString() });
+    this.app.get('/health', (req, res) =&gt; {
+      res.json({ status: 'OK', timestamp: new Date().toISOString() });
     });
     
     // API routes
-    this.app.use(&#x27;/api/auth&#x27;, authRoutes);
-    this.app.use(&#x27;/api/users&#x27;, userRoutes);
-    this.app.use(&#x27;/api/posts&#x27;, postRoutes);
+    this.app.use('/api/auth', authRoutes);
+    this.app.use('/api/users', userRoutes);
+    this.app.use('/api/posts', postRoutes);
     
     // 404 handler
-    this.app.use(&#x27;*&#x27;, (req, res) &#x3D;&amp;gt; {
-      res.status(404).json({ error: &#x27;Route not found&#x27; });
+    this.app.use('*', (req, res) =&gt; {
+      res.status(404).json({ error: 'Route not found' });
     });
   }
 
@@ -996,25 +732,25 @@ class Application {
   async start(port) {
     try {
       await connectDatabase();
-      this.app.listen(port, () &#x3D;&amp;gt; {
-        console.log(&#x60;Server running on port ${port}&#x60;);
+      this.app.listen(port, () =&gt; {
+        console.log(`Server running on port ${port}`);
       });
     } catch (error) {
-      console.error(&#x27;Failed to start server:&#x27;, error);
+      console.error('Failed to start server:', error);
       process.exit(1);
     }
   }
 }
 
-module.exports &#x3D; Application;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id&#x3D;&quot;service-layer-architecture&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#service-layer-architecture&quot;&gt;Service Layer Architecture&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// services/UserService.js - Business logic layer
+module.exports = Application;
+</code></pre>
+<h3 id="service-layer-architecture"><a class="header" href="#service-layer-architecture">Service Layer Architecture</a></h3>
+<pre><code class="language-javascript">// services/UserService.js - Business logic layer
 class UserService {
   constructor() {
-    this.UserModel &#x3D; require(&#x27;../models/User&#x27;);
-    this.EmailService &#x3D; require(&#x27;./EmailService&#x27;);
-    this.Validator &#x3D; require(&#x27;../utils/validation&#x27;);
+    this.UserModel = require('../models/User');
+    this.EmailService = require('./EmailService');
+    this.Validator = require('../utils/validation');
   }
 
   async createUser(userData) {
@@ -1022,16 +758,16 @@ class UserService {
     this.Validator.validateUser(userData);
     
     // Check if user exists
-    const existingUser &#x3D; await this.UserModel.findOne({
+    const existingUser = await this.UserModel.findOne({
       $or: [{ email: userData.email }, { username: userData.username }]
     });
     
     if (existingUser) {
-      throw new Error(&#x27;User already exists&#x27;);
+      throw new Error('User already exists');
     }
     
     // Create user
-    const user &#x3D; new this.UserModel(userData);
+    const user = new this.UserModel(userData);
     await user.save();
     
     // Send welcome email
@@ -1041,9 +777,9 @@ class UserService {
   }
 
   async getUserById(userId) {
-    const user &#x3D; await this.UserModel.findById(userId);
+    const user = await this.UserModel.findById(userId);
     if (!user) {
-      throw new Error(&#x27;User not found&#x27;);
+      throw new Error('User not found');
     }
     return user;
   }
@@ -1052,7 +788,7 @@ class UserService {
     // Validate update data
     this.Validator.validateUserUpdate(updateData);
     
-    const user &#x3D; await this.getUserById(userId);
+    const user = await this.getUserById(userId);
     
     // Update user
     Object.assign(user, updateData);
@@ -1062,18 +798,18 @@ class UserService {
   }
 
   async deleteUser(userId) {
-    const user &#x3D; await this.getUserById(userId);
+    const user = await this.getUserById(userId);
     await user.remove();
     return true;
   }
 }
 
-module.exports &#x3D; UserService;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;real-use-case&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#real-use-case&quot;&gt;Real Use Case&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id&#x3D;&quot;microservices-architecture&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#microservices-architecture&quot;&gt;Microservices Architecture&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Netflix&lt;/strong&gt; and &lt;strong&gt;Amazon&lt;/strong&gt; use microservices for scalability:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;microservices-app/
+module.exports = UserService;
+</code></pre>
+<h2 id="real-use-case"><a class="header" href="#real-use-case">Real Use Case</a></h2>
+<h3 id="microservices-architecture"><a class="header" href="#microservices-architecture">Microservices Architecture</a></h3>
+<p><strong>Netflix</strong> and <strong>Amazon</strong> use microservices for scalability:</p>
+<pre><code>microservices-app/
 # API Gateway
 api-gateway/
   package.json
@@ -1152,18 +888,18 @@ infrastructure/
     prometheus.yml
   grafana/
     dashboards/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;pro-tip&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#pro-tip&quot;&gt;Pro Tip&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Implement Dependency Injection Pattern&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// utils/dependencyContainer.js
+</code></pre>
+<h2 id="pro-tip"><a class="header" href="#pro-tip">Pro Tip</a></h2>
+<p><strong>Implement Dependency Injection Pattern</strong></p>
+<pre><code class="language-javascript">// utils/dependencyContainer.js
 class DependencyContainer {
   constructor() {
-    this.dependencies &#x3D; new Map();
-    this.singletons &#x3D; new Map();
+    this.dependencies = new Map();
+    this.singletons = new Map();
   }
 
   // Register a dependency
-  register(name, factory, options &#x3D; {}) {
+  register(name, factory, options = {}) {
     this.dependencies.set(name, {
       factory,
       singleton: options.singleton || false,
@@ -1173,23 +909,23 @@ class DependencyContainer {
 
   // Resolve a dependency
   resolve(name) {
-    const dependency &#x3D; this.dependencies.get(name);
+    const dependency = this.dependencies.get(name);
     if (!dependency) {
-      throw new Error(&#x60;Dependency ${name} not found&#x60;);
+      throw new Error(`Dependency ${name} not found`);
     }
 
     // Return singleton if already created
-    if (dependency.singleton &amp;amp;&amp;amp; this.singletons.has(name)) {
+    if (dependency.singleton &amp;&amp; this.singletons.has(name)) {
       return this.singletons.get(name);
     }
 
     // Resolve dependencies first
-    const resolvedDependencies &#x3D; dependency.dependencies.map(dep &#x3D;&amp;gt; 
+    const resolvedDependencies = dependency.dependencies.map(dep =&gt; 
       this.resolve(dep)
     );
 
     // Create instance
-    const instance &#x3D; dependency.factory(...resolvedDependencies);
+    const instance = dependency.factory(...resolvedDependencies);
 
     // Store singleton
     if (dependency.singleton) {
@@ -1201,38 +937,38 @@ class DependencyContainer {
 }
 
 // Setup dependencies
-const container &#x3D; new DependencyContainer();
+const container = new DependencyContainer();
 
 // Register services
-container.register(&#x27;database&#x27;, () &#x3D;&amp;gt; require(&#x27;./config/database&#x27;), { singleton: true });
-container.register(&#x27;emailService&#x27;, (database) &#x3D;&amp;gt; new EmailService(database), { 
+container.register('database', () =&gt; require('./config/database'), { singleton: true });
+container.register('emailService', (database) =&gt; new EmailService(database), { 
   singleton: true, 
-  dependencies: [&#x27;database&#x27;] 
+  dependencies: ['database'] 
 });
-container.register(&#x27;userService&#x27;, (database, emailService) &#x3D;&amp;gt; new UserService(database, emailService), {
-  dependencies: [&#x27;database&#x27;, &#x27;emailService&#x27;]
+container.register('userService', (database, emailService) =&gt; new UserService(database, emailService), {
+  dependencies: ['database', 'emailService']
 });
 
 // Use in controllers
 class UserController {
   constructor() {
-    this.userService &#x3D; container.resolve(&#x27;userService&#x27;);
+    this.userService = container.resolve('userService');
   }
 
   async createUser(req, res) {
     try {
-      const user &#x3D; await this.userService.createUser(req.body);
+      const user = await this.userService.createUser(req.body);
       res.status(201).json(user);
     } catch (error) {
       res.status(400).json({ error: error.message });
     }
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id&#x3D;&quot;exercise&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#exercise&quot;&gt;Exercise&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Design a Complete Project Structure&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Create a comprehensive project structure for a social media application:&lt;/p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;// Exercise: Social Media App Structure
+</code></pre>
+<h2 id="exercise"><a class="header" href="#exercise">Exercise</a></h2>
+<p><strong>Design a Complete Project Structure</strong></p>
+<p>Create a comprehensive project structure for a social media application:</p>
+<pre><code class="language-javascript">// Exercise: Social Media App Structure
 // Requirements:
 // 1. Full-stack application (React + Node.js)
 // 2. User authentication and profiles
@@ -1426,84 +1162,35 @@ scripts/
   deploy.sh
   seed.js
   backup.sh
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Your Tasks:&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Create the complete project structure&lt;/li&gt;
-&lt;li&gt;Implement the dependency injection container&lt;/li&gt;
-&lt;li&gt;Set up the modular architecture&lt;/li&gt;
-&lt;li&gt;Create configuration management&lt;/li&gt;
-&lt;li&gt;Implement service layer pattern&lt;/li&gt;
-&lt;li&gt;Add comprehensive error handling&lt;/li&gt;
-&lt;li&gt;Set up testing structure&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This exercise teaches you:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Project organization and structure&lt;/li&gt;
-&lt;li&gt;Modular architecture patterns&lt;/li&gt;
-&lt;li&gt;Dependency injection principles&lt;/li&gt;
-&lt;li&gt;Configuration management&lt;/li&gt;
-&lt;li&gt;Service layer implementation&lt;/li&gt;
-&lt;li&gt;Testing organization&lt;/li&gt;
-&lt;li&gt;Deployment structure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Next Up&lt;/strong&gt;: Learn about SEO and performance optimization! SEO &amp;amp; Performance&lt;/p&gt;
+</code></pre>
+<p><strong>Your Tasks:</strong></p>
+<ol>
+<li>Create the complete project structure</li>
+<li>Implement the dependency injection container</li>
+<li>Set up the modular architecture</li>
+<li>Create configuration management</li>
+<li>Implement service layer pattern</li>
+<li>Add comprehensive error handling</li>
+<li>Set up testing structure</li>
+</ol>
+<p>This exercise teaches you:</p>
+<ul>
+<li>Project organization and structure</li>
+<li>Modular architecture patterns</li>
+<li>Dependency injection principles</li>
+<li>Configuration management</li>
+<li>Service layer implementation</li>
+<li>Testing organization</li>
+<li>Deployment structure</li>
+</ul>
+<hr>
+<p><strong>Next Up</strong>: Learn about SEO and performance optimization! SEO &amp; Performance</p>
 
-                        </div>
-                        
-                    </article>
-                </div>
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "fullstack/project-structure.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Icon Generator for Jahanzaib Dev Handbook</title></head>
+<body>
+<h1>Click below to generate all icons</h1>
+<button id="gen">Generate & Download Icons</button>
+<script>
+async function generateIcons() {
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" fill="#6366f1" rx="100"/><text x="256" y="380" font-size="280" text-anchor="middle" fill="white" font-family="monospace">&lt;/&gt;</text></svg>`;
+    const svgBlob = new Blob([svg], {type: 'image/svg+xml'});
+    const svgUrl = URL.createObjectURL(svgBlob);
+    
+    // Generate PNGs via canvas
+    const img = new Image();
+    img.crossOrigin = "Anonymous";
+    img.src = svgUrl;
+    await new Promise(r => img.onload = r);
+    
+    const sizes = [192, 512];
+    for (let size of sizes) {
+        const canvas = document.createElement('canvas');
+        canvas.width = size;
+        canvas.height = size;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, size, size);
+        const link = document.createElement('a');
+        link.download = `icon-${size}.png`;
+        link.href = canvas.toDataURL();
+        link.click();
+        await new Promise(r => setTimeout(r, 200));
+    }
+    
+    // ICO via canvas (simple 32x32)
+    const icoCanvas = document.createElement('canvas');
+    icoCanvas.width = 32;
+    icoCanvas.height = 32;
+    icoCanvas.getContext('2d').drawImage(img, 0, 0, 32, 32);
+    const icoLink = document.createElement('a');
+    icoLink.download = 'favicon.ico';
+    icoLink.href = icoCanvas.toDataURL('image/x-icon');
+    icoLink.click();
+    
+    // SVG file
+    const svgLink = document.createElement('a');
+    svgLink.download = 'icon.svg';
+    svgLink.href = svgUrl;
+    svgLink.click();
+    
+    // webmanifest
+    const manifest = {
+        name: "Jahanzaib Dev Handbook",
+        short_name: "Dev Handbook",
+        icons: [
+            { src: "/icon-192.png", sizes: "192x192", type: "image/png" },
+            { src: "/icon-512.png", sizes: "512x512", type: "image/png" }
+        ],
+        theme_color: "#6366f1",
+        background_color: "#0f172a",
+        display: "standalone"
+    };
+    const manifestBlob = new Blob([JSON.stringify(manifest, null, 2)], {type: 'application/json'});
+    const manifestLink = document.createElement('a');
+    manifestLink.download = 'site.webmanifest';
+    manifestLink.href = URL.createObjectURL(manifestBlob);
+    manifestLink.click();
+    
+    alert('All icons generated! Place them in your book/ folder (the output directory).');
+}
+document.getElementById('gen').onclick = generateIcons;
+</script>
+</body>
+</html>

@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>System Design Patterns - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="System Design Patterns - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, System Design Patterns - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>System Design Patterns - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="custom.css">
+    <script src="custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="design-patterns.md">
-    <meta property="og:title" content="System Design Patterns - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="System Design Patterns - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="design-patterns.md">
-    <meta property="twitter:title" content="System Design Patterns - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="System Design Patterns - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="System Design Patterns - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="design-patterns.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="theme/css/tokens.css" as="style">
-    <link rel="preload" href="theme/css/base.css" as="style">
-    <link rel="preload" href="theme/css/layout.css" as="style">
-    <link rel="preload" href="theme/css/components.css" as="style">
-    <link rel="preload" href="theme/css/animations.css" as="style">
-    <link rel="preload" href="theme/css/syntax.css" as="style">
-    <link rel="preload" href="theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="theme/css/tokens.css">
-    <link rel="stylesheet" href="theme/css/base.css">
-    <link rel="stylesheet" href="theme/css/layout.css">
-    <link rel="stylesheet" href="theme/css/components.css">
-    <link rel="stylesheet" href="theme/css/animations.css">
-    <link rel="stylesheet" href="theme/css/syntax.css">
-    <link rel="stylesheet" href="theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" href="icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "System Design Patterns - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="theme/js/core.js">
-    <link rel="modulepreload" href="theme/js/animations.js">
-    <link rel="modulepreload" href="theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,108 +525,1299 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    System Design Patterns - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
+        <div id="content">
+            <main>
+                <h1 id="system-design-patterns"><a class="header" href="#system-design-patterns">System Design Patterns</a></h1>
+<p>A comprehensive guide to architectural and design patterns for building scalable, maintainable, and robust software systems.</p>
+<h2 id="introduction-to-design-patterns"><a class="header" href="#introduction-to-design-patterns"><strong>Introduction to Design Patterns</strong></a></h2>
+<p>Design patterns are reusable solutions to commonly occurring problems in software design. They represent best practices and provide a shared vocabulary for developers to communicate complex design concepts.</p>
+<h3 id="why-use-design-patterns"><a class="header" href="#why-use-design-patterns"><strong>Why Use Design Patterns?</strong></a></h3>
+<ul>
+<li><strong>Proven Solutions</strong>: Time-tested approaches to common problems</li>
+<li><strong>Shared Vocabulary</strong>: Common language for discussing design decisions</li>
+<li><strong>Code Quality</strong>: Promotes maintainable and scalable code</li>
+<li><strong>Faster Development</strong>: Reuse established patterns instead of reinventing</li>
+</ul>
+<hr>
+<h2 id="creational-patterns"><a class="header" href="#creational-patterns"><strong>Creational Patterns</strong></a></h2>
+<h3 id="singleton-pattern"><a class="header" href="#singleton-pattern"><strong>Singleton Pattern</strong></a></h3>
+<p><strong>What is it?</strong>
+Ensures a class has only one instance and provides global access to it.</p>
+<p><strong>When to use?</strong></p>
+<ul>
+<li>Database connection pools</li>
+<li>Configuration managers</li>
+<li>Logging systems</li>
+<li>Cache managers</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">class DatabaseConnection {
+  constructor() {
+    if (DatabaseConnection.instance) {
+      return DatabaseConnection.instance;
+    }
+    
+    this.connection = this.createConnection();
+    DatabaseConnection.instance = this;
+  }
+  
+  createConnection() {
+    // Database connection logic
+    return { connected: true };
+  }
+  
+  static getInstance() {
+    return new DatabaseConnection();
+  }
+}
 
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
+// Usage
+const db1 = DatabaseConnection.getInstance();
+const db2 = DatabaseConnection.getInstance();
+console.log(db1 === db2); // true
+</code></pre>
+<h3 id="factory-pattern"><a class="header" href="#factory-pattern"><strong>Factory Pattern</strong></a></h3>
+<p><strong>What is it?</strong>
+Creates objects without specifying the exact class of object that will be created.</p>
+<p><strong>When to use?</strong></p>
+<ul>
+<li>When you need to create objects with common interface</li>
+<li>When you want to hide object creation logic</li>
+<li>When you need to add new types without modifying existing code</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">class Car {
+  constructor(model, year) {
+    this.model = model;
+    this.year = year;
+  }
+  
+  drive() {
+    console.log(`Driving ${this.model} from ${this.year}`);
+  }
+}
 
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>System Design Patterns - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;system-design-patterns&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#system-design-patterns&quot;&gt;System Design Patterns&lt;/a&gt;&lt;/h1&gt;
+class CarFactory {
+  static createCar(type, model, year) {
+    switch (type) {
+      case 'sedan':
+        return new Car(`${model} Sedan`, year);
+      case 'suv':
+        return new Car(`${model} SUV`, year);
+      case 'sports':
+        return new Car(`${model} Sports Car`, year);
+      default:
+        throw new Error('Unknown car type');
+    }
+  }
+}
 
-                        </div>
-                        
-                    </article>
-                </div>
+// Usage
+const myCar = CarFactory.createCar('sports', 'Ferrari', 2023);
+myCar.drive();
+</code></pre>
+<h3 id="builder-pattern"><a class="header" href="#builder-pattern"><strong>Builder Pattern</strong></a></h3>
+<p><strong>What is it?</strong>
+Separates the construction of a complex object from its representation.</p>
+<p><strong>When to use?</strong></p>
+<ul>
+<li>When object construction has multiple steps</li>
+<li>When you need different representations of the same object</li>
+<li>When object construction is complex</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">class Computer {
+  constructor() {
+    this.cpu = null;
+    this.ram = null;
+    this.storage = null;
+    this.graphics = null;
+  }
+}
+
+class ComputerBuilder {
+  constructor() {
+    this.computer = new Computer();
+  }
+  
+  setCPU(cpu) {
+    this.computer.cpu = cpu;
+    return this;
+  }
+  
+  setRAM(ram) {
+    this.computer.ram = ram;
+    return this;
+  }
+  
+  setStorage(storage) {
+    this.computer.storage = storage;
+    return this;
+  }
+  
+  setGraphics(graphics) {
+    this.computer.graphics = graphics;
+    return this;
+  }
+  
+  build() {
+    return this.computer;
+  }
+}
+
+// Usage
+const gamingPC = new ComputerBuilder()
+  .setCPU('Intel i9')
+  .setRAM('32GB DDR4')
+  .setStorage('1TB NVMe SSD')
+  .setGraphics('RTX 4090')
+  .build();
+</code></pre>
+<hr>
+<h2 id="structural-patterns"><a class="header" href="#structural-patterns"><strong>Structural Patterns</strong></a></h2>
+<h3 id="adapter-pattern"><a class="header" href="#adapter-pattern"><strong>Adapter Pattern</strong></a></h3>
+<p><strong>What is it?</strong>
+Allows incompatible interfaces to work together.</p>
+<p><strong>When to use?</strong></p>
+<ul>
+<li>When you need to use existing classes with incompatible interfaces</li>
+<li>When you want to create reusable classes that cooperate with unrelated classes</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">// Legacy payment system
+class LegacyPaymentSystem {
+  makePayment(amount) {
+    console.log(`Legacy payment: $${amount}`);
+  }
+}
+
+// New payment interface
+class ModernPaymentGateway {
+  processPayment(paymentDetails) {
+    console.log(`Modern payment: $${paymentDetails.amount} for ${paymentDetails.merchant}`);
+  }
+}
+
+// Adapter
+class PaymentAdapter {
+  constructor(legacySystem) {
+    this.legacySystem = legacySystem;
+  }
+  
+  processPayment(paymentDetails) {
+    this.legacySystem.makePayment(paymentDetails.amount);
+  }
+}
+
+// Usage
+const legacyPayment = new LegacyPaymentSystem();
+const adapter = new PaymentAdapter(legacyPayment);
+adapter.processPayment({ amount: 100, merchant: 'Amazon' });
+</code></pre>
+<h3 id="decorator-pattern"><a class="header" href="#decorator-pattern"><strong>Decorator Pattern</strong></a></h3>
+<p><strong>What is it?</strong>
+Adds new functionality to objects dynamically without altering their structure.</p>
+<p><strong>When to use?</strong></p>
+<ul>
+<li>When you need to add responsibilities to individual objects dynamically</li>
+<li>When extension by subclassing is impractical</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">class Coffee {
+  cost() {
+    return 5;
+  }
+  
+  description() {
+    return 'Basic coffee';
+  }
+}
+
+class MilkDecorator {
+  constructor(coffee) {
+    this.coffee = coffee;
+  }
+  
+  cost() {
+    return this.coffee.cost() + 1;
+  }
+  
+  description() {
+    return this.coffee.description() + ', milk';
+  }
+}
+
+class SugarDecorator {
+  constructor(coffee) {
+    this.coffee = coffee;
+  }
+  
+  cost() {
+    return this.coffee.cost() + 0.5;
+  }
+  
+  description() {
+    return this.coffee.description() + ', sugar';
+  }
+}
+
+// Usage
+let myCoffee = new Coffee();
+myCoffee = new MilkDecorator(myCoffee);
+myCoffee = new SugarDecorator(myCoffee);
+console.log(myCoffee.description()); // 'Basic coffee, milk, sugar'
+console.log(myCoffee.cost()); // 6.5
+</code></pre>
+<h3 id="proxy-pattern"><a class="header" href="#proxy-pattern"><strong>Proxy Pattern</strong></a></h3>
+<p><strong>What is it?</strong>
+Provides a surrogate or placeholder for another object to control access to it.</p>
+<p><strong>When to use?</strong></p>
+<ul>
+<li>When you need to control access to an object</li>
+<li>When you need to add functionality when accessing an object</li>
+<li>For lazy loading, caching, or access control</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">class RealImage {
+  constructor(filename) {
+    this.filename = filename;
+    this.loadImage();
+  }
+  
+  loadImage() {
+    console.log(`Loading image: ${this.filename}`);
+    // Expensive operation
+  }
+  
+  display() {
+    console.log(`Displaying image: ${this.filename}`);
+  }
+}
+
+class ImageProxy {
+  constructor(filename) {
+    this.filename = filename;
+    this.realImage = null;
+  }
+  
+  display() {
+    if (!this.realImage) {
+      this.realImage = new RealImage(this.filename);
+    }
+    this.realImage.display();
+  }
+}
+
+// Usage
+const proxy = new ImageProxy('large_image.jpg');
+// Image not loaded yet
+proxy.display(); // Image loads and displays
+proxy.display(); // Uses cached image
+</code></pre>
+<hr>
+<h2 id="behavioral-patterns"><a class="header" href="#behavioral-patterns"><strong>Behavioral Patterns</strong></a></h2>
+<h3 id="observer-pattern"><a class="header" href="#observer-pattern"><strong>Observer Pattern</strong></a></h3>
+<p><strong>What is it?</strong>
+Defines a one-to-many dependency between objects so that when one object changes state, all dependents are notified.</p>
+<p><strong>When to use?</strong></p>
+<ul>
+<li>When a change in one object requires changing others</li>
+<li>When you don’t know how many objects need to be notified</li>
+<li>For event handling systems</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">class Subject {
+  constructor() {
+    this.observers = [];
+  }
+  
+  subscribe(observer) {
+    this.observers.push(observer);
+  }
+  
+  unsubscribe(observer) {
+    this.observers = this.observers.filter(obs =&gt; obs !== observer);
+  }
+  
+  notify(data) {
+    this.observers.forEach(observer =&gt; observer.update(data));
+  }
+}
+
+class WeatherStation extends Subject {
+  constructor() {
+    super();
+    this.temperature = 0;
+  }
+  
+  setTemperature(temp) {
+    this.temperature = temp;
+    this.notify(this.temperature);
+  }
+}
+
+class TemperatureDisplay {
+  constructor(name) {
+    this.name = name;
+  }
+  
+  update(temperature) {
+    console.log(`${this.name}: Temperature is ${temperature}°C`);
+  }
+}
+
+// Usage
+const weatherStation = new WeatherStation();
+const display1 = new TemperatureDisplay('Display 1');
+const display2 = new TemperatureDisplay('Display 2');
+
+weatherStation.subscribe(display1);
+weatherStation.subscribe(display2);
+
+weatherStation.setTemperature(25);
+</code></pre>
+<h3 id="strategy-pattern"><a class="header" href="#strategy-pattern"><strong>Strategy Pattern</strong></a></h3>
+<p><strong>What is it?</strong>
+Defines a family of algorithms, encapsulates each one, and makes them interchangeable.</p>
+<p><strong>When to use?</strong></p>
+<ul>
+<li>When you have multiple algorithms for a task</li>
+<li>When you want to switch algorithms at runtime</li>
+<li>When you want to avoid conditional statements</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">class PaymentStrategy {
+  pay(amount) {
+    throw new Error('Must implement pay method');
+  }
+}
+
+class CreditCardPayment extends PaymentStrategy {
+  pay(amount) {
+    console.log(`Paid $${amount} with credit card`);
+  }
+}
+
+class PayPalPayment extends PaymentStrategy {
+  pay(amount) {
+    console.log(`Paid $${amount} with PayPal`);
+  }
+}
+
+class CryptoPayment extends PaymentStrategy {
+  pay(amount) {
+    console.log(`Paid $${amount} with cryptocurrency`);
+  }
+}
+
+class ShoppingCart {
+  constructor(paymentStrategy) {
+    this.paymentStrategy = paymentStrategy;
+  }
+  
+  setPaymentStrategy(paymentStrategy) {
+    this.paymentStrategy = paymentStrategy;
+  }
+  
+  checkout(amount) {
+    this.paymentStrategy.pay(amount);
+  }
+}
+
+// Usage
+const cart = new ShoppingCart(new CreditCardPayment());
+cart.checkout(100);
+
+cart.setPaymentStrategy(new PayPalPayment());
+cart.checkout(50);
+</code></pre>
+<h3 id="command-pattern"><a class="header" href="#command-pattern"><strong>Command Pattern</strong></a></h3>
+<p><strong>What is it?</strong>
+Encapsulates a request as an object, thereby letting you parameterize clients with different requests.</p>
+<p><strong>When to use?</strong></p>
+<ul>
+<li>When you need to parameterize objects with operations</li>
+<li>When you need to queue operations, log operations, or support undo/redo</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">class Command {
+  execute() {
+    throw new Error('Must implement execute method');
+  }
+  
+  undo() {
+    throw new Error('Must implement undo method');
+  }
+}
+
+class Light {
+  turnOn() {
+    console.log('Light is on');
+  }
+  
+  turnOff() {
+    console.log('Light is off');
+  }
+}
+
+class LightOnCommand extends Command {
+  constructor(light) {
+    super();
+    this.light = light;
+  }
+  
+  execute() {
+    this.light.turnOn();
+  }
+  
+  undo() {
+    this.light.turnOff();
+  }
+}
+
+class LightOffCommand extends Command {
+  constructor(light) {
+    super();
+    this.light = light;
+  }
+  
+  execute() {
+    this.light.turnOff();
+  }
+  
+  undo() {
+    this.light.turnOn();
+  }
+}
+
+class RemoteControl {
+  constructor() {
+    this.command = null;
+    this.history = [];
+  }
+  
+  setCommand(command) {
+    this.command = command;
+  }
+  
+  pressButton() {
+    this.command.execute();
+    this.history.push(this.command);
+  }
+  
+  pressUndo() {
+    if (this.history.length &gt; 0) {
+      const lastCommand = this.history.pop();
+      lastCommand.undo();
+    }
+  }
+}
+
+// Usage
+const light = new Light();
+const remote = new RemoteControl();
+
+remote.setCommand(new LightOnCommand(light));
+remote.pressButton(); // Light is on
+
+remote.setCommand(new LightOffCommand(light));
+remote.pressButton(); // Light is off
+
+remote.pressUndo(); // Light is on
+</code></pre>
+<hr>
+<h2 id="architectural-patterns"><a class="header" href="#architectural-patterns"><strong>Architectural Patterns</strong></a></h2>
+<h3 id="mvc-model-view-controller"><a class="header" href="#mvc-model-view-controller"><strong>MVC (Model-View-Controller)</strong></a></h3>
+<p><strong>What is it?</strong>
+Separates application into three interconnected components: Model, View, and Controller.</p>
+<p><strong>Components:</strong></p>
+<ul>
+<li><strong>Model</strong>: Data and business logic</li>
+<li><strong>View</strong>: User interface</li>
+<li><strong>Controller</strong>: Handles user input and updates model/view</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">// Model
+class TodoModel {
+  constructor() {
+    this.todos = [];
+    this.listeners = [];
+  }
+  
+  addTodo(text) {
+    const todo = {
+      id: Date.now(),
+      text,
+      completed: false
+    };
+    this.todos.push(todo);
+    this.notifyListeners();
+  }
+  
+  toggleTodo(id) {
+    const todo = this.todos.find(t =&gt; t.id === id);
+    if (todo) {
+      todo.completed = !todo.completed;
+      this.notifyListeners();
+    }
+  }
+  
+  subscribe(listener) {
+    this.listeners.push(listener);
+  }
+  
+  notifyListeners() {
+    this.listeners.forEach(listener =&gt; listener(this.todos));
+  }
+}
+
+// View
+class TodoView {
+  constructor() {
+    this.container = document.getElementById('app');
+  }
+  
+  render(todos) {
+    this.container.innerHTML = `
+      &lt;ul&gt;
+        ${todos.map(todo =&gt; `
+          &lt;li&gt;
+            &lt;input type="checkbox" ${todo.completed ? 'checked' : ''} 
+                   data-id="${todo.id}"&gt;
+            ${todo.text}
+          &lt;/li&gt;
+        `).join('')}
+      &lt;/ul&gt;
+    `;
+  }
+}
+
+// Controller
+class TodoController {
+  constructor(model, view) {
+    this.model = model;
+    this.view = view;
+    
+    this.model.subscribe(todos =&gt; this.view.render(todos));
+    
+    this.view.container.addEventListener('click', (e) =&gt; {
+      if (e.target.type === 'checkbox') {
+        this.model.toggleTodo(parseInt(e.target.dataset.id));
+      }
+    });
+  }
+  
+  addTodo(text) {
+    this.model.addTodo(text);
+  }
+}
+
+// Usage
+const model = new TodoModel();
+const view = new TodoView();
+const controller = new TodoController(model, view);
+
+controller.addTodo('Learn design patterns');
+controller.addTodo('Build amazing applications');
+</code></pre>
+<h3 id="repository-pattern"><a class="header" href="#repository-pattern"><strong>Repository Pattern</strong></a></h3>
+<p><strong>What is it?</strong>
+Mediates between the domain and data mapping layers using a collection-like interface for accessing domain objects.</p>
+<p><strong>When to use?</strong></p>
+<ul>
+<li>To separate data access logic from business logic</li>
+<li>To make code more testable</li>
+<li>To switch data sources easily</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">class UserRepository {
+  constructor(database) {
+    this.database = database;
+  }
+  
+  async findById(id) {
+    const user = await this.database.users.findById(id);
+    return user;
+  }
+  
+  async save(user) {
+    const savedUser = await this.database.users.save(user);
+    return savedUser;
+  }
+  
+  async delete(id) {
+    await this.database.users.delete(id);
+  }
+  
+  async findAll() {
+    const users = await this.database.users.findAll();
+    return users;
+  }
+}
+
+// Usage
+class UserService {
+  constructor(userRepository) {
+    this.userRepository = userRepository;
+  }
+  
+  async createUser(userData) {
+    const user = {
+      ...userData,
+      createdAt: new Date(),
+      id: Date.now()
+    };
+    
+    return await this.userRepository.save(user);
+  }
+  
+  async getUser(id) {
+    return await this.userRepository.findById(id);
+  }
+}
+
+const database = {
+  users: {
+    findById: (id) =&gt; Promise.resolve({ id, name: 'John' }),
+    save: (user) =&gt; Promise.resolve(user),
+    delete: (id) =&gt; Promise.resolve(),
+    findAll: () =&gt; Promise.resolve([{ id: 1, name: 'John' }])
+  }
+};
+
+const userRepository = new UserRepository(database);
+const userService = new UserService(userRepository);
+</code></pre>
+<h3 id="dependency-injection-pattern"><a class="header" href="#dependency-injection-pattern"><strong>Dependency Injection Pattern</strong></a></h3>
+<p><strong>What is it?</strong>
+Technique for achieving Inversion of Control between classes and their dependencies.</p>
+<p><strong>When to use?</strong></p>
+<ul>
+<li>To improve code testability</li>
+<li>To reduce coupling between components</li>
+<li>To make code more modular</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">class DatabaseService {
+  constructor(config) {
+    this.config = config;
+  }
+  
+  connect() {
+    console.log(`Connected to database: ${this.config.url}`);
+  }
+}
+
+class UserService {
+  constructor(databaseService) {
+    this.database = databaseService;
+  }
+  
+  getUsers() {
+    this.database.connect();
+    return ['User1', 'User2'];
+  }
+}
+
+// Dependency Injection Container
+class DIContainer {
+  constructor() {
+    this.services = new Map();
+    this.singletons = new Map();
+  }
+  
+  register(name, factory, singleton = false) {
+    this.services.set(name, { factory, singleton });
+  }
+  
+  resolve(name) {
+    const service = this.services.get(name);
+    if (!service) {
+      throw new Error(`Service ${name} not found`);
+    }
+    
+    if (service.singleton) {
+      if (!this.singletons.has(name)) {
+        this.singletons.set(name, service.factory());
+      }
+      return this.singletons.get(name);
+    }
+    
+    return service.factory();
+  }
+}
+
+// Usage
+const container = new DIContainer();
+
+container.register('database', () =&gt; {
+  return new DatabaseService({ url: 'localhost:5432' });
+}, true);
+
+container.register('userService', () =&gt; {
+  const database = container.resolve('database');
+  return new UserService(database);
+});
+
+const userService = container.resolve('userService');
+console.log(userService.getUsers());
+</code></pre>
+<hr>
+<h2 id="microservices-patterns"><a class="header" href="#microservices-patterns"><strong>Microservices Patterns</strong></a></h2>
+<h3 id="api-gateway-pattern"><a class="header" href="#api-gateway-pattern"><strong>API Gateway Pattern</strong></a></h3>
+<p><strong>What is it?</strong>
+Provides a single entry point for all client requests, routing them to appropriate microservices.</p>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>Simplifies client complexity</li>
+<li>Provides cross-cutting concerns (auth, logging)</li>
+<li>Enables protocol translation</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">class APIGateway {
+  constructor() {
+    this.services = new Map();
+    this.middleware = [];
+  }
+  
+  registerService(path, service) {
+    this.services.set(path, service);
+  }
+  
+  addMiddleware(middleware) {
+    this.middleware.push(middleware);
+  }
+  
+  async handleRequest(req, res) {
+    // Apply middleware
+    for (const middleware of this.middleware) {
+      const result = await middleware(req, res);
+      if (result === 'stop') return;
+    }
+    
+    // Route to appropriate service
+    const path = req.path.split('/')[1];
+    const service = this.services.get(path);
+    
+    if (service) {
+      return await service.handleRequest(req, res);
+    }
+    
+    res.status(404).send('Service not found');
+  }
+}
+
+// Usage
+const gateway = new APIGateway();
+
+// Authentication middleware
+gateway.addMiddleware(async (req, res) =&gt; {
+  if (!req.headers.authorization) {
+    res.status(401).send('Unauthorized');
+    return 'stop';
+  }
+});
+
+// Register services
+gateway.registerService('users', {
+  handleRequest: async (req, res) =&gt; {
+    res.json({ users: ['Alice', 'Bob'] });
+  }
+});
+
+gateway.registerService('products', {
+  handleRequest: async (req, res) =&gt; {
+    res.json({ products: ['Laptop', 'Phone'] });
+  }
+});
+</code></pre>
+<h3 id="circuit-breaker-pattern"><a class="header" href="#circuit-breaker-pattern"><strong>Circuit Breaker Pattern</strong></a></h3>
+<p><strong>What is it?</strong>
+Detects failures and encapsulates logic to prevent repeated failures.</p>
+<p><strong>States:</strong></p>
+<ul>
+<li><strong>Closed</strong>: Normal operation, requests pass through</li>
+<li><strong>Open</strong>: Failures detected, requests fail immediately</li>
+<li><strong>Half-Open</strong>: Testing if service has recovered</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">class CircuitBreaker {
+  constructor(options = {}) {
+    this.failureThreshold = options.failureThreshold || 5;
+    this.resetTimeout = options.resetTimeout || 60000;
+    this.monitoringPeriod = options.monitoringPeriod || 10000;
+    
+    this.state = 'CLOSED';
+    this.failureCount = 0;
+    this.lastFailureTime = null;
+    this.nextAttempt = Date.now();
+  }
+  
+  async call(operation) {
+    if (this.state === 'OPEN') {
+      if (Date.now() &lt; this.nextAttempt) {
+        throw new Error('Circuit breaker is OPEN');
+      }
+      this.state = 'HALF_OPEN';
+    }
+    
+    try {
+      const result = await operation();
+      this.onSuccess();
+      return result;
+    } catch (error) {
+      this.onFailure();
+      throw error;
+    }
+  }
+  
+  onSuccess() {
+    this.failureCount = 0;
+    this.state = 'CLOSED';
+  }
+  
+  onFailure() {
+    this.failureCount++;
+    this.lastFailureTime = Date.now();
+    
+    if (this.failureCount &gt;= this.failureThreshold) {
+      this.state = 'OPEN';
+      this.nextAttempt = Date.now() + this.resetTimeout;
+    }
+  }
+}
+
+// Usage
+const circuitBreaker = new CircuitBreaker({
+  failureThreshold: 3,
+  resetTimeout: 30000
+});
+
+class ExternalService {
+  async fetchData() {
+    return await circuitBreaker.call(async () =&gt; {
+      // Simulate external API call
+      if (Math.random() &gt; 0.7) {
+        throw new Error('Service unavailable');
+      }
+      return { data: 'Success!' };
+    });
+  }
+}
+</code></pre>
+<hr>
+<h2 id="performance-patterns"><a class="header" href="#performance-patterns"><strong>Performance Patterns</strong></a></h2>
+<h3 id="caching-pattern"><a class="header" href="#caching-pattern"><strong>Caching Pattern</strong></a></h3>
+<p><strong>What is it?</strong>
+Stores frequently accessed data in fast storage to reduce response times.</p>
+<p><strong>Types:</strong></p>
+<ul>
+<li><strong>In-memory cache</strong>: Fast but limited space</li>
+<li><strong>Distributed cache</strong>: Shared across multiple servers</li>
+<li><strong>CDN cache</strong>: Geographic distribution</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">class CacheManager {
+  constructor(options = {}) {
+    this.cache = new Map();
+    this.maxSize = options.maxSize || 100;
+    this.ttl = options.ttl || 300000; // 5 minutes
+  }
+  
+  set(key, value) {
+    // Remove oldest item if cache is full
+    if (this.cache.size &gt;= this.maxSize) {
+      const firstKey = this.cache.keys().next().value;
+      this.cache.delete(firstKey);
+    }
+    
+    const item = {
+      value,
+      timestamp: Date.now()
+    };
+    
+    this.cache.set(key, item);
+  }
+  
+  get(key) {
+    const item = this.cache.get(key);
+    
+    if (!item) {
+      return null;
+    }
+    
+    // Check if item has expired
+    if (Date.now() - item.timestamp &gt; this.ttl) {
+      this.cache.delete(key);
+      return null;
+    }
+    
+    return item.value;
+  }
+  
+  has(key) {
+    return this.get(key) !== null;
+  }
+  
+  delete(key) {
+    this.cache.delete(key);
+  }
+  
+  clear() {
+    this.cache.clear();
+  }
+}
+
+// Usage with decorator pattern
+function cached(cacheManager, keyGenerator) {
+  return function(target, propertyName, descriptor) {
+    const method = descriptor.value;
+    
+    descriptor.value = async function(...args) {
+      const cacheKey = keyGenerator(...args);
+      
+      // Check cache first
+      if (cacheManager.has(cacheKey)) {
+        return cacheManager.get(cacheKey);
+      }
+      
+      // Execute method and cache result
+      const result = await method.apply(this, args);
+      cacheManager.set(cacheKey, result);
+      
+      return result;
+    };
+    
+    return descriptor;
+  };
+}
+
+class UserService {
+  constructor() {
+    this.cache = new CacheManager({ maxSize: 50, ttl: 600000 });
+  }
+  
+  @cached(this.cache, (userId) =&gt; `user_${userId}`)
+  async getUser(userId) {
+    // Simulate database call
+    console.log(`Fetching user ${userId} from database`);
+    return { id: userId, name: `User ${userId}` };
+  }
+}
+</code></pre>
+<h3 id="connection-pool-pattern"><a class="header" href="#connection-pool-pattern"><strong>Connection Pool Pattern</strong></a></h3>
+<p><strong>What is it?</strong>
+Maintains a pool of database connections that can be reused.</p>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>Reduces connection overhead</li>
+<li>Limits resource usage</li>
+<li>Improves performance</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">class ConnectionPool {
+  constructor(options = {}) {
+    this.maxConnections = options.maxConnections || 10;
+    this.minConnections = options.minConnections || 2;
+    this.createConnection = options.createConnection;
+    
+    this.availableConnections = [];
+    this.busyConnections = new Set();
+    this.waitingQueue = [];
+    
+    this.initializePool();
+  }
+  
+  async initializePool() {
+    for (let i = 0; i &lt; this.minConnections; i++) {
+      const connection = await this.createConnection();
+      this.availableConnections.push(connection);
+    }
+  }
+  
+  async getConnection() {
+    // Return available connection
+    if (this.availableConnections.length &gt; 0) {
+      const connection = this.availableConnections.pop();
+      this.busyConnections.add(connection);
+      return connection;
+    }
+    
+    // Create new connection if under limit
+    if (this.getTotalConnections() &lt; this.maxConnections) {
+      const connection = await this.createConnection();
+      this.busyConnections.add(connection);
+      return connection;
+    }
+    
+    // Wait for available connection
+    return new Promise((resolve) =&gt; {
+      this.waitingQueue.push(resolve);
+    });
+  }
+  
+  releaseConnection(connection) {
+    this.busyConnections.delete(connection);
+    
+    if (this.waitingQueue.length &gt; 0) {
+      const resolve = this.waitingQueue.shift();
+      this.busyConnections.add(connection);
+      resolve(connection);
+    } else {
+      this.availableConnections.push(connection);
+    }
+  }
+  
+  getTotalConnections() {
+    return this.availableConnections.length + this.busyConnections.size;
+  }
+  
+  async closeAll() {
+    const allConnections = [
+      ...this.availableConnections,
+      ...this.busyConnections
+    ];
+    
+    await Promise.all(allConnections.map(conn =&gt; conn.close()));
+    
+    this.availableConnections = [];
+    this.busyConnections.clear();
+    this.waitingQueue = [];
+  }
+}
+
+// Usage
+const pool = new ConnectionPool({
+  maxConnections: 10,
+  minConnections: 2,
+  createConnection: async () =&gt; {
+    // Simulate database connection
+    return {
+      query: async (sql) =&gt; {
+        console.log(`Executing: ${sql}`);
+        return { rows: [] };
+      },
+      close: async () =&gt; {
+        console.log('Connection closed');
+      }
+    };
+  }
+});
+
+async function executeQuery(sql) {
+  const connection = await pool.getConnection();
+  try {
+    const result = await connection.query(sql);
+    return result;
+  } finally {
+    pool.releaseConnection(connection);
+  }
+}
+</code></pre>
+<hr>
+<h2 id="security-patterns"><a class="header" href="#security-patterns"><strong>Security Patterns</strong></a></h2>
+<h3 id="rate-limiting-pattern"><a class="header" href="#rate-limiting-pattern"><strong>Rate Limiting Pattern</strong></a></h3>
+<p><strong>What is it?</strong>
+Controls the rate of incoming requests to prevent abuse.</p>
+<p><strong>Algorithms:</strong></p>
+<ul>
+<li><strong>Token Bucket</strong>: Allows bursts but limits average rate</li>
+<li><strong>Sliding Window</strong>: Counts requests in time window</li>
+<li><strong>Fixed Window</strong>: Resets counter at fixed intervals</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">class RateLimiter {
+  constructor(options = {}) {
+    this.windowMs = options.windowMs || 60000; // 1 minute
+    this.maxRequests = options.maxRequests || 100;
+    this.clients = new Map();
+  }
+  
+  middleware() {
+    return (req, res, next) =&gt; {
+      const clientId = req.ip || req.headers['x-forwarded-for'];
+      
+      if (this.isAllowed(clientId)) {
+        next();
+      } else {
+        res.status(429).json({
+          error: 'Too many requests',
+          retryAfter: this.windowMs / 1000
+        });
+      }
+    };
+  }
+  
+  isAllowed(clientId) {
+    const now = Date.now();
+    const client = this.clients.get(clientId);
+    
+    if (!client) {
+      this.clients.set(clientId, {
+        requests: 1,
+        resetTime: now + this.windowMs
+      });
+      return true;
+    }
+    
+    // Reset window if expired
+    if (now &gt; client.resetTime) {
+      client.requests = 1;
+      client.resetTime = now + this.windowMs;
+      return true;
+    }
+    
+    // Check if under limit
+    if (client.requests &lt; this.maxRequests) {
+      client.requests++;
+      return true;
+    }
+    
+    return false;
+  }
+  
+  // Cleanup expired clients
+  cleanup() {
+    const now = Date.now();
+    for (const [clientId, client] of this.clients.entries()) {
+      if (now &gt; client.resetTime) {
+        this.clients.delete(clientId);
+      }
+    }
+  }
+}
+
+// Usage
+const rateLimiter = new RateLimiter({
+  windowMs: 60000, // 1 minute
+  maxRequests: 100  // 100 requests per minute
+});
+
+// Express middleware
+app.use(rateLimiter.middleware());
+
+// Cleanup expired clients every 5 minutes
+setInterval(() =&gt; rateLimiter.cleanup(), 300000);
+</code></pre>
+<hr>
+<h2 id="when-to-use-which-pattern"><a class="header" href="#when-to-use-which-pattern"><strong>When to Use Which Pattern</strong></a></h2>
+<h3 id="decision-guide"><a class="header" href="#decision-guide"><strong>Decision Guide</strong></a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Situation</th><th>Recommended Pattern</th><th>Why</th></tr>
+</thead>
+<tbody>
+<tr><td>Need single instance</td><td>Singleton</td><td>Ensures one global access point</td></tr>
+<tr><td>Complex object creation</td><td>Builder</td><td>Separates construction from representation</td></tr>
+<tr><td>Need to switch algorithms</td><td>Strategy</td><td>Makes algorithms interchangeable</td></tr>
+<tr><td>Event-driven system</td><td>Observer</td><td>Loose coupling between publisher and subscribers</td></tr>
+<tr><td>Database access</td><td>Repository</td><td>Separates data access from business logic</td></tr>
+<tr><td>API requests</td><td>API Gateway</td><td>Single entry point for clients</td></tr>
+<tr><td>External service calls</td><td>Circuit Breaker</td><td>Prevents cascade failures</td></tr>
+<tr><td>Frequent data access</td><td>Caching</td><td>Improves performance</td></tr>
+<tr><td>Database connections</td><td>Connection Pool</td><td>Reduces overhead</td></tr>
+<tr><td>Prevent abuse</td><td>Rate Limiting</td><td>Controls request rate</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="pattern-combinations"><a class="header" href="#pattern-combinations"><strong>Pattern Combinations</strong></a></h3>
+<p><strong>Common combinations:</strong></p>
+<ul>
+<li><strong>Repository + Unit of Work</strong>: For complex data operations</li>
+<li><strong>Observer + Command</strong>: For event-driven systems</li>
+<li><strong>Strategy + Factory</strong>: For configurable algorithms</li>
+<li><strong>Adapter + Decorator</strong>: For extending functionality</li>
+<li><strong>Singleton + Factory</strong>: For managing global resources</li>
+</ul>
+<hr>
+<h2 id="anti-patterns-to-avoid"><a class="header" href="#anti-patterns-to-avoid"><strong>Anti-Patterns to Avoid</strong></a></h2>
+<h3 id="common-anti-patterns"><a class="header" href="#common-anti-patterns"><strong>Common Anti-Patterns</strong></a></h3>
+<ol>
+<li><strong>God Object</strong>: Single class doing too much</li>
+<li><strong>Spaghetti Code</strong>: Tangled, unstructured code</li>
+<li><strong>Copy-Paste Programming</strong>: Duplicated code</li>
+<li><strong>Magic Numbers</strong>: Hardcoded values</li>
+<li><strong>Feature Envy</strong>: Class using another class more than its own</li>
+</ol>
+<h3 id="how-to-avoid-anti-patterns"><a class="header" href="#how-to-avoid-anti-patterns"><strong>How to Avoid Anti-Patterns</strong></a></h3>
+<ul>
+<li><strong>Single Responsibility</strong>: Each class should have one reason to change</li>
+<li><strong>DRY Principle</strong>: Don’t Repeat Yourself</li>
+<li><strong>SOLID Principles</strong>: Follow object-oriented design principles</li>
+<li><strong>Code Reviews</strong>: Regular peer reviews catch issues early</li>
+<li><strong>Refactoring</strong>: Continuously improve code structure</li>
+</ul>
+<hr>
+<h2 id="testing-design-patterns"><a class="header" href="#testing-design-patterns"><strong>Testing Design Patterns</strong></a></h2>
+<h3 id="pattern-testing-strategies"><a class="header" href="#pattern-testing-strategies"><strong>Pattern Testing Strategies</strong></a></h3>
+<pre><code class="language-javascript">// Testing Singleton Pattern
+describe('DatabaseConnection Singleton', () =&gt; {
+  beforeEach(() =&gt; {
+    // Reset singleton between tests
+    DatabaseConnection.instance = null;
+  });
+  
+  test('should return same instance', () =&gt; {
+    const db1 = DatabaseConnection.getInstance();
+    const db2 = DatabaseConnection.getInstance();
+    expect(db1).toBe(db2);
+  });
+});
+
+// Testing Observer Pattern
+describe('WeatherStation Observer', () =&gt; {
+  test('should notify observers on temperature change', () =&gt; {
+    const station = new WeatherStation();
+    const observer = { update: jest.fn() };
+    
+    station.subscribe(observer);
+    station.setTemperature(25);
+    
+    expect(observer.update).toHaveBeenCalledWith(25);
+  });
+});
+
+// Testing Strategy Pattern
+describe('PaymentStrategy', () =&gt; {
+  test('should use different payment strategies', () =&gt; {
+    const cart = new ShoppingCart(new CreditCardPayment());
+    expect(() =&gt; cart.checkout(100)).not.toThrow();
+    
+    cart.setPaymentStrategy(new PayPalPayment());
+    expect(() =&gt; cart.checkout(50)).not.toThrow();
+  });
+});
+</code></pre>
+<hr>
+<h2 id="best-practices"><a class="header" href="#best-practices"><strong>Best Practices</strong></a></h2>
+<h3 id="general-guidelines"><a class="header" href="#general-guidelines"><strong>General Guidelines</strong></a></h3>
+<ol>
+<li><strong>Keep it Simple</strong>: Don’t over-engineer</li>
+<li><strong>Use Patterns When Needed</strong>: Not every problem needs a pattern</li>
+<li><strong>Understand the Problem</strong>: Choose the right pattern for the right problem</li>
+<li><strong>Consider Performance</strong>: Patterns have overhead</li>
+<li><strong>Document Your Choices</strong>: Explain why you chose a pattern</li>
+</ol>
+<h3 id="implementation-tips"><a class="header" href="#implementation-tips"><strong>Implementation Tips</strong></a></h3>
+<ul>
+<li><strong>Start Simple</strong>: Implement basic version first</li>
+<li><strong>Iterate</strong>: Refactor to patterns when needed</li>
+<li><strong>Test Thoroughly</strong>: Ensure pattern works correctly</li>
+<li><strong>Monitor Performance</strong>: Watch for bottlenecks</li>
+<li><strong>Stay Consistent</strong>: Use patterns consistently across codebase</li>
+</ul>
+<hr>
+<p><em>Design patterns are tools, not rules. Use them wisely to solve specific problems and improve code quality. Remember that the best pattern is the one that solves your actual problem effectively.</em></p>
+
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "";
-        window.current_page = "design-patterns.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="theme/js/core.js"></script>
-    <script src="theme/js/animations.js"></script>
-    <script src="theme/js/search.js"></script>
-    
 </body>
 </html>

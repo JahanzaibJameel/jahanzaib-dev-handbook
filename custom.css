@@ -1,0 +1,105 @@
+/* 2026 Modern Glassmorphism + Neumorphism Theme */
+:root {
+  --bg-light: #f8fafc;
+  --text-light: #0f172a;
+  --bg-dark: #0a0c10;
+  --text-dark: #e2e8f0;
+  --primary: #6366f1;
+  --primary-glow: rgba(99, 102, 241, 0.4);
+  --card-bg-light: rgba(255, 255, 255, 0.7);
+  --card-bg-dark: rgba(18, 22, 30, 0.7);
+  --border-radius: 24px;
+  --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/theme/fonts/inter-variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/theme/fonts/jetbrains-mono-variable.woff2') format('woff2');
+  font-weight: 100 800;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: var(--transition);
+  backdrop-filter: blur(0px);
+  margin: 0;
+  padding: 0;
+}
+
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Glassmorphism cards */
+.content, .sidebar, .nav-chapters {
+  background: var(--card-bg-light);
+  backdrop-filter: blur(12px);
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+body.dark .content, body.dark .sidebar {
+  background: var(--card-bg-dark);
+  border-color: rgba(255,255,255,0.05);
+}
+
+/* Code blocks */
+pre, code {
+  font-family: 'JetBrains Mono', monospace;
+  background: rgba(0,0,0,0.05);
+  border-radius: 16px;
+  padding: 0.2em 0.4em;
+}
+
+body.dark pre, body.dark code {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Sidebar */
+.sidebar {
+  backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Theme toggle button */
+#theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 4px 12px var(--primary-glow);
+  transition: var(--transition);
+}
+
+#theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  .sidebar-visible .sidebar {
+    transform: translateX(0);
+  }
+}

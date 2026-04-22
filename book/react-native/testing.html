@@ -1,237 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="mdBook">
-    
-    <!-- Primary Meta Tags -->
-    <title>Comprehensive Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
-    <meta name="title" content="Comprehensive Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta name="author" content="">
-    <meta name="keywords" content="development, programming, software engineering, handbook, portfolio, Comprehensive Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
+    <title>Comprehensive Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../custom.css">
+    <script src="../custom.js" defer></script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="react-native/testing.md">
-    <meta property="og:title" content="Comprehensive Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Comprehensive Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="react-native/testing.md">
-    <meta property="twitter:title" content="Comprehensive Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta property="twitter:description" content="Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise">
-    <meta property="twitter:image" content="/og-image.png">
-    <meta property="twitter:creator" content="@">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="application-name" content="Comprehensive Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-title" content="Comprehensive Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="react-native/testing.md">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com">
-    <link rel="dns-prefetch" href="//rust-lang.github.io">
-    
-    <!-- Font Preloads -->
-    <link rel="preload" href="../theme/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../theme/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Preloads -->
-    <link rel="preload" href="../theme/css/tokens.css" as="style">
-    <link rel="preload" href="../theme/css/base.css" as="style">
-    <link rel="preload" href="../theme/css/layout.css" as="style">
-    <link rel="preload" href="../theme/css/components.css" as="style">
-    <link rel="preload" href="../theme/css/animations.css" as="style">
-    <link rel="preload" href="../theme/css/syntax.css" as="style">
-    <link rel="preload" href="../theme/css/utilities.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../theme/css/tokens.css">
-    <link rel="stylesheet" href="../theme/css/base.css">
-    <link rel="stylesheet" href="../theme/css/layout.css">
-    <link rel="stylesheet" href="../theme/css/components.css">
-    <link rel="stylesheet" href="../theme/css/animations.css">
-    <link rel="stylesheet" href="../theme/css/syntax.css">
-    <link rel="stylesheet" href="../theme/css/utilities.css">
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    
-    <!-- PWA Icons -->
-    <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="../icon-512.png" sizes="512x512" type="image/png">
-    
-    <!-- RSS Feed (if applicable) -->
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "Comprehensive Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio",
-      "description": "Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "url": "",
-      "image": "/og-image.png",
-      "datePublished": "",
-      "dateModified": "",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "url": ""
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Software Development"
-      }
-    }
-    </script>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self' https://api.github.com;
-    ">
-    
-    <!-- Performance Optimizations -->
-    <link rel="modulepreload" href="../theme/js/core.js">
-    <link rel="modulepreload" href="../theme/js/animations.js">
-    <link rel="modulepreload" href="../theme/js/search.js">
-    
-    <!-- Critical CSS (inline for performance) -->
+    <!-- Critical CSS for immediate styling -->
     <style>
-        /* Critical above-the-fold styles */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: oklch(98% 0.005 250);
-            color: oklch(20% 0.02 260);
-        }
-        
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #3b82f6;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        
-        .skip-link:focus {
-            top: 6px;
-        }
-        
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
-    
-    <!-- Viewport and Feature Detection -->
-    <script>
-        // Feature detection
-        (function() {
-            'use strict';
-            
-            // Detect reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) {
-                document.documentElement.classList.add('reduced-motion');
-            }
-            
-            // Detect high contrast preference
-            const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-            if (prefersHighContrast) {
-                document.documentElement.classList.add('high-contrast');
-            }
-            
-            // Detect color scheme preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('devatelier-theme');
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            // Performance detection
-            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            const isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
-            const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
-            
-            if (isSlowConnection || isLowMemory) {
-                document.documentElement.classList.add('performance-mode');
-            }
-        })();
-    </script>
-    
-    <!-- Service Worker Registration (if available) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('../sw.js')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* DevAtelier 2026 - Inline Critical CSS for Immediate Styling */
         :root {
             --space-0: 0;
             --space-1: 0.25rem;
@@ -274,8 +59,8 @@
             --leading-relaxed: 1.625;
             --leading-tight: 1.25;
             
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono Variable', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
             
             --bg-primary: oklch(98% 0.005 250);
             --bg-secondary: oklch(100% 0 0);
@@ -740,116 +525,1242 @@
         }
     </style>
 </head>
-<body>
-    <div class="devatelier-theme">
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="light">
+    <div id="page-wrapper">
         
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <a href="../" class="header-title" rel="home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                    Comprehensive Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio
-                </a>
-                
-                <nav class="header-nav">
-                    <a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                </nav>
-            </div>
-        </header>
+        <div id="content">
+            <main>
+                <h1 id="testing"><a class="header" href="#testing">Testing</a></h1>
+<p>Learn how to test React Native applications using Jest, React Native Testing Library, and other testing tools to ensure code quality and reliability.</p>
+<h2 id="what-is-testing"><a class="header" href="#what-is-testing"><strong>What is Testing?</strong></a></h2>
+<p>Testing in React Native involves verifying that your components, functions, and user interactions work as expected. Comprehensive testing helps catch bugs early, ensures code quality, and provides confidence when making changes.</p>
+<h3 id="types-of-testing"><a class="header" href="#types-of-testing"><strong>Types of Testing</strong></a></h3>
+<ul>
+<li><strong>Unit Tests</strong>: Test individual functions and components in isolation</li>
+<li><strong>Integration Tests</strong>: Test how multiple components work together</li>
+<li><strong>Component Tests</strong>: Test React Native components with user interactions</li>
+<li><strong>E2E Tests</strong>: Test complete user flows across the entire app</li>
+<li><strong>Snapshot Tests</strong>: Capture component output and detect changes</li>
+</ul>
+<hr>
+<h2 id="testing-setup"><a class="header" href="#testing-setup"><strong>Testing Setup</strong></a></h2>
+<h3 id="installation"><a class="header" href="#installation"><strong>Installation</strong></a></h3>
+<pre><code class="language-bash"># Install testing dependencies
+npm install --save-dev jest @testing-library/react-native @testing-library/jest-native
 
-        <!-- Main Content -->
-        <div class="main-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="16" y2="18"></line>
-                        </svg>
-                        Table of Contents
-                    </div>
-                    
-                    <nav class="sidebar-nav">
-<ol class="chapter"><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduction.html"><strong aria-hidden="true">1.</strong> Welcome &amp; Vision</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="how-to-use.html"><strong aria-hidden="true">2.</strong> How to Use This Handbook</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="roadmap.html"><strong aria-hidden="true">3.</strong> Complete Learning Roadmap</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/intro.html"><strong aria-hidden="true">4.</strong> Introduction to React Native</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/components.html"><strong aria-hidden="true">5.</strong> Advanced Components &amp; Props</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/navigation.html"><strong aria-hidden="true">6.</strong> Navigation &amp; Routing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/api.html"><strong aria-hidden="true">7.</strong> API Integration Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/state.html"><strong aria-hidden="true">8.</strong> State Management Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/storage.html"><strong aria-hidden="true">9.</strong> Storage &amp; Persistence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/performance.html"><strong aria-hidden="true">10.</strong> Performance Optimization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/testing.html"><strong aria-hidden="true">11.</strong> Comprehensive Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="react-native/deployment.html"><strong aria-hidden="true">12.</strong> Production Deployment</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/intro.html"><strong aria-hidden="true">13.</strong> AI Development Fundamentals</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/prompt-engineering.html"><strong aria-hidden="true">14.</strong> Advanced Prompt Engineering</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-integration.html"><strong aria-hidden="true">15.</strong> AI Integration Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/chatgpt-clone.html"><strong aria-hidden="true">16.</strong> Build: ChatGPT Clone</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="ai/ai-safety.html"><strong aria-hidden="true">17.</strong> AI Safety &amp; Ethics</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/frontend.html"><strong aria-hidden="true">18.</strong> Frontend Development Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/backend.html"><strong aria-hidden="true">19.</strong> Backend Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/database.html"><strong aria-hidden="true">20.</strong> Database Design Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/auth.html"><strong aria-hidden="true">21.</strong> Authentication &amp; Authorization</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/security.html"><strong aria-hidden="true">22.</strong> Security Best Practices</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/project-structure.html"><strong aria-hidden="true">23.</strong> Project Structure &amp; Architecture</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="fullstack/seo.html"><strong aria-hidden="true">24.</strong> SEO &amp; Performance</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/unit.html"><strong aria-hidden="true">25.</strong> Unit Testing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/integration.html"><strong aria-hidden="true">26.</strong> Integration Testing</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="testing/e2e.html"><strong aria-hidden="true">27.</strong> End-to-End Testing</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/ci-cd.html"><strong aria-hidden="true">28.</strong> CI/CD Pipeline Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/deployment.html"><strong aria-hidden="true">29.</strong> Advanced Deployment Strategies</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="devops/env.html"><strong aria-hidden="true">30.</strong> Environment Management</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ecommerce.html"><strong aria-hidden="true">31.</strong> E-Commerce Platform</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/ai-app.html"><strong aria-hidden="true">32.</strong> AI Chat Application</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/saas-dashboard.html"><strong aria-hidden="true">33.</strong> SaaS Dashboard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="projects/portfolio.html"><strong aria-hidden="true">34.</strong> Portfolio Website</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/freelancing.html"><strong aria-hidden="true">35.</strong> Freelancing Mastery</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/branding.html"><strong aria-hidden="true">36.</strong> Personal Branding Excellence</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/interviews.html"><strong aria-hidden="true">37.</strong> Interview Preparation</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="career/system-design.html"><strong aria-hidden="true">38.</strong> System Design Fundamentals</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="glossary.html"><strong aria-hidden="true">39.</strong> Glossary &amp; Terminology</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="resources.html"><strong aria-hidden="true">40.</strong> Resources &amp; References</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="community.html"><strong aria-hidden="true">41.</strong> Community &amp; Support</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="contributing.html"><strong aria-hidden="true">42.</strong> Contributing Guidelines</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="playground.html"><strong aria-hidden="true">43.</strong> Interactive Code Playground</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="interview-questions.html"><strong aria-hidden="true">44.</strong> Interview Question Bank</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="design-patterns.html"><strong aria-hidden="true">45.</strong> System Design Patterns</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="code-review.html"><strong aria-hidden="true">46.</strong> Code Review Checklist</a></span></li><li class="chapter-item expanded "><li class="spacer"></li></li><li class="chapter-item expanded "><li class="spacer"></li></li></ol>                    </nav>
-                </div>
-            </aside>
+# Install React Native preset for Jest
+npm install --save-dev react-native-script
 
-            <!-- Content Area -->
-            <main class="content" id="main-content">
-                <div class="content-inner">
-                    <article>
-                        <header class="article-header">
-                            <h1>Comprehensive Testing - Jahanzaib Dev Handbook - World-Class Developer Portfolio</h1>
-                        </header>
-                        
-                        <div class="article-content">
-                            &lt;h1 id&#x3D;&quot;testing&quot;&gt;&lt;a class&#x3D;&quot;header&quot; href&#x3D;&quot;#testing&quot;&gt;Testing&lt;/a&gt;&lt;/h1&gt;
+# For mocking
+npm install --save-dev jest-expo @expo/spawn-async
 
-                        </div>
-                        
-                    </article>
-                </div>
+# For E2E testing
+npm install --save-dev detox
+</code></pre>
+<h3 id="jest-configuration"><a class="header" href="#jest-configuration"><strong>Jest Configuration</strong></a></h3>
+<pre><code class="language-javascript">// jest.config.js
+module.exports = {
+  preset: 'react-native',
+  setupFilesAfterEnv: ['@testing-library/jest-native/extend-expect'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  transformIgnorePatterns: [
+    'node_modules/(?!(react-native|@react-native|react-navigation|@react-navigation))',
+  ],
+  testMatch: [
+    '**/__tests__/**/*.(js|jsx|ts|tsx)',
+    '**/*.(test|spec).(js|jsx|ts|tsx)',
+  ],
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    '!src/**/*.d.ts',
+  ],
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80,
+    },
+  },
+};
+</code></pre>
+<hr>
+<h2 id="unit-testing"><a class="header" href="#unit-testing"><strong>Unit Testing</strong></a></h2>
+<h3 id="testing-pure-functions"><a class="header" href="#testing-pure-functions"><strong>Testing Pure Functions</strong></a></h3>
+<pre><code class="language-javascript">// utils/helpers.js
+export const formatPrice = (price, currency = 'USD') =&gt; {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: currency,
+  }).format(price);
+};
+
+export const validateEmail = (email) =&gt; {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+
+export const calculateDiscount = (price, discountPercentage) =&gt; {
+  if (discountPercentage &lt; 0 || discountPercentage &gt; 100) {
+    throw new Error('Discount percentage must be between 0 and 100');
+  }
+  return price * (1 - discountPercentage / 100);
+};
+</code></pre>
+<pre><code class="language-javascript">// __tests__/utils/helpers.test.js
+import { formatPrice, validateEmail, calculateDiscount } from '../../src/utils/helpers';
+
+describe('formatPrice', () =&gt; {
+  it('should format price with USD currency by default', () =&gt; {
+    expect(formatPrice(1234.56)).toBe('$1,234.56');
+  });
+
+  it('should format price with specified currency', () =&gt; {
+    expect(formatPrice(1234.56, 'EUR')).toBe('¥1,235');
+  });
+
+  it('should handle zero price', () =&gt; {
+    expect(formatPrice(0)).toBe('$0.00');
+  });
+
+  it('should handle decimal prices', () =&gt; {
+    expect(formatPrice(99.99)).toBe('$99.99');
+  });
+});
+
+describe('validateEmail', () =&gt; {
+  it('should return true for valid email addresses', () =&gt; {
+    expect(validateEmail('test@example.com')).toBe(true);
+    expect(validateEmail('user.name+tag@domain.co.uk')).toBe(true);
+  });
+
+  it('should return false for invalid email addresses', () =&gt; {
+    expect(validateEmail('invalid-email')).toBe(false);
+    expect(validateEmail('@domain.com')).toBe(false);
+    expect(validateEmail('user@')).toBe(false);
+    expect(validateEmail('')).toBe(false);
+  });
+
+  it('should handle edge cases', () =&gt; {
+    expect(validateEmail('a@b.c')).toBe(true);
+    expect(validateEmail('user@domain')).toBe(false);
+  });
+});
+
+describe('calculateDiscount', () =&gt; {
+  it('should calculate discount correctly', () =&gt; {
+    expect(calculateDiscount(100, 20)).toBe(80);
+    expect(calculateDiscount(50, 10)).toBe(45);
+  });
+
+  it('should return original price when discount is 0%', () =&gt; {
+    expect(calculateDiscount(100, 0)).toBe(100);
+  });
+
+  it('should return 0 when discount is 100%', () =&gt; {
+    expect(calculateDiscount(100, 100)).toBe(0);
+  });
+
+  it('should throw error for negative discount', () =&gt; {
+    expect(() =&gt; calculateDiscount(100, -10)).toThrow(
+      'Discount percentage must be between 0 and 100'
+    );
+  });
+
+  it('should throw error for discount over 100%', () =&gt; {
+    expect(() =&gt; calculateDiscount(100, 110)).toThrow(
+      'Discount percentage must be between 0 and 100'
+    );
+  });
+});
+</code></pre>
+<hr>
+<h2 id="component-testing"><a class="header" href="#component-testing"><strong>Component Testing</strong></a></h2>
+<h3 id="testing-basic-components"><a class="header" href="#testing-basic-components"><strong>Testing Basic Components</strong></a></h3>
+<pre><code class="language-javascript">// src/components/Button.js
+import React from 'react';
+import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+
+const CustomButton = ({ title, onPress, disabled = false, style = {} }) =&gt; {
+  return (
+    &lt;TouchableOpacity
+      style={[styles.button, disabled &amp;&amp; styles.disabled, style]}
+      onPress={onPress}
+      disabled={disabled}
+      testID="custom-button"
+    &gt;
+      &lt;Text style={[styles.text, disabled &amp;&amp; styles.disabledText]}&gt;
+        {title}
+      &lt;/Text&gt;
+    &lt;/TouchableOpacity&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  button: {
+    backgroundColor: '#007AFF',
+    padding: 12,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  disabled: {
+    backgroundColor: '#ccc',
+  },
+  text: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  disabledText: {
+    color: '#999',
+  },
+});
+
+export default CustomButton;
+</code></pre>
+<pre><code class="language-javascript">// __tests__/components/Button.test.js
+import React from 'react';
+import { render, fireEvent } from '@testing-library/react-native';
+import CustomButton from '../../src/components/Button';
+
+describe('CustomButton', () =&gt; {
+  it('should render correctly with title', () =&gt; {
+    const { getByText } = render(
+      &lt;CustomButton title="Press Me" onPress={() =&gt; {}} /&gt;
+    );
+    
+    expect(getByText('Press Me')).toBeTruthy();
+  });
+
+  it('should call onPress when pressed', () =&gt; {
+    const mockOnPress = jest.fn();
+    const { getByTestId } = render(
+      &lt;CustomButton title="Press Me" onPress={mockOnPress} /&gt;
+    );
+    
+    fireEvent.press(getByTestId('custom-button'));
+    expect(mockOnPress).toHaveBeenCalledTimes(1);
+  });
+
+  it('should not call onPress when disabled', () =&gt; {
+    const mockOnPress = jest.fn();
+    const { getByTestId } = render(
+      &lt;CustomButton title="Press Me" onPress={mockOnPress} disabled={true} /&gt;
+    );
+    
+    fireEvent.press(getByTestId('custom-button'));
+    expect(mockOnPress).not.toHaveBeenCalled();
+  });
+
+  it('should apply custom styles', () =&gt; {
+    const customStyle = { backgroundColor: 'red' };
+    const { getByTestId } = render(
+      &lt;CustomButton title="Press Me" onPress={() =&gt; {}} style={customStyle} /&gt;
+    );
+    
+    const button = getByTestId('custom-button');
+    expect(button.props.style).toContainEqual(customStyle);
+  });
+});
+</code></pre>
+<h3 id="testing-complex-components"><a class="header" href="#testing-complex-components"><strong>Testing Complex Components</strong></a></h3>
+<pre><code class="language-javascript">// src/components/Counter.js
+import React, { useState } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+
+const Counter = ({ initialValue = 0, onCountChange }) =&gt; {
+  const [count, setCount] = useState(initialValue);
+
+  const increment = () =&gt; {
+    const newCount = count + 1;
+    setCount(newCount);
+    onCountChange?.(newCount);
+  };
+
+  const decrement = () =&gt; {
+    const newCount = count - 1;
+    setCount(newCount);
+    onCountChange?.(newCount);
+  };
+
+  const reset = () =&gt; {
+    setCount(initialValue);
+    onCountChange?.(initialValue);
+  };
+
+  return (
+    &lt;View style={styles.container} testID="counter"&gt;
+      &lt;Text style={styles.count} testID="count-text"&gt;
+        Count: {count}
+      &lt;/Text&gt;
+      &lt;View style={styles.buttons}&gt;
+        &lt;TouchableOpacity
+          style={[styles.button, styles.decrement]}
+          onPress={decrement}
+          testID="decrement-button"
+        &gt;
+          &lt;Text style={styles.buttonText}&gt;-&lt;/Text&gt;
+        &lt;/TouchableOpacity&gt;
+        &lt;TouchableOpacity
+          style={[styles.button, styles.reset]}
+          onPress={reset}
+          testID="reset-button"
+        &gt;
+          &lt;Text style={styles.buttonText}&gt;Reset&lt;/Text&gt;
+        &lt;/TouchableOpacity&gt;
+        &lt;TouchableOpacity
+          style={[styles.button, styles.increment]}
+          onPress={increment}
+          testID="increment-button"
+        &gt;
+          &lt;Text style={styles.buttonText}&gt;+&lt;/Text&gt;
+        &lt;/TouchableOpacity&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 20,
+    alignItems: 'center',
+  },
+  count: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  buttons: {
+    flexDirection: 'row',
+    gap: 10,
+  },
+  button: {
+    padding: 10,
+    borderRadius: 5,
+    minWidth: 50,
+    alignItems: 'center',
+  },
+  increment: {
+    backgroundColor: '#4CAF50',
+  },
+  decrement: {
+    backgroundColor: '#f44336',
+  },
+  reset: {
+    backgroundColor: '#2196F3',
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+});
+
+export default Counter;
+</code></pre>
+<pre><code class="language-javascript">// __tests__/components/Counter.test.js
+import React from 'react';
+import { render, fireEvent } from '@testing-library/react-native';
+import Counter from '../../src/components/Counter';
+
+describe('Counter', () =&gt; {
+  it('should render with initial value', () =&gt; {
+    const { getByTestId } = render(&lt;Counter initialValue={5} /&gt;);
+    const countText = getByTestId('count-text');
+    
+    expect(countText.props.children).toBe('Count: 5');
+  });
+
+  it('should increment count when increment button is pressed', () =&gt; {
+    const { getByTestId } = render(&lt;Counter /&gt;);
+    const countText = getByTestId('count-text');
+    const incrementButton = getByTestId('increment-button');
+    
+    expect(countText.props.children).toBe('Count: 0');
+    
+    fireEvent.press(incrementButton);
+    expect(countText.props.children).toBe('Count: 1');
+    
+    fireEvent.press(incrementButton);
+    expect(countText.props.children).toBe('Count: 2');
+  });
+
+  it('should decrement count when decrement button is pressed', () =&gt; {
+    const { getByTestId } = render(&lt;Counter initialValue={10} /&gt;);
+    const countText = getByTestId('count-text');
+    const decrementButton = getByTestId('decrement-button');
+    
+    fireEvent.press(decrementButton);
+    expect(countText.props.children).toBe('Count: 9');
+  });
+
+  it('should reset count when reset button is pressed', () =&gt; {
+    const { getByTestId } = render(&lt;Counter initialValue={5} /&gt;);
+    const countText = getByTestId('count-text');
+    const incrementButton = getByTestId('increment-button');
+    const resetButton = getByTestId('reset-button');
+    
+    fireEvent.press(incrementButton);
+    fireEvent.press(incrementButton);
+    expect(countText.props.children).toBe('Count: 7');
+    
+    fireEvent.press(resetButton);
+    expect(countText.props.children).toBe('Count: 5');
+  });
+
+  it('should call onCountChange when count changes', () =&gt; {
+    const mockOnCountChange = jest.fn();
+    const { getByTestId } = render(
+      &lt;Counter onCountChange={mockOnCountChange} /&gt;
+    );
+    
+    const incrementButton = getByTestId('increment-button');
+    
+    fireEvent.press(incrementButton);
+    expect(mockOnCountChange).toHaveBeenCalledWith(1);
+    
+    fireEvent.press(incrementButton);
+    expect(mockOnCountChange).toHaveBeenCalledWith(2);
+  });
+
+  it('should handle multiple operations correctly', () =&gt; {
+    const { getByTestId } = render(&lt;Counter initialValue={0} /&gt;);
+    const countText = getByTestId('count-text');
+    const incrementButton = getByTestId('increment-button');
+    const decrementButton = getByTestId('decrement-button');
+    
+    // Increment 3 times
+    fireEvent.press(incrementButton);
+    fireEvent.press(incrementButton);
+    fireEvent.press(incrementButton);
+    expect(countText.props.children).toBe('Count: 3');
+    
+    // Decrement 1 time
+    fireEvent.press(decrementButton);
+    expect(countText.props.children).toBe('Count: 2');
+  });
+});
+</code></pre>
+<hr>
+<h2 id="testing-with-mocks"><a class="header" href="#testing-with-mocks"><strong>Testing with Mocks</strong></a></h2>
+<h3 id="mocking-api-calls"><a class="header" href="#mocking-api-calls"><strong>Mocking API Calls</strong></a></h3>
+<pre><code class="language-javascript">// src/services/api.js
+import axios from 'axios';
+
+export const fetchUsers = async () =&gt; {
+  try {
+    const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+    return response.data;
+  } catch (error) {
+    throw new Error('Failed to fetch users');
+  }
+};
+
+export const createUser = async (userData) =&gt; {
+  try {
+    const response = await axios.post('https://jsonplaceholder.typicode.com/users', userData);
+    return response.data;
+  } catch (error) {
+    throw new Error('Failed to create user');
+  }
+};
+</code></pre>
+<pre><code class="language-javascript">// __tests__/services/api.test.js
+import axios from 'axios';
+import { fetchUsers, createUser } from '../../src/services/api';
+
+// Mock axios
+jest.mock('axios');
+
+describe('API Service', () =&gt; {
+  beforeEach(() =&gt; {
+    jest.clearAllMocks();
+  });
+
+  describe('fetchUsers', () =&gt; {
+    it('should return users data on successful response', async () =&gt; {
+      const mockUsers = [
+        { id: 1, name: 'John Doe', email: 'john@example.com' },
+        { id: 2, name: 'Jane Smith', email: 'jane@example.com' },
+      ];
+
+      axios.get.mockResolvedValue({
+        data: mockUsers,
+      });
+
+      const result = await fetchUsers();
+
+      expect(axios.get).toHaveBeenCalledWith('https://jsonplaceholder.typicode.com/users');
+      expect(result).toEqual(mockUsers);
+    });
+
+    it('should throw error on failed response', async () =&gt; {
+      axios.get.mockRejectedValue(new Error('Network error'));
+
+      await expect(fetchUsers()).rejects.toThrow('Failed to fetch users');
+    });
+  });
+
+  describe('createUser', () =&gt; {
+    it('should create user successfully', async () =&gt; {
+      const userData = { name: 'New User', email: 'newuser@example.com' };
+      const createdUser = { id: 3, ...userData };
+
+      axios.post.mockResolvedValue({
+        data: createdUser,
+      });
+
+      const result = await createUser(userData);
+
+      expect(axios.post).toHaveBeenCalledWith(
+        'https://jsonplaceholder.typicode.com/users',
+        userData
+      );
+      expect(result).toEqual(createdUser);
+    });
+
+    it('should throw error when user creation fails', async () =&gt; {
+      const userData = { name: 'New User', email: 'newuser@example.com' };
+
+      axios.post.mockRejectedValue(new Error('Validation error'));
+
+      await expect(createUser(userData)).rejects.toThrow('Failed to create user');
+    });
+  });
+});
+</code></pre>
+<h3 id="mocking-asyncstorage"><a class="header" href="#mocking-asyncstorage"><strong>Mocking AsyncStorage</strong></a></h3>
+<pre><code class="language-javascript">// src/services/storage.js
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+export const saveUserPreferences = async (preferences) =&gt; {
+  try {
+    await AsyncStorage.setItem('user_preferences', JSON.stringify(preferences));
+    return true;
+  } catch (error) {
+    console.error('Error saving preferences:', error);
+    return false;
+  }
+};
+
+export const getUserPreferences = async () =&gt; {
+  try {
+    const preferences = await AsyncStorage.getItem('user_preferences');
+    return preferences ? JSON.parse(preferences) : null;
+  } catch (error) {
+    console.error('Error loading preferences:', error);
+    return null;
+  }
+};
+</code></pre>
+<pre><code class="language-javascript">// __tests__/services/storage.test.js
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { saveUserPreferences, getUserPreferences } from '../../src/services/storage';
+
+// Mock AsyncStorage
+jest.mock('@react-native-async-storage/async-storage', () =&gt;
+  require('@react-native-async-storage/async-storage/jest/async-storage-mock')
+);
+
+describe('Storage Service', () =&gt; {
+  beforeEach(() =&gt; {
+    AsyncStorage.clear();
+  });
+
+  describe('saveUserPreferences', () =&gt; {
+    it('should save preferences successfully', async () =&gt; {
+      const preferences = { theme: 'dark', fontSize: 'large' };
+
+      const result = await saveUserPreferences(preferences);
+
+      expect(result).toBe(true);
+      expect(AsyncStorage.setItem).toHaveBeenCalledWith(
+        'user_preferences',
+        JSON.stringify(preferences)
+      );
+    });
+
+    it('should return false when saving fails', async () =&gt; {
+      AsyncStorage.setItem.mockRejectedValue(new Error('Storage error'));
+
+      const result = await saveUserPreferences({ theme: 'light' });
+
+      expect(result).toBe(false);
+    });
+  });
+
+  describe('getUserPreferences', () =&gt; {
+    it('should return saved preferences', async () =&gt; {
+      const preferences = { theme: 'dark', fontSize: 'large' };
+      AsyncStorage.getItem.mockResolvedValue(JSON.stringify(preferences));
+
+      const result = await getUserPreferences();
+
+      expect(result).toEqual(preferences);
+      expect(AsyncStorage.getItem).toHaveBeenCalledWith('user_preferences');
+    });
+
+    it('should return null when no preferences exist', async () =&gt; {
+      AsyncStorage.getItem.mockResolvedValue(null);
+
+      const result = await getUserPreferences();
+
+      expect(result).toBeNull();
+    });
+
+    it('should return null when loading fails', async () =&gt; {
+      AsyncStorage.getItem.mockRejectedValue(new Error('Storage error'));
+
+      const result = await getUserPreferences();
+
+      expect(result).toBeNull();
+    });
+  });
+});
+</code></pre>
+<hr>
+<h2 id="snapshot-testing"><a class="header" href="#snapshot-testing"><strong>Snapshot Testing</strong></a></h2>
+<h3 id="component-snapshots"><a class="header" href="#component-snapshots"><strong>Component Snapshots</strong></a></h3>
+<pre><code class="language-javascript">// __tests__/components/Counter.snapshot.test.js
+import React from 'react';
+import { render } from '@testing-library/react-native';
+import Counter from '../../src/components/Counter';
+
+describe('Counter Snapshots', () =&gt; {
+  it('should match snapshot with default props', () =&gt; {
+    const { toJSON } = render(&lt;Counter /&gt;);
+    expect(toJSON()).toMatchSnapshot();
+  });
+
+  it('should match snapshot with custom initial value', () =&gt; {
+    const { toJSON } = render(&lt;Counter initialValue={10} /&gt;);
+    expect(toJSON()).toMatchSnapshot();
+  });
+
+  it('should match snapshot with callback', () =&gt; {
+    const mockCallback = jest.fn();
+    const { toJSON } = render(&lt;Counter onCountChange={mockCallback} /&gt;);
+    expect(toJSON()).toMatchSnapshot();
+  });
+});
+</code></pre>
+<hr>
+<h2 id="integration-testing"><a class="header" href="#integration-testing"><strong>Integration Testing</strong></a></h2>
+<h3 id="testing-component-integration"><a class="header" href="#testing-component-integration"><strong>Testing Component Integration</strong></a></h3>
+<pre><code class="language-javascript">// src/components/UserList.js
+import React, { useState, useEffect } from 'react';
+import { View, FlatList, Text, ActivityIndicator, Button } from 'react-native';
+import { fetchUsers } from '../services/api';
+
+const UserList = () =&gt; {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const loadUsers = async () =&gt; {
+    setLoading(true);
+    setError(null);
+    
+    try {
+      const userData = await fetchUsers();
+      setUsers(userData);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() =&gt; {
+    loadUsers();
+  }, []);
+
+  const renderUser = ({ item }) =&gt; (
+    &lt;View style={styles.userItem}&gt;
+      &lt;Text style={styles.userName}&gt;{item.name}&lt;/Text&gt;
+      &lt;Text style={styles.userEmail}&gt;{item.email}&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+
+  return (
+    &lt;View style={styles.container} testID="user-list"&gt;
+      &lt;Text style={styles.title}&gt;Users&lt;/Text&gt;
+      
+      {loading &amp;&amp; &lt;ActivityIndicator testID="loading-indicator" /&gt;}
+      
+      {error &amp;&amp; (
+        &lt;View&gt;
+          &lt;Text style={styles.error}&gt;{error}&lt;/Text&gt;
+          &lt;Button title="Retry" onPress={loadUsers} testID="retry-button" /&gt;
+        &lt;/View&gt;
+      )}
+      
+      &lt;FlatList
+        data={users}
+        renderItem={renderUser}
+        keyExtractor={item =&gt; item.id.toString()}
+        testID="users-flatlist"
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+
+const styles = {
+  container: { padding: 20 },
+  title: { fontSize: 24, fontWeight: 'bold', marginBottom: 20 },
+  userItem: { padding: 10, borderBottomWidth: 1, borderBottomColor: '#ccc' },
+  userName: { fontSize: 16, fontWeight: 'bold' },
+  userEmail: { fontSize: 14, color: '#666' },
+  error: { color: 'red', marginBottom: 10 },
+};
+
+export default UserList;
+</code></pre>
+<pre><code class="language-javascript">// __tests__/components/UserList.integration.test.js
+import React from 'react';
+import { render, fireEvent, waitFor } from '@testing-library/react-native';
+import UserList from '../../src/components/UserList';
+import { fetchUsers } from '../../src/services/api';
+
+// Mock the API service
+jest.mock('../../src/services/api');
+
+describe('UserList Integration', () =&gt; {
+  beforeEach(() =&gt; {
+    jest.clearAllMocks();
+  });
+
+  it('should load and display users on mount', async () =&gt; {
+    const mockUsers = [
+      { id: 1, name: 'John Doe', email: 'john@example.com' },
+      { id: 2, name: 'Jane Smith', email: 'jane@example.com' },
+    ];
+
+    fetchUsers.mockResolvedValue(mockUsers);
+
+    const { getByTestId, getByText } = render(&lt;UserList /&gt;);
+
+    // Initially should show loading
+    expect(getByTestId('loading-indicator')).toBeTruthy();
+
+    // Wait for users to load
+    await waitFor(() =&gt; {
+      expect(getByText('John Doe')).toBeTruthy();
+      expect(getByText('john@example.com')).toBeTruthy();
+      expect(getByText('Jane Smith')).toBeTruthy();
+      expect(getByText('jane@example.com')).toBeTruthy();
+    });
+
+    expect(fetchUsers).toHaveBeenCalledTimes(1);
+  });
+
+  it('should handle API errors and show retry button', async () =&gt; {
+    const errorMessage = 'Failed to fetch users';
+    fetchUsers.mockRejectedValue(new Error(errorMessage));
+
+    const { getByTestId, getByText } = render(&lt;UserList /&gt;);
+
+    await waitFor(() =&gt; {
+      expect(getByText(errorMessage)).toBeTruthy();
+      expect(getByTestId('retry-button')).toBeTruthy();
+    });
+
+    // Test retry functionality
+    fetchUsers.mockResolvedValue([
+      { id: 1, name: 'John Doe', email: 'john@example.com' }
+    ]);
+
+    fireEvent.press(getByTestId('retry-button'));
+
+    await waitFor(() =&gt; {
+      expect(getByText('John Doe')).toBeTruthy();
+    });
+
+    expect(fetchUsers).toHaveBeenCalledTimes(2);
+  });
+
+  it('should show empty state when no users', async () =&gt; {
+    fetchUsers.mockResolvedValue([]);
+
+    const { getByTestId } = render(&lt;UserList /&gt;);
+
+    await waitFor(() =&gt; {
+      const flatList = getByTestId('users-flatlist');
+      expect(flatList.props.data).toEqual([]);
+    });
+  });
+});
+</code></pre>
+<hr>
+<h2 id="e2e-testing-with-detox"><a class="header" href="#e2e-testing-with-detox"><strong>E2E Testing with Detox</strong></a></h2>
+<h3 id="detox-setup"><a class="header" href="#detox-setup"><strong>Detox Setup</strong></a></h3>
+<pre><code class="language-javascript">// .detoxrc.js
+module.exports = {
+  testRunner: 'jest',
+  runnerConfig: 'e2e/config.json',
+  configurations: {
+    'ios.sim.debug': {
+      binaryPath: 'ios/build/Build/Products/Debug-iphonesimulator/MyApp.app',
+      build: 'xcodebuild -workspace ios/MyApp.xcworkspace -scheme MyApp -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build',
+      type: 'ios.simulator',
+      device: {
+        type: 'iPhone 14',
+      },
+    },
+    'android.emu.debug': {
+      binaryPath: 'android/app/build/outputs/apk/debug/app-debug.apk',
+      build: 'cd android &amp;&amp; ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug',
+      type: 'android.emulator',
+      device: {
+        avdName: 'Pixel_4_API_30',
+      },
+    },
+  },
+};
+</code></pre>
+<h3 id="e2e-test-example"><a class="header" href="#e2e-test-example"><strong>E2E Test Example</strong></a></h3>
+<pre><code class="language-javascript">// e2e/LoginScreen.e2e.js
+describe('Login Flow', () =&gt; {
+  beforeAll(async () =&gt; {
+    await device.launchApp();
+  });
+
+  beforeEach(async () =&gt; {
+    await device.reloadReactNative();
+  });
+
+  it('should show login screen', async () =&gt; {
+    await expect(element(by.id('login-screen'))).toBeVisible();
+    await expect(element(by.id('email-input'))).toBeVisible();
+    await expect(element(by.id('password-input'))).toBeVisible();
+    await expect(element(by.id('login-button'))).toBeVisible();
+  });
+
+  it('should show error for invalid credentials', async () =&gt; {
+    await element(by.id('email-input')).typeText('invalid@example.com');
+    await element(by.id('password-input')).typeText('wrongpassword');
+    await element(by.id('login-button')).tap();
+
+    await waitFor(element(by.text('Invalid credentials')))
+      .toBeVisible()
+      .withTimeout(2000);
+  });
+
+  it('should login successfully with valid credentials', async () =&gt; {
+    await element(by.id('email-input')).typeText('user@example.com');
+    await element(by.id('password-input')).typeText('correctpassword');
+    await element(by.id('login-button')).tap();
+
+    await waitFor(element(by.id('home-screen')))
+      .toBeVisible()
+      .withTimeout(3000);
+  });
+});
+</code></pre>
+<hr>
+<h2 id="testing-best-practices"><a class="header" href="#testing-best-practices"><strong>Testing Best Practices</strong></a></h2>
+<h3 id="test-structure"><a class="header" href="#test-structure"><strong>Test Structure</strong></a></h3>
+<pre><code class="language-javascript">// Good test structure
+describe('ComponentName', () =&gt; {
+  // Setup before each test
+  beforeEach(() =&gt; {
+    jest.clearAllMocks();
+  });
+
+  // Happy path tests
+  describe('when rendered with default props', () =&gt; {
+    it('should render correctly', () =&gt; {
+      // Test implementation
+    });
+  });
+
+  // Edge cases
+  describe('when rendered with edge cases', () =&gt; {
+    it('should handle empty data', () =&gt; {
+      // Test implementation
+    });
+
+    it('should handle error states', () =&gt; {
+      // Test implementation
+    });
+  });
+
+  // User interactions
+  describe('when user interacts', () =&gt; {
+    it('should handle button press', () =&gt; {
+      // Test implementation
+    });
+  });
+});
+</code></pre>
+<h3 id="test-naming-conventions"><a class="header" href="#test-naming-conventions"><strong>Test Naming Conventions</strong></a></h3>
+<pre><code class="language-javascript">// Good test names
+it('should render with default props');
+it('should call onPress when button is pressed');
+it('should show error message when API call fails');
+it('should update state when user types in input');
+
+// Avoid vague test names
+it('works correctly'); // Too vague
+it('test button'); // Incomplete
+it('should do something'); // Not specific
+</code></pre>
+<hr>
+<h2 id="real-use-case"><a class="header" href="#real-use-case"><strong>Real Use Case</strong></a></h2>
+<h3 id="testing-a-todo-app-component"><a class="header" href="#testing-a-todo-app-component"><strong>Testing a Todo App Component</strong></a></h3>
+<pre><code class="language-javascript">// src/components/TodoList.js
+import React, { useState, useEffect } from 'react';
+import { View, Text, TextInput, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
+import { saveTodos, loadTodos } from '../services/storage';
+
+const TodoList = () =&gt; {
+  const [todos, setTodos] = useState([]);
+  const [newTodo, setNewTodo] = useState('');
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() =&gt; {
+    loadSavedTodos();
+  }, []);
+
+  const loadSavedTodos = async () =&gt; {
+    try {
+      const savedTodos = await loadTodos();
+      setTodos(savedTodos || []);
+    } catch (error) {
+      console.error('Error loading todos:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const addTodo = async () =&gt; {
+    if (newTodo.trim() === '') return;
+
+    const newTodoItem = {
+      id: Date.now().toString(),
+      text: newTodo.trim(),
+      completed: false,
+      createdAt: new Date().toISOString(),
+    };
+
+    const updatedTodos = [...todos, newTodoItem];
+    setTodos(updatedTodos);
+    setNewTodo('');
+    await saveTodos(updatedTodos);
+  };
+
+  const toggleTodo = async (id) =&gt; {
+    const updatedTodos = todos.map(todo =&gt;
+      todo.id === id ? { ...todo, completed: !todo.completed } : todo
+    );
+    setTodos(updatedTodos);
+    await saveTodos(updatedTodos);
+  };
+
+  const deleteTodo = async (id) =&gt; {
+    const updatedTodos = todos.filter(todo =&gt; todo.id !== id);
+    setTodos(updatedTodos);
+    await saveTodos(updatedTodos);
+  };
+
+  const renderTodo = ({ item }) =&gt; (
+    &lt;View style={styles.todoItem}&gt;
+      &lt;TouchableOpacity
+        style={[styles.checkbox, item.completed &amp;&amp; styles.completedCheckbox]}
+        onPress={() =&gt; toggleTodo(item.id)}
+        testID={`todo-checkbox-${item.id}`}
+      /&gt;
+      &lt;Text
+        style={[styles.todoText, item.completed &amp;&amp; styles.completedText]}
+        testID={`todo-text-${item.id}`}
+      &gt;
+        {item.text}
+      &lt;/Text&gt;
+      &lt;TouchableOpacity
+        style={styles.deleteButton}
+        onPress={() =&gt; deleteTodo(item.id)}
+        testID={`todo-delete-${item.id}`}
+      &gt;
+        &lt;Text style={styles.deleteButtonText}&gt;×&lt;/Text&gt;
+      &lt;/TouchableOpacity&gt;
+    &lt;/View&gt;
+  );
+
+  if (loading) {
+    return &lt;Text testID="loading-text"&gt;Loading...&lt;/Text&gt;;
+  }
+
+  return (
+    &lt;View style={styles.container} testID="todo-list"&gt;
+      &lt;Text style={styles.title}&gt;Todo List&lt;/Text&gt;
+      
+      &lt;View style={styles.inputContainer}&gt;
+        &lt;TextInput
+          style={styles.input}
+          value={newTodo}
+          onChangeText={setNewTodo}
+          placeholder="Add a new todo..."
+          testID="todo-input"
+        /&gt;
+        &lt;TouchableOpacity
+          style={styles.addButton}
+          onPress={addTodo}
+          testID="add-button"
+        &gt;
+          &lt;Text style={styles.addButtonText}&gt;Add&lt;/Text&gt;
+        &lt;/TouchableOpacity&gt;
+      &lt;/View&gt;
+
+      &lt;FlatList
+        data={todos}
+        renderItem={renderTodo}
+        keyExtractor={item =&gt; item.id}
+        testID="todos-flatlist"
+        ListEmptyComponent={&lt;Text testID="empty-text"&gt;No todos yet&lt;/Text&gt;}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  container: { flex: 1, padding: 20 },
+  title: { fontSize: 24, fontWeight: 'bold', marginBottom: 20 },
+  inputContainer: { flexDirection: 'row', marginBottom: 20 },
+  input: { flex: 1, borderWidth: 1, borderColor: '#ddd', padding: 10, marginRight: 10 },
+  addButton: { backgroundColor: '#007AFF', padding: 10, borderRadius: 5 },
+  addButtonText: { color: '#fff', fontWeight: 'bold' },
+  todoItem: { flexDirection: 'row', alignItems: 'center', padding: 10, borderBottomWidth: 1 },
+  checkbox: { width: 20, height: 20, borderWidth: 1, marginRight: 10 },
+  completedCheckbox: { backgroundColor: '#007AFF' },
+  todoText: { flex: 1, fontSize: 16 },
+  completedText: { textDecorationLine: 'line-through', color: '#999' },
+  deleteButton: { padding: 5 },
+  deleteButtonText: { color: 'red', fontSize: 20 },
+});
+
+export default TodoList;
+</code></pre>
+<pre><code class="language-javascript">// __tests__/components/TodoList.test.js
+import React from 'react';
+import { render, fireEvent, waitFor } from '@testing-library/react-native';
+import TodoList from '../../src/components/TodoList';
+import { saveTodos, loadTodos } from '../../src/services/storage';
+
+jest.mock('../../src/services/storage');
+
+describe('TodoList', () =&gt; {
+  beforeEach(() =&gt; {
+    jest.clearAllMocks();
+  });
+
+  describe('Initial Load', () =&gt; {
+    it('should show loading state initially', () =&gt; {
+      loadTodos.mockImplementation(() =&gt; new Promise(() =&gt; {}));
+
+      const { getByTestId } = render(&lt;TodoList /&gt;);
+      expect(getByTestId('loading-text')).toBeTruthy();
+    });
+
+    it('should load saved todos on mount', async () =&gt; {
+      const savedTodos = [
+        { id: '1', text: 'First todo', completed: false },
+        { id: '2', text: 'Second todo', completed: true },
+      ];
+      loadTodos.mockResolvedValue(savedTodos);
+
+      const { getByTestId, getByText } = render(&lt;TodoList /&gt;);
+
+      await waitFor(() =&gt; {
+        expect(getByText('First todo')).toBeTruthy();
+        expect(getByText('Second todo')).toBeTruthy();
+      });
+
+      expect(loadTodos).toHaveBeenCalledTimes(1);
+    });
+
+    it('should show empty state when no todos', async () =&gt; {
+      loadTodos.mockResolvedValue([]);
+
+      const { getByTestId } = render(&lt;TodoList /&gt;);
+
+      await waitFor(() =&gt; {
+        expect(getByTestId('empty-text')).toBeTruthy();
+      });
+    });
+  });
+
+  describe('Adding Todos', () =&gt; {
+    it('should add new todo when valid text is entered', async () =&gt; {
+      loadTodos.mockResolvedValue([]);
+      saveTodos.mockResolvedValue();
+
+      const { getByTestId, getByText } = render(&lt;TodoList /&gt;);
+      
+      await waitFor(() =&gt; {
+        expect(getByTestId('todo-input')).toBeTruthy();
+      });
+
+      const input = getByTestId('todo-input');
+      const addButton = getByTestId('add-button');
+
+      fireEvent.changeText(input, 'New todo item');
+      fireEvent.press(addButton);
+
+      await waitFor(() =&gt; {
+        expect(getByText('New todo item')).toBeTruthy();
+      });
+
+      expect(saveTodos).toHaveBeenCalledWith([
+        expect.objectContaining({
+          text: 'New todo item',
+          completed: false,
+        })
+      ]);
+    });
+
+    it('should not add todo when text is empty', async () =&gt; {
+      loadTodos.mockResolvedValue([]);
+      saveTodos.mockResolvedValue();
+
+      const { getByTestId } = render(&lt;TodoList /&gt;);
+      
+      await waitFor(() =&gt; {
+        expect(getByTestId('todo-input')).toBeTruthy();
+      });
+
+      const input = getByTestId('todo-input');
+      const addButton = getByTestId('add-button');
+
+      fireEvent.changeText(input, '');
+      fireEvent.press(addButton);
+
+      expect(saveTodos).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('Toggling Todos', () =&gt; {
+    it('should toggle todo completion status', async () =&gt; {
+      const todos = [
+        { id: '1', text: 'Test todo', completed: false },
+      ];
+      loadTodos.mockResolvedValue(todos);
+      saveTodos.mockResolvedValue();
+
+      const { getByTestId } = render(&lt;TodoList /&gt;);
+      
+      await waitFor(() =&gt; {
+        expect(getByTestId('todo-checkbox-1')).toBeTruthy();
+      });
+
+      const checkbox = getByTestId('todo-checkbox-1');
+      fireEvent.press(checkbox);
+
+      await waitFor(() =&gt; {
+        expect(saveTodos).toHaveBeenCalledWith([
+          expect.objectContaining({
+            id: '1',
+            completed: true,
+          })
+        ]);
+      });
+    });
+  });
+
+  describe('Deleting Todos', () =&gt; {
+    it('should delete todo when delete button is pressed', async () =&gt; {
+      const todos = [
+        { id: '1', text: 'Test todo', completed: false },
+        { id: '2', text: 'Another todo', completed: false },
+      ];
+      loadTodos.mockResolvedValue(todos);
+      saveTodos.mockResolvedValue();
+
+      const { getByTestId, queryByText } = render(&lt;TodoList /&gt;);
+      
+      await waitFor(() =&gt; {
+        expect(getByTestId('todo-delete-1')).toBeTruthy();
+      });
+
+      const deleteButton = getByTestId('todo-delete-1');
+      fireEvent.press(deleteButton);
+
+      await waitFor(() =&gt; {
+        expect(saveTodos).toHaveBeenCalledWith([
+          expect.objectContaining({ id: '2' })
+        ]);
+      });
+    });
+  });
+
+  describe('Error Handling', () =&gt; {
+    it('should handle load errors gracefully', async () =&gt; {
+      loadTodos.mockRejectedValue(new Error('Storage error'));
+
+      const { getByTestId } = render(&lt;TodoList /&gt;);
+
+      await waitFor(() =&gt; {
+        expect(getByTestId('todo-input')).toBeTruthy();
+      }, { timeout: 2000 });
+    });
+  });
+});
+</code></pre>
+<hr>
+<h2 id="pro-tip"><a class="header" href="#pro-tip"><strong>Pro Tip</strong></a></h2>
+<p><strong>Use test-driven development (TDD) to write tests before implementing features. This helps you think through requirements and edge cases before writing code, leading to better design and fewer bugs.</strong></p>
+<pre><code class="language-javascript">// TDD Example: Write test first, then implementation
+// 1. Write failing test
+it('should validate email format', () =&gt; {
+  expect(validateEmail('valid@example.com')).toBe(true);
+  expect(validateEmail('invalid-email')).toBe(false);
+});
+
+// 2. Write minimal implementation to pass test
+export const validateEmail = (email) =&gt; {
+  return email.includes('@');
+};
+
+// 3. Refactor and improve implementation
+export const validateEmail = (email) =&gt; {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+</code></pre>
+<hr>
+<h2 id="exercise--mini-task"><a class="header" href="#exercise--mini-task"><strong>Exercise / Mini Task</strong></a></h2>
+<p><strong>Task</strong>: Create a comprehensive test suite for a weather app component with the following features:</p>
+<ol>
+<li><strong>Unit Tests</strong>: Test utility functions for temperature conversion and weather formatting</li>
+<li><strong>Component Tests</strong>: Test weather display component with different weather conditions</li>
+<li><strong>Integration Tests</strong>: Test weather data fetching and display</li>
+<li><strong>Mock Tests</strong>: Mock weather API responses</li>
+<li><strong>Snapshot Tests</strong>: Create snapshots for different weather states</li>
+</ol>
+<p><strong>Requirements</strong>:</p>
+<ul>
+<li>Test loading states</li>
+<li>Test error states</li>
+<li>Test data formatting</li>
+<li>Test user interactions (refresh, location change)</li>
+<li>Test edge cases (no data, invalid data)</li>
+<li>Achieve at least 80% code coverage</li>
+</ul>
+<p><strong>Bonus</strong>:</p>
+<ul>
+<li>Add E2E tests with Detox</li>
+<li>Create custom matchers for testing</li>
+<li>Implement performance testing</li>
+<li>Add accessibility testing</li>
+<li>Create visual regression tests</li>
+</ul>
+<hr>
+<p><em>Testing is a crucial part of React Native development. A comprehensive testing strategy ensures your app is reliable, maintainable, and provides a great user experience across different devices and scenarios.</em></p>
+
             </main>
+            
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Ultra-premium, FAANG-level developer handbook and portfolio showcasing world-class technical expertise</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contribute</h3>
-                    <p>Found an issue or want to contribute?</p>
-                    <ul>
-                        <li><a href="https://github.com/JahanzaibJameel/jahanzaib-dev-handbook">View on GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../print.html" target="_blank">Print Version</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy;  . Built with <a href="https://rust-lang.github.io/mdBook/" target="_blank">mdBook</a> and DevAtelier 2026 theme.</p>
-                </div>
-            </div>
-        </footer>
+        
+        
     </div>
-
-    <!-- Scripts -->
-    <script>
-        // Initialize theme
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-        // Global variables for mdBook compatibility
-        window.path_to_root = "../";
-        window.current_page = "react-native/testing.md";
-        
-        // Search data will be loaded by mdBook
-    </script>
-    
-    <!-- Theme scripts -->
-    <script src="../theme/js/core.js"></script>
-    <script src="../theme/js/animations.js"></script>
-    <script src="../theme/js/search.js"></script>
-    
 </body>
 </html>

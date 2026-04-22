@@ -286,6 +286,225 @@ git push origin main
 - **Code examples**: Embedded in markdown files
 - **Configuration**: `book.toml` file
 
+## 2026 Redesign Installation & Deployment
+
+### New Theme Features
+
+The handbook now features a **complete 2026 redesign** with:
+
+- **Glassmorphism UI** - Frosted glass effects with backdrop blur
+- **Neumorphic Elements** - Soft, tactile design patterns
+- **Advanced Animations** - Scroll-triggered reveals and micro-interactions
+- **Dynamic Theming** - Seamless dark/light mode with system detection
+- **Asset Path Fixing** - Automatic 404 error resolution
+- **Enhanced Accessibility** - WCAG 2.2 AA compliance
+- **Modern Typography** - Variable fonts with fluid scaling
+- **Responsive Design** - Container queries and mobile-first approach
+
+### File Structure
+
+```
+theme/
+  css/
+    custom.css          # Complete 2026 redesign styles
+  js/
+    custom.js           # Enhanced functionality with asset fixing
+  fonts/
+    inter-variable.woff2
+    jetbrains-mono-variable.woff2
+```
+
+### Installation Steps
+
+1. **Replace Existing Theme Files**
+   ```bash
+   # Backup old files (optional)
+   mv theme/css/custom.css theme/css/custom.css.backup
+   mv theme/js/custom.js theme/js/custom.js.backup
+   
+   # The new files are already in place
+   ls theme/css/custom.css
+   ls theme/js/custom.js
+   ```
+
+2. **Update book.toml Configuration**
+   
+   Ensure your `book.toml` includes the new theme files:
+   ```toml
+   [output.html]
+   additional-css = [
+       "theme/css/custom.css"
+   ]
+   additional-js = [
+       "theme/js/custom.js"
+   ]
+   ```
+
+3. **Verify Font Files**
+   
+   Ensure variable fonts are available:
+   ```bash
+   ls theme/fonts/
+   # Should include: inter-variable.woff2, jetbrains-mono-variable.woff2
+   ```
+
+### Asset Path Fixing
+
+The new `custom.js` automatically fixes common 404 errors:
+
+- **Duplicate path segments** (e.g., `react-native/react-native/`)
+- **Double slashes** (`//`)
+- **Incorrect relative paths**
+- **Missing CSS/JS files**
+
+#### Manual Asset Path Fixing
+
+If you encounter 404 errors, the JavaScript will automatically attempt to fix them. You can also manually trigger fixes:
+
+```javascript
+// In browser console
+DevAtelier2026.assets.fix();
+console.log('Assets fixed:', DevAtelier2026.assets.isFixed());
+```
+
+### Local Development Setup
+
+1. **Start Development Server**
+   ```bash
+   mdbook serve --hostname 0.0.0.0 --port 3000
+   ```
+
+2. **Open Browser**
+   Navigate to `http://localhost:3000`
+
+3. **Verify Features**
+   - Theme toggle button (top-right)
+   - Progress bar (top)
+   - Glass morphism effects
+   - Smooth animations
+   - Search functionality (`/` or `Ctrl+K`)
+
+### Production Deployment
+
+#### GitHub Pages Deployment
+
+```bash
+# Build the handbook
+mdbook build
+
+# Copy to docs directory
+cp -r book/* docs/
+
+# Add and commit changes
+git add docs/ theme/
+git commit -m "Deploy 2026 redesign with asset fixing"
+
+# Push to GitHub
+git push origin main
+```
+
+#### Manual Asset Verification
+
+After deployment, verify all assets load correctly:
+
+```bash
+# Check for 404 errors
+curl -I https://yourusername.github.io/jahanzaib-dev-handbook/theme/css/custom.css
+curl -I https://yourusername.github.io/jahanzaib-dev-handbook/theme/js/custom.js
+
+# Check fonts
+curl -I https://yourusername.github.io/jahanzaib-dev-handbook/theme/fonts/inter-variable.woff2
+```
+
+### Troubleshooting
+
+#### Common Issues
+
+1. **404 Errors for CSS/JS**
+   - The asset path fixing should resolve this automatically
+   - Check browser console for fix attempts
+   - Manual fix: `DevAtelier2026.assets.fix()`
+
+2. **Theme Not Loading**
+   - Clear browser cache
+   - Verify `custom.css` is in `theme/css/`
+   - Check `book.toml` configuration
+
+3. **Fonts Not Loading**
+   - Ensure font files exist in `theme/fonts/`
+   - Check network tab for font loading errors
+   - Fallback to system fonts will be used
+
+4. **Animations Not Working**
+   - Check for `prefers-reduced-motion` settings
+   - Verify JavaScript is enabled
+   - Look for console errors
+
+#### Debug Mode
+
+Enable debug logging:
+
+```javascript
+// In browser console
+localStorage.setItem('devatelier-debug', 'true');
+location.reload();
+```
+
+### Performance Optimization
+
+The 2026 redesign includes:
+
+- **CSS Layers** - Optimized cascade management
+- **Variable Fonts** - Reduced font file sizes
+- **Lazy Loading** - Scroll-triggered animations
+- **Debounced Events** - Optimized performance
+- **Efficient Selectors** - Minimal reflow/repaint
+
+### Browser Compatibility
+
+- **Chrome 108+** - Full feature support
+- **Firefox 107+** - Full feature support  
+- **Safari 16+** - Full feature support
+- **Edge 108+** - Full feature support
+
+### Customization
+
+#### Theme Colors
+
+Modify CSS variables in `theme/css/custom.css`:
+
+```css
+:root {
+  --accent-primary: oklch(60% 0.28 260);  /* Primary blue */
+  --accent-secondary: oklch(40% 0.18 160); /* Secondary green */
+  /* ... other color tokens */
+}
+```
+
+#### Animation Speeds
+
+Adjust transition durations:
+
+```css
+:root {
+  --transition-fast: 150ms;
+  --transition-normal: 250ms;
+  --transition-slow: 350ms;
+}
+```
+
+#### Disable Features
+
+Remove features by commenting out in `theme/js/custom.js`:
+
+```javascript
+// Comment out to disable theme toggle
+// initializeThemeToggle();
+
+// Comment out to disable animations  
+// initializeAnimations();
+```
+
 ## 📚 Resources & References
 
 ### Official Documentation
