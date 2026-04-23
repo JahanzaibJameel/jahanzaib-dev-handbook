@@ -13,26 +13,27 @@ default-theme = "none"
 preferred-dark-theme = "none"
 git-repository-url = "https://github.com/JahanzaibJameel/jahanzaib-dev-handbook"
 edit-url-template = "https://github.com/JahanzaibJameel/jahanzaib-dev-handbook/edit/main/{path}"
-# site-url = "/"  # Commented out for local development
+site-url = "/"
 hash-files = false
 
 additional-css = ["custom.css"]
 additional-js = ["custom.js"]
 
-# Premium sidebar navigation
-sidebar-header-nav = true
+# SEO and metadata
+mathjax-support = false
 
-# Premium search
+# Search configuration
 [output.html.search]
 enable = true
 limit-results = 50
+copy-js = true
 
-# Premium folding
+# Code folding
 [output.html.fold]
 enable = true
 level = 3
 
-# Premium print
+# Print support
 [output.html.print]
 enable = true
 page-break = true
@@ -41,3 +42,7 @@ page-break = true
 [preprocessor.copy-code]
 command = "mdbook-copy-code"
 optional = true
+
+# Additional preprocessors for production
+[preprocessor.links]
+# Optional: for link checking
